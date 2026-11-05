@@ -271,7 +271,7 @@ export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick 
             )}
             <Button variant="outline" onClick={handlePrint} data-testid="pizza-button-print">
               <Printer className="w-4 h-4 mr-2" />
-              Print for the Hall
+              Print for the crew
             </Button>
             {onShoppingListClick && (
               <Button variant="outline" onClick={onShoppingListClick} data-testid="pizza-button-shopping-list">

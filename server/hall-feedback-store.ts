@@ -12,7 +12,7 @@ export async function initHallFeedbackStore(): Promise<void> {
 
 function requireDb(): SqliteDatabase {
   if (!db) {
-    throw new Error("Hall feedback store not initialized");
+    throw new Error("Firehouse feedback store not initialized");
   }
   return db;
 }

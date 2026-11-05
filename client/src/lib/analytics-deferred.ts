@@ -20,20 +20,27 @@ function flushPendingPageViews(): void {
       page_location: `${window.location.origin}${pagePath}`,
       page_title: document.title,
     });
-    trackAnalyticsPageViewInternal(pagePath, document.title);
   }
 }
 
-/** SPA route changes — queues until gtag is ready. */
+let lastTrackedPath: string | null = null;
+
+/**
+ * SPA route changes. The internal page view is recorded immediately (not
+ * gated on GA loading, so short visits still count); GA queues until gtag
+ * is ready. Repeat calls for the same path (StrictMode/remounts) are ignored.
+ */
 export function trackAnalyticsPageView(pagePath: string): void {
   const path = pagePath || "/";
+  if (path === lastTrackedPath) return;
+  lastTrackedPath = path;
+  trackAnalyticsPageViewInternal(path, document.title);
   if (gaMeasurementId && window.gtag) {
     window.gtag("event", "page_view", {
       page_path: path,
       page_location: `${window.location.origin}${path}`,
       page_title: document.title,
     });
-    trackAnalyticsPageViewInternal(path, document.title);
     return;
   }
   pendingPageViews.push(path);
@@ -42,6 +49,8 @@ export function trackAnalyticsPageView(pagePath: string): void {
 function injectGtagScript(measurementId: string): void {
   if (gaScriptInjected || typeof document === "undefined") return;
   gaScriptInjected = true;
+  // index.html already ships the tag; a second copy double-loads gtag.
+  if (document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) return;
 
   const gtagScript = document.createElement("script");
   gtagScript.async = true;

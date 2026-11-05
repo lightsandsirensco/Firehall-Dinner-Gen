@@ -37,7 +37,7 @@ export function HallDashboardV2({ className }: { className?: string }) {
       />
 
       <header className="space-y-1.5 px-0.5">
-        <h1 className={app.titlePage}>Manage the hall</h1>
+        <h1 className={app.titlePage}>Manage the firehouse</h1>
         <p className={app.subtitle}>
           Board, shopping, canteen, and records — dinner decisions stay on Tonight.
         </p>
@@ -106,7 +106,7 @@ export function HallDashboardV2({ className }: { className?: string }) {
             href="/hall/logbook"
             icon={BookOpen}
             title="Logbook"
-            description="What happened in the hall"
+            description="What happened in the firehouse"
             secondary
             testId="hall-manage-log"
           />
@@ -129,8 +129,8 @@ export function HallDashboardV2({ className }: { className?: string }) {
           <HubTile
             href={settingsHref}
             icon={Settings}
-            title="Hall settings"
-            description="Members, invites, and hall profile"
+            title="Firehouse settings"
+            description="Members, invites, and firehouse profile"
             secondary
             testId="hall-manage-settings"
           />

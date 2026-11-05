@@ -4,7 +4,7 @@ export const hallFeedbackSubmitSchema = z.object({
   message: z
     .string()
     .trim()
-    .min(8, "Tell us a little more — even one sentence helps the hall.")
+    .min(8, "Tell us a little more — even one sentence helps the firehouse.")
     .max(4000),
   email: z.preprocess(
     (val) => {

@@ -1,4 +1,4 @@
-export const HALL_PROGRAM_HEADLINE = "Built For Fire Halls.";
+export const HALL_PROGRAM_HEADLINE = "Built For Firehouses.";
 
 export const HALL_PROGRAM_SUBHEADLINE =
   'End the "what\'s for dinner?" debate for every shift.';
@@ -6,18 +6,18 @@ export const HALL_PROGRAM_SUBHEADLINE =
 export const HALL_PROGRAM_HOW_IT_WORKS = [
   {
     step: 1,
-    title: "Create a linked hall",
-    body: "Captains set up station identity — shifts, crew size, and appliances. Hall membership is free.",
+    title: "Create a linked firehouse",
+    body: "Captains set up station identity — shifts, crew size, and appliances. Firehouse membership is free.",
   },
   {
     step: 2,
     title: "Cook and vote together",
-    body: "Basic Hall Vote is free when connected. Personal meal tools stay on your own account.",
+    body: "Basic Crew Vote is free when connected. Personal meal tools stay on your own account.",
   },
   {
     step: 3,
     title: "Unlock Hall Pro for the crew",
-    body: "Shared shopping list, meal history, staples, advanced vote, and grocery planning — billed per hall.",
+    body: "Shared shopping list, meal history, staples, advanced vote, and grocery planning — billed per firehouse.",
   },
 ] as const;
 
@@ -41,10 +41,10 @@ export const HALL_PROGRAM_ROLE_SECTIONS = [
 
 export const HALL_PROGRAM_BENEFITS = [
   "Shared Shopping List",
-  "Hall Meal History",
-  "Hall Staples",
-  "Advanced Hall Vote",
-  "Hall grocery planning",
+  "Firehouse Meal History",
+  "Firehouse Staples",
+  "Advanced Crew Vote",
+  "Firehouse grocery planning",
 ] as const;
 
 export const HALL_PROGRAM_PRICING_TIERS = [
@@ -64,6 +64,6 @@ export const HALL_PROGRAM_PRICING_TIERS = [
     plan_id: "hall_pro" as const,
     name: "Hall Pro",
     tagline: "Crew collaboration — shared list, history, staples, vote, and grocery planning",
-    price_label: "Per hall",
+    price_label: "Per firehouse",
   },
 ] as const;

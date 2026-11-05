@@ -10,7 +10,7 @@ import { BROWSE_CANONICAL_PATH, firehallCategoryExplorePath } from "@shared/brow
 export type InternalLink = { href: string; label: string; description?: string };
 
 const HUB_LINKS: InternalLink[] = [
-  { href: "/firefighter-meals", label: "Firefighter meals", description: "Crew dinners for the hall" },
+  { href: "/firefighter-meals", label: "Firefighter meals", description: "Crew dinners for the crew" },
   {
     href: "/firefighter-recipes",
     label: "Firefighter recipes",
@@ -27,7 +27,7 @@ const HUB_LINKS: InternalLink[] = [
   },
   {
     href: firehallCategoryExplorePath("crew_favorites"),
-    label: "Hall favorites",
+    label: "Crew favorites",
     description: "Popular firehouse meals",
   },
   {
@@ -38,7 +38,7 @@ const HUB_LINKS: InternalLink[] = [
   {
     href: firehallCategoryExplorePath("healthy_options"),
     label: "Healthy firefighter meals",
-    description: "High-protein hall picks",
+    description: "High-protein crew picks",
   },
   {
     href: firehallCategoryExplorePath("bbq_smoker"),
@@ -48,12 +48,12 @@ const HUB_LINKS: InternalLink[] = [
   { href: "/healthy-firefighter-meals", label: "Healthy firefighter meals", description: "Performance station plates" },
   { href: "/firefighter-breakfast-recipes", label: "Firefighter breakfast recipes", description: "After night shift" },
   { href: "/how-we-test-recipes", label: "How we test recipes", description: "Shift-tested standards" },
-  { href: "/wheel", label: "Classics Wheel", description: "Hall kitchen-table picks" },
-  { href: "/hall-meal-planner", label: "Hall Meal Planner", description: "Plan crew dinners by shift" },
+  { href: "/wheel", label: "Classics Wheel", description: "Firehouse kitchen-table picks" },
+  { href: "/hall-meal-planner", label: "Firehouse Meal Planner", description: "Plan crew dinners by shift" },
   { href: "/firefighter-dinner-vote", label: "Dinner Voting", description: "Let the crew pick dinner" },
   { href: "/canteen-manager", label: "Canteen Manager", description: "Staples, orders, deliveries" },
-  { href: "/fire-hall-grocery-list", label: "Crew Shopping List", description: "Fire hall grocery lists" },
-  { href: "/crew-grocery-budget", label: "Hall Grocery Budget", description: "Crew spend without blame" },
+  { href: "/fire-hall-grocery-list", label: "Crew Shopping List", description: "Firehouse grocery lists" },
+  { href: "/crew-grocery-budget", label: "Firehouse Grocery Budget", description: "Crew spend without blame" },
   { href: "/guides", label: "Firehouse cooking guides", description: "Shift & nutrition notes" },
   { href: "/generator", label: CTA.findDinner, description: "Curated crew meal picker" },
 ];

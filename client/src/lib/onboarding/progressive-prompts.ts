@@ -67,7 +67,7 @@ export function progressivePromptsFor(input: ProgressivePromptInput): Progressiv
         if (input.pantryConfigured) break;
         out.push({
           id,
-          title: "Hall staples",
+          title: "Firehouse staples",
           body: "Mark what's always in the kitchen so it stays off your shopping list.",
           href: "/me/pantry",
           locked: false,

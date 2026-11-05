@@ -83,7 +83,7 @@ export function HallNeedAnythingCard({ activeHallId, className }: HallNeedAnythi
       testId="hall-need-anything-section"
     >
       {!activeHallId ? (
-        <p className="text-sm text-muted-foreground">{HALL_LINKED.connect} to track Hall Staples.</p>
+        <p className="text-sm text-muted-foreground">{HALL_LINKED.connect} to track Firehouse Staples.</p>
       ) : loading ? (
         <p className="text-sm text-muted-foreground">Loading…</p>
       ) : needsAttention.length === 0 ? (

@@ -83,7 +83,7 @@ export function HomeAllClear({ className }: { className?: string }) {
       data-testid="home-all-clear"
     >
       <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" aria-hidden />
-      <span>Hall looks steady — nothing urgent right now.</span>
+      <span>Firehouse looks steady — nothing urgent right now.</span>
     </div>
   );
 }

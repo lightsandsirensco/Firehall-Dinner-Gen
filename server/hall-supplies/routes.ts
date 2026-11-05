@@ -48,7 +48,7 @@ export function registerHallSuppliesRoutes(app: Express): void {
         const hallId = String(req.params.hallId ?? "");
         const payload = getOrSeedHallSupplies(hallId, req._authUserId!);
         if (!payload) {
-          return res.status(403).json({ message: "Not a member of this hall" });
+          return res.status(403).json({ message: "Not a member of this firehouse" });
         }
 
         trackSupplyEvent(req, "hall_supply_viewed", {

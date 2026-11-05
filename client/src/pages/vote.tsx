@@ -192,7 +192,7 @@ export default function VotePage() {
             <Link href="/tonight">Back to Tonight</Link>
           </Button>
           <Button asChild variant="ghost" className="w-full">
-            <Link href="/hall">Manage hall</Link>
+            <Link href="/hall">Manage firehouse</Link>
           </Button>
         </main>
       </div>
@@ -214,7 +214,7 @@ export default function VotePage() {
     <div className={cn(app.page, "bg-background")}>
       <AppTopBar title="Vote" parentHref="/tonight" parentLabel="Tonight" />
 
-      <HeroHeader title="Hall Vote" subtitle="Vote on tonight's crew meal" />
+      <HeroHeader title="Crew Vote" subtitle="Vote on tonight's crew meal" />
 
       <main className={cn(app.main, "mx-auto max-w-lg px-4 py-6 space-y-5 pb-safe-nav")}>
         <div className="text-center space-y-2">
@@ -340,7 +340,7 @@ export default function VotePage() {
             href="/hall"
             className="inline-flex min-h-8 items-center text-xs font-semibold text-muted-foreground hover:text-foreground hover:underline"
           >
-            Manage the hall
+            Manage the firehouse
           </Link>
           <p className="text-[10px] text-muted-foreground/40">Firefighter-owned</p>
         </footer>

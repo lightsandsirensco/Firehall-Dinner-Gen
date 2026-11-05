@@ -83,7 +83,7 @@ function buildMagicLinkContent(link: string): { subject: string; text: string; h
   const subject = "Your Firehall Meals sign-in link";
   const text = [
     "Firehall Meals",
-    "Built by Firefighters. Tested in the Firehall.",
+    "Built by Firefighters. Tested in the Firehouse.",
     "",
     `Tap to sign in (expires in ${mins} minutes, one-time use):`,
     link,
@@ -106,12 +106,12 @@ function buildMagicLinkContent(link: string): { subject: string; text: string; h
           <tr>
             <td style="padding:28px 28px 12px;text-align:center;background:linear-gradient(180deg,#1f1f1f 0%,#171717 100%);">
               <div style="font-family:Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif;font-size:28px;letter-spacing:0.08em;color:#f5f5f5;">FIREHALL MEALS</div>
-              <div style="margin-top:6px;font-size:12px;color:#a3a3a3;letter-spacing:0.04em;text-transform:uppercase;">Built by Firefighters · Tested in the Firehall</div>
+              <div style="margin-top:6px;font-size:12px;color:#a3a3a3;letter-spacing:0.04em;text-transform:uppercase;">Built by Firefighters · Tested in the Firehouse</div>
             </td>
           </tr>
           <tr>
             <td style="padding:8px 28px 0;color:#e5e5e5;font-size:16px;line-height:1.6;">
-              <p style="margin:0 0 12px;">Tap below to sign in — saves, hall tools, and crew planning when you're ready.</p>
+              <p style="margin:0 0 12px;">Tap below to sign in — saves, firehouse tools, and crew planning when you're ready.</p>
               <p style="margin:0;color:#a3a3a3;font-size:14px;">This link expires in <strong style="color:#f5f5f5;">${mins} minutes</strong> and works once.</p>
             </td>
           </tr>

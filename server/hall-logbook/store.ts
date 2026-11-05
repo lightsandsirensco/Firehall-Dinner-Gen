@@ -15,7 +15,7 @@ export function bindHallLogbookDb(database: SqliteDatabase): void {
 }
 
 function getDb(): SqliteDatabase {
-  if (!db) throw new Error("Hall logbook store not initialized");
+  if (!db) throw new Error("Firehouse logbook store not initialized");
   return db;
 }
 

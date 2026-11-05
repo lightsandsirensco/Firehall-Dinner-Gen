@@ -15,7 +15,7 @@ const EMBEDDED_SMOOTHIES = SMOOTHIE_CATALOG_ITEMS.map(smoothieCatalogToEmbedded)
 
 export const HEALTHY_HALL_SMOOTHIES_ARTICLE: EditorialArticle = {
   slug: "healthy-smoothies-at-the-hall",
-  title: "10 Healthy Smoothies to Make at the Hall",
+  title: "10 Healthy Smoothies to Make at the Firehouse",
   subtitle:
     "Ten batch recipes built on frozen fruit, Greek yogurt and milk, with freezer packs, safe holding times and allergen notes for a shared blender.",
   seoTitle: "10 Healthy Smoothie Recipes and How to Batch Them",
@@ -36,7 +36,7 @@ export const HEALTHY_HALL_SMOOTHIES_ARTICLE: EditorialArticle = {
   heroImage: "/images/smoothies/mixed-berry-protein.webp",
   heroImageAlt: "Glass of mixed berry smoothie with fresh raspberries and blueberries on a dark plate",
   intro:
-    "Healthy smoothies that keep a crew full are built on plain Greek yogurt and milk for protein, with frozen fruit and oats for fiber. A blend of juice, fruit and ice is a snack, not breakfast. Each of the ten recipes below makes about four 12 oz (350 ml) glasses from what most station kitchens already stock, and none needs protein powder (the mocha lists it as optional). At the hall, a smoothie covers breakfast when there is no time to cook, a drink after training, or a stopgap when a call pushes dinner back. It does not replace a cooked crew dinner.",
+    "Healthy smoothies that keep a crew full are built on plain Greek yogurt and milk for protein, with frozen fruit and oats for fiber. A blend of juice, fruit and ice is a snack, not breakfast. Each of the ten recipes below makes about four 12 oz (350 ml) glasses from what most station kitchens already stock, and none needs protein powder (the mocha lists it as optional). At the firehouse, a smoothie covers breakfast when there is no time to cook, a drink after training, or a stopgap when a call pushes dinner back. It does not replace a cooked crew dinner.",
   practicalAdvice: [
     "Load the jar in this order: liquid, yogurt, greens, then frozen fruit and ice on top. The blade catches the liquid first and pulls the frozen fruit down.",
     "If the blender stalls, add liquid 1/4 cup (60 ml) at a time. More ice makes a stall worse.",

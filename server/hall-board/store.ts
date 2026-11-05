@@ -23,7 +23,7 @@ export function bindHallBoardDb(database: SqliteDatabase): void {
 }
 
 function getDb(): SqliteDatabase {
-  if (!db) throw new Error("Hall board store not initialized");
+  if (!db) throw new Error("Firehouse board store not initialized");
   return db;
 }
 

@@ -203,7 +203,7 @@ export function HallSettingsForm({
 
         <div>
 
-          <dt className="text-muted-foreground">Hall motto</dt>
+          <dt className="text-muted-foreground">Firehouse motto</dt>
 
           <dd>{hall.motto || "—"}</dd>
 
@@ -313,7 +313,7 @@ export function HallSettingsForm({
 
       });
 
-      toast({ title: "Linked hall settings saved" });
+      toast({ title: "Linked firehouse settings saved" });
 
       onUpdated?.();
 
@@ -337,7 +337,7 @@ export function HallSettingsForm({
 
       <div className="space-y-2">
 
-        <Label htmlFor="settings-hall-name">Hall name</Label>
+        <Label htmlFor="settings-hall-name">Firehouse name</Label>
 
         <Input id="settings-hall-name" value={hallName} onChange={(e) => setHallName(e.target.value)} />
 

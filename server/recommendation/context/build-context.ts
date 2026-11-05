@@ -92,7 +92,7 @@ export function contextHintsForDisplay(ctx: RecommendationContext): string[] {
   const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   if (ctx.dayOfWeek === 5) hints.push("Friday night — BBQ, pizza, and watch-party energy");
-  if (ctx.timeSlot === "evening") hints.push("Evening hall feed — comfort and classics rank higher");
+  if (ctx.timeSlot === "evening") hints.push("Evening firehouse feed — comfort and classics rank higher");
   if (ctx.maxReadyMinutes != null && ctx.maxReadyMinutes <= 30) {
     hints.push("Quick shift — under 30 minutes prioritized");
   }
@@ -109,7 +109,7 @@ export function contextHintsForDisplay(ctx: RecommendationContext): string[] {
   }
 
   if (hints.length === 0) {
-    hints.push(`${dayNames[ctx.dayOfWeek]} discovery — curated for your hall`);
+    hints.push(`${dayNames[ctx.dayOfWeek]} discovery — curated for your firehouse`);
   }
 
   return hints.slice(0, 4);

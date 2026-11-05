@@ -140,7 +140,7 @@ export default function MePage() {
               href="/me/profile"
               icon={User}
               title="Profile"
-              description="Name, shift reminders, and halls"
+              description="Name, shift reminders, and firehouses"
               secondary
               testId="me-profile"
             />

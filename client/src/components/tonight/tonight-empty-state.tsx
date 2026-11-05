@@ -90,7 +90,7 @@ export function TonightEmptyState() {
         <ul className="overflow-hidden rounded-2xl border border-border/40 bg-card/30 divide-y divide-border/30">
           <li>
             <Link href="/wheel" className={ROW_CLASS} data-testid="tonight-surprise">
-              <OptionBody icon={Shuffle} title="Surprise the hall" detail="Get a random crew-friendly meal" />
+              <OptionBody icon={Shuffle} title="Surprise the firehouse" detail="Get a random crew-friendly meal" />
             </Link>
           </li>
           <li>

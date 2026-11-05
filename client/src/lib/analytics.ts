@@ -6,6 +6,7 @@ import {
   flushProductAnalytics,
   getAnalyticsVisitorId,
   resolveTrafficSource,
+  inferDeviceType,
   inferPageName,
   trackProductEvent,
 } from "@/lib/product-analytics";
@@ -68,6 +69,7 @@ export function trackAnalyticsPageViewInternal(path: string, title?: string): vo
       page_name: inferPageName(path),
       page_title: title ?? (typeof document !== "undefined" ? document.title : ""),
       traffic_source: resolveTrafficSource(),
+      device_type: inferDeviceType(),
     },
     path,
   );
@@ -731,9 +733,9 @@ export async function setAnalyticsUserId(email: string) {
   } catch {}
 }
 
+/** The route-change tracker already records the page_view for this page. */
 export function trackRedLeadPageView() {
   trackEvent("red_lead_page_view");
-  trackProductEvent("page_view", { page_name: "red_lead", traffic_source: resolveTrafficSource() });
 }
 
 export function trackRedLeadCaptureSubmit() {
@@ -741,12 +743,9 @@ export function trackRedLeadCaptureSubmit() {
   trackProductEvent("email_capture", { source: "red_lead", capture_type: "red_lead_pdf" });
 }
 
+/** Not an email capture — the signup was already recorded on submit. */
 export function trackRedLeadPdfDownload() {
   trackEvent("red_lead_pdf_download");
-  trackProductEvent("email_capture", {
-    source: "red_lead",
-    capture_type: "red_lead_pdf_download",
-  });
 }
 
 export function trackHomepageCaptureView() {
@@ -766,14 +765,14 @@ export function trackRecipeDownvote(recipeSlug: string) {
   trackEvent("recipe_downvote", { recipe_slug: recipeSlug });
 }
 
+/** GA4 only — the server records the product event once the account actually exists. */
 export function trackAccountCreated(provider: string): void {
   trackEvent("account_created", { provider });
-  trackProductEvent("account_created", { provider });
 }
 
+/** GA4 only — the server records the product event after a verified sign-in. */
 export function trackLogin(provider: string): void {
   trackEvent("login", { provider });
-  trackProductEvent("login", { provider });
 }
 
 export function trackMagicLinkRequested(returnTo?: string): void {
@@ -994,9 +993,9 @@ export function trackHallAnalyticsViewed(hallId: string): void {
   trackProductEvent("hall_analytics_viewed", params);
 }
 
+/** GA4 only — the growth dashboard API records the product event server-side. */
 export function trackGrowthDashboardViewed(): void {
   trackEvent("growth_dashboard_viewed", { surface: "admin" });
-  trackProductEvent("growth_dashboard_viewed", { surface: "admin" });
 }
 
 export function trackPlanViewed(): void {

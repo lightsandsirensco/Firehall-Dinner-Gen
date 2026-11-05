@@ -7,7 +7,7 @@ function buildIntroParagraphs(): string[] {
   return [
     `Firehall Meals helps crews decide what to cook, scale recipes to the right number of firefighters, and get dinner on the table without overthinking it. Browse ${HOME.curatedRecipesLabel}, use the meal generator for a quick pick, or spin the Classics Wheel when nobody can decide.`,
     "Every recipe is built for station kitchens, with crew-sized ingredients, realistic timing, and straightforward instructions.",
-    "Firehall Meals Pro goes further by learning how your crew eats. Save hall preferences, build personalized shift plans, create grocery lists, track meals and ratings, follow nutrition goals, and get recommendations that improve over time. Pro is also being built to help crews plan around local grocery deals and spend less per shift.",
+    "Firehall Meals Pro goes further by learning how your crew eats. Save firehouse preferences, build personalized shift plans, create grocery lists, track meals and ratings, follow nutrition goals, and get recommendations that improve over time. Pro is also being built to help crews plan around local grocery deals and spend less per shift.",
     "Sign in to sync your saves, meal history, preferences, and progress across devices.",
   ];
 }

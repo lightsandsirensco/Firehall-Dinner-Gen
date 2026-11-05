@@ -190,28 +190,36 @@ export const ANALYTICS_EVENT_TYPES = [
 
 export type AnalyticsEventType = (typeof ANALYTICS_EVENT_TYPES)[number];
 
-export type AnalyticsPeriod = "today" | "7d" | "30d" | "all";
+export type AnalyticsPeriod = "today" | "7d" | "30d" | "90d" | "all";
+
+/**
+ * Emitted only by the server after the underlying action succeeded (auth,
+ * Stripe webhooks, shared lists). The public ingest endpoint drops these so a
+ * browser can neither spoof nor double-count them.
+ */
+export const SERVER_ONLY_ANALYTICS_EVENTS: ReadonlySet<AnalyticsEventType> = new Set<AnalyticsEventType>([
+  "account_created",
+  "login",
+  "magic_link_sent",
+  "magic_link_failed",
+  "magic_link_opened",
+  "magic_link_completed",
+  "magic_link_expired",
+  "stripe_checkout_started",
+  "stripe_checkout_completed",
+  "stripe_subscription_updated",
+  "stripe_subscription_cancelled",
+  "growth_dashboard_viewed",
+  "admin_signups_viewed",
+  "admin_signup_opened",
+  "admin_signups_exported",
+]);
 
 export interface AnalyticsEventInput {
   event_type: AnalyticsEventType;
   route?: string;
   visitor_id?: string;
   metadata?: Record<string, string | number | boolean | null | undefined>;
-}
-
-export interface AnalyticsDashboardSummary {
-  period: AnalyticsPeriod;
-  generated_at: string;
-  visitors: number;
-  unique_visitors: number;
-  sessions: number;
-  returning_visitors: number;
-  page_views: number;
-  recipe_views: number;
-  meal_generations: number;
-  wheel_spins: number;
-  email_captures: number;
-  avg_pages_per_session: number;
 }
 
 export interface AnalyticsRankedRow {
@@ -231,18 +239,106 @@ export interface MagicLinkFunnelStats {
   completion_rate: number;
 }
 
-export interface AnalyticsDashboardPayload {
-  summary: AnalyticsDashboardSummary;
+/** A metric that may be unavailable — never a fabricated zero. */
+export type MetricValue = number | null;
+
+export interface AnalyticsSectionStatus {
+  available: boolean;
+  /** Where the numbers come from (shown under the section heading). */
+  source: string;
+  /** Why the section (or part of it) is unavailable / caveats. */
+  note?: string;
+}
+
+export interface AnalyticsDailyPoint {
+  date: string; // YYYY-MM-DD (UTC)
+  page_views: number;
+  visitors: number;
+}
+
+export interface AnalyticsAudienceSection {
+  status: AnalyticsSectionStatus;
+  unique_visitors: number;
+  new_visitors: number;
+  returning_visitors: number;
+  sessions: number;
+  page_views: number;
+  pages_per_session: number;
+  /** Sessions attributed by the first page view's source. */
+  traffic_sources: AnalyticsRankedRow[];
+  top_pages: AnalyticsRankedRow[];
+  /** Page views by device; "unknown" = recorded before device tracking. */
+  devices: AnalyticsRankedRow[];
+  daily: AnalyticsDailyPoint[];
+}
+
+export interface AnalyticsGrowthSection {
+  status: AnalyticsSectionStatus;
+  newsletter_subscribers_total: MetricValue;
+  newsletter_signups_new: MetricValue;
+  newsletter_unsubscribes: MetricValue;
+  newsletter_signups_by_source: AnalyticsRankedRow[];
+  registered_users_total: MetricValue;
+  registered_users_new: MetricValue;
+  /** Distinct emails across accounts + newsletter consent (test domains excluded). */
+  known_emails_total: MetricValue;
+  test_accounts_excluded: number;
+  /** New newsletter signups ÷ unique visitors in the period (percent). */
+  newsletter_conversion_rate: MetricValue;
+  /** New accounts ÷ unique visitors in the period (percent). */
+  account_conversion_rate: MetricValue;
+  klaviyo_list_members: MetricValue;
+  klaviyo_note?: string;
+}
+
+export interface AnalyticsEngagementSection {
+  status: AnalyticsSectionStatus;
+  meals_generated: number;
+  meal_generation_success_rate: MetricValue;
+  recipe_views: number;
+  recipes_saved: number;
+  recipes_saved_to_accounts: MetricValue;
+  grocery_lists_created: number;
+  wheel_spins: number;
+  pizza_night_views: number;
+  crew_votes: number;
+  crews_created: number;
+  checkout_starts: number;
+  /** Feature usage ranked by distinct visitors. */
+  feature_usage: AnalyticsRankedRow[];
   top_viewed_recipes: AnalyticsRankedRow[];
   top_generated_meals: AnalyticsRankedRow[];
-  top_shared_recipes: AnalyticsRankedRow[];
   top_saved_recipes: AnalyticsRankedRow[];
   top_wheel_landings: AnalyticsRankedRow[];
   top_searches: AnalyticsRankedRow[];
-  top_explore_filters: AnalyticsRankedRow[];
-  top_explore_categories: AnalyticsRankedRow[];
-  top_explore_clicks: AnalyticsRankedRow[];
-  top_traffic_sources: AnalyticsRankedRow[];
   never_viewed_recipes_sample: AnalyticsRankedRow[];
-  generation_success_rate: number;
+}
+
+export interface AnalyticsRevenueSection {
+  status: AnalyticsSectionStatus;
+  payments_enabled: boolean | null;
+  active_paid_subscribers: MetricValue;
+  trialing_subscribers: MetricValue;
+  new_paid_subscriptions: MetricValue;
+  cancellations: MetricValue;
+  /** Monthly recurring revenue in cents, from Stripe list prices of active subscriptions. */
+  mrr_cents: MetricValue;
+  /** Paid Stripe invoices in the period, in cents. */
+  revenue_cents: MetricValue;
+  currency: string | null;
+  /** Non-Stripe plan rows (admin grants / free plans) — never counted as paid. */
+  complimentary_plans: MetricValue;
+}
+
+export interface AnalyticsDashboardPayload {
+  period: AnalyticsPeriod;
+  generated_at: string;
+  /** All period boundaries and daily buckets are UTC. */
+  timezone: "UTC";
+  /** First recorded event in the analytics store (null = no data). */
+  tracking_since: string | null;
+  audience: AnalyticsAudienceSection;
+  growth: AnalyticsGrowthSection;
+  engagement: AnalyticsEngagementSection;
+  revenue: AnalyticsRevenueSection;
 }

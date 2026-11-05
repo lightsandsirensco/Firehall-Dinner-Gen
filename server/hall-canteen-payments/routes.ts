@@ -40,7 +40,7 @@ export function registerHallCanteenPaymentsRoutes(app: Express): void {
         if (!requireCanteenPaymentTracker(req, res, hallId)) return;
         const payload = getCanteenPaymentsPayload(hallId, req._authUserId!);
         if (!payload) {
-          return res.status(403).json({ message: "Not a member of this hall" });
+          return res.status(403).json({ message: "Not a member of this firehouse" });
         }
         return res.json(payload);
       } catch (err) {

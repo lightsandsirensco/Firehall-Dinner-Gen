@@ -68,7 +68,7 @@ export function registerHallMembershipRoutes(app: Express): void {
         join_code: String(req.query.join_code ?? "") || undefined,
       });
       if (!preview) {
-        return res.status(404).json({ message: "Invite or hall not found" });
+        return res.status(404).json({ message: "Invite or firehouse not found" });
       }
       return res.json(preview);
     } catch (err) {
@@ -83,7 +83,7 @@ export function registerHallMembershipRoutes(app: Express): void {
       return res.json({ halls: listUserHallSummaries(req._authUserId!) });
     } catch (err) {
       logError("hall", "list mine failed", err);
-      return res.status(500).json({ message: "Failed to load halls" });
+      return res.status(500).json({ message: "Failed to load firehouses" });
     }
   });
 
@@ -94,7 +94,7 @@ export function registerHallMembershipRoutes(app: Express): void {
       const legacy = !parsed.success ? legacyCreateHallSchema.safeParse(req.body) : null;
 
       if (!parsed.success && !legacy?.success) {
-        return res.status(400).json({ message: "Invalid hall data" });
+        return res.status(400).json({ message: "Invalid firehouse data" });
       }
 
       const input = parsed.success
@@ -117,7 +117,7 @@ export function registerHallMembershipRoutes(app: Express): void {
       return res.status(201).json(detail);
     } catch (err) {
       logError("hall", "create failed", err);
-      return res.status(500).json({ message: "Failed to create hall" });
+      return res.status(500).json({ message: "Failed to create firehouse" });
     }
   });
 
@@ -150,7 +150,7 @@ export function registerHallMembershipRoutes(app: Express): void {
       return res.json({ hall: result.hall, via: result.via });
     } catch (err) {
       logError("hall", "join failed", err);
-      return res.status(500).json({ message: "Failed to join hall" });
+      return res.status(500).json({ message: "Failed to join firehouse" });
     }
   });
 
@@ -160,12 +160,12 @@ export function registerHallMembershipRoutes(app: Express): void {
       const hallId = String(req.params.hallId ?? "");
       const detail = getHallDetail(hallId, req._authUserId!);
       if (!detail) {
-        return res.status(404).json({ message: "Hall not found" });
+        return res.status(404).json({ message: "Firehouse not found" });
       }
       return res.json(detail);
     } catch (err) {
       logError("hall", "detail failed", err);
-      return res.status(500).json({ message: "Failed to load hall" });
+      return res.status(500).json({ message: "Failed to load firehouse" });
     }
   });
 
@@ -175,12 +175,12 @@ export function registerHallMembershipRoutes(app: Express): void {
       const hallId = String(req.params.hallId ?? "");
       const parsed = updateHallSchema.safeParse(req.body);
       if (!parsed.success) {
-        return res.status(400).json({ message: "Invalid linked hall settings" });
+        return res.status(400).json({ message: "Invalid linked firehouse settings" });
       }
 
       const hall = updateHall(hallId, req._authUserId!, parsed.data);
       if (!hall) {
-        return res.status(403).json({ message: "Cannot update linked hall settings" });
+        return res.status(403).json({ message: "Cannot update linked firehouse settings" });
       }
 
       trackHallEvent(req, "hall_updated", {
@@ -192,7 +192,7 @@ export function registerHallMembershipRoutes(app: Express): void {
       return res.json(detail);
     } catch (err) {
       logError("hall", "update failed", err);
-      return res.status(500).json({ message: "Failed to update hall" });
+      return res.status(500).json({ message: "Failed to update firehouse" });
     }
   });
 
@@ -366,13 +366,13 @@ export function registerHallMembershipRoutes(app: Express): void {
         const hallId = String(req.params.hallId ?? "");
         const result = joinHall(req._authUserId!, { hall_id: hallId });
         if (!result.ok) {
-          return res.status(404).json({ message: "Hall not found" });
+          return res.status(404).json({ message: "Firehouse not found" });
         }
         trackHallEvent(req, "hall_joined", { hall_id: hallId, via: "hall_id" });
         return res.json({ hall: result.hall });
       } catch (err) {
         logError("hall", "legacy join failed", err);
-        return res.status(500).json({ message: "Failed to join hall" });
+        return res.status(500).json({ message: "Failed to join firehouse" });
       }
     },
   );

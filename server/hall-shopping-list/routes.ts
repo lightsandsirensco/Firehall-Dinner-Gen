@@ -71,7 +71,7 @@ export function registerHallShoppingListRoutes(app: Express): void {
         if (!requireSharedShoppingList(req, res, hallId)) return;
         const payload = getOrCreateActiveShoppingList(hallId, req._authUserId!);
         if (!payload) {
-          return res.status(403).json({ message: "Not a member of this hall" });
+          return res.status(403).json({ message: "Not a member of this firehouse" });
         }
         return res.json(payload);
       } catch (err) {
@@ -337,7 +337,7 @@ export function registerHallShoppingListRoutes(app: Express): void {
         const format = req.body?.format === "text" ? "text" : "pdf";
         const payload = getOrCreateActiveShoppingList(hallId, req._authUserId!);
         if (!payload) {
-          return res.status(403).json({ message: "Not a member of this hall" });
+          return res.status(403).json({ message: "Not a member of this firehouse" });
         }
 
         trackListEvent(req, "shared_shopping_list_exported", {

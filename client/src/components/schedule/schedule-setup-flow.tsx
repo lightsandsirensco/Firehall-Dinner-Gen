@@ -485,7 +485,7 @@ export function ScheduleSetupFlow({
           <div className="space-y-1">
             <h2 className={app.titleCard}>{quick ? "How many are you feeding?" : "Shift details"}</h2>
             <p className={app.subtitle}>
-              {quick ? "Your usual crew on shift. You can change it for any shift later." : "Check these match your hall."}
+              {quick ? "Your usual crew on shift. You can change it for any shift later." : "Check these match your firehouse."}
             </p>
           </div>
 

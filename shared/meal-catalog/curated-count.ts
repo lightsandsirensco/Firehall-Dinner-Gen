@@ -22,7 +22,7 @@ export function formatMarketingRecipeCount(liveCount: number): string {
 
 /** Hero/catalog headline, e.g. "250+ Firehall-Tested Recipes". */
 export function marketingRecipeCountPhrase(liveCount: number): string {
-  return `${formatMarketingRecipeCount(liveCount)} Firehall-Tested Recipes`;
+  return `${formatMarketingRecipeCount(liveCount)} Firehouse-Tested Recipes`;
 }
 
 /** Inline marketing copy, e.g. "250+ firefighter-tested recipes". */

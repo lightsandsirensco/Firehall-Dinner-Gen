@@ -45,7 +45,7 @@ export function HallVotePromoBanner({
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
       className={cn("outline-none", className)}
       data-testid="hall-vote-promo-banner"
-      aria-label="Hall Vote promotion"
+      aria-label="Crew Vote promotion"
     >
       <div className="relative overflow-hidden rounded-2xl border border-primary/35 bg-gradient-to-br from-zinc-950 via-card to-zinc-900 shadow-xl shadow-primary/10 ring-1 ring-primary/20">
         <div

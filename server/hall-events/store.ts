@@ -17,7 +17,7 @@ function getDb(): SqliteDatabase {
   if (!db) {
     db = tryGetSharedLocalDb();
   }
-  if (!db) throw new Error("Hall event store not initialized");
+  if (!db) throw new Error("Firehouse event store not initialized");
   return db;
 }
 

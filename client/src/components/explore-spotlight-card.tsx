@@ -51,7 +51,7 @@ export function ExploreSpotlightCard({
           )}
           {isCurated && (
             <span className="inline-flex bg-black/70 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full border border-white/15">
-              Hall classic
+              Firehouse classic
             </span>
           )}
         </div>

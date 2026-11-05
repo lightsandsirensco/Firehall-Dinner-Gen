@@ -22,7 +22,7 @@ export function bindHallNotesDb(database: SqliteDatabase): void {
 
 function getDb(): SqliteDatabase {
   if (!db) {
-    throw new Error("Hall notes store not initialized");
+    throw new Error("Firehouse notes store not initialized");
   }
   return db;
 }

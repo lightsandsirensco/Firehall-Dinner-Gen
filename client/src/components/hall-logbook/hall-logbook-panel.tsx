@@ -48,7 +48,7 @@ export function HallLogbookPanel({ hallId }: { hallId: string }) {
       <div className="flex items-center justify-between gap-2">
         <div>
           <h2 className="text-lg font-semibold">Logbook</h2>
-          <p className="text-sm text-muted-foreground">Hall memory — start of shift catch-up.</p>
+          <p className="text-sm text-muted-foreground">Firehouse memory — start of shift catch-up.</p>
         </div>
         {data.unread_count > 0 ? (
           <span className="rounded-full bg-primary/15 px-2.5 py-1 text-xs font-semibold text-primary">

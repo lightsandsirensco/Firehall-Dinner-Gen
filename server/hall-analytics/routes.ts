@@ -57,7 +57,7 @@ export function registerHallAnalyticsRoutes(app: Express): void {
         if (!requireHallAnalyticsAccess(req, res, hallId)) return;
 
         if (!memberHasPermission(hallId, req._authUserId!, "view_hall_dashboard")) {
-          return res.status(403).json({ message: "Not a member of this hall" });
+          return res.status(403).json({ message: "Not a member of this firehouse" });
         }
 
         const payload = getHallAnalytics(hallId);
@@ -65,7 +65,7 @@ export function registerHallAnalyticsRoutes(app: Express): void {
         return res.json(payload);
       } catch (err) {
         logError("hall-analytics", "get failed", err);
-        return res.status(500).json({ message: "Failed to load hall analytics" });
+        return res.status(500).json({ message: "Failed to load firehouse analytics" });
       }
     },
   );
@@ -81,7 +81,7 @@ export function registerHallAnalyticsRoutes(app: Express): void {
         if (!requireHallAnalyticsAccess(req, res, hallId)) return;
 
         if (!memberHasPermission(hallId, req._authUserId!, "view_hall_dashboard")) {
-          return res.status(403).json({ message: "Not a member of this hall" });
+          return res.status(403).json({ message: "Not a member of this firehouse" });
         }
 
         const parsed = hallActivitySyncSchema.safeParse(req.body);
@@ -99,7 +99,7 @@ export function registerHallAnalyticsRoutes(app: Express): void {
         return res.json({ ok: true, upserted, analytics: getHallAnalytics(hallId) });
       } catch (err) {
         logError("hall-analytics", "sync failed", err);
-        return res.status(500).json({ message: "Failed to sync hall analytics" });
+        return res.status(500).json({ message: "Failed to sync firehouse analytics" });
       }
     },
   );

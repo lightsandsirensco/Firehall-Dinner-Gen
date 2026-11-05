@@ -231,7 +231,7 @@ export function PizzaFilterPanel({
                 {filters.crew_size}
               </span>
             </div>
-            <p className="text-[10px] text-muted-foreground">Feeds ~{Math.max(2, Math.ceil(filters.crew_size / 2))} large hall pies</p>
+            <p className="text-[10px] text-muted-foreground">Feeds ~{Math.max(2, Math.ceil(filters.crew_size / 2))} large firehouse pies</p>
           </div>
 
           <div className="grid grid-cols-2 gap-3">

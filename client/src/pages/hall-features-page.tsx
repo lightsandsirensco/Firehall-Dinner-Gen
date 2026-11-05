@@ -86,7 +86,7 @@ export default function HallFeaturesPage() {
           </li>
           <li>
             <Link href="/hall-meal-planner" className="text-primary hover:underline">
-              Hall meal planner
+              Firehouse meal planner
             </Link>
           </li>
           <li>

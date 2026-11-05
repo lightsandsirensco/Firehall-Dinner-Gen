@@ -174,7 +174,7 @@ export default function SeoLandingPage({ slug }: SeoLandingPageProps) {
                   </h2>
                   <div className="mt-4 space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                     <p>
-                      Firehall Meals is built by firefighters and tested in real halls — not a generic recipe
+                      Firehall Meals is built by firefighters and tested in real firehouses — not a generic recipe
                       blog repackaged for SEO. Every firefighter meal in the catalog includes crew scaling,
                       shopping lists, and steps written for station kitchens where the tones drop mid-prep and
                       the rookie is on their first crew dinner.
@@ -183,14 +183,14 @@ export default function SeoLandingPage({ slug }: SeoLandingPageProps) {
                       Get rid of the &ldquo;What&apos;s for Dinner?&rdquo; debate every shift. Browse the full
                       recipe catalog, explore by category, spin the Classics Wheel when the crew cannot decide,
                       or use Find a Meal for a fast pick based on protein, time, and head count. Built by
-                      Firefighters. Tested in the Firehall.
+                      Firefighters. Tested in the Firehouse.
                     </p>
                   </div>
                 </section>
 
                 <section className="mt-12" aria-labelledby="landing-recipes-heading">
                   <h2 id="landing-recipes-heading" className="font-heading text-xl sm:text-2xl text-foreground">
-                    Hall-tested recipes
+                    Firehouse-tested recipes
                   </h2>
                   {!catalog ? (
                     <div className="mt-6 flex items-center gap-2 text-muted-foreground text-sm">

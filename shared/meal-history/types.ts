@@ -41,7 +41,7 @@ export const FEEDBACK_TAG_LABELS: Record<FeedbackTag, string> = {
   easy_cleanup: "Easy cleanup",
   good_portions: "Good portions",
   good_value: "Good value",
-  great_for_the_hall: "Great for the hall",
+  great_for_the_hall: "Great for the crew",
   took_too_long: "Took too long",
   too_expensive: "Too expensive",
   not_enough_food: "Not enough food",

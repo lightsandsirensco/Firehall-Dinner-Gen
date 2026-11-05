@@ -274,7 +274,7 @@ export function goldenRecipeSnapshot(page: GoldenRecipePage): RecipeSnapshotData
     guidanceSections.push({ heading: "Tonight's spread", kind: "list", items: page.tonightSpread });
   }
   if (page.proTips.length) {
-    guidanceSections.push({ heading: "Hall tips", kind: "list", items: page.proTips });
+    guidanceSections.push({ heading: "Firehouse tips", kind: "list", items: page.proTips });
   }
   if (page.substitutions?.length) {
     guidanceSections.push({ heading: "Substitutions", kind: "list", items: page.substitutions });

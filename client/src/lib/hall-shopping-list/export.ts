@@ -114,7 +114,7 @@ export function openHallShoppingListPdf(
   .item-name { font-weight: 600; }
 </style></head><body>
   <h1>${e(list.title)}</h1>
-  <p class="meta">${hallName ? `${e(hallName)} · ` : ""}${list.runner_name ? `Runner: ${e(list.runner_name)}` : "Hall grocery run"}</p>
+  <p class="meta">${hallName ? `${e(hallName)} · ` : ""}${list.runner_name ? `Runner: ${e(list.runner_name)}` : "Firehouse grocery run"}</p>
   ${sectionsHtml || "<p>No items yet.</p>"}
   ${purchasedHtml}
   <p class="meta" style="margin-top:24px;text-align:center">Firehall Meals</p>

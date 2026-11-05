@@ -65,7 +65,7 @@ export function registerHallCanteenRoutes(app: Express): void {
         const hallId = String(req.params.hallId ?? "");
         const payload = getOrSeedHallCanteen(hallId, req._authUserId!);
         if (!payload) {
-          return res.status(403).json({ message: "Not a member of this hall" });
+          return res.status(403).json({ message: "Not a member of this firehouse" });
         }
         return res.json(payload);
       } catch (err) {

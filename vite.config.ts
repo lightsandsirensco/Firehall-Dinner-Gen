@@ -36,7 +36,7 @@ export default defineConfig({
         name: "Firehall Meals",
         short_name: "Firehall",
         description:
-          "Firefighter-tested recipes, easy crew meals, shift-friendly dinners and grocery planning built for the firehouse. Find meals your whole crew will eat.",
+          "Firehouse recipes and firefighter dinner ideas built for busy shifts — crew-sized portions, grocery lists and meal planning your whole crew will eat.",
         theme_color: "#141414",
         background_color: "#141414",
         display: "standalone",

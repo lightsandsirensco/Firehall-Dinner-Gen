@@ -41,6 +41,24 @@ function LegalLinksRow({ className }: { className?: string }) {
   );
 }
 
+/** Understated parent-brand credit — only the brand name is a link. */
+function ParentBrandCredit({ className }: { className?: string }) {
+  return (
+    <p className={cn("text-xs text-muted-foreground/60", className)} data-testid="footer-parent-brand-credit">
+      Created by{" "}
+      <a
+        href={LIGHTS_AND_SIRENS.website}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-muted-foreground/80 hover:text-primary transition-colors underline-offset-4 hover:underline"
+      >
+        {LIGHTS_AND_SIRENS.name}
+      </a>{" "}
+      — a firefighter-owned brand.
+    </p>
+  );
+}
+
 export function SiteFooter({ variant = "full", className, pbSafe = false }: SiteFooterProps) {
   if (variant === "compact") {
     return (
@@ -64,6 +82,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
             <LightsAndSirensLink variant="footer">Lights & Sirens Co.</LightsAndSirensLink>
           </p>
           <LegalLinksRow className="pt-2" />
+          <ParentBrandCredit />
         </div>
       </footer>
     );
@@ -163,7 +182,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
             </div>
             <div>
               <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                Lights & Sirens Co.
+                <LightsAndSirensLink variant="plain" />
               </h3>
               <ul className="mt-3 space-y-2.5">
                 {LIGHTS_FOOTER_LINKS.map((link) => (
@@ -206,11 +225,9 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
 
         <div className="mt-6 pt-6 border-t border-border/15 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 text-center sm:text-left">
           <p className="text-xs text-muted-foreground/60">
-            © {new Date().getFullYear()} {BRAND_NAME} ·{" "}
-            <LightsAndSirensLink variant="inline" className="text-xs">
-              {LIGHTS_AND_SIRENS.builtByLabel}
-            </LightsAndSirensLink>
+            © {new Date().getFullYear()} {BRAND_NAME}
           </p>
+          <ParentBrandCredit />
         </div>
       </div>
     </footer>

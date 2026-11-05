@@ -580,7 +580,7 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
             {helpOpen ? (
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground list-disc pl-5">
                 <li>Check Spam / Junk / Promotions — search “Firehall Meals”.</li>
-                <li>Wait 1–2 minutes; some halls’ email filters delay delivery.</li>
+                <li>Wait 1–2 minutes; some firehouses’ email filters delay delivery.</li>
                 <li>Confirm the address is spelled correctly ({masked}).</li>
                 <li>Use Resend after the timer — each new link invalidates the previous one.</li>
                 <li>

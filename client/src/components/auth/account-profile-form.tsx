@@ -163,10 +163,10 @@ export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { 
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="hall-name">Hall name (optional)</Label>
+          <Label htmlFor="hall-name">Firehouse name (optional)</Label>
           <Input
             id="hall-name"
-            placeholder="Add your hall or station"
+            placeholder="Add your firehouse or station"
             value={hallName}
             onChange={(e) => setHallName(e.target.value)}
           />

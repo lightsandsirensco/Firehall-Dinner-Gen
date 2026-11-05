@@ -120,7 +120,7 @@ export function defaultShiftChips(): ExploreRecommendationChip[] {
 export function buildExploreHeroCopy(ctx: ExploreFeedContext): ExploreHeroCopy {
   const { timeSlot, isFriday, isWeekend, shiftMode, serverHints } = ctx;
 
-  let title = "Explore hall meals";
+  let title = "Explore firehouse meals";
   let subtitle = "Classics, comfort, BBQ, and lighter plates — meals crews actually make.";
 
   if (shiftMode === "quick_shift") {
@@ -130,7 +130,7 @@ export function buildExploreHeroCopy(ctx: ExploreFeedContext): ExploreHeroCopy {
     title = "Comfort night";
     subtitle = "Hearty, familiar spreads when the crew wants something that hits.";
   } else if (shiftMode === "healthy" || shiftMode === "performance") {
-    title = "Healthy hall plates";
+    title = "Healthy firehouse plates";
     subtitle = "Lighter, protein-forward meals mixed in with the usual lineup — still real dinner.";
   } else if (shiftMode === "high_protein") {
     title = "High-protein picks";
@@ -139,20 +139,20 @@ export function buildExploreHeroCopy(ctx: ExploreFeedContext): ExploreHeroCopy {
     title = "BBQ & grill night";
     subtitle = "Smoke, char, and outdoor station energy when the crew wants fire.";
   } else if (shiftMode === "breakfast") {
-    title = "Breakfast at the hall";
+    title = "Breakfast at the firehouse";
     subtitle = "Skillets, burritos, and morning-for-dinner when the shift runs long.";
   } else if (shiftMode === "game_day") {
-    title = "Game day at the hall";
+    title = "Game day at the firehouse";
     subtitle = "Handhelds, dips, and spreads built for the couch crew.";
   } else if (isFriday && timeSlot !== "morning") {
-    title = "Friday at the hall";
+    title = "Friday at the firehouse";
     subtitle = "BBQ, pizza, and watch-night energy — what crews actually cook.";
   } else if (timeSlot === "morning" || timeSlot === "afternoon") {
     title = "Before the next run";
     subtitle = "Breakfast-for-dinner and quick turns while the station's still moving.";
   } else if (timeSlot === "late") {
     title = "Late shift plates";
-    subtitle = "Satisfying food when you're past dinner time but the hall's still hungry.";
+    subtitle = "Satisfying food when you're past dinner time but the firehouse's still hungry.";
   }
 
   if (serverHints[0] && shiftMode === "default") {
@@ -170,7 +170,7 @@ export function buildExploreHeroCopy(ctx: ExploreFeedContext): ExploreHeroCopy {
   }));
 
   return {
-    eyebrow: isWeekend ? "Weekend at the hall" : "Curated for crews",
+    eyebrow: isWeekend ? "Weekend at the firehouse" : "Curated for crews",
     title,
     subtitle,
     chips,
@@ -195,32 +195,32 @@ const CONTEXTUAL_SUBTITLES: Partial<
     comfort: "Maximum comfort — ranked for emotional payoff",
   },
   healthy_performance: {
-    default: "Lean protein that still satisfies a hungry hall",
-    healthy: "Lighter plates that still feel like hall dinner",
+    default: "Lean protein that still satisfies a hungry crew",
+    healthy: "Lighter plates that still feel like firehouse dinner",
     high_protein: "Protein-forward without the meal-prep lecture",
-    performance: "Lighter plates that still feel like hall dinner",
+    performance: "Lighter plates that still feel like firehouse dinner",
   },
   bbq_grill_nights: {
     default: "Smoke, char, and grill marks — outdoor station energy",
     game_day: "Perfect alongside the game — feeds a crowd",
   },
   pizza_night: {
-    default: "Friday hall energy without the delivery boxes",
+    default: "Friday firehouse energy without the delivery boxes",
     game_day: "Pies that beat takeout for watch night",
   },
   game_day_watch_party: {
     default: "Handhelds and shareable feeds for the whole couch",
-    game_day: "What halls are making for watch night right now",
+    game_day: "What firehouses are making for watch night right now",
   },
   firehall_classics: {
-    default: "The lineup crews already argue about — hall-proven",
+    default: "The lineup crews already argue about — firehouse-proven",
   },
   rookie_friendly: {
     default: "Hard to mess up — built for newer cooks on the line",
     quick_shift: "Simple steps when the shift won't wait",
   },
   meal_prep_leftovers: {
-    default: "Cook once, feed the week — Sunday hall prep energy",
+    default: "Cook once, feed the week — Sunday firehouse prep energy",
   },
   big_crew_feeders: {
     default: "Feeds 10+ without kitchen chaos",
@@ -232,7 +232,7 @@ const RAIL_CHIPS: Partial<Record<MasterCategoryId, string[]>> = {
   comfort_food: ["Post-call", "Crew favorite", "Hearty"],
   healthy_performance: ["High protein", "Hall-tested", "Lean grill"],
   bbq_grill_nights: ["Smoked & grilled", "Friday energy"],
-  pizza_night: ["Hall pizza night", "Feeds the table"],
+  pizza_night: ["Firehouse pizza night", "Feeds the table"],
   game_day_watch_party: ["Game day", "Shareable"],
   firehall_classics: ["Hall-tested", "Crew picks"],
   big_crew_feeders: ["Feeds 10+", "Batch cook"],
@@ -259,7 +259,7 @@ export function buildRailPresentation(
 
   let subtitle = contextualSub || section.subtitle;
   if (ctx.isFriday && catId === "bbq_grill_nights" && ctx.shiftMode === "default") {
-    subtitle = "Trending at halls this Friday — smoke and char ranked first";
+    subtitle = "Trending at firehouses this Friday — smoke and char ranked first";
   }
   if (ctx.shiftMode === "quick_shift" && sectionIndex <= 2 && catId === "quick_shift_meals") {
     subtitle = "Built for a busy shift tonight — fastest high-quality picks";
@@ -271,9 +271,9 @@ export function buildRailPresentation(
     sectionIndex === 0;
 
   let editorialBadge: string | undefined;
-  if (isHeroRail) editorialBadge = "Hall favorites";
+  if (isHeroRail) editorialBadge = "Crew favorites";
   else if (ctx.isFriday && (catId === "pizza_night" || catId === "game_day_watch_party")) {
-    editorialBadge = "Friday at the hall";
+    editorialBadge = "Friday at the firehouse";
   } else if (
     (ctx.shiftMode === "healthy" ||
       ctx.shiftMode === "high_protein" ||
@@ -309,7 +309,7 @@ export function buildWhyThisMeal(
     return "Built for a busy shift tonight — on the table before the next tone";
   }
   if (ctx.shiftMode === "comfort" && /chili|mac|stew|comfort|cheese|mashed/.test(text)) {
-    return "Crew favorite comfort food — exactly what the hall wants after a long call";
+    return "Crew favorite comfort food — exactly what the crew wants after a long call";
   }
   if (
     (ctx.shiftMode === "healthy" ||
@@ -317,25 +317,25 @@ export function buildWhyThisMeal(
       ctx.shiftMode === "performance") &&
     /grilled|lean|salmon|turkey|bowl|protein/.test(text)
   ) {
-    return "High-protein hall meal — satisfies without feeling like diet food";
+    return "High-protein firehouse meal — satisfies without feeling like diet food";
   }
   if (ctx.shiftMode === "game_day" && /nacho|wing|slider|dip|burger|pizza/.test(text)) {
-    return "Game-day hall meal — built for sharing around the watch";
+    return "Game-day firehouse meal — built for sharing around the watch";
   }
   if (/one pot|sheet pan|skillet/.test(text)) {
     return "Minimal cleanup tonight — one pan, less dishes after the call";
   }
   if (mins > 0 && mins <= 30) return "Quick turn for a hungry crew — practical on a busy night";
   if (recipe.fromCuratedDb && recipe.publisherMedia) {
-    return "Curated hall pick — real photography, trusted recipe structure";
+    return "Curated crew pick — real photography, trusted recipe structure";
   }
-  if (catId === "firehall_classics") return "Hall-tested classic — crews already know this one";
+  if (catId === "firehall_classics") return "Firehouse-tested classic — crews already know this one";
   if (ctx.isFriday && /bbq|pizza|grill|smoke/.test(text)) {
-    return "Trending at halls this Friday — smoke, char, and craveable plates";
+    return "Trending at firehouses this Friday — smoke, char, and craveable plates";
   }
 
   const def = catId ? MASTER_CATEGORIES_BY_ID[catId] : undefined;
-  return def?.emotional.trustPromise || "Picked for appetite and hall practicality";
+  return def?.emotional.trustPromise || "Picked for appetite and firehouse practicality";
 }
 
 export function buildRecommendationChip(

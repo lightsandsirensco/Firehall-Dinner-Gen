@@ -19,12 +19,12 @@ export function HallCrewCard() {
     <>
       <section className={cn(app.cardSurface, "p-5 relative")}>
         <div className="flex items-center justify-between gap-2 mb-3">
-          <h2 className={app.titleCard}>My Hall &amp; Crew</h2>
+          <h2 className={app.titleCard}>My Firehouse &amp; Crew</h2>
           <button
             type="button"
             onClick={() => setEditing(true)}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-border/40 bg-muted/20 hover-elevate active-elevate-2 touch-manipulation shrink-0"
-            aria-label="Edit hall and crew"
+            aria-label="Edit firehouse and crew"
             data-testid="button-edit-hall-crew"
           >
             <Pencil className="h-3.5 w-3.5" aria-hidden />
@@ -48,7 +48,7 @@ export function HallCrewCard() {
         {hasAnyData ? (
           <dl className="grid gap-3 sm:grid-cols-2">
             <Field label="Department / service" value={profile?.department} />
-            <Field label="Hall / station" value={profile?.hall_name} />
+            <Field label="Firehouse / station" value={profile?.hall_name} />
             <Field label="Shift / crew name" value={profile?.shift_label} />
             <Field
               label="Default crew size"
@@ -58,10 +58,10 @@ export function HallCrewCard() {
         ) : (
           <div className="space-y-2">
             <p className="text-sm text-muted-foreground">
-              Add your hall so Firehall Meals can personalize meals for your crew.
+              Add your firehouse so Firehall Meals can personalize meals for your crew.
             </p>
             <Link href="/hall" className="text-xs font-medium text-primary hover:underline underline-offset-4">
-              Set up your hall →
+              Set up your firehouse →
             </Link>
           </div>
         )}

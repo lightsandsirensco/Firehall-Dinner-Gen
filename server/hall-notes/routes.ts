@@ -30,12 +30,12 @@ export function registerHallNotesRoutes(app: Express): void {
         const hallId = String(req.params.hallId ?? "");
         const payload = listHallNotes(hallId, req._authUserId!);
         if (!payload) {
-          return res.status(403).json({ message: "Not a member of this hall" });
+          return res.status(403).json({ message: "Not a member of this firehouse" });
         }
         return res.json(payload);
       } catch (err) {
         logError("hall-notes", "list failed", err);
-        return res.status(500).json({ message: "Failed to load hall notes" });
+        return res.status(500).json({ message: "Failed to load firehouse notes" });
       }
     },
   );

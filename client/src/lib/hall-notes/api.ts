@@ -5,7 +5,7 @@ export async function fetchHallNotes(hallId: string): Promise<HallNotesPayload> 
   const res = await fetch(`/api/halls/${encodeURIComponent(hallId)}/notes`, {
     credentials: "include",
   });
-  if (!res.ok) throw new Error("Failed to load hall notes");
+  if (!res.ok) throw new Error("Failed to load firehouse notes");
   return res.json();
 }
 

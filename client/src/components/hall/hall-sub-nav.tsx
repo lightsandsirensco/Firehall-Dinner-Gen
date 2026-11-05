@@ -12,5 +12,5 @@ export function hallSectionTitle(pathname: string): string {
   if (pathname.startsWith("/hall/join")) return "Join";
   if (pathname.startsWith("/hall/welcome")) return "Welcome";
   if (pathname.startsWith("/hall/features")) return "Features";
-  return "Hall";
+  return "Firehouse";
 }

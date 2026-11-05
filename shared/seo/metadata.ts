@@ -86,7 +86,7 @@ export function buildGeneratorSeo(recipeCount = APPROVED_CATALOG_TOTAL): PageSeo
 
 export function buildFaqSeo(): PageSeoConfig {
   return {
-    title: `Firefighter & Firehall Meal FAQ | ${SEO_SITE_NAME}`,
+    title: `Firefighter & Firehouse Meal FAQ | ${SEO_SITE_NAME}`,
     description:
       "Answers about firefighter meals, firehall dinner ideas, crew-sized firehouse cooking, and how Firehall Meals helps station kitchens.",
     canonicalPath: "/faq",
@@ -99,7 +99,7 @@ export function buildExploreSeo(recipeCount = APPROVED_CATALOG_TOTAL): PageSeoCo
   return {
     title: `Browse Firefighter Meals & Recipes | Firehall Meals`,
     description: clipDescription(
-      `Search ${formatMarketingRecipeCount(recipeCount)} firefighter meals and firehall recipes — healthy station plates, BBQ hall nights, quick shift dinners, and crew-sized firehouse favorites.`,
+      `Search ${formatMarketingRecipeCount(recipeCount)} firefighter meals and firehouse recipes — healthy station plates, BBQ firehouse nights, quick shift dinners, and crew-sized firehouse favorites.`,
     ),
     canonicalPath: "/explore",
     ogType: "website",
@@ -111,7 +111,7 @@ export function buildPizzaNightSeo(pizzaCount: number): PageSeoConfig {
   return {
     title: `Pizza Night | ${SEO_SITE_NAME}`,
     description: clipDescription(
-      `Browse ${pizzaCount} hall-tested pizza recipes — crew-sized pies with oven temps, topping order, and step-by-step instructions.`,
+      `Browse ${pizzaCount} firehouse-tested pizza recipes — crew-sized pies with oven temps, topping order, and step-by-step instructions.`,
     ),
     canonicalPath: "/pizza",
     ogType: "website",
@@ -123,7 +123,7 @@ export function buildRecipesIndexSeo(recipeCount = APPROVED_CATALOG_TOTAL): Page
   return {
     title: `Firefighter Meals & Recipes (${recipeCount}+) | Firehall Meals`,
     description: clipDescription(
-      `${recipeCount}+ firefighter meals and fire station recipes — crew portions, clear steps, and categories for quick shifts, BBQ nights, and healthy hall cooking.`,
+      `${recipeCount}+ firefighter meals and fire station recipes — crew portions, clear steps, and categories for quick shifts, BBQ nights, and healthy firehouse cooking.`,
     ),
     canonicalPath: "/explore",
     ogType: "website",
@@ -135,7 +135,7 @@ export function buildTopRatedRecipesSeo(): PageSeoConfig {
   return {
     title: "Top Rated Firefighter Recipes | Firehall Meals",
     description: clipDescription(
-      "Hall-tested meals ranked by crew approval — see which firefighter recipes crews would cook again.",
+      "Firehouse-tested meals ranked by crew approval — see which firefighter recipes crews would cook again.",
     ),
     canonicalPath: "/top-rated-recipes",
     ogType: "website",
@@ -166,16 +166,16 @@ export function buildFirehallCategorySeo(categoryId: FirehallCategoryId, recipeC
 
   const descBase =
     categoryId === "quick_meals"
-      ? "Firehall quick meals for busy nights — realistic timing, minimal fuss, crew-sized portions."
+      ? "Firehouse quick meals for busy nights — realistic timing, minimal fuss, crew-sized portions."
       : categoryId === "comfort_food"
-        ? "Firefighter comfort food for tough shifts — warm, hearty, hall-tested dinners."
+        ? "Firefighter comfort food for tough shifts — warm, hearty, firehouse-tested dinners."
         : categoryId === "healthy_options"
           ? "Healthy firefighter meals that still taste good — practical station dinners, not diet culture."
           : categoryId === "bbq_smoker"
             ? "BBQ firehall meals for grill and smoker nights — crew-scale proteins and sides."
             : categoryId === "feed_a_crowd"
-              ? "Meals for large crews — batch, tray, and line dinners built to feed the hall."
-              : "Hall-tested meals organized by practical station nights.";
+              ? "Meals for large crews — batch, tray, and line dinners built to feed the crew."
+              : "Firehouse-tested meals organized by practical station nights.";
 
   const titlePrefix =
     categoryId === "healthy_options"
@@ -201,7 +201,7 @@ export function buildWheelSeo(): PageSeoConfig {
   return {
     title: `Classics Wheel — Spin for Tonight's Firehall Dinner | ${SEO_SITE_NAME}`,
     description: clipDescription(
-      "Spin the Classics Wheel to pick tonight's firehall dinner from ten hall-tested crew favorites — no more what's-for-dinner debate.",
+      "Spin the Classics Wheel to pick tonight's firehall dinner from ten firehouse-tested crew favorites — no more what's-for-dinner debate.",
     ),
     canonicalPath: "/wheel",
     ogType: "website",
@@ -259,23 +259,23 @@ export function buildHowWeTestRecipesSeo(): PageSeoConfig {
   return {
     title: `How We Test Recipes | ${SEO_SITE_NAME}`,
     description: clipDescription(
-      "How Firehall Meals tests firefighter recipes for real fire halls — crew sizing for 2–20, beginner-friendly steps, and shift cooking that holds between calls.",
+      "How Firehall Meals tests firefighter recipes for real firehouses — crew sizing for 2–20, beginner-friendly steps, and shift cooking that holds between calls.",
     ),
     canonicalPath: "/how-we-test-recipes",
     ogType: "website",
-    keywords: [...SEO_TARGET_KEYWORDS, "how we test recipes", "firehall recipe standards"],
+    keywords: [...SEO_TARGET_KEYWORDS, "how we test recipes", "firehouse recipe standards"],
   };
 }
 
 export function buildHallProgramSeo(): PageSeoConfig {
   return {
-    title: `Hall Program — Built For Fire Halls | ${SEO_SITE_NAME}`,
+    title: `Firehouse Program — Built For Firehouses | ${SEO_SITE_NAME}`,
     description: clipDescription(
-      'End the "what\'s for dinner?" debate for every shift. Shared meal history, shopping lists, favorites, supplies, and hall analytics.',
+      'End the "what\'s for dinner?" debate for every shift. Shared meal history, shopping lists, favorites, supplies, and firehouse analytics.',
     ),
     canonicalPath: "/hall-program",
     ogType: "website",
-    keywords: [...SEO_TARGET_KEYWORDS, "fire hall program", "station meal planning", "hall pro"],
+    keywords: [...SEO_TARGET_KEYWORDS, "firehouse program", "station meal planning", "hall pro"],
   };
 }
 
@@ -320,7 +320,7 @@ export function buildRecipePageSeo(page: GoldenRecipePage, origin: string): Page
       page.title.toLowerCase(),
       category,
       page.cuisine,
-      "firehall recipe",
+      "firehouse recipe",
     ],
   };
 }
@@ -333,7 +333,7 @@ export function buildGuidesIndexSeo(articleCount = 8): PageSeoConfig {
     ),
     canonicalPath: guidesIndexPath(),
     ogType: "website",
-    keywords: [...SEO_TARGET_KEYWORDS, "firefighter cooking guide", "firehall tips"],
+    keywords: [...SEO_TARGET_KEYWORDS, "firefighter cooking guide", "firehouse tips"],
   };
 }
 
@@ -355,7 +355,7 @@ export function buildGuidesClusterSeo(clusterId: GuidesClusterId, articleCount =
 
   const descBase =
     clusterId === "firefighter-meals"
-      ? "Firefighter meals built for station kitchens — crew-sized, shift-friendly, and hall-tested."
+      ? "Firefighter meals built for station kitchens — crew-sized, shift-friendly, and firehouse-tested."
       : clusterId === "firehall-dinners"
         ? "Fire station dinner ideas crews actually run: comfort, BBQ, big feeds, and quick shift plates."
         : clusterId === "firefighter-nutrition"

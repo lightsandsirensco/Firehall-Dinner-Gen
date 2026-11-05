@@ -2,7 +2,7 @@
 
 export const HALL_FEEDBACK_COPY = {
   fabLabel: "Hall Feedback",
-  modalTitle: "Help Shape the Hall",
+  modalTitle: "Help Shape the Firehouse",
   modalSubtitle: "Built by firefighters. Improved every shift.",
   placeholder: "What should we improve, fix, or add?",
   emailLabel: "Email (optional)",
@@ -15,7 +15,7 @@ export const HALL_FEEDBACK_COPY = {
   generatorSmoked:
     "Meal picker hit a snag. Try again or send feedback.",
   generatorSmokedAction: "send feedback",
-  successToast: "Got it — the hall hears you.",
+  successToast: "Got it — the firehouse hears you.",
 } as const;
 
 export const GENERATOR_SMOKED_ERROR = HALL_FEEDBACK_COPY.generatorSmoked;

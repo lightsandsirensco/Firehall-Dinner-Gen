@@ -6,7 +6,7 @@ export async function fetchHallShoppingList(hallId: string): Promise<HallShoppin
   const res = await fetch(`/api/halls/${encodeURIComponent(hallId)}/shopping-list`, {
     credentials: "include",
   });
-  if (!res.ok) throw new Error("Failed to load hall shopping list");
+  if (!res.ok) throw new Error("Failed to load firehouse shopping list");
   return res.json();
 }
 

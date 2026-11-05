@@ -11,7 +11,7 @@ const INTERNAL_LEAK =
 
 /** Lines shown when meal came from curated pool (server _fallback flag). */
 const HALL_PICK_LINES = [
-  "Hall-tested crew favorite",
+  "Firehouse-tested crew favorite",
   "Curated pick for tonight's table",
   "A proven meal at the station",
   "Chef's pick for busy shift nights",
@@ -36,7 +36,7 @@ export function customerSourceAttribution(
 ): string | null {
   if (!source?.name) return null;
   const line = formatAdaptationLabel(source);
-  if (!line || INTERNAL_LEAK.test(line)) return "Inspired by a trusted hall recipe";
+  if (!line || INTERNAL_LEAK.test(line)) return "Inspired by a trusted firehouse recipe";
   return sanitizeCustomerText(line);
 }
 

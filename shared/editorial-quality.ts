@@ -86,7 +86,7 @@ export function buildPublisherAttribution(
   sourceKind?: string,
 ): string {
   const name = publisherName?.trim();
-  if (!name) return "Curated for the hall";
+  if (!name) return "Curated for the crew";
   if (sourceKind === "publisher" || sourceKind === "partner") {
     return `Curated from ${name}`;
   }

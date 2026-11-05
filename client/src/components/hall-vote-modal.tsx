@@ -207,7 +207,7 @@ export function HallVoteModal({
                 </>
               ) : (
                 <>
-                  Line up the options, share the link, and let the hall pick dinner. No accounts — just
+                  Line up the options, share the link, and let the crew pick dinner. No accounts — just
                   tap and vote.
                 </>
               )}
@@ -335,7 +335,7 @@ export function HallVoteModal({
         {step === "share" && (
           <div className="space-y-5">
             <p className="text-sm text-muted-foreground text-center">
-              Prop the phone on the counter — crew taps the link or scans the QR. The hall decides.
+              Prop the phone on the counter — crew taps the link or scans the QR. The crew decides.
             </p>
 
             {qrDataUrl && (
@@ -354,7 +354,7 @@ export function HallVoteModal({
                   <div className="relative bg-zinc-950 border-2 border-primary/50 rounded-2xl p-5 shadow-2xl shadow-primary/20">
                     <img
                       src={qrDataUrl}
-                      alt="QR code — scan to vote on tonight's hall dinner"
+                      alt="QR code — scan to vote on tonight's firehouse dinner"
                       className="w-[min(280px,72vw)] h-[min(280px,72vw)]"
                       data-testid="img-qr-code"
                     />

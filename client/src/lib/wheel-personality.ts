@@ -9,17 +9,17 @@ const SPIN_SUSPENSE = [
   "Kitchen table rules apply.",
   "No take-backs once it lands.",
   "Somebody's about to be on dishes.",
-  "This is how halls actually decide.",
+  "This is how firehouses actually decide.",
 ];
 
 const LAND_ONE_LINERS = [
   "That's dinner. Argue later.",
-  "Every hall ends up here eventually.",
+  "Every firehouse ends up here eventually.",
   "Classic move. Nobody's mad.",
   "The rookie's learning tonight.",
   "This always hits after a rough shift.",
   "You know this smell already.",
-  "Hall-tested. Argument over.",
+  "Firehouse-tested. Argument over.",
 ];
 
 const ROOKIE_JOKES = [
@@ -51,7 +51,7 @@ export function pickWheelLandLine(seed: string, isRookieFriendly?: boolean): str
 
 export function pickWheelIntro(seed: string): string {
   const intros = [
-    "Tonight's hall meal:",
+    "Tonight's firehouse meal:",
     "The wheel says:",
     "Kitchen table verdict:",
     "Crew pick locked in:",

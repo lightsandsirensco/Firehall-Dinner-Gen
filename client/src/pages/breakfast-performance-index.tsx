@@ -69,14 +69,14 @@ export default function BreakfastPerformanceIndexPage() {
           Performance breakfasts
         </h1>
         <p className="mt-4 text-muted-foreground leading-relaxed max-w-3xl">
-          Macro-forward morning meals for training days — kept separate from the main firehall breakfast
+          Macro-forward morning meals for training days — kept separate from the main firehouse breakfast
           line so classics stay front and center. Still crew-sized, still practical, just not what you lead
           with after a busy night.
         </p>
 
         <p className="mt-6 text-sm">
           <Link href={breakfastIndexPath()} className="text-primary hover:underline font-medium">
-            ← Back to firehall breakfasts
+            ← Back to firehouse breakfasts
           </Link>
         </p>
 

@@ -28,7 +28,7 @@ export function MealShareCard({
   imageAlt,
   heldLabel,
   trustInput,
-  eyebrow = "Tonight's hall meal",
+  eyebrow = "Tonight's firehouse meal",
   className,
 }: MealShareCardProps) {
   return (

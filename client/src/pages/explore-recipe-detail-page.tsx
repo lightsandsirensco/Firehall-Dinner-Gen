@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { getSavedCount, saveMeal, isMealSaved } from "@/lib/saved-meals";
+import { trackRecipeSave } from "@/lib/analytics";
 import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
 import { EmailModal } from "@/components/email-modal";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
@@ -440,6 +441,7 @@ function RecipeDetailView({
   const handleSave = () => {
     const result = saveMeal(clientRecipe);
     if (result.saved || result.duplicate) setSaved(true);
+    if (result.saved) trackRecipeSave(`explore-${recipe.id}`, recipe.title);
   };
 
   const handlePrint = () => {

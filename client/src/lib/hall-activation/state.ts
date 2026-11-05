@@ -144,7 +144,7 @@ export function onboardingStep(progress: HallActivationProgress, hasHall: boolea
 }
 
 export const ONBOARDING_STEP_LABELS: Record<OnboardingStep, string> = {
-  1: "Join Hall",
+  1: "Join Firehouse",
   2: "Welcome",
   3: "Tonight",
 };

@@ -43,6 +43,7 @@ import {
 import { isRedLeadPdfUnlocked, markRedLeadPdfUnlocked } from "@/lib/red-lead-lead-magnet";
 
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
+import { WithLightsAndSirensLinks } from "@/components/brand/lights-and-sirens-link";
 
 import {
 
@@ -64,7 +65,7 @@ const LEAD_MAGNET_BENEFITS = [
 
   "Printable Red Lead PDF",
 
-  "Firehall breakfast recipes",
+  "Firehouse breakfast recipes",
 
   "New firefighter meal ideas",
 
@@ -388,7 +389,7 @@ export function RedLeadPdfCapture({
 
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
 
-              Get the printable PDF now — plus optional hall breakfast and meal ideas by email.
+              Get the printable PDF now — plus optional firehouse breakfast and meal ideas by email.
 
             </p>
 
@@ -527,7 +528,7 @@ export function RedLeadPdfCapture({
 
           <p className="text-[11px] text-muted-foreground leading-relaxed">
 
-            You&apos;ll get the PDF either way. Check the box above only if you also want hall breakfast ideas by
+            You&apos;ll get the PDF either way. Check the box above only if you also want firehouse breakfast ideas by
 
             email — unsubscribe anytime.
 
@@ -537,7 +538,7 @@ export function RedLeadPdfCapture({
 
             <div className="border-t border-border/20 pt-3 text-center">
 
-              <p className="text-[11px] text-muted-foreground leading-relaxed">{LIGHTS_COPY.emailNote}</p>
+              <p className="text-[11px] text-muted-foreground leading-relaxed"><WithLightsAndSirensLinks text={LIGHTS_COPY.emailNote} /></p>
 
               <div className="mt-2 flex justify-center">
 

@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-import { SocialProofStatsRow } from "@/components/social-proof/social-proof-stats";
 import { Testimonials } from "@/components/social-proof/testimonials";
 import { fetchSocialProof, socialProofQueryKey } from "@/lib/social-proof-api";
-import { hasCredibleSocialProofStats } from "@shared/social-proof/format";
-import { SOCIAL_PROOF_HEADLINE, SOCIAL_PROOF_SUBHEADLINE } from "@shared/social-proof/testimonials-data";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
+
+const VALUE_HEADLINE = "What Firefighters Are Saying";
+const VALUE_SUBHEADLINE = "Real feedback from the crews using Firehall Meals.";
 
 interface SocialProofSectionProps {
   className?: string;
@@ -18,14 +18,7 @@ export function SocialProofSection({ className }: SocialProofSectionProps) {
     staleTime: 120_000,
   });
 
-  const stats = data?.stats;
   const testimonials = data?.testimonials ?? [];
-  const headline = data?.headline ?? SOCIAL_PROOF_HEADLINE;
-  const subheadline = data?.subheadline ?? SOCIAL_PROOF_SUBHEADLINE;
-  const hasTestimonials = testimonials.length > 0;
-  const hasStats = hasCredibleSocialProofStats(stats);
-
-  if (!hasTestimonials && !hasStats) return null;
 
   return (
     <section
@@ -33,21 +26,19 @@ export function SocialProofSection({ className }: SocialProofSectionProps) {
       aria-labelledby="social-proof-heading"
       data-testid="social-proof-section"
     >
-      <div className={cn(app.main, app.sectionY, "space-y-8")}>
-        <div className="max-w-2xl">
-          <h2 id="social-proof-heading" className={cn(app.titleSection, "text-balance")}>
-            {headline}
+      <div className={cn(app.main, app.sectionY, "space-y-10 sm:space-y-12")}>
+        <div className="mx-auto max-w-3xl text-center" data-testid="home-value-proposition">
+          <span aria-hidden className="mx-auto block h-0.5 w-10 rounded-full bg-primary" />
+          <h2
+            id="social-proof-heading"
+            className={cn(app.titlePage, "mt-5 text-balance sm:mt-6")}
+          >
+            {VALUE_HEADLINE}
           </h2>
-          {hasTestimonials ? (
-            <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
-              {subheadline}
-            </p>
-          ) : null}
+          <p className={cn(app.lead, "mx-auto mt-4 max-w-2xl text-pretty")}>{VALUE_SUBHEADLINE}</p>
         </div>
 
-        {hasStats ? <SocialProofStatsRow stats={stats!} /> : null}
-
-        {hasTestimonials ? <Testimonials testimonials={testimonials} /> : null}
+        {testimonials.length > 0 ? <Testimonials testimonials={testimonials} /> : null}
       </div>
     </section>
   );

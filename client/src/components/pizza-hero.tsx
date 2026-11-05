@@ -17,8 +17,8 @@ interface PizzaHeroProps {
  * Pizza Night — restrained event hero.
  */
 export function PizzaHero({
-  title = "Pizza night at the hall",
-  subtitle = "Crew-sized pies with oven temps and hall-friendly steps.",
+  title = "Pizza night at the firehouse",
+  subtitle = "Crew-sized pies with oven temps and crew-friendly steps.",
   gradient = "from-red-950/90 via-zinc-950 to-background",
   badges = ["Feeds the crew", "Oven-ready"],
   heroImage,

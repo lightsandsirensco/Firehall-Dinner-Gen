@@ -71,7 +71,7 @@ export default function CuratedPackagePage() {
             </Button>
           </Link>
           <Badge variant="secondary" className="text-[10px] uppercase tracking-wider">
-            Curated hall package
+            Curated firehouse package
           </Badge>
         </div>
 
@@ -156,7 +156,7 @@ export default function CuratedPackagePage() {
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Flame className="w-4 h-4 text-primary" />
               <span>
-                Main, sides, ingredients, and steps are curated for the hall — not randomly invented.
+                Main, sides, ingredients, and steps are curated for the crew — not randomly invented.
               </span>
             </div>
 

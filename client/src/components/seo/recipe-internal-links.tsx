@@ -26,7 +26,7 @@ export function RecipeInternalLinks({ clusters, pillar, guide, className }: Reci
           More meals like this
         </h2>
         <p className="mt-2 text-sm text-muted-foreground max-w-2xl leading-relaxed">
-          Hand-picked from the hall catalog — same proteins, cooking styles, and shift-night themes.
+          Hand-picked from the firehouse catalog — same proteins, cooking styles, and shift-night themes.
         </p>
       </div>
 

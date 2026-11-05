@@ -313,12 +313,12 @@ export function SimplifiedGeneratorForm({
 
         <div className="col-span-2 space-y-1">
           <Label className="text-xs text-muted-foreground">
-            {hallLinked ? "Hall appliances" : "Appliances (optional)"}
+            {hallLinked ? "Firehouse appliances" : "Appliances (optional)"}
           </Label>
           {hallLinked ? (
             <p className="text-xs text-muted-foreground px-1 py-2">
               {formatApplianceSummary(filters.appliances)}
-              <span className="block text-[10px] mt-0.5 opacity-80">From hall settings</span>
+              <span className="block text-[10px] mt-0.5 opacity-80">From firehouse settings</span>
             </p>
           ) : (
             <div className="flex flex-wrap gap-1.5">
@@ -436,7 +436,7 @@ export function SimplifiedGeneratorForm({
             onCheckedChange={togglePersonalizeWithHistory}
             data-testid="checkbox-personalize-for-crew"
           />
-          Personalize for my crew — uses your hall's meal history to fine-tune tonight's pick
+          Personalize for my crew — uses your firehouse's meal history to fine-tune tonight's pick
         </label>
       )}
 

@@ -25,7 +25,7 @@ export default function HallDuesPage() {
       >
         <div className="space-y-3">
           <div>
-            <h1 className="text-xl font-semibold tracking-tight">Hall Dues</h1>
+            <h1 className="text-xl font-semibold tracking-tight">Firehouse Dues</h1>
             <p className="text-sm text-muted-foreground">
               Who has paid, who hasn’t — Mark Paid in seconds.
             </p>

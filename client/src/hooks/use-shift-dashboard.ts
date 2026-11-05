@@ -38,7 +38,7 @@ export function useShiftDashboard(hallId: string, shiftId: string) {
       .catch(() => {
         if (!cancelled) {
           setDetail(null);
-          setError("Hall not found");
+          setError("Firehouse not found");
         }
       })
       .finally(() => {

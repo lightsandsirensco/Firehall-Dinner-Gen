@@ -24,7 +24,7 @@ export default function ShopPage() {
         </div>
         <h1 className="font-heading text-3xl sm:text-4xl tracking-wide text-foreground mb-2">Shop</h1>
         <p className="text-muted-foreground max-w-xl mb-8">
-          Crew gear made for the hall — hats, tees, aprons, and stickers.
+          Crew gear made for the crew — hats, tees, aprons, and stickers.
         </p>
 
         {isError && (

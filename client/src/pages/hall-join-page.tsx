@@ -117,7 +117,7 @@ export default function HallJoinPage() {
               <p className="text-sm text-muted-foreground mt-1">
                 {[preview.station_number && `Station ${preview.station_number}`, preview.department]
                   .filter(Boolean)
-                  .join(" · ") || "Firehall crew"}
+                  .join(" · ") || "Firehouse crew"}
               </p>
               <p className="text-xs text-muted-foreground mt-2">
                 {preview.member_count} member{preview.member_count === 1 ? "" : "s"}

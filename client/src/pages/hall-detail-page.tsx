@@ -72,20 +72,20 @@ export default function HallDetailPage() {
     <HallShell title="Settings" testId="hall-settings-page">
       <div className="space-y-2">
         <h1 className="font-heading text-2xl tracking-wide">
-          {detail?.hall.hall_name ?? "Hall settings"}
+          {detail?.hall.hall_name ?? "Firehouse settings"}
         </h1>
         <p className="text-sm text-muted-foreground">
           {detail
             ? [detail.hall.station_number && `Station ${detail.hall.station_number}`, departmentLabel]
                 .filter(Boolean)
                 .join(" · ")
-            : "Members, invites, and hall preferences"}
+            : "Members, invites, and firehouse preferences"}
         </p>
       </div>
 
       <div className="flex flex-wrap gap-2">
         <Button asChild variant="secondary" className="min-h-10">
-          <Link href="/hall">Hall overview</Link>
+          <Link href="/hall">Firehouse overview</Link>
         </Button>
         <Button asChild variant="outline" className="min-h-10">
           <Link href="/tonight">Recipes</Link>
@@ -94,7 +94,7 @@ export default function HallDetailPage() {
 
       {!authenticated ? (
         <div className="rounded-2xl border border-dashed border-border/50 bg-muted/20 px-4 py-8 text-center text-sm text-muted-foreground">
-          Sign in to manage this hall.{" "}
+          Sign in to manage this firehouse.{" "}
           <button
             type="button"
             className="font-medium text-primary hover:underline"
@@ -104,9 +104,9 @@ export default function HallDetailPage() {
           </button>
         </div>
       ) : loading ? (
-        <p className="text-sm text-muted-foreground">Loading hall…</p>
+        <p className="text-sm text-muted-foreground">Loading firehouse…</p>
       ) : !detail ? (
-        <p className="text-sm text-destructive">Hall not found or you are not a member.</p>
+        <p className="text-sm text-destructive">Firehouse not found or you are not a member.</p>
       ) : (
         <div className="space-y-8">
           <HallProAdminPanel
@@ -118,10 +118,10 @@ export default function HallDetailPage() {
           <div className="grid gap-3 sm:grid-cols-3">
             <PermissionCard
               icon={Vote}
-              label="Hall Vote"
+              label="Crew Vote"
               active={hallRoleHasPermission(detail.my_role, "participate_votes")}
             />
-            <PermissionCard icon={Package} label="Hall Staples" active={canViewDashboard} />
+            <PermissionCard icon={Package} label="Firehouse Staples" active={canViewDashboard} />
             <PermissionCard
               icon={MalteseCross}
               label={HALL_LINKED.manage}
@@ -149,7 +149,7 @@ export default function HallDetailPage() {
             <Button asChild variant="outline" size="sm" className="min-h-10">
               <Link href="/hall">
                 <Vote className="mr-1.5 h-3.5 w-3.5" />
-                Hall Home
+                Firehouse Home
               </Link>
             </Button>
             <Button asChild variant="outline" size="sm" className="min-h-10">

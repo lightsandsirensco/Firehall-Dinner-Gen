@@ -43,7 +43,7 @@ export default function HallHistoryPage() {
           aria-labelledby="hall-profile-heading"
         >
           <h2 id="hall-profile-heading" className="text-sm font-semibold text-foreground mb-4">
-            Hall profile
+            Firehouse profile
           </h2>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
@@ -140,7 +140,7 @@ export default function HallHistoryPage() {
 
         {activeHallId && !hasCrewCloudHistory ? (
           <p className="text-xs text-center text-muted-foreground leading-relaxed">
-            Crew cloud meal log (shared across hall members) unlocks with Hall Pro.
+            Crew cloud meal log (shared across crew members) unlocks with Hall Pro.
           </p>
         ) : null}
       </div>

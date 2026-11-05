@@ -80,14 +80,14 @@ export function HallInvitePanel({ hallId, joinCode, canManage, className }: Hall
   return (
     <div className={cn("space-y-4", className)}>
       <div className="rounded-xl border border-border/40 bg-muted/20 p-4">
-        <p className="text-sm font-medium">Permanent hall code</p>
+        <p className="text-sm font-medium">Permanent firehouse code</p>
         <p className="text-2xl font-mono tracking-widest mt-1">{joinCode || "—"}</p>
         <Button
           type="button"
           variant="ghost"
           size="sm"
           className="mt-2"
-          onClick={() => void copyText(joinCode, "Hall code")}
+          onClick={() => void copyText(joinCode, "Firehouse code")}
         >
           <Copy className="w-3.5 h-3.5 mr-1.5" />
           Copy code
@@ -156,7 +156,7 @@ export function HallInvitePanel({ hallId, joinCode, canManage, className }: Hall
               {qrDataUrl && (
                 <div className="flex flex-col items-center gap-2">
                   <p className="text-xs text-muted-foreground uppercase tracking-wide">Scan to join</p>
-                  <img src={qrDataUrl} alt="Hall invite QR code" className="rounded-lg border border-border/40" />
+                  <img src={qrDataUrl} alt="Firehouse invite QR code" className="rounded-lg border border-border/40" />
                 </div>
               )}
             </div>

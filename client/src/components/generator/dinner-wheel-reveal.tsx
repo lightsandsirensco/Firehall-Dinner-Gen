@@ -28,7 +28,7 @@ export function DinnerWheelReveal({
           <MealHeroImage
             src={recipe.heroImage}
             alt={recipe.title}
-            heldLabel="Hall Pick"
+            heldLabel="Crew Pick"
             title={recipe.title}
             variant="cinematic"
             bleed={false}

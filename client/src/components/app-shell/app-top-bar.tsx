@@ -42,7 +42,7 @@ export function AppTopBar({
       : tab === "list"
         ? "List"
         : tab === "hall"
-          ? "Hall"
+          ? "Firehouse"
           : tab === "me"
             ? "Me"
             : null);

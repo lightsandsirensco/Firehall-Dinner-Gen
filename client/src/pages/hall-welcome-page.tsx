@@ -91,7 +91,7 @@ export default function HallWelcomePage() {
 
       <section className="rounded-2xl border border-primary/25 bg-primary/5 px-4 py-5 space-y-3">
         {loading ? (
-          <p className="text-sm text-muted-foreground">Loading hall…</p>
+          <p className="text-sm text-muted-foreground">Loading firehouse…</p>
         ) : (
           <>
             <div className="flex items-start gap-3">

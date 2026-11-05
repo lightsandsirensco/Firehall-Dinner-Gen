@@ -110,13 +110,13 @@ export function CreateHallForm({ onCreated, className }: CreateHallFormProps) {
 
       trackHallCreated(body.hall.hall_id);
 
-      toast({ title: "Hall created", description: `Join code: ${body.hall.join_code}` });
+      toast({ title: "Firehouse created", description: `Join code: ${body.hall.join_code}` });
 
       onCreated?.(body.hall.hall_id);
 
     } catch {
 
-      toast({ title: "Could not create hall", variant: "destructive" });
+      toast({ title: "Could not create firehouse", variant: "destructive" });
 
     } finally {
 
@@ -134,13 +134,13 @@ export function CreateHallForm({ onCreated, className }: CreateHallFormProps) {
 
       <div className="space-y-2">
 
-        <Label htmlFor="create-hall-name">Hall name</Label>
+        <Label htmlFor="create-hall-name">Firehouse name</Label>
 
         <Input
 
           id="create-hall-name"
 
-          placeholder="Your hall name"
+          placeholder="Your firehouse name"
 
           value={hallName}
 
@@ -298,7 +298,7 @@ export function CreateHallForm({ onCreated, className }: CreateHallFormProps) {
 
       <Button type="submit" disabled={busy || !hallName.trim()}>
 
-        {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : "Create hall"}
+        {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : "Create firehouse"}
 
       </Button>
 

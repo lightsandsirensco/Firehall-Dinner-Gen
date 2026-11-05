@@ -22,7 +22,7 @@ const FAQS: FaqItem[] = [
   {
     question: "Who tests Firehall Meals recipes?",
     answer:
-      "Recipes are written and reviewed with real firehall cooking in mind — shared kitchens, interruption-friendly steps, and portions for crews of roughly 2–20 firefighters. Feedback from crews using the catalog shapes updates.",
+      "Recipes are written and reviewed with real firehouse cooking in mind — shared kitchens, interruption-friendly steps, and portions for crews of roughly 2–20 firefighters. Feedback from crews using the catalog shapes updates.",
   },
   {
     question: "Are these meals beginner-friendly?",
@@ -73,15 +73,15 @@ export default function HowWeTestRecipesPage() {
           How we test recipes
         </h1>
         <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl">
-          Firehall Meals is built by firefighters for firehall kitchens. Every recipe is designed for
+          Firehall Meals is built by firefighters for firehouse kitchens. Every recipe is designed for
           real shift cooking — not a quiet home kitchen and a single plate.
         </p>
 
         <section className="mt-10 rounded-2xl border border-border/30 bg-card p-6 sm:p-8 space-y-4">
-          <h2 className="font-heading text-xl sm:text-2xl">Built for real fire halls</h2>
+          <h2 className="font-heading text-xl sm:text-2xl">Built for real firehouses</h2>
           <p className="text-muted-foreground leading-relaxed">
             Station kitchens are shared, interrupted, and opinionated. Recipes have to survive tones
-            mid-sear, late returns from a run, and cooks who may not cook much outside the hall.
+            mid-sear, late returns from a run, and cooks who may not cook much outside the firehouse.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             We write for that environment: crew portions, hold notes, grocery-store ingredients, and
@@ -107,10 +107,10 @@ export default function HowWeTestRecipesPage() {
             </li>
             <li>
               <strong className="text-foreground">Station realism:</strong> equipment and ingredients
-              that match what halls actually own and restock.
+              that match what firehouses actually own and restock.
             </li>
             <li>
-              <strong className="text-foreground">Crew feedback:</strong> thumbs and hall comments help
+              <strong className="text-foreground">Crew feedback:</strong> thumbs and firehouse comments help
               surface meals crews would cook again — and flag recipes that need clearer steps.
             </li>
           </ul>

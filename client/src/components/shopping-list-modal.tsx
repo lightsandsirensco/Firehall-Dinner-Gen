@@ -170,13 +170,13 @@ export function ShoppingListModal({
       });
       setHallAddDone(true);
       toast({
-        title: "Added to hall list",
+        title: "Added to firehouse list",
         description: activeHall?.hall_name
           ? `${recipeTitle} ingredients are on ${activeHall.hall_name}'s grocery run.`
           : undefined,
       });
     } catch {
-      toast({ title: "Could not add to hall list", variant: "destructive" });
+      toast({ title: "Could not add to firehouse list", variant: "destructive" });
     } finally {
       setHallAddBusy(false);
     }
@@ -363,7 +363,7 @@ export function ShoppingListModal({
                   ) : (
                     <Users className="w-4 h-4 mr-2" />
                   )}
-                  {hallAddDone ? "On hall list" : "Add to hall list"}
+                  {hallAddDone ? "On firehouse list" : "Add to firehouse list"}
                 </Button>
               ) : null}
               <Button variant="outline" onClick={handleCopy} data-testid="button-shopping-copy">

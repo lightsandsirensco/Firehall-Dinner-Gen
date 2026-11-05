@@ -258,7 +258,7 @@ export const PLAN_DISPLAY: Record<
   hall_pro: {
     display_name: "Hall Pro",
     tagline:
-      "Built for entire fire halls. Manage meals, canteen operations, and crew collaboration from one place.",
+      "Built for entire firehouses. Manage meals, canteen operations, and crew collaboration from one place.",
     price_label: "Coming soon",
     sort_order: 3,
   },

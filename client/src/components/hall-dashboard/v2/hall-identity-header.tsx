@@ -87,7 +87,7 @@ export function HallIdentityHeader({
         {photoSrc ? (
           <img
             src={photoSrc}
-            alt={`${hallName} hall photo`}
+            alt={`${hallName} firehouse photo`}
             className="h-full w-full object-cover"
             loading="eager"
             decoding="async"

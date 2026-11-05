@@ -29,7 +29,7 @@ export function useHallDashboard() {
     const hall = detail?.hall;
     const members = detail?.members ?? [];
 
-    const hallName = hall?.hall_name?.trim() || activeHall?.hall_name?.trim() || "Hall";
+    const hallName = hall?.hall_name?.trim() || activeHall?.hall_name?.trim() || "Firehouse";
 
     const stationNumber = hall?.station_number ?? activeHall?.station_number ?? null;
 

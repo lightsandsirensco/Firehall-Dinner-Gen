@@ -107,7 +107,7 @@ export function HallSharedShoppingListPanel({
       setData(next);
       setManualName("");
       setManualQty("");
-      toast({ title: "Added to hall list" });
+      toast({ title: "Added to firehouse list" });
     } catch {
       toast({ title: "Could not add item", variant: "destructive" });
     } finally {
@@ -199,7 +199,7 @@ export function HallSharedShoppingListPanel({
     try {
       const next = await startNewHallShoppingList(hallId);
       setData(next);
-      toast({ title: "New hall list started" });
+      toast({ title: "New firehouse list started" });
     } catch {
       toast({ title: "Could not start new list", variant: "destructive" });
     } finally {
@@ -236,7 +236,7 @@ export function HallSharedShoppingListPanel({
             Shared grocery list
           </h2>
           <p className="text-sm text-muted-foreground mt-1">
-            One list for the whole hall — {pendingCount} item{pendingCount === 1 ? "" : "s"} left
+            One list for the whole crew — {pendingCount} item{pendingCount === 1 ? "" : "s"} left
           </p>
         </div>
         {isCompleted && (

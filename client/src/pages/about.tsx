@@ -50,7 +50,7 @@ const ABOUT_FAQ_EXTRA: FaqItem[] = [
 
     answer:
 
-      "Many recipes are designed around crew-sized portions and can be scaled. The goal is fire station meals that feel realistic for a table at the hall, not just a single plate.",
+      "Many recipes are designed around crew-sized portions and can be scaled. The goal is fire station meals that feel realistic for a table at the firehouse, not just a single plate.",
 
   },
 
@@ -169,7 +169,7 @@ export default function AboutPage() {
 
             <p className="text-muted-foreground leading-relaxed">
               We wrote these meals for real firehouse kitchens: realistic prep, food that holds when
-              you get interrupted, and dinners a rookie can run without embarrassing the hall.
+              you get interrupted, and dinners a rookie can run without embarrassing the firehouse.
             </p>
 
           </section>
@@ -190,7 +190,7 @@ export default function AboutPage() {
 
             BBQ, oven bakes, skillets, slow cookers, and air-fryer nights when time is tight. Every
 
-            recipe is scaled for crews, written with honest timing, and tested against what halls
+            recipe is scaled for crews, written with honest timing, and tested against what firehouses
 
             actually cook — not what looks good on a food blog.
 
@@ -213,7 +213,7 @@ export default function AboutPage() {
 
           <h2 id="about-faq" className="font-heading text-xl sm:text-2xl">
 
-            FAQ — Firefighter &amp; Firehall Meal Questions
+            FAQ — Firefighter &amp; Firehouse Meal Questions
 
           </h2>
 

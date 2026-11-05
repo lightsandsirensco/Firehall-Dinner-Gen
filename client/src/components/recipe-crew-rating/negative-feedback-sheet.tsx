@@ -38,7 +38,7 @@ export function NegativeFeedbackSheet({ open, onClose, onSelect }: NegativeFeedb
         <h3 id="crew-rating-feedback-title" className="font-heading text-lg tracking-wide">
           What was the issue?
         </h3>
-        <p className="mt-1 text-sm text-muted-foreground">Optional — helps us improve hall recipes.</p>
+        <p className="mt-1 text-sm text-muted-foreground">Optional — helps us improve firehouse recipes.</p>
         <ul className="mt-4 space-y-2">
           {COMPLAINT_OPTIONS.map((key) => (
             <li key={key}>

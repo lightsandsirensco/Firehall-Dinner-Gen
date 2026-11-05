@@ -298,7 +298,7 @@ export default function MeShoppingListPage() {
                     </p>
                     <p className="text-[11px] text-muted-foreground/70">
                       {item.pantryStockLevel === "usually" ? "Usually stocked" : "Always stocked"}
-                      {item.pantrySource === "hall" ? " · Hall Pantry" : " · Your pantry"} — worth a quick check
+                      {item.pantrySource === "hall" ? " · Firehouse Pantry" : " · Your pantry"} — worth a quick check
                     </p>
                   </div>
                   <button

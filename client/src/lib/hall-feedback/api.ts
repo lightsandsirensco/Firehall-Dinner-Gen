@@ -20,5 +20,5 @@ export async function submitHallFeedback(
   if (!res.ok) {
     throw new Error(data?.message || "Could not send feedback. Try again.");
   }
-  return data ?? { ok: true, message: "Thanks for shaping the hall." };
+  return data ?? { ok: true, message: "Thanks for shaping the firehouse." };
 }
