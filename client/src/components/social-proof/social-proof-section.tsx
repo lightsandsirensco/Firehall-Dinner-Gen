@@ -4,9 +4,8 @@ import { fetchSocialProof, socialProofQueryKey } from "@/lib/social-proof-api";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 
-const VALUE_HEADLINE = "From solo dinners to feeding the entire crew.";
-const VALUE_SUBHEADLINE =
-  "Find recipes, calculate portions, and build grocery lists without the guesswork.";
+const VALUE_HEADLINE = "What Firefighters Are Saying";
+const VALUE_SUBHEADLINE = "Real feedback from the crews using Firehall Meals.";
 
 interface SocialProofSectionProps {
   className?: string;
