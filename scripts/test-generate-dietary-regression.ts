@@ -120,19 +120,27 @@ async function callGenerate(
  * -> node(server) process chain. A plain `child.kill()` only signals the
  * immediate cmd.exe shell and leaves the actual dev server (and its own child
  * processes) running in the background. `taskkill /T` kills the whole tree.
+ * Elsewhere npx -> node(server) shares the detached child's process group, so
+ * signal the group; killing only npx leaves the server holding our pipes open.
  */
 async function killProcessTree(child: ChildProcess): Promise<void> {
   if (!child.pid) return;
   if (process.platform === "win32") {
     await execFileAsync("taskkill", ["/PID", String(child.pid), "/T", "/F"]).catch(() => {});
   } else {
-    child.kill("SIGTERM");
+    try {
+      process.kill(-child.pid, "SIGTERM");
+    } catch {
+      child.kill("SIGTERM");
+    }
   }
   await new Promise<void>((resolve) => {
     if (child.exitCode !== null || child.signalCode !== null) return resolve();
     child.once("exit", () => resolve());
     setTimeout(resolve, 5000);
   });
+  child.stdout?.destroy();
+  child.stderr?.destroy();
 }
 
 function toFsPath(url: URL): string {
@@ -147,6 +155,7 @@ async function startServer(port: number): Promise<ChildProcess> {
     env: { ...process.env, NODE_ENV: "development", PORT: String(port) },
     stdio: ["ignore", "pipe", "pipe"],
     shell: process.platform === "win32",
+    detached: process.platform !== "win32",
   });
 
   await new Promise<void>((resolve, reject) => {
