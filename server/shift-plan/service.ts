@@ -41,6 +41,7 @@ import type {
   ShiftPlanSlotResponse,
   ShiftPlanSlotState,
   ShiftPlanView,
+  SlotPickWhy,
   UpcomingShiftsView,
 } from "../../shared/shift-plan/types.js";
 import type { ShiftPlanRepo } from "./store.js";
@@ -88,8 +89,42 @@ export interface SlotPickAvoid {
   soft: string[];
 }
 
-/** Returns a recipe slug for the slot, or null when nothing eligible fits. */
-export type SlotPicker = (slot: PlannedMealSlot, avoid: SlotPickAvoid, seed: string) => Promise<string | null>;
+/** A picked recipe plus Meal Memory's reasons for it (when any). */
+export interface SlotPick {
+  slug: string;
+  why?: SlotPickWhy | null;
+}
+
+/** Returns a recipe for the slot (a bare slug is accepted), or null when nothing eligible fits. */
+export type SlotPicker = (slot: PlannedMealSlot, avoid: SlotPickAvoid, seed: string) => Promise<SlotPick | string | null>;
+
+/** Meals planned on other shifts this close to the target are avoided when anything else fits. */
+export const NEARBY_SHIFT_REPEAT_DAYS = 7;
+
+/** Recipes in other shifts' plans starting within NEARBY_SHIFT_REPEAT_DAYS of `target`. */
+async function nearbyPlannedSlugs(
+  deps: ShiftPlanDeps,
+  userId: string,
+  ctx: ShiftPlanScheduleContext | null,
+  target: ShiftInstance,
+): Promise<string[]> {
+  if (!ctx) return [];
+  const start = Date.parse(target.start);
+  const nearby = getShiftsInRange(ctx.schedule, ctx.overrides, {
+    from: new Date(start - NEARBY_SHIFT_REPEAT_DAYS * DAY_MS),
+    to: new Date(start + NEARBY_SHIFT_REPEAT_DAYS * DAY_MS),
+  }).filter((s) => s.key !== target.key);
+  if (nearby.length === 0) return [];
+  const states = await deps.repo.listSlotStates(
+    userId,
+    nearby.map((s) => s.key),
+  );
+  const slugs = new Set<string>();
+  for (const list of states.values()) {
+    for (const s of list) if (s.recipeSlug && !s.skipped && !s.byo) slugs.add(s.recipeSlug);
+  }
+  return [...slugs];
+}
 
 export class ShiftPlanError extends Error {
   constructor(
@@ -311,6 +346,7 @@ export async function fillShiftPlan(
   const inShift = new Set(
     plan.view.slots.filter((s) => s.recipe && !targetKeys.has(s.key)).map((s) => s.recipe!.slug),
   );
+  const nearby = await nearbyPlannedSlugs(deps, userId, plan.ctx, shift);
   const exclude = input.excludeSlugs ?? [];
 
   const updates: ShiftPlanSlotState[] = [];
@@ -318,24 +354,26 @@ export async function fillShiftPlan(
   for (const slot of targets) {
     const previous = slot.recipe?.slug ?? null;
     const hard = input.mode === "swap" ? [...(previous ? [previous] : []), ...exclude] : [...exclude];
-    const soft = [...inShift].filter((s) => !hard.includes(s));
+    const soft = [...new Set([...inShift, ...nearby])].filter((s) => !hard.includes(s));
     const seed = `${userId}|${slot.key}|${input.mode}|${previous ?? ""}|${exclude.join(",")}`;
 
-    let slug: string | null = null;
+    let picked: SlotPick | null = null;
     try {
-      slug = await pick(slot, { hard, soft }, seed);
+      const raw = await pick(slot, { hard, soft }, seed);
+      picked = typeof raw === "string" ? { slug: raw } : raw;
     } catch {
-      slug = null;
+      picked = null;
     }
-    if (!slug) {
+    if (!picked?.slug) {
       results.push({ slotKey: slot.key, ok: false, previousSlug: previous, error: "No meal fits this slot's filters" });
       continue;
     }
+    const slug = picked.slug;
     inShift.add(slug);
     updates.push(
       applySlotPatch(
         plan.states.get(slot.key) ?? defaultSlotState(slot.key),
-        { recipeSlug: slug, selectionSource: "auto" },
+        { recipeSlug: slug, selectionSource: "auto", pickWhy: picked.why ?? null },
         slot.shiftCrewSize,
       ),
     );

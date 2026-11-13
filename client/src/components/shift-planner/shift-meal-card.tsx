@@ -10,6 +10,7 @@ import {
   Shuffle,
   ShoppingBag,
   Sparkles,
+  ThumbsDown,
   Undo2,
   Users,
   UtensilsCrossed,
@@ -32,6 +33,8 @@ import type { ShiftPlanSlotPatch } from "@shared/shift-plan/plan";
 export interface ShiftMealCardActions {
   onPick: (slot: PlannedMealSlot) => void;
   onSwap: (slot: PlannedMealSlot) => void;
+  /** Hide the meal from automatic picks for good, then swap it. */
+  onNotForUs: (slot: PlannedMealSlot) => void;
   onBrowse: (slot: PlannedMealSlot) => void;
   onCrew: (slot: PlannedMealSlot) => void;
   onPatch: (slot: PlannedMealSlot, patch: ShiftPlanSlotPatch) => void;
@@ -144,6 +147,12 @@ export function ShiftMealCard({
             Clear meal
           </DropdownMenuItem>
         )}
+        {!parked && recipe && (
+          <DropdownMenuItem onSelect={() => actions.onNotForUs(slot)} data-testid={`menu-not-for-us-${testId}`}>
+            <ThumbsDown className="mr-2 h-4 w-4" aria-hidden />
+            Not for us — don't suggest again
+          </DropdownMenuItem>
+        )}
       </DropdownMenuContent>
     </DropdownMenu>
   );
@@ -237,6 +246,12 @@ export function ShiftMealCard({
                   Serves {slot.crewSize}
                 </span>
               </p>
+              {slot.pickWhy && (
+                <p className="mt-1 text-xs text-muted-foreground" data-testid={`text-pick-why-${testId}`}>
+                  {slot.pickWhy.pickedForYou && <span className="font-semibold text-primary">Picked for you · </span>}
+                  {slot.pickWhy.reasons[0]}
+                </p>
+              )}
             </div>
           </>
         ) : (

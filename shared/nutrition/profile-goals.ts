@@ -37,7 +37,7 @@ export const PROFILE_NUTRITION_GOAL_KEY_MICROCOPY: Record<ProfileNutritionGoalKe
 };
 
 export const PROFILE_NUTRITION_GOALS_DESCRIPTION =
-  "Pick one goal to shape Pick Tonight and Shift Planner. Allergies and diets always come first.";
+  "Pick one goal to shape Pick Tonight and Shift Planner. Allergies and diets always come first. We only say a meal fits your goal when its nutrition, calculated from the ingredients, checks out.";
 
 export function isProfileNutritionGoalKey(value: unknown): value is ProfileNutritionGoalKey {
   return typeof value === "string" && (PROFILE_NUTRITION_GOALS as readonly string[]).includes(value);
@@ -85,6 +85,64 @@ function clamp(n: number): number {
   return Math.max(PROFILE_GOAL_MAX_PENALTY, Math.min(PROFILE_GOAL_MAX_BONUS, n));
 }
 
+/** A meal that meets a goal must still feed a firefighter. */
+const MIN_FILLING_PROTEIN_G = 20;
+export const HIGH_PROTEIN_MIN_G = 35;
+/** Same per-serving bars as the catalog's highProtein / lighterOption / lowCarb flags (shared/nutrition/calculate.ts). */
+export const LOWER_CALORIE_RANGE = { min: 350, max: 550 } as const;
+export const LOWER_CARB_MAX_G = 25;
+const BALANCED_MIN_SCORE = 15;
+
+/**
+ * True only when the recipe's VERIFIED per-serving numbers meet the goal —
+ * the bar for saying "fits your goal" to a user. Flags, categories, and
+ * unverified macros never qualify (callers pass verified facts only).
+ */
+export function meetsProfileNutritionGoal(goal: ProfileNutritionGoalKey, f: ProfileGoalRecipeFacts): boolean {
+  const cal = known(f.calories);
+  const protein = known(f.protein_g);
+  const carbs = known(f.carbs_g);
+  switch (goal) {
+    case "high_protein":
+      return protein != null && protein >= HIGH_PROTEIN_MIN_G;
+    case "lower_calorie":
+      return (
+        cal != null &&
+        cal >= LOWER_CALORIE_RANGE.min &&
+        cal <= LOWER_CALORIE_RANGE.max &&
+        protein != null &&
+        protein >= MIN_FILLING_PROTEIN_G
+      );
+    case "lower_carb":
+      return carbs != null && carbs <= LOWER_CARB_MAX_G && protein != null && protein >= MIN_FILLING_PROTEIN_G;
+    case "balanced":
+      return protein != null && carbs != null && known(f.fat_g) != null && scoreProfileNutritionGoal(goal, f) >= BALANCED_MIN_SCORE;
+  }
+}
+
+/** "Fits your High Protein goal: 52 g protein per serving" — only for a verified match, else null. */
+export function describeNutritionGoalFit(goal: ProfileNutritionGoalKey, f: ProfileGoalRecipeFacts): string | null {
+  if (!meetsProfileNutritionGoal(goal, f)) return null;
+  const label = PROFILE_NUTRITION_GOAL_KEY_LABELS[goal];
+  const round = (n: number | null | undefined) => Math.round(n ?? 0);
+  switch (goal) {
+    case "high_protein":
+      return `Fits your ${label} goal: ${round(f.protein_g)} g protein per serving.`;
+    case "lower_calorie":
+      return `Fits your ${label} goal: ${round(f.calories)} calories per serving.`;
+    case "lower_carb":
+      return `Fits your ${label} goal: ${round(f.carbs_g)} g carbs per serving.`;
+    case "balanced": {
+      const p = f.protein_g! * 4;
+      const c = f.carbs_g! * 4;
+      const fat = f.fat_g! * 9;
+      const total = p + c + fat;
+      const pct = (n: number) => Math.round((n / total) * 100);
+      return `Fits your ${label} goal: ${pct(p)}% protein, ${pct(c)}% carbs, ${pct(fat)}% fat.`;
+    }
+  }
+}
+
 /**
  * Ranking signals (per serving):
  * - high_protein:  (protein − 30 g) × 1.5 → 50 g+ max, ~17 g floor.
@@ -107,7 +165,7 @@ export function scoreProfileNutritionGoal(
   switch (goal) {
     case "high_protein":
       if (protein != null) return clamp((protein - 30) * 1.5);
-      return f.highProteinFlag || cat === "high_protein" ? FLAG_BONUS : 0;
+      return f.highProteinFlag ? FLAG_BONUS : 0;
 
     case "lower_calorie": {
       if (cal != null) {

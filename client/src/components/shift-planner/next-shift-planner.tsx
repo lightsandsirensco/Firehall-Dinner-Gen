@@ -25,6 +25,7 @@ import {
 } from "@/lib/shift-plan-api";
 import { RunItBackCard, RunItBackNotice, type RunItBackMode } from "@/components/shift-planner/run-it-back-card";
 import { ShiftMealCard, type ShiftMealCardActions } from "@/components/shift-planner/shift-meal-card";
+import { hideRecipeFromPicks } from "@/lib/recipe-dislikes";
 import { MealCrewSheet } from "@/components/shift-planner/meal-crew-sheet";
 import { RecipeBrowseSheet } from "@/components/shift-planner/recipe-browse-sheet";
 import { formatHours } from "@shared/schedule/setup";
@@ -319,6 +320,21 @@ export function NextShiftPlanner({
           fail(err, "Couldn't pick a meal");
         }
       });
+    },
+    onNotForUs: (slot) => {
+      const slug = slot.recipe?.slug;
+      if (!slug) return;
+      hapticLight();
+      void hideRecipeFromPicks(slug)
+        .then(() => {
+          trackShiftPlanEvent("meal_not_for_us", { shift_key: shift.key, meal_type: slot.type, recipe_slug: slug });
+          toast({
+            title: "We won't suggest that one again",
+            description: "Still in Explore. Undo any time in Profile → Hidden meals.",
+          });
+          actions.onSwap(slot);
+        })
+        .catch((err) => fail(err, "Couldn't hide that meal"));
     },
     onSwap: (slot) => {
       hapticLight();

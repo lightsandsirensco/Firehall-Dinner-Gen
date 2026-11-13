@@ -37,11 +37,15 @@ const HISTORY_LOOKBACK_LIMIT = 300;
 /** Short in-process cache so rapid "Try Another" clicks in one sitting don't each re-query the DB. Proactively invalidated on any new log/rating/feedback write (see invalidateHistorySignalsCache below), so this is purely a load-shedding optimization, never a source of staleness. */
 const HISTORY_CACHE_TTL_MS = 45_000;
 
+/** Meal Memory: a meal cooked this recently is never auto-picked while anything else qualifies. */
+export const RECENT_COOK_EXCLUSION_DAYS = 7;
+
 export type HistorySignalType =
   | "recipe_suppressed"
   | "recency_7d"
   | "recency_30d"
   | "high_rating_repeat"
+  | "saved_favorite"
   | "feedback_took_too_long"
   | "feedback_too_expensive"
   | "feedback_crew_loved"
@@ -58,7 +62,10 @@ export interface HistorySignals {
   proteinMakeAgain: Map<string, { pct: number; count: number }>;
   cuisineMakeAgain: Map<string, { pct: number; count: number }>;
   recipeSuppress: Set<string>;
-  recipeRepeatBoost: Map<string, { rating: number; daysAgo: number }>;
+  /** Most recent star rating per recipe (a later 2★ overrides an earlier 5★). */
+  latestRatingBySlug: Map<string, number>;
+  /** Catalog slugs in the user's saved recipes. */
+  savedSlugs: Set<string>;
   recipeFeedback: Map<string, { tookTooLong: boolean; tooExpensive: boolean; crewLoved: boolean }>;
   recentCuisineCounts: Map<string, number>;
   recencyDaysAgoBySlug: Map<string, number>;
@@ -136,29 +143,50 @@ async function loadHistoryAggregates(userId: string): Promise<HistoryAggregates 
   return value;
 }
 
+/** Catalog slugs of the user's saved recipes (the slug lives in the saved recipe JSON). */
+export async function loadSavedRecipeSlugs(userId: string): Promise<Set<string>> {
+  const rows = await pgAll<{ recipe_json: string }>(
+    `SELECT recipe_json FROM user_saved_recipes WHERE user_id = $1`,
+    [userId],
+  );
+  const slugs = new Set<string>();
+  for (const row of rows) {
+    try {
+      const slug = (JSON.parse(row.recipe_json) as { _slug?: unknown })._slug;
+      if (typeof slug === "string" && slug.trim()) slugs.add(slug.trim().toLowerCase());
+    } catch {
+      // Unparseable saved row — not a usable favorite signal.
+    }
+  }
+  return slugs;
+}
+
 async function computeHistoryAggregates(userId: string): Promise<HistoryAggregates | null> {
   const now = new Date();
-  const rows = await pgAll<RawRow>(
-    `SELECT recipe_slug, cooked_at, rating, make_again, feedback_tags_json
-     FROM user_meal_history
-     WHERE user_id = $1
-     ORDER BY cooked_at DESC, id DESC
-     LIMIT $2`,
-    [userId, HISTORY_LOOKBACK_LIMIT],
-  );
+  const [rows, savedSlugs] = await Promise.all([
+    pgAll<RawRow>(
+      `SELECT recipe_slug, cooked_at, rating, make_again, feedback_tags_json
+       FROM user_meal_history
+       WHERE user_id = $1
+       ORDER BY cooked_at DESC, id DESC
+       LIMIT $2`,
+      [userId, HISTORY_LOOKBACK_LIMIT],
+    ),
+    loadSavedRecipeSlugs(userId),
+  ]);
 
-  // No cooked history at all — nothing to learn from. Returning null (rather
-  // than an all-empty-but-truthy object) lets callers distinguish "this
-  // generation was genuinely influenced by real history" from "the toggle
-  // was merely on" for accurate `history_personalization_used` analytics.
-  if (rows.length === 0) return null;
+  // Nothing cooked and nothing saved — nothing to learn from. Returning null
+  // (rather than an all-empty-but-truthy object) lets callers distinguish
+  // "this generation was genuinely influenced by the user's memory" from "the
+  // toggle was merely on" for accurate `history_personalization_used` analytics.
+  if (rows.length === 0 && savedSlugs.size === 0) return null;
 
   const everCookedSlugs = new Set<string>();
   const cuisineRatings = new Map<string, number[]>();
   const proteinMakeAgainRaw = new Map<string, { yes: number; total: number }>();
   const cuisineMakeAgainRaw = new Map<string, { yes: number; total: number }>();
   const recipeSuppress = new Set<string>();
-  const recipeRepeatBoost = new Map<string, { rating: number; daysAgo: number }>();
+  const latestRatingBySlug = new Map<string, number>();
   const recipeFeedback = new Map<string, { tookTooLong: boolean; tooExpensive: boolean; crewLoved: boolean }>();
   const recencyDaysAgoBySlug = new Map<string, number>();
 
@@ -175,9 +203,7 @@ async function computeHistoryAggregates(userId: string): Promise<HistoryAggregat
         if (!cuisineRatings.has(meta.cuisine)) cuisineRatings.set(meta.cuisine, []);
         cuisineRatings.get(meta.cuisine)!.push(row.rating);
       }
-      if (row.rating >= 4 && !recipeRepeatBoost.has(row.recipe_slug)) {
-        recipeRepeatBoost.set(row.recipe_slug, { rating: row.rating, daysAgo: cookedDaysAgo });
-      }
+      if (!latestRatingBySlug.has(row.recipe_slug)) latestRatingBySlug.set(row.recipe_slug, row.rating);
     }
 
     if (row.make_again != null) {
@@ -238,10 +264,42 @@ async function computeHistoryAggregates(userId: string): Promise<HistoryAggregat
     proteinMakeAgain,
     cuisineMakeAgain,
     recipeSuppress,
-    recipeRepeatBoost,
+    latestRatingBySlug,
+    savedSlugs,
     recipeFeedback,
     recencyDaysAgoBySlug,
   };
+}
+
+export interface DueFavorite {
+  rating: number | null;
+  saved: boolean;
+  /** null = saved but never cooked. */
+  daysSinceCooked: number | null;
+}
+
+/**
+ * A favorite (saved, or latest rating 4★+) that is due to come back: never
+ * cooked, or last cooked at least REPEAT_BOOST_COOLDOWN_DAYS ago. A "Make
+ * Again = No" answer always wins over a favorite.
+ */
+export function dueFavorite(slug: string, signals: HistorySignals): DueFavorite | null {
+  if (signals.recipeSuppress.has(slug)) return null;
+  const latest = signals.latestRatingBySlug.get(slug);
+  const rating = latest != null && latest >= STRONG_RATING_THRESHOLD ? latest : null;
+  const saved = signals.savedSlugs.has(slug);
+  if (rating == null && !saved) return null;
+  // A low latest rating means the crew changed its mind — a save alone doesn't override that.
+  if (latest != null && latest < STRONG_RATING_THRESHOLD) return null;
+  const daysSinceCooked = signals.recencyDaysAgoBySlug.get(slug) ?? null;
+  if (daysSinceCooked != null && daysSinceCooked < REPEAT_BOOST_COOLDOWN_DAYS) return null;
+  return { rating, saved, daysSinceCooked };
+}
+
+/** Cooked within RECENT_COOK_EXCLUSION_DAYS — excluded from automatic picks while anything else qualifies. */
+export function cookedTooRecently(slug: string, signals: HistorySignals): boolean {
+  const days = signals.recencyDaysAgoBySlug.get(slug);
+  return days != null && days <= RECENT_COOK_EXCLUSION_DAYS;
 }
 
 /**
@@ -306,17 +364,19 @@ export function scoreHistorySignal(
     if (cookedDaysAgo <= 7) {
       delta -= 50;
       applied.push("recency_7d");
-    } else if (cookedDaysAgo <= 30) {
+    } else if (cookedDaysAgo <= 30 && !dueFavorite(candidate.slug, signals)) {
       delta -= 15;
       applied.push("recency_30d");
     }
   }
 
-  // E. High ratings — modest repeat boost once enough time has passed.
-  const repeat = signals.recipeRepeatBoost.get(candidate.slug);
-  if (repeat && repeat.daysAgo >= REPEAT_BOOST_COOLDOWN_DAYS) {
+  // E. Favorites (rated 4★+ or saved) that are due to come back. The ranking
+  // nudge is modest; the favorites lane in pickFromSummaries is what makes a
+  // due favorite actually return at a noticeable rate.
+  const favorite = dueFavorite(candidate.slug, signals);
+  if (favorite) {
     delta += 10;
-    applied.push("high_rating_repeat");
+    applied.push(favorite.rating != null ? "high_rating_repeat" : "saved_favorite");
   }
 
   // F. Feedback tags — exact recipe only, never generalized to a whole cuisine/protein.
@@ -387,38 +447,119 @@ function labelFor(word: string): string {
 }
 
 /**
- * At most ONE subtle explanation per card, only when genuinely supported by
- * real history (section 5) — most cards show none at all. Never shown for a
- * suppressed recipe (nothing positive to explain).
+ * One fact behind a pick. Every explanation line is rendered from one of these
+ * by describeMemoryReason, so the text can never drift from the data that
+ * actually moved the ranking.
  */
+export type MemoryReason =
+  | { kind: "rated_favorite"; rating: number; daysSinceCooked: number | null; saved: boolean }
+  | { kind: "saved_favorite"; daysSinceCooked: number | null }
+  | { kind: "crew_loved" }
+  | { kind: "cuisine_affinity"; cuisine: string; avg: number; count: number }
+  | { kind: "protein_make_again"; protein: string; pct: number; count: number }
+  | { kind: "cuisine_make_again"; cuisine: string; pct: number; count: number }
+  | { kind: "new_for_crew" };
+
+/** Reasons that mean a personal signal raised this meal's rank ("Picked for you"). */
+const PERSONAL_REASON_KINDS = new Set<MemoryReason["kind"]>([
+  "rated_favorite",
+  "saved_favorite",
+  "crew_loved",
+  "cuisine_affinity",
+  "protein_make_again",
+  "cuisine_make_again",
+]);
+
+export function isPersonalReason(reason: MemoryReason): boolean {
+  return PERSONAL_REASON_KINDS.has(reason.kind);
+}
+
+/** Whole days → "today", "5 days ago", "3 weeks ago", "2 months ago" (always rounded down). */
+export function formatDaysAgo(days: number): string {
+  if (days <= 0) return "today";
+  if (days === 1) return "yesterday";
+  if (days < 14) return `${days} days ago`;
+  if (days < 60) return `${Math.floor(days / 7)} weeks ago`;
+  return `${Math.floor(days / 30)} months ago`;
+}
+
+export function describeMemoryReason(reason: MemoryReason): string {
+  switch (reason.kind) {
+    case "rated_favorite": {
+      const cooked = reason.daysSinceCooked != null ? ` · last cooked ${formatDaysAgo(reason.daysSinceCooked)}` : "";
+      return `You rated this ${reason.rating}★${cooked}`;
+    }
+    case "saved_favorite":
+      return reason.daysSinceCooked == null
+        ? "Saved by you · not cooked yet"
+        : `Saved by you · last cooked ${formatDaysAgo(reason.daysSinceCooked)}`;
+    case "crew_loved":
+      return "Your crew said they loved it last time";
+    case "cuisine_affinity":
+      return `Your crew rates ${labelFor(reason.cuisine)} meals ${reason.avg.toFixed(1)}★ on average (${reason.count} rated)`;
+    case "protein_make_again":
+      return `Your crew would make ${labelFor(reason.protein)} meals again ${reason.pct}% of the time (${reason.count} meals)`;
+    case "cuisine_make_again":
+      return `Your crew would make ${labelFor(reason.cuisine)} meals again ${reason.pct}% of the time (${reason.count} meals)`;
+    case "new_for_crew":
+      return "Something new — your crew hasn't cooked this yet";
+  }
+}
+
+/**
+ * Every reason behind a pick, strongest first, built only from signals that
+ * actually fired for this candidate. Never anything for a suppressed recipe.
+ */
+export function memoryReasonsFor(
+  candidate: { slug: string; protein: string },
+  signals: HistorySignals,
+  appliedSignals: HistorySignalType[],
+): MemoryReason[] {
+  if (appliedSignals.includes("recipe_suppressed")) return [];
+  const reasons: MemoryReason[] = [];
+  const cuisine = getRecipeMeta(candidate.slug).cuisine;
+
+  const favorite = dueFavorite(candidate.slug, signals);
+  if (favorite && appliedSignals.includes("high_rating_repeat") && favorite.rating != null) {
+    reasons.push({ kind: "rated_favorite", rating: favorite.rating, daysSinceCooked: favorite.daysSinceCooked, saved: favorite.saved });
+  } else if (favorite && appliedSignals.includes("saved_favorite")) {
+    reasons.push({ kind: "saved_favorite", daysSinceCooked: favorite.daysSinceCooked });
+  }
+  if (appliedSignals.includes("feedback_crew_loved")) reasons.push({ kind: "crew_loved" });
+
+  const affinity = cuisine ? signals.cuisineAffinity.get(cuisine) : undefined;
+  if (affinity && appliedSignals.includes("cuisine_affinity")) {
+    reasons.push({ kind: "cuisine_affinity", cuisine: cuisine!, avg: affinity.avg, count: affinity.count });
+  }
+  const proteinPattern = signals.proteinMakeAgain.get(candidate.protein);
+  if (proteinPattern && appliedSignals.includes("protein_make_again")) {
+    reasons.push({ kind: "protein_make_again", protein: candidate.protein, pct: proteinPattern.pct, count: proteinPattern.count });
+  }
+  const cuisinePattern = cuisine ? signals.cuisineMakeAgain.get(cuisine) : undefined;
+  if (cuisinePattern && appliedSignals.includes("cuisine_make_again")) {
+    reasons.push({ kind: "cuisine_make_again", cuisine: cuisine!, pct: cuisinePattern.pct, count: cuisinePattern.count });
+  }
+
+  // Genuine discovery — only once there's an established baseline of real
+  // history to call this "new" against (avoids saying "new" to a brand-new
+  // account with nothing to compare to).
+  if (
+    reasons.length === 0 &&
+    !appliedSignals.some((s) => s.startsWith("recency") || s.startsWith("feedback_")) &&
+    signals.totalRows >= CUISINE_AFFINITY_MIN_SAMPLES &&
+    !signals.everCookedSlugs.has(candidate.slug)
+  ) {
+    reasons.push({ kind: "new_for_crew" });
+  }
+  return reasons;
+}
+
+/** The single strongest explanation line, or null — see memoryReasonsFor. */
 export function explainPersonalization(
   candidate: { slug: string; protein: string },
   signals: HistorySignals,
   appliedSignals: HistorySignalType[],
 ): string | null {
-  if (appliedSignals.includes("recipe_suppressed")) return null;
-  const cuisine = getRecipeMeta(candidate.slug).cuisine;
-
-  if (appliedSignals.includes("high_rating_repeat")) {
-    return "You rated this 4★+ before — worth another round.";
-  }
-  if (appliedSignals.includes("feedback_crew_loved")) {
-    return "Your crew said they loved this one last time.";
-  }
-  if (appliedSignals.includes("cuisine_affinity") && cuisine) {
-    return `Recommended because your crew tends to rate ${labelFor(cuisine)} meals highly.`;
-  }
-  if (appliedSignals.includes("protein_make_again")) {
-    return `Your crew tends to make ${labelFor(candidate.protein)} meals again.`;
-  }
-  if (appliedSignals.includes("cuisine_make_again") && cuisine) {
-    return `Your crew tends to make ${labelFor(cuisine)} meals again.`;
-  }
-  // Genuine discovery — only once there's an established baseline of real
-  // history to call this "new" against (avoids saying "new" to a brand-new
-  // account with nothing to compare to).
-  if (appliedSignals.length === 0 && signals.totalRows >= CUISINE_AFFINITY_MIN_SAMPLES && !signals.everCookedSlugs.has(candidate.slug)) {
-    return "New for your crew.";
-  }
-  return null;
+  const [top] = memoryReasonsFor(candidate, signals, appliedSignals);
+  return top ? describeMemoryReason(top) : null;
 }

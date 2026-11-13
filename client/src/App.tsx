@@ -38,7 +38,6 @@ const PizzaNight = lazyWithRetry(() => import("@/pages/pizza-night"));
 const ExplorePage = lazyWithRetry(() => import("@/pages/explore"));
 const AdminPage = lazyWithRetry(() => import("@/pages/admin"));
 const AdminIngestionPage = lazyWithRetry(() => import("@/pages/admin-ingestion"));
-const AdminRecipeRatingsPage = lazyWithRetry(() => import("@/pages/admin-recipe-ratings"));
 const AdminAnalyticsPage = lazyWithRetry(() => import("@/pages/admin-analytics"));
 const AdminErrorsPage = lazyWithRetry(() => import("@/pages/admin-errors"));
 const AdminGrowthDashboardPage = lazyWithRetry(() => import("@/pages/admin-growth-dashboard"));
@@ -67,7 +66,6 @@ const PerformanceFuelRedirect = lazyWithRetry(() => import("@/pages/performance-
 const SeoLandingPage = lazyWithRetry(() => import("@/pages/seo-landing-page"));
 const SeoProductPage = lazyWithRetry(() => import("@/pages/seo-product-page"));
 const FirefighterRedLeadRecipePage = lazyWithRetry(() => import("@/pages/firefighter-red-lead-recipe-page"));
-const TopRatedRecipesPage = lazyWithRetry(() => import("@/pages/top-rated-recipes-page"));
 const HallOfFamePage = lazyWithRetry(() => import("@/pages/hall-of-fame-page"));
 const HallPrivateBetaPage = lazyWithRetry(() => import("@/pages/hall-private-beta-page"));
 const AccountPage = lazyWithRetry(() => import("@/pages/account-page"));
@@ -164,7 +162,7 @@ function AppRoutes() {
       <Route path="/crew-grocery-budget">{() => <SeoProductPage slug="crew-grocery-budget" />}</Route>
       <Route path="/package/:slug" component={CuratedPackagePage} />
       <Route path="/recipes" component={RecipesIndexPage} />
-      <Route path="/top-rated-recipes" component={TopRatedRecipesPage} />
+      <Route path="/top-rated-recipes">{() => <Redirect to="/explore" replace />}</Route>
       <Route path="/hall-of-fame" component={HallOfFamePage} />
       <Route path="/recipes/:slug" component={CatalogRecipePage} />
       <Route path="/smoothies" component={SmoothiesIndexPage} />
@@ -217,7 +215,6 @@ function AppRoutes() {
       <Route path="/admin/golden-100" component={AdminGolden100Page} />
       <Route path="/admin/catalog" component={AdminCatalogPage} />
       <Route path="/admin/ingestion" component={AdminIngestionPage} />
-      <Route path="/admin/recipe-ratings" component={AdminRecipeRatingsPage} />
       <Route path="/admin/analytics" component={AdminAnalyticsPage} />
       <Route path="/admin/errors" component={AdminErrorsPage} />
       <Route path="/admin/growth" component={AdminGrowthDashboardPage} />

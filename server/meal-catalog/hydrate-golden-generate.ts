@@ -24,6 +24,7 @@ import {
   resolveCatalogHeroPath,
 } from "../../shared/hall-catalog/gate.js";
 import { getCuratedRecipeBySlug } from "../curated-recipe-store.js";
+import { getApprovedCatalog } from "../approved-catalog-cache.js";
 import { canonicalTonightProtein, loadCanonicalCatalogPage, type CanonicalCatalogPage } from "./canonical-page.js";
 
 export interface CatalogGenerateHydration {
@@ -54,12 +55,14 @@ function manifestMeta(slug: string): ManifestMeta | null {
 }
 
 function pageTags(page: CanonicalCatalogPage): RecipeTags {
+  const entry = getApprovedCatalog().recipes.find((r) => r.slug === page.slug);
   return {
     cuisine: page.cuisine,
     cooking_method: "",
     base_carb: "",
     key_ingredients: page.ingredients.slice(0, 5).map((i) => i.name),
-    high_protein: Boolean(page.nutrition?.filterFlags?.highProtein),
+    high_protein: entry?.isHighProtein === true,
+    nutrition_verified: entry?.numericFilterEligible === true,
     high_fiber: false,
     quick_cleanup: page.cleanupDifficulty === "easy",
   };

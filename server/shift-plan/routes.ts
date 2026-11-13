@@ -36,6 +36,7 @@ import { resolveMealHistoryAccess, visibleSince } from "../../shared/meal-histor
 import { gateFoodsToAvoidByEntitlement } from "../generation/foods-to-avoid-gate.js";
 import { loadEntitledNutritionGoal } from "../generation/nutrition-goals-gate.js";
 import { computeHistorySignals } from "../generation/history-personalization.js";
+import { loadDislikedSlugsForPicking } from "../meal-memory/dislikes.js";
 import { listRecentCookedSlugsOldestFirst } from "../meal-history/store.js";
 import { mergeRecentSlugSources } from "../../shared/meal-rotation/weighted-pick.js";
 import { peekRateLimit, recordRateLimit } from "../cache-store.js";
@@ -73,6 +74,7 @@ import { pgShiftPlanRepo } from "./store.js";
 import { pgShiftListRepo } from "./shopping-store.js";
 import { applyShiftListAction, getShiftList, openShiftList, type ShiftListDeps } from "./shopping-service.js";
 import { createSlotPicker } from "./picker.js";
+import { loadAccountSafetyRestrictions, mergeAccountSafetyIntoBody } from "../generation/account-dietary-safety.js";
 import {
   ShiftPlanError,
   fillShiftPlan,
@@ -180,9 +182,10 @@ async function buildSlotPicker(
   clientRecentSlugs: string[],
 ): Promise<{ base: GenerateRequest; picker: SlotPicker } | null> {
   const crew = Number(rawBase.crew_size);
+  const safeBase = mergeAccountSafetyIntoBody(rawBase, await loadAccountSafetyRestrictions(userId));
   const parsed = generateRequestSchema.safeParse(
     coerceGenerateRequestBody({
-      ...rawBase,
+      ...safeBase,
       crew_size: Number.isFinite(crew) ? Math.min(GENERATOR_MAX_CREW, Math.max(GENERATOR_MIN_CREW, crew)) : 6,
     }),
   );
@@ -215,7 +218,14 @@ async function buildSlotPicker(
 
   return {
     base,
-    picker: createSlotPicker({ base, recentSlugs, historySignals, nutritionGoal, sessionKey: `shift-plan:${userId}` }),
+    picker: createSlotPicker({
+      base,
+      recentSlugs,
+      historySignals,
+      nutritionGoal,
+      dislikedSlugs: await loadDislikedSlugsForPicking(userId),
+      sessionKey: `shift-plan:${userId}`,
+    }),
   };
 }
 

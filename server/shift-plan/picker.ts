@@ -13,15 +13,27 @@
 import type { GenerateRequest } from "../../shared/schema.js";
 import { buildSlotGenerateRequest, slotSelectionProfile, stableSeed } from "../../shared/shift-plan/plan.js";
 import { pickBreakfast, type BreakfastCandidate } from "../../shared/shift-plan/breakfast.js";
-import { scoreProfileNutritionGoal, type ProfileNutritionGoalKey } from "../../shared/nutrition/profile-goals.js";
+import {
+  describeNutritionGoalFit,
+  scoreProfileNutritionGoal,
+  type ProfileNutritionGoalKey,
+} from "../../shared/nutrition/profile-goals.js";
 import { runLocalFirstGeneratePipeline } from "../generation/local-first-pipeline.js";
 import { nutritionGoalFactsForSlug } from "../generation/nutrition-goals-gate.js";
-import type { HistorySignals } from "../generation/history-personalization.js";
+import {
+  cookedTooRecently,
+  describeMemoryReason,
+  isPersonalReason,
+  memoryReasonsFor,
+  scoreHistorySignal,
+  type HistorySignals,
+} from "../generation/history-personalization.js";
 import { tonightIneligibleReason } from "../generation/tonight-eligibility.js";
 import { getApprovedCatalog } from "../approved-catalog-cache.js";
 import { getCuratedRecipeBySlug } from "../curated-recipe-store.js";
 import { classifyMealOccasions, type MealOccasion } from "../../shared/catalog/meal-occasions.js";
-import type { SlotPicker } from "./service.js";
+import { getRecipeMeta } from "../insights/catalog-meta.js";
+import type { SlotPick, SlotPicker } from "./service.js";
 
 export interface SlotPickerInputs {
   /** Validated, sanitized, entitlement-gated base request. */
@@ -29,6 +41,8 @@ export interface SlotPickerInputs {
   recentSlugs: string[];
   historySignals?: HistorySignals | null;
   nutritionGoal?: ProfileNutritionGoalKey | null;
+  /** The user's "Not for us" meals — never auto-picked. */
+  dislikedSlugs?: ReadonlySet<string> | null;
   sessionKey: string;
   /** Defaults to the approved catalog's breakfast entries. */
   breakfastCandidates?: readonly BreakfastCandidate[];
@@ -78,18 +92,43 @@ export function occasionPoolSlugs(occasion: MealOccasion): ReadonlySet<string> {
   return occasionCache.pools.get(occasion) ?? new Set();
 }
 
+/** Breakfast slots: the same history scoring and reason lines as dinner picks (no favorites lane — the pool is small). */
+function pickBreakfastSlot(
+  inputs: SlotPickerInputs,
+  slot: Parameters<SlotPicker>[0],
+  avoid: Parameters<SlotPicker>[1],
+  seed: string,
+): SlotPick | null {
+  const goal = inputs.nutritionGoal ?? null;
+  const signals = inputs.historySignals ?? null;
+  const candidates = inputs.breakfastCandidates ?? loadBreakfastCandidates();
+  const disliked = inputs.dislikedSlugs ?? new Set<string>();
+  const recentCooks = signals ? candidates.filter((c) => cookedTooRecently(c.slug, signals)).map((c) => c.slug) : [];
+  const proteinOf = (slug: string) => getRecipeMeta(slug).protein ?? "";
+  const preference = (slug: string) =>
+    (goal ? scoreProfileNutritionGoal(goal, nutritionGoalFactsForSlug(slug)) : 0) +
+    (signals ? scoreHistorySignal({ slug, protein: proteinOf(slug) }, signals).delta : 0);
+
+  const slug = pickBreakfast(candidates, buildSlotGenerateRequest(inputs.base, slot), {
+    avoid: { hard: [...avoid.hard, ...disliked], soft: [...avoid.soft, ...recentCooks] },
+    recentSlugs: inputs.recentSlugs,
+    seed,
+    ...(goal || signals ? { preferenceScore: preference } : {}),
+  });
+  if (!slug) return null;
+
+  const memory = signals
+    ? memoryReasonsFor({ slug, protein: proteinOf(slug) }, signals, scoreHistorySignal({ slug, protein: proteinOf(slug) }, signals).appliedSignals)
+    : [];
+  const goalLine = goal ? describeNutritionGoalFit(goal, nutritionGoalFactsForSlug(slug)) : null;
+  const reasons = [...memory.map(describeMemoryReason), goalLine].filter((r): r is string => Boolean(r));
+  return { slug, why: reasons.length ? { reasons, pickedForYou: memory.some(isPersonalReason) } : null };
+}
+
 export function createSlotPicker(inputs: SlotPickerInputs): SlotPicker {
   return async (slot, avoid, seed) => {
     const mealType = slotSelectionProfile(slot).mealType;
-    if (mealType === "breakfast") {
-      const goal = inputs.nutritionGoal ?? null;
-      return pickBreakfast(inputs.breakfastCandidates ?? loadBreakfastCandidates(), buildSlotGenerateRequest(inputs.base, slot), {
-        avoid,
-        recentSlugs: inputs.recentSlugs,
-        seed,
-        ...(goal ? { preferenceScore: (slug: string) => scoreProfileNutritionGoal(goal, nutritionGoalFactsForSlug(slug)) } : {}),
-      });
-    }
+    if (mealType === "breakfast") return pickBreakfastSlot(inputs, slot, avoid, seed);
 
     const avoidLists = avoid.soft.length > 0 ? [[...avoid.hard, ...avoid.soft], avoid.hard] : [avoid.hard];
     for (const restrictToSlugs of [occasionPoolSlugs(mealType), null]) {
@@ -105,9 +144,14 @@ export function createSlotPicker(inputs: SlotPickerInputs): SlotPicker {
             historySignals: inputs.historySignals ?? null,
             nutritionGoal: inputs.nutritionGoal ?? null,
             restrictToSlugs,
+            dislikedSlugs: inputs.dislikedSlugs ?? null,
           });
           const slug = typeof hit.extras._slug === "string" ? hit.extras._slug.toLowerCase() : "";
-          if (slug && !avoid.hard.includes(slug)) return slug;
+          if (!slug || avoid.hard.includes(slug)) continue;
+          const reasons = Array.isArray(hit.extras._personalization_reasons)
+            ? (hit.extras._personalization_reasons as unknown[]).filter((r): r is string => typeof r === "string")
+            : [];
+          return { slug, why: reasons.length ? { reasons, pickedForYou: hit.extras._picked_for_you === true } : null };
         } catch {
           // Nothing eligible with this avoid list / pool — try the relaxed one.
         }

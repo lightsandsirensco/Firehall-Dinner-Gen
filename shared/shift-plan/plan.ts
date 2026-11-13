@@ -18,6 +18,7 @@ import type {
   PlannedRecipe,
   ShiftPlanSelectionSource,
   ShiftPlanSlotState,
+  SlotPickWhy,
 } from "./types.js";
 
 /** Generator crew-size bounds (generateRequestSchema). Displayed servings use the real crew size. */
@@ -52,6 +53,8 @@ export interface ShiftPlanSlotPatch {
   byo?: boolean;
   locked?: boolean;
   crewSizeOverride?: number | null;
+  /** Auto-fill's reasons for `recipeSlug`; any recipe change without this clears them. */
+  pickWhy?: SlotPickWhy | null;
 }
 
 /**
@@ -73,6 +76,7 @@ export function applySlotPatch(
   const next: ShiftPlanSlotState = { ...current };
 
   if (patch.recipeSlug !== undefined) {
+    next.pickWhy = patch.recipeSlug && patch.pickWhy?.reasons.length ? patch.pickWhy : null;
     if (patch.recipeSlug) {
       const source = patch.selectionSource ?? "manual";
       next.recipeSlug = patch.recipeSlug;
@@ -137,6 +141,7 @@ export function mergePlanSlots(
       locked: Boolean(recipe) && state.locked,
       selectionSource: recipe ? state.selectionSource : null,
       recipe,
+      pickWhy: recipe && state.selectionSource === "auto" ? (state.pickWhy ?? null) : null,
     };
   });
 }

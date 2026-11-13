@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { MeSubpageShell } from "@/components/app-shell/me-subpage-shell";
 import { HallHistoryTimeline } from "@/components/hall-history/hall-history-timeline";
 import { MealMemorySection } from "@/components/hall-history/meal-memory-section";
+import { HiddenMealsSection } from "@/components/hall-history/hidden-meals-section";
 import { useHallHistory } from "@/hooks/use-hall-history";
 import { ME_HISTORY } from "@/lib/brand-copy";
 import { trackHallHistoryViewed } from "@/lib/analytics";
@@ -21,6 +22,7 @@ export default function MeHistoryPage() {
     >
       <div className="space-y-6">
         <MealMemorySection />
+        <HiddenMealsSection />
         <HallHistoryTimeline
           entries={entries}
           emptyMessage="No meals yet. Pick tonight's meal or spin the wheel to start your list."

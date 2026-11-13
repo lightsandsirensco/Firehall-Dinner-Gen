@@ -46,6 +46,8 @@ export interface LocalFirstPipelineContext {
   nutritionGoal?: ProfileNutritionGoalKey | null;
   /** Server-side pool narrowing (Shift Planner meal occasion) — see PickOptions.restrictToSlugs. */
   restrictToSlugs?: ReadonlySet<string> | null;
+  /** The signed-in user's "Not for us" meals — see PickOptions.dislikedSlugs. */
+  dislikedSlugs?: ReadonlySet<string> | null;
 }
 
 export interface LocalFirstPipelineHit {
@@ -123,6 +125,9 @@ function hitFromCurated(
       _tonight_why: highlights.why,
       _personalization_used: Boolean(ctx.historySignals),
       _personalization_note: pick.personalization?.note ?? undefined,
+      _personalization_reasons: pick.personalization?.reasons.length ? pick.personalization.reasons : undefined,
+      _picked_for_you: pick.personalization?.pickedForYou || undefined,
+      _favorite_returned: pick.personalization?.favoriteReturned || undefined,
       _personalization_signal_types: pick.personalization?.signalTypes?.length
         ? pick.personalization.signalTypes.join(",")
         : undefined,
@@ -202,6 +207,7 @@ export async function runLocalFirstGeneratePipeline(
       historySignals: ctx.historySignals,
       nutritionGoal: ctx.nutritionGoal,
       restrictToSlugs: ctx.restrictToSlugs,
+      dislikedSlugs: ctx.dislikedSlugs,
     });
 
     const healthinessRelaxed = (req.healthiness_preference || "balanced") !== requestedHealthiness;

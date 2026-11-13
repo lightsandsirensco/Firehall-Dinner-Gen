@@ -1,25 +1,24 @@
 /**
- * LEGACY single-recipe shopping list (copy/print/email dialog only).
+ * Single-recipe shopping list (copy/print/email dialog and recipe pages).
  *
- * The canonical shopping engine is `shared/shopping/*` (ShoppingService,
- * quantity-parser, units, pantry). Shift Planner, /me/shopping-list, and any
- * new planner or Premium work must build on that engine — do not add new
- * callers here. Kept until the per-recipe modal is migrated.
+ * A thin adapter over the canonical engine in `shared/shopping/*`: parsing,
+ * merging, unit conversion, departments and purchase amounts all come from
+ * there, so this dialog and the Shift Planner list always agree. This module
+ * only maps app recipe shapes in and the dialog's section shape out, plus the
+ * dialog-only extras (required-for-the-plate, veg option, budget swaps).
  */
 import type { GenerateResponse, PizzaResponse, IngredientItem, ClientRecipeResponse, ClientIngredient } from "@shared/schema";
 import type { GoldenRecipePageIngredient } from "@shared/golden-100/recipe-page-schema";
-import {
-  inferShoppingCategory,
-  isSeasoningOrGarnish,
-  isRequiredForMeal,
-} from "@shared/meal-semantics";
+import { isSeasoningOrGarnish, isRequiredForMeal } from "@shared/meal-semantics";
 import { ingredientNameMatchesRecipeTitle } from "@shared/meal-format-contract";
+import { formatIngredientDisplayName, type MeasurementSystem } from "@shared/measurements";
 import {
-  convertShoppingAmountString,
-  formatIngredientAmount,
-  formatIngredientDisplayName,
-  type MeasurementSystem,
-} from "@shared/measurements";
+  addRecipeToSession,
+  createShoppingSession,
+  DEPARTMENT_ORDER,
+  formatShoppingItemQuantity,
+  type RawRecipeIngredient,
+} from "@shared/shopping";
 
 export interface ShoppingItem {
   name: string;
@@ -40,185 +39,43 @@ export interface ShoppingListResult {
   budget_swaps?: string[];
 }
 
-const PROTEIN_KEYWORDS = [
-  "chicken", "beef", "pork", "turkey", "salmon", "shrimp", "sausage", "bacon",
-  "steak", "ground", "meatball", "pepperoni", "ham", "prosciutto", "lamb",
-  "fish", "tuna", "cod", "tilapia", "crab", "lobster", "scallop", "anchov",
-  "chorizo", "salami", "brisket", "ribs", "thigh", "breast", "wing", "drumstick",
-  "plant-based crumble", "beyond", "impossible",
-];
-
-const PRODUCE_KEYWORDS = [
-  "onion", "garlic", "pepper", "tomato", "lettuce", "spinach", "kale",
-  "broccoli", "carrot", "celery", "potato", "sweet potato", "mushroom",
-  "zucchini", "squash", "corn", "avocado", "lime", "lemon", "cilantro",
-  "parsley", "basil", "jalape", "ginger", "scallion", "green onion",
-  "bell pepper", "cabbage", "cucumber", "arugula", "radish", "beet",
-  "asparagus", "eggplant", "pea", "bean sprout", "romaine", "shallot",
-  "chive", "dill", "mint", "rosemary", "thyme", "oregano", "sage",
-  "banana pepper", "serrano", "habanero", "poblano", "apple", "pineapple",
-  "olive", "caper", "artichoke", "roasted veg", "roasted vegetable",
-];
-
-const DAIRY_KEYWORDS = [
-  "cheese", "mozzarella", "cheddar", "parmesan", "cream", "milk", "butter",
-  "yogurt", "sour cream", "ricotta", "provolone", "gouda", "feta",
-  "cream cheese", "heavy cream", "half and half", "whipping cream",
-  "monterey jack", "colby", "swiss", "brie", "goat cheese", "blue cheese",
-  "paneer", "ghee", "dairy-free", "vegan cheese", "oat milk", "almond milk",
-  "coconut milk", "coconut cream",
-];
-
-const BAKERY_KEYWORDS = [
-  "bread", "bun", "roll", "tortilla", "pita", "naan", "dough", "pizza dough",
-  "flatbread", "ciabatta", "baguette", "crouton", "breadcrumb", "panko",
-  "flour tortilla", "corn tortilla", "wrap",
-];
-
-const FROZEN_KEYWORDS = [
-  "frozen", "ice cream", "frozen vegetable", "frozen fruit",
-];
-
-const CONDIMENT_KEYWORDS = [
-  "ketchup", "mustard", "mayo", "mayonnaise", "hot sauce", "sriracha",
-  "soy sauce", "worcestershire", "vinegar", "bbq sauce", "barbecue sauce",
-  "ranch", "buffalo sauce", "teriyaki", "hoisin", "fish sauce", "salsa",
-  "pesto", "marinara", "pizza sauce", "tomato sauce", "tomato paste",
-  "hot honey", "honey", "maple syrup", "tahini", "hummus", "guacamole",
-  "aioli", "chimichurri", "tzatziki", "balsamic", "drizzle", "glaze",
-  "dressing", "relish", "chutney",
-];
-
-const PANTRY_KEYWORDS = [
-  "oil", "olive oil", "salt", "pepper", "sugar", "flour", "rice",
-  "pasta", "noodle", "spice", "cumin", "paprika", "chili powder",
-  "garlic powder", "onion powder", "italian seasoning", "cayenne",
-  "red pepper flakes", "bay leaf", "cinnamon", "nutmeg", "coriander",
-  "turmeric", "curry", "stock", "broth", "bouillon", "can", "canned",
-  "beans", "lentil", "chickpea", "corn starch", "cornstarch", "baking",
-  "yeast", "sesame", "soy", "coconut oil", "vegetable oil", "canola",
-  "cooking spray", "cornmeal", "semolina", "oats", "quinoa", "couscous",
-  "crackers", "nuts", "almond", "walnut", "pecan", "cashew", "pine nut",
-  "peanut", "dried", "sun-dried", "raisin", "breadcrumb",
-];
-
-function categorize(itemName: string, notes = ""): string {
-  if (isSeasoningOrGarnish(itemName, notes)) return "Pantry & Spices";
-  const semantic = inferShoppingCategory(itemName, notes);
-  if (semantic !== "Other") return semantic;
-
-  const lower = itemName.toLowerCase();
-  if (PROTEIN_KEYWORDS.some(k => lower.includes(k))) return "Proteins";
-  if (FROZEN_KEYWORDS.some(k => lower.includes(k))) return "Frozen";
-  if (DAIRY_KEYWORDS.some(k => lower.includes(k))) return "Dairy / Dairy Alternatives";
-  if (BAKERY_KEYWORDS.some(k => lower.includes(k))) return "Bakery / Dough";
-  if (PRODUCE_KEYWORDS.some(k => lower.includes(k)) && !/\b(black pepper|white pepper|ground pepper)\b/i.test(lower)) {
-    return "Produce";
-  }
-  if (CONDIMENT_KEYWORDS.some(k => lower.includes(k))) return "Condiments & Sauces";
-  if (PANTRY_KEYWORDS.some(k => lower.includes(k))) return "Pantry & Spices";
-
-  return "Other";
-}
-
-const SECTION_ORDER = [
-  "Required for tonight's meal",
-  "Proteins",
-  "Produce",
-  "Dairy / Dairy Alternatives",
-  "Pantry & Spices",
-  "Bakery / Dough",
-  "Frozen",
-  "Condiments & Sauces",
-  "Other",
-];
-
 const REQUIRED_SECTION = "Required for tonight's meal";
+
+interface DepartmentItem extends ShoppingItem {
+  department: string;
+}
 
 function normalizeItemName(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
 }
 
-function parseAmount(amount: string): { value: number; unit: string } | null {
-  const match = amount.trim().match(/^([\d.\/]+)\s*(.*)$/);
-  if (!match) return null;
-  let value: number;
-  if (match[1].includes("/")) {
-    const parts = match[1].split("/");
-    value = parseFloat(parts[0]) / parseFloat(parts[1]);
-  } else {
-    value = parseFloat(match[1]);
+/** Run already-scaled ingredient lines through the shared engine (no further scaling). */
+function buildItems(ingredients: RawRecipeIngredient[], system: MeasurementSystem): DepartmentItem[] {
+  if (ingredients.length === 0) return [];
+  const session = addRecipeToSession(
+    createShoppingSession(),
+    { slug: "recipe", title: "", baseServings: 1, ingredients, prescaled: true },
+    1,
+  );
+  return session.list.items.map((item) => ({
+    name: formatIngredientDisplayName(item.displayName),
+    amount: formatShoppingItemQuantity(item, system === "metric" ? "metric" : undefined),
+    notes: item.notes?.trim() ?? "",
+    department: item.department,
+  }));
+}
+
+function toSections(items: DepartmentItem[], leading?: ShoppingSection): ShoppingSection[] {
+  const sections: ShoppingSection[] = leading && leading.items.length > 0 ? [leading] : [];
+  for (const department of DEPARTMENT_ORDER) {
+    const inDept = items.filter((i) => i.department === department);
+    if (inDept.length > 0) sections.push({ title: department, items: inDept.map(stripDepartment) });
   }
-  if (isNaN(value)) return null;
-  const unit = match[2].toLowerCase().trim();
-  return { value, unit };
+  return sections;
 }
 
-function normalizeUnit(unit: string): string {
-  const aliases: Record<string, string> = {
-    "cup": "cup", "cups": "cup",
-    "tbsp": "tbsp", "tablespoon": "tbsp", "tablespoons": "tbsp",
-    "tsp": "tsp", "teaspoon": "tsp", "teaspoons": "tsp",
-    "oz": "oz", "ounce": "oz", "ounces": "oz",
-    "lb": "lb", "lbs": "lb", "pound": "lb", "pounds": "lb",
-    "g": "g", "gram": "g", "grams": "g",
-    "kg": "kg", "kilogram": "kg", "kilograms": "kg",
-    "ml": "ml", "milliliter": "ml", "milliliters": "ml",
-    "l": "l", "liter": "l", "liters": "l",
-    "clove": "clove", "cloves": "clove",
-    "slice": "slice", "slices": "slice",
-    "can": "can", "cans": "can",
-    "bunch": "bunch", "bunches": "bunch",
-    "head": "head", "heads": "head",
-    "stalk": "stalk", "stalks": "stalk",
-    "sprig": "sprig", "sprigs": "sprig",
-  };
-  return aliases[unit] || unit;
-}
-
-function formatAmount(value: number, unit: string): string {
-  const rounded = Math.round(value * 100) / 100;
-  const display = rounded % 1 === 0 ? rounded.toString() : rounded.toFixed(1);
-  return unit ? `${display} ${unit}` : display;
-}
-
-function mergeItems(items: ShoppingItem[]): ShoppingItem[] {
-  const map = new Map<string, ShoppingItem & { amounts: string[] }>();
-
-  for (const item of items) {
-    const key = normalizeItemName(item.name);
-    const existing = map.get(key);
-    if (existing) {
-      if (item.amount && !existing.amounts.includes(item.amount)) {
-        existing.amounts.push(item.amount);
-      }
-      if (item.notes && !existing.notes.includes(item.notes)) {
-        existing.notes = existing.notes ? `${existing.notes}; ${item.notes}` : item.notes;
-      }
-    } else {
-      map.set(key, { ...item, amounts: item.amount ? [item.amount] : [] });
-    }
-  }
-
-  return Array.from(map.values()).map(({ amounts, ...rest }) => {
-    if (amounts.length <= 1) {
-      return { ...rest, amount: amounts[0] || "" };
-    }
-
-    const parsed = amounts.map(a => ({ raw: a, parsed: parseAmount(a) }));
-    const allParsed = parsed.every(p => p.parsed !== null);
-
-    if (allParsed) {
-      const units = parsed.map(p => normalizeUnit(p.parsed!.unit));
-      const allSameUnit = units.every(u => u === units[0]);
-      if (allSameUnit) {
-        const total = parsed.reduce((sum, p) => sum + p.parsed!.value, 0);
-        return { ...rest, amount: formatAmount(total, parsed[0].parsed!.unit) };
-      }
-    }
-
-    return { ...rest, amount: `(${amounts.join(" + ")})` };
-  });
+function stripDepartment({ name, amount, notes }: DepartmentItem): ShoppingItem {
+  return { name, amount, notes };
 }
 
 export type ShoppingListBuildOptions = {
@@ -226,60 +83,26 @@ export type ShoppingListBuildOptions = {
   measurementSystem?: MeasurementSystem;
 };
 
-function formatShoppingItemAmount(
-  amount: string,
-  system: MeasurementSystem = "us",
-): string {
-  if (!amount.trim() || system === "us") return amount;
-  return convertShoppingAmountString(amount, system);
+function fromIngredientItem(ing: IngredientItem): RawRecipeIngredient {
+  return { name: ing.item, quantity: ing.amount, notes: ing.notes };
 }
 
-function ingredientToShoppingItem(
-  ing: IngredientItem,
-  system: MeasurementSystem = "us",
-): ShoppingItem {
+function fromClientIngredient(ing: ClientIngredient): RawRecipeIngredient {
+  const quantity = ing.qty > 0 ? String(Math.round(ing.qty * 10000) / 10000) : "";
+  return { name: ing.name, ...(quantity ? { quantity } : {}), ...(ing.unit ? { unit: ing.unit } : {}) };
+}
+
+function fromCatalogIngredient(ing: GoldenRecipePageIngredient): RawRecipeIngredient {
   return {
-    name: formatIngredientDisplayName(ing.item),
-    amount: formatShoppingItemAmount(ing.amount, system),
+    name: ing.name,
+    quantity: ing.quantity,
+    unit: ing.unit,
     notes: ing.notes,
+    ...(ing.optional ? { optional: true } : {}),
   };
 }
 
-function fmtShoppingQty(qty: number, unit: string, system: MeasurementSystem = "us"): string {
-  if (system === "metric" && unit) {
-    return formatIngredientAmount(String(qty), unit, system);
-  }
-  const rounded = Math.round(qty * 100) / 100;
-  const display = Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1).replace(/\.0$/, "");
-  return unit ? `${display} ${unit}` : display;
-}
-
-function clientIngredientToShoppingItem(
-  ing: ClientIngredient,
-  system: MeasurementSystem = "us",
-): ShoppingItem {
-  let amount = "";
-  if (ing.qty > 0) {
-    amount = fmtShoppingQty(ing.qty, ing.unit, system);
-  }
-  const notes =
-    ing.category && ing.category !== "other" ? `category: ${ing.category}` : "";
-  return { name: formatIngredientDisplayName(ing.name), amount, notes };
-}
-
-function catalogIngredientToShoppingItem(
-  ing: GoldenRecipePageIngredient,
-  system: MeasurementSystem = "us",
-): ShoppingItem {
-  const amount = formatIngredientAmount(ing.quantity, ing.unit, system);
-  return {
-    name: formatIngredientDisplayName(ing.name),
-    amount,
-    notes: ing.notes || (ing.optional ? "optional" : ""),
-  };
-}
-
-function filterTitleIngredients(items: ShoppingItem[], recipeTitle?: string): ShoppingItem[] {
+function withoutTitleLines<T extends { name: string }>(items: T[], recipeTitle?: string): T[] {
   if (!recipeTitle?.trim()) return items;
   return items.filter((item) => !ingredientNameMatchesRecipeTitle(item.name, recipeTitle));
 }
@@ -289,31 +112,14 @@ export function buildShoppingListFromCatalogIngredients(
   ingredients: GoldenRecipePageIngredient[],
   options?: ShoppingListBuildOptions,
 ): ShoppingListResult {
-  const system = options?.measurementSystem ?? "us";
-  const allItems = filterTitleIngredients(
-    ingredients
-      .filter((ing) => !ing.optional)
-      .map((ing) => catalogIngredientToShoppingItem(ing, system)),
+  const items = withoutTitleLines(
+    buildItems(ingredients.map(fromCatalogIngredient), options?.measurementSystem ?? "us"),
     options?.recipeTitle,
   );
-
-  const merged = mergeItems(allItems);
-  const sectionMap = new Map<string, ShoppingItem[]>();
-
-  for (const item of merged) {
-    const category = categorize(item.name, item.notes);
-    if (!sectionMap.has(category)) sectionMap.set(category, []);
-    sectionMap.get(category)!.push(item);
+  const sections = toSections(items);
+  if (sections.length === 0 && options?.recipeTitle && items.length > 0) {
+    sections.push({ title: "Ingredients", items: items.map(stripDepartment) });
   }
-
-  const sections: ShoppingSection[] = SECTION_ORDER.filter((title) => sectionMap.has(title)).map(
-    (title) => ({ title, items: sectionMap.get(title)! }),
-  );
-
-  if (sections.length === 0 && options?.recipeTitle) {
-    sections.push({ title: "Ingredients", items: merged });
-  }
-
   return { sections };
 }
 
@@ -327,12 +133,12 @@ function plateLineMatchesIngredient(plateName: string, ingName: string): boolean
   return pWords.every((w) => new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(n));
 }
 
-function collectRequiredPlateItems(recipe: ClientRecipeResponse, merged: ShoppingItem[]): ShoppingItem[] {
+function collectRequiredPlateItems(recipe: ClientRecipeResponse, merged: DepartmentItem[]): DepartmentItem[] {
   const plate = recipe.meal_plate;
   if (!plate) return [];
 
   const plateLines = [...(plate.main || []), ...(plate.sides || [])];
-  const required: ShoppingItem[] = [];
+  const required: DepartmentItem[] = [];
   const used = new Set<string>();
 
   for (const line of plateLines) {
@@ -387,48 +193,43 @@ function getBudgetSwaps(items: ShoppingItem[]): string[] {
   return swaps;
 }
 
-export function buildShoppingListFromClientMeal(
-  recipe: ClientRecipeResponse,
-  options?: { useWhatWeHave?: boolean; budgetLevel?: string; measurementSystem?: MeasurementSystem },
+/** Extra "need to grab" names not already covered by an ingredient line. */
+function extraItems(extras: string[] | undefined, existing: RawRecipeIngredient[]): RawRecipeIngredient[] {
+  if (!extras?.length) return [];
+  const seen = new Set(existing.map((i) => normalizeItemName(i.name)));
+  const out: RawRecipeIngredient[] = [];
+  for (const extra of extras) {
+    const key = normalizeItemName(extra);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push({ name: extra });
+  }
+  return out;
+}
+
+function vegOptionItems(
+  ingredients: IngredientItem[] | undefined,
+  system: MeasurementSystem,
+): ShoppingListResult["veg_option"] | undefined {
+  const raw = (ingredients ?? []).filter((ing) => !ing.item.toLowerCase().includes("tofu")).map(fromIngredientItem);
+  const items = buildItems(raw, system).map(stripDepartment);
+  return items.length > 0 ? { items } : undefined;
+}
+
+type MealOptions = { useWhatWeHave?: boolean; budgetLevel?: string; measurementSystem?: MeasurementSystem };
+
+function finishMealResult(
+  merged: DepartmentItem[],
+  required: DepartmentItem[],
+  recipe: Pick<GenerateResponse, "ingredients_used" | "extra_items_needed" | "veg_option">,
+  options: MealOptions | undefined,
 ): ShoppingListResult {
   const system = options?.measurementSystem ?? "us";
-  const allItems = filterTitleIngredients(
-    recipe.ingredients.map((ing) => clientIngredientToShoppingItem(ing, system)),
-    recipe.title,
-  );
-
-  const existingNames = new Set(allItems.map((i) => normalizeItemName(i.name)));
-  if (recipe.extra_items_needed) {
-    for (const extra of recipe.extra_items_needed) {
-      const key = normalizeItemName(extra);
-      if (!key || existingNames.has(key)) continue;
-      existingNames.add(key);
-      allItems.push({ name: extra, amount: "", notes: "" });
-    }
-  }
-
-  const merged = mergeItems(allItems);
-
-  const requiredItems = collectRequiredPlateItems(recipe, merged);
-  const requiredKeys = new Set(requiredItems.map((i) => normalizeItemName(i.name)));
-
-  const sectionMap = new Map<string, ShoppingItem[]>();
-  if (requiredItems.length > 0) {
-    sectionMap.set(REQUIRED_SECTION, requiredItems);
-  }
-
-  for (const item of merged) {
-    if (requiredKeys.has(normalizeItemName(item.name))) continue;
-    const category = categorize(item.name, item.notes);
-    if (!sectionMap.has(category)) sectionMap.set(category, []);
-    sectionMap.get(category)!.push(item);
-  }
-
-  const sections: ShoppingSection[] = SECTION_ORDER
-    .filter(title => sectionMap.has(title))
-    .map(title => ({ title, items: sectionMap.get(title)! }));
-
-  const result: ShoppingListResult = { sections };
+  const requiredKeys = new Set(required.map((i) => normalizeItemName(i.name)));
+  const rest = merged.filter((i) => !requiredKeys.has(normalizeItemName(i.name)));
+  const result: ShoppingListResult = {
+    sections: toSections(rest, { title: REQUIRED_SECTION, items: required.map(stripDepartment) }),
+  };
 
   if (options?.useWhatWeHave && recipe.ingredients_used && recipe.ingredients_used.length > 0) {
     result.fridge_used = recipe.ingredients_used;
@@ -436,81 +237,44 @@ export function buildShoppingListFromClientMeal(
   }
 
   if (recipe.veg_option?.enabled && recipe.veg_option.ingredients.length > 0) {
-    const vegItems = recipe.veg_option.ingredients
-      .filter(ing => !ing.item.toLowerCase().includes("tofu"))
-      .map((ing) => ingredientToShoppingItem(ing, system));
-    if (vegItems.length > 0) {
-      result.veg_option = { items: mergeItems(vegItems) };
-    }
+    const veg = vegOptionItems(recipe.veg_option.ingredients, system);
+    if (veg) result.veg_option = veg;
   }
 
   if (options?.budgetLevel === "low") {
-    const allShoppingItems = [...merged, ...(result.veg_option?.items || [])];
-    result.budget_swaps = getBudgetSwaps(allShoppingItems);
+    result.budget_swaps = getBudgetSwaps([...merged, ...(result.veg_option?.items || [])]);
   }
 
   return result;
 }
 
-export function buildShoppingListFromMeal(
-  recipe: GenerateResponse,
-  options?: { useWhatWeHave?: boolean; budgetLevel?: string; measurementSystem?: MeasurementSystem },
+export function buildShoppingListFromClientMeal(
+  recipe: ClientRecipeResponse,
+  options?: MealOptions,
 ): ShoppingListResult {
   const system = options?.measurementSystem ?? "us";
-  const allItems = filterTitleIngredients(
-    recipe.ingredients.map((ing) => ingredientToShoppingItem(ing, system)),
+  const raw = recipe.ingredients.map(fromClientIngredient);
+  const merged = withoutTitleLines(
+    buildItems([...raw, ...extraItems(recipe.extra_items_needed, raw)], system),
     recipe.title,
   );
+  return finishMealResult(merged, collectRequiredPlateItems(recipe, merged), recipe, options);
+}
 
-  if (recipe.extra_items_needed) {
-    for (const extra of recipe.extra_items_needed) {
-      allItems.push({ name: extra, amount: "", notes: "" });
-    }
-  }
-
-  const merged = mergeItems(allItems);
-
-  const requiredItems = merged.filter((item) => isRequiredForMeal(item.notes));
-  const requiredKeys = new Set(requiredItems.map((i) => normalizeItemName(i.name)));
-
-  const sectionMap = new Map<string, ShoppingItem[]>();
-  if (requiredItems.length > 0) {
-    sectionMap.set(REQUIRED_SECTION, requiredItems.map((i) => ({ ...i, notes: "Required for this meal" })));
-  }
-
-  for (const item of merged) {
-    if (requiredKeys.has(normalizeItemName(item.name))) continue;
-    const category = categorize(item.name, item.notes);
-    if (!sectionMap.has(category)) sectionMap.set(category, []);
-    sectionMap.get(category)!.push(item);
-  }
-
-  const sections: ShoppingSection[] = SECTION_ORDER
-    .filter(title => sectionMap.has(title))
-    .map(title => ({ title, items: sectionMap.get(title)! }));
-
-  const result: ShoppingListResult = { sections };
-
-  if (options?.useWhatWeHave && recipe.ingredients_used && recipe.ingredients_used.length > 0) {
-    result.fridge_used = recipe.ingredients_used;
-    result.need_to_grab = recipe.extra_items_needed || [];
-  }
-
-  if (recipe.veg_option?.enabled && recipe.veg_option.ingredients.length > 0) {
-    const vegItems = recipe.veg_option.ingredients
-      .filter(ing => !ing.item.toLowerCase().includes("tofu"))
-      .map((ing) => ingredientToShoppingItem(ing, system));
-    if (vegItems.length > 0) {
-      result.veg_option = { items: mergeItems(vegItems) };
-    }
-  }
-
-  if (options?.budgetLevel === "low") {
-    const allShoppingItems = [...merged, ...(result.veg_option?.items || [])];
-    result.budget_swaps = getBudgetSwaps(allShoppingItems);
-  }
-
-  return result;
+export function buildShoppingListFromMeal(
+  recipe: GenerateResponse,
+  options?: MealOptions,
+): ShoppingListResult {
+  const system = options?.measurementSystem ?? "us";
+  const raw = recipe.ingredients.map(fromIngredientItem);
+  const merged = withoutTitleLines(
+    buildItems([...raw, ...extraItems(recipe.extra_items_needed, raw)], system),
+    recipe.title,
+  );
+  const required = merged
+    .filter((item) => isRequiredForMeal(item.notes))
+    .map((i) => ({ ...i, notes: "Required for this meal" }));
+  return finishMealResult(merged, required, recipe, options);
 }
 
 export function buildShoppingListFromPizza(
@@ -518,8 +282,6 @@ export function buildShoppingListFromPizza(
   options?: { budgetLevel?: string; measurementSystem?: MeasurementSystem },
 ): ShoppingListResult {
   const system = options?.measurementSystem ?? "us";
-  const allItems: ShoppingItem[] = [];
-
   const groups = [
     recipe.ingredients.dough,
     recipe.ingredients.sauce,
@@ -527,37 +289,16 @@ export function buildShoppingListFromPizza(
     recipe.ingredients.toppings,
     recipe.ingredients.drizzles,
   ];
-
-  for (const group of groups) {
-    if (group) {
-      for (const ing of group) {
-        allItems.push(ingredientToShoppingItem(ing, system));
-      }
-    }
-  }
-
-  const merged = mergeItems(allItems);
-
-  const sectionMap = new Map<string, ShoppingItem[]>();
-  for (const item of merged) {
-    const category = categorize(item.name);
-    if (!sectionMap.has(category)) sectionMap.set(category, []);
-    sectionMap.get(category)!.push(item);
-  }
-
-  const sections: ShoppingSection[] = SECTION_ORDER
-    .filter(title => sectionMap.has(title))
-    .map(title => ({ title, items: sectionMap.get(title)! }));
-
-  const result: ShoppingListResult = { sections };
+  const merged = buildItems(groups.flatMap((g) => g ?? []).map(fromIngredientItem), system);
+  const result: ShoppingListResult = { sections: toSections(merged) };
 
   if (recipe.veg_option?.enabled && recipe.veg_option.swap_toppings.length > 0) {
-    const vegItems = recipe.veg_option.swap_toppings
-      .filter(ing => !ing.item.toLowerCase().includes("tofu"))
-      .map((ing) => ingredientToShoppingItem(ing, system));
-    if (vegItems.length > 0) {
-      result.veg_option = { items: mergeItems(vegItems) };
-    }
+    const veg = vegOptionItems(recipe.veg_option.swap_toppings, system);
+    if (veg) result.veg_option = veg;
+  }
+
+  if (options?.budgetLevel === "low") {
+    result.budget_swaps = getBudgetSwaps([...merged, ...(result.veg_option?.items || [])]);
   }
 
   return result;

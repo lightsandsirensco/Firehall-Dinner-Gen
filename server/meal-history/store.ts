@@ -18,6 +18,7 @@ import { pgAll, pgOne, pgRun } from "../db/pg-sql.js";
 import { invalidateHistorySignalsCache } from "../generation/history-personalization.js";
 import { getCatalogTitle, isApprovedCatalogSlug, resolveCatalogHeroPath } from "../../shared/hall-catalog/gate.js";
 import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
+import { resolveCatalogSlug } from "../../shared/catalog-slug-redirects.js";
 import {
   isFeedbackTag,
   type FeedbackTag,
@@ -109,10 +110,11 @@ function parseFeedbackTags(json: string | null): FeedbackTag[] {
 
 /** Resolve display fields at read time — never duplicated into the row. Fails gracefully. */
 function toEntry(row: MealHistoryRow): MealHistoryEntry {
-  const approved = isApprovedCatalogSlug(row.recipe_slug);
-  const title = approved ? getCatalogTitle(row.recipe_slug) : null;
-  const recipe_path = approved ? approvedCatalogRecipePath(row.recipe_slug) : null;
-  const hero_image = approved ? resolveCatalogHeroPath(row.recipe_slug) : null;
+  const displaySlug = resolveCatalogSlug(row.recipe_slug);
+  const approved = isApprovedCatalogSlug(displaySlug);
+  const title = approved ? getCatalogTitle(displaySlug) : null;
+  const recipe_path = approved ? approvedCatalogRecipePath(displaySlug) : null;
+  const hero_image = approved ? resolveCatalogHeroPath(displaySlug) : null;
 
   const costTotalMin = toNum(row.cost_total_min);
   const costTotalMax = toNum(row.cost_total_max);
@@ -164,7 +166,7 @@ export async function recordMealCookedForUser(
   context: MealLogContext = {},
   clientEntryId?: string,
 ): Promise<RecordMealCookedResult> {
-  const recipeSlug = recipeSlugRaw.trim().toLowerCase();
+  const recipeSlug = resolveCatalogSlug(recipeSlugRaw.trim().toLowerCase());
   if (!isApprovedCatalogSlug(recipeSlug)) {
     return { ok: false, reason: "invalid_slug" };
   }
@@ -258,7 +260,7 @@ export async function importMealHistoryForUser(
     [userId],
   );
   const plan = planMealHistoryImport(
-    entries,
+    entries.map((e) => ({ ...e, recipe_slug: resolveCatalogSlug(e.recipe_slug ?? "") })),
     existingRows.map((r) => ({
       client_entry_id: r.client_entry_id,
       recipe_slug: r.recipe_slug,
@@ -357,8 +359,10 @@ export async function listFavoriteMealsForUser(userId: string, limit = 6): Promi
      LIMIT $2`,
     [userId, Math.max(1, Math.min(limit, 20))],
   );
+  const seen = new Set<string>();
   return rows
-    .filter((r) => isApprovedCatalogSlug(r.recipe_slug))
+    .map((r) => ({ ...r, recipe_slug: resolveCatalogSlug(r.recipe_slug) }))
+    .filter((r) => isApprovedCatalogSlug(r.recipe_slug) && !seen.has(r.recipe_slug) && seen.add(r.recipe_slug))
     .map((r) => ({
       recipe_slug: r.recipe_slug,
       title: getCatalogTitle(r.recipe_slug),

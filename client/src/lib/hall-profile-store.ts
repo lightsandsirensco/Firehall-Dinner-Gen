@@ -47,13 +47,15 @@ function ensureHallId(): string {
   }
 }
 
+/** Epoch timestamp: an unsaved default must lose every newer-wins sync merge. */
+export const DEFAULT_PROFILE_UPDATED_AT = new Date(0).toISOString();
+
 function defaultProfile(): HallProfile {
-  const now = new Date().toISOString();
   return {
     schemaVersion: HALL_PROFILE_SCHEMA_VERSION,
     hallId: ensureHallId(),
     defaultCrewSize: readFiltersCrewSize(),
-    updatedAt: now,
+    updatedAt: DEFAULT_PROFILE_UPDATED_AT,
   };
 }
 

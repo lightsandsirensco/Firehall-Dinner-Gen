@@ -104,7 +104,6 @@ const HALL_ROUTE_PREFIXES = ["/hall", "/halls/", "/vote/"];
 const EXPLORE_PREFIXES = [
   "/explore",
   "/recipes",
-  "/top-rated-recipes",
   "/hall-of-fame",
   "/smoothies",
   "/breakfast",

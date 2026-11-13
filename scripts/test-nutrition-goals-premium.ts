@@ -224,8 +224,8 @@ const dinners = async (base: typeof shiftBase, goal: ProfileNutritionGoalKey | n
   const picker = createSlotPicker({ base, recentSlugs: [], nutritionGoal: goal, sessionKey: "goal-test" });
   const out: (string | null)[] = [];
   for (let i = 0; i < 30; i++) {
-    out.push(await picker(dinnerSlot, noAvoid, `shift-${i}`));
-    out.push(await picker(lunchSlot, noAvoid, `shift-${i}`));
+    out.push((await picker(dinnerSlot, noAvoid, `shift-${i}`))?.slug ?? null);
+    out.push((await picker(lunchSlot, noAvoid, `shift-${i}`))?.slug ?? null);
   }
   return out;
 };
@@ -262,7 +262,7 @@ const bfSafe = bfPicks(shiftBase, "high_protein");
 check("breakfast: goal keeps every pick dairy-free and filled",
   bfSafe.filter(Boolean).length === bfSafeBase.filter(Boolean).length && bfSafe.every((slug) => !slug || dairyFree(slug)));
 const live = createSlotPicker({ base: shiftBase, recentSlugs: [], nutritionGoal: "high_protein", sessionKey: "goal-test" });
-check("breakfast slot through the real slot picker", dairyFree((await live(breakfastSlot, noAvoid, "bf-live")) ?? ""));
+check("breakfast slot through the real slot picker", dairyFree((await live(breakfastSlot, noAvoid, "bf-live"))?.slug ?? ""));
 
 flushSqliteToDisk();
 releaseSqliteTimersForTests();

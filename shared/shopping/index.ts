@@ -14,6 +14,7 @@ export * from "./common-staples";
 export * from "./staple-aliases";
 export * from "./pantry-profile";
 export * from "./shopping-service";
+export * from "./purchase";
 export * from "./persistence";
 export * from "./recipe-inputs";
 export { generateId } from "./id";

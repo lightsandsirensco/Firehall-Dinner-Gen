@@ -41,6 +41,7 @@ import { log } from "../logger.js";
 import { isExcludedFromDinnerFeeds } from "../../shared/fuel-catalog/isolation.js";
 import { isBreakfastMeal } from "../../shared/hall-catalog/isolation.js";
 import {
+  hashSeed,
   recentSlugPenalty,
   weightedPickIndex,
   weightedShuffle,
@@ -78,12 +79,33 @@ import {
   scoreSessionFeedback,
 } from "./tonight-selection.js";
 import {
-  explainPersonalization,
+  cookedTooRecently,
+  describeMemoryReason,
+  dueFavorite,
+  isPersonalReason,
+  memoryReasonsFor,
   scoreHistorySignal,
   type HistorySignals,
   type HistorySignalType,
 } from "./history-personalization.js";
+
+/**
+ * Share of picks (when at least one due favorite is eligible) that try due
+ * favorites first. Tuned with scripts/test-meal-memory.ts so a due favorite
+ * returns roughly 1 pick in 4 without crowding out new meals.
+ */
+export const FAVORITE_LANE_RATE = 0.3;
+
+/** Deterministic value in [0, 1) for a seed string (bit-mixed so neighboring seeds don't correlate). */
+function unitFromSeed(seed: string): number {
+  let h = hashSeed(seed);
+  h = Math.imul(h ^ (h >>> 16), 0x85ebca6b);
+  h = Math.imul(h ^ (h >>> 13), 0xc2b2ae35);
+  h ^= h >>> 16;
+  return (h >>> 0) / 0x100000000;
+}
 import {
+  describeNutritionGoalFit,
   scoreProfileNutritionGoal,
   type ProfileNutritionGoalKey,
 } from "../../shared/nutrition/profile-goals.js";
@@ -99,10 +121,16 @@ export interface LocalRecipePick {
   recipeSource?: RecipeSourceAttribution;
   slug: string;
   matchedCategory?: FirehallCategoryId;
-  /** Insight-Driven Personalization — set only when history signals were considered for this pick. */
+  /** Set when history signals or a verified nutrition-goal match shaped this pick. */
   personalization?: {
     note: string | null;
+    /** Every accurate "why this meal" line, strongest first; `note` is the first. */
+    reasons: string[];
     signalTypes: HistorySignalType[];
+    /** True only when a personal signal (favorite, rating, crew pattern) raised this meal's rank. */
+    pickedForYou: boolean;
+    /** This pick came from the due-favorites lane. */
+    favoriteReturned: boolean;
   };
 }
 
@@ -118,6 +146,8 @@ export interface PickOptions {
   nutritionGoal?: ProfileNutritionGoalKey | null;
   /** Server-side pool narrowing (Shift Planner meal occasion). Default pool only; never set from a client request. */
   restrictToSlugs?: ReadonlySet<string> | null;
+  /** The signed-in user's "Not for us" meals — never auto-picked. Loaded server-side, never client-submitted. */
+  dislikedSlugs?: ReadonlySet<string> | null;
 }
 
 function signatureBlocked(
@@ -348,6 +378,7 @@ function pickFromSummaries(
     .map((r) => ({ ...r, protein: tonightFilterProtein(r.protein, r.slug) }))
     .filter((r) => !isExcludedFromDinnerFeeds(r))
     .filter((r) => !options.excludeSlugs?.has(r.slug))
+    .filter((r) => !options.dislikedSlugs?.has(r.slug))
     .filter((r) => !avoidSlugs.has(r.slug) && !avoidProteins.has(r.protein))
     // Image holds / non-Explore slugs can never be served — keep them out of the weighted draw.
     .filter((r) => !tonightIneligibleReason(r.slug))
@@ -360,7 +391,10 @@ function pickFromSummaries(
       if (full) {
         const hard = recipePassesHardFilters(full, request);
         if (!hard.ok) return { row, score: -9999, eligibilityScore: -9999 };
-        score += scoreHealthinessPreference(request.healthiness_preference || "balanced", full);
+        // A saved nutrition goal outranks the quick Healthiness toggle; they never stack.
+        if (!options.nutritionGoal) {
+          score += scoreHealthinessPreference(request.healthiness_preference || "balanced", full);
+        }
         score += scoreCrewFit(full, request.crew_size);
       }
       score += scoreFirehallPractical(tonightMeta.get(row.slug), request);
@@ -396,6 +430,12 @@ function pickFromSummaries(
 
   if (ranked.length === 0) return null;
 
+  // Meal Memory: anything cooked in the last week sits out while anything else
+  // qualifies, and on a share of picks the due favorites are tried first.
+  const signals = options.historySignals ?? null;
+  const freshRanked = signals ? ranked.filter((x) => !cookedTooRecently(x.row.slug, signals)) : ranked;
+  const favoriteLane = Boolean(signals) && unitFromSeed(`${options.varietySeed}:favorites`) < FAVORITE_LANE_RATE;
+
   // Every eligible candidate stays in the weighted draw; a fixed top-N band made most of the
   // catalog unreachable. Weights are relative to the top score so a better match is
   // meaningfully more likely (top ≈ WEIGHT_SPREAD, WEIGHT_SPREAD points lower ≈ 1).
@@ -419,20 +459,27 @@ function pickFromSummaries(
     );
   };
 
-  const styled = ranked.filter((x) => matchesMealStyle(tonightMeta.get(x.row.slug), request.meal_style));
   const inWindow = (pick: LocalRecipePick) =>
     matchesTimeWindow(pick.recipe.timing?.total_minutes ?? 0, request.time_window);
 
+  const goalFit = (slug: string): string | null =>
+    options.nutritionGoal ? describeNutritionGoalFit(options.nutritionGoal, nutritionGoalFactsForSlug(slug)) : null;
+
   const withPersonalization = (pick: LocalRecipePick): LocalRecipePick => {
-    if (!options.historySignals) return pick;
-    const history = historyBySlug.get(pick.slug);
-    if (!history) return pick;
-    const note = explainPersonalization(
-      { slug: pick.slug, protein: pick.protein },
-      options.historySignals,
-      history.appliedSignals,
-    );
-    return { ...pick, personalization: { note, signalTypes: history.appliedSignals } };
+    const history = signals ? historyBySlug.get(pick.slug) : undefined;
+    const memory = history && signals ? memoryReasonsFor({ slug: pick.slug, protein: pick.protein }, signals, history.appliedSignals) : [];
+    const reasons = [...memory.map(describeMemoryReason), goalFit(pick.slug)].filter((r): r is string => Boolean(r));
+    if (!history && reasons.length === 0) return pick;
+    return {
+      ...pick,
+      personalization: {
+        note: reasons[0] ?? null,
+        reasons,
+        signalTypes: history?.appliedSignals ?? [],
+        pickedForYou: memory.some(isPersonalReason),
+        favoriteReturned: favoriteLane && Boolean(signals && dueFavorite(pick.slug, signals)),
+      },
+    };
   };
 
   // Try to hydrate + pass variety constraints, strictest pass first.
@@ -469,27 +516,48 @@ function pickFromSummaries(
   // can then fail the lazy time/allergen checks in hydratePick together; rotation would hand
   // that cluster's whole weight to the next meal below it, so goal ranking draws without
   // replacement instead.
-  const order = options.nutritionGoal ? weightedOrder : weightedRotation;
-  const styledOrder = order(styled);
-  const allOrder = order(ranked);
+  // With a goal, verified goal matches are tried before everything else — but only when
+  // there are enough of them to keep variety; otherwise the ranking bonus alone steers.
+  const GOAL_FIRST_MIN = 3;
+  const baseOrder = (list: typeof ranked): typeof ranked => {
+    if (!options.nutritionGoal) return weightedRotation(list);
+    const meets = list.filter((x) => goalFit(x.row.slug) != null);
+    if (meets.length < GOAL_FIRST_MIN) return weightedOrder(list);
+    return [...weightedOrder(meets), ...weightedOrder(list.filter((x) => goalFit(x.row.slug) == null))];
+  };
+  const order = (list: typeof ranked): typeof ranked => {
+    if (!favoriteLane || !signals) return baseOrder(list);
+    const favorites = list.filter((x) => dueFavorite(x.row.slug, signals));
+    if (favorites.length === 0) return baseOrder(list);
+    const favoriteSet = new Set(favorites);
+    return [...weightedOrder(favorites), ...baseOrder(list.filter((x) => !favoriteSet.has(x)))];
+  };
   const fresh = passes.slice(0, 2);
   const notLast = passes.slice(2, 3);
   const repeats = passes.slice(2);
-  const tiers: Array<{ ordered: typeof ranked; passes: typeof passes; window: boolean }> = [
-    { ordered: styledOrder, passes: fresh, window: true },
-    { ordered: styledOrder, passes: notLast, window: true },
-    { ordered: styledOrder, passes: fresh, window: false },
-    { ordered: styledOrder, passes: notLast, window: false },
-    { ordered: allOrder, passes: fresh, window: true },
-    { ordered: allOrder, passes: fresh, window: false },
-    { ordered: allOrder, passes: repeats, window: false },
-  ];
-  for (const tier of tiers) {
-    for (const accept of tier.passes) {
-      for (const candidate of tier.ordered) {
-        const pick = hydrate(candidate.row.slug);
-        if (pick && (!tier.window || inWindow(pick)) && accept(candidate.row.slug, pick)) {
-          return withPersonalization(pick);
+  const tiersFor = (pool: typeof ranked) => {
+    const styledOrder = order(pool.filter((x) => matchesMealStyle(tonightMeta.get(x.row.slug), request.meal_style)));
+    const allOrder = order(pool);
+    return [
+      { ordered: styledOrder, passes: fresh, window: true },
+      { ordered: styledOrder, passes: notLast, window: true },
+      { ordered: styledOrder, passes: fresh, window: false },
+      { ordered: styledOrder, passes: notLast, window: false },
+      { ordered: allOrder, passes: fresh, window: true },
+      { ordered: allOrder, passes: fresh, window: false },
+      { ordered: allOrder, passes: repeats, window: false },
+    ];
+  };
+  // A meal cooked in the last week only comes back when nothing else fits at all.
+  const pools = freshRanked.length === ranked.length ? [ranked] : [freshRanked, ranked];
+  for (const pool of pools) {
+    for (const tier of tiersFor(pool)) {
+      for (const accept of tier.passes) {
+        for (const candidate of tier.ordered) {
+          const pick = hydrate(candidate.row.slug);
+          if (pick && (!tier.window || inWindow(pick)) && accept(candidate.row.slug, pick)) {
+            return withPersonalization(pick);
+          }
         }
       }
     }

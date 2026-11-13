@@ -15,11 +15,13 @@ import { generateId } from "./id";
 import {
   canonicalizeIngredientName,
   formatShoppingQuantities,
+  isNotPurchased,
   isOptionalIngredient,
   mergeContributionQuantities,
   normalizeIngredient,
 } from "./ingredient-normalizer";
 import { getStockLevel } from "./pantry-profile";
+import { purchaseSuggestion, type PurchaseSuggestion } from "./purchase";
 import { canonicalizeQuantityForScaling } from "./quantity-parser";
 import { pantryLookupKeys, splitCompoundKey } from "./staple-aliases";
 import {
@@ -145,6 +147,7 @@ function aggregateRecipes(recipes: ShoppingSessionRecipe[]): AggregationResult {
   for (const recipe of recipes) {
     const eligible: RawRecipeIngredient[] = [];
     for (const ing of recipe.ingredients) {
+      if (isNotPurchased(ing.name)) continue;
       if (isOptionalIngredient(ing)) {
         excludedOptional.push({
           recipeSlug: recipe.slug,
@@ -157,11 +160,9 @@ function aggregateRecipes(recipes: ShoppingSessionRecipe[]): AggregationResult {
       }
     }
 
-    const scaled = scaleGoldenIngredients(
-      eligible as GoldenRecipePageIngredient[],
-      recipe.baseServings,
-      recipe.crewSize,
-    );
+    const scaled = recipe.prescaled
+      ? eligible
+      : scaleGoldenIngredients(eligible as GoldenRecipePageIngredient[], recipe.baseServings, recipe.crewSize);
 
     for (const ing of scaled) {
       const normalized = normalizeIngredient(ing);
@@ -264,16 +265,40 @@ export function refreshDerivedQuantities(session: ShoppingSession): ShoppingSess
   return { ...session, list };
 }
 
-/**
- * Display a list item's quantity in a measurement system. Recipe-derived
- * items are re-merged from their contributions (same-family conversion
- * only); manual items keep exactly what the user typed. With no system the
- * stored, recipe-unit label is returned.
- */
-export function formatShoppingItemQuantity(item: ShoppingListItem, system?: ShoppingUnitSystem): string {
-  if (item.isManual || !system || item.contributions.length === 0) return item.quantityLabel;
+/** The exact merged cooking amount, re-derived from contributions so older saved lists read the same way. */
+export function formatShoppingItemCookAmount(item: ShoppingListItem, system?: ShoppingUnitSystem): string {
+  if (item.isManual || item.contributions.length === 0) return item.quantityLabel;
   const { quantities, textOnly } = mergeContributionQuantities(item.contributions, system);
   return formatShoppingQuantities(quantities, textOnly);
+}
+
+/** Package sizes in purchase labels are US grocery sizes. */
+const US_PACKAGE_UNIT = /\b(lb|oz|quart|gallon|pint)\b/;
+
+/** What to pick up at the store, or null when that's just the cooking amount. */
+export function shoppingItemPurchase(item: ShoppingListItem, system?: ShoppingUnitSystem): PurchaseSuggestion | null {
+  if (item.isManual) return null;
+  const suggestion = purchaseSuggestion({
+    canonicalKey: item.canonicalKey,
+    displayName: item.displayName,
+    department: item.department,
+    quantities: mergeContributionQuantities(item.contributions).quantities,
+  });
+  if (!suggestion || suggestion.label === formatShoppingItemCookAmount(item, system)) return null;
+  if (system === "metric" && US_PACKAGE_UNIT.test(suggestion.label)) return null;
+  return suggestion;
+}
+
+/**
+ * Display a list item's quantity: the practical purchase amount first, with
+ * the exact cooking total alongside ("about 3 lemons (need ⅜ cup)"). Manual
+ * items keep exactly what the user typed.
+ */
+export function formatShoppingItemQuantity(item: ShoppingListItem, system?: ShoppingUnitSystem): string {
+  const cook = formatShoppingItemCookAmount(item, system);
+  const buy = shoppingItemPurchase(item, system);
+  if (!buy) return cook;
+  return cook ? `${buy.label} (need ${cook})` : buy.label;
 }
 
 function applyPantryToItem(item: ShoppingListItem, pantry?: PantryContext): ShoppingListItem {
@@ -316,6 +341,7 @@ export function addRecipeToSession(
     baseServings: recipe.baseServings,
     crewSize: crewSize ?? (existingIndex >= 0 ? session.recipes[existingIndex].crewSize : recipe.baseServings),
     ingredients: recipe.ingredients,
+    ...(recipe.prescaled ? { prescaled: true } : {}),
     addedAt: existingIndex >= 0 ? session.recipes[existingIndex].addedAt : new Date().toISOString(),
   };
 

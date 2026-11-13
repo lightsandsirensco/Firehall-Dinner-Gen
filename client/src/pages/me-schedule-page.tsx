@@ -8,6 +8,7 @@ import { ExtraShiftSheet, ShiftActionSheet } from "@/components/schedule/shift-s
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/lib/auth/context";
 import { useToast } from "@/hooks/use-toast";
+import { usePreferredCrewSize } from "@/hooks/use-preferred-crew-size";
 import { trackScheduleSaved, trackScheduleSetupStarted } from "@/lib/analytics";
 import {
   fetchSchedule,
@@ -24,8 +25,6 @@ import { cycleLengthMinutes, describeCycle, formatHours, matchPreset, upcomingSh
 import type { PersonalSchedule, ShiftInstance } from "@shared/schedule/types";
 
 const UPCOMING_COUNT = 8;
-const DEFAULT_CREW_SUGGESTION = 4;
-
 function ShiftRow({ shift, onSelect }: { shift: ShiftInstance; onSelect: () => void }) {
   const day = shiftDayParts(shift.startLocal);
   const cancelled = shift.status === "cancelled";
@@ -80,6 +79,7 @@ function ShiftRow({ shift, onSelect }: { shift: ShiftInstance; onSelect: () => v
 
 export default function MeSchedulePage() {
   const { authenticated, loading: authLoading, openSignIn, profile } = useAuth();
+  const preferredCrewSize = usePreferredCrewSize();
   const queryClient = useQueryClient();
   const { toast } = useToast();
   const [editing, setEditing] = useState(false);
@@ -178,7 +178,7 @@ export default function MeSchedulePage() {
       ) : editing ? (
         <ScheduleSetupFlow
           initial={schedule}
-          suggestedCrewSize={profile?.crew_size ?? DEFAULT_CREW_SUGGESTION}
+          suggestedCrewSize={profile?.crew_size ?? preferredCrewSize}
           saving={saveMutation.isPending}
           error={saveError}
           hasShiftChanges={(scheduleQuery.data?.overrides ?? []).some((o) => o.kind !== "extra")}

@@ -47,7 +47,8 @@ function emptySignals(overrides: Partial<HistorySignals> = {}): HistorySignals {
     proteinMakeAgain: new Map(),
     cuisineMakeAgain: new Map(),
     recipeSuppress: new Set(),
-    recipeRepeatBoost: new Map(),
+    latestRatingBySlug: new Map(),
+    savedSlugs: new Set(),
     recipeFeedback: new Map(),
     recentCuisineCounts: new Map(),
     recencyDaysAgoBySlug: new Map(),
@@ -158,13 +159,15 @@ check(
 // ── 6. High ratings — repeat boost gated by cooldown, never fights recency ─
 {
   const tooSoon = emptySignals({
-    recipeRepeatBoost: new Map([[MED_SLUG, { rating: 5, daysAgo: REPEAT_BOOST_COOLDOWN_DAYS - 1 }]]),
+    latestRatingBySlug: new Map([[MED_SLUG, 5]]),
+    recencyDaysAgoBySlug: new Map([[MED_SLUG, REPEAT_BOOST_COOLDOWN_DAYS - 1]]),
   });
   const { appliedSignals: aTooSoon } = scoreHistorySignal({ slug: MED_SLUG, protein: "vegetarian" }, tooSoon);
   check("a 5-star favorite cooked before the cooldown window gets no repeat boost yet", !aTooSoon.includes("high_rating_repeat"));
 
   const readyToRepeat = emptySignals({
-    recipeRepeatBoost: new Map([[MED_SLUG, { rating: 5, daysAgo: REPEAT_BOOST_COOLDOWN_DAYS + 5 }]]),
+    latestRatingBySlug: new Map([[MED_SLUG, 5]]),
+    recencyDaysAgoBySlug: new Map([[MED_SLUG, REPEAT_BOOST_COOLDOWN_DAYS + 5]]),
   });
   const { delta, appliedSignals } = scoreHistorySignal({ slug: MED_SLUG, protein: "vegetarian" }, readyToRepeat);
   check("a 5-star favorite past the cooldown window gets a modest repeat boost", appliedSignals.includes("high_rating_repeat") && delta > 0);
@@ -287,7 +290,10 @@ check(
 
   const establishedBaseline = emptySignals({ totalRows: 12, everCookedSlugs: new Set([MED_SLUG]) });
   const noteNew = explainPersonalization({ slug: UNKNOWN_SLUG, protein: "chicken" }, establishedBaseline, []);
-  check('"New for your crew" only appears for a slug never cooked, with a real baseline', noteNew === "New for your crew.");
+  check(
+    '"New for your crew" only appears for a slug never cooked, with a real baseline',
+    noteNew === "Something new — your crew hasn't cooked this yet",
+  );
 
   const alreadyCooked = explainPersonalization({ slug: MED_SLUG, protein: "vegetarian" }, establishedBaseline, []);
   check('no "New" claim for a slug the crew has actually cooked before', alreadyCooked === null);

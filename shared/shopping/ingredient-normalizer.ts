@@ -7,6 +7,7 @@
  * list line instead of two.
  */
 
+import { formatKitchenFraction } from "../measurements/fractions";
 import { classifyDepartment } from "./departments";
 import { parseShoppingQuantity } from "./quantity-parser";
 import type {
@@ -101,24 +102,36 @@ export function isOptionalIngredient(raw: RawRecipeIngredient): boolean {
   return false;
 }
 
+const NOT_PURCHASED = /^(?:(?:warm|cold|hot|boiling|ice|lukewarm|tap|filtered|reserved pasta|pasta cooking)\s+)*water$|^(?:ice|ice cubes|pan drippings|reserved drippings|reserved marinade)$/;
+
+/** Kitchen-supplied lines (tap water, ice, pan drippings) that never belong on a grocery list. */
+export function isNotPurchased(name: string): boolean {
+  const key = name.toLowerCase().replace(/\([^)]*\)/g, " ").split(",")[0]!.replace(/\s+/g, " ").trim();
+  return NOT_PURCHASED.test(key);
+}
+
 /** Parse "1 1/2", "3.2", "1/2", "¾", "1-2" style quantity strings into a number (upper bound for ranges). */
 export function parseQuantityValue(raw: string | undefined): number {
   return parseShoppingQuantity(raw)?.value ?? 0;
 }
 
-export function formatQuantityValue(value: number): string {
-  const rounded = Math.round(value * 100) / 100;
-  return rounded % 1 === 0 ? String(rounded) : rounded.toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
+export { formatKitchenFraction };
+
+/** Metric amounts stay decimal (g/ml whole, kg/L one place); everything else reads as a kitchen fraction. */
+export function formatQuantityValue(value: number, unit = ""): string {
+  if (unit === "g" || unit === "ml") return String(Math.round(value));
+  if (unit === "kg" || unit === "l") return String(Math.round(value * 10) / 10);
+  return formatKitchenFraction(value);
 }
 
-/** Format a value+unit pair for display, e.g. (2, "lb") -> "2 lb", (2, "cup") -> "2 cups". */
+/** Format a value+unit pair for display, e.g. (2, "lb") -> "2 lb", (1.25, "cup") -> "1¼ cups". */
 export function formatQuantityLabel(value: number, unit: string, min?: number): string {
   if (value <= 0) return displayUnit(unit, 1);
   const amount =
     min !== undefined && min < value
-      ? `${formatQuantityValue(min)}\u2013${formatQuantityValue(value)}`
-      : formatQuantityValue(value);
-  const label = displayUnit(unit, value);
+      ? `${formatQuantityValue(min, unit)}\u2013${formatQuantityValue(value, unit)}`
+      : formatQuantityValue(value, unit);
+  const label = unit === "count" ? "" : displayUnit(unit, value);
   return label ? `${amount} ${label}` : amount;
 }
 
@@ -126,7 +139,8 @@ export function formatQuantityLabel(value: number, unit: string, min?: number): 
 export function normalizeIngredient(raw: RawRecipeIngredient): NormalizedIngredient {
   const displayName = raw.name.trim();
   const canonicalKey = canonicalizeIngredientName(displayName);
-  const department = classifyDepartment(displayName, raw.notes || "");
+  // Aisle depends on what the item is, not its role in this recipe ("lime, for garnish" is still produce).
+  const department = classifyDepartment(displayName);
   const parsed = parseShoppingQuantity(raw.quantity, raw.unit);
 
   return {

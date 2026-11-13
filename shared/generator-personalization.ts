@@ -91,6 +91,16 @@ export function mapDietaryToAllergens(restrictions: string[]): SimplifiedAllerge
 }
 
 /**
+ * Profile allergies that have an exact generator chip. Peanuts, tree nuts, soy and
+ * sesame have no exact chip (the "Nuts" chip means both kinds) and are enforced
+ * server-side only — see server/generation/account-dietary-safety.ts.
+ */
+export function mapProfileAllergiesToAllergens(allergies: string[]): SimplifiedAllergen[] {
+  const exact: Record<string, SimplifiedAllergen> = { dairy: "dairy", gluten: "gluten", shellfish: "shellfish", eggs: "eggs" };
+  return [...new Set(allergies.map((a) => exact[a.toLowerCase().trim()]).filter((a): a is SimplifiedAllergen => Boolean(a)))];
+}
+
+/**
  * Previously "vegan"/"vegetarian"/"pork-free" account preferences were silently DROPPED
  * by `mapDietaryToAllergens` (explicitly skipped, never routed anywhere else) — a user
  * who set vegan as an account-level dietary restriction would see it vanish the moment
@@ -247,15 +257,14 @@ export function resolveGeneratorFilters(input: ResolveGeneratorFiltersInput): Si
     filters.protein = mappedPref;
   }
 
-  if (!personal?.allergens?.length && !session?.allergens?.length) {
-    const fromAccount = mapDietaryToAllergens(input.preferences?.dietary_restrictions ?? []);
-    if (fromAccount.length) filters.allergens = fromAccount;
-  }
-
-  if (!personal?.diets?.length && !session?.diets?.length) {
-    const fromAccount = mapDietaryToDiets(input.preferences?.dietary_restrictions ?? []);
-    if (fromAccount.length) filters.diets = fromAccount;
-  }
+  // Saved account restrictions are always included (the server enforces them
+  // regardless); device/session choices can add to them but never remove them.
+  const accountAllergens = [
+    ...mapDietaryToAllergens(input.preferences?.dietary_restrictions ?? []),
+    ...mapProfileAllergiesToAllergens(input.preferences?.allergies ?? []),
+  ];
+  filters.allergens = [...new Set([...filters.allergens, ...accountAllergens])];
+  filters.diets = [...new Set([...filters.diets, ...mapDietaryToDiets(input.preferences?.dietary_restrictions ?? [])])];
 
   if (!input.hallLinked && !session?.appliances?.length) {
     const fromProfile = mapProfileAppliancesToSimplified(

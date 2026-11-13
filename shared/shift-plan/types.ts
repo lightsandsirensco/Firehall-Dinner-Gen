@@ -24,6 +24,15 @@ export interface ShiftPlanSlotState {
   byo: boolean;
   /** One-meal crew size; null = use the shift's crew size. */
   crewSizeOverride: number | null;
+  /** Why auto-fill picked this recipe, captured at pick time. Cleared when the recipe changes. */
+  pickWhy?: SlotPickWhy | null;
+}
+
+/** Meal Memory explanation for an auto-picked slot (same reason lines as Pick Tonight). */
+export interface SlotPickWhy {
+  reasons: string[];
+  /** A personal signal (favorite, rating, crew pattern) raised this meal's rank. */
+  pickedForYou: boolean;
 }
 
 export interface PlannedRecipe {
@@ -42,6 +51,8 @@ export interface PlannedMealSlot extends MealSlot {
   locked: boolean;
   selectionSource: ShiftPlanSelectionSource | null;
   recipe: PlannedRecipe | null;
+  /** Present only for an auto-picked recipe that had reasons at pick time. */
+  pickWhy: SlotPickWhy | null;
 }
 
 export interface ShiftPlanView {

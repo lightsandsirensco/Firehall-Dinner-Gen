@@ -76,16 +76,58 @@ const PANTRY_KEYWORDS = [
   "peanut", "dried", "sun-dried", "raisin", "breadcrumb",
 ];
 
-/** Classify a raw ingredient name (+ optional notes) into a canonical department. */
-export function classifyDepartment(name: string, notes = ""): Department {
-  if (isSeasoningOrGarnish(name, notes)) return "Pantry & Spices";
+/**
+ * Names the keyword lists above miss or would misfile, checked before them.
+ * Eggs shelve with dairy in US grocery stores; word boundaries keep
+ * "eggplant" in Produce.
+ */
+const EXPLICIT_DEPARTMENTS: Array<[RegExp, Department]> = [
+  [/\beggs?\b|\begg (?:whites?|yolks?)\b/, "Dairy / Dairy Alternatives"],
+  [/\b(?:queso fresco|pecorino|cotija|halloumi|mascarpone|burrata|manchego|gruy[eè]re|fontina|asiago|labneh)\b/, "Dairy / Dairy Alternatives"],
+  [/\b(?:chuck|tri-tip|short ribs?|burnt ends|roast|mortadella|kielbasa|linguica|pancetta|black pudding|andouille|pastrami|corned beef|veal|venison|bison|duck|clams?|mussels?|trout)\b/, "Proteins"],
+  [/\b(?:pico de gallo|gochujang|sambal|adobo|mirin|sauerkraut|pickle[sd]?|giardiniera|doenjang|ssamjang|miso|chili paste|curry paste|laksa paste|recado|jam|preserves|chutney|vinaigrette|kitchen bouquet|harissa|enchilada sauce|alfredo|queso dip|crema|fish sauce|oyster sauce|kecap manis|shoyu|yuzu kosho|kimchi)\b/, "Condiments & Sauces"],
+  [/\b(?:berries|blueberr\w*|strawberr\w*|raspberr\w*|grapes?|tomatillos?|fennel bulb|tarragon|epazote|galangal|shiso|fenugreek leaves|bird chil\w*|green chiles?|chiles?|red chilies|bok choy|leeks?|watercress|sprouts|mango|peach\w*|pears?|oranges?|plantains?|okra|jicama)\b/, "Produce"],
+  [/\b(?:bagels?|english muffins?|tostada|taco shells?|pie crust|puff pastry|biscuits?|focaccia|croissants?|hoagie|sub rolls?|brioche|sourdough|texas toast)\b/, "Bakery / Dough"],
+  [/\b(?:bay lea\w*|caraway|star anise|extract|seasoning|\brub\b|ras el hanout|urfa biber|saffron|nori|bulgur|gnocchi|garam masala|za.?atar|sumac|fennel (?:seeds?|pollen)|cocoa|masa harina|polenta|grits|molasses|tamarind|pancake mix|waffle mix|biscuit mix|ditalini|shells|ziti|rigatoni|penne|orzo|macaroni|pistachios?|seeds|chips|tortilla chips|totopos|stuffing|gelatin|chocolate chips)\b/, "Pantry & Spices"],
+];
 
-  const semantic = inferShoppingCategory(name, notes);
+/**
+ * Where an item is shelved, decided before the recipe-role classifier —
+ * which reads "olive oil" as produce, "tomato paste" as a vegetable, and
+ * "fresh thyme" as a seasoning.
+ */
+const SHELF_OVERRIDES: Array<[RegExp, Department]> = [
+  [/\b(?:pickles?|pickled|dressing|vinaigrette|nam pla)\b/, "Condiments & Sauces"],
+  [/\b(?:peanut|almond|cashew|sunflower(?: seed)?) butter\b|\bpowder\b/, "Pantry & Spices"],
+  [/\bpomegranate (?:seeds|arils)\b/, "Produce"],
+  [/\b(?:tortilla|potato|corn|pita|kettle) chips\b|\bbread ?crumbs\b|\bpanko\b/, "Pantry & Spices"],
+  [/\b(?:tortillas?|bread|buns?|rolls?)\b/, "Bakery / Dough"],
+  [/\b(?:oil|vinegar|cooking spray|bouillon|broth|stock|flour|cornstarch|baking (?:soda|powder)|dried|noodles?|pasta)\b/, "Pantry & Spices"],
+  [/(?<!cauliflower )\brice\b/, "Pantry & Spices"],
+  [/\b(?:tomato paste|crushed tomatoes|diced tomatoes|whole peeled tomatoes|san marzano|fire.roasted tomatoes|canned)\b/, "Pantry & Spices"],
+  [/\bhash browns?\b|\btater tots?\b/, "Frozen"],
+  [/\b(?:potato(?:es)?|sweet potato(?:es)?)\b/, "Produce"],
+  [/\bfresh (?:thyme|rosemary|sage|oregano|dill|basil|mint|tarragon|chives|parsley|cilantro)\b/, "Produce"],
+  [/\b(?:lemons?|limes?)\b(?! (?:pepper|zest|juice))/, "Produce"],
+  [/\bcapers?\b/, "Condiments & Sauces"],
+  [/\byogh?urt\b/, "Dairy / Dairy Alternatives"],
+];
+
+/** Classify a raw ingredient name into a canonical department. */
+export function classifyDepartment(name: string, notes = ""): Department {
+  const lower = name.toLowerCase().replace(/\([^)]*\)/g, " ").replace(/\s+/g, " ").trim();
+  const shelf = SHELF_OVERRIDES.find(([pattern]) => pattern.test(lower));
+  if (shelf) return shelf[1];
+  if (isSeasoningOrGarnish(lower, notes)) return "Pantry & Spices";
+
+  const semantic = inferShoppingCategory(lower, notes);
   if ((DEPARTMENTS as readonly string[]).includes(semantic) && semantic !== "Other") {
     return semantic as Department;
   }
 
-  const lower = name.toLowerCase();
+  for (const [pattern, department] of EXPLICIT_DEPARTMENTS) {
+    if (pattern.test(lower)) return department;
+  }
   if (PROTEIN_KEYWORDS.some((k) => lower.includes(k))) return "Proteins";
   if (FROZEN_KEYWORDS.some((k) => lower.includes(k))) return "Frozen";
   if (DAIRY_KEYWORDS.some((k) => lower.includes(k))) return "Dairy / Dairy Alternatives";

@@ -3,7 +3,7 @@
  * Only per-slot decisions are stored — slots themselves are generated.
  */
 import { pgAll, pgOne, pgTx } from "../db/pg-sql.js";
-import type { ShiftPlanSelectionSource, ShiftPlanSlotState } from "../../shared/shift-plan/types.js";
+import type { ShiftPlanSelectionSource, ShiftPlanSlotState, SlotPickWhy } from "../../shared/shift-plan/types.js";
 
 export interface ShiftPlanRecord {
   exists: boolean;
@@ -27,6 +27,20 @@ interface SlotRow {
   skipped: boolean;
   byo: boolean;
   crew_size_override: number | null;
+  pick_reasons_json: string | null;
+}
+
+const SLOT_COLUMNS = "slot_key, recipe_slug, selection_source, locked, skipped, byo, crew_size_override, pick_reasons_json";
+
+function parsePickWhy(json: string | null): SlotPickWhy | null {
+  if (!json) return null;
+  try {
+    const parsed = JSON.parse(json) as Partial<SlotPickWhy>;
+    const reasons = Array.isArray(parsed.reasons) ? parsed.reasons.filter((r): r is string => typeof r === "string") : [];
+    return reasons.length ? { reasons, pickedForYou: parsed.pickedForYou === true } : null;
+  } catch {
+    return null;
+  }
 }
 
 function toState(row: SlotRow): ShiftPlanSlotState {
@@ -38,6 +52,7 @@ function toState(row: SlotRow): ShiftPlanSlotState {
     skipped: row.skipped,
     byo: row.byo,
     crewSizeOverride: row.crew_size_override,
+    pickWhy: parsePickWhy(row.pick_reasons_json),
   };
 }
 
@@ -49,8 +64,7 @@ export const pgShiftPlanRepo: ShiftPlanRepo = {
     ]);
     if (!plan) return { exists: false, slots: [] };
     const rows = await pgAll<SlotRow>(
-      `SELECT slot_key, recipe_slug, selection_source, locked, skipped, byo, crew_size_override
-       FROM user_shift_plan_slots WHERE user_id = $1 AND shift_key = $2`,
+      `SELECT ${SLOT_COLUMNS} FROM user_shift_plan_slots WHERE user_id = $1 AND shift_key = $2`,
       [userId, shiftKey],
     );
     return { exists: true, slots: rows.map(toState) };
@@ -60,7 +74,7 @@ export const pgShiftPlanRepo: ShiftPlanRepo = {
     const out = new Map<string, ShiftPlanSlotState[]>();
     if (shiftKeys.length === 0) return out;
     const rows = await pgAll<SlotRow & { shift_key: string }>(
-      `SELECT shift_key, slot_key, recipe_slug, selection_source, locked, skipped, byo, crew_size_override
+      `SELECT shift_key, ${SLOT_COLUMNS}
        FROM user_shift_plan_slots WHERE user_id = $1 AND shift_key = ANY($2::text[])`,
       [userId, [...shiftKeys]],
     );
@@ -83,8 +97,8 @@ export const pgShiftPlanRepo: ShiftPlanRepo = {
       for (const s of slots) {
         await exec.run(
           `INSERT INTO user_shift_plan_slots
-             (user_id, shift_key, slot_key, recipe_slug, selection_source, locked, skipped, byo, crew_size_override)
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+             (user_id, shift_key, slot_key, recipe_slug, selection_source, locked, skipped, byo, crew_size_override, pick_reasons_json)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
            ON CONFLICT (user_id, slot_key) DO UPDATE SET
              shift_key = excluded.shift_key,
              recipe_slug = excluded.recipe_slug,
@@ -93,6 +107,7 @@ export const pgShiftPlanRepo: ShiftPlanRepo = {
              skipped = excluded.skipped,
              byo = excluded.byo,
              crew_size_override = excluded.crew_size_override,
+             pick_reasons_json = excluded.pick_reasons_json,
              updated_at = now()`,
           [
             userId,
@@ -104,6 +119,7 @@ export const pgShiftPlanRepo: ShiftPlanRepo = {
             s.skipped,
             s.byo,
             s.crewSizeOverride,
+            s.pickWhy?.reasons.length ? JSON.stringify(s.pickWhy) : null,
           ],
         );
       }

@@ -54,6 +54,8 @@ export interface ShoppingRecipeInput {
   baseServings: number;
   ingredients: RawRecipeIngredient[];
   recipePath?: string;
+  /** Quantities are already scaled (and crew-clamped) for the crew — use them as written. */
+  prescaled?: boolean;
 }
 
 /** One recipe's contribution of a single ingredient quantity to the merged list. */
@@ -100,6 +102,7 @@ export interface ShoppingSessionRecipe {
   baseServings: number;
   crewSize: number;
   ingredients: RawRecipeIngredient[];
+  prescaled?: boolean;
   addedAt: string;
 }
 

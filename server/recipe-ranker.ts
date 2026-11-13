@@ -288,7 +288,7 @@ export function pickCatalogExploreFallback(): {
     title: entry.title,
     heroImage: entry.heroImage,
     readyInMinutes: entry.totalMinutes || base.timing?.total_minutes || 30,
-    summary: base.why_it_fits_tonight || `A crew-tested ${entry.protein} meal from the Firehall catalog.`,
+    summary: base.why_it_fits_tonight || `A crew-sized ${entry.protein} meal from the Firehall catalog.`,
     sourceName: entry.source?.name || "Firehall catalog",
   };
 }

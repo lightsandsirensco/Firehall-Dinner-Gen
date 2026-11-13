@@ -1,7 +1,7 @@
 import { Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
-import { CREW_SIZE_OPTIONS } from "@shared/golden-100/recipe-quality/crew-scale";
+import { crewSizeOptionsWith } from "@shared/recipe/crew-scaling-config";
 
 type CrewSizePickerProps = {
   crewSize: number;
@@ -17,6 +17,7 @@ export function CrewSizePicker({
   className,
   prominent = false,
 }: CrewSizePickerProps) {
+  const options = crewSizeOptionsWith(crewSize);
   if (prominent) {
     return (
       <div
@@ -37,7 +38,7 @@ export function CrewSizePicker({
           <p className="text-xs text-muted-foreground">Ingredients scale automatically</p>
         </div>
         <div className="mt-3 flex flex-wrap gap-2">
-          {CREW_SIZE_OPTIONS.map((n) => (
+          {options.map((n) => (
             <button
               key={n}
               type="button"
@@ -62,7 +63,7 @@ export function CrewSizePicker({
     <div className={cn("space-y-2.5", className)} role="group" aria-label="Crew size">
       <p className="text-sm font-medium text-foreground">Crew size</p>
       <div className="flex flex-wrap gap-2">
-        {CREW_SIZE_OPTIONS.map((n) => (
+        {options.map((n) => (
           <button
             key={n}
             type="button"

@@ -24,7 +24,9 @@ import {
   createEmptyPantryProfile,
   createPantryProfile,
   createShoppingSession,
+  formatShoppingItemCookAmount,
   formatShoppingItemQuantity,
+  isNotPurchased,
   isOptionalIngredient,
   normalizeIngredient,
   normalizeUnit,
@@ -108,7 +110,7 @@ test("embedded unit survives normalization, scaling, and merging", () => {
 
   const a = recipe("a", [{ name: "Boneless Chicken Thighs", quantity: "3.5 lb" }]);
   const b = recipe("b", [{ name: "Chicken Thighs", quantity: "1", unit: "Lb" }]);
-  assert.equal(item(build([a, b]), "chicken thigh").quantityLabel, "4.5 lb");
+  assert.equal(item(build([a, b]), "chicken thigh").quantityLabel, "4½ lb");
   // Crew 16 doubles both — embedded "3.5 lb" must come back as "7 lb", not a bare 7.
   const scaled = item(build([a, b], 16), "chicken thigh");
   assert.equal(scaled.quantityLabel, "9 lb");
@@ -193,7 +195,7 @@ test("merged same-family totals use the recipes' own units", () => {
     [{ name: "Milk", quantity: "8", unit: "tbsp" }, { name: "Milk", quantity: "0.5", unit: "cup" }, "1 cup"],
     [{ name: "Stock", quantity: "500", unit: "ml" }, { name: "Stock", quantity: "1", unit: "l" }, "1.5 L"],
     [{ name: "Rice", quantity: "500", unit: "g" }, { name: "Rice", quantity: "1", unit: "kg" }, "1.5 kg"],
-    [{ name: "Cheddar", quantity: "8", unit: "oz" }, { name: "Cheddar", quantity: "1", unit: "lb" }, "1.5 lb"],
+    [{ name: "Cheddar", quantity: "8", unit: "oz" }, { name: "Cheddar", quantity: "1", unit: "lb" }, "1½ lb"],
   ];
   for (const [a, b, expected] of cases) {
     const s = build([recipe("a", [a]), recipe("b", [b])]);
@@ -226,8 +228,9 @@ test("metric/imperial display is a view over the same contributions", () => {
   assert.equal(formatShoppingItemQuantity(beef), "1 lb", "no system = as written");
   assert.equal(formatShoppingItemQuantity(beef, "us"), "1 lb", "already US: exact, unchanged");
   assert.equal(formatShoppingItemQuantity(beef, "metric"), "460 g", "converted totals round UP for purchase");
-  assert.equal(formatShoppingItemQuantity(item(s, "soy sauce"), "metric"), "30 ml");
-  assert.equal(formatShoppingItemQuantity(item(s, "rice"), "us"), "1.25 lb");
+  assert.equal(formatShoppingItemCookAmount(item(s, "soy sauce"), "metric"), "30 ml");
+  assert.equal(formatShoppingItemQuantity(item(s, "soy sauce"), "metric"), "Check pantry (need 30 ml)");
+  assert.equal(formatShoppingItemQuantity(item(s, "rice"), "us"), "1¼ lb");
   assert.equal(formatShoppingItemQuantity(item(s, "rice"), "metric"), "500 g");
   assert.equal(beef.quantityLabel, "1 lb", "stored label is unchanged by display formatting");
 });
@@ -372,7 +375,7 @@ test("eggs merge across 'count', bare numbers, and size words", () => {
     recipe("c", [{ name: "Egg", quantity: "2", unit: "large" }]),
   ]);
   const eggs = item(s, "egg");
-  assert.equal(eggs.quantityLabel, "32 count");
+  assert.equal(eggs.quantityLabel, "32");
   assert.deepEqual(eggs.quantities, [{ family: "count", unit: "count", value: 32 }]);
 });
 
@@ -380,7 +383,7 @@ test("count items scale to whole numbers matching the recipe page; bare counts s
   const eggs: RawRecipeIngredient = { name: "Large eggs", quantity: "24", unit: "count" };
   const s = build([recipe("a", [eggs])], 12);
   const pageQty = scaleGoldenIngredients([eggs], 8, 12)[0].quantity;
-  assert.equal(item(s, "egg").quantityLabel, `${pageQty} count`, "shopping uses the same crew scaler as the recipe page");
+  assert.equal(item(s, "egg").quantityLabel, `${pageQty}`, "shopping uses the same crew scaler as the recipe page");
   assert.ok(Number.isInteger(item(s, "egg").quantities![0].value));
   const limes = build([recipe("a", [{ name: "Limes", quantity: "6" }]), recipe("b", [{ name: "Lime", quantity: "2" }])]);
   assert.equal(item(limes, "lime").quantityLabel, "8");
@@ -394,7 +397,7 @@ test("seasoning tsp + tbsp converts; 'to taste' is kept once", () => {
     recipe("b", [{ name: "Garlic Powder", quantity: "1", unit: "Tbsp" }, { name: "Salt", quantity: "to taste" }]),
     recipe("c", [{ name: "Garlic Powder", quantity: "to taste" }]),
   ]);
-  assert.equal(item(s, "garlic powder").quantityLabel, "1.5 tbsp + to taste");
+  assert.equal(item(s, "garlic powder").quantityLabel, "1½ tbsp + to taste");
   assert.equal(item(s, "salt").quantityLabel, "to taste");
 });
 
@@ -422,7 +425,7 @@ test("variant names merge into one line", () => {
   ]);
   assert.equal(item(s, "onion").quantityLabel, "3");
   assert.equal(item(s, "tomato").quantityLabel, "3");
-  assert.equal(item(s, "chicken thigh").quantityLabel, "3.5 lb");
+  assert.equal(item(s, "chicken thigh").quantityLabel, "3½ lb");
   assert.equal(canonicalizeIngredientName("Kosher Salt & Black Pepper"), "kosher salt and black pepper");
 });
 
@@ -464,7 +467,7 @@ test("restore heals labels written by the old parser without resurrecting cleare
   delete beef.quantities;
 
   const restored = restoreShoppingSession(legacy)!;
-  assert.equal(item(restored, "ground beef").quantityLabel, "3.5 lb");
+  assert.equal(item(restored, "ground beef").quantityLabel, "3½ lb");
   assert.equal(restored.list.items.some((i) => i.canonicalKey === "bun"), false, "cleared items stay cleared");
 });
 
@@ -527,7 +530,7 @@ test("catalog: smash burgers", () => {
   assert.equal(s.list.items.some((i) => i.canonicalKey === "bacon"), false, "flagged-optional bacon excluded");
   assert.equal(item(s, "unsalted butter").quantityLabel, "8 tbsp");
   assert.equal(item(s, "iceberg lettuce").quantityLabel, "1 head");
-  assert.equal(item(s, "yellow onion").quantityLabel, "4 count");
+  assert.equal(item(s, "yellow onion").quantityLabel, "4");
   assert.equal(item(s, "kosher salt and black pepper").quantityLabel, "to taste");
   const skipped = splitPantryItems(s.list.items).skipped.map((i) => i.canonicalKey).sort();
   assert.deepEqual(skipped, ["garlic powder", "kosher salt and black pepper", "neutral high heat oil", "unsalted butter"]);
@@ -543,19 +546,19 @@ test("catalog: beef dip excludes notes-only optional items", () => {
 
 test("catalog: merged burgers + beef dip combine shared condiments", () => {
   const s = build([pageInput(loadPage("smash-burgers")), pageInput(loadPage("beef-dip"))]);
-  assert.equal(item(s, "mayonnaise").quantityLabel, "1.5 cups");
+  assert.equal(item(s, "mayonnaise").quantityLabel, "1½ cups");
   assert.equal(item(s, "worcestershire sauce").quantityLabel, "3 tbsp");
 });
 
 test("catalog: clove vs count garlic stays honest rather than guessed", () => {
   const s = build([pageInput(loadPage("beef-dip")), pageInput(loadPage("chicken-tortilla-soup-for-the-hall"))]);
-  assert.equal(item(s, "garlic clove").quantityLabel, "6 cloves + 6 count");
+  assert.equal(item(s, "garlic clove").quantityLabel, "6 cloves + 6");
   assert.equal(s.list.items.some((i) => i.canonicalKey === "shredded monterey jack"), false, "'optional at the line'");
 });
 
 test("catalog: breakfast burrito bar eggs scale as whole counts", () => {
   const page = loadPage("breakfast-burrito-bar");
-  assert.equal(item(build([pageInput(page)]), "egg").quantityLabel, "24 count");
+  assert.equal(item(build([pageInput(page)]), "egg").quantityLabel, "24");
   const scaled = item(build([pageInput(page)], 12), "egg").quantities![0];
   assert.equal(scaled.unit, "count");
   assert.ok(Number.isInteger(scaled.value) && scaled.value > 24);
@@ -581,7 +584,7 @@ test("catalog sweep: every recipe at base and crew 16 keeps units and yields san
         }
       }
       for (const ing of page.ingredients) {
-        if (isOptionalIngredient(ing)) continue;
+        if (isOptionalIngredient(ing) || isNotPurchased(ing.name)) continue;
         const key = canonicalizeIngredientName(ing.name);
         const listed = s.list.items.find((i) => i.canonicalKey === key);
         assert.ok(listed, `${page.slug}@${crew}: required ingredient "${ing.name}" missing`);

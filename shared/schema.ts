@@ -222,7 +222,7 @@ export type RedLeadLeadMagnetPayload = z.infer<typeof redLeadLeadMagnetSchema>;
 
 export const homepageSubscribeSchema = z.object({
   email: emailAddressSchema,
-  source: z.enum(["homepage", "hall_private_beta"]).optional(),
+  source: z.enum(["homepage", "hall_private_beta", "newsletter"]).optional(),
 });
 
 export type HomepageSubscribePayload = z.infer<typeof homepageSubscribeSchema>;
@@ -336,6 +336,8 @@ export interface RecipeTags {
   high_protein: boolean;
   high_fiber: boolean;
   quick_cleanup: boolean;
+  /** Macros are ingredient-calculated and passed the nutrition integrity audit (approved catalog `numericFilterEligible`). */
+  nutrition_verified?: boolean;
 }
 
 /** Server-side metadata on generated meals (not shown in print HTML). */
@@ -453,6 +455,12 @@ export interface ClientRecipeResponse {
    */
   _personalization_used?: boolean;
   _personalization_note?: string;
+  /** Every accurate "why this meal" line (history, verified nutrition-goal fit); first equals `_personalization_note`. */
+  _personalization_reasons?: string[];
+  /** Meal Memory: a personal signal (favorite, rating, crew pattern) raised this meal's rank. */
+  _picked_for_you?: boolean;
+  /** Meal Memory: a due favorite came back via the favorites lane (analytics). */
+  _favorite_returned?: boolean;
   /** Comma-joined signal type keys that fired for this pick (analytics only, never customer-facing copy). */
   _personalization_signal_types?: string;
   /** Coarse history-size bucket for analytics (`none`/`sparse`/`moderate`/`strong`) — never exact counts. */

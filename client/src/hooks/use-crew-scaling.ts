@@ -8,6 +8,7 @@ import {
   DEFAULT_CREW_SIZE,
   getRecipeBaseServings,
 } from "@shared/recipe/crew-scaling-config";
+import { usePreferredCrewSize } from "@/hooks/use-preferred-crew-size";
 
 type ScalablePage = {
   slug?: string;
@@ -19,12 +20,15 @@ type ScalablePage = {
 };
 
 export function useCrewScaling(page: ScalablePage | undefined) {
-  const [crewSize, setCrewSize] = useState(DEFAULT_CREW_SIZE);
+  const preferredCrewSize = usePreferredCrewSize();
+  const [chosenCrewSize, setChosenCrewSize] = useState<number | null>(null);
 
   useEffect(() => {
-    setCrewSize(DEFAULT_CREW_SIZE);
+    setChosenCrewSize(null);
   }, [page?.slug]);
 
+  // Follows the saved crew (including a profile that finishes loading after mount) until the user picks one here.
+  const crewSize = chosenCrewSize ?? preferredCrewSize;
   const baseServings = page ? getRecipeBaseServings(page) : DEFAULT_CREW_SIZE;
 
   const scaledIngredients = useMemo(() => {
@@ -40,7 +44,7 @@ export function useCrewScaling(page: ScalablePage | undefined) {
 
   return {
     crewSize,
-    setCrewSize,
+    setCrewSize: setChosenCrewSize,
     baseServings,
     scaledIngredients,
     displayCookTime,

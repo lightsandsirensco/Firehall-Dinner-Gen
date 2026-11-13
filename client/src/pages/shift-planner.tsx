@@ -5,6 +5,7 @@ import { CalendarDays, ChevronRight, Lock, UtensilsCrossed } from "lucide-react"
 import { AppTopBar } from "@/components/app-shell/app-top-bar";
 import { SiteFooter } from "@/components/site-footer";
 import { useTonightSelection } from "@/hooks/use-tonight-selection";
+import { usePreferredCrewSize } from "@/hooks/use-preferred-crew-size";
 import { useNoIndex } from "@/lib/seo/use-noindex";
 import { PICK_TONIGHT, SHIFT, TONIGHT } from "@/lib/app-nav";
 import { tonightShortcut, type TonightShortcut } from "@/lib/shift-home";
@@ -41,8 +42,6 @@ import { PLAN_AHEAD_WINDOW_DAYS, shiftPlanStatus } from "@shared/shift-plan/plan
 import { isSlotResolved } from "@shared/shift-plan/plan";
 import type { ShiftInstance } from "@shared/schedule/types";
 import type { UpcomingShift } from "@shared/shift-plan/types";
-
-const DEFAULT_CREW_SUGGESTION = 4;
 
 function NoShiftCard({ hasSchedule, onPlan }: { hasSchedule: boolean; onPlan: () => void }) {
   return (
@@ -132,6 +131,7 @@ export default function ShiftPlannerPage() {
   useNoIndex();
   const tonightPick = useTonightSelection();
   const { authenticated, openSignIn, profile, preferences } = useAuth();
+  const preferredCrewSize = usePreferredCrewSize();
   const { detail, activeHall } = useHallMembership();
   const hallLinked = Boolean(activeHall && detail?.hall);
   const search = useSearch();
@@ -281,7 +281,7 @@ export default function ShiftPlannerPage() {
           ) : showSetup ? (
             <ScheduleOnboarding
               entry={setupEntry}
-              suggestedCrewSize={profile?.crew_size ?? DEFAULT_CREW_SUGGESTION}
+              suggestedCrewSize={profile?.crew_size ?? preferredCrewSize}
               onCompleted={finishOnboarding}
               onCancel={() => setSetupEntry(null)}
             />
