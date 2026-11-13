@@ -7,7 +7,7 @@
   "subtitle": "Za'atar-crusted loin and shoulder chops with labneh, pickled turnips, and warm pita",
   "category": "bbq_grill_nights",
   "cuisine": "mediterranean",
-  "description": "Loin and shoulder chops under a za'atar-sumac crust, grilled over a two-zone fire and pulled at 135°F, then boarded over Aleppo labneh with pickled turnips, mint, warm pita, and a pomegranate molasses drizzle.",
+  "description": "Loin and shoulder chops under a za'atar-sumac crust, grilled over a two-zone fire and cooked to 145°F, then boarded over Aleppo labneh with pickled turnips, mint, warm pita, and a pomegranate molasses drizzle.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 25,
@@ -141,7 +141,7 @@
     {
       "stepNumber": 4,
       "title": "Grill the loin chops hot and fast",
-      "instruction": "Lay the lamb loin chops over the hot zone and leave them 3–4 minutes per side — moving them early tears the crust you just built. You want deep brown faces with char on the fat cap. Pull them at 135°F on an instant-read thermometer; carryover during the rest walks them toward the 145°F safe mark while the centers stay rosy. Crowding the grate drops the heat and the chops steam instead of sear.",
+      "instruction": "Lay the lamb loin chops over the hot zone and leave them 3–4 minutes per side — moving them early tears the crust you just built. You want deep brown faces with char on the fat cap. Pull them at 145°F (63°C) on an instant-read thermometer and rest 3 minutes — the centers stay pink. For medium-rare, pull at 135°F; that's a preference below the USDA safe minimum, not for anyone pregnant, older, or immunocompromised. Crowding the grate drops the heat and the chops steam instead of sear.",
       "minutes": 10,
       "heatLevel": "high"
     },

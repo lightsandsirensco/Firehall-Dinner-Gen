@@ -22,8 +22,6 @@ import {
 } from "@/lib/approved-catalog-api";
 import { ExploreCatalogCardBoundary } from "@/components/explore-catalog-card-boundary";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { fetchRecipeRatingSortMap } from "@/lib/recipe-crew-ratings-api";
-import { ExploreRatingCollections } from "@/components/explore-rating-collections";
 import {
   DEFAULT_APPROVED_CATALOG_FILTERS,
   buildApprovedCatalogFacetOptions,
@@ -34,11 +32,9 @@ import { RecipeGridSkeleton } from "@/components/mobile/loading-skeletons";
 import { trackExploreRecipeClick, trackSearch } from "@/lib/analytics";
 import { exploreCardImageCandidates, exploreCatalogPageSize } from "@/lib/explore-card-image";
 import { EXPLORE_CATALOG_PAGE_SIZE_MOBILE } from "@/lib/explore-mobile-page-size";
-import type { RecipeRatingSortMap } from "@/lib/recipe-crew-ratings-api";
 import {
   ExploreCatalogFilters,
   countActiveCatalogFilters,
-  type CatalogSortMode,
 } from "@/components/explore-catalog-filters";
 import {
   buildExploreBrowseSearch,
@@ -47,10 +43,9 @@ import {
 import { useAuth } from "@/lib/auth/context";
 import { hasFeature } from "@shared/billing/types";
 import { sanitizeFoodPreferenceKeys } from "@shared/ingredient-preferences/definitions";
+import { sortExploreEntries, type ExploreSortMode } from "@shared/explore-featured-order";
 
 export { EXPLORE_CATALOG_PAGE_SIZE_MOBILE as EXPLORE_CATALOG_PAGE_SIZE };
-export type { CatalogSortMode };
-
 function applyBrowsePatch(
   base: ApprovedCatalogFilterState,
   patch: ReturnType<typeof parseExploreBrowseSearch>,
@@ -70,53 +65,6 @@ function applyBrowsePatch(
     maxFat: patch.maxFat ?? base.maxFat,
     avoidIngredients: patch.avoid ?? base.avoidIngredients,
   };
-}
-
-function sortMetricForMode(
-  sort: CatalogSortMode,
-  entry: RecipeRatingSortMap[string] | undefined,
-): number {
-  if (sort === "most_popular" || sort === "most_votes") return entry?.totalVotes ?? 0;
-  if (sort === "highest_rated") return entry?.approvalScore ?? 0;
-  if (sort === "trending") return entry?.trendingScore ?? 0;
-  return 0;
-}
-
-/** True once at least one visible recipe has real signal for this sort mode. */
-function sortModeHasSignal(
-  rows: ApprovedCatalogGridEntry[],
-  sort: CatalogSortMode,
-  sortMap: RecipeRatingSortMap | undefined,
-): boolean {
-  if (sort === "curated" || !sortMap) return true;
-  return rows.some((row) => sortMetricForMode(sort, sortMap[row.slug]) > 0);
-}
-
-function sortCatalogEntries(
-  rows: ApprovedCatalogGridEntry[],
-  sort: CatalogSortMode,
-  sortMap: RecipeRatingSortMap | undefined,
-): ApprovedCatalogGridEntry[] {
-  if (sort === "curated" || !sortMap || !sortModeHasSignal(rows, sort, sortMap)) {
-    return [...rows].sort((a, b) => a.title.localeCompare(b.title));
-  }
-  const score = (slug: string) => sortMap[slug];
-  if (sort === "most_popular" || sort === "most_votes") {
-    return [...rows].sort(
-      (a, b) => (score(b.slug)?.totalVotes ?? 0) - (score(a.slug)?.totalVotes ?? 0),
-    );
-  }
-  if (sort === "highest_rated") {
-    return [...rows].sort(
-      (a, b) => (score(b.slug)?.approvalScore ?? 0) - (score(a.slug)?.approvalScore ?? 0),
-    );
-  }
-  if (sort === "trending") {
-    return [...rows].sort(
-      (a, b) => (score(b.slug)?.trendingScore ?? 0) - (score(a.slug)?.trendingScore ?? 0),
-    );
-  }
-  return rows;
 }
 
 /** Thumb grid — explicit dimensions for Safari decode budget */
@@ -215,6 +163,8 @@ function CatalogRecipeGrid({
   onLoadMore,
   onRecipeClick,
   compactCount,
+  sortMode,
+  onSortChange,
 }: {
   visibleRecipes: ApprovedCatalogGridEntry[];
   filteredCount: number;
@@ -223,18 +173,34 @@ function CatalogRecipeGrid({
   onLoadMore: () => void;
   onRecipeClick: (entry: ApprovedCatalogGridEntry) => void;
   compactCount?: boolean;
+  sortMode: ExploreSortMode;
+  onSortChange: (mode: ExploreSortMode) => void;
 }) {
   return (
     <>
-      <p
-        className={cn(
-          "text-xs text-muted-foreground tabular-nums",
-          compactCount && "sr-only md:not-sr-only",
-        )}
-        data-testid="explore-catalog-count"
-      >
-        Showing {visibleRecipes.length} of {filteredCount} recipes
-      </p>
+      <div className="flex items-center justify-between gap-3">
+        <p
+          className={cn(
+            "text-xs text-muted-foreground tabular-nums",
+            compactCount && "sr-only md:not-sr-only",
+          )}
+          data-testid="explore-catalog-count"
+        >
+          Showing {visibleRecipes.length} of {filteredCount} recipes
+        </p>
+        <label className="ml-auto flex items-center gap-2 text-xs text-muted-foreground">
+          Sort
+          <select
+            value={sortMode}
+            onChange={(e) => onSortChange(e.target.value as ExploreSortMode)}
+            className="min-h-9 rounded-md border border-border/40 bg-background px-2 text-xs text-foreground"
+            data-testid="explore-catalog-sort"
+          >
+            <option value="featured">Featured</option>
+            <option value="az">A–Z</option>
+          </select>
+        </label>
+      </div>
       <ul
         className="explore-mobile-grid grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4 lg:gap-4 stagger-fade motion-reduce:[&>*]:!animate-none"
         data-testid="explore-catalog-grid"
@@ -290,11 +256,11 @@ export function ExploreCatalogBrowser({
   const [filters, setFilters] = useState<ApprovedCatalogFilterState>(() =>
     applyBrowsePatch(DEFAULT_APPROVED_CATALOG_FILTERS, initialPatch),
   );
-  const [sort, setSort] = useState<CatalogSortMode>("curated");
   const [searchInput, setSearchInput] = useState(initialPatch.search ?? "");
   const [searchQuery, setSearchQuery] = useState((initialPatch.search ?? "").trim().toLowerCase());
   const [visibleCount, setVisibleCount] = useState(pageSize);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [sortMode, setSortMode] = useState<ExploreSortMode>("featured");
   const skipUrlSync = useRef(true);
   const { preferences, billing } = useAuth();
   const avoidSeededRef = useRef(false);
@@ -376,12 +342,6 @@ export function ExploreCatalogBrowser({
     refetchOnWindowFocus: false,
   });
 
-  const { data: sortMap } = useQuery({
-    queryKey: ["recipe-rating-sort-map"],
-    queryFn: fetchRecipeRatingSortMap,
-    staleTime: 60_000,
-  });
-
   const facetOptions = useMemo(
     () => buildApprovedCatalogFacetOptions(data?.recipes ?? []),
     [data?.recipes],
@@ -392,17 +352,12 @@ export function ExploreCatalogBrowser({
     if (searchQuery) {
       rows = rows.filter((entry) => entry.searchText.includes(searchQuery));
     }
-    return sortCatalogEntries(rows, sort, sortMap);
-  }, [data?.recipes, filters, sort, sortMap, searchQuery]);
-
-  const sortHasSignal = useMemo(
-    () => sortModeHasSignal(filterApprovedCatalogEntries(data?.recipes ?? [], filters), sort, sortMap),
-    [data?.recipes, filters, sort, sortMap],
-  );
+    return sortExploreEntries(rows, sortMode);
+  }, [data?.recipes, filters, searchQuery, sortMode]);
 
   useEffect(() => {
     setVisibleCount(pageSize);
-  }, [filters, sort, searchQuery, pageSize]);
+  }, [filters, searchQuery, pageSize]);
 
   const lastTrackedSearch = useRef("");
   useEffect(() => {
@@ -439,13 +394,10 @@ export function ExploreCatalogBrowser({
   const filterPanel = (
     <ExploreCatalogFilters
       filters={filters}
-      sort={sort}
       facets={facetOptions}
       onFiltersChange={setFilters}
-      onSortChange={setSort}
       onReset={resetFilters}
       layout={isMobile ? "sheet" : "inline"}
-      sortHasSignal={sortHasSignal}
     />
   );
 
@@ -481,6 +433,8 @@ export function ExploreCatalogBrowser({
               onLoadMore={() => setVisibleCount((n) => n + pageSize)}
               onRecipeClick={handleRecipeClick}
               compactCount={isMobile}
+              sortMode={sortMode}
+              onSortChange={setSortMode}
             />
           ) : (
             <div className="py-16 text-center" data-testid="explore-catalog-empty">
@@ -501,8 +455,6 @@ export function ExploreCatalogBrowser({
 
   return (
     <section className={cn("space-y-3 md:space-y-6", className)} data-testid="explore-catalog-browser">
-      {!isMobile && <ExploreRatingCollections onRecipeClick={onRecipeClick} />}
-
       <div
         className={cn(
           "sticky z-40 -mx-[var(--page-padding,1rem)] border-b border-border/20 bg-background/92 px-[var(--page-padding,1rem)] py-2 backdrop-blur-md md:hidden",
@@ -561,10 +513,6 @@ export function ExploreCatalogBrowser({
       </div>
 
       {gridBlock}
-
-      {isMobile && (
-        <ExploreRatingCollections onRecipeClick={onRecipeClick} className="pt-6" />
-      )}
 
       <Sheet open={filtersOpen} onOpenChange={setFiltersOpen}>
         <SheetContent

@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 610,
-  "protein": 42,
-  "carbs": 69,
-  "fats": 18,
+  "calories": 605,
+  "protein": 65,
+  "carbs": 51,
+  "fats": 15,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -39,38 +39,39 @@
   "ingredients": [
     {
       "name": "chicken thighs",
-      "quantity": "3.2",
+      "quantity": "3",
       "unit": "lb",
       "notes": "cubed",
       "group": "Protein"
     },
     {
       "name": "jasmine rice",
-      "quantity": "2.4",
+      "quantity": "2 1/2",
       "unit": "cups",
       "group": "Base"
     },
     {
       "name": "soy sauce",
-      "quantity": "5/8",
+      "quantity": "2/3",
       "unit": "cup",
       "group": "Sauce"
     },
     {
       "name": "brown sugar",
-      "quantity": "3/8",
+      "quantity": "1/3",
       "unit": "cup",
       "group": "Sauce"
     },
     {
       "name": "ginger",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
-      "group": "Sauce"
+      "group": "Sauce",
+      "notes": "freshly grated"
     },
     {
       "name": "broccoli",
-      "quantity": "1.6",
+      "quantity": "1 1/2",
       "unit": "lb",
       "group": "Vegetables"
     },
@@ -88,9 +89,10 @@
     },
     {
       "name": "edamame",
-      "quantity": "2.4",
+      "quantity": "2 1/2",
       "unit": "cups",
-      "group": "Vegetables"
+      "group": "Vegetables",
+      "notes": "shelled, thawed"
     },
     {
       "name": "sesame seeds",
@@ -103,20 +105,46 @@
       "quantity": "3/4",
       "unit": "cup",
       "group": "Finish"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Sauce"
+    },
+    {
+      "name": "cornstarch",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "chili crisp",
+      "quantity": "1/4",
+      "unit": "cup",
+      "notes": "optional, at the line",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
       "title": "Cut and stage teriyaki ingredients",
-      "instruction": "Cube thighs to 1-inch pieces, cut carrots into thin matchsticks, separate broccoli florets, and trim snap peas. Whisk soy, brown sugar, ginger, garlic, cornstarch, and water in a cold bowl. Keep edamame and green onions ready beside the stove; thick carrot coins will still be raw when peas go limp.",
+      "instruction": "Cube thighs to 1-inch pieces, cut carrots into thin matchsticks, separate broccoli florets, and trim snap peas. Whisk soy, brown sugar, ginger, garlic, cornstarch, and 1/2 cup water in a cold bowl. Keep edamame and green onions ready beside the stove; thick carrot coins will still be raw when peas go limp.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Steam the jasmine rice",
-      "instruction": "Rinse rice, bring it and measured salted water to a boil in a lidded pot, then simmer low 15 minutes. Rest it covered 10 minutes before fluffing. Do not peek while it cooks: escaping steam leaves a hard center and tempts you to add water too late.",
+      "instruction": "Rinse rice, bring it and 3 1/4 cups salted water to a boil in a lidded pot, then simmer low 15 minutes. Rest it covered 10 minutes before fluffing. Do not peek while it cooks: escaping steam leaves a hard center and tempts you to add water too late.",
       "minutes": 25,
       "heatLevel": "low"
     },
@@ -172,7 +200,7 @@
     {
       "stepNumber": 10,
       "title": "Serve the teriyaki supper",
-      "instruction": "Set bowls on the pass with mandarin segments and reserve covered hot pans for late crews. Put extra glaze in a small warm pitcher, not directly over every bowl. This keeps sweetness adjustable and keeps the service table from getting sticky.",
+      "instruction": "Set bowls on the pass and reserve covered hot pans for late crews. Put extra glaze in a small warm pitcher, not directly over every bowl. This keeps sweetness adjustable and keeps the service table from getting sticky.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -221,12 +249,12 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 610,
-    "protein": 42,
-    "carbs": 69,
-    "fats": 18,
-    "label": "~610 cal/serving · 42g protein (est.)",
-    "source": "estimated",
+    "calories": 605,
+    "protein": 65,
+    "carbs": 51,
+    "fats": 15,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
@@ -270,10 +298,15 @@
   "generatedAt": "2026-09-26T19:26:55.958Z",
   "contentVersion": 2,
   "dietary": {
-    "confidence": "high",
-    "matchedCount": 11,
-    "totalCount": 11,
-    "uncertainIngredients": [],
+    "confidence": "low",
+    "matchedCount": 14,
+    "totalCount": 15,
+    "uncertainIngredients": [
+      {
+        "name": "chili crisp",
+        "reason": "Not found in the canonical ingredient dietary database — cannot confirm allergen/diet status."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "soy sauce",
@@ -297,24 +330,18 @@
     ],
     "flags": {
       "glutenFree": false,
-      "dairyFree": true,
-      "eggFree": true,
-      "nutFree": true,
-      "peanutFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": false,
+      "peanutFree": false,
       "soyFree": false,
-      "shellfishFree": true,
-      "fishFree": true,
-      "porkFree": true,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": false,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
-      }
-    ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "adaptable": [],
+    "classifiedAt": "2026-11-12T17:11:45.504Z"
   }
 }

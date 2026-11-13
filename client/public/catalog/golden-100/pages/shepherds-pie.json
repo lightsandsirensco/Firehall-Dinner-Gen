@@ -56,37 +56,73 @@
       "group": "Sauce"
     },
     {
+      "name": "Tomato Paste",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Worcestershire Sauce",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Sauce"
+    },
+    {
       "name": "Russet Potatoes",
       "quantity": "5",
       "unit": "Lb",
       "group": "Topping"
     },
     {
-      "name": "Butter And Cream",
-      "quantity": "1",
-      "unit": "batch",
+      "name": "Unsalted Butter",
+      "quantity": "1/2",
+      "unit": "Cup",
       "group": "Potato topping"
+    },
+    {
+      "name": "Heavy Cream",
+      "quantity": "1",
+      "unit": "Cup",
+      "group": "Potato topping"
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "White Pepper",
+      "quantity": "1",
+      "unit": "Tsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
       "title": "Brown the filling",
-      "instruction": "Brown ground lamb with diced onion until deeply colored. Drain excess fat. Add peas, carrots, broth, and tomato paste; simmer 15 minutes until thick.",
+      "instruction": "Brown ground lamb (or beef) with diced onion until deeply colored and no pink remains (160°F / 71°C). Drain excess fat. Stir in flour and tomato paste and cook 1 minute. Add peas, carrots, broth, Worcestershire, and 2 tsp salt; simmer 15 minutes until thick.",
       "minutes": 25,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
       "title": "Mash the topping",
-      "instruction": "Boil russets until tender; mash with butter and cream until smooth. Season with salt and white pepper.",
+      "instruction": "Boil russets until tender; mash with butter and cream until smooth. Season with the remaining salt and the white pepper.",
       "minutes": 25,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
       "title": "Assemble and bake",
-      "instruction": "Spread filling in hotel pans; pipe or spread mashed potatoes over top. Fork ridges for crispy peaks. Bake at 400°F 25–30 minutes until golden and bubbling at edges.",
+      "instruction": "Spread filling in a deep half hotel pan or two 9×13-inch dishes; pipe or spread mashed potatoes over top. Fork ridges for crispy peaks. Bake at 400°F 25–30 minutes until golden and bubbling at edges.",
       "minutes": 30,
       "heatLevel": "high"
     },
@@ -170,8 +206,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
+    "matchedCount": 12,
+    "totalCount": 12,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -181,7 +217,26 @@
         ]
       },
       {
-        "name": "Butter And Cream",
+        "name": "All-Purpose Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Worcestershire Sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Heavy Cream",
         "allergens": [
           "dairy"
         ]
@@ -195,7 +250,7 @@
       "peanutFree": true,
       "soyFree": true,
       "shellfishFree": true,
-      "fishFree": true,
+      "fishFree": false,
       "porkFree": true,
       "vegetarian": false,
       "vegan": false
@@ -204,15 +259,10 @@
       {
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free broth or bouillon."
-      },
-      {
-        "flag": "dairy",
-        "label": "Dairy-Free Adaptable",
-        "note": "Use a plant-based butter/margarine."
+        "note": "Use a certified gluten-free broth or bouillon. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free Worcestershire sauce."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   },
   "avoidTags": [
     "onions"

@@ -230,11 +230,11 @@ const CONTEXTUAL_SUBTITLES: Partial<
 const RAIL_CHIPS: Partial<Record<MasterCategoryId, string[]>> = {
   quick_shift_meals: ["≤40 min", "One-pan friendly", "Busy shift"],
   comfort_food: ["Post-call", "Crew favorite", "Hearty"],
-  healthy_performance: ["High protein", "Hall-tested", "Lean grill"],
+  healthy_performance: ["High protein", "Hall staple", "Lean grill"],
   bbq_grill_nights: ["Smoked & grilled", "Friday energy"],
   pizza_night: ["Firehouse pizza night", "Feeds the table"],
   game_day_watch_party: ["Game day", "Shareable"],
-  firehall_classics: ["Hall-tested", "Crew picks"],
+  firehall_classics: ["Hall staple", "Crew picks"],
   big_crew_feeders: ["Feeds 10+", "Batch cook"],
   rookie_friendly: ["Easy steps", "Rookie-safe"],
   global_flavors: ["World plates", "Still practical"],
@@ -280,7 +280,7 @@ export function buildRailPresentation(
       ctx.shiftMode === "performance") &&
     catId === "healthy_performance"
   ) {
-    editorialBadge = "Crew-tested";
+    editorialBadge = "Crew pick";
   }
 
   return {
@@ -327,9 +327,9 @@ export function buildWhyThisMeal(
   }
   if (mins > 0 && mins <= 30) return "Quick turn for a hungry crew — practical on a busy night";
   if (recipe.fromCuratedDb && recipe.publisherMedia) {
-    return "Curated crew pick — real photography, trusted recipe structure";
+    return "Curated crew pick — full recipe, crew-sized";
   }
-  if (catId === "firehall_classics") return "Firehouse-tested classic — crews already know this one";
+  if (catId === "firehall_classics") return "Firehouse classic — crews already know this one";
   if (ctx.isFriday && /bbq|pizza|grill|smoke/.test(text)) {
     return "Trending at firehouses this Friday — smoke, char, and craveable plates";
   }
@@ -346,7 +346,7 @@ export function buildRecommendationChip(
   const text = `${recipe.title} ${recipe.summary || ""}`.toLowerCase();
   const mins = recipe.readyInMinutes;
 
-  if (recipe.fromCuratedDb && recipe.publisherMedia) return "Hall-tested";
+  if (recipe.fromCuratedDb && recipe.publisherMedia) return "Hall staple";
   if (section.id === "firehouse_staples") return "Crew favorite";
   if (ctx.shiftMode === "quick_shift" && mins > 0 && mins <= 30) return "Quick shift";
   if (

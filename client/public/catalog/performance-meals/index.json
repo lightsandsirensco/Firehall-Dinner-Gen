@@ -551,7 +551,7 @@
         "confidence": "high",
         "flags": {
           "glutenFree": false,
-          "dairyFree": true,
+          "dairyFree": false,
           "eggFree": true,
           "nutFree": true,
           "peanutFree": true,
@@ -567,6 +567,11 @@
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
             "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
           }
         ]
       }
@@ -837,9 +842,9 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 711,
+        "calories": 712,
         "protein": 54,
-        "carbs": 50,
+        "carbs": 51,
         "fat": 32,
         "numericFilterEligible": true
       },
@@ -1892,7 +1897,7 @@
         "lowCarb": true,
         "healthy": true,
         "estimateAvailable": true,
-        "calories": 506,
+        "calories": 507,
         "protein": 71,
         "carbs": 21,
         "fat": 14,
@@ -2461,8 +2466,8 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 616,
-        "protein": 26,
+        "calories": 610,
+        "protein": 25,
         "carbs": 112,
         "fat": 8,
         "numericFilterEligible": true
@@ -2670,10 +2675,10 @@
         "lowCarb": true,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 635,
+        "calories": 636,
         "protein": 54,
         "carbs": 10,
-        "fat": 40,
+        "fat": 41,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -3391,10 +3396,10 @@
         "lowCarb": false,
         "healthy": true,
         "estimateAvailable": true,
-        "calories": 304,
-        "protein": 18,
-        "carbs": 43,
-        "fat": 8,
+        "calories": 274,
+        "protein": 15,
+        "carbs": 42,
+        "fat": 7,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -4556,10 +4561,10 @@
         "lowCarb": false,
         "healthy": true,
         "estimateAvailable": true,
-        "calories": 325,
-        "protein": 19,
+        "calories": 301,
+        "protein": 16,
         "carbs": 40,
-        "fat": 11,
+        "fat": 10,
         "numericFilterEligible": true
       },
       "avoidTags": [

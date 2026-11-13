@@ -269,7 +269,12 @@
     "confidence": "high",
     "matchedCount": 11,
     "totalCount": 11,
-    "uncertainIngredients": [],
+    "uncertainIngredients": [
+      {
+        "name": "Sun-Dried Tomato Pesto",
+        "reason": "Traditional pesto is made with Parmesan, which uses animal rennet. For a vegetarian version, use a pesto labeled vegetarian."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "Sun-Dried Tomato Pesto",
@@ -322,7 +327,7 @@
         "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   },
   "avoidTags": []
 }

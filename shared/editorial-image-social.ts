@@ -58,7 +58,7 @@ export function buildSocialPackStub(input: {
     version: "1.0",
     stylePreset: input.stylePreset,
     captionHooks: [
-      input.hookLine?.trim() || `${input.title} — hall-tested tonight`,
+      input.hookLine?.trim() || `${input.title} — on the hall table tonight`,
       input.categoryLabel ? `${input.categoryLabel} at the firehall` : "Firehall Meals",
       "Crew-sized comfort. Real portions.",
     ].filter(Boolean),

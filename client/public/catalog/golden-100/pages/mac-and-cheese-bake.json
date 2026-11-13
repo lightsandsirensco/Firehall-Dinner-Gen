@@ -13,10 +13,10 @@
   "cookTime": 65,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 1381,
-  "protein": 61,
-  "carbs": 127,
-  "fats": 69,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:vegetarian",
     "format:bake",
@@ -41,13 +41,13 @@
     },
     {
       "name": "Unsalted Butter",
-      "quantity": "6",
+      "quantity": "8",
       "unit": "Tbsp",
       "group": "Sauce"
     },
     {
       "name": "All-Purpose Flour",
-      "quantity": "6",
+      "quantity": "8",
       "unit": "Tbsp",
       "group": "Sauce"
     },
@@ -67,7 +67,8 @@
       "name": "Gruyere Or Monterey Jack, Shredded",
       "quantity": "12",
       "unit": "Oz",
-      "group": "Cheese"
+      "group": "Cheese",
+      "notes": "use a Gruyère labeled vegetarian (microbial rennet), or Monterey Jack"
     },
     {
       "name": "Dijon Mustard",
@@ -103,7 +104,8 @@
       "name": "Grated Parmesan",
       "quantity": "0.5",
       "unit": "Cup",
-      "group": "Topping"
+      "group": "Topping",
+      "notes": "use a Parmesan labeled vegetarian (microbial rennet)"
     }
   ],
   "steps": [
@@ -131,7 +133,7 @@
     {
       "stepNumber": 4,
       "title": "Pan up and add topping",
-      "instruction": "Transfer to buttered hotel pans. Mix panko with melted butter and parmesan; scatter evenly over the top for a crunchy lid.",
+      "instruction": "Transfer to a buttered full-size hotel pan or two 9×13-inch dishes. Mix panko with melted butter and parmesan; scatter evenly over the top for a crunchy lid.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -167,14 +169,15 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1381,
-    "protein": 61,
-    "carbs": 127,
-    "fats": 69,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
@@ -182,7 +185,7 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -304,7 +307,7 @@
         "note": "Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:29:45.659Z"
   },
   "avoidTags": [
     "mustard"

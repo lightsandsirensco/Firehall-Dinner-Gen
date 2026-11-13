@@ -33,6 +33,11 @@
       "group": "Batter"
     },
     {
+      "name": "kosher salt",
+      "quantity": "1 tsp",
+      "group": "Batter"
+    },
+    {
       "name": "instant yeast",
       "quantity": "2 tsp",
       "notes": "or 1 packet active dry",
@@ -147,8 +152,8 @@
   "collectionTier": "firehall_classic",
   "dietary": {
     "confidence": "high",
-    "matchedCount": 8,
-    "totalCount": 8,
+    "matchedCount": 9,
+    "totalCount": 9,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -207,6 +212,6 @@
         "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:11:45.504Z"
   }
 }

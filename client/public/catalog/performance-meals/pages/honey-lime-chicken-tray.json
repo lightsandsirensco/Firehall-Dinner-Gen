@@ -13,7 +13,7 @@
   "cookTime": 28,
   "prepTime": 18,
   "difficulty": "easy",
-  "calories": 506,
+  "calories": 507,
   "protein": 71,
   "carbs": 21,
   "fats": 14,
@@ -58,7 +58,7 @@
     },
     {
       "name": "honey",
-      "quantity": "0.33",
+      "quantity": "1/3",
       "unit": "cup"
     },
     {
@@ -149,7 +149,7 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 506,
+    "calories": 507,
     "protein": 71,
     "carbs": 21,
     "fats": 14,

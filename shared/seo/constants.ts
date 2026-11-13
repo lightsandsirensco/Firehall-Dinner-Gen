@@ -4,7 +4,7 @@
 export const SEO_SITE_NAME = "Firehall Meals";
 /** Domain-style spelling; only ever an `alternateName`, never the public name. */
 export const SEO_BRAND = "FirehallMeals";
-export const SEO_TAGLINE = "Built by Firefighters. Tested in the Firehouse.";
+export const SEO_TAGLINE = "Built by Firefighters. Made for the Firehouse.";
 export const SEO_MISSION =
   "Get rid of the \"What's for Dinner?\" debate every shift.";
 

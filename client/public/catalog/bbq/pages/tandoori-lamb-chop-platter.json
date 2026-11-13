@@ -7,7 +7,7 @@
   "subtitle": "Yogurt-spiced lamb chops, char, and mint chutney for ten",
   "category": "bbq_grill_nights",
   "cuisine": "indian",
-  "description": "Lamb loin chops marinate in tandoori yogurt spice, grill over high heat to 135°F, and serve on platters with mint-cilantro chutney and charred lemon.",
+  "description": "Lamb loin chops marinate in tandoori yogurt spice, grill over high heat to 145°F, and serve on platters with mint-cilantro chutney and charred lemon.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 22,
@@ -133,7 +133,7 @@
     {
       "stepNumber": 5,
       "title": "Flip and finish",
-      "instruction": "Flip and grill 3–4 minutes until 130–135°F internal for medium-rare. Move to cooler zone if flare-ups.",
+      "instruction": "Flip and grill 3–4 minutes until 145°F (63°C) internal; rest 3 minutes. Medium-rare (130–135°F) is a preference below the USDA safe minimum, not for anyone pregnant, older, or immunocompromised. Move to cooler zone if flare-ups.",
       "minutes": 8,
       "heatLevel": "medium"
     },
@@ -154,14 +154,14 @@
     {
       "stepNumber": 8,
       "title": "Platter for ten",
-      "instruction": "Two chops per firefighter with mint chutney and charred lemon. Call temps: pull at 135°F, hold at 170°F max.",
+      "instruction": "Two chops per firefighter with mint chutney and charred lemon. Call temps: pull at 145°F, hold at 170°F max.",
       "minutes": 5,
       "heatLevel": ""
     }
   ],
   "proTips": [
     "Yogurt marinade chars like tandoor—don't wipe it off before grilling.",
-    "135°F pull with rest hits perfect pink for lamb loin.",
+    "145°F pull with a 3-minute rest keeps lamb loin pink and juicy.",
     "Mint chutney cold on the side keeps bright during hold."
   ],
   "tonightSpread": [
@@ -173,7 +173,7 @@
     "Chop into curry fried rice next shift."
   ],
   "whyCrewsLikeIt": "Lamb chops feel like a reward meal and cook faster than shoulder. Tandoori yogurt marinade chars beautifully on direct grill heat and holds at 170°F between calls.",
-  "mealPrepNotes": "Marinate chops 4–12 hours. Grill high 475°F, 4 minutes per side for medium-rare. Hold covered at 170°F up to 30 minutes. Chutney cold on the side.",
+  "mealPrepNotes": "Marinate chops 4–12 hours. Grill high 475°F, 4 minutes per side to 145°F. Hold covered at 170°F up to 30 minutes. Chutney cold on the side.",
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 744,

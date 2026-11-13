@@ -2,6 +2,7 @@
  * US / Imperial ↔ metric conversion for recipe display.
  * Scale quantities first, then convert for display (see formatIngredientAmount).
  */
+import { formatKitchenFraction } from "./fractions.js";
 
 export type MeasurementSystem = "us" | "metric";
 
@@ -211,7 +212,7 @@ export function formatClientIngredientQty(
 ): string {
   if (!qty && !unit) return "";
   if (system === "us") {
-    const display = qty % 1 === 0 ? qty.toString() : qty.toFixed(1);
+    const display = formatKitchenFraction(qty);
     return unit ? `${display} ${unit}` : display;
   }
 

@@ -13,10 +13,10 @@
   "cookTime": 210,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 94,
-  "carbs": 97,
-  "fats": 71,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -71,13 +71,13 @@
     },
     {
       "name": "Hoagie Rolls",
-      "quantity": "24",
+      "quantity": "16",
       "unit": "count",
       "group": "Buns"
     },
     {
       "name": "Provolone Slices",
-      "quantity": "24",
+      "quantity": "16",
       "unit": "count",
       "notes": "optional",
       "group": "Cheese"
@@ -124,6 +124,12 @@
       "unit": "Tbsp",
       "notes": "optional",
       "group": "Buns"
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Main"
     }
   ],
   "steps": [
@@ -234,15 +240,15 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 94,
-    "carbs": 97,
-    "fats": 71,
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
     "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
@@ -250,7 +256,7 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -287,8 +293,8 @@
   "contentVersion": 5,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 15,
-    "totalCount": 15,
+    "matchedCount": 16,
+    "totalCount": 16,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -377,7 +383,7 @@
         "note": "Use coconut aminos."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:07:12.987Z"
   },
   "avoidTags": [
     "onions",

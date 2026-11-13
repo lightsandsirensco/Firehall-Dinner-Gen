@@ -64,9 +64,24 @@
     },
     {
       "name": "hot sauce",
-      "quantity": "1",
+      "quantity": "1 bottle",
       "group": "Build",
       "optional": true
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "1 tsp",
+      "group": "Fillings"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "1 tbsp",
+      "group": "Fillings"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1/2 tsp",
+      "group": "Fillings"
     }
   ],
   "steps": [
@@ -79,7 +94,7 @@
     {
       "stepNumber": 2,
       "title": "Warm the black beans",
-      "instruction": "Add black beans to the pan with the vegetables and warm through, 4–5 minutes, seasoning with a pinch of salt and cumin if desired.",
+      "instruction": "Add black beans to the pan with the vegetables and warm through, 4–5 minutes, seasoning with the salt and cumin.",
       "minutes": 5
     },
     {
@@ -102,11 +117,11 @@
     }
   ],
   "nutrition": {
-    "calories": 454,
+    "calories": 471,
     "protein": 28,
     "carbs": 56,
-    "fat": 13,
-    "label": "per serving (hall portion)",
+    "fat": 15,
+    "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -145,8 +160,8 @@
   "seoTitle": "Black Bean Egg White Breakfast Burritos | Firehall Breakfast",
   "dietary": {
     "confidence": "high",
-    "matchedCount": 8,
-    "totalCount": 8,
+    "matchedCount": 11,
+    "totalCount": 11,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -193,6 +208,6 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:11:45.504Z"
   }
 }

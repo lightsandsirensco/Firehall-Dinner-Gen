@@ -24,7 +24,7 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "24",
+      "quantity": "30",
       "notes": "beaten in batches of 3 per omelette",
       "group": "Eggs"
     },
@@ -104,11 +104,11 @@
     }
   ],
   "nutrition": {
-    "calories": 360,
-    "protein": 28,
+    "calories": 403,
+    "protein": 32,
     "carbs": 5,
-    "fat": 26,
-    "label": "per serving (hall portion)",
+    "fat": 29,
+    "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {

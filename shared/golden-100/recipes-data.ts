@@ -150,7 +150,7 @@ const BIG_CREW = [
 
 const BREAKFAST = [
   goldenEntry({ slug: "breakfast-burrito-bar", title: "Breakfast Burrito Bar", cat: "breakfast_brunch", protein: "pork", cuisine: "mexican", format: "handheld", pools: ["breakfast", "handheld"], hook: "Build burritos before the rig rolls", search: "breakfast burrito bar chorizo", img: { lightingStyle: "morning_soft" } }),
-  goldenEntry({ slug: "pancake-short-stack", title: "Pancake Short Stack for the Crew", cat: "breakfast_brunch", protein: "vegetarian", cuisine: "american", format: "breakfast", pools: ["breakfast"], hook: "Fluffy stacks, bacon on the side", search: "buttermilk pancakes bacon breakfast", img: { lightingStyle: "morning_soft" } }),
+  goldenEntry({ slug: "pancake-short-stack", title: "Pancake Short Stack for the Crew", cat: "breakfast_brunch", protein: "pork", cuisine: "american", format: "breakfast", pools: ["breakfast"], hook: "Fluffy stacks, bacon on the side", search: "buttermilk pancakes bacon breakfast", img: { lightingStyle: "morning_soft" } }),
   goldenEntry({ slug: "french-toast-casserole", title: "French Toast Casserole", cat: "breakfast_brunch", protein: "vegetarian", cuisine: "american", format: "bake", pools: ["breakfast"], hook: "Feed the hall before the bell", search: "french toast casserole bake", img: { lightingStyle: "morning_soft" } }),
   goldenEntry({ slug: "chorizo-breakfast-tacos", title: "Chorizo Breakfast Tacos", cat: "breakfast_brunch", protein: "pork", cuisine: "mexican", format: "tacos", pools: ["breakfast", "handheld"], hook: "Spicy chorizo, warm tortillas", search: "chorizo breakfast tacos", img: { lightingStyle: "morning_soft" } }),
 ];

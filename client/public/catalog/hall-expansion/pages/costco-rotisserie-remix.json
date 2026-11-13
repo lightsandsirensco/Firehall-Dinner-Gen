@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 640,
-  "protein": 40,
-  "carbs": 58,
-  "fats": 27,
+  "calories": 678,
+  "protein": 36,
+  "carbs": 78,
+  "fats": 24,
   "tags": [
     "protein:chicken",
     "format:casserole",
@@ -37,17 +37,17 @@
   "ingredients": [
     {
       "name": "rotisserie chickens",
-      "quantity": "3.2",
+      "quantity": "3",
       "unit": "each"
     },
     {
       "name": "cooked rice",
-      "quantity": "9.6",
+      "quantity": "10",
       "unit": "cups"
     },
     {
       "name": "broccoli",
-      "quantity": "3.2",
+      "quantity": "3",
       "unit": "lb"
     },
     {
@@ -57,12 +57,13 @@
     },
     {
       "name": "cheddar cheese",
-      "quantity": "2.4",
-      "unit": "lb"
+      "quantity": "1",
+      "unit": "lb",
+      "notes": "shredded"
     },
     {
       "name": "milk",
-      "quantity": "3.2",
+      "quantity": "3",
       "unit": "cups"
     }
   ],
@@ -178,12 +179,12 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 640,
-    "protein": 40,
-    "carbs": 58,
-    "fats": 27,
-    "label": "~640 cal/serving · 40g protein (est.)",
-    "source": "estimated",
+    "calories": 678,
+    "protein": 36,
+    "carbs": 78,
+    "fats": 24,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
@@ -261,13 +262,7 @@
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
-      }
-    ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "adaptable": [],
+    "classifiedAt": "2026-11-12T17:01:00.616Z"
   }
 }

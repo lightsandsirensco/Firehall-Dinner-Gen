@@ -1,0 +1,7438 @@
+{
+  "generatedAt": "2026-11-12T16:52:43.948Z",
+  "inventory": {
+    "on_disk_records_by_collection": {
+      "golden-100": 104,
+      "performance-meals": 66,
+      "hall-expansion": 137,
+      "pizza-night": 20,
+      "breakfast": 72,
+      "breakfast-performance": 4,
+      "bbq": 45,
+      "smoothies": 10
+    },
+    "unique_slugs_on_disk": 450,
+    "retired_redirect_slugs": 4,
+    "public_recipe_pages": 446,
+    "approved_catalog": 424,
+    "explore_visible": 424,
+    "generator_default_pool": 366,
+    "generator_pool_by_source": {
+      "golden_100": 103,
+      "performance_50": 69,
+      "hall_expansion_74": 139,
+      "bbq_catalog": 55
+    },
+    "shift_planner_pool": 434,
+    "public_pages_not_in_explore": 22,
+    "generator_not_in_explore": [
+      "breakfast-burrito-bar",
+      "french-toast-casserole",
+      "chorizo-breakfast-tacos",
+      "lean-turkey-bean-chili",
+      "sheet-pan-chicken-fajitas-lite",
+      "lean-beef-broccoli-rice",
+      "italian-sausage-veg-sheet-pan",
+      "turkey-quinoa-stuffed-peppers",
+      "chicken-caesar-wraps",
+      "firehall-greek-chicken-bowls",
+      "carolina-vinegar-pulled-pork",
+      "bbq-bacon-cheddar-burgers",
+      "overnight-smoked-brisket-hold",
+      "pepper-smoked-brisket-flat",
+      "kansas-city-pulled-pork-sandwiches",
+      "memphis-dry-rub-pulled-pork",
+      "texas-smoked-pulled-pork-shoulder",
+      "alabama-white-sauce-pulled-pork",
+      "firehall-double-smash-burgers-bbq",
+      "garlic-butter-shrimp-skewers"
+    ]
+  },
+  "issue_counts": {
+    "nutrition_estimated": 137,
+    "not_numeric_filter_eligible": 121,
+    "awkward_decimal_quantities": 103,
+    "schema_invalid": 72,
+    "no_equipment": 72,
+    "nutrition_top_level_mismatch": 72,
+    "ingredients_not_in_steps": 58,
+    "public_page_not_in_approved_catalog": 22,
+    "meat_without_internal_temp": 15,
+    "vague_doneness_language": 10,
+    "nutrition_not_structured": 10,
+    "duplicate_ingredient_lines": 6,
+    "nutrition_unavailable": 6,
+    "oven_without_temperature": 4,
+    "nutrition_calories_outlier": 3,
+    "hero_shared": 0
+  },
+  "nutrition_sources": {
+    "calculated": 293,
+    "estimated": 137,
+    "smoothie_highlights_text_only": 10,
+    "unavailable": 6
+  },
+  "exact_title_duplicates": [],
+  "templated_step_clusters": [],
+  "near_duplicates": [
+    {
+      "a": "breakfast-burrito-bar",
+      "b": "hall-breakfast-burritos",
+      "titleSim": 0.2,
+      "ingredientSim": 1
+    },
+    {
+      "a": "breakfast-burrito-bar",
+      "b": "turkey-sausage-burritos",
+      "titleSim": 0.17,
+      "ingredientSim": 0.8
+    },
+    {
+      "a": "hall-breakfast-burritos",
+      "b": "turkey-sausage-burritos",
+      "titleSim": 0.4,
+      "ingredientSim": 0.8
+    },
+    {
+      "a": "butter-chicken",
+      "b": "chicken-tikka-masala",
+      "titleSim": 0.25,
+      "ingredientSim": 0.79
+    },
+    {
+      "a": "firehall-taco-bowls",
+      "b": "turkey-taco-bowls",
+      "titleSim": 0.67,
+      "ingredientSim": 0.79
+    },
+    {
+      "a": "paneer-tikka-masala-bowls",
+      "b": "red-lentil-paneer-dal",
+      "titleSim": 0.14,
+      "ingredientSim": 0.79
+    },
+    {
+      "a": "pepperoni-pizza-night",
+      "b": "sicilian-sheet-pizza",
+      "titleSim": 0.2,
+      "ingredientSim": 0.73
+    },
+    {
+      "a": "asian-chicken-lettuce-cups",
+      "b": "turkey-lettuce-wrap-night",
+      "titleSim": 0.2,
+      "ingredientSim": 0.71
+    },
+    {
+      "a": "hall-taco-bar",
+      "b": "pork-carnitas-tacos",
+      "titleSim": 0,
+      "ingredientSim": 0.71
+    },
+    {
+      "a": "black-bean-egg-white-breakfast-burritos",
+      "b": "egg-white-black-bean-breakfast-quesadillas",
+      "titleSim": 0.71,
+      "ingredientSim": 0.63
+    },
+    {
+      "a": "firehall-supreme-pizza",
+      "b": "veggie-supreme-pizza",
+      "titleSim": 0.67,
+      "ingredientSim": 0.57
+    },
+    {
+      "a": "chicken-alfredo-bake",
+      "b": "skillet-chicken-alfredo",
+      "titleSim": 0.67,
+      "ingredientSim": 0.5
+    }
+  ],
+  "recipes_with_no_flags": 103,
+  "recipes": [
+    {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "title": "30-Minute Pasta e Fagioli for the Hall",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1",
+        "oven_without_temperature"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Olive Oil"
+        ]
+      }
+    },
+    {
+      "slug": "andouille-po-boy-rolls-crew",
+      "title": "Andouille Po Boy Rolls for the Crew",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "title": "Apple Cinnamon Baked Oatmeal",
+      "collection": "breakfast-performance",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "applewood-pork-shoulder-steaks",
+      "title": "Applewood Grilled Pork Shoulder Steaks",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Chicken Lettuce Cups",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "awkward_decimal_quantities:3"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "green onions"
+        ],
+        "awkward_quantities": [
+          "0.25 cup low-sodium soy sauce",
+          "0.33 cup hoisin sauce",
+          "0.75 cup crushed roasted peanuts"
+        ]
+      }
+    },
+    {
+      "slug": "bagel-lox-breakfast-board",
+      "title": "Bagel and Lox Breakfast Board",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "whipped butter"
+        ]
+      }
+    },
+    {
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "baked-falafel-hall-bowls",
+      "title": "Falafel Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:2",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "fresh parsley",
+          "fresh cilantro"
+        ],
+        "awkward_quantities": [
+          "0.75 cup tahini"
+        ]
+      }
+    },
+    {
+      "slug": "baked-oatmeal-mixed-berries",
+      "title": "Baked Oatmeal with Mixed Berries",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 cup brown sugar",
+          "0.25 cup melted butter"
+        ]
+      }
+    },
+    {
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "fresh basil leaves"
+        ]
+      }
+    },
+    {
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Batch Lasagna",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "bbq-breakfast-hash",
+      "title": "BBQ Breakfast Hash",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1",
+        "meat_without_internal_temp"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "shredded cheddar"
+        ]
+      }
+    },
+    {
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Honey"
+        ]
+      }
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "bbq-chicken-mac-and-cheese",
+      "title": "BBQ Chicken Mac and Cheese",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.8 Cup Crispy Fried Onions"
+        ]
+      }
+    },
+    {
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 Cup Mayonnaise"
+        ]
+      }
+    },
+    {
+      "slug": "bbq-meatball-skewers",
+      "title": "BBQ Meatball Skewers",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "beef-birria-with-consomme",
+      "title": "Beef Birria with Consommé for Dipping",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "meat_without_internal_temp",
+        "oven_without_temperature"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "beef-broccoli",
+      "title": "Beef and Broccoli",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1",
+        "meat_without_internal_temp"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Soy Sauce"
+        ]
+      }
+    },
+    {
+      "slug": "beef-dip",
+      "title": "Beef Dip Sandwiches",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 Cup Mayonnaise"
+        ]
+      }
+    },
+    {
+      "slug": "beef-gyros-for-the-hall",
+      "title": "Beef Gyros",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:2"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Jerk Or Poultry Rub",
+          "Lime Juice"
+        ]
+      }
+    },
+    {
+      "slug": "belgian-waffle-platter",
+      "title": "Belgian Waffle Platter",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "berry-vanilla-protein-overnight-oats",
+      "title": "Berry Vanilla Protein Overnight Oats",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "best-tuna-melt-for-the-hall",
+      "title": "Best Tuna Melt for the Hall (Diner Style)",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "big-chili",
+      "title": "Firehall Chili",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "big-pot-savory-oats",
+      "title": "Big-Pot Savory Oats",
+      "collection": "breakfast-performance",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1",
+        "vague_doneness_language",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "shredded cheddar"
+        ]
+      }
+    },
+    {
+      "slug": "biscuit-french-toast-sliders",
+      "title": "Biscuit French Toast Sliders",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "black-bean-cottage-cheese-enchilada-bake",
+      "title": "Black Bean & Cottage Cheese Enchilada Bake",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "black-bean-egg-white-breakfast-burritos",
+      "title": "Black Bean & Egg White Breakfast Burritos",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "blackened-cod-taco-night",
+      "title": "Blackened Cod Tacos",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup lime juice"
+        ]
+      }
+    },
+    {
+      "slug": "blackened-salmon-sweet-potato-bowls",
+      "title": "Blackened Salmon Sweet Potato Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "blueberry-almond",
+      "title": "Blueberry Almond Smoothie",
+      "collection": "smoothies",
+      "surfaces": [
+        "public_page",
+        "explore"
+      ],
+      "issues": [
+        "nutrition_not_structured"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "title": "Chicken Thighs with Sweet Potato and Spinach",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup extra-virgin olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "title": "Breakfast Crunchwraps",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "title": "Breakfast Enchiladas for the Crew",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "cilantro"
+        ]
+      }
+    },
+    {
+      "slug": "breakfast-fried-rice-crew",
+      "title": "Breakfast Fried Rice for the Crew",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "breakfast-nachos-supreme",
+      "title": "Breakfast Nachos Supreme",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "breakfast-poutine",
+      "title": "Breakfast Poutine",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "breakfast-quesadillas",
+      "title": "Breakfast Quesadillas",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "breakfast-sliders",
+      "title": "Breakfast Sliders",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "everything bagel seasoning"
+        ]
+      }
+    },
+    {
+      "slug": "breakfast-stromboli-roll",
+      "title": "Breakfast Stromboli Roll",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "brisket-style-beef-sandwiches-au-jus",
+      "title": "Brisket-Style Beef Sandwiches",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.8 Cup Frank's Hot Sauce"
+        ]
+      }
+    },
+    {
+      "slug": "buffalo-chicken-pizza",
+      "title": "Buffalo Chicken Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "title": "Buffalo Chicken Sweet Potato Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "buffalo-chicken-wraps",
+      "title": "Buffalo Chicken Wraps",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 cup hot sauce"
+        ]
+      }
+    },
+    {
+      "slug": "build-your-own-pho-bar",
+      "title": "Build-Your-Own Pho Bar",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "title": "Bulgogi Bowls",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "bun-bo-hue-noodle-soup",
+      "title": "Bun Bo Hue Noodle Soup",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "meat_without_internal_temp"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "burnt-ends-chili-crew",
+      "title": "Burnt Ends Chili for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "burrito-bowl-bar-night",
+      "title": "Burrito Bowl Bar Night",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "vague_doneness_language"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "buttermilk-pancakes",
+      "title": "Buttermilk Pancakes for the Crew",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:2"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "sugar",
+          "vanilla extract"
+        ]
+      }
+    },
+    {
+      "slug": "cajun-chicken-dirty-rice-bowls",
+      "title": "Cajun Chicken & Dirty Rice Bowls with Remoulade",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup plain Greek yogurt"
+        ]
+      }
+    },
+    {
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken and Rice",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "cajun-chicken-rice-skillet",
+      "title": "Cajun Chicken and Rice Skillet",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "cajun-lime-shrimp-black-bean-bowls",
+      "title": "Cajun Lime Shrimp & Black Bean Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup lime juice",
+          "0.25 cup fresh cilantro"
+        ]
+      }
+    },
+    {
+      "slug": "cajun-shrimp-rice-bowls",
+      "title": "Cajun Shrimp Rice Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "caprese-chicken-bake",
+      "title": "Caprese Chicken Bake",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "garlic cloves"
+        ]
+      }
+    },
+    {
+      "slug": "caprese-steak-skewers-crew",
+      "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "cast-iron-breakfast-skillet",
+      "title": "Cast Iron Breakfast Skillet",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "butter"
+        ]
+      }
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "title": "Cast Iron Chicken Fajitas",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "cast-iron-steak-fajita-sizzlers",
+      "title": "Cast Iron Skirt Steak Sizzlers",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "cedar-plank-salmon",
+      "title": "Cedar Plank Salmon",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "charred-broccolini-lemon-tray",
+      "title": "Sicilian Anchovy Broccolini Tray",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_calories_outlier",
+        "ingredients_not_in_steps:3"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Anchovy Fillets",
+          "Golden Raisins",
+          "Pine Nuts"
+        ]
+      }
+    },
+    {
+      "slug": "cheesy-beef-nacho-bake",
+      "title": "Cheesy Beef Nacho Bake",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "cheesy-chicken-broccoli-rice",
+      "title": "Cheesy Chicken Broccoli Rice",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chicken-and-waffles-crew",
+      "title": "Chicken and Waffles for the Crew",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "chicken-cacciatore-crew",
+      "title": "Chicken Cacciatore for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "chicken-caesar",
+      "title": "Chicken Caesar Salad",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2",
+        "duplicate_ingredient_lines:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup All-Purpose Flour",
+          "0.8 Cup Whole Milk"
+        ]
+      }
+    },
+    {
+      "slug": "chicken-enchilada-skillet-light",
+      "title": "Chicken Enchilada Skillet",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chicken-marsala-lightened",
+      "title": "Chicken Marsala (Lightened)",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "1.25 cups dry marsala wine",
+          "0.25 cup fresh parsley"
+        ]
+      }
+    },
+    {
+      "slug": "chicken-paprikash-hall",
+      "title": "Chicken Paprikash for the Hall",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parmesan",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "title": "Chicken Quesadillas",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chicken-shawarma-pitas",
+      "title": "Chicken Shawarma Pitas",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "ingredients_not_in_steps:1",
+        "duplicate_ingredient_lines:2"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "tomatoes"
+        ]
+      }
+    },
+    {
+      "slug": "chicken-souvlaki",
+      "title": "Chicken Souvlaki",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chicken-thigh-stretch-dinner",
+      "title": "Chicken Thigh Stretch Dinner",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chicken-tortilla-soup-for-the-hall",
+      "title": "Chicken Tortilla Soup for the Hall",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chicken-wing-bar-night",
+      "title": "Chicken Wing Bar Night",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "chickpea-pasta-primavera-white-beans",
+      "title": "Chickpea Pasta Primavera with White Beans",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "chilaquiles-verde-bake",
+      "title": "Chilaquiles Verde Bake",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "chili-lime-grilled-tilapia",
+      "title": "Ancho-Tilapia with Charred Corn Salsa",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "chipotle-chicken-burrito-bowls",
+      "title": "Chipotle Chicken Burrito Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "chipotle-lime-chicken-tacos",
+      "title": "Chipotle Lime Chicken Tacos",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup lime juice"
+        ]
+      }
+    },
+    {
+      "slug": "chocolate-banana-recovery",
+      "title": "Chocolate Banana Recovery Smoothie",
+      "collection": "smoothies",
+      "surfaces": [
+        "public_page",
+        "explore"
+      ],
+      "issues": [
+        "nutrition_not_structured"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "chorizo-breakfast-hash",
+      "title": "Chorizo Breakfast Hash",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "chorizo-breakfast-tacos",
+      "title": "Chorizo Breakfast Tacos",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "citrus-ginger",
+      "title": "Citrus Ginger Smoothie",
+      "collection": "smoothies",
+      "surfaces": [
+        "public_page",
+        "explore"
+      ],
+      "issues": [
+        "nutrition_not_structured"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "classic-patty-melt-for-the-crew",
+      "title": "Classic Patty Melt for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 cup unsalted butter"
+        ]
+      }
+    },
+    {
+      "slug": "classic-poutine-feed-crew",
+      "title": "Classic Poutine Feed for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "club-sandwich-breakfast-bake",
+      "title": "Club Sandwich Breakfast Bake",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Roma tomatoes"
+        ]
+      }
+    },
+    {
+      "slug": "competition-bbq-chicken-thighs",
+      "title": "Competition BBQ Chicken Thighs",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "coq-au-vin-batch",
+      "title": "Coq au Vin Batch",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup fresh parsley"
+        ]
+      }
+    },
+    {
+      "slug": "corned-beef-hash-breakfast",
+      "title": "Corned Beef Hash Breakfast",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "costco-rotisserie-remix",
+      "title": "Costco Rotisserie Chicken Remix",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Protein Pasta Bake",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "cottage-cheese-spinach-stuffed-shells",
+      "title": "Cottage Cheese & Spinach Stuffed Shells",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "cottage-cheese-veggie-egg-bake",
+      "title": "Cottage Cheese Veggie Egg Bake",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "cottage-pie-for-the-crew",
+      "title": "Cottage Pie for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "country-fried-steak-eggs",
+      "title": "Country Fried Steak and Eggs Breakfast",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "creamy-chicken-penne-alfredo",
+      "title": "Creamy Chicken Penne Alfredo",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "creamy-tuscan-chicken",
+      "title": "Tuscan Chicken",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "crew-french-toast-bake",
+      "title": "Crew French Toast Bake",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "crispy-fish-taco-night",
+      "title": "Fish Tacos",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup lime juice"
+        ]
+      }
+    },
+    {
+      "slug": "crock-barbacoa-chicken",
+      "title": "Barbacoa Chicken",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:2",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "russet potatoes",
+          "limes"
+        ],
+        "awkward_quantities": [
+          "0.33 cup lime juice"
+        ]
+      }
+    },
+    {
+      "slug": "cuban-beef-picadillo-bowls",
+      "title": "Cuban-Style Beef Picadillo Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 cup green olives"
+        ]
+      }
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "title": "Denver Breakfast Casserole",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "shredded cheddar"
+        ]
+      }
+    },
+    {
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "dirty-rice-crew-skillet",
+      "title": "Dirty Rice Crew Skillet",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "dutch-oven-pot-roast",
+      "title": "Dutch Oven Pot Roast",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "egg-white-black-bean-breakfast-quesadillas",
+      "title": "Egg White & Black Bean Breakfast Quesadillas",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "eggs-benedict-hall-style",
+      "title": "Eggs Benedict Hall Style",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "enchilada-beef-skillet",
+      "title": "Beef Enchilada Skillet",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "enchilada-casserole",
+      "title": "Chicken Enchilada Casserole",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Black Olives, Sliced"
+        ]
+      }
+    },
+    {
+      "slug": "fajita-bar-night",
+      "title": "Fajita Bar Night",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "farmers-breakfast-casserole",
+      "title": "Farmer's Breakfast Casserole",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "fast-philly-skillet",
+      "title": "Quick Philly Skillet",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "meat_without_internal_temp"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "filipino-chicken-adobo",
+      "title": "Filipino-Style Chicken Adobo",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 cup soy sauce"
+        ]
+      }
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "title": "Fire Captain Omelette Bar",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "firehall-antipasto-pasta-salad",
+      "title": "Mortadella Farfalle Antipasto Tray",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "firehall-breakfast-pizza",
+      "title": "Firehall Breakfast Pizza",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "sliced green onions"
+        ]
+      }
+    },
+    {
+      "slug": "firehall-burnt-ends-platter",
+      "title": "Firehall Burnt Ends Platter",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Dill Pickle Chips"
+        ]
+      }
+    },
+    {
+      "slug": "firehall-charcuterie-board",
+      "title": "Firehall Charcuterie Board",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "firehall-donair-platter",
+      "title": "Firehall Donair Platter",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "firehall-gyro-bowls",
+      "title": "Firehall Gyro Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "firehall-hibachi-mixed-grill-crew",
+      "title": "Teppan Shrimp and Pork Belly Mixed Grill",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "firehall-korean-beef-bowls",
+      "title": "Korean Beef Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "firehall-street-elote-cups",
+      "title": "Epazote Esquites Street Cups",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_calories_outlier",
+        "ingredients_not_in_steps:5"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Fresh Epazote",
+          "Queso Fresco",
+          "Tajín Seasoning",
+          "Crushed Totopos",
+          "Chipotle Mayo"
+        ]
+      }
+    },
+    {
+      "slug": "firehall-supreme-pizza",
+      "title": "Firehall Supreme Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "nutrition_unavailable",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "firehouse-breakfast-protein-bowls",
+      "title": "Firehouse Breakfast Protein Bowls",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "vague_doneness_language"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "firehouse-chicken-black-bean-bowls",
+      "title": "Firehouse Chicken & Black Bean Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:2",
+        "duplicate_ingredient_lines:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup lime juice",
+          "0.25 cup fresh cilantro"
+        ]
+      }
+    },
+    {
+      "slug": "firehouse-dense-bean-salad",
+      "title": "Firehouse Dense Bean Salad",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup olive oil",
+          "0.33 cup lemon juice"
+        ]
+      }
+    },
+    {
+      "slug": "firehouse-diner-burger-bowls",
+      "title": "Firehouse Diner Burger Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup ketchup"
+        ]
+      }
+    },
+    {
+      "slug": "firehouse-lentil-chili",
+      "title": "Firehouse Lentil Chili",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "firehouse-sweet-potato-beef-protein-bowls",
+      "title": "Firehouse Sweet Potato & Beef Protein Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup fresh cilantro"
+        ]
+      }
+    },
+    {
+      "slug": "firehouse-turkey-white-bean-soup",
+      "title": "Firehouse Turkey & White Bean Soup",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "oven_without_temperature"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "flank-chimichurri",
+      "title": "Flank Steak with Chimichurri",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Red Wine Vinegar"
+        ]
+      }
+    },
+    {
+      "slug": "flat-top-philly-cheesesteaks-crew",
+      "title": "Cooper Sharp Chopped Ribeye Hoagies",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:2"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Kitchen Bouquet",
+          "Dried Basil"
+        ]
+      }
+    },
+    {
+      "slug": "four-cheese-white-pizza",
+      "title": "Four-Cheese White Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "four-step-chicken-piccata",
+      "title": "Four-Step Chicken Piccata",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:3"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.8 Cup Dry White Wine",
+          "0.3 Cup Fresh Lemon Juice",
+          "0.3 Cup Fresh Parsley"
+        ]
+      }
+    },
+    {
+      "slug": "french-onion-soup-for-the-hall",
+      "title": "French Onion Soup for the Hall",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "french-toast-casserole",
+      "title": "French Toast Casserole",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Thick-sliced brioche or Texas toast, cubed"
+        ]
+      }
+    },
+    {
+      "slug": "game-day-nachos",
+      "title": "Game Day Nachos",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "game-day-pizza-sliders",
+      "title": "Game Day Pizza Sliders",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "garlic-steak-broccoli-cottage-cheese-bowls",
+      "title": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup fresh chives"
+        ]
+      }
+    },
+    {
+      "slug": "general-tsos-baked-chicken",
+      "title": "General Tso's-Style Baked Chicken",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "olive oil spray"
+        ],
+        "awkward_quantities": [
+          "0.33 cup soy sauce"
+        ]
+      }
+    },
+    {
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "title": "Ginger Soy Chicken Rice Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "gochujang-beef-skewers-crew",
+      "title": "Seoul Chili Pear Beef Cubes",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Boneless Short Rib"
+        ]
+      }
+    },
+    {
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+      "title": "Greek Beef Meatballs (Keftedes) with Lemon Orzo & Tzatziki",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup fresh mint",
+          "0.25 cup fresh dill"
+        ]
+      }
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "greek-chicken-pitas",
+      "title": "Greek Chicken Pitas",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup lemon juice"
+        ]
+      }
+    },
+    {
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Lemon Chicken and Potatoes",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "title": "Greek-Spiced Beef Burger Bowls with Tzatziki Slaw",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "3.25 lb lean ground beef",
+          "0.25 cup fresh dill"
+        ]
+      }
+    },
+    {
+      "slug": "greek-yogurt-white-bean-power-bowls",
+      "title": "Greek Yogurt & White Bean Power Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup lemon juice",
+          "0.25 cup olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "green-chile-chicken-stew",
+      "title": "Green Chile Chicken Stew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "green-pineapple",
+      "title": "Green Pineapple Smoothie",
+      "collection": "smoothies",
+      "surfaces": [
+        "public_page",
+        "explore"
+      ],
+      "issues": [
+        "nutrition_not_structured"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "griddle-smash-sausage-peppers",
+      "title": "Giardiniera Smash Sausage Hoagies",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:3"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Giardiniera Relish",
+          "Fennel Pollen",
+          "Calabrian Chili Paste"
+        ]
+      }
+    },
+    {
+      "slug": "grilled-chicken-pesto-panini-crew",
+      "title": "Sun-Dried Tomato Pesto Panini Press",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "grilled-cod-lemon-packets",
+      "title": "Caper-Butter Cod Foil Packets",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "title": "Street Corn with Cotija",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "grilled-flank-fajita-bar",
+      "title": "Grilled Flank Fajita Bar",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "grilled-peach-burrata-salad",
+      "title": "Pistachio Peach and Burrata Salad",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_calories_outlier",
+        "ingredients_not_in_steps:3"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Pistachios",
+          "Prosecco Reduction",
+          "Fresh Mint"
+        ]
+      }
+    },
+    {
+      "slug": "grilled-pork-chops",
+      "title": "Grilled Pork Chops",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "grilled-reuben-sandwiches-crew",
+      "title": "Grilled Reuben Sandwiches for the Crew",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Pickles"
+        ]
+      }
+    },
+    {
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Shrimp and Quinoa Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup lemon juice",
+          "0.33 cup extra-virgin olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "avocado"
+        ]
+      }
+    },
+    {
+      "slug": "hall-breakfast-burritos",
+      "title": "Hall Breakfast Burritos",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "hall-breakfast-wraps",
+      "title": "Hall Breakfast Wraps",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "hall-burger-bar",
+      "title": "Hall Burger Bar",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "hall-chicken-noodle-soup",
+      "title": "Hall Chicken Noodle Soup",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "title": "Hall Sausage Biscuits & Gravy",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "hall-sloppy-joe-feed",
+      "title": "Hall Sloppy Joe Feed",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Taco Bar",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "vague_doneness_language"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "hawaiian-pizza",
+      "title": "Hawaiian Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "herb-baked-salmon-tray",
+      "title": "Baked Salmon Tray",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup extra-virgin olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "herb-marinated-flank-steak-chimichurri-farro",
+      "title": "Herb-Marinated Flank Steak with Chimichurri Farro",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup red wine vinegar",
+          "0.75 cup extra-virgin olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "herb-roasted-thighs",
+      "title": "Herb Roasted Chicken Thighs",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:2"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Fresh Thyme",
+          "Fresh Rosemary"
+        ]
+      }
+    },
+    {
+      "slug": "hickory-smoked-chicken-breast",
+      "title": "Hickory Smoked Chicken Breast",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "hickory-turkey-legs",
+      "title": "Hickory Smoked Turkey Legs",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "high-protein-breakfast-burrito-bowls",
+      "title": "High-Protein Breakfast Burrito Bowls",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "high-protein-chicken-fried-rice",
+      "title": "High-Protein Chicken Fried Rice",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup soy sauce"
+        ]
+      }
+    },
+    {
+      "slug": "high-protein-chicken-quinoa-meal-prep-bowls",
+      "title": "High-Protein Chicken & Quinoa Meal-Prep Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "high-protein-parfaits",
+      "title": "High-Protein Yogurt Parfaits",
+      "collection": "breakfast-performance",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:2",
+        "meat_without_internal_temp",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "chia seeds or ground flax",
+          "vanilla extract"
+        ]
+      }
+    },
+    {
+      "slug": "honey-chipotle-chicken-thighs",
+      "title": "Honey Chipotle Grilled Chicken Thighs",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup honey"
+        ]
+      }
+    },
+    {
+      "slug": "honey-garlic-pork-tenderloin",
+      "title": "Honey Garlic Pork Tenderloin",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 cup Soy sauce"
+        ]
+      }
+    },
+    {
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup honey",
+          "0.25 cup lime juice"
+        ]
+      }
+    },
+    {
+      "slug": "honey-mustard-oven-chicken-thighs",
+      "title": "Honey Mustard Baked Chicken Thighs",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "honey-mustard-turkey-meatball-bowls",
+      "title": "Honey Mustard Turkey Meatball Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup dijon mustard",
+          "0.25 cup honey"
+        ]
+      }
+    },
+    {
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "honey-sriracha-shrimp-skewers",
+      "title": "Palm Sugar Lime Shrimp Skewers",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "hot-honey-grilled-sausage-peppers",
+      "title": "Hot Honey Grilled Sausage & Peppers",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "huevos-rancheros-crew",
+      "title": "Huevos Rancheros for the Crew",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "hummus-chicken-platter",
+      "title": "Hummus Chicken Platter",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2",
+        "vague_doneness_language"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup lemon juice",
+          "0.25 cup olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "hungarian-goulash-crew",
+      "title": "Hungarian Goulash for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "meat_without_internal_temp",
+        "oven_without_temperature"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "irish-breakfast-fry-up",
+      "title": "Irish Breakfast Fry-Up",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "italian-beef-slow-cooker",
+      "title": "Italian Beef Slow Cooker Sandwiches",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "jalapeno-cheddar-smoked-sausages",
+      "title": "Jalapeño Cheddar Smoked Sausages",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "jalapeno-popper-dip",
+      "title": "Jalapeño Popper Dip",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "jalapeno-popper-pizza",
+      "title": "Jalapeño Popper Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "nutrition_unavailable",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "jambalaya",
+      "title": "Jambalaya",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Rice and Peas",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "johnnycakes-with-syrup",
+      "title": "Johnnycakes with Maple Syrup",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "meat_without_internal_temp"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "korean-beef-rice-bowls",
+      "title": "Beef Rice Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "green onions"
+        ],
+        "awkward_quantities": [
+          "0.25 cup brown sugar",
+          "0.25 cup rice vinegar"
+        ]
+      }
+    },
+    {
+      "slug": "korean-bulgogi-grill-night",
+      "title": "Korean Bulgogi Grill Night",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "korean-turkey-rice-bowls",
+      "title": "Korean Turkey Rice Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "kung-pao-chicken-rice-bowls",
+      "title": "Kung Pao Chicken & Rice Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup soy sauce",
+          "0.75 cup chicken broth"
+        ]
+      }
+    },
+    {
+      "slug": "lamb-kofta-skewer-platter",
+      "title": "Lamb Kofta Skewer Platter",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "lamb-merguez-skewers-crew",
+      "title": "North African Urfa Lamb Merguez Logs",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Pomegranate Seeds"
+        ]
+      }
+    },
+    {
+      "slug": "lebanese-chicken-shish-platter",
+      "title": "Lebanese Chicken Shish Platter",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:2",
+        "duplicate_ingredient_lines:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup lemon juice",
+          "0.25 cup olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "leftover-roast-beef-bowls",
+      "title": "Leftover Roast Beef Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "lemon-chicken-orzo-soup",
+      "title": "Lemon Chicken Orzo Soup",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup lemon juice",
+          "0.33 cup fresh dill"
+        ]
+      }
+    },
+    {
+      "slug": "lemon-garlic-chicken-tray",
+      "title": "Lemon Garlic Chicken Tray",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "lemon-garlic-shrimp-pasta",
+      "title": "Lemon Garlic Shrimp Pasta",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:3"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup extra-virgin olive oil",
+          "0.25 cup capers",
+          "0.75 cup fresh parsley"
+        ]
+      }
+    },
+    {
+      "slug": "lemon-herb-cod-roasted-vegetables",
+      "title": "Lemon-Herb Cod with Roasted Vegetables",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup fresh parsley"
+        ]
+      }
+    },
+    {
+      "slug": "lemon-herb-salmon",
+      "title": "Lemon Herb Salmon",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 Cup Fresh Dill (chopped)",
+          "0.25 Cup Fresh Parsley (chopped)"
+        ]
+      }
+    },
+    {
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:3"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup capers",
+          "0.25 cup extra-virgin olive oil",
+          "0.75 cup Parmesan cheese"
+        ]
+      }
+    },
+    {
+      "slug": "lentil-mushroom-bolognese",
+      "title": "Lentil Bolognese",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Baked Potato Bar",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Warm Chili Or Pulled Beef (optional)"
+        ]
+      }
+    },
+    {
+      "slug": "loaded-baked-potato-soup-crock",
+      "title": "Loaded Baked Potato Soup Crock",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "loaded-firehouse-sweet-potatoes",
+      "title": "Loaded Firehouse Sweet Potatoes",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "loaded-nacho-bar-night",
+      "title": "Loaded Nacho Bar Night",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "title": "Nacho Skillet",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "title": "Potato Bar Feed",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "loaded-potato-skins",
+      "title": "Loaded Potato Skins",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "loaded-ranch-potato-salad-crew",
+      "title": "Blue Cheese Fingerling Ranch Tray",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:3"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Crumbled Blue Cheese",
+          "Fresh Chives",
+          "Watermelon Radish"
+        ]
+      }
+    },
+    {
+      "slug": "lumberjack-breakfast-platter",
+      "title": "Lumberjack Breakfast Platter",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "malaysian-laksa-soup",
+      "title": "Malaysian Laksa Soup",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "maple-bourbon-grilled-trout",
+      "title": "Pecan Bourbon Whole Trout Board",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "maple-cured-salmon-plank",
+      "title": "Maple-Cured Salmon Plank",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup maple syrup",
+          "0.25 cup fresh dill"
+        ]
+      }
+    },
+    {
+      "slug": "maple-mustard-salmon-tray",
+      "title": "Maple Mustard Salmon Tray",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup maple syrup"
+        ]
+      }
+    },
+    {
+      "slug": "maple-sausage-pinwheels",
+      "title": "Maple Sausage Pinwheels",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1",
+        "duplicate_ingredient_lines:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "everything bagel seasoning"
+        ]
+      }
+    },
+    {
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup maple syrup",
+          "0.25 cup low-sodium soy sauce"
+        ]
+      }
+    },
+    {
+      "slug": "margherita-pizza",
+      "title": "Margherita Pizza",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Extra-Virgin Olive Oil"
+        ]
+      }
+    },
+    {
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Pizza",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Dried Oregano"
+        ]
+      }
+    },
+    {
+      "slug": "meatball-hoagies",
+      "title": "Meatball Hoagies",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 Cup Whole Milk"
+        ]
+      }
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "title": "Meatloaf and Mashed Potatoes",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Baked Cod Tray",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "cod fillets"
+        ],
+        "awkward_quantities": [
+          "0.25 cup capers",
+          "0.33 cup extra-virgin olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "mediterranean-beef-bowls",
+      "title": "Mediterranean Beef Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "mediterranean-beef-kofta-bowls",
+      "title": "Mediterranean Beef Kofta Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "awkward_decimal_quantities:3"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Roma tomatoes"
+        ],
+        "awkward_quantities": [
+          "0.25 cup toasted vermicelli noodles",
+          "0.75 cup tahini",
+          "0.33 cup lemon juice"
+        ]
+      }
+    },
+    {
+      "slug": "mediterranean-chicken-farro-bowls",
+      "title": "Mediterranean Chicken Farro Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "mediterranean-chicken-white-bean-skillet",
+      "title": "Mediterranean Chicken & White Bean Skillet",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "mediterranean-feast-night",
+      "title": "Mediterranean Feast Night",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "vague_doneness_language"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 Cup Brown Sugar"
+        ]
+      }
+    },
+    {
+      "slug": "menemen-for-the-crew",
+      "title": "Menemen for the Crew",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 cup extra-virgin olive oil",
+          "0.25 cup chopped chives or parsley"
+        ]
+      }
+    },
+    {
+      "slug": "mesquite-chuck-roast",
+      "title": "Mesquite Smoked Chuck Roast",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "migas-for-the-crew",
+      "title": "Migas for the Crew",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1",
+        "meat_without_internal_temp"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Roma tomatoes"
+        ]
+      }
+    },
+    {
+      "slug": "miso-ramen-bar",
+      "title": "Miso Ramen Bar",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "mississippi-pot-roast-crew",
+      "title": "Mississippi Pot Roast for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "mixed-berry-protein",
+      "title": "Mixed Berry Protein Smoothie",
+      "collection": "smoothies",
+      "surfaces": [
+        "public_page",
+        "explore"
+      ],
+      "issues": [
+        "nutrition_not_structured"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "mixed-lamb-chop-grill-board",
+      "title": "Za'atar Loin and Shoulder Lamb Board",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "mocha-protein",
+      "title": "Mocha Protein Smoothie",
+      "collection": "smoothies",
+      "surfaces": [
+        "public_page",
+        "explore"
+      ],
+      "issues": [
+        "nutrition_not_structured"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "molasses-bourbon-pork-ribs",
+      "title": "Molasses Bourbon Pork Ribs",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "mongolian-beef-flat-top-crew",
+      "title": "Scallion Crisp Mongolian Flank Tray",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "monte-cristo-sandwiches",
+      "title": "Monte Cristo Sandwiches",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "montreal-smoked-meat-platter",
+      "title": "Montreal Smoked Meat Platter",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken and Chickpeas",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "moroccan-chicken-kebab-platter",
+      "title": "Moroccan Chicken Kebab Platter",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "moroccan-meatballs",
+      "title": "Moroccan Lamb Meatballs",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Ground Lamb Or Beef"
+        ]
+      }
+    },
+    {
+      "slug": "mostaccioli-sausage-bake",
+      "title": "Baked Mostaccioli with Sausage",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "mushroom-swiss-steak-pan",
+      "title": "Mushroom Swiss Steak Pan",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "meat_without_internal_temp"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "nashville-hot-chicken-pizza",
+      "title": "Nashville Hot Chicken Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "nutrition_unavailable",
+        "awkward_decimal_quantities:1",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 cup Pickle brine"
+        ]
+      }
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "title": "NY Strip with Herb Butter",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+      "title": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "Chicken and Rice",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Fresh Parsley, Chopped"
+        ]
+      }
+    },
+    {
+      "slug": "overnight-french-toast-bake",
+      "title": "Overnight French Toast Bake",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "overnight-sausage-strata",
+      "title": "Overnight Sausage Strata",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "pad-thai",
+      "title": "Pad Thai",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Warm Water"
+        ]
+      }
+    },
+    {
+      "slug": "pancake-short-stack",
+      "title": "Pancake Short Stack",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "paneer-tikka-masala-bowls",
+      "title": "Paneer Tikka Masala Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:3"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "2.25 lb paneer",
+          "0.33 cup heavy cream",
+          "0.25 cup fresh cilantro"
+        ]
+      }
+    },
+    {
+      "slug": "paprika-roasted-chicken-quarters",
+      "title": "Paprika Roasted Chicken Quarters",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "parm-hero-subs",
+      "title": "Parm Hero Subs",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "pasta-bar-night",
+      "title": "Pasta Bar Night",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "pasta-e-ceci-for-the-hall",
+      "title": "Pasta e Ceci (Pasta with Chickpeas)",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Red Pepper Flakes"
+        ],
+        "awkward_quantities": [
+          "0.3 Cup Fresh Parsley"
+        ]
+      }
+    },
+    {
+      "slug": "pasta-e-fagioli-hall",
+      "title": "Pasta e Fagioli for the Hall",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "peanut-butter-banana-recovery",
+      "title": "Peanut Butter Banana Recovery Shake",
+      "collection": "smoothies",
+      "surfaces": [
+        "public_page",
+        "explore"
+      ],
+      "issues": [
+        "nutrition_not_structured"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "peanut-butter-protein-overnight-oats",
+      "title": "Peanut Butter Protein Overnight Oats",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "peanut-chicken-rice-bowls",
+      "title": "Peanut Chicken Rice Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "pellet-smoked-chicken-quarters",
+      "title": "Pellet Smoked Chicken Quarters",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "pepper-steak-onions",
+      "title": "Pepper Steak with Onions",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "meat_without_internal_temp"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "pepperoni-pizza-night",
+      "title": "Pepperoni Pizza",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "performance-burrito-bowls",
+      "title": "Chicken Burrito Bowls",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "peri-peri-chicken-platter",
+      "title": "Peri Peri Chicken Platter",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "peruvian-sheet-pan-chicken-aji-verde",
+      "title": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:3"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup soy sauce",
+          "0.33 cup lime juice",
+          "0.25 cup plain Greek yogurt"
+        ]
+      }
+    },
+    {
+      "slug": "pesto-chicken-pizza",
+      "title": "Pesto Chicken Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 cup Balsamic glaze"
+        ]
+      }
+    },
+    {
+      "slug": "pesto-tomato-chicken-tray",
+      "title": "Pesto Chicken Tray",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "garlic cloves"
+        ]
+      }
+    },
+    {
+      "slug": "philly-cheesesteak-pizza",
+      "title": "Philly Cheesesteak Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "philly-cheesesteak-sliders",
+      "title": "Philly Cheesesteak Sliders",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:3"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Ground Beef",
+          "Yellow Onion",
+          "Garlic Cloves"
+        ]
+      }
+    },
+    {
+      "slug": "pollo-asado-citrus-platter",
+      "title": "Yucatán Achiote Pollo Asado Spread",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:2"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Jicama Sticks",
+          "Habanero Salsa"
+        ]
+      }
+    },
+    {
+      "slug": "pork-belly-burnt-ends",
+      "title": "Pork Belly Burnt Ends",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "title": "Pork Carnitas Tacos",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "pork-satay-skewers-crew",
+      "title": "Indonesian Tamarind Pork Satay Batches",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "portuguese-linguica-grill-platter",
+      "title": "Lisbon Piri-Piri Linguica Spread",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Fresh Parsley"
+        ]
+      }
+    },
+    {
+      "slug": "pressed-cuban-sandwiches-crew",
+      "title": "Pressed Cuban Sandwiches for the Crew",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "pretzel-bite-platter",
+      "title": "Pretzel Bite Platter with Beer Cheese",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "protein-french-toast",
+      "title": "Protein French Toast",
+      "collection": "breakfast-performance",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Carolina-Style Pulled Pork Sandwiches",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Pickle Chips"
+        ]
+      }
+    },
+    {
+      "slug": "quick-egg-tacos",
+      "title": "Quick Egg Tacos",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "red-beans-and-rice-for-the-hall",
+      "title": "Red Beans and Rice for the Hall",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "red-lentil-paneer-dal",
+      "title": "Red Lentil & Paneer Dal",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "2.25 lb paneer",
+          "0.25 cup fresh cilantro"
+        ]
+      }
+    },
+    {
+      "slug": "reverse-seared-ribeye-crew",
+      "title": "Reverse-Seared Ribeye for the Crew",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "rice-bowl-bar-night",
+      "title": "Rice Bowl Bar Night",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "rigatoni-meat-sauce-batch",
+      "title": "Rigatoni with Meat Sauce",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "salmon-rice-bowls-crew",
+      "title": "Salmon Rice Bowls for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "salsa-verde-chicken-crock",
+      "title": "Salsa Verde Chicken Crock",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "limes"
+        ]
+      }
+    },
+    {
+      "slug": "salsa-verde-crock-chicken",
+      "title": "Salsa Verde Crock Chicken",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "sandwich-board-night",
+      "title": "Sandwich Board Night",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "santa-maria-tri-tip-roast",
+      "title": "Santa Maria Tri-Tip Roast",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "sausage-egg-cheese-sandwiches",
+      "title": "Sausage Egg & Cheese Sandwiches",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "sausage-peppers-on-buns",
+      "title": "Sausage & Peppers on Buns",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "savory-cottage-cheese-breakfast-bowls",
+      "title": "Savory Cottage Cheese Breakfast Bowls",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "scrapple-and-eggs-skillet",
+      "title": "Scrapple and Eggs Skillet",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "sesame-ginger-tofu-bowls",
+      "title": "Sesame Ginger Tofu Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup soy sauce"
+        ]
+      }
+    },
+    {
+      "slug": "shakshuka-for-the-hall",
+      "title": "Shakshuka for the Hall",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "meat_without_internal_temp"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "shawarma-bar-night",
+      "title": "Shawarma Bar Night",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "shawarma-chicken-rice-bowls",
+      "title": "Shawarma Chicken Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup lemon juice",
+          "0.33 cup olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "sheet-pan-breakfast-hash",
+      "title": "Sheet Pan Breakfast Hash",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "shredded cheddar"
+        ]
+      }
+    },
+    {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "title": "Sheet Pan Breakfast Sandwiches",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
+      "title": "Sheet-Pan Chimichurri Chicken with Charred Vegetables",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup red wine vinegar",
+          "0.75 cup extra-virgin olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Chicken Fajitas",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Olive Oil"
+        ]
+      }
+    },
+    {
+      "slug": "sheet-pan-full-english",
+      "title": "Sheet Pan Full English",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
+      "title": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:2",
+        "vague_doneness_language"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup lemon juice",
+          "0.33 cup olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "title": "Chicken Meal Prep Trays",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1",
+        "vague_doneness_language"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 cup Olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "sheet-pan-meatball-marinara",
+      "title": "Sheet Pan Meatball Marinara Feed",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "title": "Sheet Pan Parmesan-Dijon Chicken Thigh Dinner",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.8 Cup Grated Parmesan Cheese",
+          "0.3 Cup Dijon Mustard"
+        ]
+      }
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sausage and Peppers",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 cup Olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "shrimp-and-grits-breakfast",
+      "title": "Shrimp and Grits Breakfast",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "sicilian-sheet-pizza",
+      "title": "Sicilian Sheet Pan Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "nutrition_unavailable",
+        "awkward_decimal_quantities:1",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.8 cup Grated parmesan"
+        ]
+      }
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "title": "Chicken Alfredo",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Fettuccine Or Penne"
+        ],
+        "awkward_quantities": [
+          "0.3 Cup Fresh Parsley, Chopped"
+        ]
+      }
+    },
+    {
+      "slug": "slider-bar",
+      "title": "Slider Bar",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "BBQ Sauce"
+        ]
+      }
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 Cup Mayonnaise"
+        ]
+      }
+    },
+    {
+      "slug": "smoked-baked-beans-crew",
+      "title": "Smoked Baked Beans for the Crew",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "smoked-bbq-chicken-wings-tray",
+      "title": "Smoked BBQ Chicken Wings Tray",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "smoked-brisket-bbq-pizza",
+      "title": "Smoked Brisket BBQ Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "nutrition_unavailable",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "smoked-chicken-quarters-white-sauce",
+      "title": "Smoked Chicken Quarters with White Sauce",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "smoked-corned-beef",
+      "title": "Smoked Corned Beef Brisket",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "smoked-mac-and-cheese-crew",
+      "title": "Smoked Mac and Cheese for the Crew",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "smoked-meatloaf",
+      "title": "Smoked Meatloaf with Glaze",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "smoked-picanha-steak-platter",
+      "title": "Smoked Picanha Steak Platter",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "smoked-potato-salad-tray",
+      "title": "Smoked Potato Salad Tray",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "vague_doneness_language"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "smoked-queso-fundido",
+      "title": "Smoked Queso Fundido",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "vague_doneness_language"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "smoked-salmon-benedit",
+      "title": "Smoked Salmon Benedict",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "smoked-sausage-platter",
+      "title": "Smoked Sausage Platter",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "smoked-tri-tip",
+      "title": "Smoked Tri-Tip Roast",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "smoked-turkey-breast",
+      "title": "Smoked Turkey Breast for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White Sauce",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Apple Cider Vinegar",
+          "0.3 Tsp Cayenne Pepper"
+        ]
+      }
+    },
+    {
+      "slug": "smoker-nachos-crew",
+      "title": "Smoker Nachos for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "smoky-lentil-kale-soup",
+      "title": "Lentil and Kale Soup",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "meat_without_internal_temp"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "soft-pretzel-dogs",
+      "title": "Soft Pretzel Hot Dogs",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "southwest-beef-sweet-potato-skillet",
+      "title": "Southwest Beef & Sweet Potato Skillet",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "southwest-black-bean-corn-bowls",
+      "title": "Southwest Black Bean & Corn Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup lime juice",
+          "0.25 cup olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "southwest-egg-bake",
+      "title": "Southwest Egg Bake",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "southwest-steak-bowls",
+      "title": "Southwest Steak Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "title": "Spaghetti Aglio e Olio for the Hall",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "spanish-chicken-chorizo-rice",
+      "title": "Chicken and Chorizo Rice",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "spanish-rice-chicken-one-pot",
+      "title": "Spanish Rice Chicken One Pot",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "spatchcock-lemon-roast-chicken",
+      "title": "Spatchcock Lemon Roast Chicken",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "spicy-tomato-bisque-grilled-brie-toast",
+      "title": "Spicy Tomato Bisque with Grilled Brie Toast",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Tsp Cayenne Pepper"
+        ]
+      }
+    },
+    {
+      "slug": "spiedie-chicken-platter-crew",
+      "title": "Binghamton White-Wine Spiedie Tray",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "station-cobb-salad",
+      "title": "Station Cobb Salad",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "steak-sandwiches",
+      "title": "Philly-Style Cheesesteaks",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "1.25 Cups Extra-Virgin Olive Oil",
+          "1.25 Cups White Vinegar (pickling)"
+        ]
+      }
+    },
+    {
+      "slug": "strawberry-oat-breakfast",
+      "title": "Strawberry Oatmeal Breakfast Smoothie",
+      "collection": "smoothies",
+      "surfaces": [
+        "public_page",
+        "explore"
+      ],
+      "issues": [
+        "nutrition_not_structured"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "strawberry-spinach",
+      "title": "Strawberry Spinach Smoothie",
+      "collection": "smoothies",
+      "surfaces": [
+        "public_page",
+        "explore"
+      ],
+      "issues": [
+        "nutrition_not_structured"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "street-corn-chicken",
+      "title": "Street Corn Chicken Bowls",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "tabbouleh-chicken-bowls",
+      "title": "Tabbouleh Chicken Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "cherry tomatoes"
+        ],
+        "awkward_quantities": [
+          "0.33 cup extra-virgin olive oil"
+        ]
+      }
+    },
+    {
+      "slug": "taco-pizza",
+      "title": "Taco Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "nutrition_unavailable",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "tandoori-lamb-chop-platter",
+      "title": "Kashmiri Mustard-Oil Lamb Chop Feast",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Pickled Red Onion"
+        ]
+      }
+    },
+    {
+      "slug": "tater-tot-breakfast-casserole",
+      "title": "Tater Tot Breakfast Casserole",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "tempeh-peanut-buddha-bowls",
+      "title": "Tempeh Peanut Buddha Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "duplicate_ingredient_lines:1"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "teriyaki-chicken-rice-bowls",
+      "title": "Teriyaki Chicken Rice Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Salmon",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "texas-beef-ribs",
+      "title": "Texas-Style Beef Ribs",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Garlic Powder"
+        ],
+        "awkward_quantities": [
+          "0.3 Cup Apple Cider Vinegar"
+        ]
+      }
+    },
+    {
+      "slug": "texas-central-brisket-crew",
+      "title": "Texas Central Brisket for the Crew",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "Dill Pickle Chips"
+        ]
+      }
+    },
+    {
+      "slug": "thai-basil-chicken",
+      "title": "Thai Basil Chicken",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Soy Sauce"
+        ]
+      }
+    },
+    {
+      "slug": "thai-basil-ground-beef-skillet",
+      "title": "Thai Basil Ground Beef Skillet",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup fish sauce"
+        ]
+      }
+    },
+    {
+      "slug": "thai-peanut-chicken-crock",
+      "title": "Thai Peanut Chicken Crock",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.3 Cup Olive Oil"
+        ]
+      }
+    },
+    {
+      "slug": "tonkotsu-ramen-crew",
+      "title": "Tonkotsu Ramen for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "ingredients_not_in_steps:1",
+        "meat_without_internal_temp"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "green onions"
+        ]
+      }
+    },
+    {
+      "slug": "tourtiere-for-the-crew",
+      "title": "Tourtière for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "title": "Trinidadian-Style Curry Chicken with Potatoes",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup Caribbean-style curry powder"
+        ]
+      }
+    },
+    {
+      "slug": "tropical-mango-greek",
+      "title": "Tropical Mango Greek Yogurt Smoothie",
+      "collection": "smoothies",
+      "surfaces": [
+        "public_page",
+        "explore"
+      ],
+      "issues": [
+        "nutrition_not_structured"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "turkey-bacon-white-bean-breakfast-hash",
+      "title": "Turkey Bacon & White Bean Breakfast Hash",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch",
+        "ingredients_not_in_steps:1",
+        "meat_without_internal_temp"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "russet potato"
+        ]
+      }
+    },
+    {
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 Cup Panko Breadcrumbs"
+        ]
+      }
+    },
+    {
+      "slug": "turkey-chili",
+      "title": "Turkey Chili",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "turkey-lettuce-wrap-night",
+      "title": "Turkey Lettuce Wraps",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "ingredients_not_in_steps:1",
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "ingredients_not_in_steps": [
+          "green onions"
+        ],
+        "awkward_quantities": [
+          "0.25 cup low-sodium soy sauce",
+          "0.33 cup hoisin sauce"
+        ]
+      }
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "turkey-sausage-burritos",
+      "title": "Turkey Sausage Breakfast Burritos",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "turkey-sausage-egg-muffins",
+      "title": "Turkey Sausage Egg Muffins",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "turkey-sausage-egg-white-sandwiches",
+      "title": "Turkey Sausage Egg White Breakfast Sandwiches",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "turkey-sausage-spinach-feta-egg-white-scramble",
+      "title": "Turkey Sausage, Spinach & Feta Egg White Scramble",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "turkey-sausage-sweet-potato-skillet",
+      "title": "Turkey Sausage & Sweet Potato Breakfast Skillet",
+      "collection": "breakfast",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "shift_planner"
+      ],
+      "issues": [
+        "schema_invalid:category|cuisine|calories|protein",
+        "no_equipment",
+        "nutrition_top_level_mismatch"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "turkey-shepherds-sweet-potato",
+      "title": "Turkey Shepherd's Pie",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "turkey-sweet-potato-chili",
+      "title": "Turkey Sweet Potato Chili",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "turkey-zoodle-bolognese",
+      "title": "Turkey Zoodle Bolognese",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.75 cup dry red wine"
+        ]
+      }
+    },
+    {
+      "slug": "unstuffed-cabbage-roll-skillet",
+      "title": "Unstuffed Cabbage Roll Skillet",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "3.25 lb lean ground beef"
+        ]
+      }
+    },
+    {
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1",
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.25 cup all-purpose flour"
+        ]
+      }
+    },
+    {
+      "slug": "veggie-supreme-pizza",
+      "title": "Veggie Supreme Pizza",
+      "collection": "pizza-night",
+      "surfaces": [
+        "public_page"
+      ],
+      "issues": [
+        "public_page_not_in_approved_catalog"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "vietnamese-caramel-braised-chicken-bowls",
+      "title": "Vietnamese Caramel-Braised Chicken Bowls",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:2"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup granulated sugar",
+          "0.33 cup fish sauce"
+        ]
+      }
+    },
+    {
+      "slug": "warm-spinach-chicken-salad",
+      "title": "Warm Spinach Chicken Salad",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated",
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup red wine vinegar"
+        ]
+      }
+    },
+    {
+      "slug": "weeknight-bbq-ribs-crew",
+      "title": "Weeknight BBQ Ribs for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "white-bean-kale-soup",
+      "title": "White Bean and Kale Soup",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza",
+      "collection": "golden-100",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "wonton-noodle-soup-crew",
+      "title": "Wonton Noodle Soup for the Crew",
+      "collection": "hall-expansion",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "nutrition_estimated"
+      ],
+      "details": {}
+    },
+    {
+      "slug": "yakiniku-grill-platter-crew",
+      "title": "Tokyo Tare Ribeye Yakiniku Board",
+      "collection": "bbq",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [],
+      "details": {}
+    },
+    {
+      "slug": "yogurt-marinated-grill-chicken",
+      "title": "Yogurt Marinated Chicken",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup lemon juice"
+        ]
+      }
+    },
+    {
+      "slug": "zaatar-roasted-chicken-thighs",
+      "title": "Za'atar Chicken Thighs",
+      "collection": "performance-meals",
+      "surfaces": [
+        "public_page",
+        "explore",
+        "generator",
+        "shift_planner"
+      ],
+      "issues": [
+        "awkward_decimal_quantities:1"
+      ],
+      "details": {
+        "awkward_quantities": [
+          "0.33 cup za'atar spice blend"
+        ]
+      }
+    }
+  ]
+}

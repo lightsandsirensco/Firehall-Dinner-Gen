@@ -87,6 +87,8 @@ export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
   { keywords: ["bbq sauce", "barbecue sauce"], calories: 172, protein: 0.8, carbs: 41, fat: 0.6, unitGrams: { cup: 280, tbsp: 17, oz: 28 } },
   { keywords: ["hot sauce", "salsa", "pico de gallo"], calories: 36, protein: 1.5, carbs: 7, fat: 0.2, unitGrams: { cup: 240, tbsp: 15, oz: 28 } },
   { keywords: ["soy sauce", "fish sauce", "worcestershire"], calories: 53, protein: 8, carbs: 4.9, fat: 0.1, unitGrams: { tbsp: 18, tsp: 6, cup: 255 } },
+  // USDA FDC 171583, "Soup, vegetable broth, ready to serve".
+  { keywords: ["vegetable broth", "vegetable stock", "veggie broth", "veggie stock"], calories: 5, protein: 0.24, carbs: 0.93, fat: 0.07, unitGrams: { cup: 240, quart: 960, oz: 28 } },
   { keywords: ["chicken stock", "beef stock", "broth", "stock"], calories: 15, protein: 1.2, carbs: 1, fat: 0.5, unitGrams: { cup: 240, quart: 960, oz: 28 } },
   { keywords: ["orange", "navel orange", "oranges", "navel oranges"], calories: 47, protein: 0.9, carbs: 12, fat: 0.1, unitGrams: { count: 140, large: 180, medium: 130 } },
   { keywords: ["ginger", "fresh ginger"], calories: 80, protein: 1.8, carbs: 18, fat: 0.8, unitGrams: { tbsp: 6, tsp: 2, oz: 28 } },

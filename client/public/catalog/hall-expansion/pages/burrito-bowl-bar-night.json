@@ -53,45 +53,46 @@
     },
     {
       "name": "lime juice",
-      "quantity": "1/4",
+      "quantity": "1/2",
       "unit": "cup",
-      "group": "Carnitas"
+      "group": "Carnitas",
+      "notes": "half for the braise, half for the rice"
     },
     {
       "name": "cumin",
-      "quantity": "1 3/4",
+      "quantity": "2",
       "unit": "tbsp",
       "group": "Spice"
     },
     {
-      "name": "cilantro-lime rice",
-      "quantity": "6.4",
+      "name": "long-grain rice",
+      "quantity": "3",
       "unit": "cups",
-      "notes": "cooked",
+      "notes": "uncooked",
       "group": "Base"
     },
     {
       "name": "black beans",
-      "quantity": "2.4",
-      "unit": "cups",
-      "notes": "seasoned",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "15 oz each, drained",
       "group": "Bar"
     },
     {
       "name": "corn salsa",
-      "quantity": "2.4",
+      "quantity": "2 1/2",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "shredded lettuce",
-      "quantity": "3.2",
+      "quantity": "3",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "shredded cheese",
-      "quantity": "1.6",
+      "quantity": "1 1/2",
       "unit": "cups",
       "group": "Bar"
     },
@@ -101,13 +102,45 @@
       "unit": "whole",
       "notes": "optional wraps",
       "group": "Bar"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "1/2",
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "3",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "hot sauce",
+      "quantity": "1",
+      "unit": "bottle"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
       "title": "Slow-cook carnitas",
-      "instruction": "Season pork with cumin, salt, and pepper. Braise with orange juice and lime covered at 300°F until tender and internal temp reaches 195°F, about 3 hours. Shred with forks. Target oven/smoker temperature: 300°F.",
+      "instruction": "Season pork with cumin, salt, and pepper. Braise with orange juice and half the lime juice covered at 300°F until tender and internal temp reaches 195°F, about 3 hours. Shred with forks. Target oven/smoker temperature: 300°F.",
       "minutes": 180,
       "heatLevel": ""
     },
@@ -121,7 +154,7 @@
     {
       "stepNumber": 3,
       "title": "Prepare rice and beans",
-      "instruction": "Cook rice and finish with lime juice and chopped cilantro. Season black beans with cumin and garlic. Keep both hot in baking dishes on the line.",
+      "instruction": "Cook rice with 4 1/2 cups salted water and finish with the remaining lime juice and chopped cilantro. Season black beans with cumin and garlic. Keep both hot in baking dishes on the line.",
       "minutes": 30,
       "heatLevel": ""
     },
@@ -202,8 +235,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 10,
-    "totalCount": 10,
+    "matchedCount": 16,
+    "totalCount": 16,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -222,6 +255,12 @@
         "name": "flour tortillas",
         "allergens": [
           "gluten"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
         ]
       }
     ],
@@ -243,13 +282,8 @@
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
         "note": "Use certified gluten-free tortillas or corn tortillas."
-      },
-      {
-        "flag": "dairy",
-        "label": "Dairy-Free Adaptable",
-        "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   }
 }

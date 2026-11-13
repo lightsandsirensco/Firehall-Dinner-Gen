@@ -162,7 +162,7 @@
     "source": "unavailable",
     "estimateAvailable": false,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
@@ -170,7 +170,7 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }

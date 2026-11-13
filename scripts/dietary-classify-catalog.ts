@@ -44,6 +44,24 @@ function writeFileSyncWithRetry(file: string, data: string, attempts = 5): void 
   }
 }
 
+/** Re-serialize in the file's existing style (indent, CRLF/LF, trailing newline). */
+function serializeLike(raw: string, value: unknown): string {
+  const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+  const indent = raw.match(/^\{\r?\n( +)/)?.[1].length ?? 2;
+  let s = JSON.stringify(value, null, indent);
+  if (eol === "\r\n") s = s.replace(/\n/g, "\r\n");
+  return raw.endsWith(eol) ? s + eol : s;
+}
+
+/** Write only when content changed, preserving the file's formatting. */
+function writeJsonIfChanged(file: string, value: unknown): boolean {
+  const raw = fs.readFileSync(file, "utf8");
+  const next = serializeLike(raw, value);
+  if (next === raw) return false;
+  if (!DRY_RUN) writeFileSyncWithRetry(file, next);
+  return true;
+}
+
 const COLLECTIONS: Array<{ id: string; root: string }> = [
   { id: "golden-100", root: "client/public/catalog/golden-100" },
   { id: "hall-expansion", root: "client/public/catalog/hall-expansion" },
@@ -97,7 +115,7 @@ for (const record of allPages) {
   const profile = classifyRecipeDietary(ingredients);
   dietaryBySlug.set(`${record.collection}::${record.slug}`, profile);
 
-  record.json.dietary = {
+  const next = {
     confidence: profile.confidence,
     matchedCount: profile.matchedCount,
     totalCount: profile.totalCount,
@@ -105,16 +123,16 @@ for (const record of allPages) {
     flaggedIngredients: profile.flaggedIngredients,
     flags: profile.flags,
     adaptable: profile.adaptable,
-    classifiedAt,
   };
-
-  if (!DRY_RUN) {
-    writeFileSyncWithRetry(record.file, JSON.stringify(record.json, null, 2) + "\n");
-  }
-  written++;
+  const { classifiedAt: previousAt, ...previous } = record.json.dietary ?? {};
+  if (JSON.stringify(previous) === JSON.stringify(next)) continue;
+  const looser = Object.entries(profile.flags).filter(([k, v]) => !v && previous.flags?.[k]).map(([k]) => k);
+  if (looser.length) console.log(`  ${record.collection}/${record.slug}: no longer claims ${looser.join(", ")}`);
+  record.json.dietary = { ...next, classifiedAt };
+  if (writeJsonIfChanged(record.file, record.json)) written++;
 }
 
-console.log(`[dietary-classify] ${DRY_RUN ? "[DRY RUN] Would write" : "Wrote"} dietary profile onto ${written} pages.`);
+console.log(`[dietary-classify] ${DRY_RUN ? "[DRY RUN] Would update" : "Updated"} dietary profile on ${written} pages (unchanged pages left as-is).`);
 
 let indexesUpdated = 0;
 for (const { id, root } of COLLECTIONS) {
@@ -145,10 +163,7 @@ for (const { id, root } of COLLECTIONS) {
     touched++;
   }
 
-  if (!DRY_RUN) {
-    writeFileSyncWithRetry(indexPath, JSON.stringify(index, null, 2) + "\n");
-  }
-  indexesUpdated++;
+  if (writeJsonIfChanged(indexPath, index)) indexesUpdated++;
   console.log(`[dietary-classify] ${id}: tagged ${touched}/${index.recipes.length} index entries.`);
 }
 
@@ -174,9 +189,7 @@ if (fs.existsSync(breakfastPerfIndexPath)) {
         });
         touched++;
       }
-      if (!DRY_RUN) {
-        fs.writeFileSync(breakfastPerfIndexPath, JSON.stringify(index, null, 2) + "\n", "utf8");
-      }
+      writeJsonIfChanged(breakfastPerfIndexPath, index);
       console.log(`[dietary-classify] breakfast/performance: tagged ${touched}/${index.recipes.length} index entries.`);
     }
   } catch {

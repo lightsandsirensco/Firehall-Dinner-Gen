@@ -7,7 +7,7 @@
   "subtitle": "Santa Maria-style tri-tip with garlic herb crust for ten",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Tri-tip roasts are rubbed with garlic, herbs, and pepper, smoked to medium-rare, then seared over high heat for a crisp crust. Slice thin against the grain and serve with chimichurri and grilled bread.",
+  "description": "Tri-tip roasts are rubbed with garlic, herbs, and pepper, smoked low, then seared over high heat to 145°F for a crisp crust. Slice thin against the grain and serve with chimichurri and grilled bread.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 90,
@@ -113,22 +113,22 @@
     },
     {
       "stepNumber": 2,
-      "title": "Smoke to medium-rare",
-      "instruction": "Heat smoker to 225°F. Smoke roasts until internal temperature reaches 120°F in the thickest part, about 45–60 minutes depending on size. Target oven/smoker temperature: 225°F.",
+      "title": "Smoke low and slow",
+      "instruction": "Heat smoker to 225°F. Smoke roasts until internal temperature reaches 130°F in the thickest part, about 60–75 minutes depending on size (120°F if the crew wants medium-rare). Target oven/smoker temperature: 225°F.",
       "minutes": 55,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
       "title": "Sear the crust",
-      "instruction": "Transfer roasts to direct high heat or a preheated cast-iron pan and sear 2–3 minutes per side until a deep crust forms. Pull when internal temp hits 130°F for medium-rare. Target oven/smoker temperature: 500°F.",
+      "instruction": "Transfer roasts to direct high heat or a preheated cast-iron pan and sear 2–3 minutes per side until a deep crust forms. Pull when internal temp hits 145°F (63°C). For medium-rare, pull at 130°F — a preference below the USDA safe minimum, not for anyone pregnant, older, or immunocompromised. Target oven/smoker temperature: 500°F.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Rest before slicing",
-      "instruction": "Rest roasts tented in foil 15 minutes so juices redistribute. Internal temp will climb to about 135°F—do not skip rest or slices will bleed on the board.",
+      "instruction": "Rest roasts tented in foil 15 minutes so juices redistribute. Internal temp will climb a few degrees—do not skip rest or slices will bleed on the board.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -141,7 +141,7 @@
     }
   ],
   "proTips": [
-    "130°F pull gives medium-rare after rest—push to 140°F only if the crew prefers no pink.",
+    "145°F pull stays pink in the center after the rest; pull at 130°F for medium-rare on request.",
     "Freeze roasts 20 minutes before slicing if you need cleaner, thinner slices for sandwiches.",
     "Save drippings and whisk into chimichurri for an extra beefy sauce without extra work."
   ],

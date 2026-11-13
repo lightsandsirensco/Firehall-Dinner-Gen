@@ -50,7 +50,7 @@
       "group": "Meat"
     },
     {
-      "name": "sliced turkey breast",
+      "name": "deli-sliced roast turkey breast",
       "quantity": "3/4",
       "unit": "lb",
       "group": "Meat"
@@ -133,7 +133,7 @@
     {
       "stepNumber": 5,
       "title": "Serve and maintain",
-      "instruction": "Set boards at room temp 15 minutes before eating so cheese flavor opens up. Replenish popular zones from backup containers kept refrigerated during the event.",
+      "instruction": "Set boards at room temp 15 minutes before eating so cheese flavor opens up. Replenish popular zones from backup containers kept refrigerated during the event. Don't leave meats and cheeses out longer than 2 hours — swap in fresh trays instead of topping up old ones.",
       "minutes": 5,
       "heatLevel": ""
     }

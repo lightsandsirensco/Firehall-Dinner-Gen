@@ -12,7 +12,6 @@ import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { usePageSeo } from "@/lib/seo/use-page-seo";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildFirefighterRedLeadRecipeSeo } from "@shared/seo/metadata";
-import { RED_LEAD_RECIPE_RATING_SLUG } from "@shared/recipe-crew-ratings/slugs";
 import {
   FIREFIGHTER_RED_LEAD_BREAKFAST_LINKS,
   FIREFIGHTER_RED_LEAD_CLASSIC_LINKS,
@@ -46,7 +45,6 @@ import {
   RedLeadPdfCapture,
 } from "@/components/red-lead/red-lead-pdf-capture";
 import { trackRedLeadPageView } from "@/lib/analytics";
-import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 
 function formatIngredient(
   ing: (typeof FIREFIGHTER_RED_LEAD_RECIPE.ingredients)[number],
@@ -172,12 +170,6 @@ export default function FirefighterRedLeadRecipePage() {
           carbs={recipe.nutrition.carbs}
           fat={recipe.nutrition.fat}
           className="mt-6"
-        />
-
-        <RecipeCrewRatingPanel
-          slug={RED_LEAD_RECIPE_RATING_SLUG}
-          category="breakfast_brunch"
-          className="mt-8"
         />
 
         <div className="mt-8 lg:grid lg:grid-cols-[1fr_320px] lg:gap-10 lg:items-start">

@@ -4,7 +4,7 @@
 export const HALL_DINNER_CATALOG_COUNT = 216 as const;
 export const BREAKFAST_CATALOG_COUNT = 56 as const;
 export const BBQ_CATALOG_COUNT = 55 as const;
-/** Total Firehall-tested curated recipes (dinners + breakfast + BBQ). */
+/** Total Curated recipes (dinners + breakfast + BBQ). */
 export const CURATED_RECIPE_TOTAL = HALL_DINNER_CATALOG_COUNT + BREAKFAST_CATALOG_COUNT + BBQ_CATALOG_COUNT;
 /** Approved Explore catalog (meals + smoothies). */
 export const APPROVED_CATALOG_TOTAL = CURATED_RECIPE_TOTAL + 10;
@@ -20,12 +20,12 @@ export function formatMarketingRecipeCount(liveCount: number): string {
   return `${marketingRecipeCount(liveCount)}+`;
 }
 
-/** Hero/catalog headline, e.g. "250+ Firehall-Tested Recipes". */
+/** Hero/catalog headline, e.g. "250+ Crew-Sized Recipes". */
 export function marketingRecipeCountPhrase(liveCount: number): string {
-  return `${formatMarketingRecipeCount(liveCount)} Firehouse-Tested Recipes`;
+  return `${formatMarketingRecipeCount(liveCount)} Crew-Sized Recipes`;
 }
 
-/** Inline marketing copy, e.g. "250+ firefighter-tested recipes". */
+/** Inline marketing copy, e.g. "250+ crew-sized recipes". */
 export function marketingRecipeCountCopy(liveCount: number): string {
-  return `${formatMarketingRecipeCount(liveCount)} firefighter-tested recipes`;
+  return `${formatMarketingRecipeCount(liveCount)} crew-sized recipes`;
 }

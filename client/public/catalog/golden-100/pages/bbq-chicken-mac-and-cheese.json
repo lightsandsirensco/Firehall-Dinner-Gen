@@ -13,10 +13,10 @@
   "cookTime": 65,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 1386,
-  "protein": 83,
-  "carbs": 106,
-  "fats": 68,
+  "calories": 820,
+  "protein": 54,
+  "carbs": 62,
+  "fats": 30,
   "tags": [
     "protein:chicken",
     "format:bake",
@@ -117,7 +117,7 @@
     },
     {
       "name": "Crispy Fried Onions",
-      "quantity": "0.8",
+      "quantity": "3/4",
       "unit": "Cup",
       "notes": "garnish at the line",
       "group": "Topping",
@@ -178,7 +178,7 @@
     {
       "stepNumber": 7,
       "title": "Pan up for the crew",
-      "instruction": "Butter two full-size hotel pans or one deep half-pan for eight firefighters. Spread mac mixture evenly. Drizzle remaining BBQ sauce in thin ribbons across the top so it caramelizes in the oven. Scatter extra cheddar and mozzarella on top for a cheese pull.",
+      "instruction": "Butter one full-size hotel pan or two 9×13-inch baking dishes for eight firefighters. Spread mac mixture evenly. Drizzle remaining BBQ sauce in thin ribbons across the top so it caramelizes in the oven. Scatter extra cheddar and mozzarella on top for a cheese pull.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -233,10 +233,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1386,
-    "protein": 83,
-    "carbs": 106,
-    "fats": 68,
+    "calories": 820,
+    "protein": 54,
+    "carbs": 62,
+    "fats": 30,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,

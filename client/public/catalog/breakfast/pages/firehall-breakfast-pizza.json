@@ -89,13 +89,13 @@
     {
       "stepNumber": 3,
       "title": "Prep toppings",
-      "instruction": "Whisk gravy with mozzarella until smooth. Soft-scramble eggs over low heat—they should still look glossy. Brown sausage and drain on paper towels so the pizza doesn't weep grease.",
+      "instruction": "Whisk gravy with mozzarella until smooth. Soft-scramble eggs over low heat—they should still look glossy. Brown sausage, breaking it into crumbles, until no pink remains (160°F / 71°C), then drain on paper towels so the pizza doesn't weep grease.",
       "minutes": 12
     },
     {
       "stepNumber": 4,
       "title": "Build and bake",
-      "instruction": "Spread white gravy on par-baked crusts, dot with scrambled eggs and sausage, then blanket with cheddar. Bake until cheese bubbles and crust edges are deep golden.",
+      "instruction": "Spread white gravy on par-baked crusts, dot with scrambled eggs and sausage, then blanket with cheddar. Bake 10–12 minutes until cheese bubbles and crust edges are deep golden.",
       "minutes": 14,
       "tempF": 425
     },
@@ -150,10 +150,15 @@
   "seoTitle": "Firehall Breakfast Pizza | Firehall Breakfast",
   "collectionTier": "firehall_classic",
   "dietary": {
-    "confidence": "high",
+    "confidence": "low",
     "matchedCount": 8,
     "totalCount": 8,
-    "uncertainIngredients": [],
+    "uncertainIngredients": [
+      {
+        "name": "country gravy",
+        "reason": "Gravies and gravy mixes are often made with meat drippings or stock."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "store-bought pizza dough balls",
@@ -198,27 +203,16 @@
       "glutenFree": false,
       "dairyFree": false,
       "eggFree": false,
-      "nutFree": true,
-      "peanutFree": true,
-      "soyFree": true,
-      "shellfishFree": true,
-      "fishFree": true,
+      "nutFree": false,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": false,
       "porkFree": false,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free pizza crust. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
-      },
-      {
-        "flag": "pork",
-        "label": "Pork-Free Adaptable",
-        "note": "Swap in chicken or turkey sausage."
-      }
-    ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "adaptable": [],
+    "classifiedAt": "2026-11-12T17:01:00.616Z"
   }
 }

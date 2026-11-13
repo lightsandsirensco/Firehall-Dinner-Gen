@@ -119,7 +119,7 @@
     {
       "stepNumber": 5,
       "title": "Bake until pesto edges darken",
-      "instruction": "Bake 10–13 minutes until cheese melts and pesto oil sizzles at the edges. Tomatoes should wrinkle slightly. Rotate once.",
+      "instruction": "Bake 10–13 minutes until cheese melts and pesto oil sizzles at the edges. Tomatoes should wrinkle slightly and the chicken should be steaming hot (165°F / 74°C). Rotate once.",
       "minutes": 12,
       "heatLevel": "high"
     },
@@ -203,7 +203,16 @@
     "confidence": "high",
     "matchedCount": 9,
     "totalCount": 9,
-    "uncertainIngredients": [],
+    "uncertainIngredients": [
+      {
+        "name": "Basil pesto",
+        "reason": "Traditional pesto is made with Parmesan, which uses animal rennet. For a vegetarian version, use a pesto labeled vegetarian."
+      },
+      {
+        "name": "Grated parmesan",
+        "reason": "Traditional Parmesan, Pecorino and Gruyère are made with animal rennet. For a vegetarian version, use a cheese labeled vegetarian (microbial or vegetable rennet)."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "Pizza dough balls (15 oz)",
@@ -257,7 +266,7 @@
         "note": "Use a certified gluten-free pizza crust."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   },
   "avoidTags": [
     "tomatoes"

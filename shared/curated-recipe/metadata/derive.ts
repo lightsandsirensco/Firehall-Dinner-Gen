@@ -13,6 +13,7 @@ import {
   type NutritionCategory,
 } from "./taxonomy.js";
 import { normalizeCuisineKind, normalizeProteinKind } from "./normalize.js";
+import { HIGH_PROTEIN_MIN_G } from "../../nutrition/profile-goals.js";
 import { curatedRecipeMetadataSchema } from "./schema.js";
 
 export interface MetadataDeriveInput {
@@ -120,8 +121,8 @@ export function inferNutritionCategory(input: MetadataDeriveInput): NutritionCat
   if (protein === "vegetarian" || protein === "vegan") return "vegetarian_friendly";
   const macros = input.generateResponse?.macros_per_serving;
   const tags = (input.tags || []).join(" ").toLowerCase();
-  if (input.generateResponse?.tags?.high_protein || /high[\s-]?protein/.test(tags)) return "high_protein";
-  if (macros && macros.protein_g >= 35) return "high_protein";
+  const macrosEstimated = (input.generateResponse?.tags as { macros_estimated?: boolean } | undefined)?.macros_estimated;
+  if (macros && !macrosEstimated && macros.protein_g >= HIGH_PROTEIN_MIN_G) return "high_protein";
   if (/mac\s*and\s*cheese|fried|bacon|cheeseburger|pizza/.test(tags)) return "indulgent";
   if (input.generateResponse?.tags?.high_fiber || /salad|grilled|lean/.test(tags)) return "lighter";
   if (inferMealStyle(input) === "comfort") return "comfort";

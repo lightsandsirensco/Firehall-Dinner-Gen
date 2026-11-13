@@ -51,7 +51,7 @@
           "shellfishFree": true,
           "fishFree": true,
           "porkFree": true,
-          "vegetarian": false,
+          "vegetarian": true,
           "vegan": false
         },
         "adaptable": [
@@ -73,8 +73,8 @@
         "healthy": false,
         "estimateAvailable": true,
         "calories": 559,
-        "protein": 25,
-        "carbs": 80,
+        "protein": 23,
+        "carbs": 83,
         "fat": 17,
         "numericFilterEligible": true
       },
@@ -212,7 +212,7 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
@@ -321,7 +321,7 @@
         "flags": {
           "glutenFree": false,
           "dairyFree": true,
-          "eggFree": true,
+          "eggFree": false,
           "nutFree": true,
           "peanutFree": true,
           "soyFree": true,
@@ -336,15 +336,24 @@
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
             "note": "Use a certified gluten-free rub or build your own from confirmed gluten-free spices."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
           }
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 867,
+        "protein": 41,
+        "carbs": 89,
+        "fat": 37,
+        "numericFilterEligible": true
       },
       "avoidTags": [
         "corn"
@@ -416,10 +425,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1386,
-        "protein": 83,
-        "carbs": 106,
-        "fat": 68,
+        "calories": 820,
+        "protein": 54,
+        "carbs": 62,
+        "fat": 30,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -639,11 +648,15 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 618,
+        "protein": 52,
+        "carbs": 28,
+        "fat": 35,
+        "numericFilterEligible": true
       },
       "avoidTags": [
         "onions"
@@ -699,7 +712,7 @@
           {
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative."
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon."
           },
           {
             "flag": "soy",
@@ -710,13 +723,13 @@
       },
       "nutritionSummary": {
         "highProtein": true,
-        "lowCarb": true,
+        "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 520,
-        "protein": 48,
-        "carbs": 12,
-        "fat": 31,
+        "calories": 850,
+        "protein": 53,
+        "carbs": 71,
+        "fat": 39,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -793,10 +806,10 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true,
+        "estimateAvailable": false,
         "numericFilterEligible": false
       },
       "avoidTags": [
@@ -1149,35 +1162,24 @@
         "golden_100"
       ],
       "dietarySummary": {
-        "confidence": "high",
+        "confidence": "low",
         "flags": {
           "glutenFree": false,
           "dairyFree": false,
           "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
+          "nutFree": false,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": false,
           "porkFree": false,
           "vegetarian": false,
           "vegan": false
         },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
-          },
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
-          }
-        ]
+        "adaptable": []
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
@@ -1279,32 +1281,21 @@
         "golden_100"
       ],
       "dietarySummary": {
-        "confidence": "high",
+        "confidence": "low",
         "flags": {
           "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": false,
+          "peanutFree": false,
           "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
+          "shellfishFree": false,
+          "fishFree": false,
+          "porkFree": false,
           "vegetarian": false,
           "vegan": false
         },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
-          },
-          {
-            "flag": "soy",
-            "label": "Soy-Free Adaptable",
-            "note": "Use coconut aminos."
-          }
-        ]
+        "adaptable": []
       },
       "nutritionSummary": {
         "highProtein": true,
@@ -1512,7 +1503,7 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
@@ -1763,42 +1754,31 @@
         "golden_100"
       ],
       "dietarySummary": {
-        "confidence": "high",
+        "confidence": "low",
         "flags": {
           "glutenFree": false,
           "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
+          "eggFree": false,
+          "nutFree": false,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": false,
+          "porkFree": false,
           "vegetarian": false,
           "vegan": false
         },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bread/crust/wrapper alternative. Use a 1:1 gluten-free all-purpose flour blend."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a plant-based butter/margarine."
-          }
-        ]
+        "adaptable": []
       },
       "nutritionSummary": {
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 639,
-        "protein": 41,
-        "carbs": 32,
-        "fat": 37,
+        "calories": 707,
+        "protein": 43,
+        "carbs": 38,
+        "fat": 41,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -2647,8 +2627,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 799,
+        "protein": 26,
+        "carbs": 87,
+        "fat": 39,
+        "numericFilterEligible": true
       },
       "avoidTags": []
     },
@@ -3767,15 +3751,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true,
-        "calories": 1087,
-        "protein": 111,
-        "carbs": 125,
-        "fat": 15,
-        "numericFilterEligible": true
+        "estimateAvailable": false,
+        "numericFilterEligible": false
       },
       "avoidTags": [
         "jalapenos",
@@ -3894,10 +3874,10 @@
         "adaptable": []
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true,
+        "estimateAvailable": false,
         "numericFilterEligible": false
       },
       "avoidTags": []
@@ -4027,7 +4007,7 @@
         "adaptable": []
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
@@ -4234,7 +4214,7 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
@@ -4376,7 +4356,7 @@
           {
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
-            "note": "Use a plant-based butter/margarine."
+            "note": "Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
           }
         ]
       },
@@ -4518,8 +4498,8 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": true,
+        "highProtein": false,
+        "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
         "numericFilterEligible": false
@@ -4805,14 +4785,14 @@
       "subtitle": "Fluffy stacks, bacon on the side",
       "category": "breakfast_brunch",
       "cuisine": "american",
-      "protein": "vegetarian",
+      "protein": "pork",
       "mealFormat": "breakfast",
       "cookTime": 55,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/pancake-short-stack.jpg",
       "thumbImage": "/images/thumbs/pancake-short-stack.jpg",
       "tags": [
-        "protein:vegetarian",
+        "protein:pork",
         "format:breakfast",
         "category:breakfast_brunch",
         "breakfast",
@@ -4823,7 +4803,6 @@
       "searchTerms": [
         "pancake short stack",
         "american",
-        "vegetarian",
         "breakfast",
         "buttermilk pancakes bacon breakfast",
         "golden_100"
@@ -4931,7 +4910,7 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
@@ -4986,7 +4965,7 @@
           "shellfishFree": true,
           "fishFree": true,
           "porkFree": true,
-          "vegetarian": false,
+          "vegetarian": true,
           "vegan": false
         },
         "adaptable": [
@@ -5007,8 +4986,8 @@
         "lowCarb": false,
         "healthy": true,
         "estimateAvailable": true,
-        "calories": 511,
-        "protein": 23,
+        "calories": 499,
+        "protein": 21,
         "carbs": 65,
         "fat": 20,
         "numericFilterEligible": true
@@ -5436,15 +5415,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 82,
-        "carbs": 124,
-        "fat": 61,
-        "numericFilterEligible": true
+        "estimateAvailable": false,
+        "numericFilterEligible": false
       },
       "avoidTags": [
         "mayonnaise",
@@ -6007,7 +5982,7 @@
           "peanutFree": true,
           "soyFree": true,
           "shellfishFree": true,
-          "fishFree": true,
+          "fishFree": false,
           "porkFree": true,
           "vegetarian": false,
           "vegan": false
@@ -6016,12 +5991,7 @@
           {
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a plant-based butter/margarine."
+            "note": "Use a certified gluten-free broth or bouillon. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free Worcestershire sauce."
           }
         ]
       },
@@ -6171,7 +6141,7 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
@@ -6251,7 +6221,7 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
@@ -6457,7 +6427,7 @@
           "shellfishFree": true,
           "fishFree": true,
           "porkFree": true,
-          "vegetarian": false,
+          "vegetarian": true,
           "vegan": false
         },
         "adaptable": [
@@ -6473,10 +6443,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 625,
-        "protein": 16,
+        "calories": 610,
+        "protein": 15,
         "carbs": 74,
-        "fat": 31,
+        "fat": 30,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -6611,10 +6581,10 @@
         "adaptable": []
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true,
+        "estimateAvailable": false,
         "numericFilterEligible": false
       },
       "avoidTags": [
@@ -7097,7 +7067,7 @@
           "shellfishFree": true,
           "fishFree": true,
           "porkFree": true,
-          "vegetarian": false,
+          "vegetarian": true,
           "vegan": false
         },
         "adaptable": [
@@ -7113,10 +7083,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 998,
-        "protein": 38,
+        "calories": 980,
+        "protein": 36,
         "carbs": 77,
-        "fat": 62,
+        "fat": 61,
         "numericFilterEligible": true
       },
       "avoidTags": [

@@ -113,7 +113,7 @@
     {
       "stepNumber": 1,
       "title": "Brown the meat",
-      "instruction": "Cook pork and beef in a large skillet over medium-high heat, breaking up clumps until browned. Drain excess fat, leaving about 2 tablespoons in the pan.",
+      "instruction": "Cook pork and beef in a large skillet over medium-high heat, breaking up clumps, until browned with no pink remaining (160°F / 71°C). Drain excess fat, leaving about 2 tablespoons in the pan.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -207,10 +207,15 @@
   "generatedAt": "2026-09-26T19:26:55.957Z",
   "contentVersion": 2,
   "dietary": {
-    "confidence": "high",
+    "confidence": "low",
     "matchedCount": 11,
     "totalCount": 11,
-    "uncertainIngredients": [],
+    "uncertainIngredients": [
+      {
+        "name": "pie crust",
+        "reason": "Store-bought pie crusts and puff pastry often contain lard or butter."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "ground pork",
@@ -239,24 +244,18 @@
     ],
     "flags": {
       "glutenFree": false,
-      "dairyFree": true,
+      "dairyFree": false,
       "eggFree": false,
-      "nutFree": true,
-      "peanutFree": true,
-      "soyFree": true,
-      "shellfishFree": true,
-      "fishFree": true,
+      "nutFree": false,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": false,
       "porkFree": false,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free broth or bouillon."
-      }
-    ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "adaptable": [],
+    "classifiedAt": "2026-11-12T17:01:00.616Z"
   }
 }

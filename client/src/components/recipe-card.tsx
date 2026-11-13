@@ -371,9 +371,13 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
   // "Why this fits" — one honest, data-backed line for the active Nutrition Goal.
   // Never fabricates a metric; hides itself when there's nothing real to point to.
+  const nutritionVerified = recipe.recipe_tags?.nutrition_verified === true;
   const nutritionGoalFit = useMemo(
     () =>
-      nutritionGoal && nutritionGoal !== "no_preference"
+      nutritionGoal &&
+      nutritionGoal !== "no_preference" &&
+      nutritionVerified &&
+      (nutritionGoal !== "high_protein" || recipe.recipe_tags?.high_protein === true)
         ? explainNutritionGoalFit(nutritionGoal, {
             calories: recipe.macros_per_serving?.calories,
             protein_g: recipe.macros_per_serving?.protein_g,
@@ -381,7 +385,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             totalMinutes: recipe.timing?.total_min,
           })
         : null,
-    [nutritionGoal, recipe.macros_per_serving, recipe.timing?.total_min],
+    [nutritionGoal, nutritionVerified, recipe.recipe_tags?.high_protein, recipe.macros_per_serving, recipe.timing?.total_min],
   );
 
   // Free "estimated cost" — same shared engine Premium sale overrides will use later.

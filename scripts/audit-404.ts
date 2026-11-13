@@ -96,7 +96,6 @@ const STATIC_EXACT = new Set<string>([
   "/wheel",
   "/pizza",
   "/guides",
-  "/top-rated-recipes",
   "/hall-of-fame",
   "/hall",
   "/hall-history",

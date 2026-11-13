@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-09T20:19:46.948Z",
+  "generatedAt": "2026-11-13T01:03:21.613Z",
   "threshold": 72,
   "totals": {
-    "recipes": 791,
-    "hallCatalog": 302,
+    "recipes": 790,
+    "hallCatalog": 301,
     "exploreCurated": 489,
     "failed": 83,
     "buildBlockers": 0,
-    "duplicateHeroPaths": 247
+    "duplicateHeroPaths": 246
   },
   "duplicateHeroPaths": [
     {
@@ -722,13 +722,6 @@
       "slugs": [
         "greek-chicken-bowls",
         "greek-chicken-bowls"
-      ]
-    },
-    {
-      "hero": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "slugs": [
-        "firehall-greek-chicken-bowls",
-        "firehall-greek-chicken-bowls"
       ]
     },
     {
@@ -6258,21 +6251,6 @@
       "heroImage": "/images/golden-100/greek-chicken-bowls.jpg",
       "thumbImage": "/images/thumbs/greek-chicken-bowls.jpg",
       "mobileImage": "/images/mobile/greek-chicken-bowls.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "firehall-greek-chicken-bowls",
-      "title": "Greek Chicken Bowls",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cuisine": "greek",
-      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "mobileImage": "/images/mobile/hall-expansion/firehall-greek-chicken-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,

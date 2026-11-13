@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 695,
+  "calories": 867,
   "protein": 41,
   "carbs": 89,
-  "fats": 18,
+  "fats": 37,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -67,20 +67,44 @@
       "quantity": "2",
       "unit": "Lb",
       "group": "Toppings"
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": "0.75",
+      "unit": "Cup",
+      "group": "Toppings"
+    },
+    {
+      "name": "Apple Cider Vinegar",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "group": "Toppings"
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Main"
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": "2",
+      "unit": "Tsp",
+      "group": "Base"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
       "title": "Cook the rice",
-      "instruction": "Rinse rice until water runs clear. Simmer with 1:1.5 rice-to-water ratio and salt 18 minutes; fluff and hold covered at 200°F.",
+      "instruction": "Rinse rice until water runs clear. Bring to a boil with 4½ cups water and 1 tsp salt, then cover and simmer on low 18 minutes. Rest 5 minutes off heat, fluff, and hold covered in a 200°F oven.",
       "minutes": 20,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
       "title": "Grill the chicken thighs",
-      "instruction": "Season chicken thighs with BBQ rub. Grill over medium-high 5–7 minutes per side until char marks show and thickest part reads 165°F. Rest 5 minutes; slice into strips.",
+      "instruction": "Toss chicken thighs with 1 tbsp oil and the BBQ rub. Grill over medium-high 5–7 minutes per side until char marks show and thickest part reads 165°F. Rest 5 minutes; slice into strips.",
       "minutes": 18,
       "heatLevel": "medium-high"
     },
@@ -93,6 +117,13 @@
     },
     {
       "stepNumber": 4,
+      "title": "Char the corn and dress the slaw",
+      "instruction": "Heat the remaining 1 tbsp oil in a large skillet over high heat. Add corn in an even layer and leave it 3–4 minutes until kernels blister and brown in spots; stir, season with a pinch of salt, and cook 2 minutes more. Toss coleslaw mix with mayonnaise, vinegar, and the remaining salt until just coated.",
+      "minutes": 8,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
       "title": "Build the bowls",
       "instruction": "Base of rice, sliced BBQ chicken, corn, and a pile of coleslaw on top for crunch. Drizzle extra sauce on the side. BBQ Chicken Bowls move fastest when hot and cold components are in separate pans.",
       "minutes": 8,
@@ -121,16 +152,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 695,
+    "calories": 867,
     "protein": 41,
     "carbs": 89,
-    "fats": 18,
-    "label": "per serving (hall portion)",
+    "fats": 37,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
@@ -172,8 +204,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
+    "matchedCount": 10,
+    "totalCount": 10,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -181,12 +213,18 @@
         "allergens": [
           "gluten"
         ]
+      },
+      {
+        "name": "Mayonnaise",
+        "allergens": [
+          "egg"
+        ]
       }
     ],
     "flags": {
       "glutenFree": false,
       "dairyFree": true,
-      "eggFree": true,
+      "eggFree": false,
       "nutFree": true,
       "peanutFree": true,
       "soyFree": true,
@@ -201,9 +239,14 @@
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
         "note": "Use a certified gluten-free rub or build your own from confirmed gluten-free spices."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:07:12.987Z"
   },
   "avoidTags": [
     "corn"

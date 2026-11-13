@@ -41,7 +41,7 @@
       "name": "jasmine rice",
       "quantity": "4",
       "unit": "cups",
-      "notes": "cooked and refrigerated overnight"
+      "notes": "uncooked; cook the day before and refrigerate (about 12 cups cooked)"
     },
     {
       "name": "large eggs",
@@ -68,7 +68,7 @@
     },
     {
       "name": "soy sauce",
-      "quantity": "0.33",
+      "quantity": "1/3",
       "unit": "cup"
     },
     {
@@ -110,7 +110,7 @@
     {
       "stepNumber": 2,
       "title": "Cook the chicken",
-      "instruction": "Add 1 tbsp oil to the wok. Season chicken with salt, cook 5–6 minutes, stirring occasionally, until browned and cooked through. Remove to the plate with the eggs.",
+      "instruction": "Add 1 tbsp oil to the wok. Cut chicken into ¾-inch pieces and season with salt. Cook in 2 batches, 5–6 minutes each, stirring occasionally, until browned and the largest piece reads 165°F (74°C) on an instant-read thermometer. Remove to the plate with the eggs.",
       "minutes": 6,
       "heatLevel": "high"
     },
@@ -124,7 +124,7 @@
     {
       "stepNumber": 4,
       "title": "Fry the rice",
-      "instruction": "Push vegetables to one side, add remaining oil, then add cold rice, breaking up clumps with a spatula. Stir-fry 4–5 minutes, tossing frequently, until rice is heated through and slightly crisp in spots.",
+      "instruction": "Push vegetables to one side, add remaining oil, then add cold rice in two batches, breaking up clumps with a spatula. Stir-fry each batch 4–5 minutes, tossing frequently, until rice is heated through and slightly crisp in spots.",
       "minutes": 6,
       "heatLevel": "high"
     },

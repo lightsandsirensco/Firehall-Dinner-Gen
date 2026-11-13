@@ -69,12 +69,12 @@
     },
     {
       "name": "low-sodium soy sauce",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "cup"
     },
     {
       "name": "hoisin sauce",
-      "quantity": "0.33",
+      "quantity": "1/3",
       "unit": "cup"
     },
     {
@@ -89,7 +89,7 @@
     },
     {
       "name": "crushed roasted peanuts",
-      "quantity": "0.75",
+      "quantity": "3/4",
       "unit": "cup"
     },
     {
@@ -110,14 +110,14 @@
     {
       "stepNumber": 2,
       "title": "Brown ground chicken",
-      "instruction": "Cook chicken in batches over medium-high 8–10 minutes, breaking into small crumbles until fully cooked with lightly golden edges.",
+      "instruction": "Cook chicken in batches over medium-high 8–10 minutes, breaking into small crumbles until no pink remains and it reads 165°F (74°C) on an instant-read thermometer, with lightly golden edges.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
       "title": "Add aromatics and chestnuts",
-      "instruction": "Add ginger, garlic, water chestnuts, and half the scallions. Cook 3–4 minutes until fragrant and chestnuts heated through with slight crunch.",
+      "instruction": "Add ginger, garlic, water chestnuts, and half the green onions. Cook 3–4 minutes until fragrant and chestnuts heated through with slight crunch.",
       "minutes": 4,
       "heatLevel": ""
     },
@@ -131,7 +131,7 @@
     {
       "stepNumber": 5,
       "title": "Assemble cups at the line",
-      "instruction": "Spoon ¼ cup chicken into each lettuce cup. Drizzle hoisin, sprinkle peanuts and scallions, serve with lime. Leaves should crack lightly when bitten.",
+      "instruction": "Spoon ¼ cup chicken into each lettuce cup. Drizzle hoisin, sprinkle peanuts and the remaining green onions, serve with lime. Leaves should crack lightly when bitten.",
       "minutes": 5,
       "heatLevel": ""
     }

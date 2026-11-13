@@ -54,7 +54,6 @@ function readGoldenSlugs(): Array<{ slug: string; generatedAt?: string }> {
 const STATIC_PATHS: Array<{ path: string; changefreq: string; priority: string }> = [
   { path: "/", changefreq: "daily", priority: "1.0" },
   { path: "/explore", changefreq: "daily", priority: "0.95" },
-  { path: "/top-rated-recipes", changefreq: "weekly", priority: "0.85" },
   { path: "/hall-of-fame", changefreq: "daily", priority: "0.85" },
   { path: "/generator", changefreq: "weekly", priority: "0.7" },
   { path: "/faq", changefreq: "monthly", priority: "0.6" },
@@ -490,7 +489,7 @@ export function buildLlmsTxt(origin: string): string {
 
   return `# Firehall Meals
 
-> Firehall Meals is a meal-planning app for firefighters — crew-sized recipes, shift-tested dinners, and tools built for station kitchens where the tones can drop mid-prep.
+> Firehall Meals is a meal-planning app for firefighters — crew-sized recipes, shift-ready dinners, and tools built for station kitchens where the tones can drop mid-prep.
 
 Firehall Meals publishes ${recipeCount}+ firefighter meal recipes (dinners, BBQ/smoker, breakfast, smoothies, pizza night, and healthy/performance meals) plus ${guideCount}+ guides on feeding a crew, along with planning tools like the Classics Wheel and a firehouse meal planner. Content is written for real fire station kitchens: crew scaling from 2–20+, beginner-friendly steps, and instructions that hold up when a call interrupts dinner.
 
@@ -498,7 +497,7 @@ Firehall Meals publishes ${recipeCount}+ firefighter meal recipes (dinners, BBQ/
 
 - [Sitemap](${base}/sitemap.xml): Full list of indexable recipe, guide, and landing page URLs
 - [About](${base}/about): Who Firehall Meals is built for and how recipes are tested
-- [How We Test Recipes](${base}/how-we-test-recipes): Recipe testing and quality methodology
+- [How We Write and Review Recipes](${base}/how-we-test-recipes): Recipe standards and review methodology
 - [FAQ](${base}/faq): Common questions about firefighter meals and using the app
 
 ## Recipe collections

@@ -32,7 +32,7 @@ export function buildSmoothiesIndexSeo(count = 10): PageSeoConfig {
   return {
     title: titleWithBrand("Healthy Smoothies for Firefighters"),
     description: clipDescription(
-      `${count} firehouse-tested smoothies — protein, recovery, breakfast, and green blends with realistic ingredients and one-jar cleanup.`,
+      `${count} firehouse-ready smoothies — protein, recovery, breakfast, and green blends with realistic ingredients and one-jar cleanup.`,
     ),
     canonicalPath: smoothiesIndexPath(),
     ogType: "website",

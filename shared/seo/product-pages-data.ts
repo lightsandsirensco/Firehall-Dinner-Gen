@@ -1050,7 +1050,7 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
     h1: "Classics Wheel",
     title: "Classics Wheel — Firehouse Dinner Picker | Firehall Meals",
     description:
-      "Spin the Classics Wheel when the firehouse cannot decide. Fair kitchen-table picks from firehouse-tested firefighter dinners.",
+      "Spin the Classics Wheel when the firehouse cannot decide. Fair kitchen-table picks from firehouse-ready firefighter dinners.",
     keywords: [
       "classics wheel",
       "firehouse classics wheel",
@@ -1077,7 +1077,7 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
     solution: {
       heading: "Spin the Firehall Meals Classics Wheel",
       paragraphs: [
-        "The Classics Wheel is a public tool — ten firehouse-tested classics with full recipes, crew scaling, and shopping lists behind each result. No private firehouse data required to spin.",
+        "The Classics Wheel is a public tool — ten firehouse-ready classics with full recipes, crew scaling, and shopping lists behind each result. No private firehouse data required to spin.",
         "Every landing opens onto a real recipe, ready to cook. Pair with dinner voting when you want nominees from the wheel and a final crew ballot.",
       ],
     },
@@ -1133,7 +1133,7 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
       {
         question: "What is the Classics Wheel?",
         answer:
-          "A Firehall Meals spinner that lands on firehouse-tested classic dinners — the same kitchen-table gamble stations already know, backed by full crew recipes.",
+          "A Firehall Meals spinner that lands on firehouse-ready classic dinners — the same kitchen-table gamble stations already know, backed by full crew recipes.",
       },
       {
         question: "Do I need a firehouse account to spin?",

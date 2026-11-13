@@ -18,7 +18,6 @@ import { FoodImage } from "@/components/mobile/food-image";
 import { RECIPE_PAGE_HERO_FRAME } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
 import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
-import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { DietaryBadges } from "@/components/trust/dietary-badges";
 import { SiteFooter } from "@/components/site-footer";
@@ -242,13 +241,12 @@ export default function BreakfastRecipePage() {
               className="mt-5"
             />
 
-            <RecipeCrewRatingPanel slug={page.slug} category="breakfast_brunch" className="mt-6" />
-
             <RecipeNutritionPanel
               calories={page.nutrition.calories}
               protein={page.nutrition.protein}
               carbs={page.nutrition.carbs}
               fat={page.nutrition.fat}
+              source={page.nutrition.source}
               estimateAvailable={
                 page.nutrition.estimateAvailable !== false &&
                 page.nutrition.source !== "unavailable"

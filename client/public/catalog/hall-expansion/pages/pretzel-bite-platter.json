@@ -70,7 +70,7 @@
       "group": "Beer cheese"
     },
     {
-      "name": "Worcestershire sauce",
+      "name": "vegetarian (anchovy-free) Worcestershire sauce",
       "quantity": "7/8",
       "unit": "tbsp",
       "group": "Beer cheese"
@@ -231,10 +231,10 @@
         ]
       },
       {
-        "name": "Worcestershire sauce",
+        "name": "vegetarian (anchovy-free) Worcestershire sauce",
         "allergens": [
           "gluten",
-          "fish"
+          "soy"
         ]
       },
       {
@@ -250,25 +250,20 @@
       "eggFree": true,
       "nutFree": true,
       "peanutFree": true,
-      "soyFree": true,
+      "soyFree": false,
       "shellfishFree": true,
-      "fishFree": false,
+      "fishFree": true,
       "porkFree": true,
-      "vegetarian": false,
+      "vegetarian": true,
       "vegan": false
     },
     "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free beer or non-alcoholic broth instead. Use a certified gluten-free Worcestershire sauce."
-      },
       {
         "flag": "alcohol",
         "label": "Alcohol-Free Adaptable",
         "note": "Substitute non-alcoholic beer or broth."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:03:57.164Z"
   }
 }

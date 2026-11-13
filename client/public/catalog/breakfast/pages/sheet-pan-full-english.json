@@ -149,10 +149,15 @@
   "seoTitle": "Sheet Pan Full English | Firehall Breakfast",
   "collectionTier": "firehall_classic",
   "dietary": {
-    "confidence": "high",
+    "confidence": "low",
     "matchedCount": 8,
     "totalCount": 8,
-    "uncertainIngredients": [],
+    "uncertainIngredients": [
+      {
+        "name": "baked beans",
+        "reason": "Many canned refried and baked beans contain lard, bacon or pork — use a can labeled vegetarian."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "thick-cut bacon",
@@ -190,27 +195,16 @@
       "glutenFree": false,
       "dairyFree": false,
       "eggFree": false,
-      "nutFree": true,
-      "peanutFree": true,
-      "soyFree": true,
-      "shellfishFree": true,
-      "fishFree": true,
+      "nutFree": false,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": false,
       "porkFree": false,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
-      },
-      {
-        "flag": "dairy",
-        "label": "Dairy-Free Adaptable",
-        "note": "Use a plant-based butter/margarine."
-      }
-    ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "adaptable": [],
+    "classifiedAt": "2026-11-12T17:01:00.616Z"
   }
 }

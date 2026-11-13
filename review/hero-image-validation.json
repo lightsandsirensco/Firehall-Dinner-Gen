@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-04T23:37:53.951Z",
+  "generatedAt": "2026-11-13T01:08:01.544Z",
   "totals": {
-    "recipes": 408,
-    "pass": 408,
+    "recipes": 405,
+    "pass": 405,
     "fail": 0,
     "fileFailures": 0,
     "metadataFailures": 0,
@@ -12,7 +12,7 @@
     "semanticWarnings": 5,
     "semanticPass": 0,
     "semanticFail": 0,
-    "semanticNotVerified": 408,
+    "semanticNotVerified": 405,
     "needsNewImage": 0
   },
   "rows": [
@@ -8696,40 +8696,6 @@
       "pass": true
     },
     {
-      "slug": "firehall-greek-chicken-bowls",
-      "title": "Greek Chicken Bowls",
-      "collection": "hall_expansion",
-      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "heroAlt": "Greek Chicken Bowls — rice, cucumbers, tomatoes, red onion, and kalamata olives",
-      "heroAltConfigured": true,
-      "heroOnDisk": true,
-      "exploreMapping": {
-        "slug": "firehall-greek-chicken-bowls",
-        "title": "Greek Chicken Bowls",
-        "category": "hall_expansion",
-        "kind": "hall_expansion",
-        "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
-        "canonicalHero": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
-        "status": "correct",
-        "issues": [],
-        "duplicatePeers": [],
-        "heroMd5": "f6c887db81572305009fc1d78d6eff80",
-        "exploreEligible": true
-      },
-      "metadataIssues": [],
-      "fileFailures": [],
-      "metadataFailures": [],
-      "metadataWarnings": [],
-      "semanticWarnings": [],
-      "semanticStatus": "not_verified",
-      "semanticReasons": [
-        "vision check not run (pass --vision to verify the picture)"
-      ],
-      "hardFailures": [],
-      "needsNewImage": false,
-      "pass": true
-    },
-    {
       "slug": "teriyaki-chicken-rice-bowls",
       "title": "Teriyaki Chicken Rice Bowls",
       "collection": "hall_expansion",
@@ -11008,40 +10974,6 @@
       "pass": true
     },
     {
-      "slug": "breakfast-sandwich-trays",
-      "title": "Breakfast Sandwich Trays",
-      "collection": "breakfast",
-      "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
-      "heroAlt": "Breakfast sandwiches on English muffins with sausage patties, eggs, and cheese",
-      "heroAltConfigured": true,
-      "heroOnDisk": true,
-      "exploreMapping": {
-        "slug": "breakfast-sandwich-trays",
-        "title": "Breakfast Sandwich Trays",
-        "category": "breakfast",
-        "kind": "breakfast_catalog",
-        "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
-        "canonicalHero": "/images/breakfast/breakfast-sandwich-trays.jpg",
-        "status": "correct",
-        "issues": [],
-        "duplicatePeers": [],
-        "heroMd5": "a4927da3e00b0787815a94a93953c138",
-        "exploreEligible": true
-      },
-      "metadataIssues": [],
-      "fileFailures": [],
-      "metadataFailures": [],
-      "metadataWarnings": [],
-      "semanticWarnings": [],
-      "semanticStatus": "not_verified",
-      "semanticReasons": [
-        "vision check not run (pass --vision to verify the picture)"
-      ],
-      "hardFailures": [],
-      "needsNewImage": false,
-      "pass": true
-    },
-    {
       "slug": "breakfast-sliders",
       "title": "Breakfast Sliders",
       "collection": "breakfast",
@@ -12871,40 +12803,6 @@
         "issues": [],
         "duplicatePeers": [],
         "heroMd5": "a6c14897c1ab96e6ec72ae0f20c7408d",
-        "exploreEligible": true
-      },
-      "metadataIssues": [],
-      "fileFailures": [],
-      "metadataFailures": [],
-      "metadataWarnings": [],
-      "semanticWarnings": [],
-      "semanticStatus": "not_verified",
-      "semanticReasons": [
-        "vision check not run (pass --vision to verify the picture)"
-      ],
-      "hardFailures": [],
-      "needsNewImage": false,
-      "pass": true
-    },
-    {
-      "slug": "veggie-egg-burritos",
-      "title": "Veggie Egg Burritos",
-      "collection": "breakfast",
-      "heroImage": "/images/breakfast/veggie-egg-burritos.jpg",
-      "heroAlt": "Egg burritos in flour tortillas with hash browns, bell peppers, onion, and cheese",
-      "heroAltConfigured": true,
-      "heroOnDisk": true,
-      "exploreMapping": {
-        "slug": "veggie-egg-burritos",
-        "title": "Veggie Egg Burritos",
-        "category": "breakfast",
-        "kind": "breakfast_catalog",
-        "heroImage": "/images/breakfast/veggie-egg-burritos.jpg",
-        "canonicalHero": "/images/breakfast/veggie-egg-burritos.jpg",
-        "status": "correct",
-        "issues": [],
-        "duplicatePeers": [],
-        "heroMd5": "970d745861b281704e6b05de7dacc217",
         "exploreEligible": true
       },
       "metadataIssues": [],

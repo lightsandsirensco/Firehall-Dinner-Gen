@@ -466,7 +466,7 @@ export async function buildHallFavoritesSection(
     const def: ExploreSectionDef = {
       id: "firehouse_staples",
       title: "Crew Favorites",
-      subtitle: "Hall-tested staples — the meals crews actually make",
+      subtitle: "Hall staples — the meals crews actually make",
       layout: "rail",
       priority: 0,
       poolTag: "crew_favorite",
@@ -566,7 +566,7 @@ export async function buildHallFavoritesSection(
   return {
     id: "firehouse_staples",
     title: "Crew Favorites",
-    subtitle: "Hall-tested staples — the meals crews actually make",
+    subtitle: "Hall staples — the meals crews actually make",
     layout: "rail",
     theme: "ember",
     recipes,

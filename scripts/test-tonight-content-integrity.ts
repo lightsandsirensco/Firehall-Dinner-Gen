@@ -115,7 +115,7 @@ for (const protein of ["any", "chicken", "vegetarian", "beef", "pork"]) {
 }
 
 // Every approved recipe remains reachable in a browse kind + category.
-assert.equal(approved.length, 427, "approved catalog size");
+assert.equal(approved.length, 424, "approved catalog size");
 assert.equal(new Set(approved.map((r) => r.slug)).size, approved.length, "approved slugs unique");
 for (const r of approved) {
   assert.ok(r.kind && r.category && r.categoryLabel, `${r.slug} has browse kind/category`);

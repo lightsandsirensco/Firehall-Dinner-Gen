@@ -59,23 +59,23 @@
       "group": "Sauce"
     },
     {
-      "name": "tbsp tomato paste",
-      "quantity": "2",
+      "name": "tomato paste",
+      "quantity": "2 tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "tsp ground cumin",
-      "quantity": "2",
+      "name": "ground cumin",
+      "quantity": "2 tsp",
       "group": "Seasoning"
     },
     {
-      "name": "tsp smoked paprika",
-      "quantity": "1",
+      "name": "smoked paprika",
+      "quantity": "1 tsp",
       "group": "Seasoning"
     },
     {
-      "name": "tsp cayenne",
-      "quantity": "0.5",
+      "name": "cayenne",
+      "quantity": "1/2 tsp",
       "notes": "optional",
       "group": "Seasoning"
     },
@@ -85,8 +85,8 @@
       "group": "Protein"
     },
     {
-      "name": "cups crumbled feta",
-      "quantity": "1.5",
+      "name": "crumbled feta",
+      "quantity": "1 1/2 cups",
       "group": "Finish"
     },
     {
@@ -183,7 +183,7 @@
         ]
       },
       {
-        "name": "cups crumbled feta",
+        "name": "crumbled feta",
         "allergens": [
           "dairy"
         ]
@@ -220,6 +220,6 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:11:45.504Z"
   }
 }

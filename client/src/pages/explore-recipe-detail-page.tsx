@@ -1,3 +1,4 @@
+import { RECIPE_IMAGE_DISCLOSURE } from "@/lib/brand-copy";
 import { useState, useCallback, useEffect, useMemo, useRef, type RefObject } from "react";
 import { useQuery } from "@tanstack/react-query";
 import {
@@ -50,13 +51,10 @@ import {
   formatClientIngredientQty,
   formatRecipeIngredientName,
 } from "@shared/measurements";
-import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
-import { exploreRecipeRatingSlug } from "@shared/recipe-crew-ratings/slugs";
 import { HallVoteFlow } from "@/components/hall-vote-flow";
 import { exploreDetailToCookMode } from "@/lib/cook-mode/adapters";
 import { StartCookingButton } from "@/components/cook-mode/start-cooking-button";
-
-const DEFAULT_CREW_SIZE = 6;
+import { usePreferredCrewSize } from "@/hooks/use-preferred-crew-size";
 
 function inferCategory(name: string): string {
   const n = name.toLowerCase();
@@ -148,7 +146,7 @@ function spoonacularToClientRecipe(detail: ExploreRecipeDetail, crewSize: number
       cooking_method: "",
       base_carb: "",
       key_ingredients: detail.ingredients.slice(0, 5).map((i) => i.name),
-      high_protein: detail.macros.protein_g >= 25,
+      high_protein: false,
       high_fiber: false,
       quick_cleanup: detail.readyInMinutes <= 30,
     },
@@ -261,6 +259,7 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
 
     return null;
   }, [lookupHints.slug, detailPreview?._curatedSlug, matchedDetail]);
+  const crewSize = usePreferredCrewSize();
 
   if (catalogRedirect) {
     return <Redirect to={catalogRedirect} replace />;
@@ -277,7 +276,7 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
         <main className={cn(app.mainDetail, "pb-safe-tabs-cta-tall sm:pb-8")}>
           <RecipeDetailView
             recipe={displayDetail}
-            crewSize={DEFAULT_CREW_SIZE}
+            crewSize={crewSize}
             onBack={closeRecipeDetail}
           />
         </main>
@@ -626,8 +625,6 @@ function RecipeDetailView({
           </Card>
         )}
 
-        <RecipeCrewRatingPanel slug={exploreRecipeRatingSlug(recipe.id)} className="border-border/50" />
-
         <div className="section-divider" />
 
         <Card className="border-border/50">
@@ -748,6 +745,9 @@ function ExploreDetailFooter({ className = "" }: { className?: string }) {
     <footer className={`text-center py-6 mt-8 border-t border-border/20 ${className}`}>
       <p className="text-xs text-muted-foreground/50" data-testid="link-attribution">
         Firefighter-owned
+      </p>
+      <p className="mt-1 text-[11px] text-muted-foreground/50" data-testid="recipe-image-disclosure">
+        {RECIPE_IMAGE_DISCLOSURE}
       </p>
     </footer>
   );

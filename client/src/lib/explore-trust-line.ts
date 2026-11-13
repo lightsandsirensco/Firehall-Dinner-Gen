@@ -1,7 +1,7 @@
 import type { ExploreRecipeCard } from "@/lib/explore-recipe";
 
 const FALLBACK = [
-  "Firehouse-tested for crew nights",
+  "Firehouse-ready for crew nights",
   "Built for the station table",
   "Practical spread — not food-blog fluff",
   "Crew-ready after a long shift",
@@ -22,7 +22,7 @@ export function buildExploreTrustLine(recipe: ExploreRecipeCard): string {
   if (recipe.fromCuratedDb && recipe.publisherName?.trim()) {
     return `Via ${recipe.publisherName.trim()}`;
   }
-  if (recipe._curatedSlug) return "Crew-tested firehouse classic";
+  if (recipe._curatedSlug) return "Classic firehouse dinner";
 
   const text = `${recipe.title} ${recipe.summary || ""} ${recipe._pool || ""}`.toLowerCase();
 

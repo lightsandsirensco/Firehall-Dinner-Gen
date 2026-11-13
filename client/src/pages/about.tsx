@@ -190,7 +190,7 @@ export default function AboutPage() {
 
             BBQ, oven bakes, skillets, slow cookers, and air-fryer nights when time is tight. Every
 
-            recipe is scaled for crews, written with honest timing, and tested against what firehouses
+            recipe is scaled for crews, written with honest timing, and reviewed against what firehouses
 
             actually cook — not what looks good on a food blog.
 
@@ -200,7 +200,7 @@ export default function AboutPage() {
             Recipes are designed for roughly 2–20 firefighters, beginner cooks, and real shift
             interruptions. Read{" "}
             <Link href="/how-we-test-recipes" className="text-primary hover:underline">
-              how we test recipes
+              how we write and review recipes
             </Link>{" "}
             for the full standard.
           </p>

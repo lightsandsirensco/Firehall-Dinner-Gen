@@ -213,10 +213,15 @@
   "generatedAt": "2026-09-26T19:26:55.959Z",
   "contentVersion": 2,
   "dietary": {
-    "confidence": "high",
+    "confidence": "low",
     "matchedCount": 6,
     "totalCount": 6,
-    "uncertainIngredients": [],
+    "uncertainIngredients": [
+      {
+        "name": "beef gravy",
+        "reason": "Gravies and gravy mixes are often made with meat drippings or stock."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "beef gravy",
@@ -235,23 +240,17 @@
     "flags": {
       "glutenFree": false,
       "dairyFree": false,
-      "eggFree": true,
-      "nutFree": true,
-      "peanutFree": true,
-      "soyFree": true,
-      "shellfishFree": true,
-      "fishFree": true,
-      "porkFree": true,
+      "eggFree": false,
+      "nutFree": false,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": false,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
-      }
-    ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "adaptable": [],
+    "classifiedAt": "2026-11-12T17:01:00.616Z"
   }
 }

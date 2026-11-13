@@ -6,7 +6,7 @@ const TRUST_LINES = [
   "Practical spread for a real firehouse night",
   "Built for firefighters — not food bloggers",
   "Station dinner that actually fills the crew",
-  "Firehouse-tested comfort for tonight's table",
+  "Firehouse-ready comfort for tonight's table",
 ] as const;
 
 function stableIndex(key: string, length: number): number {
@@ -97,7 +97,7 @@ export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: nu
   if (rt?.quick_cleanup || /quick cleanup/.test(blob)) {
     return "Fast cleanup after the call";
   }
-  if (rt?.high_protein || /feeds hard|high protein/.test(blob)) {
+  if (rt?.high_protein) {
     return "Protein-forward — feeds a hungry crew";
   }
 
@@ -121,7 +121,7 @@ export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: nu
     return "Big flavors — easy to scale for the crew";
   }
   if (cuisine.includes("italian") || cuisine.includes("pasta")) {
-    return "Firehouse-tested pasta night";
+    return "Firehouse-ready pasta night";
   }
   if (cuisine.includes("bbq") || cuisine.includes("barbecue")) {
     return "Smokehouse spread without the fuss";
@@ -131,7 +131,7 @@ export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: nu
   }
 
   if (/comfort|mac and cheese|cheesy|casserole/.test(blob + title)) {
-    return "Firehouse-tested comfort food";
+    return "Firehouse-ready comfort food";
   }
   if (/lean|lighter|grilled/.test(blob) && !/comfort|cheesy/.test(blob)) {
     return "Lighter crew dinner — still satisfying";

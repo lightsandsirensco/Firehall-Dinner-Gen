@@ -7,7 +7,7 @@
   "subtitle": "Salt-and-pepper bark, post-oak smoke, and sliced platters for ten",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Adapted from classic Central Texas pit tradition (Amazing Ribs, Meat Church): a whole packer brisket gets a simple salt-and-pepper rub, smokes low over post oak until probe-tender, rests, and slices against the grain for the crew.",
+  "description": "Adapted from classic Central Texas pit tradition (Amazing Ribs, Meat Church): a brisket flat gets a simple salt-and-pepper rub, smokes low over post oak until probe-tender, rests, and slices against the grain for the crew.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 480,
@@ -40,8 +40,8 @@
   ],
   "ingredients": [
     {
-      "name": "Whole Packer Brisket",
-      "quantity": "4",
+      "name": "Brisket Flat",
+      "quantity": "6",
       "unit": "Lb",
       "notes": "trimmed"
     },
@@ -57,35 +57,35 @@
     },
     {
       "name": "Garlic Powder",
-      "quantity": "7/8",
+      "quantity": "1",
       "unit": "Tbsp"
     },
     {
       "name": "Yellow Mustard",
-      "quantity": "2.6",
+      "quantity": "3",
       "unit": "Tbsp",
       "notes": "binder"
     },
     {
       "name": "Beef Broth",
-      "quantity": "1.6",
+      "quantity": "1 1/2",
       "unit": "Cups",
       "notes": "for holding"
     },
     {
       "name": "Dill Pickle Chips",
-      "quantity": "1.6",
+      "quantity": "1 1/2",
       "unit": "Cups"
     },
     {
       "name": "White Onion",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "whole",
       "notes": "thin-sliced"
     },
     {
       "name": "White Bread",
-      "quantity": "17",
+      "quantity": "16",
       "unit": "slices"
     }
   ],
@@ -114,7 +114,7 @@
     {
       "stepNumber": 4,
       "title": "Wrap through the stall",
-      "instruction": "Wrap tightly in butcher paper when bark color looks right. Continue at 250°F until probe slides like butter and flat reads 203°F, about 3–4 hours.",
+      "instruction": "Wrap tightly in butcher paper when bark color looks right. Continue at 250°F until a probe slides in with no resistance and the flat reads 203°F, about 3–4 hours.",
       "minutes": 180,
       "heatLevel": "low"
     },

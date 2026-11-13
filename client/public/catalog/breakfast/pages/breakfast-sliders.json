@@ -30,7 +30,7 @@
     },
     {
       "name": "breakfast sausage patties",
-      "quantity": "12",
+      "quantity": "24",
       "notes": "pre-cooked or thin frozen",
       "group": "Protein"
     },
@@ -75,7 +75,7 @@
     {
       "stepNumber": 1,
       "title": "Heat the oven",
-      "instruction": "Heat oven to 350°F. Line a rimmed sheet pan with parchment. Cook sausage patties until done and fold eggs into thin rectangles roughly the size of each roll.",
+      "instruction": "Heat oven to 350°F. Line a rimmed sheet pan with parchment. Cook sausage patties until they read 160°F (71°C) in the center and fold eggs into thin rectangles roughly the size of each roll.",
       "minutes": 0,
       "tempF": 350
     },
@@ -94,7 +94,7 @@
     {
       "stepNumber": 4,
       "title": "Glaze and bake",
-      "instruction": "Whisk melted butter, maple syrup, and Dijon. Brush generously over roll tops. Bake until cheese melts and tops turn golden and sticky.",
+      "instruction": "Whisk melted butter, maple syrup, and Dijon. Brush generously over roll tops and sprinkle with everything bagel seasoning if using. Bake 12–15 minutes until cheese melts and tops turn golden and sticky.",
       "minutes": 18,
       "tempF": 350
     },

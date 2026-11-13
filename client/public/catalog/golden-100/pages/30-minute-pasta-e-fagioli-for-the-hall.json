@@ -14,8 +14,8 @@
   "prepTime": 12,
   "difficulty": "easy",
   "calories": 559,
-  "protein": 25,
-  "carbs": 80,
+  "protein": 23,
+  "carbs": 83,
   "fats": 17,
   "tags": [
     "protein:vegetarian",
@@ -35,13 +35,13 @@
   "ingredients": [
     {
       "name": "Ditalini Or Small Shells",
-      "quantity": "1.3",
+      "quantity": "1",
       "unit": "Lb",
       "group": "Pasta"
     },
     {
       "name": "Olive Oil",
-      "quantity": "0.3",
+      "quantity": "1/3",
       "unit": "Cup",
       "group": "Base"
     },
@@ -73,7 +73,14 @@
       "group": "Beans"
     },
     {
-      "name": "Low-Sodium Chicken Broth",
+      "name": "Crushed Tomatoes",
+      "quantity": "1",
+      "unit": "can",
+      "notes": "28 oz",
+      "group": "Beans"
+    },
+    {
+      "name": "Low-Sodium Vegetable Broth",
       "quantity": "8",
       "unit": "Cups",
       "group": "Broth"
@@ -94,7 +101,7 @@
       "name": "Parmesan Cheese",
       "quantity": "1",
       "unit": "Cup",
-      "notes": "finely grated, plus rind if you have it",
+      "notes": "finely grated, plus rind if you have it; use a Parmesan labeled vegetarian (microbial rennet)",
       "group": "Finish"
     },
     {
@@ -123,7 +130,7 @@
     {
       "stepNumber": 2,
       "title": "Simmer broth and beans",
-      "instruction": "Add kidney beans, broth, oregano, bay leaves, and Parmesan rind if using. Bring to a steady simmer — the soup should look brothy, not stew-thick yet. Simmer 10 minutes so flavors meld and beans heat through.",
+      "instruction": "Add kidney beans, crushed tomatoes, broth, oregano, bay leaves, and Parmesan rind if using. Bring to a steady simmer — the soup should look brothy, not stew-thick yet. Simmer 10 minutes so flavors meld and beans heat through.",
       "minutes": 12,
       "heatLevel": "medium-low"
     },
@@ -174,8 +181,8 @@
   "cleanupDifficulty": "easy",
   "nutrition": {
     "calories": 559,
-    "protein": 25,
-    "carbs": 80,
+    "protein": 23,
+    "carbs": 83,
     "fats": 17,
     "label": "Estimated per serving",
     "source": "calculated",
@@ -228,8 +235,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 12,
-    "totalCount": 12,
+    "matchedCount": 13,
+    "totalCount": 13,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -239,7 +246,7 @@
         ]
       },
       {
-        "name": "Low-Sodium Chicken Broth",
+        "name": "Low-Sodium Vegetable Broth",
         "allergens": [
           "gluten"
         ]
@@ -267,7 +274,7 @@
       "shellfishFree": true,
       "fishFree": true,
       "porkFree": true,
-      "vegetarian": false,
+      "vegetarian": true,
       "vegan": false
     },
     "adaptable": [
@@ -282,7 +289,7 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:29:45.659Z"
   },
   "avoidTags": [
     "onions",

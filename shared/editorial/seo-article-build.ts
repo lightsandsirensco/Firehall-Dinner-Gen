@@ -97,7 +97,7 @@ export const BANNED_GUIDE_PHRASES: Array<{ label: string; re: RegExp }> = [
   { label: "ultimate/comprehensive guide", re: /\b(?:ultimate|comprehensive) guide\b/i },
   { label: "game-changer", re: /\bgame[- ]?changer\b/i },
   { label: "fuel the shift", re: /\bfuel(?:s|ing)? (?:the|your|a long|long) (?:shift|crew|body)\b/i },
-  { label: "hall-tested claim", re: /\bhall-tested\b/i },
+  { label: "unsupported tested claim", re: /\b(?:hall|firehouse|firehall|crew|kitchen|shift|station|firefighter)[- ]tested\b|\btested in the (?:firehouse|hall)\b/i },
 ];
 
 function assertNoBannedPhrases(article: EditorialArticle): void {

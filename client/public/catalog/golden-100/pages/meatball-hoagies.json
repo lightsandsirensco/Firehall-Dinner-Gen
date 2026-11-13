@@ -279,7 +279,12 @@
     "confidence": "high",
     "matchedCount": 14,
     "totalCount": 14,
-    "uncertainIngredients": [],
+    "uncertainIngredients": [
+      {
+        "name": "Grated Parmesan",
+        "reason": "Traditional Parmesan, Pecorino and Gruyère are made with animal rennet. For a vegetarian version, use a cheese labeled vegetarian (microbial or vegetable rennet)."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "Ground Italian Sausage",
@@ -360,7 +365,7 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   },
   "avoidTags": []
 }

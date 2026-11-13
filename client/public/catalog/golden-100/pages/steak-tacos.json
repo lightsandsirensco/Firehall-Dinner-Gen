@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 67,
-  "carbs": 93,
-  "fats": 87,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:beef",
     "format:tacos",
@@ -107,7 +107,7 @@
     },
     {
       "name": "Corn Tortillas",
-      "quantity": "48"
+      "quantity": "32"
     },
     {
       "name": "Cotija Cheese",
@@ -139,7 +139,7 @@
     {
       "stepNumber": 1,
       "title": "Make the chimichurri",
-      "instruction": "Finely chop parsley and cilantro — you want small pieces, not a wet purée (blending too long turns chimichurri muddy). Mince garlic. Whisk olive oil, red wine vinegar, garlic, herbs, 1 tsp salt, and cracked pepper. Chimichurri should look like loose green confetti in glossy oil — sharp, herb-forward, not mayonnaise-thick. Taste: it should hit acid first, then garlic, then peppery herbs. Hold at room temp 20 minutes so flavors meld.",
+      "instruction": "Finely chop parsley and cilantro — you want small pieces, not a wet purée (blending too long turns chimichurri muddy). Mince garlic. Whisk olive oil, red wine vinegar, garlic, herbs, 1 tsp salt, and cracked pepper. Chimichurri should look like loose green confetti in glossy oil — sharp, herb-forward, never thick or creamy. Taste: it should hit acid first, then garlic, then peppery herbs. Hold at room temp 20 minutes so flavors meld.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -160,7 +160,7 @@
     {
       "stepNumber": 4,
       "title": "Sear the steak hard",
-      "instruction": "Heat cast iron or the grill to screaming hot and film it with the neutral oil — it should shimmer and barely smoke. Sear steak in batches; don't crowd. You want deep brown crust with grill marks, not gray steamed meat. Flip once. Skirt: 3–4 min per side for medium-rare. Flank: 4–5 min per side. Pull at an internal temp of 125–130°F for a pink center — carryover adds about 5°F while resting; cook to 145°F if the hall wants zero pink. Common mistake: flipping too early; wait until the crust releases cleanly.",
+      "instruction": "Heat cast iron or the grill to screaming hot and film it with the neutral oil — it should shimmer and barely smoke. Sear steak in batches; don't crowd. You want deep brown crust with grill marks, not gray steamed meat. Flip once. Skirt: 4–5 min per side. Flank: 5–6 min per side. Pull at 145°F (63°C) and rest 3 minutes — skirt stays rosy in the center. For medium-rare, pull at 125–130°F; that's a preference below the USDA safe minimum, not for anyone pregnant, older, or immunocompromised. Common mistake: flipping too early; wait until the crust releases cleanly.",
       "minutes": 10,
       "heatLevel": "high"
     },
@@ -235,13 +235,13 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 67,
-    "carbs": 93,
-    "fats": 87,
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
     "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,

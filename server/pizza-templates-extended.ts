@@ -430,7 +430,7 @@ export function metaAwareGenericTemplate(conceptId: string): PizzaTemplateDef {
     why_this_works:
       meta?.crewFavorite
         ? `${label} — a crew favourite built for a busy hall oven. Feeds ${meta?.badges.includes("Feeds 4–8") ? "the whole shift" : "hungry firefighters"} between calls.`
-        : `${label} — hall-tested pizza built for your oven and crew size.`,
+        : `${label} — hall pizza built for your oven and crew size.`,
     sauce: [ing(meta?.sauceStyle.includes("BBQ") ? "BBQ sauce" : meta?.sauceStyle.includes("Buffalo") ? "Buffalo sauce" : meta?.sauceStyle.includes("white") || meta?.sauceStyle.includes("Alfredo") ? "Garlic cream sauce" : "Pizza sauce", "1¼ cups")],
     cheese: [ing("Shredded mozzarella", "4 cups")],
     toppings: [ing("Protein and vegetables per recipe", "see hall prep"), ing("Red onion", "1 medium")],

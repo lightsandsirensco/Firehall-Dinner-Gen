@@ -66,6 +66,17 @@ export interface IngredientDietaryProfile {
   crossContaminationRisk?: string;
   /** Human-readable substitution notes keyed by the allergen they address. */
   substitutions?: Partial<Record<"gluten" | "dairy" | "egg" | "soy" | "treeNuts" | "peanuts" | "pork" | "alcohol", string>>;
+  /**
+   * Set when common store-bought versions differ (lard, fish sauce, butter…).
+   * The recipe is classified low-confidence — no diet/allergen-free claims —
+   * until the ingredient is named specifically (e.g. "vegetarian refried beans").
+   */
+  variesByBrand?: string;
+  /**
+   * Cheese traditionally made with animal rennet. Blocks only the vegetarian claim
+   * (other flags stay high-confidence) unless the line names a vegetarian/microbial rennet.
+   */
+  animalRennet?: string;
 }
 
 /**
@@ -133,6 +144,7 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "anchovy", keywords: ["anchovy fillets", "anchovy", "anchovies"], category: "fish", ...NONE, meat: true, fish: true },
   { id: "canned-tuna", keywords: ["canned tuna", "tuna packed in oil", "tuna packed in water", "tuna steak", "tuna", "albacore"], category: "fish", ...NONE, meat: true, fish: true },
   { id: "fish-sauce", keywords: ["fish sauce"], category: "sauce_condiment", ...NONE, fish: true },
+  { id: "worcestershire-vegetarian", keywords: ["vegetarian worcestershire sauce", "vegan worcestershire sauce", "anchovy-free worcestershire sauce"], category: "sauce_condiment", ...NONE, gluten: true, soy: true, crossContaminationRisk: "Anchovy-free versions are usually tamari-based (soy); some contain malt vinegar — verify label for gluten-free." },
   { id: "worcestershire", keywords: ["worcestershire sauce", "worcestershire"], category: "sauce_condiment", ...NONE, fish: true, gluten: true, crossContaminationRisk: "Contains anchovies (fish) and is typically malt-vinegar based (gluten) — verify label for gluten-free/vegan versions.", substitutions: { gluten: "Use a certified gluten-free Worcestershire sauce." } },
   { id: "caesar-dressing", keywords: ["caesar dressing"], category: "sauce_condiment", ...NONE, fish: true, egg: true, dairy: true, crossContaminationRisk: "Traditional Caesar dressing contains anchovies and raw/coddled egg." },
 
@@ -141,7 +153,7 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
 
   // ---------------- DAIRY ----------------
   { id: "milk", keywords: ["whole milk", "2% milk", "buttermilk", "milk"], category: "dairy", ...NONE, dairy: true, substitutions: { dairy: "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)." } },
-  { id: "cheese", keywords: ["cheddar cheese", "shredded cheddar", "sharp cheddar cheese", "sharp cheddar", "shredded sharp cheddar", "cheddar, shredded", "cheddar", "mozzarella cheese", "shredded mozzarella", "low-moisture mozzarella", "fresh mozzarella", "mozzarella, shredded", "mozzarella", "pepper jack", "shredded cheese", "cheese shredded", "parmesan cheese", "grated parmesan", "parmesan, grated", "parmesan", "monterey jack cheese", "monterey jack", "shredded monterey jack", "swiss cheese", "provolone slices", "provolone cheese", "provolone", "queso fresco", "cotija cheese", "cotija", "feta cheese", "feta, crumbled", "crumbled feta", "feta", "smoked gouda", "brick cheese", "american cheese slices", "american cheese", "shredded pepper jack", "shredded cheddar-mozzarella blend", "cheese curds", "nacho cheese sauce", "pecorino romano", "queso", "cheese"], category: "dairy", ...NONE, dairy: true, substitutions: { dairy: "Use a dairy-free cheese shred/block alternative." } },
+  { id: "cheese", keywords: ["cheddar cheese", "shredded cheddar", "sharp cheddar cheese", "sharp cheddar", "shredded sharp cheddar", "cheddar, shredded", "cheddar", "mozzarella cheese", "shredded mozzarella", "low-moisture mozzarella", "fresh mozzarella", "mozzarella, shredded", "mozzarella", "pepper jack", "shredded cheese", "cheese shredded", "monterey jack cheese", "monterey jack", "shredded monterey jack", "swiss cheese", "provolone slices", "provolone cheese", "provolone", "queso fresco", "cotija cheese", "cotija", "feta cheese", "feta, crumbled", "crumbled feta", "feta", "smoked gouda", "brick cheese", "american cheese slices", "american cheese", "shredded pepper jack", "shredded cheddar-mozzarella blend", "cheese curds", "nacho cheese sauce", "queso", "cheese"], category: "dairy", ...NONE, dairy: true, substitutions: { dairy: "Use a dairy-free cheese shred/block alternative." } },
   { id: "cream-cheese-sour-cream", keywords: ["cream cheese", "sour cream", "mexican crema"], category: "dairy", ...NONE, dairy: true },
   { id: "butter", keywords: ["unsalted butter", "clarified butter", "whipped butter", "melted butter", "butter"], category: "dairy", ...NONE, dairy: true, substitutions: { dairy: "Use a plant-based butter/margarine." } },
   { id: "cream", keywords: ["heavy cream", "whipping cream", "ricotta", "whole-milk ricotta"], category: "dairy", ...NONE, dairy: true },
@@ -178,7 +190,13 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "barley", keywords: ["pearl barley", "barley"], category: "grain_gluten", ...NONE, gluten: true, substitutions: { gluten: "Substitute rice or a gluten-free grain." } },
 
   // ---------------- LEGUMES / PLANT PROTEIN ----------------
-  { id: "beans", keywords: ["kidney bean", "kidney beans", "black bean", "black beans", "pinto bean", "pinto beans", "cannellini", "cannellini beans", "chickpea", "chickpeas", "canned chickpeas", "garbanzo", "beans drained", "beans, drained", "baked beans", "butter bean", "butter beans", "lima bean", "lima beans", "great northern beans", "navy beans", "fava beans", "white beans", "beans"], category: "legume", ...NONE },
+  { id: "beans", keywords: ["kidney bean", "kidney beans", "black bean", "black beans", "pinto bean", "pinto beans", "cannellini", "cannellini beans", "chickpea", "chickpeas", "canned chickpeas", "garbanzo", "beans drained", "beans, drained", "butter bean", "butter beans", "lima bean", "lima beans", "great northern beans", "navy beans", "fava beans", "white beans", "beans", "vegetarian refried beans", "vegan refried beans", "vegetarian baked beans"], category: "legume", ...NONE },
+  { id: "refried-baked-beans-brand", keywords: ["refried beans", "baked beans"], category: "legume", ...NONE, variesByBrand: "Many canned refried and baked beans contain lard, bacon or pork — use a can labeled vegetarian." },
+  { id: "kimchi-traditional", keywords: ["kimchi"], category: "vegetable", ...NONE, fish: true, shellfish: true, variesByBrand: "Traditional kimchi is made with fish sauce and salted shrimp — use one labeled vegan." },
+  { id: "pie-crust-pastry", keywords: ["pie crust or puff pastry", "pie crust", "pie crusts", "puff pastry"], category: "grain_gluten", ...NONE, gluten: true, variesByBrand: "Store-bought pie crusts and puff pastry often contain lard or butter.", substitutions: { gluten: "Use a certified gluten-free crust." } },
+  { id: "gravy-brand", keywords: ["country sausage gravy mix", "sausage gravy mix", "country gravy", "brown gravy", "gravy mix", "gravy"], category: "sauce_condiment", ...NONE, gluten: true, dairy: true, variesByBrand: "Gravies and gravy mixes are often made with meat drippings or stock.", substitutions: { gluten: "Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux." } },
+  { id: "cream-of-chicken", keywords: ["cream of chicken"], category: "sauce_condiment", ...NONE, gluten: true, dairy: true, meat: true },
+  { id: "lard", keywords: ["lard"], category: "fat_oil", ...NONE, meat: true, pork: true },
   { id: "lentils", keywords: ["lentil", "lentils", "green lentils"], category: "legume", ...NONE },
   { id: "edamame", keywords: ["edamame"], category: "legume", ...NONE, soy: true },
   { id: "tofu-tempeh", keywords: ["tofu", "tempeh"], category: "legume", ...NONE, soy: true },
@@ -214,7 +232,7 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "fish-shellfish-stock", keywords: ["fish stock", "fish broth", "seafood stock", "seafood broth", "shrimp stock", "shrimp broth", "lobster stock", "clam broth", "clam juice"], category: "sauce_condiment", ...NONE, gluten: true, meat: true, fish: true, crossContaminationRisk: "Bouillon and many boxed/canned stocks use hydrolyzed wheat protein, wheat starch, or 'natural flavoring' as a gluten source — treated as gluten-containing unless labeled gluten-free.", substitutions: { gluten: "Use a certified gluten-free broth or bouillon." } },
   { id: "vegetable-stock", keywords: ["vegetable stock", "vegetable broth", "veggie stock", "veggie broth", "mushroom stock", "mushroom broth", "low-sodium vegetable broth"], category: "sauce_condiment", ...NONE, gluten: true, crossContaminationRisk: "Bouillon and many boxed/canned stocks use hydrolyzed wheat protein, wheat starch, or 'natural flavoring' as a gluten source — treated as gluten-containing unless labeled gluten-free.", substitutions: { gluten: "Use a certified gluten-free broth or bouillon." } },
   { id: "cajun-taco-seasoning", keywords: ["cajun blackening spice", "cajun seasoning", "taco seasoning", "fajita seasoning", "jerk or poultry rub", "everything bagel seasoning", "seasoning packet", "seasoning"], category: "spice_herb_aromatic", ...NONE, gluten: true, crossContaminationRisk: "Pre-mixed spice/seasoning packets frequently include wheat-derived anti-caking agents or hydrolyzed wheat protein — treated as gluten-containing unless a specific gluten-free brand/blend is named.", substitutions: { gluten: "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet." } },
-  { id: "gravy-mix-cream-soup", keywords: ["country sausage gravy mix", "gravy mix", "gravy", "cream of mushroom", "cream of chicken", "cream soup", "roux"], category: "sauce_condiment", ...NONE, gluten: true, dairy: true, pork: false, crossContaminationRisk: "Traditional roux and canned cream soups are wheat-flour thickened — treated as gluten-containing.", substitutions: { gluten: "Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux." } },
+  { id: "gravy-mix-cream-soup", keywords: ["cream of mushroom", "cream of celery", "cream soup", "roux"], category: "sauce_condiment", ...NONE, gluten: true, dairy: true, pork: false, crossContaminationRisk: "Traditional roux and canned cream soups are wheat-flour thickened — treated as gluten-containing.", substitutions: { gluten: "Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux." } },
 
   // ---------------- OILS / FATS ----------------
   { id: "oil", keywords: ["extra-virgin olive oil", "olive oil", "vegetable oil", "canola oil", "cooking oil", "neutral oil", "grapeseed oil", "sesame oil", "toasted sesame oil", "oil"], category: "fat_oil", ...NONE },
@@ -237,7 +255,7 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "avocado", keywords: ["avocado", "avocados", "guacamole"], category: "fruit", ...NONE },
   { id: "cucumber", keywords: ["english cucumber", "cucumbers", "cucumber"], category: "vegetable", ...NONE },
   { id: "mushroom", keywords: ["cremini mushrooms", "mushroom", "mushrooms"], category: "vegetable", ...NONE },
-  { id: "cabbage-slaw", keywords: ["green cabbage", "coleslaw mix", "shredded cabbage mix", "sauerkraut", "coleslaw", "kimchi"], category: "vegetable", ...NONE },
+  { id: "cabbage-slaw", keywords: ["green cabbage", "coleslaw mix", "shredded cabbage mix", "sauerkraut", "coleslaw", "vegan kimchi"], category: "vegetable", ...NONE },
   { id: "herbs-fresh", keywords: ["fresh parsley, chopped", "fresh parsley", "fresh cilantro, chopped", "fresh cilantro", "cilantro", "fresh basil leaves", "fresh basil, torn", "fresh basil", "thai basil", "fresh mint", "fresh thyme leaves", "fresh thyme", "fresh dill", "fresh rosemary", "fresh oregano", "fresh epazote"], category: "spice_herb_aromatic", ...NONE },
   { id: "herbs-dried-spice", keywords: ["dried italian seasoning", "dried oregano", "dried basil", "dried thyme", "dried sage", "ground cumin", "cumin", "chili powder", "chile powder", "ancho chili powder", "ancho chile powder", "smoked paprika", "sweet paprika", "paprika", "ground cinnamon", "cinnamon stick", "cinnamon", "ground coriander", "coriander seeds", "ground allspice", "garam masala", "ras el hanout", "turmeric", "ground turmeric", "tajín seasoning", "mexican oregano", "oregano"], category: "spice_herb_aromatic", ...NONE },
   { id: "chili-flakes-cayenne", keywords: ["red pepper flakes", "crushed red chili flakes", "cayenne pepper", "cayenne", "dried guajillo chiles", "dried ancho chiles", "dried red chilies"], category: "spice_herb_aromatic", ...NONE },
@@ -313,7 +331,7 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "roasted-red-peppers", keywords: ["roasted red peppers"], category: "vegetable", ...NONE },
   { id: "buffalo-sauce", keywords: ["buffalo sauce"], category: "sauce_condiment", ...NONE, dairy: true, crossContaminationRisk: "Classic buffalo sauce is butter-based — treated as dairy-containing unless a dairy-free brand is specified.", substitutions: { dairy: "Use a dairy-free buffalo sauce made with plant-based butter." } },
   { id: "thousand-island-crema", keywords: ["thousand island dressing", "chipotle crema"], category: "sauce_condiment", ...NONE, egg: true, dairy: true },
-  { id: "pesto", keywords: ["basil pesto", "sun-dried tomato pesto", "pesto"], category: "sauce_condiment", ...NONE, dairy: true, treeNuts: true, crossContaminationRisk: "Traditional pesto contains Parmesan (dairy) and pine nuts (tree nut).", substitutions: { treeNuts: "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts." } },
+  { id: "pesto", keywords: ["basil pesto", "sun-dried tomato pesto", "pesto"], category: "sauce_condiment", ...NONE, dairy: true, treeNuts: true, animalRennet: "Traditional pesto is made with Parmesan, which uses animal rennet. For a vegetarian version, use a pesto labeled vegetarian.", crossContaminationRisk: "Traditional pesto contains Parmesan (dairy) and pine nuts (tree nut).", substitutions: { treeNuts: "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts." } },
   { id: "kitchen-bouquet-browning", keywords: ["kitchen bouquet"], category: "sauce_condiment", ...NONE, gluten: true, substitutions: { gluten: "Use a certified gluten-free browning/seasoning sauce." } },
   { id: "cranberry-fig-fruit-sauce", keywords: ["cranberry sauce", "fig jam", "balsamic glaze", "saba balsamic syrup"], category: "sauce_condiment", ...NONE },
   { id: "mint-chutney", keywords: ["mint-coriander chutney"], category: "sauce_condiment", ...NONE },
@@ -323,7 +341,7 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "pickle-relish-brine", keywords: ["dill pickle relish", "pickle brine", "dill pickle spears", "pickles", "cornichons", "giardiniera relish", "giardiniera"], category: "vegetable", ...NONE },
 
   // ---------------- ADDITIONAL GRAINS / BAKED GOODS (expanded pass) ----------------
-  { id: "crackers-crusts-pastry", keywords: ["crackers assortment", "pie crust or puff pastry", "pie crust", "puff pastry", "croutons", "focaccia loaves", "focaccia", "flatbread", "grilled pita wedges", "pita or flatbread", "whole-wheat pita", "brioche or challah", "hawaiian sweet rolls", "packages hawaiian sweet rolls", "large refrigerated biscuits", "8-count crescent roll tubes", "crescent roll", "24-count slider roll package", "slider roll", "soft pretzel bites", "pretzel dough", "pretzel", "wonton wrappers", "cornbread", "crusty rolls", "baguettes"], category: "grain_gluten", ...NONE, gluten: true, substitutions: { gluten: "Use a certified gluten-free bread/crust/wrapper alternative." } },
+  { id: "crackers-crusts-pastry", keywords: ["crackers assortment", "croutons", "focaccia loaves", "focaccia", "flatbread", "grilled pita wedges", "pita or flatbread", "whole-wheat pita", "brioche or challah", "hawaiian sweet rolls", "packages hawaiian sweet rolls", "large refrigerated biscuits", "8-count crescent roll tubes", "crescent roll", "24-count slider roll package", "slider roll", "soft pretzel bites", "pretzel dough", "pretzel", "wonton wrappers", "cornbread", "crusty rolls", "baguettes"], category: "grain_gluten", ...NONE, gluten: true, substitutions: { gluten: "Use a certified gluten-free bread/crust/wrapper alternative." } },
   { id: "pasta-additional", keywords: ["ziti or rigatoni", "ziti", "rigatoni", "lasagna noodles", "whole-wheat linguine", "toasted vermicelli noodles", "couscous, dry", "couscous", "shelf-stable gnocchi", "gnocchi"], category: "grain_gluten", ...NONE, gluten: true, substitutions: { gluten: "Use a certified gluten-free pasta/noodle alternative." } },
   { id: "grits-polenta-masa", keywords: ["stone-ground grits", "grits", "polenta", "masa harina", "crushed totopos"], category: "grain_gluten_free", ...NONE },
   { id: "frozen-fries-tots", keywords: ["frozen straight-cut fries", "frozen diner fries", "frozen crinkle or diner fries", "frozen crinkle fries", "frozen steak fries", "frozen tater tots"], category: "grain_gluten", ...NONE, gluten: true, crossContaminationRisk: "Many packaged frozen fries/tots use a wheat-starch or batter coating for crispness — treated as gluten-containing unless a certified gluten-free brand is specified.", substitutions: { gluten: "Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes." } },
@@ -331,7 +349,18 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "dark-lager-beer-2", keywords: ["dark lager or brewed coffee", "dark lager"], category: "beverage_alcohol", ...NONE, gluten: true, alcohol: true, substitutions: { gluten: "Use a certified gluten-free beer or brewed coffee instead.", alcohol: "Substitute brewed coffee or broth." } },
 
   // ---------------- ADDITIONAL DAIRY (expanded pass) ----------------
-  { id: "swiss-gruyere-brie", keywords: ["shredded swiss", "gruyere", "gruyère", "brie wheel", "brie", "labneh"], category: "dairy", ...NONE, dairy: true },
+  { id: "swiss-gruyere-brie", keywords: ["shredded swiss", "brie wheel", "brie", "labneh"], category: "dairy", ...NONE, dairy: true },
+  // Parmigiano-Reggiano, Grana Padano and Pecorino Romano must be made with animal rennet
+  // under their PDO rules, and Gruyère AOP traditionally is; generic "Parmesan" usually is too.
+  {
+    id: "animal-rennet-cheese",
+    keywords: ["parmigiano-reggiano", "parmigiano reggiano", "parmigiano", "parmesan cheese", "grated parmesan", "parmesan, grated", "parmesan rind", "parmesan", "grana padano", "pecorino romano", "pecorino", "gruyere", "gruyère", "manchego"],
+    category: "dairy",
+    ...NONE,
+    dairy: true,
+    animalRennet: "Traditional Parmesan, Pecorino and Gruyère are made with animal rennet. For a vegetarian version, use a cheese labeled vegetarian (microbial or vegetable rennet).",
+    substitutions: { dairy: "Use a dairy-free cheese shred/block alternative." },
+  },
   { id: "coconut-cream", keywords: ["coconut cream", "shredded coconut"], category: "other", ...NONE },
 
   // ---------------- ADDITIONAL NUTS / SEEDS (expanded pass) ----------------
@@ -517,6 +546,7 @@ export function findDietaryProfile(text: string): IngredientDietaryProfile | nul
     );
   }
   merged.substitutions = mergeSubstitutions(matches.map((m) => m.profile));
+  merged.animalRennet = matches.find((m) => m.profile.animalRennet)?.profile.animalRennet;
 
   return merged;
 }

@@ -1,11 +1,11 @@
 # Curated image governance audit
 
-Generated: **2026-10-09T20:19:46.948Z**
+Generated: **2026-11-13T01:03:21.613Z**
 
-- Recipes audited: **791**
+- Recipes audited: **790**
 - Failed governance: **83**
 - Build blockers (≥72): **0**
-- Duplicate hero paths: **247**
+- Duplicate hero paths: **246**
 
 ## Build blockers
 

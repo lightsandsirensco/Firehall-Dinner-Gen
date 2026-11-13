@@ -7,7 +7,7 @@
   "subtitle": "California salt-pepper-garlic rub, oak smoke, and salsa for ten",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Adapted from classic Santa Maria tri-tip tradition (Amazing Ribs, Weber): tri-tip gets a salt-pepper-garlic rub, smokes over oak at 275°F to 130°F, then sears and slices against the grain with pinquito beans and salsa.",
+  "description": "Adapted from classic Santa Maria tri-tip tradition (Amazing Ribs, Weber): tri-tip gets a salt-pepper-garlic rub, smokes over oak at 275°F to 130°F, then sears to 145°F and slices against the grain with pinquito beans and salsa.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 90,
@@ -97,14 +97,14 @@
     {
       "stepNumber": 2,
       "title": "Smoke to 130°F",
-      "instruction": "Smoke tri-tip at 275°F until internal temp reaches 125–130°F for medium-rare, about 45–55 minutes.",
+      "instruction": "Smoke tri-tip at 275°F until internal temp reaches 130°F, about 45–55 minutes (125°F if the crew wants medium-rare).",
       "minutes": 50,
       "heatLevel": "low"
     },
     {
       "stepNumber": 3,
       "title": "Sear over high heat",
-      "instruction": "Sear over direct heat at 450°F+ 3–4 minutes per side until crust forms and internal temp reaches 135°F for medium.",
+      "instruction": "Sear over direct heat at 450°F+ 3–4 minutes per side until crust forms and internal temp reaches 145°F (63°C); rest 3 minutes. Medium-rare (135°F) is a preference below the USDA safe minimum, not for anyone pregnant, older, or immunocompromised.",
       "minutes": 10,
       "heatLevel": "high"
     },
@@ -132,7 +132,7 @@
     {
       "stepNumber": 7,
       "title": "Tonight's board",
-      "instruction": "Sliced tri-tip, beans, salsa, optional tortillas. Call temps: pulled at 135°F medium, held at 170°F.",
+      "instruction": "Sliced tri-tip, beans, salsa, optional tortillas. Call temps: pulled at 145°F, held at 170°F.",
       "minutes": 5,
       "heatLevel": "medium"
     },
@@ -146,7 +146,7 @@
   ],
   "proTips": [
     "Tri-tip grain shifts mid-roast—pay attention when slicing or bites turn chewy.",
-    "125°F off smoke + sear gets you medium-rare; push to 130°F before sear for medium.",
+    "130°F off smoke + sear lands at 145°F; pull at 125°F before the sear for medium-rare.",
     "Oak is traditional; hickory works if that's what's in the pit."
   ],
   "tonightSpread": [
@@ -158,7 +158,7 @@
     "Chop into a steak salad with ranch."
   ],
   "whyCrewsLikeIt": "Tri-tip cooks in under two hours and slices like steak night without the cost. Holds sliced at 170°F with jus for 45 minutes.",
-  "mealPrepNotes": "Season 30 minutes ahead. Smoke to 130°F, sear hot, rest 10 minutes, slice. Hold sliced tri-tip covered at 170°F with beef jus.",
+  "mealPrepNotes": "Season 30 minutes ahead. Smoke to 130°F, sear to 145°F, rest 10 minutes, slice. Hold sliced tri-tip covered at 170°F with beef jus.",
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 1038,

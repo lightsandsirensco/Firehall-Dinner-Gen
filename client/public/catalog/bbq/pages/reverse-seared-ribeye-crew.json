@@ -7,7 +7,7 @@
   "subtitle": "Smoked then seared boneless ribeyes, compound butter, for ten",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Adapted from classic reverse-sear technique (Meat Church, Hey Grill Hey): boneless ribeyes smoke low at 225°F to 115°F, rest, then sear hard to 130°F medium-rare with garlic-herb compound butter.",
+  "description": "Adapted from classic reverse-sear technique (Meat Church, Hey Grill Hey): boneless ribeyes smoke low at 225°F to 130°F, rest, then sear hard to 145°F with garlic-herb compound butter.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 75,
@@ -98,7 +98,7 @@
     {
       "stepNumber": 2,
       "title": "Smoke low at 225°F",
-      "instruction": "Smoke steaks at 225°F until internal temp reaches 115°F for medium-rare, about 35–45 minutes.",
+      "instruction": "Smoke steaks at 225°F until internal temp reaches 130°F, about 45–55 minutes (115°F if the crew wants medium-rare).",
       "minutes": 40,
       "heatLevel": "medium"
     },
@@ -112,7 +112,7 @@
     {
       "stepNumber": 4,
       "title": "Sear hard",
-      "instruction": "Sear in screaming-hot cast iron or over grill at 500°F+ 90 seconds per side until crust forms and internal hits 130°F medium-rare.",
+      "instruction": "Sear in screaming-hot cast iron or over grill at 500°F+ 90 seconds per side until crust forms and internal hits 145°F (63°C); rest 3 minutes. Medium-rare (130°F) is a preference below the USDA safe minimum, not for anyone pregnant, older, or immunocompromised.",
       "minutes": 8,
       "heatLevel": "high"
     },
@@ -133,7 +133,7 @@
     {
       "stepNumber": 7,
       "title": "Tonight's board",
-      "instruction": "Steaks on a board with extra compound butter melting on top. Call temps: 130°F medium-rare pull.",
+      "instruction": "Steaks on a board with extra compound butter melting on top. Call temps: 145°F pull (130°F for medium-rare on request).",
       "minutes": 5,
       "heatLevel": "medium"
     },
@@ -146,7 +146,7 @@
     }
   ],
   "proTips": [
-    "115°F off the smoker + hard sear lands medium-rare—adjust to 120°F for medium.",
+    "130°F off the smoker + hard sear lands at 145°F; pull at 115°F instead for medium-rare.",
     "Dry surface = better crust; pat again before searing.",
     "Don't skip the rest or juices run when you cut on the line."
   ],

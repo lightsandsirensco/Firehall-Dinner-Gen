@@ -112,32 +112,21 @@
         "golden_100"
       ],
       "dietarySummary": {
-        "confidence": "high",
+        "confidence": "low",
         "flags": {
           "glutenFree": false,
           "dairyFree": false,
           "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
+          "nutFree": false,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": false,
           "porkFree": false,
           "vegetarian": false,
           "vegan": false
         },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
-          },
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
-          }
-        ]
+        "adaptable": []
       },
       "nutritionSummary": {
         "highProtein": false,
@@ -473,7 +462,7 @@
           "shellfishFree": true,
           "fishFree": true,
           "porkFree": true,
-          "vegetarian": true,
+          "vegetarian": false,
           "vegan": false
         },
         "adaptable": [
@@ -1239,27 +1228,21 @@
         "golden_100"
       ],
       "dietarySummary": {
-        "confidence": "high",
+        "confidence": "low",
         "flags": {
           "glutenFree": false,
           "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
+          "eggFree": false,
+          "nutFree": false,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": false,
+          "porkFree": false,
           "vegetarian": false,
           "vegan": false
         },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pizza crust. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
-          }
-        ]
+        "adaptable": []
       },
       "nutritionSummary": {
         "highProtein": false,
@@ -1316,7 +1299,7 @@
           "shellfishFree": true,
           "fishFree": true,
           "porkFree": true,
-          "vegetarian": true,
+          "vegetarian": false,
           "vegan": false
         },
         "adaptable": [

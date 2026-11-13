@@ -19,7 +19,7 @@ export const LIGHTS_COPY = {
   /** Single body block — home About-style authenticity sections. */
   authenticityBody:
     "No more standing around the firehouse throwing out the same five ideas every shift. Just real meals crews actually want to make — from quick busy-night dinners to firehouse classics that always hit on shift.",
-  recipeStrip: "Another firehouse-tested meal from Lights & Sirens Co.",
+  recipeStrip: "Another firehouse-ready meal from Lights & Sirens Co.",
   wheelLine: "The classic kitchen-table gamble from Lights & Sirens Co.",
   emailNote: "From the crew at Lights & Sirens Co. — firefighter culture, gear, and meals that work on shift.",
   footerTagline: "Built by firefighters, for firefighters.",

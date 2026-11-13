@@ -13,10 +13,10 @@
   "cookTime": 525,
   "prepTime": 45,
   "difficulty": "hard",
-  "calories": 1400,
-  "protein": 82,
-  "carbs": 124,
-  "fats": 61,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -111,7 +111,7 @@
     },
     {
       "name": "Brioche Buns Or Kaiser Rolls",
-      "quantity": "24",
+      "quantity": "16",
       "unit": "count",
       "group": "Buns"
     },
@@ -152,7 +152,7 @@
     {
       "stepNumber": 2,
       "title": "Low-and-slow cook",
-      "instruction": "Roast at 275°F in a covered roaster or run a slow cooker on low 8–10 hours until the pork probes tender at an internal temp of 203°F and shreds with a fork — well past the 145°F safe point, collagen needs the extra heat to melt. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast.",
+      "instruction": "Roast covered at 275°F for 6–8 hours, or run a slow cooker on low 8–10 hours, until the pork probes tender at an internal temp of 203°F and shreds with a fork — well past the 145°F safe point, collagen needs the extra heat to melt. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast.",
       "minutes": 480,
       "heatLevel": "low"
     },
@@ -241,15 +241,15 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 82,
-    "carbs": 124,
-    "fats": 61,
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
     "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
@@ -257,7 +257,7 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }

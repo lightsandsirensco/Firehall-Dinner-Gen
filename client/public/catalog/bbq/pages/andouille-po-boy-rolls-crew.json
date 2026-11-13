@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 1065,
-  "protein": 48,
-  "carbs": 17,
-  "fats": 90,
+  "calories": 807,
+  "protein": 34,
+  "carbs": 15,
+  "fats": 68,
   "tags": [
     "protein:pork",
     "format:hoagie_press",
@@ -40,9 +40,9 @@
   "ingredients": [
     {
       "name": "Andouille Sausage",
-      "quantity": "4.4",
+      "quantity": "3",
       "unit": "Lb",
-      "notes": "8 fat links",
+      "notes": "8 links, about 6 oz each",
       "group": "Main"
     },
     {
@@ -143,7 +143,7 @@
     {
       "stepNumber": 4,
       "title": "Grill the andouille cut-side down",
-      "instruction": "Lay the butterflied links cut-side down and leave them 5 minutes until the face turns deep mahogany with crisp, lacy edges, then flip for 5–7 more. Andouille arrives smoked and pre-cooked, but you're after two things: real crust and real temperature — 160°F on an instant-read so the center is steaming hot, not just warmed at the surface.",
+      "instruction": "Lay the butterflied links cut-side down and leave them 5 minutes until the face turns deep mahogany with crisp, lacy edges, then flip for 5–7 more. Andouille arrives smoked and pre-cooked, but you're after two things: real crust and real temperature — 165°F (74°C) on an instant-read so the center is steaming hot, not just warmed at the surface.",
       "minutes": 12,
       "heatLevel": "medium"
     },
@@ -222,15 +222,15 @@
   ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1065,
-    "protein": 48,
-    "carbs": 17,
-    "fats": 90,
+    "calories": 807,
+    "protein": 34,
+    "carbs": 15,
+    "fats": 68,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
@@ -238,7 +238,7 @@
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }

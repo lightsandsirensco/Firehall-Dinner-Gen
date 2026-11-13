@@ -268,10 +268,15 @@
   "generatedAt": "2026-09-26T19:26:55.958Z",
   "contentVersion": 2,
   "dietary": {
-    "confidence": "high",
+    "confidence": "low",
     "matchedCount": 11,
     "totalCount": 11,
-    "uncertainIngredients": [],
+    "uncertainIngredients": [
+      {
+        "name": "kimchi",
+        "reason": "Traditional kimchi is made with fish sauce and salted shrimp — use one labeled vegan."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "gochujang",
@@ -285,6 +290,13 @@
         "allergens": [
           "gluten",
           "soy"
+        ]
+      },
+      {
+        "name": "kimchi",
+        "allergens": [
+          "shellfish",
+          "fish"
         ]
       },
       {
@@ -302,24 +314,18 @@
     ],
     "flags": {
       "glutenFree": false,
-      "dairyFree": true,
+      "dairyFree": false,
       "eggFree": false,
-      "nutFree": true,
-      "peanutFree": true,
+      "nutFree": false,
+      "peanutFree": false,
       "soyFree": false,
-      "shellfishFree": true,
-      "fishFree": true,
-      "porkFree": true,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": false,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free gochujang/miso. Use tamari (check soy-free brands separately) or coconut aminos."
-      }
-    ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "adaptable": [],
+    "classifiedAt": "2026-11-12T17:01:00.616Z"
   }
 }

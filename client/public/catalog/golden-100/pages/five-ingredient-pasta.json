@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 694,
-  "protein": 22,
-  "carbs": 66,
-  "fats": 38,
+  "calories": 799,
+  "protein": 26,
+  "carbs": 87,
+  "fats": 39,
   "tags": [
     "protein:vegetarian",
     "format:pasta",
@@ -34,7 +34,7 @@
   "ingredients": [
     {
       "name": "Dried Spaghetti",
-      "quantity": "1.5",
+      "quantity": "2",
       "unit": "Lb",
       "group": "Main"
     },
@@ -54,7 +54,8 @@
       "name": "Parmesan Cheese, Finely Grated",
       "quantity": "12",
       "unit": "Oz",
-      "group": "Finish"
+      "group": "Finish",
+      "notes": "use a Parmesan labeled vegetarian (microbial rennet)"
     },
     {
       "name": "Kosher Salt",
@@ -129,19 +130,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 694,
-    "protein": 22,
-    "carbs": 66,
-    "fats": 38,
-    "label": "per serving (hall portion)",
+    "calories": 799,
+    "protein": 26,
+    "carbs": 87,
+    "fats": 39,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -230,7 +232,7 @@
         "note": "Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:29:45.659Z"
   },
   "avoidTags": []
 }

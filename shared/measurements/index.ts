@@ -10,6 +10,8 @@ export {
   type MeasurementSystem,
 } from "./convert.js";
 
+export { formatKitchenFraction } from "./fractions.js";
+
 export {
   formatClientIngredientRow,
   formatIngredientDisplayName,

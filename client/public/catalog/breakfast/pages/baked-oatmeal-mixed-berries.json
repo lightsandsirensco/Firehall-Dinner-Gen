@@ -23,35 +23,35 @@
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "cups quick oats",
-      "quantity": "4",
+      "name": "quick oats",
+      "quantity": "4 cups",
       "notes": "not steel-cut",
       "group": "Bake"
     },
     {
-      "name": "cup brown sugar",
-      "quantity": "0.75",
+      "name": "brown sugar",
+      "quantity": "3/4 cup",
       "notes": "light or dark",
       "group": "Bake"
     },
     {
-      "name": "tsp baking powder",
-      "quantity": "2",
+      "name": "baking powder",
+      "quantity": "2 tsp",
       "group": "Bake"
     },
     {
-      "name": "tsp cinnamon",
-      "quantity": "1.5",
+      "name": "cinnamon",
+      "quantity": "1 1/2 tsp",
       "group": "Bake"
     },
     {
-      "name": "tsp kosher salt",
-      "quantity": "0.5",
+      "name": "kosher salt",
+      "quantity": "1/2 tsp",
       "group": "Bake"
     },
     {
-      "name": "cups whole milk",
-      "quantity": "3",
+      "name": "whole milk",
+      "quantity": "3 cups",
       "group": "Wet"
     },
     {
@@ -60,26 +60,26 @@
       "group": "Wet"
     },
     {
-      "name": "cup melted butter",
-      "quantity": "0.25",
+      "name": "melted butter",
+      "quantity": "1/4 cup",
       "notes": "plus spray for the dish",
       "group": "Wet"
     },
     {
-      "name": "cups mixed berries",
-      "quantity": "3",
+      "name": "mixed berries",
+      "quantity": "3 cups",
       "notes": "fresh or frozen, thawed and drained",
       "group": "Fruit"
     },
     {
-      "name": "cup maple syrup",
-      "quantity": "1",
+      "name": "maple syrup",
+      "quantity": "1 cup",
       "notes": "for serving",
       "group": "Line"
     },
     {
-      "name": "cups Greek yogurt",
-      "quantity": "2",
+      "name": "Greek yogurt",
+      "quantity": "2 cups",
       "notes": "optional at the line",
       "group": "Line"
     }
@@ -161,13 +161,13 @@
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
-        "name": "cups quick oats",
+        "name": "quick oats",
         "allergens": [
           "gluten"
         ]
       },
       {
-        "name": "cups whole milk",
+        "name": "whole milk",
         "allergens": [
           "dairy"
         ]
@@ -179,13 +179,13 @@
         ]
       },
       {
-        "name": "cup melted butter",
+        "name": "melted butter",
         "allergens": [
           "dairy"
         ]
       },
       {
-        "name": "cups Greek yogurt",
+        "name": "Greek yogurt",
         "allergens": [
           "dairy"
         ]
@@ -211,6 +211,6 @@
         "note": "Use certified gluten-free oats."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:11:45.504Z"
   }
 }

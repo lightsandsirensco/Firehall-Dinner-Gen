@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 520,
-  "protein": 48,
-  "carbs": 12,
-  "fats": 31,
+  "calories": 850,
+  "protein": 53,
+  "carbs": 71,
+  "fats": 39,
   "tags": [
     "protein:beef",
     "format:skillet",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Soy Sauce",
-      "quantity": "0.3",
+      "quantity": "1/3",
       "unit": "Cup",
       "group": "Sauce"
     },
@@ -66,27 +66,57 @@
       "quantity": "2",
       "unit": "Tbsp",
       "group": "Sauce"
+    },
+    {
+      "name": "Fresh Ginger, Grated",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Low-Sodium Beef Broth",
+      "quantity": "1",
+      "unit": "Cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": "4",
+      "unit": "Tbsp",
+      "group": "Main"
+    },
+    {
+      "name": "Long-Grain White Rice",
+      "quantity": "3",
+      "unit": "Cups",
+      "group": "Base"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
       "title": "Slice and marinate beef",
-      "instruction": "Slice flank steak thin against the grain. Toss with soy, cornstarch, and a splash of oil.",
+      "instruction": "Start the rice: rinse, then simmer covered with 4½ cups water and a pinch of salt 18 minutes; rest 5 minutes and fluff. Slice flank steak thin against the grain. Toss with 2 tbsp of the soy sauce, 1 tbsp cornstarch, and 1 tbsp oil; rest 15 minutes. Whisk the remaining soy sauce, oyster sauce, brown sugar, broth, ginger, and remaining cornstarch into a sauce.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Stir-fry beef in batches",
-      "instruction": "Heat wok or large skillet until smoking. Sear beef in single layers 1–2 minutes until edges char; remove.",
+      "instruction": "Heat wok or large skillet until smoking with 1 tbsp oil. Sear beef in single layers 1–2 minutes until edges char, adding oil between batches; remove.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
       "title": "Char broccoli",
-      "instruction": "Stir-fry broccoli 3–4 minutes with garlic until bright with charred edges. Return beef; add oyster sauce slurry; toss 1 minute until glossy.",
+      "instruction": "Stir-fry broccoli in two batches with the remaining oil, 2 minutes until charred at the edges, then add 2 tbsp water and cover 1 minute until bright green and crisp-tender. Return all broccoli and beef, add garlic for 30 seconds, then pour in the sauce and toss 1–2 minutes until it bubbles and turns glossy.",
       "minutes": 8,
       "heatLevel": "high"
     },
@@ -118,19 +148,19 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 520,
-    "protein": 48,
-    "carbs": 12,
-    "fats": 31,
+    "calories": 850,
+    "protein": 53,
+    "carbs": 71,
+    "fats": 39,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
@@ -171,8 +201,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
+    "matchedCount": 11,
+    "totalCount": 11,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -187,6 +217,12 @@
         "allergens": [
           "gluten",
           "shellfish"
+        ]
+      },
+      {
+        "name": "Low-Sodium Beef Broth",
+        "allergens": [
+          "gluten"
         ]
       }
     ],
@@ -207,7 +243,7 @@
       {
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
-        "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative."
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon."
       },
       {
         "flag": "soy",
@@ -215,7 +251,7 @@
         "note": "Use coconut aminos."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:07:12.987Z"
   },
   "avoidTags": [
     "broccoli"

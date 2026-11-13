@@ -39,63 +39,108 @@
   "ingredients": [
     {
       "name": "pork shoulder",
-      "quantity": "5.6",
+      "quantity": "5",
       "unit": "lb",
       "group": "Protein"
     },
     {
       "name": "barbecue sauce",
-      "quantity": "2.4",
+      "quantity": "2 1/2",
       "unit": "cups",
       "group": "Sauce"
     },
     {
       "name": "chicken broth",
-      "quantity": "2.4",
+      "quantity": "3",
       "unit": "cups",
       "group": "Braise"
     },
     {
       "name": "onions",
-      "quantity": "2.4",
-      "unit": "each",
+      "quantity": "2",
+      "unit": "large",
       "group": "Braise"
     },
     {
       "name": "rice",
-      "quantity": "2.4",
+      "quantity": "3",
       "unit": "cups",
       "group": "Base"
     },
     {
       "name": "coleslaw mix",
-      "quantity": "2.4",
+      "quantity": "2",
       "unit": "lb",
       "group": "Cold bar"
     },
     {
       "name": "corn",
-      "quantity": "3.2",
+      "quantity": "3",
       "unit": "cups",
-      "group": "Vegetables"
+      "group": "Vegetables",
+      "notes": "frozen, thawed"
     },
     {
       "name": "pickle chips",
-      "quantity": "2.4",
+      "quantity": "2",
       "unit": "cups",
       "group": "Cold bar"
     },
     {
       "name": "crispy onions",
-      "quantity": "1.6",
+      "quantity": "1 1/2",
       "unit": "cups",
       "group": "Finish"
     },
     {
       "name": "cheddar cheese",
-      "quantity": "1.6",
+      "quantity": "1 1/2",
       "unit": "cups",
-      "group": "Finish"
+      "group": "Finish",
+      "notes": "shredded"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1 1/2",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "mayonnaise",
+      "quantity": "3/4",
+      "unit": "cup",
+      "group": "Cold bar"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "3",
+      "unit": "tbsp",
+      "notes": "2 tbsp for the slaw, the rest to finish the pork",
+      "group": "Cold bar"
     }
   ],
   "steps": [
@@ -130,7 +175,7 @@
     {
       "stepNumber": 5,
       "title": "Warm the corn and dress the slaw",
-      "instruction": "Heat corn in a skillet over medium for 4–5 minutes until hot through with a few browned spots. Toss coleslaw mix with dressing just before service — 10 minutes max in the fridge after dressing — so it stays crisp instead of wilting into a soggy pile. Hold pickles, cheddar, and crispy onions cold and dry.",
+      "instruction": "Heat corn in a skillet over medium for 4–5 minutes until hot through with a few browned spots. Toss coleslaw mix with the mayonnaise, 2 tbsp vinegar, and a pinch of salt just before service — 10 minutes max in the fridge after dressing — so it stays crisp instead of wilting into a soggy pile. Hold pickles, cheddar, and crispy onions cold and dry.",
       "minutes": 10,
       "heatLevel": "medium"
     },
@@ -265,8 +310,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 10,
-    "totalCount": 10,
+    "matchedCount": 17,
+    "totalCount": 17,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -286,12 +331,24 @@
         "allergens": [
           "dairy"
         ]
+      },
+      {
+        "name": "mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "apple cider vinegar",
+        "allergens": [
+          "pork"
+        ]
       }
     ],
     "flags": {
       "glutenFree": false,
       "dairyFree": false,
-      "eggFree": true,
+      "eggFree": false,
       "nutFree": true,
       "peanutFree": true,
       "soyFree": true,
@@ -311,8 +368,13 @@
         "flag": "dairy",
         "label": "Dairy-Free Adaptable",
         "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   }
 }

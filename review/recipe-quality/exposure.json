@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-11-12T16:23:08.586Z",
+  "method": "Code-defined surfaces a new visitor sees first (homepage rail, welcome emails, Explore A–Z first page, wheel classics, breakfast collection, SEO landing pages) plus real production counts from the Nov 11 read-only analytics export. Generator and Shift Planner draws are near-uniform across ~120 dinners, so they are represented only by real 'generated meals' counts, not by a guessed list. popularityWeight/firefighterScore are not used.",
+  "surfaces": {
+    "homepage": [
+      "smash-burgers",
+      "big-chili",
+      "bbq-chicken-bowls",
+      "five-ingredient-pasta",
+      "steak-tacos",
+      "chorizo-breakfast-tacos"
+    ],
+    "welcome_email": [
+      "hall-breakfast-burritos",
+      "cast-iron-breakfast-skillet",
+      "chorizo-breakfast-hash",
+      "fire-captain-omelette-bar",
+      "smash-burgers",
+      "big-chili",
+      "chicken-parm"
+    ],
+    "explore_first_page": [
+      "30-minute-pasta-e-fagioli-for-the-hall",
+      "chili-lime-grilled-tilapia",
+      "andouille-po-boy-rolls-crew",
+      "applewood-pork-shoulder-steaks",
+      "bagel-lox-breakfast-board",
+      "bagel-sandwich-line",
+      "mediterranean-baked-fish-tray",
+      "mac-and-cheese-bake",
+      "mostaccioli-sausage-bake",
+      "baked-oatmeal-mixed-berries",
+      "loaded-baked-potato-bar",
+      "herb-baked-salmon-tray"
+    ],
+    "wheel": [
+      "chicken-parm",
+      "steak-tacos",
+      "pulled-pork",
+      "smash-burgers",
+      "big-chili",
+      "chicken-caesar",
+      "jerk-chicken",
+      "beef-dip",
+      "bbq-chicken-mac-and-cheese",
+      "steak-sandwiches"
+    ],
+    "breakfast_collection": [
+      "bagel-sandwich-line",
+      "baked-oatmeal-mixed-berries",
+      "bbq-breakfast-hash",
+      "belgian-waffle-platter",
+      "berry-vanilla-protein-overnight-oats",
+      "biscuit-french-toast-sliders",
+      "black-bean-egg-white-breakfast-burritos",
+      "breakfast-crunchwraps",
+      "breakfast-enchiladas",
+      "breakfast-fried-rice-crew"
+    ],
+    "seo_landing": [
+      "chicken-parm",
+      "smash-burgers",
+      "pulled-pork",
+      "big-chili",
+      "bbq-chicken-bowls",
+      "steak-tacos",
+      "meatloaf-mashed",
+      "sheet-pan-fajitas",
+      "baked-ziti",
+      "shepherds-pie",
+      "beef-dip",
+      "jerk-chicken",
+      "pad-thai",
+      "texas-central-brisket-crew"
+    ]
+  },
+  "analytics": {
+    "period": "production, 2026-06-27 to 2026-11-11",
+    "views": {
+      "bbq-chicken-sliders": 27,
+      "beef-broccoli": 21,
+      "chicken-shawarma-pitas": 21,
+      "bbq-chicken-bowls": 20,
+      "beef-dip": 18,
+      "high-protein-chicken-fried-rice": 12,
+      "chili-lime-grilled-tilapia": 10,
+      "chicken-quesadillas": 10,
+      "pesto-tomato-chicken-tray": 10,
+      "beef-gyros-for-the-hall": 9
+    },
+    "generated": {
+      "Caprese Chicken Bake": 16,
+      "Peruvian-Style Sheet-Pan Chicken with Aji Verde": 14,
+      "Chicken Caesar Salad": 13,
+      "Chipotle Lime Chicken Tacos": 13,
+      "Honey Lime Chicken Tray": 13,
+      "Peanut Chicken Rice Bowls": 13,
+      "Shawarma Bar Night": 13,
+      "Teriyaki Chicken Rice Bowls": 13,
+      "BBQ Chicken Sliders": 12,
+      "Chicken Pot Pie": 12
+    },
+    "saves": {
+      "costco-rotisserie-remix": 2,
+      "beef-gyros-for-the-hall": 1,
+      "chicken-quesadillas": 1,
+      "firehall-gyro-bowls": 1,
+      "salsa-verde-crock-chicken": 1,
+      "sausage-peppers-onions": 1,
+      "sheet-pan-lemon-chicken-broccoli-sweet-potatoes": 1,
+      "street-corn-chicken": 1
+    },
+    "wheel": {
+      "beef-dip": 15,
+      "steak-tacos": 13,
+      "smash-burgers": 13,
+      "pulled-pork": 12,
+      "chicken-caesar": 12,
+      "steak-sandwiches": 11,
+      "chicken-parm": 9,
+      "big-chili": 7,
+      "jerk-chicken": 6,
+      "bbq-chicken-mac-and-cheese": 5
+    }
+  }
+}

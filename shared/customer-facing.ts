@@ -11,7 +11,7 @@ const INTERNAL_LEAK =
 
 /** Lines shown when meal came from curated pool (server _fallback flag). */
 const HALL_PICK_LINES = [
-  "Firehouse-tested crew favorite",
+  "Firehouse-ready crew favorite",
   "Curated pick for tonight's table",
   "A proven meal at the station",
   "Chef's pick for busy shift nights",

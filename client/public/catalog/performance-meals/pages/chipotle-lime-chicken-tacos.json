@@ -13,9 +13,9 @@
   "cookTime": 18,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 711,
+  "calories": 712,
   "protein": 54,
-  "carbs": 50,
+  "carbs": 51,
   "fats": 32,
   "tags": [
     "protein:chicken",
@@ -50,7 +50,7 @@
     },
     {
       "name": "lime juice",
-      "quantity": "0.33",
+      "quantity": "1/2",
       "unit": "cup",
       "notes": "fresh"
     },
@@ -103,7 +103,7 @@
     {
       "stepNumber": 1,
       "title": "Marinate chicken",
-      "instruction": "Blend chipotle, adobo, lime juice, garlic, cumin, oil, and salt. Coat thighs, marinate at least 2 hours so flavors penetrate deep into meat.",
+      "instruction": "Blend chipotle, adobo, 1/4 cup of the lime juice, garlic, cumin, oil, and salt. Coat thighs, marinate at least 2 hours so flavors penetrate deep into meat.",
       "minutes": 120,
       "heatLevel": ""
     },
@@ -154,9 +154,9 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 711,
+    "calories": 712,
     "protein": 54,
-    "carbs": 50,
+    "carbs": 51,
     "fats": 32,
     "label": "Estimated per serving",
     "source": "calculated",

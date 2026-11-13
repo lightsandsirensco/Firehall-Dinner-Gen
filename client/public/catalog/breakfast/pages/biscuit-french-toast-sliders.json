@@ -24,18 +24,18 @@
   "ingredients": [
     {
       "name": "large buttermilk biscuits",
-      "quantity": "8",
+      "quantity": "16",
       "notes": "bakery or homemade, split",
       "group": "Biscuits"
     },
     {
       "name": "large eggs",
-      "quantity": "6",
+      "quantity": "8",
       "group": "Custard"
     },
     {
       "name": "whole milk",
-      "quantity": "1 1/2 cups",
+      "quantity": "2 cups",
       "group": "Custard"
     },
     {
@@ -51,14 +51,14 @@
     },
     {
       "name": "unsalted butter",
-      "quantity": "3 tbsp",
+      "quantity": "4 tbsp",
       "notes": "for griddle",
       "group": "Cook"
     },
     {
       "name": "maple syrup",
-      "quantity": "1/4 cup",
-      "notes": "mixed with 2 tbsp melted butter",
+      "quantity": "1/2 cup",
+      "notes": "mixed with 4 tbsp melted butter",
       "group": "Glaze"
     },
     {
@@ -101,16 +101,16 @@
     }
   ],
   "nutrition": {
-    "calories": 473,
-    "protein": 11,
-    "carbs": 71,
-    "fat": 17,
-    "label": "per serving (hall portion)",
+    "calories": 769,
+    "protein": 18,
+    "carbs": 114,
+    "fat": 28,
+    "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
@@ -118,7 +118,7 @@
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },

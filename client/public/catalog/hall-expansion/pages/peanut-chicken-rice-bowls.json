@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 690,
-  "protein": 42,
-  "carbs": 72,
-  "fats": 27,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:chicken",
     "format:bowls",
@@ -55,26 +55,48 @@
     },
     {
       "name": "carrots",
-      "quantity": "1.6",
-      "unit": "lb"
+      "quantity": "1 1/2",
+      "unit": "lb",
+      "notes": "peeled and shredded"
     },
     {
       "name": "lime",
-      "quantity": "3.2",
-      "unit": "each"
+      "quantity": "3",
+      "unit": "each",
+      "notes": "2 juiced for the sauce, 1 cut into wedges"
+    },
+    {
+      "name": "low-sodium soy sauce",
+      "quantity": "1/3",
+      "unit": "cup"
+    },
+    {
+      "name": "chili garlic sauce or sriracha",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tsp"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
       "title": "Rinse rice",
-      "instruction": "Rinse rice until the water is less cloudy, then cook with water in a covered pot.",
+      "instruction": "Rinse rice until the water is less cloudy, then bring to a boil with 5 cups water and the salt; cover and simmer on low 15 minutes.",
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Whisk sauce",
-      "instruction": "Whisk peanut butter, soy sauce, lime juice, warm water, and chili sauce until pourable.",
+      "instruction": "Whisk peanut butter, soy sauce, juice of 2 limes, chili sauce, and about 3/4 cup warm water until pourable.",
       "heatLevel": ""
     },
     {
@@ -122,7 +144,7 @@
     {
       "stepNumber": 10,
       "title": "Build bowls",
-      "instruction": "Spoon rice into bowls, add sauced chicken and vegetables, then drizzle remaining sauce.",
+      "instruction": "Spoon rice into bowls, add sauced chicken and vegetables, then drizzle remaining sauce and add a lime wedge.",
       "heatLevel": ""
     },
     {
@@ -166,23 +188,23 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 690,
-    "protein": 42,
-    "carbs": 72,
-    "fats": 27,
-    "label": "~690 cal/serving · 42g protein (est.)",
-    "source": "estimated",
-    "estimateAvailable": true,
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
+    "label": "Estimated per serving",
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -212,8 +234,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
+    "matchedCount": 10,
+    "totalCount": 10,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -221,22 +243,40 @@
         "allergens": [
           "peanuts"
         ]
+      },
+      {
+        "name": "low-sodium soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
       }
     ],
     "flags": {
-      "glutenFree": true,
+      "glutenFree": false,
       "dairyFree": true,
       "eggFree": true,
       "nutFree": true,
       "peanutFree": false,
-      "soyFree": true,
+      "soyFree": false,
       "shellfishFree": true,
       "fishFree": true,
       "porkFree": true,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-11-12T17:11:45.504Z"
   }
 }

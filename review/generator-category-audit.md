@@ -1,6 +1,6 @@
 # Generator category audit
 
-Generated: 2026-10-09T20:52:04.375Z
+Generated: 2026-11-13T01:08:24.728Z
 
 | Category | Label | OK | Failures | Broadened |
 |----------|-------|-----|----------|-----------|

@@ -10,13 +10,13 @@
   "description": "Build-your-own spuds for the crew. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 125,
+  "cookTime": 75,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1296,
-  "protein": 62,
-  "carbs": 60,
-  "fats": 90,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -34,7 +34,7 @@
   "ingredients": [
     {
       "name": "Russet Potatoes, Scrubbed",
-      "quantity": "24",
+      "quantity": "16",
       "unit": "count",
       "group": "Base"
     },
@@ -73,6 +73,18 @@
       "quantity": "2",
       "unit": "Lb",
       "group": "Optional topping"
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "Coarse Kosher Salt",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Base"
     }
   ],
   "steps": [
@@ -93,7 +105,7 @@
     {
       "stepNumber": 3,
       "title": "Prep the topping station",
-      "instruction": "Line up butter, shredded cheddar, crumbled bacon, sour cream, and green onions in separate bowls with serving spoons. Keep warm toppings near the potatoes; keep sour cream cold on ice if service runs long.",
+      "instruction": "Line up butter, shredded cheddar, crumbled bacon, sour cream, and green onions in separate bowls with serving spoons, plus a pot of warm chili or pulled beef if using (heated to 165°F). Keep warm toppings near the potatoes; keep sour cream cold on ice if service runs long.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -125,23 +137,23 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1296,
-    "protein": 62,
-    "carbs": 60,
-    "fats": 90,
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
     "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -178,8 +190,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 7,
-    "totalCount": 7,
+    "matchedCount": 9,
+    "totalCount": 9,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -221,7 +233,7 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:11:45.504Z"
   },
   "avoidTags": []
 }

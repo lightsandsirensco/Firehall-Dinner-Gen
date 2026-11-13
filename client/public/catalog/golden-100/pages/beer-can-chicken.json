@@ -35,22 +35,23 @@
   ],
   "ingredients": [
     {
-      "name": "Whole Chicken Or Bone-In Thighs",
-      "quantity": "5",
+      "name": "Whole Chickens Or Bone-In Thighs",
+      "quantity": "10",
       "unit": "Lb",
-      "group": "Main"
+      "group": "Main",
+      "notes": "two 5-lb birds"
     },
     {
       "name": "Beer Can",
-      "quantity": "1",
+      "quantity": "2",
       "unit": "count",
       "notes": "room temp, half full",
       "group": "Roast"
     },
     {
       "name": "Jerk Or Poultry Rub",
-      "quantity": "3",
-      "unit": "Tbsp",
+      "quantity": "1/4",
+      "unit": "Cup",
       "group": "Seasoning"
     },
     {
@@ -76,7 +77,7 @@
     {
       "stepNumber": 1,
       "title": "Season under the skin",
-      "instruction": "Dry chicken thoroughly. Season under skin and in cavity. For beer-can method: open a room-temp beer, set can in cavity, stand bird on indirect zone.",
+      "instruction": "Dry chicken thoroughly. Rub with oil, then season under the skin, over the skin, and in the cavity with the rub and salt. For beer-can method: open a room-temp beer, set can in cavity, stand bird on indirect zone.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -97,7 +98,7 @@
     {
       "stepNumber": 4,
       "title": "Carve for the line",
-      "instruction": "Quarter birds or slice thighs. Serve on sheet trays with pan juices — backup bird stays whole in a 180°F oven up to 25 minutes.",
+      "instruction": "Quarter birds or slice thighs. Squeeze lime juice over the carved chicken and serve on sheet trays with pan juices — backup bird stays whole in a 180°F oven up to 25 minutes.",
       "minutes": 8,
       "heatLevel": "low"
     }

@@ -20,9 +20,14 @@ import { Button } from "@/components/ui/button";
 
 const FAQS: FaqItem[] = [
   {
-    question: "Who tests Firehall Meals recipes?",
+    question: "Are Firehall Meals recipes kitchen-tested?",
     answer:
-      "Recipes are written and reviewed with real firehouse cooking in mind — shared kitchens, interruption-friendly steps, and portions for crews of roughly 2–20 firefighters. Feedback from crews using the catalog shapes updates.",
+      "Every recipe is checked automatically for safe cooking temperatures, ingredients that match the steps, and nutrition calculated from the ingredients, and we are working through a human culinary review of the full library, starting with the most-cooked dishes. Kitchen testing — cooking the recipe in a station kitchen and confirming yield and timing — is a separate step, and we only describe a recipe as kitchen-tested once that has actually happened. Feedback from crews using the catalog shapes updates.",
+  },
+  {
+    question: "Are the recipe photos real?",
+    answer:
+      "Recipe images are illustrations of the finished dish as written. Many are AI-generated, so treat them as a guide to what you are aiming for rather than a photo of a specific test batch.",
   },
   {
     question: "Are these meals beginner-friendly?",
@@ -46,7 +51,7 @@ export default function HowWeTestRecipesPage() {
       buildWebSiteSchema(origin),
       buildBreadcrumbListSchema(origin, [
         { name: "Home", path: "/" },
-        { name: "How we test recipes", path: "/how-we-test-recipes" },
+        { name: "How we write and review recipes", path: "/how-we-test-recipes" },
       ]),
       buildFaqPageSchema(FAQS),
     ],
@@ -63,14 +68,14 @@ export default function HowWeTestRecipesPage() {
         <SeoBreadcrumbs
           items={[
             { name: "Home", path: "/" },
-            { name: "How we test recipes", path: "/how-we-test-recipes" },
+            { name: "How we write and review recipes", path: "/how-we-test-recipes" },
           ]}
           className="mb-4"
         />
 
         <p className="text-xs uppercase tracking-widest text-muted-foreground">EEAT · Recipe standards</p>
         <h1 className="mt-3 font-heading tracking-tight text-3xl sm:text-4xl">
-          How we test recipes
+          How we write and review recipes
         </h1>
         <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl">
           Firehall Meals is built by firefighters for firehouse kitchens. Every recipe is designed for
@@ -93,6 +98,25 @@ export default function HowWeTestRecipesPage() {
           <h2 className="font-heading text-xl sm:text-2xl">What we check before a recipe ships</h2>
           <ul className="list-disc pl-5 space-y-2 text-muted-foreground leading-relaxed">
             <li>
+              <strong className="text-foreground">Food safety:</strong> chicken, turkey, ground meat,
+              pork and fish carry USDA safe internal temperatures (165°F for poultry, 160°F for ground
+              beef and pork, 145°F for whole cuts and fish), plus hot-holding and leftover guidance.
+            </li>
+            <li>
+              <strong className="text-foreground">Ingredients match the steps:</strong> everything the
+              steps use is on the list, quantities are realistic, and servings add up.
+            </li>
+            <li>
+              <strong className="text-foreground">Nutrition from the ingredients:</strong> calories and
+              macros are calculated from the ingredient list. Nutrition filters and badges like High
+              Protein only appear when that calculation checks out.
+            </li>
+            <li>
+              <strong className="text-foreground">Human culinary review:</strong> a person reviews recipes
+              for technique, seasoning, timing, and whether a crew would actually want to eat them —
+              starting with the dishes crews cook most.
+            </li>
+            <li>
               <strong className="text-foreground">Crew sizing (2–20):</strong> portions and shopping
               lists adjust with head count instead of mental math on a four-person blog recipe.
             </li>
@@ -110,8 +134,8 @@ export default function HowWeTestRecipesPage() {
               that match what firehouses actually own and restock.
             </li>
             <li>
-              <strong className="text-foreground">Crew feedback:</strong> thumbs and firehouse comments help
-              surface meals crews would cook again — and flag recipes that need clearer steps.
+              <strong className="text-foreground">Crew feedback:</strong> what crews save, cook again, and
+              tell us helps surface favorites — and flags recipes that need clearer steps.
             </li>
           </ul>
         </section>

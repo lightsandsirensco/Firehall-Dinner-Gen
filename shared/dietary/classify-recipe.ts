@@ -116,6 +116,8 @@ function applyOverrides(text: string, profile: IngredientDietaryProfile): Record
  * check rather than folding it into the shared "sweetener" profile (which
  * also covers maple syrup / molasses, both vegan-safe).
  */
+const VEGETARIAN_RENNET = /\b(vegetarian|microbial|vegetable rennet|non-animal rennet|plant-based rennet)\b/i;
+
 function mentionsHoney(text: string): boolean {
   return /\bhoney\b/i.test(text) && !/honeydew/i.test(text);
 }
@@ -127,6 +129,7 @@ export function classifyRecipeDietary(ingredients: DietaryIngredientInput[]): Re
   let hasUnknown = false;
   let hasMeat = false;
   let hasHoney = false;
+  let hasAnimalRennet = false;
   const anyAllergen: Record<AllergenKey, boolean> = {
     gluten: false, dairy: false, egg: false, soy: false, treeNuts: false,
     peanuts: false, shellfish: false, fish: false, sesame: false, pork: false, alcohol: false,
@@ -150,6 +153,10 @@ export function classifyRecipeDietary(ingredients: DietaryIngredientInput[]): Re
       continue;
     }
     matched++;
+    if (profile.variesByBrand) {
+      hasUnknown = true;
+      uncertainIngredients.push({ name: ing.name, reason: profile.variesByBrand });
+    }
     const flags = applyOverrides(text, profile);
     // Fish and shellfish ARE animal flesh — any ingredient carrying either allergen flag
     // blocks vegetarian/vegan even if the profile author forgot to also set `meat: true`
@@ -158,6 +165,10 @@ export function classifyRecipeDietary(ingredients: DietaryIngredientInput[]): Re
     // field was left false).
     if (profile.meat || flags.fish || flags.shellfish) hasMeat = true;
     if (mentionsHoney(text)) hasHoney = true;
+    if (profile.animalRennet && !VEGETARIAN_RENNET.test(text)) {
+      hasAnimalRennet = true;
+      uncertainIngredients.push({ name: ing.name, reason: profile.animalRennet });
+    }
 
     const tripped: AllergenKey[] = [];
     for (const key of ALLERGEN_KEYS) {
@@ -190,7 +201,7 @@ export function classifyRecipeDietary(ingredients: DietaryIngredientInput[]): Re
     shellfishFree: confidence === "high" && !anyAllergen.shellfish,
     fishFree: confidence === "high" && !anyAllergen.fish,
     porkFree: confidence === "high" && !anyAllergen.pork,
-    vegetarian: confidence === "high" && !hasMeat,
+    vegetarian: confidence === "high" && !hasMeat && !hasAnimalRennet,
     vegan: confidence === "high" && !hasMeat && !anyAllergen.dairy && !anyAllergen.egg && !hasHoney,
   };
 

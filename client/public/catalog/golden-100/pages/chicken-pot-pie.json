@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 639,
-  "protein": 41,
-  "carbs": 32,
-  "fats": 37,
+  "calories": 707,
+  "protein": 43,
+  "carbs": 38,
+  "fats": 41,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -62,10 +62,41 @@
       "group": "Top"
     },
     {
-      "name": "Butter And Flour",
-      "quantity": "1",
-      "unit": "batch",
+      "name": "Unsalted Butter",
+      "quantity": "1/2",
+      "unit": "Cup",
       "group": "Roux"
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": "1/2",
+      "unit": "Cup",
+      "group": "Roux"
+    },
+    {
+      "name": "Dried Thyme",
+      "quantity": "1",
+      "unit": "Tsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": "2",
+      "unit": "Tsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": "1",
+      "unit": "Tsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Large Egg",
+      "quantity": "1",
+      "unit": "count",
+      "notes": "beaten with 1 tbsp water, for egg wash",
+      "group": "Top"
     }
   ],
   "steps": [
@@ -79,14 +110,14 @@
     {
       "stepNumber": 2,
       "title": "Make the sauce (velouté)",
-      "instruction": "Melt butter; whisk in flour and cook 2 minutes to make a roux. Whisk in 3 cups broth until thick and smooth — this butter-flour-broth sauce is called a velouté. Fold in chicken, peas, carrots, and onion.",
+      "instruction": "Melt butter over medium heat and cook the onion 5 minutes until soft. Whisk in flour and cook 2 minutes to make a roux. Whisk in 3 cups broth until thick and smooth — this butter-flour-broth sauce is called a velouté. Season with thyme, salt, and pepper, then fold in chicken, peas, and carrots.",
       "minutes": 15,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
       "title": "Top and bake",
-      "instruction": "Transfer filling to hotel pans; cover with pie crust or puff pastry. Vent slits. Brush with egg wash.",
+      "instruction": "Transfer filling to a deep 9×13-inch dish or half hotel pan; cover with pie crust or puff pastry. Vent slits. Brush with egg wash.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -119,16 +150,16 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 639,
-    "protein": 41,
-    "carbs": 32,
-    "fats": 37,
+    "calories": 707,
+    "protein": 43,
+    "carbs": 38,
+    "fats": 41,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
@@ -170,10 +201,15 @@
   "generatedAt": "2026-06-04T20:45:42.190Z",
   "contentVersion": 2,
   "dietary": {
-    "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
-    "uncertainIngredients": [],
+    "confidence": "low",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [
+      {
+        "name": "Pie Crust Or Puff Pastry",
+        "reason": "Store-bought pie crusts and puff pastry often contain lard or butter."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "Chicken Broth",
@@ -188,39 +224,39 @@
         ]
       },
       {
-        "name": "Butter And Flour",
+        "name": "Unsalted Butter",
         "allergens": [
-          "gluten",
           "dairy"
+        ]
+      },
+      {
+        "name": "All-Purpose Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Large Egg",
+        "allergens": [
+          "egg"
         ]
       }
     ],
     "flags": {
       "glutenFree": false,
       "dairyFree": false,
-      "eggFree": true,
-      "nutFree": true,
-      "peanutFree": true,
-      "soyFree": true,
-      "shellfishFree": true,
-      "fishFree": true,
-      "porkFree": true,
+      "eggFree": false,
+      "nutFree": false,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": false,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bread/crust/wrapper alternative. Use a 1:1 gluten-free all-purpose flour blend."
-      },
-      {
-        "flag": "dairy",
-        "label": "Dairy-Free Adaptable",
-        "note": "Use a plant-based butter/margarine."
-      }
-    ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "adaptable": [],
+    "classifiedAt": "2026-11-12T17:11:45.504Z"
   },
   "avoidTags": [
     "onions"

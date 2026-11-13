@@ -1,18 +1,18 @@
 # Hero image validation
 
-Generated: 2026-11-04T23:37:53.951Z
+Generated: 2026-11-13T01:08:01.544Z
 
 ## Summary
 
-- Published recipes audited: **408** (approved catalog: 427, explore-eligible: 382)
-- Pass: **408** · Hard failures: **0**
+- Published recipes audited: **405** (approved catalog: 424, explore-eligible: 379)
+- Pass: **405** · Hard failures: **0**
   - File failures (missing, empty, malformed path, not an image): 0 (missing: 0)
   - Metadata failures (empty/placeholder alt, alt contradicts title): 0
   - Conflicting duplicate hero bytes: 0
   - Vision-confirmed wrong dish: 0
 - Metadata warnings: **1** recipes
 - Semantic warnings (title/alt wording heuristics, not failures): **5** recipes
-- Semantic status — verified pass: **0**, verified fail: **0**, not verified: **408**
+- Semantic status — verified pass: **0**, verified fail: **0**, not verified: **405**
 - Recipes requiring new images: **0**
 - Vision mode: **off — semantic correctness not verified**
 
@@ -28,7 +28,7 @@ _None._
 
 ## Semantic status not verified
 
-- 408 recipe(s): vision check not run (pass --vision to verify the picture)
+- 405 recipe(s): vision check not run (pass --vision to verify the picture)
 
 ## Semantic warnings (wording heuristics)
 

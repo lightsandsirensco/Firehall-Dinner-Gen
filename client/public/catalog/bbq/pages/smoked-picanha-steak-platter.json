@@ -7,7 +7,7 @@
   "subtitle": "Fat-cap Brazilian cut, coarse salt, and chimichurri for ten",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Adapted from classic Brazilian picanha tradition (Traeger, Hey Grill Hey): picanha roasts get coarse salt, smoke at 275°F to 125°F, sear fat-side down, and slice with chimichurri for a crew platter.",
+  "description": "Adapted from classic Brazilian picanha tradition (Traeger, Hey Grill Hey): picanha roasts get coarse salt, smoke at 275°F to 130°F, sear fat-side down to 145°F, and slice with chimichurri for a crew platter.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 60,
@@ -96,7 +96,7 @@
     {
       "stepNumber": 2,
       "title": "Smoke at 275°F",
-      "instruction": "Smoke picanha fat-side up at 275°F until internal temp reaches 120–125°F, about 35–45 minutes.",
+      "instruction": "Smoke picanha fat-side up at 275°F until internal temp reaches 130°F, about 40–50 minutes (120–125°F if the crew wants medium-rare).",
       "minutes": 40,
       "heatLevel": "low"
     },
@@ -110,7 +110,7 @@
     {
       "stepNumber": 4,
       "title": "Sear fat cap",
-      "instruction": "Sear fat-side down over direct heat at 500°F+ 4–5 minutes until fat crisps and internal hits 130°F medium-rare.",
+      "instruction": "Sear fat-side down over direct heat at 500°F+ 4–5 minutes until fat crisps and internal hits 145°F (63°C); rest 3 minutes. Medium-rare (130°F) is a preference below the USDA safe minimum, not for anyone pregnant, older, or immunocompromised.",
       "minutes": 8,
       "heatLevel": "high"
     },

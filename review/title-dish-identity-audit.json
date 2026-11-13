@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-09T20:20:54.084Z",
+  "generatedAt": "2026-11-13T01:07:58.182Z",
   "totals": {
-    "audited": 427,
-    "passed": 427,
+    "audited": 424,
+    "passed": 424,
     "failed": 0
   },
   "failedRecipes": [],
@@ -316,12 +316,6 @@
     {
       "slug": "breakfast-quesadillas",
       "title": "Breakfast Quesadillas",
-      "kind": "breakfast_catalog",
-      "pass": true
-    },
-    {
-      "slug": "breakfast-sandwich-trays",
-      "title": "Breakfast Sandwich Trays",
       "kind": "breakfast_catalog",
       "pass": true
     },
@@ -1055,12 +1049,6 @@
       "slug": "greek-chicken-bowls",
       "title": "Greek Chicken Bowls",
       "kind": "firehall_catalog",
-      "pass": true
-    },
-    {
-      "slug": "firehall-greek-chicken-bowls",
-      "title": "Greek Chicken Bowls",
-      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -2489,12 +2477,6 @@
       "slug": "unstuffed-cabbage-roll-skillet",
       "title": "Unstuffed Cabbage Roll Skillet",
       "kind": "performance_meal",
-      "pass": true
-    },
-    {
-      "slug": "veggie-egg-burritos",
-      "title": "Veggie Egg Burritos",
-      "kind": "breakfast_catalog",
       "pass": true
     },
     {

@@ -1,0 +1,449 @@
+diff --git a/shared/bbq-expansion/batch-25-bbq-recipes.ts b/shared/bbq-expansion/batch-25-bbq-recipes.ts
+index 5e8de58..7c7e262 100644
+--- a/shared/bbq-expansion/batch-25-bbq-recipes.ts
++++ b/shared/bbq-expansion/batch-25-bbq-recipes.ts
+@@ -984,7 +984,7 @@ const NEW_BATCH_25_RECIPES: BbqRecipe[] = [
+       slug: "smoked-baked-beans-crew",
+       title: "Smoked Baked Beans for the Crew",
+       subtitle: "Molasses-brown sugar beans with burnt-end depth for ten",
+-      protein: "vegetarian",
++      protein: "pork",
+       cuisine: "American",
+       mealFormat: "side",
+       pools: ["bbq", "comfort", "big_crew"],
+diff --git a/shared/bbq-expansion/batch-30-bbq-grill-recipes.ts b/shared/bbq-expansion/batch-30-bbq-grill-recipes.ts
+index 5cc4741..c6ab28e 100644
+--- a/shared/bbq-expansion/batch-30-bbq-grill-recipes.ts
++++ b/shared/bbq-expansion/batch-30-bbq-grill-recipes.ts
+@@ -1295,7 +1295,7 @@ export const BATCH_30_BBQ_GRILL_RECIPES = [
+     slug: "grilled-peach-burrata-salad",
+     title: "Pistachio Peach and Burrata Salad",
+     subtitle: "Charred peach halves, creamy burrata, arugula, and balsamic for ten",
+-    protein: "vegetarian",
++    protein: "pork",
+     cuisine: "Italian-American",
+     format: "stone_fruit_salad",
+     hook: "Grilled peach burrata—summer side that feels fancy on BBQ night",
+@@ -1341,7 +1341,7 @@ export const BATCH_30_BBQ_GRILL_RECIPES = [
+     slug: "charred-broccolini-lemon-tray",
+     title: "Sicilian Anchovy Broccolini Tray",
+     subtitle: "Grilled broccolini, lemon-garlic oil, and parmesan tray for ten",
+-    protein: "vegetarian",
++    protein: "seafood",
+     cuisine: "Italian-American",
+     format: "brassica_tray",
+     hook: "Charred broccolini tray—lemon garlic finish, green side that actually tastes grilled",
+diff --git a/shared/golden-100/recipes-data.ts b/shared/golden-100/recipes-data.ts
+index fbd60ea..43db414 100644
+--- a/shared/golden-100/recipes-data.ts
++++ b/shared/golden-100/recipes-data.ts
+@@ -150,7 +150,7 @@ const BIG_CREW = [
+ 
+ const BREAKFAST = [
+   goldenEntry({ slug: "breakfast-burrito-bar", title: "Breakfast Burrito Bar", cat: "breakfast_brunch", protein: "pork", cuisine: "mexican", format: "handheld", pools: ["breakfast", "handheld"], hook: "Build burritos before the rig rolls", search: "breakfast burrito bar chorizo", img: { lightingStyle: "morning_soft" } }),
+-  goldenEntry({ slug: "pancake-short-stack", title: "Pancake Short Stack for the Crew", cat: "breakfast_brunch", protein: "vegetarian", cuisine: "american", format: "breakfast", pools: ["breakfast"], hook: "Fluffy stacks, bacon on the side", search: "buttermilk pancakes bacon breakfast", img: { lightingStyle: "morning_soft" } }),
++  goldenEntry({ slug: "pancake-short-stack", title: "Pancake Short Stack for the Crew", cat: "breakfast_brunch", protein: "pork", cuisine: "american", format: "breakfast", pools: ["breakfast"], hook: "Fluffy stacks, bacon on the side", search: "buttermilk pancakes bacon breakfast", img: { lightingStyle: "morning_soft" } }),
+   goldenEntry({ slug: "french-toast-casserole", title: "French Toast Casserole", cat: "breakfast_brunch", protein: "vegetarian", cuisine: "american", format: "bake", pools: ["breakfast"], hook: "Feed the hall before the bell", search: "french toast casserole bake", img: { lightingStyle: "morning_soft" } }),
+   goldenEntry({ slug: "chorizo-breakfast-tacos", title: "Chorizo Breakfast Tacos", cat: "breakfast_brunch", protein: "pork", cuisine: "mexican", format: "tacos", pools: ["breakfast", "handheld"], hook: "Spicy chorizo, warm tortillas", search: "chorizo breakfast tacos", img: { lightingStyle: "morning_soft" } }),
+ ];
+diff --git a/shared/golden-100/recipe-quality/batch-a-packs.ts b/shared/golden-100/recipe-quality/batch-a-packs.ts
+index 19fca61..fc55f3e 100644
+--- a/shared/golden-100/recipe-quality/batch-a-packs.ts
++++ b/shared/golden-100/recipe-quality/batch-a-packs.ts
+@@ -148,7 +148,7 @@ export const BATCH_A_GOLDEN_PACKS: Record<string, PackBuilder> = {
+       m("Canned whole peeled tomatoes", mult(4, scale), "cans", "Soup", "28 oz, with juice"),
+       m("Yellow onion", mult(2, scale), "count", "Soup", "diced"),
+       m("Garlic cloves", mult(6, scale), "count", "Soup", "minced"),
+-      m("Chicken broth", mult(6, scale), "cups", "Soup", "low-sodium"),
++      m("Vegetable broth", mult(6, scale), "cups", "Soup", "low-sodium"),
+       m("Heavy cream", mult(1, scale), "cup", "Soup"),
+       m("Olive oil", mult(0.25, scale), "cup", "Soup"),
+       m("Dried basil", mult(2, scale), "tsp", "Seasoning"),
+@@ -239,7 +239,7 @@ export const BATCH_A_GOLDEN_PACKS: Record<string, PackBuilder> = {
+       m("Fire-roasted diced tomatoes", mult(2, scale), "cans", "Bisque", "14 oz"),
+       m("Yellow onion", mult(2, scale), "count", "Aromatics", "diced"),
+       m("Garlic cloves", mult(5, scale), "count", "Aromatics", "minced"),
+-      m("Chicken broth", mult(5, scale), "cups", "Bisque"),
++      m("Vegetable broth", mult(5, scale), "cups", "Bisque"),
+       m("Heavy cream", mult(1.5, scale), "cups", "Bisque"),
+       m("Smoked paprika", mult(2, scale), "tsp", "Seasoning"),
+       m("Cayenne pepper", mult(0.25, scale), "tsp", "Seasoning", "plus more at service"),
+diff --git a/shared/golden-100/recipe-quality/batch-b-packs.ts b/shared/golden-100/recipe-quality/batch-b-packs.ts
+index fc667a3..e6ae756 100644
+--- a/shared/golden-100/recipe-quality/batch-b-packs.ts
++++ b/shared/golden-100/recipe-quality/batch-b-packs.ts
+@@ -56,7 +56,7 @@ export const BATCH_B_GOLDEN_PACKS: Record<string, PackBuilder> = {
+       m("Garlic cloves", mult(6, scale), "count", "Base", "minced"),
+       m("Tomato paste", mult(3, scale), "tbsp", "Base"),
+       m("Canned kidney beans", mult(3, scale), "cans", "Beans", "15 oz, drained and rinsed"),
+-      m("Low-sodium chicken broth", mult(8, scale), "cups", "Broth"),
++      m("Low-sodium vegetable broth", mult(8, scale), "cups", "Broth"),
+       m("Dried oregano", mult(2, scale), "tsp", "Seasoning"),
+       m("Bay leaves", mult(2, scale), "count", "Seasoning"),
+       m("Parmesan cheese", mult(1, scale), "cup", "Finish", "finely grated, plus rind if you have it"),
+@@ -280,7 +280,7 @@ export const BATCH_B_GOLDEN_PACKS: Record<string, PackBuilder> = {
+       m("Extra-virgin olive oil", mult(0.5, scale), "cup", "Base", "divided"),
+       m("Garlic cloves", mult(8, scale), "count", "Base", "thinly sliced"),
+       m("Tomato paste", mult(2, scale), "tbsp", "Base"),
+-      m("Low-sodium chicken broth", mult(4, scale), "cups", "Liquid"),
++      m("Low-sodium vegetable broth", mult(4, scale), "cups", "Liquid"),
+       m("Fresh rosemary", mult(2, scale), "tsp", "Herbs", "chopped, or 1 tsp dried"),
+       m("Red pepper flakes", mult(0.5, scale), "tsp", "Seasoning", "optional"),
+       m("Parmesan cheese", mult(1, scale), "cup", "Finish", "grated"),
+diff --git a/client/public/catalog/bbq/pages/smoked-baked-beans-crew.json b/client/public/catalog/bbq/pages/smoked-baked-beans-crew.json
+index 7dd8e2d..835c6ab 100644
+--- a/client/public/catalog/bbq/pages/smoked-baked-beans-crew.json
++++ b/client/public/catalog/bbq/pages/smoked-baked-beans-crew.json
+@@ -18,7 +18,7 @@
+   "carbs": 58,
+   "fats": 17,
+   "tags": [
+-    "protein:vegetarian",
++    "protein:pork",
+     "format:side",
+     "category:bbq_grill_nights",
+     "bbq",
+@@ -196,7 +196,6 @@
+   "searchTerms": [
+     "smoked baked beans for the crew",
+     "smoked baked beans crew",
+-    "vegetarian",
+     "American",
+     "side",
+     "bbq",
+diff --git a/client/public/catalog/bbq/pages/charred-broccolini-lemon-tray.json b/client/public/catalog/bbq/pages/charred-broccolini-lemon-tray.json
+index 2bceebb..b0221fd 100644
+--- a/client/public/catalog/bbq/pages/charred-broccolini-lemon-tray.json
++++ b/client/public/catalog/bbq/pages/charred-broccolini-lemon-tray.json
+@@ -18,7 +18,7 @@
+   "carbs": 14,
+   "fats": 9,
+   "tags": [
+-    "protein:vegetarian",
++    "protein:seafood",
+     "format:brassica_tray",
+     "category:bbq_grill_nights",
+     "bbq",
+@@ -203,7 +203,6 @@
+   "searchTerms": [
+     "sicilian anchovy broccolini tray",
+     "charred broccolini lemon tray",
+-    "vegetarian",
+     "Italian-American",
+     "brassica tray",
+     "bbq",
+diff --git a/client/public/catalog/bbq/pages/grilled-peach-burrata-salad.json b/client/public/catalog/bbq/pages/grilled-peach-burrata-salad.json
+index e2043d0..bb41b5e 100644
+--- a/client/public/catalog/bbq/pages/grilled-peach-burrata-salad.json
++++ b/client/public/catalog/bbq/pages/grilled-peach-burrata-salad.json
+@@ -18,7 +18,7 @@
+   "carbs": 4,
+   "fats": 7,
+   "tags": [
+-    "protein:vegetarian",
++    "protein:pork",
+     "format:stone_fruit_salad",
+     "category:bbq_grill_nights",
+     "bbq",
+@@ -210,7 +210,6 @@
+   "searchTerms": [
+     "pistachio peach and burrata salad",
+     "grilled peach burrata salad",
+-    "vegetarian",
+     "Italian-American",
+     "stone fruit salad",
+     "bbq",
+diff --git a/client/public/catalog/golden-100/pages/pancake-short-stack.json b/client/public/catalog/golden-100/pages/pancake-short-stack.json
+index 46a854d..0aa3d10 100644
+--- a/client/public/catalog/golden-100/pages/pancake-short-stack.json
++++ b/client/public/catalog/golden-100/pages/pancake-short-stack.json
+@@ -18,7 +18,7 @@
+   "carbs": 125,
+   "fats": 61,
+   "tags": [
+-    "protein:vegetarian",
++    "protein:pork",
+     "format:breakfast",
+     "category:breakfast_brunch",
+     "breakfast",
+@@ -142,7 +142,6 @@
+   "searchTerms": [
+     "pancake short stack",
+     "american",
+-    "vegetarian",
+     "breakfast",
+     "buttermilk pancakes bacon breakfast",
+     "golden_100"
+diff --git a/client/public/catalog/golden-100/pages/30-minute-pasta-e-fagioli-for-the-hall.json b/client/public/catalog/golden-100/pages/30-minute-pasta-e-fagioli-for-the-hall.json
+index d8fabbb..c60c7a7 100644
+--- a/client/public/catalog/golden-100/pages/30-minute-pasta-e-fagioli-for-the-hall.json
++++ b/client/public/catalog/golden-100/pages/30-minute-pasta-e-fagioli-for-the-hall.json
+@@ -73,7 +73,7 @@
+       "group": "Beans"
+     },
+     {
+-      "name": "Low-Sodium Chicken Broth",
++      "name": "Low-Sodium Vegetable Broth",
+       "quantity": "8",
+       "unit": "Cups",
+       "group": "Broth"
+@@ -239,7 +239,7 @@
+         ]
+       },
+       {
+-        "name": "Low-Sodium Chicken Broth",
++        "name": "Low-Sodium Vegetable Broth",
+         "allergens": [
+           "gluten"
+         ]
+@@ -267,7 +267,7 @@
+       "shellfishFree": true,
+       "fishFree": true,
+       "porkFree": true,
+-      "vegetarian": false,
++      "vegetarian": true,
+       "vegan": false
+     },
+     "adaptable": [
+diff --git a/client/public/catalog/golden-100/pages/pasta-e-ceci-for-the-hall.json b/client/public/catalog/golden-100/pages/pasta-e-ceci-for-the-hall.json
+index fcdd40c..bcc1986 100644
+--- a/client/public/catalog/golden-100/pages/pasta-e-ceci-for-the-hall.json
++++ b/client/public/catalog/golden-100/pages/pasta-e-ceci-for-the-hall.json
+@@ -67,7 +67,7 @@
+       "group": "Base"
+     },
+     {
+-      "name": "Low-Sodium Chicken Broth",
++      "name": "Low-Sodium Vegetable Broth",
+       "quantity": "4",
+       "unit": "Cups",
+       "group": "Liquid"
+@@ -235,7 +235,7 @@
+         ]
+       },
+       {
+-        "name": "Low-Sodium Chicken Broth",
++        "name": "Low-Sodium Vegetable Broth",
+         "allergens": [
+           "gluten"
+         ]
+@@ -257,7 +257,7 @@
+       "shellfishFree": true,
+       "fishFree": true,
+       "porkFree": true,
+-      "vegetarian": false,
++      "vegetarian": true,
+       "vegan": false
+     },
+     "adaptable": [
+diff --git a/client/public/catalog/golden-100/pages/spicy-tomato-bisque-grilled-brie-toast.json b/client/public/catalog/golden-100/pages/spicy-tomato-bisque-grilled-brie-toast.json
+index 22d86aa..00834d1 100644
+--- a/client/public/catalog/golden-100/pages/spicy-tomato-bisque-grilled-brie-toast.json
++++ b/client/public/catalog/golden-100/pages/spicy-tomato-bisque-grilled-brie-toast.json
+@@ -61,7 +61,7 @@
+       "group": "Aromatics"
+     },
+     {
+-      "name": "Chicken Broth",
++      "name": "Vegetable Broth",
+       "quantity": "5",
+       "unit": "Cups",
+       "group": "Bisque"
+@@ -218,7 +218,7 @@
+     "uncertainIngredients": [],
+     "flaggedIngredients": [
+       {
+-        "name": "Chicken Broth",
++        "name": "Vegetable Broth",
+         "allergens": [
+           "gluten"
+         ]
+@@ -258,7 +258,7 @@
+       "shellfishFree": true,
+       "fishFree": true,
+       "porkFree": true,
+-      "vegetarian": false,
++      "vegetarian": true,
+       "vegan": false
+     },
+     "adaptable": [
+diff --git a/client/public/catalog/golden-100/pages/tomato-soup-grilled-cheese-croutons.json b/client/public/catalog/golden-100/pages/tomato-soup-grilled-cheese-croutons.json
+index db0943e..03fc84b 100644
+--- a/client/public/catalog/golden-100/pages/tomato-soup-grilled-cheese-croutons.json
++++ b/client/public/catalog/golden-100/pages/tomato-soup-grilled-cheese-croutons.json
+@@ -54,7 +54,7 @@
+       "group": "Soup"
+     },
+     {
+-      "name": "Chicken Broth",
++      "name": "Vegetable Broth",
+       "quantity": "6",
+       "unit": "Cups",
+       "notes": "low-sodium",
+@@ -211,7 +211,7 @@
+     "uncertainIngredients": [],
+     "flaggedIngredients": [
+       {
+-        "name": "Chicken Broth",
++        "name": "Vegetable Broth",
+         "allergens": [
+           "gluten"
+         ]
+@@ -251,7 +251,7 @@
+       "shellfishFree": true,
+       "fishFree": true,
+       "porkFree": true,
+-      "vegetarian": false,
++      "vegetarian": true,
+       "vegan": false
+     },
+     "adaptable": [
+diff --git a/client/public/catalog/golden-100/index.json b/client/public/catalog/golden-100/index.json
+index 5c03ec0..29ffc69 100644
+--- a/client/public/catalog/golden-100/index.json
++++ b/client/public/catalog/golden-100/index.json
+@@ -51,7 +51,7 @@
+           "shellfishFree": true,
+           "fishFree": true,
+           "porkFree": true,
+-          "vegetarian": false,
++          "vegetarian": true,
+           "vegan": false
+         },
+         "adaptable": [
+@@ -4805,14 +4805,14 @@
+       "subtitle": "Fluffy stacks, bacon on the side",
+       "category": "breakfast_brunch",
+       "cuisine": "american",
+-      "protein": "vegetarian",
++      "protein": "pork",
+       "mealFormat": "breakfast",
+       "cookTime": 55,
+       "difficulty": "medium",
+       "heroImage": "/images/golden-100/pancake-short-stack.jpg",
+       "thumbImage": "/images/thumbs/pancake-short-stack.jpg",
+       "tags": [
+-        "protein:vegetarian",
++        "protein:pork",
+         "format:breakfast",
+         "category:breakfast_brunch",
+         "breakfast",
+@@ -4823,7 +4823,6 @@
+       "searchTerms": [
+         "pancake short stack",
+         "american",
+-        "vegetarian",
+         "breakfast",
+         "buttermilk pancakes bacon breakfast",
+         "golden_100"
+@@ -4986,7 +4985,7 @@
+           "shellfishFree": true,
+           "fishFree": true,
+           "porkFree": true,
+-          "vegetarian": false,
++          "vegetarian": true,
+           "vegan": false
+         },
+         "adaptable": [
+@@ -6457,7 +6456,7 @@
+           "shellfishFree": true,
+           "fishFree": true,
+           "porkFree": true,
+-          "vegetarian": false,
++          "vegetarian": true,
+           "vegan": false
+         },
+         "adaptable": [
+@@ -7097,7 +7096,7 @@
+           "shellfishFree": true,
+           "fishFree": true,
+           "porkFree": true,
+-          "vegetarian": false,
++          "vegetarian": true,
+           "vegan": false
+         },
+         "adaptable": [
+diff --git a/client/public/catalog/bbq/index.json b/client/public/catalog/bbq/index.json
+index c6d3ae3..ecf2d82 100644
+--- a/client/public/catalog/bbq/index.json
++++ b/client/public/catalog/bbq/index.json
+@@ -1077,7 +1077,7 @@
+       "heroImage": "/images/smoker-catalog/smoked-baked-beans-crew.jpg",
+       "thumbImage": "/images/thumbs/smoker-catalog/smoked-baked-beans-crew.jpg",
+       "tags": [
+-        "protein:vegetarian",
++        "protein:pork",
+         "format:side",
+         "category:bbq_grill_nights",
+         "bbq",
+@@ -1093,7 +1093,6 @@
+       "searchTerms": [
+         "smoked baked beans for the crew",
+         "smoked baked beans crew",
+-        "vegetarian",
+         "American",
+         "side",
+         "bbq",
+@@ -3295,7 +3294,7 @@
+       "heroImage": "/images/smoker-catalog/grilled-peach-burrata-salad.jpg",
+       "thumbImage": "/images/thumbs/smoker-catalog/grilled-peach-burrata-salad.jpg",
+       "tags": [
+-        "protein:vegetarian",
++        "protein:pork",
+         "format:stone_fruit_salad",
+         "category:bbq_grill_nights",
+         "bbq",
+@@ -3311,7 +3310,6 @@
+       "searchTerms": [
+         "pistachio peach and burrata salad",
+         "grilled peach burrata salad",
+-        "vegetarian",
+         "Italian-American",
+         "stone fruit salad",
+         "bbq",
+@@ -3369,7 +3367,7 @@
+       "heroImage": "/images/smoker-catalog/charred-broccolini-lemon-tray.jpg",
+       "thumbImage": "/images/thumbs/smoker-catalog/charred-broccolini-lemon-tray.jpg",
+       "tags": [
+-        "protein:vegetarian",
++        "protein:seafood",
+         "format:brassica_tray",
+         "category:bbq_grill_nights",
+         "bbq",
+@@ -3385,7 +3383,6 @@
+       "searchTerms": [
+         "sicilian anchovy broccolini tray",
+         "charred broccolini lemon tray",
+-        "vegetarian",
+         "Italian-American",
+         "brassica tray",
+         "bbq",
+diff --git a/client/public/catalog/breakfast-meals/index.json b/client/public/catalog/breakfast-meals/index.json
+index 199b46c..599c421 100644
+--- a/client/public/catalog/breakfast-meals/index.json
++++ b/client/public/catalog/breakfast-meals/index.json
+@@ -105,14 +105,14 @@
+       "subtitle": "Fluffy stacks, bacon on the side",
+       "category": "breakfast_brunch",
+       "cuisine": "american",
+-      "protein": "vegetarian",
++      "protein": "pork",
+       "mealFormat": "breakfast",
+       "cookTime": 55,
+       "difficulty": "medium",
+       "heroImage": "/images/golden-100/pancake-short-stack.jpg",
+       "thumbImage": "/images/thumbs/pancake-short-stack.jpg",
+       "tags": [
+-        "protein:vegetarian",
++        "protein:pork",
+         "format:breakfast",
+         "category:breakfast_brunch",
+         "breakfast",
+@@ -123,7 +123,6 @@
+       "searchTerms": [
+         "pancake short stack",
+         "american",
+-        "vegetarian",
+         "breakfast",
+         "buttermilk pancakes bacon breakfast",
+         "golden_100"

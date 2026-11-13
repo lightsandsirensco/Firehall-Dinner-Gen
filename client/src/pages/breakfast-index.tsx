@@ -24,7 +24,6 @@ import type { BreakfastIndexEntry } from "@shared/breakfast-schema";
 const FILTERS = [
   { id: "quick_breakfasts", label: "Quick" },
   { id: "feed_a_crew", label: "Feed a Crew" },
-  { id: "high_protein", label: "High Protein" },
   { id: "breakfast_sandwiches", label: "Sandwiches" },
   { id: "skillets", label: "Skillets" },
   { id: "bbq_breakfast", label: "BBQ Breakfast" },

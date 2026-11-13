@@ -59,7 +59,7 @@
       "name": "Parmesan cheese",
       "quantity": "3/4",
       "unit": "cup",
-      "notes": "grated",
+      "notes": "grated; use a Parmesan labeled vegetarian (microbial rennet)",
       "group": "Alfredo"
     },
     {
@@ -72,7 +72,8 @@
       "name": "basil pesto",
       "quantity": "1.6",
       "unit": "cups",
-      "group": "Sauces"
+      "group": "Sauces",
+      "notes": "use a pesto labeled vegetarian (traditional pesto uses animal-rennet Parmesan)"
     },
     {
       "name": "garlic cloves",
@@ -273,6 +274,6 @@
         "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:29:45.659Z"
   }
 }

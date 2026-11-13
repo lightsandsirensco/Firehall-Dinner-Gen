@@ -52,13 +52,13 @@
     },
     {
       "name": "cinnamon stick",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "whole",
       "group": "Broth"
     },
     {
       "name": "fresh ginger",
-      "quantity": "2.4",
+      "quantity": "3",
       "unit": "inches",
       "notes": "charred, sliced",
       "group": "Broth"
@@ -71,35 +71,57 @@
     },
     {
       "name": "sirloin steak",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "lb",
       "notes": "thin-sliced frozen",
       "group": "Protein"
     },
     {
       "name": "bean sprouts",
-      "quantity": "3.2",
+      "quantity": "3",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "Thai basil",
-      "quantity": "1.6",
+      "quantity": "1 1/2",
       "unit": "cups",
       "group": "Bar"
     },
     {
       "name": "green onions",
-      "quantity": "3/4",
+      "quantity": "1",
       "unit": "bunch",
       "notes": "sliced",
       "group": "Bar"
     },
     {
       "name": "hoisin and sriracha",
-      "quantity": "3/8",
+      "quantity": "1/2",
       "unit": "cup each",
       "group": "Sauce"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "halved, charred"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "1",
+      "unit": "bunch"
+    },
+    {
+      "name": "limes",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "cut into wedges"
+    },
+    {
+      "name": "fish sauce",
+      "quantity": "3",
+      "unit": "tbsp"
     }
   ],
   "steps": [
@@ -127,7 +149,7 @@
     {
       "stepNumber": 4,
       "title": "Assemble bowls to order",
-      "instruction": "Portion noodles into bowls, top with raw beef slices, and ladle boiling broth over top—the hot broth cooks beef to medium-rare in the bowl. Verify broth reads 190°F when ladled.",
+      "instruction": "Portion noodles into bowls, dip the thin beef slices in the simmering broth with a strainer 30–60 seconds until no longer pink, lay them over the noodles, and ladle boiling broth on top. For traditional rare pho, lay raw slices on the noodles and let the boiling broth cook them in the bowl — a preference below the USDA safe minimum, not for anyone pregnant, older, or immunocompromised.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -201,8 +223,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 10,
-    "totalCount": 10,
+    "matchedCount": 14,
+    "totalCount": 14,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -217,6 +239,12 @@
           "gluten",
           "soy"
         ]
+      },
+      {
+        "name": "fish sauce",
+        "allergens": [
+          "fish"
+        ]
       }
     ],
     "flags": {
@@ -227,7 +255,7 @@
       "peanutFree": true,
       "soyFree": false,
       "shellfishFree": true,
-      "fishFree": true,
+      "fishFree": false,
       "porkFree": true,
       "vegetarian": false,
       "vegan": false
@@ -239,6 +267,6 @@
         "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free hoisin or a tamari-based substitute."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   }
 }

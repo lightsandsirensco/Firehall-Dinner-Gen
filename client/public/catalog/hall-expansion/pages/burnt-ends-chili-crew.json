@@ -42,27 +42,45 @@
     {
       "name": "kidney beans",
       "quantity": "5",
-      "unit": "cans"
+      "unit": "cans",
+      "notes": "15 oz each, drained"
     },
     {
       "name": "crushed tomatoes",
       "quantity": "5",
-      "unit": "cans"
+      "unit": "cans",
+      "notes": "14.5 oz each"
     },
     {
       "name": "onions",
-      "quantity": "2.4",
-      "unit": "each"
+      "quantity": "2",
+      "unit": "large"
     },
     {
       "name": "beef broth",
-      "quantity": "4.8",
+      "quantity": "4",
       "unit": "cups"
     },
     {
       "name": "chili powder",
-      "quantity": "3/8",
+      "quantity": "1/3",
       "unit": "cup"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "2",
+      "unit": "each",
+      "notes": "diced"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "2",
+      "unit": "tbsp"
     }
   ],
   "steps": [
@@ -213,8 +231,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
+    "matchedCount": 9,
+    "totalCount": 9,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -244,6 +262,6 @@
         "note": "Use a certified gluten-free broth or bouillon."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   }
 }

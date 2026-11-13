@@ -377,7 +377,7 @@ export function convertSpoonacularToGenerateResponse(
     cooking_method: inferCookingMethod(steps),
     base_carb: inferBaseCarb(detail),
     key_ingredients: detail.extendedIngredients.slice(0, 5).map((i) => i.name),
-    high_protein: macros.protein_g >= 30,
+    high_protein: false,
     high_fiber: false,
     quick_cleanup: totalMin <= 30,
   };

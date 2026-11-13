@@ -22,7 +22,6 @@ import {
   formatRecipeIngredientName,
   formatTemperaturesInText,
 } from "@shared/measurements";
-import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { CTA } from "@/lib/brand-copy";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { DietaryBadges } from "@/components/trust/dietary-badges";
@@ -140,13 +139,12 @@ export default function SmoothieRecipePage() {
         <h1 className="mt-2 font-heading tracking-tight text-3xl sm:text-4xl">{page.title}</h1>
         <p className="mt-3 text-muted-foreground leading-relaxed">{page.intro}</p>
 
-        <RecipeCrewRatingPanel slug={page.slug} category="smoothies" className="mt-6" />
-
         <RecipeNutritionPanel
           calories={page.nutrition.calories}
           protein={page.nutrition.protein}
           carbs={page.nutrition.carbs}
           fat={page.nutrition.fats}
+          source={page.nutrition.source}
           estimateAvailable={
             page.nutrition.estimateAvailable !== false &&
             page.nutrition.source !== "unavailable"

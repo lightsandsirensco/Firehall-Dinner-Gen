@@ -1,5 +1,5 @@
 /**
- * Pizza Night curated catalog — exactly 20 hall-tested pies.
+ * Pizza Night curated catalog — exactly 20 curated pies.
  */
 
 import { goldenEntry } from "../golden-100/entry.js";

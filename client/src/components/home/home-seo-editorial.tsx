@@ -30,11 +30,11 @@ export function HomeSeoEditorial() {
           <div className="mt-5 space-y-4 text-[15px] sm:text-base text-muted-foreground leading-[1.75] max-w-prose">
             <p>
               Firehall Meals helps individual firefighters pick shift dinners, save meals they love,
-              and cook with crew-sized portions from hundreds of firefighter-tested recipes. It is
+              and cook with crew-sized portions from hundreds of crew-sized recipes. It is
               free to use on your own — no firehouse membership required.
             </p>
             <p>
-              Firefighter-owned. Built for the fire service and tested on real shifts.
+              Firefighter-owned. Built for the fire service and written for real shifts.
             </p>
           </div>
           <nav aria-label="Explore firefighter meals" className="mt-8 flex flex-wrap gap-x-6 gap-y-2">

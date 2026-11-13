@@ -28,6 +28,8 @@ import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const FIX = process.argv.includes("--fix");
+/** Limit --fix to these slugs (comma-separated), e.g. --only=beef-barley-soup */
+const ONLY = new Set(process.argv.find((a) => a.startsWith("--only="))?.slice(7).split(",").filter(Boolean) ?? []);
 const MD_OUT = path.join(ROOT, "review", "nutrition-integrity-audit.md");
 const JSON_OUT = path.join(ROOT, "review", "nutrition-integrity-audit.json");
 
@@ -195,8 +197,10 @@ function applyFixes(results: ReturnType<typeof auditRecipeNutritionIntegrity>[])
     for (const file of listJsonFiles(dir)) {
       const page = readPage(file);
       const slug = String(page.slug || path.basename(file, ".json"));
+      if (ONLY.size && !ONLY.has(slug)) continue;
       const row = results.find((r) => r.slug === slug && r.catalog === id);
-      if (!row?.needsRecalculation && row?.status !== "fail") continue;
+      if (!ONLY.size && !row?.needsRecalculation && row?.status !== "fail") continue;
+      if (!row) continue;
 
       const baseServings = servingsFromPage(page, mealType);
       const ingredients = catalogIngredientsFromUnknown(page.ingredients);

@@ -45,12 +45,12 @@
     },
     {
       "name": "cucumber",
-      "quantity": "3.2",
+      "quantity": "3",
       "unit": "each"
     },
     {
       "name": "tomatoes",
-      "quantity": "2.4",
+      "quantity": "2 1/2",
       "unit": "lb"
     },
     {
@@ -60,15 +60,53 @@
     },
     {
       "name": "red onion",
-      "quantity": "1.6",
-      "unit": "each"
+      "quantity": "1",
+      "unit": "large"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "lemons",
+      "quantity": "3",
+      "unit": "each",
+      "notes": "zested and juiced"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "1/2",
+      "unit": "cup",
+      "notes": "chopped"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
       "title": "Cook rice",
-      "instruction": "Cook rinsed rice in salted water, keeping the lid closed so steam finishes the grains.",
+      "instruction": "Cook rinsed rice in 6 cups salted water, keeping the lid closed so steam finishes the grains.",
       "heatLevel": ""
     },
     {
@@ -212,8 +250,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
+    "matchedCount": 13,
+    "totalCount": 13,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -237,6 +275,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   }
 }

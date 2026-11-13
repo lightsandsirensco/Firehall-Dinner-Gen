@@ -105,14 +105,14 @@
       "subtitle": "Fluffy stacks, bacon on the side",
       "category": "breakfast_brunch",
       "cuisine": "american",
-      "protein": "vegetarian",
+      "protein": "pork",
       "mealFormat": "breakfast",
       "cookTime": 55,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/pancake-short-stack.jpg",
       "thumbImage": "/images/thumbs/pancake-short-stack.jpg",
       "tags": [
-        "protein:vegetarian",
+        "protein:pork",
         "format:breakfast",
         "category:breakfast_brunch",
         "breakfast",
@@ -123,7 +123,6 @@
       "searchTerms": [
         "pancake short stack",
         "american",
-        "vegetarian",
         "breakfast",
         "buttermilk pancakes bacon breakfast",
         "golden_100"

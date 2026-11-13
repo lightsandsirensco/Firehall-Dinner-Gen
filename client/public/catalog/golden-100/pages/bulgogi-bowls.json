@@ -46,7 +46,7 @@
     },
     {
       "name": "Soy Sauce",
-      "quantity": "0.5",
+      "quantity": "1/2",
       "unit": "Cup",
       "group": "Marinade"
     },
@@ -73,6 +73,18 @@
       "quantity": "2",
       "unit": "count",
       "group": "Toppings"
+    },
+    {
+      "name": "Garlic Cloves, Minced",
+      "quantity": "6",
+      "unit": "count",
+      "group": "Marinade"
+    },
+    {
+      "name": "Asian Pear Or Apple, Grated",
+      "quantity": "1",
+      "unit": "count",
+      "group": "Marinade"
     }
   ],
   "steps": [
@@ -86,7 +98,7 @@
     {
       "stepNumber": 2,
       "title": "Cook short-grain rice",
-      "instruction": "Rinse rice; cook 1:1.25 with water 15 minutes. Rest covered 10 minutes.",
+      "instruction": "Rinse rice; cook with 3 3/4 cups water, covered, 15 minutes. Rest covered 10 minutes.",
       "minutes": 25,
       "heatLevel": "medium"
     },
@@ -174,10 +186,15 @@
   "generatedAt": "2026-06-04T20:45:42.335Z",
   "contentVersion": 2,
   "dietary": {
-    "confidence": "high",
-    "matchedCount": 7,
-    "totalCount": 7,
-    "uncertainIngredients": [],
+    "confidence": "low",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [
+      {
+        "name": "Kimchi",
+        "reason": "Traditional kimchi is made with fish sauce and salted shrimp — use one labeled vegan."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "Soy Sauce",
@@ -185,34 +202,30 @@
           "gluten",
           "soy"
         ]
+      },
+      {
+        "name": "Kimchi",
+        "allergens": [
+          "shellfish",
+          "fish"
+        ]
       }
     ],
     "flags": {
       "glutenFree": false,
-      "dairyFree": true,
-      "eggFree": true,
-      "nutFree": true,
-      "peanutFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": false,
+      "peanutFree": false,
       "soyFree": false,
-      "shellfishFree": true,
-      "fishFree": true,
-      "porkFree": true,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": false,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
-      },
-      {
-        "flag": "soy",
-        "label": "Soy-Free Adaptable",
-        "note": "Use coconut aminos."
-      }
-    ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "adaptable": [],
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   },
   "avoidTags": []
 }

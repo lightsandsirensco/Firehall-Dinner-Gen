@@ -72,6 +72,12 @@ export const PHASE5_CONSOLIDATIONS: Phase5Consolidation[] = [
   { from: "chicken-caesar-wraps", to: "chicken-caesar", note: "exact: caesar chicken crossover" },
   { from: "italian-sausage-veg-sheet-pan", to: "sheet-pan-sausage-peppers", note: "exact: sausage peppers sheet pan" },
   { from: "sheet-pan-chicken-fajitas-lite", to: "sheet-pan-fajitas", note: "exact: sheet pan fajitas" },
+
+  // Recipe quality audit — templated copies and duplicate titles
+  { from: "veggie-egg-burritos", to: "hall-breakfast-burritos", note: "exact: templated copy of breakfast burritos (contains sausage)" },
+  { from: "protein-pancake-tray", to: "buttermilk-pancakes", note: "exact: templated copy of buttermilk pancakes" },
+  { from: "breakfast-sandwich-trays", to: "sausage-egg-cheese-sandwiches", note: "exact: templated copy of breakfast sandwiches" },
+  { from: "firehall-greek-chicken-bowls", to: "greek-chicken-bowls", note: "exact: duplicate title" },
 ];
 
 export const PHASE5_REDIRECT_MAP: Record<string, string> = Object.fromEntries(

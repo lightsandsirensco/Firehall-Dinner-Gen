@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 325,
-  "protein": 19,
+  "calories": 301,
+  "protein": 16,
   "carbs": 40,
-  "fats": 11,
+  "fats": 10,
   "tags": [
     "protein:plant",
     "format:soup",
@@ -83,7 +83,7 @@
       "name": "Parmesan rind",
       "quantity": "1",
       "unit": "piece",
-      "notes": "2-inch chunk"
+      "notes": "2-inch chunk, from a Parmesan labeled vegetarian (microbial rennet)"
     },
     {
       "name": "crushed tomatoes",
@@ -157,10 +157,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 325,
-    "protein": 19,
+    "calories": 301,
+    "protein": 16,
     "carbs": 40,
-    "fats": 11,
+    "fats": 10,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -247,7 +247,7 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:29:45.659Z"
   },
   "avoidTags": [
     "onions",

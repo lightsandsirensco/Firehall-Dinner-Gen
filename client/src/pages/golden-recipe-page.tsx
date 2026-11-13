@@ -47,7 +47,6 @@ import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildRecipePageSeo } from "@shared/seo/metadata";
 
 import {
-  approvalScoreToRatingValue,
   buildBreadcrumbListSchema,
   buildOrganizationSchema,
   buildRecipeSchema,
@@ -55,12 +54,8 @@ import {
   type BreadcrumbItem,
 } from "@shared/seo/schema";
 import { buildRecipeAuthorityLinks } from "@shared/seo/recipe-authority-links";
-import { CREW_RATING_MIN_VOTES_TO_SHOW_COUNT } from "@shared/recipe-crew-ratings/constants";
-import { crewRatingQueryKey, fetchRecipeCrewRating } from "@/lib/recipe-crew-ratings-api";
-
 import type { GoldenRecipePage } from "@shared/golden-100/recipe-page-schema";
 import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
-import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { DietaryBadges } from "@/components/trust/dietary-badges";
 import { CrewSizePicker } from "@/components/crew-size-picker";
@@ -452,34 +447,17 @@ export default function GoldenRecipePageView() {
 
   );
 
-  const { data: ratingView } = useQuery({
-    queryKey: crewRatingQueryKey(slug || ""),
-    queryFn: () => fetchRecipeCrewRating(slug!),
-    enabled: Boolean(slug),
-    staleTime: 60_000,
-  });
-
   const seoJsonLd = useMemo(() => {
 
     if (!page) return undefined;
 
-    const aggregate =
-      ratingView &&
-      ratingView.approvalScore != null &&
-      ratingView.totalVotes >= CREW_RATING_MIN_VOTES_TO_SHOW_COUNT
-        ? {
-            ratingValue: approvalScoreToRatingValue(ratingView.approvalScore),
-            ratingCount: ratingView.totalVotes,
-          }
-        : undefined;
-
     return [
       buildOrganizationSchema(origin),
       buildWebSiteSchema(origin),
-      buildRecipeSchema(origin, page, aggregate ? { aggregateRating: aggregate } : undefined),
+      buildRecipeSchema(origin, page),
       buildBreadcrumbListSchema(origin, breadcrumbs),
     ];
-  }, [page, origin, breadcrumbs, ratingView]);
+  }, [page, origin, breadcrumbs]);
 
 
 
@@ -825,8 +803,6 @@ export default function GoldenRecipePageView() {
 
             <p className={cn(app.lead, "max-w-2xl")}>{leadParagraph}</p>
 
-            <RecipeCrewRatingPanel slug={page.slug} category={page.category} className="max-w-2xl" />
-
             {whyCrewsLikeIt && (
               <p className="text-[15px] text-muted-foreground max-w-2xl leading-relaxed">
                 <span className="text-foreground font-medium">Why crews like it: </span>
@@ -1010,6 +986,7 @@ export default function GoldenRecipePageView() {
               protein={page.nutrition.protein}
               carbs={page.nutrition.carbs}
               fat={page.nutrition.fats}
+              source={page.nutrition.source}
               estimateAvailable={
                 page.nutrition.estimateAvailable !== false &&
                 page.nutrition.source !== "unavailable"

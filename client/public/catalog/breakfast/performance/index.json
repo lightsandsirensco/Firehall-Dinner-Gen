@@ -1,7 +1,7 @@
 {
   "version": 1,
   "generatedAt": "2026-09-26T19:26:57.127Z",
-  "recipeCount": 5,
+  "recipeCount": 4,
   "collection": "performance",
   "recipes": [
     {
@@ -217,65 +217,6 @@
         "protein": 24,
         "carbs": 43,
         "fat": 18,
-        "numericFilterEligible": true
-      }
-    },
-    {
-      "slug": "protein-pancake-tray",
-      "title": "Protein Pancake Tray",
-      "subtitle": "Protein-forward pancakes for training-day mornings.",
-      "description": "Pancakes boosted with Greek yogurt or protein powder, griddled in batches and held warm. For crews who want muscle fuel without skipping breakfast.",
-      "filters": [
-        "feed_a_crew",
-        "high_protein"
-      ],
-      "tags": [
-        "pancakes",
-        "tray-bake",
-        "make-ahead"
-      ],
-      "totalTime": 37,
-      "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
-      "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
-      "publishedAt": "2026-09-26T19:26:57.127Z",
-      "collectionTier": "performance",
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pancake/baking mix."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
-          }
-        ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "calories": 412,
-        "protein": 13,
-        "carbs": 62,
-        "fat": 13,
         "numericFilterEligible": true
       }
     }

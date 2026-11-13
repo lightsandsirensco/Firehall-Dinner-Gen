@@ -31,6 +31,7 @@ import {
   type NutritionCatalogId,
 } from "../shared/nutrition/integrity-audit.js";
 import { isEligibleForNumericNutritionFilter } from "../shared/nutrition/filter-eligibility.js";
+import { HIGH_PROTEIN_MIN_G } from "../shared/nutrition/profile-goals.js";
 import { catalogIngredientsFromUnknown, defaultRecipeServings } from "../shared/nutrition/servings.js";
 import { getRecipeBaseServings } from "../shared/recipe/crew-scaling-config.js";
 
@@ -128,19 +129,22 @@ function loadPages(
           estimateAvailable,
         },
       });
-      const numericFilterEligible = estimateAvailable && isEligibleForNumericNutritionFilter(auditResult);
+      // Hand-written "estimated" macros never back a filter or badge, even when
+      // they happen to sit within the audit's drift tolerance.
+      const calculated = estimateAvailable && json.nutrition?.source === "calculated";
+      const numericFilterEligible = calculated && isEligibleForNumericNutritionFilter(auditResult);
 
       out.push({
         collection,
         slug: json.slug,
         nutritionSummary: {
-          highProtein: estimateAvailable ? Boolean(ff?.highProtein) : false,
-          lowCarb: estimateAvailable ? Boolean(ff?.lowCarb) : false,
+          highProtein: numericFilterEligible && protein >= HIGH_PROTEIN_MIN_G,
+          lowCarb: numericFilterEligible ? Boolean(ff?.lowCarb) : false,
           // "Healthy" = an explicit, nutrition-threshold scoring rule (calories <= 550
           // AND fat <= 20g per serving, i.e. shared/nutrition/calculate.ts's
           // `lighterOption`), OR the dedicated performance-meal macros (>=30g protein,
           // <=650 cal, <=25g fat) — never a subjective "healthy" tag/keyword match.
-          healthy: estimateAvailable ? Boolean(bc?.lighterOption || bc?.performanceMeal) : false,
+          healthy: numericFilterEligible ? Boolean(bc?.lighterOption || bc?.performanceMeal) : false,
           estimateAvailable,
           ...(numericFilterEligible ? { calories, protein, carbs, fat } : {}),
           numericFilterEligible,
@@ -171,8 +175,10 @@ let indexesUpdated = 0;
 function patchIndex(indexPath: string, collectionId: string): void {
   if (!fs.existsSync(indexPath)) return;
   let index: any;
+  let raw = "";
   try {
-    index = JSON.parse(fs.readFileSync(indexPath, "utf8"));
+    raw = fs.readFileSync(indexPath, "utf8");
+    index = JSON.parse(raw);
   } catch {
     console.warn(`[nutrition-index] Could not parse ${indexPath}, skipping.`);
     return;
@@ -187,8 +193,10 @@ function patchIndex(indexPath: string, collectionId: string): void {
     touched++;
   }
 
-  if (!DRY_RUN) {
-    fs.writeFileSync(indexPath, JSON.stringify(index, null, 2) + "\n", "utf8");
+  const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+  const next = (JSON.stringify(index, null, 2) + "\n").replace(/\n/g, eol);
+  if (!DRY_RUN && next !== raw) {
+    fs.writeFileSync(indexPath, next, "utf8");
   }
   indexesUpdated++;
   console.log(`[nutrition-index] ${collectionId}: tagged ${touched}/${index.recipes.length} index entries.`);

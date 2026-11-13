@@ -74,6 +74,19 @@ function deriveNumericNutritionFields(
   };
 }
 
+/**
+ * High Protein is a claim users filter and pay for, so it requires verified
+ * per-serving protein (>=35g, nutrition passing the integrity audit). No
+ * tag/category fallback: unverified recipes are simply not labeled.
+ */
+function isVerifiedHighProtein(nutrition: GoldenCatalogIndexEntry["nutritionSummary"] | undefined): boolean {
+  return nutrition?.numericFilterEligible === true && nutrition.highProtein === true;
+}
+
+function withoutUnverifiedHighProtein(badges: ApprovedCatalogEntry["traitBadges"], isHighProtein: boolean) {
+  return isHighProtein ? badges : badges.filter((badge) => badge !== "High Protein");
+}
+
 function deriveMealFlags(
   entry: GoldenCatalogIndexEntry,
   isClassic: boolean,
@@ -83,20 +96,14 @@ function deriveMealFlags(
 > {
   const cat = entry.category;
   const tagHay = entry.tags.join(" ").toLowerCase();
-  const isPerformance = isPerformance50Slug(entry.slug);
   const nutrition = entry.nutritionSummary;
 
-  // "Healthy" and "High protein" are nutrition-threshold scoring rules (see
+  // "Healthy" is a nutrition-threshold scoring rule (see
   // shared/nutrition/calculate.ts) computed from the recipe's actual per-serving
-  // macros whenever an estimate is available — never a subjective tag/keyword
-  // match. The category/performance-slug checks remain as an editorial fallback
-  // ONLY for the rare recipe where no nutrition estimate could be computed at all
-  // (nutrition.estimateAvailable === false), so those recipes aren't silently
-  // dropped from every nutrition-based filter.
+  // macros — never a tag, keyword or category match. Recipes without a
+  // calculated estimate are not labeled (same rule as isVerifiedHighProtein).
   const hasNutritionData = nutrition?.estimateAvailable === true;
-  const isHealthy = hasNutritionData
-    ? nutrition!.healthy
-    : cat === "healthy_performance" || isPerformance;
+  const isHealthy = hasNutritionData ? nutrition!.healthy : false;
 
   // "barbecue" was previously never matched (only "bbq"/"grill"/"smoker"),
   // so a recipe tagged solely "barbecue" silently missed the BBQ & Grill
@@ -108,9 +115,7 @@ function deriveMealFlags(
     tagHay.includes("grill") ||
     tagHay.includes("smoker");
 
-  const isHighProtein = hasNutritionData
-    ? nutrition!.highProtein
-    : isPerformance || cat === "healthy_performance";
+  const isHighProtein = isVerifiedHighProtein(nutrition);
 
   const isLowCarb = hasNutritionData ? nutrition!.lowCarb : false;
 
@@ -138,13 +143,16 @@ function mealEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEnt
   const isClassic = isHallClassicSlug(slug);
   const kind = resolveApprovedCatalogKind(slug);
   const catalogBadge = resolvePrimaryCatalogBadge(slug);
-  const traitBadges = resolveCatalogTraitBadges(slug, {
-    firehallCategory: entry.category,
-    nutritionProfile: isPerformance50Slug(slug) ? "high_protein" : undefined,
-    sourceKind: isClassic ? "hall_classic" : undefined,
-  }).filter((badge) => badge !== catalogBadge);
-  const images = resolveExistingSlugImage(slug, kind);
   const flags = deriveMealFlags(entry, isClassic);
+  const traitBadges = withoutUnverifiedHighProtein(
+    resolveCatalogTraitBadges(slug, {
+      firehallCategory: entry.category,
+      nutritionProfile: isPerformance50Slug(slug) ? "high_protein" : undefined,
+      sourceKind: isClassic ? "hall_classic" : undefined,
+    }).filter((badge) => badge !== catalogBadge),
+    flags.isHighProtein,
+  );
+  const images = resolveExistingSlugImage(slug, kind);
 
   return {
     slug,
@@ -184,11 +192,10 @@ function smoothieEntryToApproved(item: (typeof SMOOTHIE_CATALOG_ITEMS)[number]):
   const kind = "smoothie" as const;
   const images = resolveExistingSlugImage(slug, kind);
   const taxonomy = item.taxonomyCategory;
-  const isHighProtein =
-    taxonomy === "protein_smoothie" || taxonomy === "recovery_smoothie";
-  const catalogBadge: ApprovedCatalogEntry["catalogBadge"] = isHighProtein
-    ? "High Protein"
-    : "Quick Shift Meal";
+  const isProteinBlend = taxonomy === "protein_smoothie" || taxonomy === "recovery_smoothie";
+  // Smoothie macros aren't verified, so none is labeled High Protein or Healthy.
+  const isHighProtein = false;
+  const catalogBadge: ApprovedCatalogEntry["catalogBadge"] = "Quick Shift Meal";
   const dietaryResult = classifyRecipeDietary(item.ingredients);
   const dietarySummary: DietarySummary = {
     confidence: dietaryResult.confidence,
@@ -203,7 +210,7 @@ function smoothieEntryToApproved(item: (typeof SMOOTHIE_CATALOG_ITEMS)[number]):
     category: "smoothies",
     categoryLabel: "Smoothie",
     cuisine: "American",
-    protein: isHighProtein ? "Protein blend" : "Blend",
+    protein: isProteinBlend ? "Protein blend" : "Blend",
     mealFormat: "smoothie",
     cookTime: SMOOTHIE_COOK_MINUTES,
     cookTimeBucket: "under_30",
@@ -218,9 +225,9 @@ function smoothieEntryToApproved(item: (typeof SMOOTHIE_CATALOG_ITEMS)[number]):
       item.intro,
     ]),
     catalogBadge,
-    traitBadges: isHighProtein ? ["High Protein"] : [],
+    traitBadges: [],
     isSmoothie: true,
-    isHealthy: true,
+    isHealthy: false,
     isBbqGrill: false,
     isHighProtein,
     isLowCarb: false,
@@ -244,19 +251,20 @@ function breakfastEntryToApproved(entry: BreakfastIndexEntry): ApprovedCatalogEn
   const slug = entry.slug.trim().toLowerCase();
   const kind = resolveApprovedCatalogKind(slug);
   const catalogBadge = resolvePrimaryCatalogBadge(slug);
-  const traitBadges = resolveCatalogTraitBadges(slug, {
-    firehallCategory: "breakfast_brunch",
-    explorePool: entry.filters.join(" "),
-  }).filter((badge) => badge !== catalogBadge);
+  const nutrition = entry.nutritionSummary;
+  const isHighProtein = isVerifiedHighProtein(nutrition);
+  const traitBadges = withoutUnverifiedHighProtein(
+    resolveCatalogTraitBadges(slug, {
+      firehallCategory: "breakfast_brunch",
+      explorePool: entry.filters.join(" "),
+    }).filter((badge) => badge !== catalogBadge),
+    isHighProtein,
+  );
   const images = resolveExistingSlugImage(slug, kind);
   const tagHay = entry.tags.join(" ").toLowerCase();
-  const nutrition = entry.nutritionSummary;
   const hasNutritionData = nutrition?.estimateAvailable === true;
-  const isHighProtein = hasNutritionData
-    ? nutrition!.highProtein
-    : entry.filters.includes("high_protein") || tagHay.includes("protein") || tagHay.includes("high-protein");
   const isLowCarb = hasNutritionData ? nutrition!.lowCarb : false;
-  const isHealthy = hasNutritionData ? nutrition!.healthy : entry.filters.includes("healthy_breakfasts");
+  const isHealthy = hasNutritionData ? nutrition!.healthy : false;
 
   return {
     slug,
@@ -302,19 +310,20 @@ function bbqEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEntr
   const slug = entry.slug.trim().toLowerCase();
   const kind = resolveApprovedCatalogKind(slug);
   const catalogBadge = resolvePrimaryCatalogBadge(slug);
-  const traitBadges = resolveCatalogTraitBadges(slug, {
-    firehallCategory: "bbq_grill_nights",
-    explorePool: "bbq",
-  }).filter((badge) => badge !== catalogBadge);
+  const nutrition = entry.nutritionSummary;
+  const isHighProtein = isVerifiedHighProtein(nutrition);
+  const traitBadges = withoutUnverifiedHighProtein(
+    resolveCatalogTraitBadges(slug, {
+      firehallCategory: "bbq_grill_nights",
+      explorePool: "bbq",
+    }).filter((badge) => badge !== catalogBadge),
+    isHighProtein,
+  );
   const images = resolveExistingSlugImage(slug, kind);
   const tagHay = entry.tags.join(" ").toLowerCase();
-  const nutrition = entry.nutritionSummary;
   const hasNutritionData = nutrition?.estimateAvailable === true;
-  const isHighProtein = hasNutritionData
-    ? nutrition!.highProtein
-    : tagHay.includes("high_protein") || tagHay.includes("high protein");
   const isLowCarb = hasNutritionData ? nutrition!.lowCarb : false;
-  const isHealthy = hasNutritionData ? nutrition!.healthy : tagHay.includes("healthy");
+  const isHealthy = hasNutritionData ? nutrition!.healthy : false;
 
   return {
     slug,

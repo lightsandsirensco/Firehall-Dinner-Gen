@@ -67,9 +67,14 @@
     },
     {
       "name": "hot sauce",
-      "quantity": "1",
+      "quantity": "1 bottle",
       "group": "Build",
       "optional": true
+    },
+    {
+      "name": "butter",
+      "quantity": "2 tbsp",
+      "group": "Eggs"
     }
   ],
   "steps": [
@@ -82,7 +87,7 @@
     {
       "stepNumber": 2,
       "title": "Brown the meat + veg",
-      "instruction": "In the same pan, brown sausage/chorizo. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy.",
+      "instruction": "In the same pan, brown sausage/chorizo, breaking it into crumbles, until it reads 160°F (71°C) on an instant-read thermometer. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy.",
       "minutes": 10
     },
     {
@@ -105,11 +110,11 @@
     }
   ],
   "nutrition": {
-    "calories": 852,
+    "calories": 872,
     "protein": 41,
     "carbs": 71,
-    "fat": 45,
-    "label": "per serving (hall portion)",
+    "fat": 47,
+    "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -149,8 +154,8 @@
   "collectionTier": "firehall_classic",
   "dietary": {
     "confidence": "high",
-    "matchedCount": 9,
-    "totalCount": 9,
+    "matchedCount": 10,
+    "totalCount": 10,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -176,6 +181,12 @@
         "allergens": [
           "gluten"
         ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
       }
     ],
     "flags": {
@@ -200,7 +211,7 @@
       {
         "flag": "dairy",
         "label": "Dairy-Free Adaptable",
-        "note": "Use a dairy-free cheese shred/block alternative."
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
       },
       {
         "flag": "pork",
@@ -208,6 +219,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:07:12.987Z"
   }
 }

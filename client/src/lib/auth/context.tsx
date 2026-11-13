@@ -18,6 +18,7 @@ import { authCapabilities } from "@shared/auth/types";
 import type { UserBillingState } from "@shared/billing/types";
 import { GUEST_BILLING } from "@/lib/billing/constants";
 import { fetchAuthConfig, fetchAuthMe, type AuthConfig, type AuthMePayload } from "./api";
+import { SIGNED_OUT_FLAG, clearLocalAccountData, flushPendingSync } from "@/lib/sync/clear-local-account";
 import { primePersonalOnboardingAfterSignIn } from "@/lib/onboarding/state";
 import { trackPersonalOnboardingStarted } from "@/lib/analytics";
 import {
@@ -133,13 +134,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [queryClient]);
 
   const logout = useCallback(async () => {
+    await flushPendingSync();
     await apiRequest("POST", "/api/auth/logout");
     posthogReset();
     clearAuthReturnTo();
     setAuthReturnTo(null);
-    await queryClient.invalidateQueries({ queryKey: ["/api/auth/me"] });
-    toast({ title: "Signed out", description: "See you next shift." });
+    clearLocalAccountData();
+    queryClient.clear();
+    try {
+      sessionStorage.setItem(SIGNED_OUT_FLAG, "1");
+    } catch {
+      /* ignore */
+    }
+    // Full reload resets every in-memory store that cached the previous account.
+    window.location.replace("/");
   }, [queryClient]);
+
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem(SIGNED_OUT_FLAG)) {
+        sessionStorage.removeItem(SIGNED_OUT_FLAG);
+        toast({ title: "Signed out", description: "See you next shift." });
+      }
+    } catch {
+      /* ignore */
+    }
+  }, []);
 
   const value = useMemo<AuthContextValue>(
     () => ({

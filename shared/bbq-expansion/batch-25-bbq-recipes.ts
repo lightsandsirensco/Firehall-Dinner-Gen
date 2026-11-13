@@ -984,7 +984,7 @@ const NEW_BATCH_25_RECIPES: BbqRecipe[] = [
       slug: "smoked-baked-beans-crew",
       title: "Smoked Baked Beans for the Crew",
       subtitle: "Molasses-brown sugar beans with burnt-end depth for ten",
-      protein: "vegetarian",
+      protein: "pork",
       cuisine: "American",
       mealFormat: "side",
       pools: ["bbq", "comfort", "big_crew"],

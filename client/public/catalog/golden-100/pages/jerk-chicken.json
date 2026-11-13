@@ -13,10 +13,10 @@
   "cookTime": 110,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 1087,
-  "protein": 111,
-  "carbs": 125,
-  "fats": 15,
+  "calories": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fats": 0,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -130,6 +130,24 @@
       "name": "Coleslaw Mix",
       "quantity": "2",
       "unit": "Lb",
+      "group": "Sides"
+    },
+    {
+      "name": "Neutral Oil",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "Limes",
+      "quantity": "3",
+      "unit": "count",
+      "group": "Sides"
+    },
+    {
+      "name": "Hot Sauce",
+      "quantity": "1",
+      "unit": "bottle",
       "group": "Sides"
     }
   ],
@@ -248,15 +266,15 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1087,
-    "protein": 111,
-    "carbs": 125,
-    "fats": 15,
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0,
     "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
+    "source": "unavailable",
+    "estimateAvailable": false,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
@@ -264,7 +282,7 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -301,8 +319,8 @@
   "contentVersion": 5,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 16,
-    "totalCount": 16,
+    "matchedCount": 19,
+    "totalCount": 19,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -344,7 +362,7 @@
         "note": "Use coconut aminos."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T17:07:12.987Z"
   },
   "avoidTags": [
     "jalapenos",

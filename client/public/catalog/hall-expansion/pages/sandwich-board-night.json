@@ -38,7 +38,7 @@
   ],
   "ingredients": [
     {
-      "name": "sliced turkey breast",
+      "name": "deli-sliced roast turkey breast",
       "quantity": "1.6",
       "unit": "lb",
       "group": "Meat"
@@ -134,7 +134,7 @@
     {
       "stepNumber": 5,
       "title": "Open the sandwich board",
-      "instruction": "Call crew to build sandwiches assembly-line style. Offer to press built subs on a griddle for crews wanting melted cheese without extra cook time.",
+      "instruction": "Call crew to build sandwiches assembly-line style. Return meats and cheeses to the fridge within 2 hours. Offer to press built subs on a griddle for crews wanting melted cheese without extra cook time.",
       "minutes": 10,
       "heatLevel": ""
     }

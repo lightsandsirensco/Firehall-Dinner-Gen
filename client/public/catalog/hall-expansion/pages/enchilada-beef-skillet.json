@@ -107,7 +107,7 @@
     {
       "stepNumber": 1,
       "title": "Brown the beef",
-      "instruction": "Cook ground beef with onion over medium-high heat 8–10 minutes, breaking into crumbles until browned. Drain excess fat. Stir in garlic, chili powder, and cumin 1 minute.",
+      "instruction": "Cook ground beef with onion over medium-high heat 8–10 minutes, breaking into crumbles, until browned with no pink remaining (160°F / 71°C). Drain excess fat. Stir in garlic, chili powder, and cumin 1 minute.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -128,7 +128,7 @@
     {
       "stepNumber": 4,
       "title": "Bake with cheese",
-      "instruction": "Top with cheddar and bake uncovered at 375°F until cheese melts and bubbles at edges, about 15 minutes. Target oven/smoker temperature: 375°F.",
+      "instruction": "Top with cheddar and bake the oven-safe skillet uncovered at 375°F until cheese melts and bubbles at edges, about 15 minutes. Target oven/smoker temperature: 375°F.",
       "minutes": 15,
       "heatLevel": ""
     },

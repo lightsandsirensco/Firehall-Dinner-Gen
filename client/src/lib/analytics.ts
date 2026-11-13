@@ -413,6 +413,7 @@ type ShiftPlanEvent =
   | "shift_plan_autofilled"
   | "shift_meal_selected"
   | "shift_meal_swapped"
+  | "meal_not_for_us"
   | "shift_meal_skipped"
   | "shift_plan_completed"
   | "shift_list_generated"

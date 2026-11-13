@@ -1,7 +1,7 @@
 {
   "version": 1,
   "generatedAt": "2026-09-26T19:26:57.127Z",
-  "recipeCount": 74,
+  "recipeCount": 72,
   "collection": "primary",
   "recipes": [
     {
@@ -166,7 +166,11 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "numericFilterEligible": false
+        "calories": 575,
+        "protein": 18,
+        "carbs": 95,
+        "fat": 16,
+        "numericFilterEligible": true
       }
     },
     {
@@ -389,12 +393,12 @@
       "nutritionSummary": {
         "highProtein": false,
         "lowCarb": false,
-        "healthy": true,
+        "healthy": false,
         "estimateAvailable": true,
-        "calories": 473,
-        "protein": 11,
-        "carbs": 71,
-        "fat": 17,
+        "calories": 769,
+        "protein": 18,
+        "carbs": 114,
+        "fat": 28,
         "numericFilterEligible": true
       }
     },
@@ -451,10 +455,10 @@
         "lowCarb": false,
         "healthy": true,
         "estimateAvailable": true,
-        "calories": 454,
+        "calories": 471,
         "protein": 28,
         "carbs": 56,
-        "fat": 13,
+        "fat": 15,
         "numericFilterEligible": true
       }
     },
@@ -814,71 +818,6 @@
       }
     },
     {
-      "slug": "breakfast-sandwich-trays",
-      "title": "Breakfast Sandwich Trays",
-      "subtitle": "English muffins, sausage, eggs, and cheese for ten.",
-      "description": "English muffins toasted, sausage cooked, eggs scrambled — assemble a full tray of breakfast sandwiches so ten people eat at once without waiting on one griddle.",
-      "filters": [
-        "feed_a_crew",
-        "breakfast_sandwiches"
-      ],
-      "tags": [
-        "sandwiches",
-        "tray",
-        "eggs",
-        "cheddar"
-      ],
-      "totalTime": 33,
-      "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
-      "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
-      "publishedAt": "2026-09-26T19:26:57.127Z",
-      "collectionTier": "firehall_classic",
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": false,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
-          },
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
-          }
-        ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 563,
-        "protein": 30,
-        "carbs": 26,
-        "fat": 38,
-        "numericFilterEligible": true
-      }
-    },
-    {
       "slug": "breakfast-sliders",
       "title": "Breakfast Sliders",
       "subtitle": "Mini sandwiches with sausage, egg, and maple glaze baked on one tray.",
@@ -1118,10 +1057,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 658,
+        "calories": 715,
         "protein": 36,
         "carbs": 50,
-        "fat": 35,
+        "fat": 42,
         "numericFilterEligible": true
       }
     },
@@ -1938,10 +1877,10 @@
         "lowCarb": true,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 360,
-        "protein": 28,
+        "calories": 403,
+        "protein": 32,
         "carbs": 5,
-        "fat": 26,
+        "fat": 29,
         "numericFilterEligible": true
       }
     },
@@ -1968,32 +1907,21 @@
       "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
-        "confidence": "high",
+        "confidence": "low",
         "flags": {
           "glutenFree": false,
           "dairyFree": false,
           "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
+          "nutFree": false,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": false,
           "porkFree": false,
           "vegetarian": false,
           "vegan": false
         },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pizza crust. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
-          },
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
-          }
-        ]
+        "adaptable": []
       },
       "nutritionSummary": {
         "highProtein": true,
@@ -2211,7 +2139,7 @@
           {
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
           },
           {
             "flag": "pork",
@@ -2225,10 +2153,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 852,
+        "calories": 872,
         "protein": 41,
         "carbs": 71,
-        "fat": 45,
+        "fat": 47,
         "numericFilterEligible": true
       }
     },
@@ -2591,7 +2519,7 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
@@ -2706,7 +2634,7 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
@@ -3532,7 +3460,11 @@
         "lowCarb": false,
         "healthy": true,
         "estimateAvailable": true,
-        "numericFilterEligible": false
+        "calories": 420,
+        "protein": 25,
+        "carbs": 46,
+        "fat": 17,
+        "numericFilterEligible": true
       }
     },
     {
@@ -3679,32 +3611,21 @@
       "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
-        "confidence": "high",
+        "confidence": "low",
         "flags": {
           "glutenFree": false,
           "dairyFree": false,
           "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
+          "nutFree": false,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": false,
           "porkFree": false,
           "vegetarian": false,
           "vegan": false
         },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a plant-based butter/margarine."
-          }
-        ]
+        "adaptable": []
       },
       "nutritionSummary": {
         "highProtein": true,
@@ -4318,71 +4239,6 @@
         "protein": 43,
         "carbs": 5,
         "fat": 19,
-        "numericFilterEligible": true
-      }
-    },
-    {
-      "slug": "veggie-egg-burritos",
-      "title": "Veggie Egg Burritos",
-      "subtitle": "Peppers, spinach, and eggs wrapped for the vegetarian on shift.",
-      "description": "Peppers, spinach, and scrambled eggs in flour tortillas — vegetarian option that still feeds the line with real flavor and hot sauce.",
-      "filters": [
-        "healthy_breakfasts",
-        "feed_a_crew"
-      ],
-      "tags": [
-        "burritos",
-        "vegetarian",
-        "peppers",
-        "spinach"
-      ],
-      "totalTime": 34,
-      "heroImage": "/images/breakfast/veggie-egg-burritos.jpg",
-      "thumbImage": "/images/thumbs/breakfast/veggie-egg-burritos.jpg",
-      "publishedAt": "2026-09-26T19:26:57.127Z",
-      "collectionTier": "healthier_hall",
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": false,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use certified gluten-free tortillas or corn tortillas."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          },
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
-          }
-        ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 874,
-        "protein": 42,
-        "carbs": 76,
-        "fat": 44,
         "numericFilterEligible": true
       }
     }

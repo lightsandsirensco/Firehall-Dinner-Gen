@@ -1,19 +1,17 @@
 {
-  "generatedAt": "2026-10-11T14:16:14.080Z",
+  "generatedAt": "2026-11-13T01:14:45.782Z",
   "mode": "audit",
   "summary": {
     "total": 462,
-    "pass": 294,
-    "fail": 155,
-    "withheld": 13,
-    "accuracyPct": 65.5,
+    "pass": 299,
+    "fail": 143,
+    "withheld": 20,
+    "accuracyPct": 67.6,
     "suspiciousCalories": [
       "baked-ziti",
       "batch-lasagna",
       "bbq-brisket-burnt-ends",
-      "bbq-chicken-mac-and-cheese",
       "bbq-chicken-pizza",
-      "beef-dip",
       "beef-stroganoff",
       "big-chili",
       "breakfast-burrito-bar",
@@ -31,11 +29,8 @@
       "french-toast-casserole",
       "game-day-nachos",
       "honey-soppressata-pizza",
-      "jerk-chicken",
-      "loaded-baked-potato-bar",
       "loaded-nacho-skillet",
       "loaded-potato-feed",
-      "mac-and-cheese-bake",
       "margherita-pizza",
       "meat-lovers-sheet-pizza",
       "meatball-hoagies",
@@ -46,7 +41,6 @@
       "pepperoni-pizza-night",
       "philly-cheesesteak-skillet",
       "philly-egg-rolls",
-      "pulled-pork",
       "red-beans-and-rice-for-the-hall",
       "sausage-egg-bake",
       "sausage-peppers-onions",
@@ -58,7 +52,6 @@
       "smash-burgers",
       "spaghetti-aglio-e-olio-for-the-hall",
       "steak-sandwiches",
-      "steak-tacos",
       "tomato-soup-grilled-cheese-croutons",
       "white-garlic-chicken-pizza",
       "herb-marinated-flank-steak-chimichurri-farro",
@@ -73,7 +66,6 @@
       "irish-breakfast-fry-up",
       "lumberjack-breakfast-platter",
       "sheet-pan-full-english",
-      "andouille-po-boy-rolls-crew",
       "brisket-style-beef-sandwiches-au-jus",
       "caprese-steak-skewers-crew",
       "cast-iron-steak-fajita-sizzlers",
@@ -105,7 +97,6 @@
     "suspiciousProtein": [
       "baked-ziti",
       "bbq-brisket-burnt-ends",
-      "bbq-chicken-mac-and-cheese",
       "beef-stroganoff",
       "beer-can-chicken",
       "breakfast-burrito-bar",
@@ -114,7 +105,6 @@
       "chicken-tortilla-soup-for-the-hall",
       "four-step-chicken-piccata",
       "grilled-corn-cotija",
-      "jerk-chicken",
       "meatloaf-mashed",
       "mediterranean-chickpea",
       "memphis-dry-rub-ribs",
@@ -143,7 +133,6 @@
       "apple-cinnamon-baked-oatmeal",
       "belgian-waffle-platter",
       "big-pot-savory-oats",
-      "biscuit-french-toast-sliders",
       "chicken-and-waffles-crew",
       "irish-breakfast-fry-up",
       "johnnycakes-with-syrup",
@@ -188,18 +177,15 @@
       "batch-lasagna",
       "breakfast-sausage-pizza",
       "chicken-alfredo-bake",
-      "loaded-baked-potato-bar",
       "meat-lovers-sheet-pizza",
       "memphis-dry-rub-ribs",
       "parm-hero-subs",
       "slider-bar",
       "smash-burgers",
-      "steak-tacos",
+      "buffalo-chicken-sweet-potato-bowls",
       "bun-bo-hue-noodle-soup",
       "cheesy-beef-nacho-bake",
-      "chicken-shawarma-pitas",
       "chipotle-chicken-burrito-bowls",
-      "costco-rotisserie-remix",
       "cottage-pie-for-the-crew",
       "enchilada-beef-skillet",
       "firehall-korean-beef-bowls",
@@ -211,27 +197,21 @@
       "leftover-roast-beef-bowls",
       "loaded-nacho-bar-night",
       "mediterranean-chicken-farro-bowls",
-      "peanut-chicken-rice-bowls",
       "rigatoni-meat-sauce-batch",
-      "shawarma-bar-night",
       "smoked-meatloaf",
       "southwest-steak-bowls",
       "spanish-rice-chicken-one-pot",
       "station-cobb-salad",
       "tourtiere-for-the-crew",
       "wonton-noodle-soup-crew",
-      "baked-oatmeal-mixed-berries",
       "irish-breakfast-fry-up",
-      "lumberjack-breakfast-platter",
-      "shakshuka-for-the-hall"
+      "lumberjack-breakfast-platter"
     ],
     "needsRecalculation": [
       "baked-ziti",
       "batch-lasagna",
       "bbq-brisket-burnt-ends",
-      "bbq-chicken-mac-and-cheese",
       "bbq-chicken-pizza",
-      "beef-dip",
       "beef-stroganoff",
       "big-chili",
       "breakfast-burrito-bar",
@@ -249,11 +229,8 @@
       "french-toast-casserole",
       "game-day-nachos",
       "honey-soppressata-pizza",
-      "jerk-chicken",
-      "loaded-baked-potato-bar",
       "loaded-nacho-skillet",
       "loaded-potato-feed",
-      "mac-and-cheese-bake",
       "margherita-pizza",
       "meat-lovers-sheet-pizza",
       "meatball-hoagies",
@@ -264,7 +241,6 @@
       "pepperoni-pizza-night",
       "philly-cheesesteak-skillet",
       "philly-egg-rolls",
-      "pulled-pork",
       "red-beans-and-rice-for-the-hall",
       "sausage-egg-bake",
       "sausage-peppers-onions",
@@ -276,24 +252,23 @@
       "smash-burgers",
       "spaghetti-aglio-e-olio-for-the-hall",
       "steak-sandwiches",
-      "steak-tacos",
       "tomato-soup-grilled-cheese-croutons",
       "white-garlic-chicken-pizza",
       "best-tuna-melt-for-the-hall",
+      "buffalo-chicken-sweet-potato-bowls",
       "bun-bo-hue-noodle-soup",
       "burrito-bowl-bar-night",
       "cheesy-beef-nacho-bake",
       "chicken-cacciatore-crew",
       "chicken-paprikash-hall",
-      "chicken-shawarma-pitas",
       "chicken-thigh-stretch-dinner",
       "chicken-wing-bar-night",
       "chipotle-chicken-burrito-bowls",
       "classic-patty-melt-for-the-crew",
       "coq-au-vin-batch",
-      "costco-rotisserie-remix",
       "cottage-pie-for-the-crew",
       "enchilada-beef-skillet",
+      "firehall-charcuterie-board",
       "firehall-korean-beef-bowls",
       "hall-blt-sandwich-feed",
       "hall-burger-bar",
@@ -316,7 +291,6 @@
       "molasses-bourbon-pork-ribs",
       "paprika-roasted-chicken-quarters",
       "pasta-e-fagioli-hall",
-      "peanut-chicken-rice-bowls",
       "peri-peri-chicken-platter",
       "pork-belly-burnt-ends",
       "rigatoni-meat-sauce-batch",
@@ -324,7 +298,6 @@
       "sandwich-board-night",
       "sausage-gnocchi-skillet",
       "sausage-peppers-on-buns",
-      "shawarma-bar-night",
       "sheet-pan-meatball-marinara",
       "smoked-corned-beef",
       "smoked-meatloaf",
@@ -343,7 +316,6 @@
       "mediterranean-beef-kofta-bowls",
       "one-pot-beef-orzo-skillet-spinach-feta",
       "bagel-sandwich-line",
-      "baked-oatmeal-mixed-berries",
       "breakfast-fried-rice-crew",
       "chicken-and-waffles-crew",
       "country-fried-steak-eggs",
@@ -351,9 +323,7 @@
       "green-chile-breakfast-burritos",
       "irish-breakfast-fry-up",
       "lumberjack-breakfast-platter",
-      "shakshuka-for-the-hall",
       "sheet-pan-full-english",
-      "andouille-po-boy-rolls-crew",
       "brisket-style-beef-sandwiches-au-jus",
       "caprese-steak-skewers-crew",
       "cast-iron-steak-fajita-sizzlers",
@@ -391,8 +361,8 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "559 cal · 25g P · 80g C · 17g F",
-      "recommended": "559 cal · 25g P · 80g C · 17g F",
+      "stored": "559 cal · 23g P · 83g C · 17g F",
+      "recommended": "559 cal · 23g P · 83g C · 17g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -401,7 +371,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 75
+      "ingredientMatchPct": 77
     },
     {
       "slug": "baked-ziti",
@@ -490,8 +460,8 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "695 cal · 41g P · 89g C · 18g F",
-      "recommended": "695 cal · 41g P · 89g C · 18g F",
+      "stored": "867 cal · 41g P · 89g C · 37g F",
+      "recommended": "867 cal · 41g P · 89g C · 37g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -500,33 +470,29 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 67
+      "ingredientMatchPct": 80
     },
     {
       "slug": "bbq-chicken-mac-and-cheese",
       "title": "BBQ Chicken Mac and Cheese",
       "catalog": "golden_100",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
-      "stored": "1386 cal · 83g P · 106g C · 68g F",
+      "stored": "820 cal · 54g P · 62g C · 30g F",
       "recommended": "820 cal · 54g P · 62g C · 30g F",
       "findings": [
         {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1386) — verify crew portions"
-        },
-        {
           "code": "protein_target_range",
-          "message": "Protein 83g outside Comfort Food target (25–45g)"
+          "message": "Protein 54g outside Comfort Food target (25–45g)"
         }
       ],
-      "suspiciousCalories": true,
-      "suspiciousProtein": true,
+      "suspiciousCalories": false,
+      "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
+      "needsRecalculation": false,
       "ingredientMatchPct": 100
     },
     {
@@ -576,12 +542,12 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "442 cal · 61g P · 28g C · 8g F",
-      "recommended": "442 cal · 61g P · 28g C · 8g F",
+      "stored": "618 cal · 52g P · 28g C · 35g F",
+      "recommended": "618 cal · 52g P · 28g C · 35g F",
       "findings": [
         {
           "code": "protein_target_range",
-          "message": "Protein 61g outside Comfort Food target (25–45g)"
+          "message": "Protein 52g outside Comfort Food target (25–45g)"
         }
       ],
       "suspiciousCalories": false,
@@ -591,7 +557,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 100
+      "ingredientMatchPct": 82
     },
     {
       "slug": "beef-broccoli",
@@ -599,8 +565,8 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "520 cal · 48g P · 12g C · 31g F",
-      "recommended": "520 cal · 48g P · 12g C · 31g F",
+      "stored": "850 cal · 53g P · 71g C · 39g F",
+      "recommended": "850 cal · 53g P · 71g C · 39g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -615,32 +581,18 @@
       "slug": "beef-dip",
       "title": "Beef Dip Sandwiches",
       "catalog": "golden_100",
-      "status": "fail",
+      "status": "withheld",
       "servings": 8,
-      "stored": "1400 cal · 94g P · 97g C · 71g F",
-      "recommended": "1400 cal · 94g P · 97g C · 71g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1400) — verify crew portions"
-        },
-        {
-          "code": "ingredient_protein_drift",
-          "message": "Stored protein 94g vs ingredient estimate 211g"
-        },
-        {
-          "code": "ingredient_calorie_drift",
-          "message": "Stored 1400 cal vs ingredient estimate 3148 cal"
-        }
-      ],
-      "suspiciousCalories": true,
+      "stored": "withheld",
+      "findings": [],
+      "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
-      "ingredientMatchPct": 93
+      "needsRecalculation": false,
+      "ingredientMatchPct": 94
     },
     {
       "slug": "beef-stroganoff",
@@ -676,7 +628,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "501 cal · 88g P · 0g C · 14g F",
-      "recommended": "501 cal · 88g P · 0g C · 14g F",
+      "recommended": "661 cal · 120g P · 0g C · 16g F",
       "findings": [
         {
           "code": "protein_target_range",
@@ -794,7 +746,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "779 cal · 51g P · 63g C · 35g F",
-      "recommended": "779 cal · 51g P · 63g C · 35g F",
+      "recommended": "903 cal · 56g P · 91g C · 35g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -803,7 +755,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 86
+      "ingredientMatchPct": 89
     },
     {
       "slug": "butter-chicken",
@@ -812,7 +764,7 @@
       "status": "fail",
       "servings": 8,
       "stored": "1173 cal · 63g P · 103g C · 56g F",
-      "recommended": "1173 cal · 63g P · 103g C · 56g F",
+      "recommended": "1160 cal · 62g P · 103g C · 55g F",
       "findings": [
         {
           "code": "calories_too_high",
@@ -826,7 +778,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": true,
-      "ingredientMatchPct": 85
+      "ingredientMatchPct": 93
     },
     {
       "slug": "cedar-plank-salmon",
@@ -952,8 +904,8 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "639 cal · 41g P · 32g C · 37g F",
-      "recommended": "639 cal · 41g P · 32g C · 37g F",
+      "stored": "707 cal · 43g P · 38g C · 41g F",
+      "recommended": "707 cal · 43g P · 38g C · 41g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -962,7 +914,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 100
+      "ingredientMatchPct": 91
     },
     {
       "slug": "chicken-quesadillas",
@@ -1211,8 +1163,8 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "694 cal · 22g P · 66g C · 38g F",
-      "recommended": "694 cal · 22g P · 66g C · 38g F",
+      "stored": "799 cal · 26g P · 87g C · 39g F",
+      "recommended": "799 cal · 26g P · 87g C · 39g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -1542,28 +1494,18 @@
       "slug": "jerk-chicken",
       "title": "Jerk Chicken & Rice and Peas",
       "catalog": "golden_100",
-      "status": "fail",
+      "status": "withheld",
       "servings": 8,
-      "stored": "1087 cal · 111g P · 125g C · 15g F",
-      "recommended": "1087 cal · 111g P · 125g C · 15g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1087) — verify crew portions"
-        },
-        {
-          "code": "protein_too_high",
-          "message": "Protein over 95g per serving (111g) — verify portion"
-        }
-      ],
-      "suspiciousCalories": true,
-      "suspiciousProtein": true,
+      "stored": "withheld",
+      "findings": [],
+      "suspiciousCalories": false,
+      "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
-      "ingredientMatchPct": 81
+      "needsRecalculation": false,
+      "ingredientMatchPct": 84
     },
     {
       "slug": "lemon-herb-salmon",
@@ -1587,31 +1529,17 @@
       "slug": "loaded-baked-potato-bar",
       "title": "Baked Potato Bar",
       "catalog": "golden_100",
-      "status": "fail",
+      "status": "withheld",
       "servings": 8,
-      "stored": "1296 cal · 62g P · 60g C · 90g F",
-      "recommended": "1296 cal · 62g P · 60g C · 90g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1296) — verify crew portions"
-        },
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷12 crew better than batch÷8 base servings"
-        },
-        {
-          "code": "protein_target_range",
-          "message": "Protein 62g outside Comfort Food target (25–45g)"
-        }
-      ],
-      "suspiciousCalories": true,
+      "stored": "withheld",
+      "findings": [],
+      "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
-      "needsRecalculation": true,
+      "crewSizeCoupled": false,
+      "needsRecalculation": false,
       "ingredientMatchPct": 100
     },
     {
@@ -1672,27 +1600,17 @@
       "slug": "mac-and-cheese-bake",
       "title": "Baked Mac and Cheese",
       "catalog": "golden_100",
-      "status": "fail",
+      "status": "withheld",
       "servings": 8,
-      "stored": "1381 cal · 61g P · 127g C · 69g F",
-      "recommended": "1381 cal · 61g P · 127g C · 69g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1381) — verify crew portions"
-        },
-        {
-          "code": "protein_target_range",
-          "message": "Protein 61g outside Comfort Food target (25–45g)"
-        }
-      ],
-      "suspiciousCalories": true,
+      "stored": "withheld",
+      "findings": [],
+      "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
+      "needsRecalculation": false,
       "ingredientMatchPct": 100
     },
     {
@@ -1775,7 +1693,7 @@
       "status": "fail",
       "servings": 8,
       "stored": "1009 cal · 72g P · 69g C · 51g F",
-      "recommended": "1009 cal · 72g P · 69g C · 51g F",
+      "recommended": "1108 cal · 74g P · 80g C · 57g F",
       "findings": [
         {
           "code": "calories_too_high",
@@ -1990,12 +1908,12 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "511 cal · 23g P · 65g C · 20g F",
-      "recommended": "511 cal · 23g P · 65g C · 20g F",
+      "stored": "499 cal · 21g P · 65g C · 20g F",
+      "recommended": "499 cal · 21g P · 65g C · 20g F",
       "findings": [
         {
           "code": "protein_target_range",
-          "message": "Protein 23g outside Performance Meals target (35–60g)"
+          "message": "Protein 21g outside Performance Meals target (35–60g)"
         }
       ],
       "suspiciousCalories": false,
@@ -2125,23 +2043,17 @@
       "slug": "pulled-pork",
       "title": "Carolina-Style Pulled Pork",
       "catalog": "golden_100",
-      "status": "fail",
+      "status": "withheld",
       "servings": 8,
-      "stored": "1400 cal · 82g P · 124g C · 61g F",
-      "recommended": "1400 cal · 82g P · 124g C · 61g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1400) — verify crew portions"
-        }
-      ],
-      "suspiciousCalories": true,
+      "stored": "withheld",
+      "findings": [],
+      "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
+      "needsRecalculation": false,
       "ingredientMatchPct": 88
     },
     {
@@ -2302,7 +2214,7 @@
       "status": "fail",
       "servings": 8,
       "stored": "927 cal · 68g P · 63g C · 45g F",
-      "recommended": "927 cal · 68g P · 63g C · 45g F",
+      "recommended": "1086 cal · 69g P · 70g C · 60g F",
       "findings": [
         {
           "code": "calories_too_high",
@@ -2451,12 +2363,12 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "625 cal · 16g P · 74g C · 31g F",
-      "recommended": "625 cal · 16g P · 74g C · 31g F",
+      "stored": "610 cal · 15g P · 74g C · 30g F",
+      "recommended": "610 cal · 15g P · 74g C · 30g F",
       "findings": [
         {
           "code": "protein_target_range",
-          "message": "Protein 16g outside Comfort Food target (25–45g)"
+          "message": "Protein 15g outside Comfort Food target (25–45g)"
         }
       ],
       "suspiciousCalories": false,
@@ -2499,27 +2411,17 @@
       "slug": "steak-tacos",
       "title": "Chimichurri Steak Tacos",
       "catalog": "golden_100",
-      "status": "fail",
+      "status": "withheld",
       "servings": 8,
-      "stored": "1400 cal · 67g P · 93g C · 87g F",
-      "recommended": "1400 cal · 67g P · 93g C · 87g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1400) — verify crew portions"
-        },
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷12 crew better than batch÷8 base servings"
-        }
-      ],
-      "suspiciousCalories": true,
+      "stored": "withheld",
+      "findings": [],
+      "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
-      "needsRecalculation": true,
+      "crewSizeCoupled": false,
+      "needsRecalculation": false,
       "ingredientMatchPct": 90
     },
     {
@@ -2641,12 +2543,12 @@
       "catalog": "golden_100",
       "status": "fail",
       "servings": 8,
-      "stored": "998 cal · 38g P · 77g C · 62g F",
-      "recommended": "998 cal · 38g P · 77g C · 62g F",
+      "stored": "980 cal · 36g P · 77g C · 61g F",
+      "recommended": "980 cal · 36g P · 77g C · 61g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (998) — verify crew portions"
+          "message": "Calories over 900 per serving (980) — verify crew portions"
         }
       ],
       "suspiciousCalories": true,
@@ -2741,9 +2643,14 @@
       "catalog": "hall_expansion",
       "status": "pass",
       "servings": 8,
-      "stored": "460 cal · 44g P · 14g C · 26g F",
-      "recommended": "761 cal · 74g P · 10g C · 45g F",
-      "findings": [],
+      "stored": "656 cal · 62g P · 11g C · 39g F",
+      "recommended": "656 cal · 62g P · 11g C · 39g F",
+      "findings": [
+        {
+          "code": "protein_target_range",
+          "message": "Protein 62g outside BBQ & Grill target (30–55g)"
+        }
+      ],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
@@ -2778,7 +2685,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "720 cal · 45g P · 70g C · 30g F",
-      "recommended": "1303 cal · 100g P · 99g C · 54g F",
+      "recommended": "1320 cal · 89g P · 89g C · 65g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -2787,7 +2694,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 80
+      "ingredientMatchPct": 88
     },
     {
       "slug": "beef-gyros-for-the-hall",
@@ -2795,8 +2702,8 @@
       "catalog": "hall_expansion",
       "status": "pass",
       "servings": 8,
-      "stored": "560 cal · 38g P · 40g C · 26g F",
-      "recommended": "682 cal · 51g P · 25g C · 41g F",
+      "stored": "685 cal · 51g P · 25g C · 41g F",
+      "recommended": "685 cal · 51g P · 25g C · 41g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -2874,19 +2781,24 @@
       "slug": "buffalo-chicken-sweet-potato-bowls",
       "title": "Buffalo Chicken Sweet Potato Bowls",
       "catalog": "hall_expansion",
-      "status": "pass",
+      "status": "fail",
       "servings": 8,
       "stored": "560 cal · 43g P · 47g C · 22g F",
-      "recommended": "953 cal · 62g P · 68g C · 49g F",
-      "findings": [],
+      "recommended": "880 cal · 65g P · 65g C · 41g F",
+      "findings": [
+        {
+          "code": "crew_size_coupled",
+          "message": "Stored macros match batch÷12 crew better than batch÷8 base servings"
+        }
+      ],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": false,
-      "needsRecalculation": false,
-      "ingredientMatchPct": 92
+      "crewSizeCoupled": true,
+      "needsRecalculation": true,
+      "ingredientMatchPct": 93
     },
     {
       "slug": "buffalo-chicken-wraps",
@@ -2913,7 +2825,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "420 cal · 28g P · 48g C · 12g F",
-      "recommended": "352 cal · 26g P · 23g C · 17g F",
+      "recommended": "444 cal · 33g P · 30g C · 21g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -2922,7 +2834,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 70
+      "ingredientMatchPct": 71
     },
     {
       "slug": "bun-bo-hue-noodle-soup",
@@ -2954,7 +2866,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "710 cal · 45g P · 55g C · 33g F",
-      "recommended": "900 cal · 79g P · 62g C · 41g F",
+      "recommended": "937 cal · 79g P · 63g C · 44g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -2972,15 +2884,19 @@
       "status": "fail",
       "servings": 8,
       "stored": "540 cal · 32g P · 52g C · 22g F",
-      "recommended": "948 cal · 78g P · 59g C · 44g F",
+      "recommended": "1242 cal · 83g P · 108g C · 52g F",
       "findings": [
         {
           "code": "ingredient_protein_drift",
-          "message": "Stored protein 32g vs ingredient estimate 78g"
+          "message": "Stored protein 32g vs ingredient estimate 83g"
+        },
+        {
+          "code": "ingredient_calorie_drift",
+          "message": "Stored 540 cal vs ingredient estimate 1242 cal"
         },
         {
           "code": "needs_recalculation",
-          "message": "Recommended: 948 cal · 78g P · 59g C · 44g F"
+          "message": "Recommended: 1242 cal · 83g P · 108g C · 52g F"
         }
       ],
       "suspiciousCalories": false,
@@ -2990,7 +2906,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": true,
-      "ingredientMatchPct": 100
+      "ingredientMatchPct": 94
     },
     {
       "slug": "cajun-chicken-rice-skillet",
@@ -3035,7 +2951,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "520 cal · 38g P · 61g C · 15g F",
-      "recommended": "937 cal · 55g P · 86g C · 42g F",
+      "recommended": "812 cal · 50g P · 54g C · 45g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -3044,7 +2960,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 91
+      "ingredientMatchPct": 92
     },
     {
       "slug": "cast-iron-chicken-fajitas",
@@ -3163,24 +3079,19 @@
       "slug": "chicken-shawarma-pitas",
       "title": "Chicken Shawarma Pitas",
       "catalog": "hall_expansion",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
-      "stored": "510 cal · 38g P · 46g C · 18g F",
+      "stored": "675 cal · 49g P · 58g C · 28g F",
       "recommended": "675 cal · 49g P · 58g C · 28g F",
-      "findings": [
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷10 crew better than batch÷8 base servings"
-        }
-      ],
+      "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
-      "needsRecalculation": true,
-      "ingredientMatchPct": 86
+      "crewSizeCoupled": false,
+      "needsRecalculation": false,
+      "ingredientMatchPct": 87
     },
     {
       "slug": "chicken-thigh-stretch-dinner",
@@ -3358,23 +3269,18 @@
       "slug": "costco-rotisserie-remix",
       "title": "Costco Rotisserie Chicken Remix",
       "catalog": "hall_expansion",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
-      "stored": "640 cal · 40g P · 58g C · 27g F",
-      "recommended": "998 cal · 57g P · 78g C · 51g F",
-      "findings": [
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷12 crew better than batch÷8 base servings"
-        }
-      ],
+      "stored": "678 cal · 36g P · 78g C · 24g F",
+      "recommended": "678 cal · 36g P · 78g C · 24g F",
+      "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
-      "needsRecalculation": true,
+      "crewSizeCoupled": false,
+      "needsRecalculation": false,
       "ingredientMatchPct": 83
     },
     {
@@ -3535,18 +3441,27 @@
       "slug": "firehall-charcuterie-board",
       "title": "Firehall Charcuterie Board",
       "catalog": "hall_expansion",
-      "status": "pass",
+      "status": "fail",
       "servings": 8,
       "stored": "420 cal · 22g P · 32g C · 24g F",
-      "recommended": "690 cal · 47g P · 3g C · 53g F",
-      "findings": [],
+      "recommended": "718 cal · 49g P · 2g C · 56g F",
+      "findings": [
+        {
+          "code": "ingredient_protein_drift",
+          "message": "Stored protein 22g vs ingredient estimate 49g"
+        },
+        {
+          "code": "needs_recalculation",
+          "message": "Recommended: 718 cal · 49g P · 2g C · 56g F"
+        }
+      ],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": false,
+      "needsRecalculation": true,
       "ingredientMatchPct": 50
     },
     {
@@ -3592,7 +3507,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "640 cal · 39g P · 68g C · 23g F",
-      "recommended": "1065 cal · 73g P · 91g C · 47g F",
+      "recommended": "1060 cal · 72g P · 91g C · 47g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -3601,7 +3516,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 100
+      "ingredientMatchPct": 92
     },
     {
       "slug": "firehall-korean-beef-bowls",
@@ -3715,7 +3630,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "272 cal · 14g P · 40g C · 7g F",
-      "recommended": "272 cal · 14g P · 40g C · 7g F",
+      "recommended": "257 cal · 13g P · 40g C · 6g F",
       "findings": [
         {
           "code": "protein_target_range",
@@ -4660,8 +4575,8 @@
       "catalog": "hall_expansion",
       "status": "pass",
       "servings": 8,
-      "stored": "580 cal · 32g P · 52g C · 28g F",
-      "recommended": "1044 cal · 52g P · 84g C · 55g F",
+      "stored": "572 cal · 28g P · 57g C · 26g F",
+      "recommended": "572 cal · 28g P · 57g C · 26g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -4789,23 +4704,17 @@
       "slug": "peanut-chicken-rice-bowls",
       "title": "Peanut Chicken Rice Bowls",
       "catalog": "hall_expansion",
-      "status": "fail",
+      "status": "withheld",
       "servings": 8,
-      "stored": "690 cal · 42g P · 72g C · 27g F",
-      "recommended": "968 cal · 62g P · 90g C · 40g F",
-      "findings": [
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷12 crew better than batch÷8 base servings"
-        }
-      ],
+      "stored": "withheld",
+      "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
-      "needsRecalculation": true,
+      "crewSizeCoupled": false,
+      "needsRecalculation": false,
       "ingredientMatchPct": 100
     },
     {
@@ -4945,7 +4854,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "723 cal · 38g P · 66g C · 34g F",
-      "recommended": "723 cal · 38g P · 66g C · 34g F",
+      "recommended": "705 cal · 37g P · 66g C · 33g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -5049,19 +4958,19 @@
       "status": "fail",
       "servings": 8,
       "stored": "480 cal · 28g P · 42g C · 22g F",
-      "recommended": "1293 cal · 84g P · 94g C · 63g F",
+      "recommended": "1352 cal · 88g P · 92g C · 69g F",
       "findings": [
         {
           "code": "ingredient_protein_drift",
-          "message": "Stored protein 28g vs ingredient estimate 84g"
+          "message": "Stored protein 28g vs ingredient estimate 88g"
         },
         {
           "code": "ingredient_calorie_drift",
-          "message": "Stored 480 cal vs ingredient estimate 1293 cal"
+          "message": "Stored 480 cal vs ingredient estimate 1352 cal"
         },
         {
           "code": "needs_recalculation",
-          "message": "Recommended: 1293 cal · 84g P · 94g C · 63g F"
+          "message": "Recommended: 1352 cal · 88g P · 92g C · 69g F"
         }
       ],
       "suspiciousCalories": false,
@@ -5153,24 +5062,19 @@
       "slug": "shawarma-bar-night",
       "title": "Shawarma Bar Night",
       "catalog": "hall_expansion",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
-      "stored": "480 cal · 36g P · 38g C · 20g F",
-      "recommended": "740 cal · 53g P · 12g C · 53g F",
-      "findings": [
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷12 crew better than batch÷8 base servings"
-        }
-      ],
+      "stored": "661 cal · 51g P · 13g C · 45g F",
+      "recommended": "661 cal · 51g P · 13g C · 45g F",
+      "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
-      "needsRecalculation": true,
-      "ingredientMatchPct": 80
+      "crewSizeCoupled": false,
+      "needsRecalculation": false,
+      "ingredientMatchPct": 79
     },
     {
       "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
@@ -5570,8 +5474,8 @@
       "catalog": "hall_expansion",
       "status": "pass",
       "servings": 8,
-      "stored": "610 cal · 42g P · 69g C · 18g F",
-      "recommended": "731 cal · 75g P · 80g C · 12g F",
+      "stored": "605 cal · 65g P · 51g C · 15g F",
+      "recommended": "605 cal · 65g P · 51g C · 15g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -5580,7 +5484,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 100
+      "ingredientMatchPct": 93
     },
     {
       "slug": "thai-peanut-chicken-crock",
@@ -5784,7 +5688,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "644 cal · 17g P · 89g C · 26g F",
-      "recommended": "644 cal · 17g P · 89g C · 26g F",
+      "recommended": "608 cal · 15g P · 83g C · 26g F",
       "findings": [
         {
           "code": "protein_target_range",
@@ -5807,7 +5711,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "552 cal · 48g P · 26g C · 27g F",
-      "recommended": "552 cal · 48g P · 26g C · 27g F",
+      "recommended": "526 cal · 47g P · 22g C · 26g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -5907,7 +5811,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "696 cal · 51g P · 64g C · 24g F",
-      "recommended": "696 cal · 51g P · 64g C · 24g F",
+      "recommended": "761 cal · 52g P · 65g C · 30g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -5916,7 +5820,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 92
+      "ingredientMatchPct": 94
     },
     {
       "slug": "caprese-chicken-bake",
@@ -5988,8 +5892,8 @@
       "catalog": "performance_meals",
       "status": "pass",
       "servings": 8,
-      "stored": "711 cal · 54g P · 50g C · 32g F",
-      "recommended": "711 cal · 54g P · 50g C · 32g F",
+      "stored": "712 cal · 54g P · 51g C · 32g F",
+      "recommended": "712 cal · 54g P · 51g C · 32g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -6287,8 +6191,8 @@
       "catalog": "performance_meals",
       "status": "pass",
       "servings": 8,
-      "stored": "506 cal · 71g P · 21g C · 14g F",
-      "recommended": "506 cal · 71g P · 21g C · 14g F",
+      "stored": "507 cal · 71g P · 21g C · 14g F",
+      "recommended": "507 cal · 71g P · 21g C · 14g F",
       "findings": [
         {
           "code": "protein_target_range",
@@ -6446,12 +6350,12 @@
       "catalog": "performance_meals",
       "status": "pass",
       "servings": 8,
-      "stored": "616 cal · 26g P · 112g C · 8g F",
-      "recommended": "616 cal · 26g P · 112g C · 8g F",
+      "stored": "610 cal · 25g P · 112g C · 8g F",
+      "recommended": "610 cal · 25g P · 112g C · 8g F",
       "findings": [
         {
           "code": "protein_target_range",
-          "message": "Protein 26g outside Performance Meals target (35–60g)"
+          "message": "Protein 25g outside Performance Meals target (35–60g)"
         }
       ],
       "suspiciousCalories": false,
@@ -6510,8 +6414,8 @@
       "catalog": "performance_meals",
       "status": "pass",
       "servings": 8,
-      "stored": "635 cal · 54g P · 10g C · 40g F",
-      "recommended": "635 cal · 54g P · 10g C · 40g F",
+      "stored": "636 cal · 54g P · 10g C · 41g F",
+      "recommended": "636 cal · 54g P · 10g C · 41g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -6714,12 +6618,12 @@
       "catalog": "performance_meals",
       "status": "pass",
       "servings": 8,
-      "stored": "304 cal · 18g P · 43g C · 8g F",
-      "recommended": "304 cal · 18g P · 43g C · 8g F",
+      "stored": "274 cal · 15g P · 42g C · 7g F",
+      "recommended": "274 cal · 15g P · 42g C · 7g F",
       "findings": [
         {
           "code": "protein_target_range",
-          "message": "Protein 18g outside Performance Meals target (35–60g)"
+          "message": "Protein 15g outside Performance Meals target (35–60g)"
         }
       ],
       "suspiciousCalories": false,
@@ -7032,12 +6936,12 @@
       "catalog": "performance_meals",
       "status": "pass",
       "servings": 8,
-      "stored": "325 cal · 19g P · 40g C · 11g F",
-      "recommended": "325 cal · 19g P · 40g C · 11g F",
+      "stored": "301 cal · 16g P · 40g C · 10g F",
+      "recommended": "301 cal · 16g P · 40g C · 10g F",
       "findings": [
         {
           "code": "protein_target_range",
-          "message": "Protein 19g outside Performance Meals target (35–60g)"
+          "message": "Protein 16g outside Performance Meals target (35–60g)"
         }
       ],
       "suspiciousCalories": false,
@@ -7167,15 +7071,11 @@
       "slug": "baked-oatmeal-mixed-berries",
       "title": "Baked Oatmeal with Mixed Berries",
       "catalog": "breakfast",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
       "stored": "575 cal · 18g P · 95g C · 16g F",
       "recommended": "575 cal · 18g P · 95g C · 16g F",
       "findings": [
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷6 crew better than batch÷8 base servings"
-        },
         {
           "code": "protein_target_range",
           "message": "Protein 18g outside Breakfast target (20–45g)"
@@ -7186,8 +7086,8 @@
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
-      "needsRecalculation": true,
+      "crewSizeCoupled": false,
+      "needsRecalculation": false,
       "ingredientMatchPct": 100
     },
     {
@@ -7229,7 +7129,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 88
+      "ingredientMatchPct": 89
     },
     {
       "slug": "berry-vanilla-protein-overnight-oats",
@@ -7278,16 +7178,16 @@
       "catalog": "breakfast",
       "status": "pass",
       "servings": 8,
-      "stored": "473 cal · 11g P · 71g C · 17g F",
-      "recommended": "473 cal · 11g P · 71g C · 17g F",
+      "stored": "769 cal · 18g P · 114g C · 28g F",
+      "recommended": "769 cal · 18g P · 114g C · 28g F",
       "findings": [
         {
           "code": "protein_target_range",
-          "message": "Protein 11g outside Breakfast target (20–45g)"
+          "message": "Protein 18g outside Breakfast target (20–45g)"
         }
       ],
       "suspiciousCalories": false,
-      "suspiciousProtein": true,
+      "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -7301,8 +7201,8 @@
       "catalog": "breakfast",
       "status": "pass",
       "servings": 8,
-      "stored": "454 cal · 28g P · 56g C · 13g F",
-      "recommended": "454 cal · 28g P · 56g C · 13g F",
+      "stored": "471 cal · 28g P · 56g C · 15g F",
+      "recommended": "471 cal · 28g P · 56g C · 15g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -7451,7 +7351,7 @@
       "status": "pass",
       "servings": 10,
       "stored": "739 cal · 39g P · 13g C · 59g F",
-      "recommended": "739 cal · 39g P · 13g C · 59g F",
+      "recommended": "1100 cal · 58g P · 16g C · 90g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -7509,8 +7409,8 @@
       "catalog": "breakfast",
       "status": "pass",
       "servings": 8,
-      "stored": "658 cal · 36g P · 50g C · 35g F",
-      "recommended": "658 cal · 36g P · 50g C · 35g F",
+      "stored": "715 cal · 36g P · 50g C · 42g F",
+      "recommended": "715 cal · 36g P · 50g C · 42g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -7784,8 +7684,8 @@
       "catalog": "breakfast",
       "status": "pass",
       "servings": 10,
-      "stored": "360 cal · 28g P · 5g C · 26g F",
-      "recommended": "360 cal · 28g P · 5g C · 26g F",
+      "stored": "403 cal · 32g P · 5g C · 29g F",
+      "recommended": "403 cal · 32g P · 5g C · 29g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -7888,8 +7788,8 @@
       "catalog": "breakfast",
       "status": "pass",
       "servings": 10,
-      "stored": "852 cal · 41g P · 71g C · 45g F",
-      "recommended": "852 cal · 41g P · 71g C · 45g F",
+      "stored": "872 cal · 41g P · 71g C · 47g F",
+      "recommended": "872 cal · 41g P · 71g C · 47g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -8402,23 +8302,18 @@
       "slug": "shakshuka-for-the-hall",
       "title": "Shakshuka for the Hall",
       "catalog": "breakfast",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
       "stored": "420 cal · 25g P · 46g C · 17g F",
       "recommended": "420 cal · 25g P · 46g C · 17g F",
-      "findings": [
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷10 crew better than batch÷8 base servings"
-        }
-      ],
+      "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
-      "needsRecalculation": true,
+      "crewSizeCoupled": false,
+      "needsRecalculation": false,
       "ingredientMatchPct": 85
     },
     {
@@ -8706,23 +8601,18 @@
       "slug": "andouille-po-boy-rolls-crew",
       "title": "Andouille Po Boy Rolls for the Crew",
       "catalog": "bbq_grill",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
-      "stored": "1065 cal · 48g P · 17g C · 90g F",
-      "recommended": "1065 cal · 48g P · 17g C · 90g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1065) — verify crew portions"
-        }
-      ],
-      "suspiciousCalories": true,
+      "stored": "807 cal · 34g P · 15g C · 68g F",
+      "recommended": "807 cal · 34g P · 15g C · 68g F",
+      "findings": [],
+      "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
+      "needsRecalculation": false,
       "ingredientMatchPct": 92
     },
     {
@@ -8861,8 +8751,8 @@
       "catalog": "bbq_grill",
       "status": "pass",
       "servings": 8,
-      "stored": "652 cal · 56g P · 32g C · 34g F",
-      "recommended": "652 cal · 56g P · 32g C · 34g F",
+      "stored": "712 cal · 56g P · 32g C · 41g F",
+      "recommended": "712 cal · 56g P · 32g C · 41g F",
       "findings": [
         {
           "code": "protein_target_range",
@@ -8876,7 +8766,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 80
+      "ingredientMatchPct": 83
     },
     {
       "slug": "competition-bbq-chicken-thighs",
@@ -9741,7 +9631,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "754 cal · 66g P · 34g C · 41g F",
-      "recommended": "754 cal · 66g P · 34g C · 41g F",
+      "recommended": "1027 cal · 95g P · 32g C · 60g F",
       "findings": [
         {
           "code": "protein_target_range",
@@ -10197,7 +10087,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "156 cal · 8g P · 15g C · 8g F",
-      "recommended": "156 cal · 8g P · 15g C · 8g F",
+      "recommended": "158 cal · 8g P · 16g C · 8g F",
       "findings": [
         {
           "code": "protein_target_range",

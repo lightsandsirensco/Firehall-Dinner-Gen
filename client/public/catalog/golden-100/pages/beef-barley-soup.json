@@ -10,13 +10,13 @@
   "description": "Cold-night bowl that fills everyone. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
+  "cookTime": 105,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 442,
-  "protein": 61,
+  "calories": 618,
+  "protein": 52,
   "carbs": 28,
-  "fats": 8,
+  "fats": 35,
   "tags": [
     "protein:beef",
     "format:soup_chili",
@@ -33,7 +33,7 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Thighs Or Beef Stew Meat",
+      "name": "Beef Chuck Stew Meat, 1-Inch Cubes",
       "quantity": "3",
       "unit": "Lb",
       "group": "Main"
@@ -57,7 +57,7 @@
       "group": "Veg"
     },
     {
-      "name": "Chicken Or Beef Broth",
+      "name": "Low-Sodium Beef Broth",
       "quantity": "8",
       "unit": "Cups",
       "group": "Broth"
@@ -67,27 +67,57 @@
       "quantity": "1",
       "unit": "Cup",
       "group": "Main"
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Main"
+    },
+    {
+      "name": "Dried Thyme",
+      "quantity": "1",
+      "unit": "Tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Bay Leaves",
+      "quantity": "2",
+      "unit": "count",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": "1",
+      "unit": "Tsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Sear aromatics",
-      "instruction": "Brown meat in batches; remove. Sweat onion, carrot, celery in the same pot 8 minutes until edges soften.",
+      "title": "Brown the beef and vegetables",
+      "instruction": "Pat beef dry and season with half the salt and the pepper. Brown in batches in oil over medium-high so it sears instead of steaming; remove. Sweat onion, carrot, and celery in the same pot 8 minutes until edges soften.",
       "minutes": 15,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
       "title": "Simmer the pot",
-      "instruction": "Add broth, meat back, and barley or dumplings per recipe. Simmer gently 45–60 minutes until meat shreds easily and barley is tender.",
+      "instruction": "Add broth, browned beef, thyme, and bay leaves. Cover and simmer gently 45 minutes, then stir in barley and simmer 30–45 minutes more until the beef is fork-tender and the barley is soft. Season with the remaining salt to taste.",
       "minutes": 55,
       "heatLevel": "medium-low"
     },
     {
       "stepNumber": 3,
       "title": "Skim and serve",
-      "instruction": "Skim fat if needed. Beef Barley Soup tastes better after 20 minutes off heat — hold at 180°F for late shifts.",
+      "instruction": "Skim fat if needed and remove bay leaves. Beef Barley Soup tastes better after 20 minutes off heat — hold at 180°F for late shifts.",
       "minutes": 10,
       "heatLevel": "low"
     }
@@ -114,24 +144,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 442,
-    "protein": 61,
+    "calories": 618,
+    "protein": 52,
     "carbs": 28,
-    "fats": 8,
-    "label": "per serving (hall portion)",
+    "fats": 35,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/beef-barley-soup.jpg",
@@ -166,12 +197,12 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
+    "matchedCount": 11,
+    "totalCount": 11,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
-        "name": "Chicken Or Beef Broth",
+        "name": "Low-Sodium Beef Broth",
         "allergens": [
           "gluten"
         ]

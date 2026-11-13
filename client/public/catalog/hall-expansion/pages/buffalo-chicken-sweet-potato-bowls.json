@@ -39,7 +39,7 @@
   "ingredients": [
     {
       "name": "chicken breast",
-      "quantity": "2.8",
+      "quantity": "3",
       "unit": "lb",
       "notes": "bite-size pieces",
       "group": "Protein"
@@ -47,7 +47,7 @@
     {
       "name": "buffalo sauce",
       "quantity": "1",
-      "unit": "cups",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
@@ -71,25 +71,25 @@
     },
     {
       "name": "cucumber",
-      "quantity": "1.6",
+      "quantity": "2",
       "unit": "each",
       "group": "Cold bar"
     },
     {
       "name": "shredded carrots",
-      "quantity": "2.4",
+      "quantity": "2 1/2",
       "unit": "cups",
       "group": "Cold bar"
     },
     {
       "name": "cherry tomatoes",
-      "quantity": "2.4",
+      "quantity": "2 1/2",
       "unit": "cups",
       "group": "Cold bar"
     },
     {
       "name": "avocados",
-      "quantity": "3.2",
+      "quantity": "3",
       "unit": "each",
       "group": "Cold bar"
     },
@@ -101,7 +101,7 @@
     },
     {
       "name": "ranch dressing",
-      "quantity": "1.6",
+      "quantity": "1 1/2",
       "unit": "cups",
       "group": "Cold bar"
     },
@@ -110,6 +110,21 @@
       "quantity": "3/4",
       "unit": "cup",
       "group": "Finish"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -137,7 +152,7 @@
     {
       "stepNumber": 4,
       "title": "Sear the buffalo chicken",
-      "instruction": "Heat a wide skillet over medium-high until oil shimmers, then cook chicken 7–9 minutes, turning once browned, until the thickest piece reaches 165°F. Pull the skillet off heat and toss with buffalo sauce until glossy. Leaving sauce over the burner makes its butter solids scorch and taste bitter.",
+      "instruction": "Heat a wide skillet over medium-high until oil shimmers, then cook chicken 7–9 minutes, turning once browned, until the thickest piece reaches 165°F. Pull the skillet off heat and toss with buffalo sauce until glossy. Leaving sauce over the burner makes it scorch and taste bitter.",
       "minutes": 12,
       "heatLevel": "medium-high"
     },
@@ -179,7 +194,7 @@
     {
       "stepNumber": 10,
       "title": "Put out the buffalo supper",
-      "instruction": "Carry bowls to the pass with celery sticks nearby and keep the hot pans covered for second helpings. Tell the crew the blue cheese is optional before they reach the line. Refill avocado in small bowls from the refrigerator; a full pan left out warms and browns fast.",
+      "instruction": "Carry bowls to the pass and keep the hot pans covered for second helpings. Tell the crew the blue cheese is optional before they reach the line. Refill avocado in small bowls from the refrigerator; a full pan left out warms and browns fast.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -278,8 +293,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 12,
-    "totalCount": 12,
+    "matchedCount": 15,
+    "totalCount": 15,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -315,6 +330,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   }
 }

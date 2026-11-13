@@ -1,17 +1,16 @@
 {
   "summary": {
-    "generatedAt": "2026-10-03T22:43:33.518Z",
-    "tonightEligible": 353,
-    "defaultPool": 350,
-    "servedByTonight": 342,
+    "generatedAt": "2026-11-12T18:34:16.296Z",
+    "tonightEligible": 352,
+    "defaultPool": 349,
+    "servedByTonight": 341,
     "excludedFromTonight": 11,
-    "withIssues": 65,
-    "servedWithIssues": 54,
+    "withIssues": 30,
+    "servedWithIssues": 24,
     "withBlockingIssues": 0,
-    "needsNewImage": 33,
+    "needsNewImage": 0,
     "issueCounts": {
-      "E_title_image_mismatch": 33,
-      "G_ingredient_instruction_mismatch": 30,
+      "G_ingredient_instruction_mismatch": 25,
       "N_hidden_from_explore": 6
     }
   },
@@ -140,16 +139,9 @@
       "exploreHero": "/images/golden-100/steak-sandwiches.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: brioche buns used instead of hoagie rolls"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "chicken-caesar",
@@ -243,16 +235,9 @@
       "exploreHero": "/images/golden-100/hall-taco-bar.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: cheese present — not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "memphis-dry-rub-ribs",
@@ -282,15 +267,8 @@
       "exploreHero": "/images/golden-100/beer-can-chicken.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "G_ingredient_instruction_mismatch",
-          "detail": "3/6 ingredients never referenced in steps"
-        }
-      ],
-      "proposedFix": [
-        "rewrite steps to use the listed ingredients"
-      ],
+      "issues": [],
+      "proposedFix": [],
       "needsNewImage": false
     },
     {
@@ -305,16 +283,9 @@
       "exploreHero": "/images/golden-100/ny-strip-herb-butter.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: baby potatoes not in recipe; vision: broccoli not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "bbq-chicken-sliders",
@@ -328,16 +299,9 @@
       "exploreHero": "/images/golden-100/bbq-chicken-sliders.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: cheese on sliders — not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "grilled-pork-chops",
@@ -438,16 +402,9 @@
       "exploreHero": "/images/golden-100/flank-chimichurri.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: roasted potatoes not in recipe; vision: greens not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "grilled-corn-cotija",
@@ -516,16 +473,9 @@
       "exploreHero": "/images/golden-100/mac-and-cheese-bake.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: garlic bread side — not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "shepherds-pie",
@@ -845,19 +795,14 @@
       "tonightExcludedReason": null,
       "issues": [
         {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: shredded cheese on top — recipe does not include cheese as a main ingredient; vision: sour cream on top — recipe does not include sour cream as a main ingredient; vision: cilantro on top — recipe does not include cilantro as a main ingredient"
-        },
-        {
           "code": "G_ingredient_instruction_mismatch",
           "detail": "steps call for sour cream, jalapeno, bread — not in ingredients"
         }
       ],
       "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)",
         "align ingredient list with steps"
       ],
-      "needsNewImage": true
+      "needsNewImage": false
     },
     {
       "slug": "sheet-pan-fajitas",
@@ -999,16 +944,9 @@
       "exploreHero": "/images/golden-100/performance-burrito-bowls.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: shredded cheese present — not in recipe; vision: tomatoes instead of pico de gallo"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "herb-roasted-thighs",
@@ -1068,16 +1006,9 @@
       "exploreHero": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: melted cheese not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "skillet-chicken-alfredo",
@@ -1155,16 +1086,9 @@
       "exploreHero": "/images/golden-100/pork-carnitas-tacos.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: cheese not in recipe; vision: sauce not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "chicken-quesadillas",
@@ -1757,19 +1681,14 @@
       "tonightExcludedReason": null,
       "issues": [
         {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: missing hoagie rolls; vision: missing marinara sauce; vision: missing yellow onion; vision: missing garlic cloves; vision: missing visible eggs"
-        },
-        {
           "code": "G_ingredient_instruction_mismatch",
           "detail": "3/6 ingredients never referenced in steps"
         }
       ],
       "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)",
         "rewrite steps to use the listed ingredients"
       ],
-      "needsNewImage": true
+      "needsNewImage": false
     },
     {
       "slug": "sheet-pan-meal-prep",
@@ -1783,16 +1702,9 @@
       "exploreHero": "/images/golden-100/sheet-pan-meal-prep.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": "image_hold:photo shows a sheet pan, not meal-prep containers; sweet potato, broccoli and rice missing",
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: wrong dish format — recipe is meal-prep containers but image shows sheet pan; vision: missing sweet potatoes; vision: missing broccoli; vision: missing long-grain rice; vision: extra bell peppers; vision: extra onions; vision: extra lime"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "one-pot-chicken-rice",
@@ -1854,16 +1766,9 @@
       "exploreHero": "/images/golden-100/lemon-garlic-chicken-tray.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: chicken drumsticks instead of bone-in chicken thighs"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "herb-baked-salmon-tray",
@@ -1948,16 +1853,9 @@
       "exploreHero": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: broccoli side — not in recipe; vision: not baked in a casserole dish"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "honey-garlic-chicken-rice-bowls",
@@ -2618,16 +2516,9 @@
       "exploreHero": "/images/golden-100/southwest-beef-sweet-potato-skillet.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: cheese on top — not in recipe; vision: parsley garnish — not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "beef-birria-with-consomme",
@@ -2689,16 +2580,9 @@
       "exploreHero": "/images/golden-100/unstuffed-cabbage-roll-skillet.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: melted cheese not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "cuban-beef-picadillo-bowls",
@@ -2952,16 +2836,9 @@
       "exploreHero": "/images/hall-expansion/smoked-turkey-breast.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": "image_hold:photo shows chicken wings, not a smoked turkey breast",
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: chicken wings instead of turkey breast"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "smoked-meatloaf",
@@ -3206,16 +3083,9 @@
       "exploreHero": "/images/hall-expansion/bbq-meatball-skewers.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: missing pickled red onions; vision: missing shredded cabbage mix; vision: cheese not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "soft-pretzel-dogs",
@@ -3277,15 +3147,8 @@
       "exploreHero": "/images/hall-expansion/shawarma-bar-night.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "G_ingredient_instruction_mismatch",
-          "detail": "steps call for parsley, tomato, onion, bread — not in ingredients"
-        }
-      ],
-      "proposedFix": [
-        "align ingredient list with steps"
-      ],
+      "issues": [],
+      "proposedFix": [],
       "needsNewImage": false
     },
     {
@@ -3339,16 +3202,9 @@
       "exploreHero": "/images/hall-expansion/pasta-bar-night.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: spaghetti instead of penne pasta; vision: missing visible sauces; vision: missing garlic bread"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "rice-bowl-bar-night",
@@ -3394,16 +3250,9 @@
       "exploreHero": "/images/hall-expansion/mediterranean-feast-night.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": "image_hold:photo is missing the hummus, tzatziki, pita and feta and shows rice instead",
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: missing hummus; vision: missing tzatziki; vision: missing pita bread; vision: missing feta cheese; vision: extra cauliflower; vision: extra rice; vision: sauce not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "burrito-bowl-bar-night",
@@ -3449,15 +3298,8 @@
       "exploreHero": "/images/hall-expansion/build-your-own-pho-bar.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "G_ingredient_instruction_mismatch",
-          "detail": "steps call for cilantro, lime, fish sauce — not in ingredients"
-        }
-      ],
-      "proposedFix": [
-        "align ingredient list with steps"
-      ],
+      "issues": [],
+      "proposedFix": [],
       "needsNewImage": false
     },
     {
@@ -3584,16 +3426,9 @@
       "exploreHero": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: melted cheese not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "mushroom-swiss-steak-pan",
@@ -3639,16 +3474,9 @@
       "exploreHero": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: melted cheese on top — not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "enchilada-beef-skillet",
@@ -3774,16 +3602,9 @@
       "exploreHero": "/images/hall-expansion/green-chile-chicken-stew.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: cheese not in recipe; vision: tomatoes not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "ginger-soy-chicken-rice-bowls",
@@ -3861,16 +3682,9 @@
       "exploreHero": "/images/hall-expansion/sheet-pan-meatball-marinara.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": "image_hold:photo shows a meatball sandwich, not a sheet-pan meatball dinner",
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: wrong dish format — recipe is sheet pan but image shows sandwich"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "hall-sloppy-joe-feed",
@@ -4044,16 +3858,9 @@
       "exploreHero": "/images/hall-expansion/hungarian-goulash-crew.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": "image_hold:photo shows goulash over pasta; the recipe is served with potatoes",
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: pasta instead of potatoes; vision: missing sour cream; vision: missing rye bread"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "tonkotsu-ramen-crew",
@@ -4147,16 +3954,9 @@
       "exploreHero": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: french fries present — not in recipe; vision: missing grilled red bell peppers; vision: missing grilled yellow onion; vision: missing fresh cilantro"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "korean-bulgogi-grill-night",
@@ -4241,16 +4041,9 @@
       "exploreHero": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: French fries present — not in the recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "best-tuna-melt-for-the-hall",
@@ -4312,16 +4105,9 @@
       "exploreHero": "/images/hall-expansion/greek-chicken-pitas.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: potato wedges not in recipe; vision: broccoli not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "beef-gyros-for-the-hall",
@@ -4397,22 +4183,6 @@
       "thumbImage": "/images/thumbs/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
       "tonightHero": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
       "exploreHero": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
-      "exploreEligible": true,
-      "tonightExcludedReason": null,
-      "issues": [],
-      "proposedFix": [],
-      "needsNewImage": false
-    },
-    {
-      "slug": "firehall-greek-chicken-bowls",
-      "title": "Greek Chicken Bowls",
-      "collection": "hall_expansion",
-      "pool": "default",
-      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "mobileImage": "/images/mobile/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "tonightHero": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "exploreHero": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
       "issues": [],
@@ -4502,15 +4272,8 @@
       "exploreHero": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "G_ingredient_instruction_mismatch",
-          "detail": "steps call for garlic, vinegar, paprika — not in ingredients"
-        }
-      ],
-      "proposedFix": [
-        "align ingredient list with steps"
-      ],
+      "issues": [],
+      "proposedFix": [],
       "needsNewImage": false
     },
     {
@@ -4596,15 +4359,8 @@
       "exploreHero": "/images/hall-expansion/firehall-gyro-bowls.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "G_ingredient_instruction_mismatch",
-          "detail": "steps call for garlic, parsley, lemon, cumin, oregano — not in ingredients"
-        }
-      ],
-      "proposedFix": [
-        "align ingredient list with steps"
-      ],
+      "issues": [],
+      "proposedFix": [],
       "needsNewImage": false
     },
     {
@@ -4697,16 +4453,9 @@
       "exploreHero": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: cheese on top — not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "white-chicken-chili-crock",
@@ -4745,19 +4494,14 @@
       "tonightExcludedReason": null,
       "issues": [
         {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: broccoli and mashed potatoes are not in the recipe"
-        },
-        {
           "code": "G_ingredient_instruction_mismatch",
           "detail": "steps call for garlic, onion, bell pepper — not in ingredients"
         }
       ],
       "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)",
         "align ingredient list with steps"
       ],
-      "needsNewImage": true
+      "needsNewImage": false
     },
     {
       "slug": "salsa-verde-chicken-crock",
@@ -4803,16 +4547,9 @@
       "exploreHero": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: cheese on top — not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "burnt-ends-chili-crew",
@@ -4826,16 +4563,9 @@
       "exploreHero": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: cheese not in recipe; vision: green onions not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "smoker-nachos-crew",
@@ -4959,16 +4689,9 @@
       "exploreHero": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
       "exploreEligible": true,
       "tonightExcludedReason": null,
-      "issues": [
-        {
-          "code": "E_title_image_mismatch",
-          "detail": "vision: melted cheese on top — not in recipe"
-        }
-      ],
-      "proposedFix": [
-        "flag for new photography (vision: image does not match recipe)"
-      ],
-      "needsNewImage": true
+      "issues": [],
+      "proposedFix": [],
+      "needsNewImage": false
     },
     {
       "slug": "sausage-gnocchi-skillet",

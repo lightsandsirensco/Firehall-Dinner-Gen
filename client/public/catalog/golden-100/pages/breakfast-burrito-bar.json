@@ -98,7 +98,7 @@
     {
       "stepNumber": 2,
       "title": "Brown the sausage and vegetables",
-      "instruction": "In a separate pan, brown sausage or chorizo, breaking it into crumbles. Add onion and peppers; cook until softened and the sausage is fully cooked through. Drain excess fat.",
+      "instruction": "In a separate pan, brown sausage or chorizo, breaking it into crumbles. Add onion and peppers; cook until softened and the sausage reads 160°F (71°C) with no pink remaining. Drain excess fat.",
       "minutes": 14,
       "heatLevel": "medium-high"
     },
@@ -112,7 +112,7 @@
     {
       "stepNumber": 4,
       "title": "Set up the burrito bar",
-      "instruction": "Warm tortillas wrapped in foil in a low oven. Lay out hash browns, sausage mix, eggs, remaining cheese, salsa, and hot sauce in separate pans so the crew builds their own.",
+      "instruction": "Warm tortillas wrapped in foil in a 250°F (120°C) oven for 15 minutes. Lay out hash browns, sausage mix, eggs, remaining cheese, salsa, and hot sauce in separate pans so the crew builds their own.",
       "minutes": 10,
       "heatLevel": ""
     },

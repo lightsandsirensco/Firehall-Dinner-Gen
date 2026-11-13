@@ -64,10 +64,13 @@ const TEMP_BARE_F_RE = /(\d+(?:\.\d+)?)\s+F\b/gi;
 
 const TEMP_DEGREES_F_RE = /(\d+(?:\.\d+)?)\s*degrees?\s+F(?:ahrenheit)?/gi;
 
+const TEMP_DUAL_PAIR_RE = /(\d+(?:\.\d+)?)\s*°\s*F\s*\(\s*(\d+(?:\.\d+)?)\s*°\s*C\s*\)/gi;
+
 function replaceFahrenheitInText(text: string, system: MeasurementSystem): string {
   const useMetric = system === "metric";
 
-  let out = text.replace(TEMP_RANGE_RE, (match, lo: string, _sep: string, hi: string) => {
+  let out = useMetric ? text.replace(TEMP_DUAL_PAIR_RE, (_m, _f: string, c: string) => `${c}°C`) : text;
+  out = out.replace(TEMP_RANGE_RE, (match, lo: string, _sep: string, hi: string) => {
     const loN = parseFloat(lo);
     const hiN = parseFloat(hi);
     if (!useMetric && (loN < MIN_DUAL_FAHRENHEIT || hiN < MIN_DUAL_FAHRENHEIT)) return match;

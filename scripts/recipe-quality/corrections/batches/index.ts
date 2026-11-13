@@ -1,0 +1,39 @@
+import type { RecipeCorrection } from "../types.js";
+import { B3_DIETARY, B3_DIETARY_RENNET } from "./b3-dietary.js";
+import {
+  B4_FIRST_IMPRESSION_01,
+  B4_FIRST_IMPRESSION_02,
+  B4_FIRST_IMPRESSION_03,
+  B4_FIRST_IMPRESSION_04,
+  B4_FIRST_IMPRESSION_05,
+  B4_FIRST_IMPRESSION_06,
+} from "./b4-first-impression.js";
+import { B5_MECHANICAL_01, B5_MECHANICAL_02, B5_MECHANICAL_03 } from "./b5-mechanical.js";
+import { B6_NUTRITION_CLAIMS } from "./b6-nutrition-claims.js";
+import { B7_DONENESS } from "./b7-doneness.js";
+import { B8_BROTH_NUTRITION, B8_BROTH_NUTRITION_02 } from "./b8-broth-nutrition.js";
+import { B2_FOOD_SAFETY_01, B2_FOOD_SAFETY_02, B2_FOOD_SAFETY_03, B2_FOOD_SAFETY_04, B2_FOOD_SAFETY_05, B2_FOOD_SAFETY_06 } from "./b2-food-safety.js";
+
+export const ALL_CORRECTIONS: RecipeCorrection[] = [
+  ...B2_FOOD_SAFETY_01,
+  ...B2_FOOD_SAFETY_02,
+  ...B2_FOOD_SAFETY_03,
+  ...B2_FOOD_SAFETY_04,
+  ...B2_FOOD_SAFETY_05,
+  ...B2_FOOD_SAFETY_06,
+  ...B3_DIETARY,
+  ...B3_DIETARY_RENNET,
+  ...B4_FIRST_IMPRESSION_01,
+  ...B4_FIRST_IMPRESSION_02,
+  ...B4_FIRST_IMPRESSION_03,
+  ...B4_FIRST_IMPRESSION_04,
+  ...B4_FIRST_IMPRESSION_05,
+  ...B4_FIRST_IMPRESSION_06,
+  ...B5_MECHANICAL_01,
+  ...B5_MECHANICAL_02,
+  ...B5_MECHANICAL_03,
+  ...B6_NUTRITION_CLAIMS,
+  ...B7_DONENESS,
+  ...B8_BROTH_NUTRITION,
+  ...B8_BROTH_NUTRITION_02,
+];

@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 625,
-  "protein": 16,
+  "calories": 610,
+  "protein": 15,
   "carbs": 74,
-  "fats": 31,
+  "fats": 30,
   "tags": [
     "protein:vegetarian",
     "format:soup_chili",
@@ -61,7 +61,7 @@
       "group": "Aromatics"
     },
     {
-      "name": "Chicken Broth",
+      "name": "Vegetable Broth",
       "quantity": "5",
       "unit": "Cups",
       "group": "Bisque"
@@ -159,10 +159,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 625,
-    "protein": 16,
+    "calories": 610,
+    "protein": 15,
     "carbs": 74,
-    "fats": 31,
+    "fats": 30,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -218,7 +218,7 @@
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
-        "name": "Chicken Broth",
+        "name": "Vegetable Broth",
         "allergens": [
           "gluten"
         ]
@@ -258,7 +258,7 @@
       "shellfishFree": true,
       "fishFree": true,
       "porkFree": true,
-      "vegetarian": false,
+      "vegetarian": true,
       "vegan": false
     },
     "adaptable": [

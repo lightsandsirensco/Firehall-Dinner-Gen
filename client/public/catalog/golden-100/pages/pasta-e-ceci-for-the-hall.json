@@ -13,8 +13,8 @@
   "cookTime": 50,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 511,
-  "protein": 23,
+  "calories": 499,
+  "protein": 21,
   "carbs": 65,
   "fats": 20,
   "tags": [
@@ -67,7 +67,7 @@
       "group": "Base"
     },
     {
-      "name": "Low-Sodium Chicken Broth",
+      "name": "Low-Sodium Vegetable Broth",
       "quantity": "4",
       "unit": "Cups",
       "group": "Liquid"
@@ -90,7 +90,7 @@
       "name": "Parmesan Cheese",
       "quantity": "1",
       "unit": "Cup",
-      "notes": "grated",
+      "notes": "grated; use a Parmesan labeled vegetarian (microbial rennet)",
       "group": "Finish"
     },
     {
@@ -169,8 +169,8 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 511,
-    "protein": 23,
+    "calories": 499,
+    "protein": 21,
     "carbs": 65,
     "fats": 20,
     "label": "Estimated per serving",
@@ -235,7 +235,7 @@
         ]
       },
       {
-        "name": "Low-Sodium Chicken Broth",
+        "name": "Low-Sodium Vegetable Broth",
         "allergens": [
           "gluten"
         ]
@@ -257,7 +257,7 @@
       "shellfishFree": true,
       "fishFree": true,
       "porkFree": true,
-      "vegetarian": false,
+      "vegetarian": true,
       "vegan": false
     },
     "adaptable": [
@@ -272,7 +272,7 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:29:45.659Z"
   },
   "avoidTags": [
     "beans"

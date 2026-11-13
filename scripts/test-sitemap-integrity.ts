@@ -116,7 +116,6 @@ function buildCanonicalRecipeUrls(): Map<string, RecipeEntry> {
 const CORE_STATIC_PAGES = new Set([
   "/",
   "/explore",
-  "/top-rated-recipes",
   "/hall-of-fame",
   "/generator",
   "/faq",

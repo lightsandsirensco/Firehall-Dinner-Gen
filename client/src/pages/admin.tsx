@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "wouter";
-import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat, ThumbsUp, BarChart3, CreditCard, TrendingUp, Tag, UserPlus, Mail, ShoppingBag } from "lucide-react";
+import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat, BarChart3, CreditCard, TrendingUp, Tag, UserPlus, Mail, ShoppingBag } from "lucide-react";
 import { adminFetch } from "@/lib/admin-api";
 
 interface UsageData {
@@ -159,12 +159,6 @@ export default function AdminPage() {
                 Hall Growth
               </Button>
             </Link>
-            <Link href="/admin/recipe-ratings">
-              <Button variant="outline" data-testid="button-recipe-ratings-admin">
-                <ThumbsUp className="w-4 h-4 mr-2" />
-                Crew Ratings
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
@@ -260,12 +254,6 @@ export default function AdminPage() {
             <Button variant="outline" size="sm" data-testid="button-growth-dashboard-admin-nav">
               <TrendingUp className="w-4 h-4 mr-2" />
               Hall Growth
-            </Button>
-          </Link>
-          <Link href="/admin/recipe-ratings">
-            <Button variant="outline" size="sm" data-testid="button-recipe-ratings-admin-nav">
-              <ThumbsUp className="w-4 h-4 mr-2" />
-              Crew Ratings
             </Button>
           </Link>
         </div>

@@ -87,13 +87,6 @@ function NutritionNumberField({
   );
 }
 
-export type CatalogSortMode =
-  | "curated"
-  | "most_popular"
-  | "highest_rated"
-  | "most_votes"
-  | "trending";
-
 type ApprovedCatalogFacetOptions = ReturnType<typeof buildApprovedCatalogFacetOptions>;
 
 const PRIMARY_FILTERS: ApprovedCatalogPrimaryFilter[] = [
@@ -105,35 +98,20 @@ const PRIMARY_FILTERS: ApprovedCatalogPrimaryFilter[] = [
 
 const COOK_TIME_FILTERS: ApprovedCatalogCookTimeBucket[] = ["under_30", "30_to_60", "over_60"];
 
-const SORT_LABELS: Record<CatalogSortMode, string> = {
-  curated: "Curated",
-  most_popular: "Most Popular",
-  highest_rated: "Highest Rated",
-  most_votes: "Most Votes",
-  trending: "Trending",
-};
-
 export interface ExploreCatalogFiltersProps {
   filters: ApprovedCatalogFilterState;
-  sort: CatalogSortMode;
   facets: ApprovedCatalogFacetOptions;
   onFiltersChange: (next: ApprovedCatalogFilterState) => void;
-  onSortChange: (sort: CatalogSortMode) => void;
   onReset: () => void;
   layout?: "inline" | "sheet";
-  /** False once the selected sort has no real crew data yet — shows a fallback note. */
-  sortHasSignal?: boolean;
 }
 
 export function ExploreCatalogFilters({
   filters,
-  sort,
   facets,
   onFiltersChange,
-  onSortChange,
   onReset,
   layout = "inline",
-  sortHasSignal = true,
 }: ExploreCatalogFiltersProps) {
   const setFilters = onFiltersChange;
   const stackClass = layout === "sheet" ? "space-y-5" : "space-y-4";
@@ -187,30 +165,6 @@ export function ExploreCatalogFilters({
 
   return (
     <div className={stackClass} data-testid="explore-catalog-filters">
-      <label className="block space-y-1 text-xs font-medium text-muted-foreground max-w-xs">
-        Sort by
-        <Select value={sort} onValueChange={(value) => onSortChange(value as CatalogSortMode)}>
-          <SelectTrigger
-            className="min-h-11 w-full rounded-xl border-border/30 bg-background"
-            data-testid="explore-catalog-sort"
-          >
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            {(Object.keys(SORT_LABELS) as CatalogSortMode[]).map((mode) => (
-              <SelectItem key={mode} value={mode}>
-                {SORT_LABELS[mode]}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        {sort !== "curated" && !sortHasSignal ? (
-          <span className="block font-normal normal-case text-muted-foreground/80">
-            Not enough crew votes yet — showing our curated order.
-          </span>
-        ) : null}
-      </label>
-
       <FilterChipScroller>
         {PRIMARY_FILTERS.map((primary) => (
           <FilterChip

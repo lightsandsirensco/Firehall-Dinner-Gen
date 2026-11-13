@@ -116,7 +116,7 @@ export function HeroHeader({
             )}
             data-testid="text-app-tagline"
           >
-            Firefighter Built. Firehouse Tested.
+            Built for the Firehouse. Made for Crew Cooking.
           </p>
         )}
 

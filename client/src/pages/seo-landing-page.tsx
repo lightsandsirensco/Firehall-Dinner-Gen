@@ -183,14 +183,14 @@ export default function SeoLandingPage({ slug }: SeoLandingPageProps) {
                       Get rid of the &ldquo;What&apos;s for Dinner?&rdquo; debate every shift. Browse the full
                       recipe catalog, explore by category, spin the Classics Wheel when the crew cannot decide,
                       or use Find a Meal for a fast pick based on protein, time, and head count. Built by
-                      Firefighters. Tested in the Firehouse.
+                      Firefighters. Made for the Firehouse.
                     </p>
                   </div>
                 </section>
 
                 <section className="mt-12" aria-labelledby="landing-recipes-heading">
                   <h2 id="landing-recipes-heading" className="font-heading text-xl sm:text-2xl text-foreground">
-                    Firehouse-tested recipes
+                    Firehouse-ready recipes
                   </h2>
                   {!catalog ? (
                     <div className="mt-6 flex items-center gap-2 text-muted-foreground text-sm">

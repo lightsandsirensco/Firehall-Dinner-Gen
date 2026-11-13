@@ -38,7 +38,7 @@
     },
     {
       "name": "Plain Greek Yogurt",
-      "quantity": "1.5",
+      "quantity": "1 1/2",
       "unit": "Cups",
       "group": "Marinade"
     },
@@ -104,18 +104,24 @@
       "group": "Finish"
     },
     {
-      "name": "Basmati For Serving",
-      "quantity": "0",
-      "unit": "",
-      "notes": "cooked separately",
-      "group": "Base"
+      "name": "Kosher Salt",
+      "quantity": "2",
+      "unit": "Tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Sugar",
+      "quantity": "1",
+      "unit": "Tsp",
+      "notes": "optional, if the tomatoes are sharp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
       "title": "Rinse and start the rice",
-      "instruction": "Rinse basmati until water runs clear. Simmer with 1:1.5 rice-to-water and a pinch of salt 15 minutes; rest covered 10 minutes off heat. Fluff and hold at 200°F in a covered hotel pan.",
+      "instruction": "Rinse basmati until water runs clear. Simmer with 4 1/2 cups water and a pinch of salt 15 minutes; rest covered 10 minutes off heat. Fluff and hold at 200°F in a covered hotel pan.",
       "minutes": 25,
       "heatLevel": "medium"
     },
@@ -256,8 +262,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 13,
-    "totalCount": 13,
+    "matchedCount": 14,
+    "totalCount": 14,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -293,7 +299,7 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   },
   "avoidTags": [
     "onions",

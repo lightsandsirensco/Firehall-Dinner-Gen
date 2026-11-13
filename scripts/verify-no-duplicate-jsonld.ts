@@ -34,7 +34,6 @@ const ROUTES = [
   "/firefighter-meals",
   "/firefighter-bbq-recipes",
   "/families",
-  "/top-rated-recipes",
   "/hall-of-fame",
   "/generator",
   "/hall-meal-planner",

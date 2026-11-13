@@ -89,7 +89,7 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
       "crew meals",
     ],
     intro:
-      "A good firefighter meal feeds the whole crew, scales without a spreadsheet, and survives a call mid-prep. This hub is the starting point: quick shift dinners, high-protein plates, healthier options, and the firehouse classics every station rotates through, plus firehouse breakfast when the shift starts before the sun does. Every recipe below is written for station kitchens — crew-sized portions, honest cook times, and steps a rookie can follow solo. Built by firefighters. Tested on real shifts, not photographed for a blog.",
+      "A good firefighter meal feeds the whole crew, scales without a spreadsheet, and survives a call mid-prep. This hub is the starting point: quick shift dinners, high-protein plates, healthier options, and the firehouse classics every station rotates through, plus firehouse breakfast when the shift starts before the sun does. Every recipe below is written for station kitchens — crew-sized portions, honest cook times, and steps a rookie can follow solo. Built by firefighters. Written for real shifts, not for a food blog.",
     sections: [
       {
         heading: "What makes a meal work at the firehouse",
@@ -104,7 +104,7 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
       {
         heading: "Popular Firefighter Meals",
         intro:
-          "The dinners that show up on firehouse menus most often — reliable, crew-tested, and easy to defend when someone asks what's for dinner.",
+          "The dinners that show up on firehouse menus most often — reliable, crew-sized, and easy to defend when someone asks what's for dinner.",
         recipeSlugs: [
           "chicken-parm",
           "smash-burgers",
@@ -303,7 +303,7 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
     slug: "firefighter-recipes",
     path: "/firefighter-recipes",
     h1: "Firefighter Recipes",
-    title: "Firefighter Recipes — Firehouse-Tested Crew Dinners | Firehall Meals",
+    title: "Firefighter Recipes — Crew-Sized Firehouse Dinners | Firehall Meals",
     description:
       `${marketingRecipeCountCopy(APPROVED_CATALOG_TOTAL)} with crew portions, clear station-kitchen steps, and honest timing. From rookies to captains — built by firefighters.`,
     keywords: [
@@ -400,7 +400,7 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
         paragraphs: [
           "Firehouse recipes are how crews bond. The meal is not separate from the job — it is part of station life. Firehall Meals documents that culture with recipes firefighters share across departments, not content farm copy.",
           "Browse firehouse recipes by category, explore the Classics Wheel for crew favorites, or read our guides on station cooking workflow and grocery strategy.",
-          "Built by firefighters. Tested in the firehouse. That is the standard every recipe here is held to.",
+          "Built by firefighters. Made for the firehouse. That is the standard every recipe here is written to.",
         ],
       },
     ],
@@ -438,7 +438,7 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
     h1: "Fire Station Meals",
     title: "Fire Station Meals — Shift Dinners for the Crew | Firehall Meals",
     description:
-      "Fire station meals for busy shifts — quick plates, big-batch feeds, and crew dinners that survive interrupted cooking. Firehouse-tested recipes.",
+      "Fire station meals for busy shifts — quick plates, big-batch feeds, and crew dinners that survive interrupted cooking. Firehouse-ready recipes.",
     keywords: ["fire station meals", "station meals", "shift meals", "crew dinners"],
     intro:
       "Fire station meals have to work within shift reality — limited time, shared grocery budgets, and cooking that stops when the tones go. This collection focuses on station meals that fit those constraints: quick wins under forty-five minutes, slow-cooker setups that forgive interruptions, and batch recipes when the whole platoon eats together.",
@@ -524,7 +524,7 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
         heading: "Healthy options that still feel like firehouse food",
         paragraphs: [
           "Grilled proteins, rice bowls, lettuce-wrap nights, and vegetable-forward sheet pans belong in the firehouse rotation alongside comfort food — especially after heavy weeks.",
-          "Browse the healthy options category for firehouse-tested picks, or explore performance meals when you want macro-friendly plates with full crew scaling.",
+          "Browse the healthy options category for firehouse-ready picks, or explore performance meals when you want macro-friendly plates with full crew scaling.",
           "Smoothies and breakfast guides cover shift-start fuel without pretending a protein shake replaces a crew dinner.",
         ],
       },
@@ -640,7 +640,7 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
     h1: "BBQ Firefighter Recipes",
     title: "BBQ Firefighter Recipes — Grill & Smoker Firehouse Nights | Firehall Meals",
     description:
-      "BBQ firefighter recipes for grill and smoker nights — brisket, ribs, pulled pork, wings, and crew-sized sides. Firehouse-tested BBQ plates.",
+      "BBQ firefighter recipes for grill and smoker nights — brisket, ribs, pulled pork, wings, and crew-sized sides. Firehouse-ready BBQ plates.",
     keywords: [
       "bbq firefighter recipes",
       "firehouse bbq",

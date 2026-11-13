@@ -49,9 +49,27 @@
       "group": "Binders"
     },
     {
-      "name": "Ketchup Glaze",
+      "name": "Yellow Onion, Finely Diced",
+      "quantity": "1",
+      "unit": "large",
+      "group": "Main"
+    },
+    {
+      "name": "Ketchup",
       "quantity": "1",
       "unit": "Cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": "1/4",
+      "unit": "Cup",
+      "group": "Glaze"
+    },
+    {
+      "name": "Apple Cider Vinegar",
+      "quantity": "1",
+      "unit": "Tbsp",
       "group": "Glaze"
     },
     {
@@ -61,31 +79,50 @@
       "group": "Sides"
     },
     {
-      "name": "Butter And Milk",
-      "quantity": "1",
-      "unit": "batch",
+      "name": "Unsalted Butter",
+      "quantity": "1/2",
+      "unit": "Cup",
       "group": "Mashed potatoes"
+    },
+    {
+      "name": "Whole Milk",
+      "quantity": "2",
+      "unit": "Cups",
+      "notes": "1/2 cup for the meatloaf, 1 1/2 cups for the mash",
+      "group": "Mashed potatoes"
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": "2",
+      "unit": "Tsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
       "title": "Mix the meatloaf",
-      "instruction": "Combine ground beef, breadcrumbs, eggs, diced onion, salt, and pepper. Shape into two loaves on sheet pans — two loaves cook faster and slice cleaner for a crew.",
+      "instruction": "Combine ground beef, breadcrumbs, eggs, diced onion, 1/2 cup milk, 2 tsp salt, and 1 tsp pepper — mix by hand just until combined. Shape into two loaves on sheet pans — two loaves cook faster and slice cleaner for a crew.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Bake the loaves",
-      "instruction": "Bake at 375°F 50–60 minutes until internal temp hits 160°F and glaze caramelizes. Rest 10 minutes before slicing.",
+      "instruction": "Whisk ketchup, brown sugar, and vinegar; brush half over the loaves. Bake at 375°F 40 minutes, brush on the remaining glaze, and bake 10–20 minutes more until internal temp hits 160°F and the glaze caramelizes. Rest 10 minutes before slicing.",
       "minutes": 60,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
       "title": "Boil and mash potatoes",
-      "instruction": "Boil peeled russets until fork-tender. Drain; mash with butter and warm milk until smooth. Season aggressively — bland mash kills comfort food morale.",
+      "instruction": "Boil peeled russets until fork-tender. Drain; mash with butter and the remaining warm milk until smooth. Season aggressively with the remaining salt and pepper — bland mash kills comfort food morale.",
       "minutes": 25,
       "heatLevel": "medium"
     },
@@ -167,8 +204,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
+    "matchedCount": 12,
+    "totalCount": 12,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -184,7 +221,13 @@
         ]
       },
       {
-        "name": "Butter And Milk",
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Whole Milk",
         "allergens": [
           "dairy"
         ]
@@ -212,10 +255,10 @@
       {
         "flag": "dairy",
         "label": "Dairy-Free Adaptable",
-        "note": "Use a plant-based butter/margarine."
+        "note": "Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   },
   "avoidTags": []
 }

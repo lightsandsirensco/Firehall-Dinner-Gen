@@ -1,0 +1,338 @@
+diff --git a/shared/catalog-consolidation/phase5-redirects.ts b/shared/catalog-consolidation/phase5-redirects.ts
+index 3dcf427..8d152bb 100644
+--- a/shared/catalog-consolidation/phase5-redirects.ts
++++ b/shared/catalog-consolidation/phase5-redirects.ts
+@@ -72,6 +72,12 @@ export const PHASE5_CONSOLIDATIONS: Phase5Consolidation[] = [
+   { from: "chicken-caesar-wraps", to: "chicken-caesar", note: "exact: caesar chicken crossover" },
+   { from: "italian-sausage-veg-sheet-pan", to: "sheet-pan-sausage-peppers", note: "exact: sausage peppers sheet pan" },
+   { from: "sheet-pan-chicken-fajitas-lite", to: "sheet-pan-fajitas", note: "exact: sheet pan fajitas" },
++
++  // Recipe quality audit — templated copies and duplicate titles
++  { from: "veggie-egg-burritos", to: "hall-breakfast-burritos", note: "exact: templated copy of breakfast burritos (contains sausage)" },
++  { from: "protein-pancake-tray", to: "buttermilk-pancakes", note: "exact: templated copy of buttermilk pancakes" },
++  { from: "breakfast-sandwich-trays", to: "sausage-egg-cheese-sandwiches", note: "exact: templated copy of breakfast sandwiches" },
++  { from: "firehall-greek-chicken-bowls", to: "greek-chicken-bowls", note: "exact: duplicate title" },
+ ];
+ 
+ export const PHASE5_REDIRECT_MAP: Record<string, string> = Object.fromEntries(
+diff --git a/client/public/catalog/breakfast/index.json b/client/public/catalog/breakfast/index.json
+index b8eefab..34c1819 100644
+--- a/client/public/catalog/breakfast/index.json
++++ b/client/public/catalog/breakfast/index.json
+@@ -1,7 +1,7 @@
+ {
+   "version": 1,
+   "generatedAt": "2026-09-26T19:26:57.127Z",
+-  "recipeCount": 74,
++  "recipeCount": 72,
+   "collection": "primary",
+   "recipes": [
+     {
+@@ -813,71 +813,6 @@
+         "numericFilterEligible": true
+       }
+     },
+-    {
+-      "slug": "breakfast-sandwich-trays",
+-      "title": "Breakfast Sandwich Trays",
+-      "subtitle": "English muffins, sausage, eggs, and cheese for ten.",
+-      "description": "English muffins toasted, sausage cooked, eggs scrambled — assemble a full tray of breakfast sandwiches so ten people eat at once without waiting on one griddle.",
+-      "filters": [
+-        "feed_a_crew",
+-        "breakfast_sandwiches"
+-      ],
+-      "tags": [
+-        "sandwiches",
+-        "tray",
+-        "eggs",
+-        "cheddar"
+-      ],
+-      "totalTime": 33,
+-      "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
+-      "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
+-      "publishedAt": "2026-09-26T19:26:57.127Z",
+-      "collectionTier": "firehall_classic",
+-      "dietarySummary": {
+-        "confidence": "high",
+-        "flags": {
+-          "glutenFree": false,
+-          "dairyFree": false,
+-          "eggFree": false,
+-          "nutFree": true,
+-          "peanutFree": true,
+-          "soyFree": true,
+-          "shellfishFree": true,
+-          "fishFree": true,
+-          "porkFree": false,
+-          "vegetarian": false,
+-          "vegan": false
+-        },
+-        "adaptable": [
+-          {
+-            "flag": "gluten",
+-            "label": "Gluten-Free Adaptable",
+-            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+-          },
+-          {
+-            "flag": "dairy",
+-            "label": "Dairy-Free Adaptable",
+-            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+-          },
+-          {
+-            "flag": "pork",
+-            "label": "Pork-Free Adaptable",
+-            "note": "Swap in chicken or turkey sausage."
+-          }
+-        ]
+-      },
+-      "nutritionSummary": {
+-        "highProtein": false,
+-        "lowCarb": false,
+-        "healthy": false,
+-        "estimateAvailable": true,
+-        "calories": 563,
+-        "protein": 30,
+-        "carbs": 26,
+-        "fat": 38,
+-        "numericFilterEligible": true
+-      }
+-    },
+     {
+       "slug": "breakfast-sliders",
+       "title": "Breakfast Sliders",
+@@ -4320,71 +4255,6 @@
+         "fat": 19,
+         "numericFilterEligible": true
+       }
+-    },
+-    {
+-      "slug": "veggie-egg-burritos",
+-      "title": "Veggie Egg Burritos",
+-      "subtitle": "Peppers, spinach, and eggs wrapped for the vegetarian on shift.",
+-      "description": "Peppers, spinach, and scrambled eggs in flour tortillas — vegetarian option that still feeds the line with real flavor and hot sauce.",
+-      "filters": [
+-        "healthy_breakfasts",
+-        "feed_a_crew"
+-      ],
+-      "tags": [
+-        "burritos",
+-        "vegetarian",
+-        "peppers",
+-        "spinach"
+-      ],
+-      "totalTime": 34,
+-      "heroImage": "/images/breakfast/veggie-egg-burritos.jpg",
+-      "thumbImage": "/images/thumbs/breakfast/veggie-egg-burritos.jpg",
+-      "publishedAt": "2026-09-26T19:26:57.127Z",
+-      "collectionTier": "healthier_hall",
+-      "dietarySummary": {
+-        "confidence": "high",
+-        "flags": {
+-          "glutenFree": false,
+-          "dairyFree": false,
+-          "eggFree": false,
+-          "nutFree": true,
+-          "peanutFree": true,
+-          "soyFree": true,
+-          "shellfishFree": true,
+-          "fishFree": true,
+-          "porkFree": false,
+-          "vegetarian": false,
+-          "vegan": false
+-        },
+-        "adaptable": [
+-          {
+-            "flag": "gluten",
+-            "label": "Gluten-Free Adaptable",
+-            "note": "Use certified gluten-free tortillas or corn tortillas."
+-          },
+-          {
+-            "flag": "dairy",
+-            "label": "Dairy-Free Adaptable",
+-            "note": "Use a dairy-free cheese shred/block alternative."
+-          },
+-          {
+-            "flag": "pork",
+-            "label": "Pork-Free Adaptable",
+-            "note": "Swap in chicken or turkey sausage."
+-          }
+-        ]
+-      },
+-      "nutritionSummary": {
+-        "highProtein": true,
+-        "lowCarb": false,
+-        "healthy": false,
+-        "estimateAvailable": true,
+-        "calories": 874,
+-        "protein": 42,
+-        "carbs": 76,
+-        "fat": 44,
+-        "numericFilterEligible": true
+-      }
+     }
+   ]
+ }
+diff --git a/client/public/catalog/breakfast/performance/index.json b/client/public/catalog/breakfast/performance/index.json
+index f210012..f71eab4 100644
+--- a/client/public/catalog/breakfast/performance/index.json
++++ b/client/public/catalog/breakfast/performance/index.json
+@@ -1,7 +1,7 @@
+ {
+   "version": 1,
+   "generatedAt": "2026-09-26T19:26:57.127Z",
+-  "recipeCount": 5,
++  "recipeCount": 4,
+   "collection": "performance",
+   "recipes": [
+     {
+@@ -219,65 +219,6 @@
+         "fat": 18,
+         "numericFilterEligible": true
+       }
+-    },
+-    {
+-      "slug": "protein-pancake-tray",
+-      "title": "Protein Pancake Tray",
+-      "subtitle": "Protein-forward pancakes for training-day mornings.",
+-      "description": "Pancakes boosted with Greek yogurt or protein powder, griddled in batches and held warm. For crews who want muscle fuel without skipping breakfast.",
+-      "filters": [
+-        "feed_a_crew",
+-        "high_protein"
+-      ],
+-      "tags": [
+-        "pancakes",
+-        "tray-bake",
+-        "make-ahead"
+-      ],
+-      "totalTime": 37,
+-      "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
+-      "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
+-      "publishedAt": "2026-09-26T19:26:57.127Z",
+-      "collectionTier": "performance",
+-      "dietarySummary": {
+-        "confidence": "high",
+-        "flags": {
+-          "glutenFree": false,
+-          "dairyFree": false,
+-          "eggFree": false,
+-          "nutFree": true,
+-          "peanutFree": true,
+-          "soyFree": true,
+-          "shellfishFree": true,
+-          "fishFree": true,
+-          "porkFree": true,
+-          "vegetarian": true,
+-          "vegan": false
+-        },
+-        "adaptable": [
+-          {
+-            "flag": "gluten",
+-            "label": "Gluten-Free Adaptable",
+-            "note": "Use a certified gluten-free pancake/baking mix."
+-          },
+-          {
+-            "flag": "dairy",
+-            "label": "Dairy-Free Adaptable",
+-            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
+-          }
+-        ]
+-      },
+-      "nutritionSummary": {
+-        "highProtein": false,
+-        "lowCarb": false,
+-        "healthy": true,
+-        "estimateAvailable": true,
+-        "calories": 412,
+-        "protein": 13,
+-        "carbs": 62,
+-        "fat": 13,
+-        "numericFilterEligible": true
+-      }
+     }
+   ]
+ }
+diff --git a/client/public/catalog/hall-expansion/index.json b/client/public/catalog/hall-expansion/index.json
+index 301f647..83b980b 100644
+--- a/client/public/catalog/hall-expansion/index.json
++++ b/client/public/catalog/hall-expansion/index.json
+@@ -2,7 +2,7 @@
+   "version": 1,
+   "contentVersion": 2,
+   "generatedAt": "2026-09-26T19:26:56.066Z",
+-  "recipeCount": 138,
++  "recipeCount": 137,
+   "recipes": [
+     {
+       "slug": "smoked-turkey-breast",
+@@ -5435,71 +5435,6 @@
+         "numericFilterEligible": true
+       }
+     },
+-    {
+-      "slug": "firehall-greek-chicken-bowls",
+-      "title": "Greek Chicken Bowls",
+-      "subtitle": "Lemon-herb chicken with rice, vegetables, feta, and tzatziki",
+-      "category": "global_flavors",
+-      "cuisine": "greek",
+-      "protein": "chicken",
+-      "mealFormat": "bowl",
+-      "cookTime": 25,
+-      "difficulty": "easy",
+-      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+-      "thumbImage": "/images/thumbs/hall-expansion/firehall-greek-chicken-bowls.jpg",
+-      "tags": [
+-        "protein:chicken",
+-        "format:bowl",
+-        "category:crew_feeders",
+-        "bowl",
+-        "chicken",
+-        "healthy",
+-        "hall_expansion",
+-        "hall_expansion_74",
+-        "hall_meal",
+-        "firefighter_meal"
+-      ],
+-      "firefighterScore": 92,
+-      "popularityWeight": 7.8,
+-      "searchTerms": [
+-        "greek chicken bowls",
+-        "firehall greek dinner",
+-        "lemon herb chicken rice bowl",
+-        "tzatziki chicken bowl",
+-        "healthy crew dinner",
+-        "mediterranean chicken bowl",
+-        "meal prep greek bowls",
+-        "chicken dinner for 10"
+-      ],
+-      "dietarySummary": {
+-        "confidence": "high",
+-        "flags": {
+-          "glutenFree": true,
+-          "dairyFree": false,
+-          "eggFree": true,
+-          "nutFree": true,
+-          "peanutFree": true,
+-          "soyFree": true,
+-          "shellfishFree": true,
+-          "fishFree": true,
+-          "porkFree": true,
+-          "vegetarian": false,
+-          "vegan": false
+-        },
+-        "adaptable": []
+-      },
+-      "nutritionSummary": {
+-        "highProtein": true,
+-        "lowCarb": false,
+-        "healthy": true,
+-        "estimateAvailable": true,
+-        "calories": 590,
+-        "protein": 43,
+-        "carbs": 54,
+-        "fat": 22,
+-        "numericFilterEligible": true
+-      }
+-    },
+     {
+       "slug": "teriyaki-chicken-rice-bowls",
+       "title": "Teriyaki Chicken Rice Bowls",

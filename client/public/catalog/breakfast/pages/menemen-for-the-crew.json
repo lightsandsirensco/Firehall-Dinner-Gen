@@ -23,8 +23,8 @@
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "cup extra-virgin olive oil",
-      "quantity": "0.75",
+      "name": "extra-virgin olive oil",
+      "quantity": "3/4 cup",
       "notes": "quality oil matters here",
       "group": "Base"
     },
@@ -41,19 +41,19 @@
       "group": "Base"
     },
     {
-      "name": "cups chopped tomatoes",
-      "quantity": "2",
+      "name": "chopped tomatoes",
+      "quantity": "2 cups",
       "notes": "ripe fresh or drained canned",
       "group": "Base"
     },
     {
-      "name": "tsp hot paprika",
-      "quantity": "1",
+      "name": "hot paprika",
+      "quantity": "1 tsp",
       "group": "Seasoning"
     },
     {
-      "name": "tsp dried oregano",
-      "quantity": "0.5",
+      "name": "dried oregano",
+      "quantity": "1/2 tsp",
       "notes": "optional",
       "group": "Seasoning"
     },
@@ -64,8 +64,8 @@
       "group": "Protein"
     },
     {
-      "name": "cup chopped chives or parsley",
-      "quantity": "0.25",
+      "name": "chopped chives or parsley",
+      "quantity": "1/4 cup",
       "group": "Finish"
     }
   ],

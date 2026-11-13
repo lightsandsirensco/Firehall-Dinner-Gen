@@ -83,6 +83,6 @@ export const HOME_FAQ_ITEMS: FaqItem[] = [
   {
     question: "How is Firehall Meals different from a regular recipe site?",
     answer:
-      "Regular recipe sites assume a quiet kitchen and one plate. Firehall Meals is built around crew portions, honest cook times, and Cook Mode steps that survive getting pulled away mid-prep. Use it solo today — shared firehouse planning is rolling out through the Firehouse Operations private beta. Built by firefighters, tested on real shifts.",
+      "Regular recipe sites assume a quiet kitchen and one plate. Firehall Meals is built around crew portions, honest cook times, and Cook Mode steps that survive getting pulled away mid-prep. Use it solo today — shared firehouse planning is rolling out through the Firehouse Operations private beta. Built by firefighters for real shifts.",
   },
 ];

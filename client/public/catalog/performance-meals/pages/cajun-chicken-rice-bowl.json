@@ -97,6 +97,39 @@
       "quantity": "1",
       "unit": "cup",
       "notes": "for sauce"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "unsalted butter",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "optional, for the pan sauce"
+    },
+    {
+      "name": "green onions",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "hot sauce",
+      "quantity": "1",
+      "unit": "bottle",
+      "notes": "at the line"
     }
   ],
   "steps": [
@@ -110,7 +143,7 @@
     {
       "stepNumber": 2,
       "title": "Rinse and start the rice",
-      "instruction": "Rinse long-grain rice until water runs clear. Simmer in salted water or broth 18–20 minutes until grains separate with a fork — not sticky mush. Fluff and hold covered at 200°F in a baking dish while chicken sears.",
+      "instruction": "Rinse long-grain rice until water runs clear. Simmer with 4 1/2 cups salted water or broth 18–20 minutes until grains separate with a fork — not sticky mush. Fluff and hold covered at 200°F in a baking dish while chicken sears.",
       "minutes": 22,
       "heatLevel": "medium"
     },
@@ -131,7 +164,7 @@
     {
       "stepNumber": 5,
       "title": "Coat chicken for blackening",
-      "instruction": "Pat thighs dry; press Cajun blend onto both sides until fully coated and visibly red. Cold, wet chicken steams instead of chars — room-temp meat blackens faster and more evenly.",
+      "instruction": "Pat thighs dry; press Cajun blend onto both sides until fully coated and visibly red. Wet chicken steams instead of chars — pat it bone-dry for the best crust.",
       "minutes": 8,
       "heatLevel": ""
     },
@@ -246,8 +279,8 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 12,
-    "totalCount": 12,
+    "matchedCount": 18,
+    "totalCount": 18,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
@@ -255,11 +288,17 @@
         "allergens": [
           "gluten"
         ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
       }
     ],
     "flags": {
       "glutenFree": false,
-      "dairyFree": true,
+      "dairyFree": false,
       "eggFree": true,
       "nutFree": true,
       "peanutFree": true,
@@ -275,9 +314,14 @@
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
         "note": "Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-11-12T18:28:41.873Z"
   },
   "avoidTags": [
     "onions",
