@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useLocation } from "wouter";
-import { Badge } from "@/components/ui/badge";
+import { badgeVariants } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
@@ -71,6 +71,8 @@ interface SimplifiedGeneratorFormProps {
   onToggleFiltersExpanded?: () => void;
   /** When true, appliances come from hall settings — not editable */
   hallLinked?: boolean;
+  /** Filter options only (no summary or pick buttons), laid out in two columns from md up. */
+  optionsOnly?: boolean;
 }
 
 function Chip({
@@ -87,9 +89,11 @@ function Chip({
   className?: string;
 }) {
   return (
-    <Badge
-      variant={active ? "default" : "outline"}
+    <button
+      type="button"
+      aria-pressed={active}
       className={cn(
+        badgeVariants({ variant: active ? "default" : "outline" }),
         "cursor-pointer select-none text-xs sm:text-sm font-medium px-3 py-2 min-h-10 toggle-elevate touch-manipulation",
         active ? "toggle-elevated bg-primary text-primary-foreground ring-2 ring-primary/30" : "",
         className,
@@ -98,7 +102,7 @@ function Chip({
       data-testid={testId}
     >
       {children}
-    </Badge>
+    </button>
   );
 }
 
@@ -119,7 +123,9 @@ export function SimplifiedGeneratorForm({
   filtersExpanded = false,
   onToggleFiltersExpanded,
   hallLinked = false,
+  optionsOnly = false,
 }: SimplifiedGeneratorFormProps) {
+  const sectionClass = optionsOnly ? "col-span-2 md:col-span-1 space-y-1" : "col-span-2 space-y-1";
   const patch = (partial: Partial<SimplifiedGeneratorFilters>) =>
     onChange({ ...filters, ...partial });
 
@@ -172,7 +178,7 @@ export function SimplifiedGeneratorForm({
 
   const summaryLines = formatGeneratorSummary(filters).split("\n");
   const showCompactReturning =
-    returningMode && !hasRecipe && !filtersExpanded && !compact;
+    returningMode && !hasRecipe && !filtersExpanded && !compact && !optionsOnly;
 
   const generatePrimaryButton = (
     <Button
@@ -240,13 +246,14 @@ export function SimplifiedGeneratorForm({
   return (
     <div
       className={cn(
-        "space-y-3 lg:premium-card lg:rounded-xl lg:border lg:border-border/30 lg:bg-card/40 lg:backdrop-blur-sm lg:p-5",
+        "space-y-3",
+        !optionsOnly && "lg:premium-card lg:rounded-xl lg:border lg:border-border/30 lg:bg-card/40 lg:backdrop-blur-sm lg:p-5",
         compact && "space-y-2",
       )}
-      id="filters-panel"
+      id={optionsOnly ? undefined : "filters-panel"}
     >
-      <div className="grid grid-cols-2 gap-2">
-        <div className="col-span-2 space-y-1">
+      <div className={cn("grid grid-cols-2 gap-2", optionsOnly && "md:gap-x-8 md:gap-y-4")}>
+        <div className={sectionClass} role="group" aria-label="Crew size">
           <Label className="text-xs text-muted-foreground">Crew size</Label>
           <div className="grid grid-cols-5 gap-1.5">
             {CREW_SIZE_BUCKETS.map((bucket) => (
@@ -263,7 +270,7 @@ export function SimplifiedGeneratorForm({
           </div>
         </div>
 
-        <div className="col-span-2 space-y-1">
+        <div className={sectionClass} role="group" aria-label="Time">
           <Label className="text-xs text-muted-foreground">Time</Label>
           <div className="flex flex-wrap gap-1.5">
             {TONIGHT_TIME_WINDOWS.map((t) => (
@@ -279,7 +286,7 @@ export function SimplifiedGeneratorForm({
           </div>
         </div>
 
-        <div className="col-span-2 space-y-1">
+        <div className={sectionClass} role="group" aria-label="Protein">
           <Label className="text-xs text-muted-foreground">Protein</Label>
           <div className="flex flex-wrap gap-1.5">
             {SIMPLIFIED_PROTEINS.map((p) => (
@@ -295,7 +302,7 @@ export function SimplifiedGeneratorForm({
           </div>
         </div>
 
-        <div className="col-span-2 space-y-1">
+        <div className={sectionClass} role="group" aria-label="Style">
           <Label className="text-xs text-muted-foreground">Style</Label>
           <div className="flex flex-wrap gap-1.5">
             {TONIGHT_MEAL_STYLES.map((s) => (
@@ -311,7 +318,7 @@ export function SimplifiedGeneratorForm({
           </div>
         </div>
 
-        <div className="col-span-2 space-y-1">
+        <div className={sectionClass} role="group" aria-label="Appliances">
           <Label className="text-xs text-muted-foreground">
             {hallLinked ? "Firehouse appliances" : "Appliances (optional)"}
           </Label>
@@ -353,7 +360,7 @@ export function SimplifiedGeneratorForm({
           </p>
         )}
 
-        <div className="col-span-2 space-y-1">
+        <div className={sectionClass} role="group" aria-label="Avoid allergies">
           <Label className="text-xs text-muted-foreground">Avoid allergies</Label>
           <div className="flex flex-wrap gap-1.5">
             {SIMPLIFIED_ALLERGENS.map((a) => (
@@ -369,7 +376,7 @@ export function SimplifiedGeneratorForm({
           </div>
         </div>
 
-        <div className="col-span-2 space-y-1">
+        <div className={sectionClass} role="group" aria-label="Diet">
           <Label className="text-xs text-muted-foreground">Diet</Label>
           <div className="flex flex-wrap gap-1.5">
             {SIMPLIFIED_DIETS.map((d) => (
@@ -385,7 +392,7 @@ export function SimplifiedGeneratorForm({
           </div>
         </div>
 
-        <div className="col-span-2 space-y-1">
+        <div className={sectionClass} role="group" aria-label="Foods to avoid">
           <Label className="text-xs text-muted-foreground">
             Foods to avoid
             {!hasFoodPreferences && (
@@ -440,7 +447,7 @@ export function SimplifiedGeneratorForm({
         </label>
       )}
 
-      {!hasRecipe && !compact && (
+      {!hasRecipe && !compact && !optionsOnly && (
         <div
           className="rounded-lg border border-border/40 bg-muted/30 px-3 py-2 text-xs text-muted-foreground space-y-0.5"
           data-testid="generator-summary"
@@ -451,6 +458,7 @@ export function SimplifiedGeneratorForm({
         </div>
       )}
 
+      {!optionsOnly && (
       <div className="flex flex-col gap-2 pt-1">
         {!hasRecipe ? (
           generatePrimaryButton
@@ -499,6 +507,7 @@ export function SimplifiedGeneratorForm({
           </>
         )}
       </div>
+      )}
     </div>
   );
 }

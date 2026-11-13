@@ -1,7 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
-import { BRAND_NAME, BRAND_TAGLINE, CTA } from "@/lib/brand-copy";
+import { BRAND_NAME, BRAND_TAGLINE, CTA, RECIPE_IMAGE_DISCLOSURE } from "@/lib/brand-copy";
 import {
   LIGHTS_AND_SIRENS,
   LIGHTS_COPY,
@@ -11,12 +11,15 @@ import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
 import { BrandLogo } from "@/components/brand/brand-logo";
 import { HALL_FEEDBACK_COPY } from "@shared/hall-feedback/copy";
 import { HallFeedbackFooterLink } from "@/components/hall-feedback/hall-feedback-footer-link";
+import { FooterNewsletter } from "@/components/footer-newsletter";
 
 type SiteFooterProps = {
   variant?: "full" | "compact";
   className?: string;
   /** Extra bottom padding for mobile sticky CTAs */
   pbSafe?: boolean;
+  /** Defaults to on for the full footer only; the homepage has its own signup section. */
+  newsletter?: boolean;
 };
 
 const SUPPORT_MAILTO = "mailto:support@firehallmeals.com?subject=Firehall%20Meals%20support";
@@ -59,7 +62,7 @@ function ParentBrandCredit({ className }: { className?: string }) {
   );
 }
 
-export function SiteFooter({ variant = "full", className, pbSafe = false }: SiteFooterProps) {
+export function SiteFooter({ variant = "full", className, pbSafe = false, newsletter = variant === "full" }: SiteFooterProps) {
   if (variant === "compact") {
     return (
       <footer
@@ -71,6 +74,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
         data-testid="site-footer-compact"
       >
         <div className="max-w-[1400px] mx-auto px-page py-6 text-center space-y-2">
+          {newsletter && <FooterNewsletter className="mx-auto pb-4 mb-2 border-b border-border/15" />}
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground/70">
             {HALL_FEEDBACK_COPY.footerBeta}
           </p>
@@ -82,6 +86,9 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
             <LightsAndSirensLink variant="footer">Lights & Sirens Co.</LightsAndSirensLink>
           </p>
           <LegalLinksRow className="pt-2" />
+          <p className="text-[11px] text-muted-foreground/60" data-testid="footer-image-disclosure">
+            {RECIPE_IMAGE_DISCLOSURE}
+          </p>
           <ParentBrandCredit />
         </div>
       </footer>
@@ -118,6 +125,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
             <p className="mt-3 text-xs text-primary/80 font-semibold uppercase tracking-wider">
               {LIGHTS_AND_SIRENS.firefighterOwned}
             </p>
+            {newsletter && <FooterNewsletter className="mt-6" />}
           </div>
 
           <div className="grid gap-8 sm:grid-cols-3">
@@ -221,6 +229,9 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
 
         <div className="mt-6 pt-6 border-t border-border/15 flex flex-col items-center gap-3 text-center">
           <LegalLinksRow />
+          <p className="text-[11px] text-muted-foreground/60" data-testid="footer-image-disclosure">
+            {RECIPE_IMAGE_DISCLOSURE}
+          </p>
         </div>
 
         <div className="mt-6 pt-6 border-t border-border/15 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 text-center sm:text-left">

@@ -19,7 +19,7 @@ const LAND_ONE_LINERS = [
   "The rookie's learning tonight.",
   "This always hits after a rough shift.",
   "You know this smell already.",
-  "Firehouse-tested. Argument over.",
+  "Firehouse classic. Argument over.",
 ];
 
 const ROOKIE_JOKES = [

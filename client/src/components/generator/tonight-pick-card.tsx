@@ -25,6 +25,8 @@ interface TonightPickCardProps {
   /** In-page fallback target when the pick has no catalog recipe page. */
   recipeAnchorId?: string;
   onNotFeelingIt?: (reason: NotFeelingItReason, proteinLabel: string | null) => void;
+  /** Signed-in only: hide this meal from automatic picks for good (undo from Profile). */
+  onNotForUs?: () => void;
   /** e.g. "quicker · no beef" — shown under the reasons while session nudges are active. */
   adjustingSummary?: string;
   onResetAdjustments?: () => void;
@@ -60,6 +62,7 @@ export function TonightPickCard({
   pickAgainDisabled,
   recipeAnchorId,
   onNotFeelingIt,
+  onNotForUs,
   adjustingSummary,
   onResetAdjustments,
 }: TonightPickCardProps) {
@@ -236,6 +239,21 @@ export function TonightPickCard({
                   </Button>
                 ))}
               </div>
+              {onNotForUs && recipePath && (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  disabled={pickAgainDisabled}
+                  onClick={() => {
+                    setReasonsOpen(false);
+                    onNotForUs();
+                  }}
+                  className="w-full min-h-11 h-auto whitespace-normal text-[13px] leading-tight text-muted-foreground hover:text-foreground touch-manipulation"
+                  data-testid="button-not-for-us"
+                >
+                  Not for us — don't suggest this meal again
+                </Button>
+              )}
             </div>
           ) : (
             <button

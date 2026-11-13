@@ -7,7 +7,9 @@ import { SEO_HOME_H1, SEO_HOME_H1_SUPPORT } from "@shared/seo/constants";
 
 export const BRAND_NAME = "Firehall Meals";
 
-export const BRAND_TAGLINE = "Built by Firefighters. Tested in the Firehouse.";
+export const BRAND_TAGLINE = "Built by Firefighters. Made for the Firehouse.";
+
+export const RECIPE_IMAGE_DISCLOSURE = "Recipe images are illustrative. Your results may vary.";
 
 export const BRAND_MISSION =
   "Get rid of the \"What's for Dinner?\" debate every shift.";
@@ -143,13 +145,13 @@ export const COOK_MODE = {
 export const GENERATOR = {
   headline: "What's for dinner tonight?",
   headlineWithMeal: "Tonight's pick",
-  subline: "Crew size and protein — tap once. Under a minute to a firehouse-tested recipe.",
+  subline: "Crew size and protein — tap once. Under a minute to a firehouse-ready recipe.",
   sublineFocus: "Open the recipe, or pick again for another match.",
   loading: "Finding a match…",
   loadingAlt: "Trying another match…",
   emptyTitle: "Ready when you are",
-  emptyBody: "Tap Pick Tonight's Meal — crew-sized, firehouse-tested, ready to cook.",
-  emptyHint: "Need to tweak? Expand options below.",
+  emptyBody: "Tap Pick Tonight's Meal — crew-sized and ready to cook.",
+  emptyHint: "Need to tweak something? Open Filters above.",
   wheelLink: "Can't decide? Spin the Classics Wheel →",
 } as const;
 
@@ -172,7 +174,7 @@ export const HOME = {
     built: "Built by firefighters",
     free: "Free to cook",
     crew: "Crew-sized",
-    shift: "Shift-tested",
+    shift: "Shift-ready",
     beginner: "Clear steps",
     connect: "Optional firehouse link",
   },
@@ -245,7 +247,7 @@ export const HOME = {
   curatedRecipesLabel: "300+ curated recipes",
   curatedRecipesCount: "300+",
   featuredTitle: "Meals firefighters actually cook",
-  featuredLead: "Firehouse-tested picks — browse the full catalog anytime.",
+  featuredLead: "Firehouse-ready picks — browse the full catalog anytime.",
   seoTitle: "The meal app for firefighters",
   introTitle: "Firefighter meals sized for your shift",
   ctaBandTitle: "Ready for your next shift dinner?",

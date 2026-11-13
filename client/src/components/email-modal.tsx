@@ -1,18 +1,12 @@
 import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Mail, CheckCircle, Loader2 } from "lucide-react";
 import type { ClientRecipeResponse } from "@shared/schema";
 import { trackEvent, trackEmailSubmitted, setAnalyticsUserId } from "@/lib/analytics";
-import {
-  markEmailCaptureCompleted,
-  markEmailCaptureDismissed,
-  type EmailCaptureTrigger,
-} from "@/lib/email-capture";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
-import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
 import { MarketingConsentCheckbox } from "@/components/marketing-consent-checkbox";
 import {
   formatClientIngredientQty,
@@ -20,10 +14,6 @@ import {
   formatTemperaturesInText,
 } from "@shared/measurements";
 import { useMeasurementSystem } from "@/lib/measurement-preference";
-import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
-import { WithLightsAndSirensLinks } from "@/components/brand/lights-and-sirens-link";
-
-export type EmailModalVariant = "manual" | "earned";
 
 interface EmailModalProps {
   open: boolean;
@@ -31,27 +21,16 @@ interface EmailModalProps {
   recipe: ClientRecipeResponse;
   crewSize: number;
   healthinessLevel: string;
-  /** manual = user tapped Email; earned = save or 3rd generation */
-  variant?: EmailModalVariant;
-  captureTrigger?: EmailCaptureTrigger;
 }
 
-export function EmailModal({
-  open,
-  onOpenChange,
-  recipe,
-  crewSize,
-  healthinessLevel,
-  variant = "manual",
-  captureTrigger,
-}: EmailModalProps) {
+/** Opened only when the user taps "Email" on a recipe — never automatically. */
+export function EmailModal({ open, onOpenChange, recipe, crewSize, healthinessLevel }: EmailModalProps) {
   const [measurementSystem] = useMeasurementSystem();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [marketingConsent, setMarketingConsent] = useState(false);
-
-  const isEarned = variant === "earned";
+  const [subscribed, setSubscribed] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,7 +63,7 @@ export function EmailModal({
           ),
           macros: recipe.macros_per_serving,
           timestamp: new Date().toISOString(),
-          capture_source: isEarned ? captureTrigger || "earned" : "manual",
+          capture_source: "manual",
           marketing_consent: marketingConsent,
         }),
       });
@@ -100,10 +79,10 @@ export function EmailModal({
         return;
       }
 
+      setSubscribed(marketingConsent);
       setStatus("success");
       trackEmailSubmitted(recipe.title);
       setAnalyticsUserId(email);
-      markEmailCaptureCompleted();
     } catch (err: unknown) {
       console.error("[email-modal] Network error:", err);
       setStatus("error");
@@ -113,66 +92,47 @@ export function EmailModal({
   };
 
   const handleOpenChange = (nextOpen: boolean) => {
+    onOpenChange(nextOpen);
     if (!nextOpen) {
-      if (isEarned && status !== "success") {
-        markEmailCaptureDismissed();
-      }
-      onOpenChange(false);
-      if (status === "success") {
-        setTimeout(() => {
-          setStatus("idle");
-          setEmail("");
-        }, 300);
-      }
-      return;
+      setTimeout(() => {
+        setStatus("idle");
+        setErrorMsg("");
+        setMarketingConsent(false);
+        setSubscribed(false);
+      }, 300);
     }
-    onOpenChange(true);
   };
-
-  const title = isEarned
-    ? captureTrigger === "save"
-      ? "Save your crew favorites"
-      : "Keep tonight's winners handy"
-    : "Email this meal for next shift";
-
-  const description = isEarned
-    ? captureTrigger === "save"
-      ? "Get future firehall dinner ideas in your inbox — plus this recipe so the crew can make it again."
-      : "You've found a few good options. We'll send this winner and occasional station-ready dinner ideas — no newsletter fluff."
-    : null;
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent
         className="sm:max-w-[420px] gap-0 p-0 overflow-hidden border-border/60 max-sm:fixed max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-auto max-sm:left-0 max-sm:translate-x-0 max-sm:translate-y-0 max-sm:max-h-[92dvh] max-sm:rounded-t-2xl max-sm:w-full max-sm:overflow-y-auto pb-safe"
         data-testid="modal-email-recipe"
-        data-email-variant={variant}
       >
         <div className="p-6 pb-4">
           <DialogHeader className="space-y-2 text-left">
             <DialogTitle className="font-heading text-xl sm:text-2xl tracking-wide text-foreground pr-6">
-              {title}
+              Email this recipe
             </DialogTitle>
-            {description && (
-              <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
-            )}
-            {!isEarned && (
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Send <span className="text-foreground font-medium">{recipe.title}</span> to your inbox before
-                tones drop.
-              </p>
-            )}
+            <DialogDescription className="text-sm text-muted-foreground leading-relaxed">
+              We&apos;ll send <span className="text-foreground font-medium">{recipe.title}</span> with the
+              ingredients and steps for a crew of {crewSize}, ready for when you shop or cook.
+            </DialogDescription>
           </DialogHeader>
         </div>
 
         <div className="px-6 pb-6">
           {status === "success" ? (
-            <div className="flex flex-col items-center gap-3 py-4 fade-up" data-testid="email-success">
+            <div className="flex flex-col items-center gap-2 py-4 fade-up" data-testid="email-success">
               <CheckCircle className="w-11 h-11 text-[hsl(var(--success))] success-pop" />
               <p className="text-base font-heading tracking-wide text-foreground text-center">
-                You're on the list. Check your inbox.
+                Sent. Check your inbox.
               </p>
-              <p className="text-xs text-muted-foreground text-center">Saved meals and dinner ideas — when you need them.</p>
+              {subscribed && (
+                <p className="text-xs text-muted-foreground text-center">
+                  You&apos;ll also get occasional meal ideas. Unsubscribe anytime.
+                </p>
+              )}
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -204,6 +164,7 @@ export function EmailModal({
                 checked={marketingConsent}
                 onCheckedChange={setMarketingConsent}
                 disabled={status === "loading"}
+                label="Also send me occasional meal ideas (optional)."
               />
 
               <Button
@@ -217,31 +178,12 @@ export function EmailModal({
                 ) : (
                   <Mail className="w-4 h-4 mr-2" />
                 )}
-                {status === "loading" ? "Sending…" : "Email this recipe"}
+                {status === "loading" ? "Sending…" : "Send recipe"}
               </Button>
 
-              {isEarned && (
-                <Button
-                  type="button"
-                  variant="ghost"
-                  className="w-full text-muted-foreground hover:text-foreground"
-                  onClick={() => handleOpenChange(false)}
-                  disabled={status === "loading"}
-                  data-testid="button-email-not-now"
-                >
-                  Not now
-                </Button>
-              )}
-
               <p className="text-[11px] text-muted-foreground text-center leading-relaxed">
-                We&apos;ll always send this recipe. New firehouse meal ideas only if you check the box above.
+                We only send this recipe unless you tick the box.
               </p>
-              <div className="pt-2 border-t border-border/20 text-center">
-                <p className="text-[11px] text-muted-foreground leading-relaxed"><WithLightsAndSirensLinks text={LIGHTS_COPY.emailNote} /></p>
-                <div className="mt-2 flex justify-center">
-                  <LightsAndSirensCredit variant="compact" className="text-[11px]" />
-                </div>
-              </div>
             </form>
           )}
         </div>

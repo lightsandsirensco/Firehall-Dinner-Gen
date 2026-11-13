@@ -78,7 +78,7 @@ export function ExploreDiscoveryPage() {
         <div className={cn(app.main, "py-4 px-page")}>
           <h1 className={app.titlePage}>Explore</h1>
           <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-            Browse firehouse-tested recipes. Can&apos;t decide?{" "}
+            Browse firehouse-ready recipes. Can&apos;t decide?{" "}
             <Link href="/generator" className="font-semibold text-primary hover:underline">
               Pick Tonight&apos;s Meal
             </Link>
@@ -98,7 +98,7 @@ export function ExploreDiscoveryPage() {
         </ExploreErrorBoundary>
       </main>
 
-      <SiteFooter variant="compact" pbSafe />
+      <SiteFooter variant="compact" pbSafe newsletter />
     </div>
   );
 }

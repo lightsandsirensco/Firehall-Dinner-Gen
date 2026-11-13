@@ -1,10 +1,15 @@
 import { useState, useRef, useEffect, useCallback, memo, useMemo } from "react";
-import { SimplifiedGeneratorForm, SimplifiedStickyGenerate } from "@/components/generator/simplified-generator-form";
+import { SimplifiedStickyGenerate } from "@/components/generator/simplified-generator-form";
+import {
+  FilterChangeNotice,
+  GeneratorFiltersPanel,
+  compareFiltersToMeal,
+  type FilterChange,
+} from "@/components/generator/generator-filters-panel";
 import {
   simplifiedFiltersToGenerateRequest,
   CREW_BUCKET_TO_SIZE,
   type SimplifiedGeneratorFilters,
-  formatGeneratorSummary,
 } from "@shared/generator-simplified";
 import { ONE_TAP_MEAL_LABEL } from "@/lib/meal-outcome-copy";
 import { buildGenerateRequestInput } from "@shared/generate-request-defaults";
@@ -58,15 +63,11 @@ import { trackEvent, trackMealGenerationStarted, trackMealGenerated, trackMealGe
 import {
   getPersistedGenerationCount,
   recordSuccessfulGeneration,
-  scheduleEarnedEmailCapture,
-  shouldTriggerEmailCaptureOnGeneration,
-  cancelScheduledEmailCapture,
 } from "@/lib/email-capture";
-import type { EmailModalVariant } from "@/components/email-modal";
-import type { EmailCaptureTrigger } from "@/lib/email-capture";
 import type { ClientRecipeResponse } from "@shared/schema";
 import { useMealHeroPoll } from "@/lib/recipe-hero";
-import { Flame } from "lucide-react";
+import { ChevronLeft, ChevronRight, Flame } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { GENERATOR, CTA } from "@/lib/brand-copy";
 import { SiteFooter } from "@/components/site-footer";
 import { app } from "@/lib/design-tokens";
@@ -74,6 +75,8 @@ import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/site-header";
 import { FirstShiftTip } from "@/components/first-shift-tip";
 import { useToast } from "@/hooks/use-toast";
+import { ToastAction } from "@/components/ui/toast";
+import { hideRecipeFromPicks, unhideRecipe } from "@/lib/recipe-dislikes";
 import { hapticLight, hapticSuccess, hapticWarning } from "@/lib/haptics";
 import { shouldShowFirstShiftTip } from "@/lib/app-session";
 import { useGeneratorSeo } from "@/lib/seo/use-generator-seo";
@@ -194,6 +197,7 @@ const ResultsPanel = memo(function ResultsPanel({
   onGenerate,
   onPickAgain,
   onNotFeelingIt,
+  onNotForUs,
   adjustingSummary,
   onResetAdjustments,
   generateDisabled,
@@ -202,7 +206,15 @@ const ResultsPanel = memo(function ResultsPanel({
   voteOptionCount = 0,
   hideInitialEmpty = false,
   relaxationNoteInHeader = false,
+  onBack,
+  onForward,
+  filterChange,
+  onApplyFilters,
 }: {
+  onBack: () => void;
+  onForward: () => void;
+  filterChange: FilterChange | null;
+  onApplyFilters: () => void;
   loading: boolean;
   error: string | null;
   errorSmoked?: boolean;
@@ -218,6 +230,8 @@ const ResultsPanel = memo(function ResultsPanel({
   onGenerate: () => void;
   onPickAgain: () => void;
   onNotFeelingIt: (reason: NotFeelingItReason, proteinLabel: string | null) => void;
+  /** Signed-in only. */
+  onNotForUs?: () => void;
   adjustingSummary?: string;
   onResetAdjustments: () => void;
   generateDisabled: boolean;
@@ -230,8 +244,11 @@ const ResultsPanel = memo(function ResultsPanel({
   relaxationNoteInHeader?: boolean;
 }) {
   const recipeWithHero = useMealHeroPoll(recipe);
-  const showRecipe = !error && recipeWithHero;
+  // A failed re-pick keeps the meal the crew already has; full error screens are only for "no meal yet".
+  const showRecipe = recipeWithHero;
   const showEmpty = !loading && !error && !recipeWithHero;
+  const showFullError = !loading && Boolean(error) && !recipeWithHero;
+  const pickedCrewSize = recipeWithHero?.servings && recipeWithHero.servings > 0 ? recipeWithHero.servings : crewSizeFromFilters(filters);
 
   return (
     <div className="flex-1 min-w-0 overflow-x-hidden">
@@ -242,33 +259,70 @@ const ResultsPanel = memo(function ResultsPanel({
             <LoadingState variant="compact" mode="alternate" />
           </div>
           <div className="opacity-35 pointer-events-none select-none transition-opacity duration-300 blur-[0.5px]">
-            <TonightPickCard recipe={recipeWithHero} crewSize={crewSizeFromFilters(filters)} />
+            <TonightPickCard recipe={recipeWithHero} crewSize={pickedCrewSize} />
           </div>
         </div>
       )}
-      {!loading && error === "no_match" && (
+      {showFullError && error === "no_match" && (
         <div className="animate-in fade-in duration-300">
           <ErrorState type="no_match" />
         </div>
       )}
-      {!loading && error && error !== "no_match" && errorSmoked && (
+      {showFullError && error !== "no_match" && errorSmoked && (
         <div className="animate-in fade-in duration-300">
           <ErrorState type="generator_smoked" onSendFeedback={onSendFeedback} />
         </div>
       )}
-      {!loading && error && error !== "no_match" && !errorSmoked && (
+      {showFullError && error !== "no_match" && !errorSmoked && (
         <div className="animate-in fade-in duration-300">
-          <ErrorState type="error" message={error} title={errorTitle} />
+          <ErrorState type="error" message={error ?? undefined} title={errorTitle} />
         </div>
+      )}
+      {!loading && error && recipeWithHero && (
+        <p
+          role="alert"
+          className="mb-3 rounded-lg border border-destructive/40 bg-destructive/5 px-3 py-2 text-sm"
+          data-testid="repick-error-note"
+        >
+          Couldn&apos;t get a new pick just now — your current meal is still here. Try again in a moment.
+        </p>
       )}
       {!loading && showRecipe && recipeWithHero && (
         <div className="meal-reveal motion-reduce:animate-none" key={stableRecipeKey(recipeWithHero)}>
-          {historyNav.total > 1 && historyNav.index < historyNav.total - 1 && (
-            <div className="flex items-center justify-center mb-3" data-testid="history-position-indicator">
-              <span className="text-xs text-muted-foreground/60 font-mono tracking-widest uppercase">
-                Earlier pick · {historyNav.index + 1} of {historyNav.total}
+          {filterChange && (
+            <FilterChangeNotice change={filterChange} onApply={onApplyFilters} isLoading={loading} />
+          )}
+          {historyNav.total > 1 && (
+            <nav aria-label="Earlier picks" className="mb-3 flex items-center justify-between gap-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="min-h-10"
+                onClick={onBack}
+                disabled={historyNav.index <= 0}
+                data-testid="button-back"
+              >
+                <ChevronLeft className="w-4 h-4 mr-1" aria-hidden />
+                Previous
+              </Button>
+              <span
+                className="text-xs text-muted-foreground/70 font-mono tracking-widest uppercase"
+                data-testid="history-position-indicator"
+              >
+                Pick {historyNav.index + 1} of {historyNav.total}
               </span>
-            </div>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="min-h-10"
+                onClick={onForward}
+                disabled={historyNav.index >= historyNav.total - 1}
+                data-testid="button-forward"
+              >
+                Next
+                <ChevronRight className="w-4 h-4 ml-1" aria-hidden />
+              </Button>
+            </nav>
           )}
           {!relaxationNoteInHeader &&
             (recipeWithHero as ClientRecipeResponse & { _relaxation_note?: string })._relaxation_note && (
@@ -282,29 +336,44 @@ const ResultsPanel = memo(function ResultsPanel({
           <div className="mb-6">
             <TonightPickCard
               recipe={recipeWithHero}
-              crewSize={crewSizeFromFilters(filters)}
+              crewSize={pickedCrewSize}
               onPickAgain={onPickAgain}
               pickAgainDisabled={generateDisabled}
               recipeAnchorId={TONIGHT_RECIPE_ANCHOR_ID}
               onNotFeelingIt={onNotFeelingIt}
+              onNotForUs={onNotForUs}
               adjustingSummary={adjustingSummary}
               onResetAdjustments={onResetAdjustments}
             />
           </div>
-          {(recipeWithHero as ClientRecipeResponse & { _personalization_note?: string })._personalization_note && (
-            <p
-              className="mb-3 text-xs text-muted-foreground rounded-lg border border-primary/20 bg-primary/5 px-3 py-2"
+          {(recipeWithHero._personalization_reasons?.length || recipeWithHero._personalization_note) && (
+            <div
+              className="mb-3 rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-xs text-muted-foreground"
               data-testid="personalization-note"
             >
-              {(recipeWithHero as ClientRecipeResponse & { _personalization_note?: string })._personalization_note}
-            </p>
+              {recipeWithHero._picked_for_you && (
+                <p className="mb-0.5 font-semibold uppercase tracking-wider text-[11px] text-primary" data-testid="picked-for-you">
+                  Picked for you
+                </p>
+              )}
+              <ul className="space-y-0.5">
+                {(recipeWithHero._personalization_reasons?.length
+                  ? recipeWithHero._personalization_reasons
+                  : [recipeWithHero._personalization_note!]
+                )
+                  .slice(0, 2)
+                  .map((reason) => (
+                    <li key={reason}>{reason}</li>
+                  ))}
+              </ul>
+            </div>
           )}
           <GeneratorMealRepeatWarning recipe={recipeWithHero} />
           <div id={TONIGHT_RECIPE_ANCHOR_ID} className="scroll-mt-20">
             <RecipeCard
               key={stableRecipeKey(recipeWithHero)}
               recipe={recipeWithHero}
-              crewSize={crewSizeFromFilters(filters)}
+              crewSize={pickedCrewSize}
               onEmailClick={onEmailClick}
               onShoppingListClick={onShoppingListClick}
               onHallVoteClick={onHallVoteClick}
@@ -326,7 +395,6 @@ const ResultsPanel = memo(function ResultsPanel({
           onGenerate={onGenerate}
           generateDisabled={generateDisabled}
           ctaLabel={ONE_TAP_MEAL_LABEL}
-          summaryLine={formatGeneratorSummary(filters).replace(/\n/g, " · ")}
         />
       )}
     </div>
@@ -364,8 +432,6 @@ export default function Generator() {
   // ── Supporting state ──────────────────────────────────────────────────────
   const [lastTemplateId, setLastTemplateId] = useState<number | undefined>();
   const [emailModalOpen, setEmailModalOpen] = useState(false);
-  const [emailModalVariant, setEmailModalVariant] = useState<EmailModalVariant>("manual");
-  const [emailCaptureTrigger, setEmailCaptureTrigger] = useState<EmailCaptureTrigger | undefined>();
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
   const [measurementSystem] = useMeasurementSystem();
   const [hallVoteOpen, setHallVoteOpen] = useState(false);
@@ -396,6 +462,18 @@ export default function Generator() {
   const currentSignatureRef = useRef(signatureOf(restoredPick));
 
   const generationFiltersRef = useRef<SimplifiedGeneratorFilters | null>(null);
+  /** Filters the on-screen meal was picked with; a failed re-pick keeps it only if they still match. */
+  const shownMealFiltersRef = useRef<string | null>(null);
+  const [mealFilters, setMealFilters] = useState<SimplifiedGeneratorFilters | null>(null);
+  const pickFiltersRef = useRef(new WeakMap<ClientRecipeResponse, SimplifiedGeneratorFilters>());
+  const markShownMealFilters = useCallback(
+    (next: SimplifiedGeneratorFilters | null, pickedRecipe?: ClientRecipeResponse) => {
+      if (next && pickedRecipe) pickFiltersRef.current.set(pickedRecipe, next);
+      shownMealFiltersRef.current = next ? JSON.stringify(next) : null;
+      setMealFilters(next);
+    },
+    [],
+  );
   const generationCacheHitRef = useRef(false);
 
   // recipeRef: scroll target for the results panel.
@@ -435,11 +513,11 @@ export default function Generator() {
 
   useEffect(() => {
     persistGeneratorSession(filters);
-    syncHallProfileCrewSizeFromFilters(crewSizeFromFilters(filters));
     if (filtersPersistInitRef.current) {
       filtersPersistInitRef.current = false;
       return;
     }
+    syncHallProfileCrewSizeFromFilters(crewSizeFromFilters(filters));
     savePersonalGeneratorPrefs(filters);
   }, [filters]);
 
@@ -458,25 +536,6 @@ export default function Generator() {
       }),
     );
   }, [preferences, profile, detail?.hall, hallLinked]);
-
-  const openEarnedEmailCapture = useCallback((trigger: EmailCaptureTrigger) => {
-    setEmailModalVariant("earned");
-    setEmailCaptureTrigger(trigger);
-    trackEmailModalOpened();
-    trackEvent("email_capture_prompt_shown", { trigger });
-    setEmailModalOpen(true);
-  }, []);
-
-  useEffect(() => {
-    const onMealSaved = () => {
-      scheduleEarnedEmailCapture("save", () => openEarnedEmailCapture("save"), 1100);
-    };
-    window.addEventListener("firehall-meal-saved", onMealSaved);
-    return () => {
-      window.removeEventListener("firehall-meal-saved", onMealSaved);
-      cancelScheduledEmailCapture();
-    };
-  }, [openEarnedEmailCapture]);
 
   // ── Warmup only — no background /api/generate on mount (burned rate limits) ─
   useEffect(() => {
@@ -588,7 +647,7 @@ export default function Generator() {
         sample_size_bucket: personalization._personalization_sample_bucket || "none",
       });
     }
-    if (personalization._personalization_note) {
+    if (personalization._personalization_signal_types) {
       trackPersonalizedRecipeSelected({
         signal_types_used: personalization._personalization_signal_types || "",
         sample_size_bucket: personalization._personalization_sample_bucket || "none",
@@ -619,10 +678,6 @@ export default function Generator() {
     const totalGens = recordSuccessfulGeneration();
     setUserGenCount(totalGens);
 
-    if (shouldTriggerEmailCaptureOnGeneration(totalGens)) {
-      scheduleEarnedEmailCapture("generation", () => openEarnedEmailCapture("generation"), 1200);
-    }
-
     console.log(
       `[Generate] Applied: "${data.title}" | seq=${seq} | id=${(data as any)._id} | style=${data.meal_style}`
     );
@@ -635,7 +690,7 @@ export default function Generator() {
         block: isMobile ? "start" : "nearest",
       });
     });
-  }, [halls, openEarnedEmailCapture, profile, user?.user_id]);
+  }, [halls, profile, user?.user_id]);
 
   // ─────────────────────────────────────────────────────────────────────────
   // handleGenerate — fires one request at a time.
@@ -696,6 +751,7 @@ export default function Generator() {
         console.log(`[Generate] Prefetch hit: "${cached.title}" seq=${seq}`);
         generationCacheHitRef.current = true;
         applyRecipe(cached, seq);
+        markShownMealFilters(currentFilters, cached);
         schedulePrefetchAfterGeneration(payload);
         return;
       }
@@ -732,6 +788,7 @@ export default function Generator() {
 
       console.log(`[Generate] Received: "${data.title}" seq=${seq}`);
       applyRecipe(data, seq);
+      markShownMealFilters(currentFilters, data);
 
       if (!preferDifferentStyle) {
         putCached(filterKey, data);
@@ -749,9 +806,15 @@ export default function Generator() {
       let errorMsg: string;
       let title: string | undefined;
       const isGameDay = false;
+      // The on-screen meal may not satisfy changed filters (e.g. a newly added allergen).
+      if (shownMealFiltersRef.current !== JSON.stringify(currentFilters)) {
+        setRecipe(null);
+        markShownMealFilters(null);
+      }
       if (parsed.code === "no_match" || parsed.status === 404) {
         errorMsg = "no_match";
         setRecipe(null);
+        markShownMealFilters(null);
         hapticWarning();
       } else if (
         parsed.code === "category_thinned" ||
@@ -786,11 +849,14 @@ export default function Generator() {
       setError(errorMsg);
       setErrorTitle(title);
       trackMealGenerationFailed(parsed.code || String(parsed.status ?? "unknown"));
-      toast({
-        title: parsed.code === "rate_limited" ? "Give the line a breath" : "Generation failed",
-        description: errorMsg,
-        variant: "destructive",
-      });
+      // When the current meal stays on screen, its inline note already explains the failure.
+      if (shownMealFiltersRef.current === null) {
+        toast({
+          title: parsed.code === "rate_limited" ? "Give the line a breath" : "Generation failed",
+          description: errorMsg,
+          variant: "destructive",
+        });
+      }
     } finally {
       clearTimeout(timeout);
       if (seq === latestRequestSeq.current) {
@@ -799,7 +865,7 @@ export default function Generator() {
         abortControllerRef.current = null;
       }
     }
-  }, [applyRecipe, toast]);
+  }, [applyRecipe, toast, markShownMealFilters]);
 
   // ── Button handlers ───────────────────────────────────────────────────────
   const handleGenerateClick = useCallback(() => {
@@ -831,6 +897,33 @@ export default function Generator() {
     [recipe, filters, lastTemplateId, handleGenerate],
   );
 
+  const handleNotForUs = useCallback(async () => {
+    const slug = (recipe as (ClientRecipeResponse & { _slug?: string }) | null)?._slug;
+    if (!slug) return;
+    try {
+      await hideRecipeFromPicks(slug);
+    } catch {
+      toast({ title: "Couldn't hide that meal", description: "Try again in a moment.", variant: "destructive" });
+      return;
+    }
+    trackEvent("meal_not_for_us", { slug });
+    toast({
+      title: "We won't suggest that one again",
+      description: "Still in Explore. Undo any time in Profile → Hidden meals.",
+      action: (
+        <ToastAction
+          altText="Undo"
+          onClick={() => {
+            void unhideRecipe(slug).catch(() => undefined);
+          }}
+        >
+          Undo
+        </ToastAction>
+      ),
+    });
+    handleGenerate(filters, lastTemplateId, true);
+  }, [recipe, filters, lastTemplateId, handleGenerate, toast]);
+
   const handleResetAdjustments = useCallback(() => {
     clearSessionFeedback();
     setAdjustingSummary("");
@@ -843,13 +936,14 @@ export default function Generator() {
     historyIndexRef.current = newIdx;
     setHistoryNav(prev => ({ ...prev, index: newIdx }));
     setRecipe(mealHistoryRef.current[newIdx]);
+    markShownMealFilters(pickFiltersRef.current.get(mealHistoryRef.current[newIdx]) ?? null);
     setError(null);
     setErrorSmoked(false);
     setMealHistoryVersion((v) => v + 1);
     requestAnimationFrame(() => {
       recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
-  }, []);
+  }, [markShownMealFilters]);
 
   const handleForward = useCallback(() => {
     const newIdx = historyIndexRef.current + 1;
@@ -857,16 +951,20 @@ export default function Generator() {
     historyIndexRef.current = newIdx;
     setHistoryNav(prev => ({ ...prev, index: newIdx }));
     setRecipe(mealHistoryRef.current[newIdx]);
+    markShownMealFilters(pickFiltersRef.current.get(mealHistoryRef.current[newIdx]) ?? null);
     setError(null);
     setErrorSmoked(false);
     setMealHistoryVersion((v) => v + 1);
     requestAnimationFrame(() => {
       recipeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
-  }, []);
+  }, [markShownMealFilters]);
 
   const onFiltersChange = useCallback(
     (newFilters: SimplifiedGeneratorFilters) => {
+      // A restored or history meal has no recorded filters; treat the settings in place
+      // before this first edit as the ones it was picked with.
+      if (recipe && !mealFilters) markShownMealFilters(filters);
       if (hallLinked && detail?.hall) {
         setFilters(
           mergeAuthAndHallIntoFilters(newFilters, {
@@ -880,7 +978,12 @@ export default function Generator() {
       }
       setFilters(newFilters);
     },
-    [hallLinked, detail?.hall, preferences, profile],
+    [hallLinked, detail?.hall, preferences, profile, recipe, mealFilters, filters, markShownMealFilters],
+  );
+
+  const filterChange = useMemo(
+    () => (recipe ? compareFiltersToMeal(mealFilters, filters) : null),
+    [recipe, mealFilters, filters],
   );
 
   // ── Deep-link: ?classic=<slug> → curated dinner package ─────────────────
@@ -898,17 +1001,11 @@ export default function Generator() {
 
   // ── Modal openers — do NOT touch generation counters or recipe state ───────
   const onEmailClick = useCallback(() => {
-    setEmailModalVariant("manual");
-    setEmailCaptureTrigger(undefined);
     trackEmailModalOpened();
     setEmailModalOpen(true);
   }, []);
   const onShoppingListClick = useCallback(() => setShoppingListOpen(true), []);
   const onHallVoteClick = useCallback(() => setHallVoteOpen(true), []);
-
-  const scrollToFilters = useCallback(() => {
-    document.getElementById("filters-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
 
   const generateDisabled = loading;
 
@@ -929,7 +1026,7 @@ export default function Generator() {
       <main
         className={cn(
           app.main,
-          "pb-safe-tabs-cta lg:pb-12 transition-[padding] duration-500 ease-out scroll-momentum",
+          "max-w-5xl pb-safe-tabs-cta lg:pb-12 transition-[padding] duration-500 ease-out scroll-momentum",
           mealFocusMode ? "py-4 lg:py-6" : "py-6 sm:py-8",
         )}
       >
@@ -970,40 +1067,21 @@ export default function Generator() {
           </header>
         )}
 
-        <div
-          className={cn(
-            "flex flex-col transition-[gap] duration-500",
-            mealFocusMode
-              ? "gap-3 flex-col-reverse lg:grid lg:grid-cols-[minmax(260px,300px)_minmax(0,1fr)] lg:gap-10 lg:items-start"
-              : "gap-6 lg:grid lg:grid-cols-[minmax(280px,320px)_minmax(0,1fr)] lg:gap-10 lg:items-start",
-          )}
-        >
-          <aside
-            className={cn(
-              "w-full flex-shrink-0 lg:sticky lg:top-[calc(3.5rem+env(safe-area-inset-top,0px))] lg:self-start",
-              mealFocusMode && "lg:max-h-[calc(100dvh-5rem)] lg:overflow-y-auto lg:overscroll-contain",
-            )}
-          >
-            <SimplifiedGeneratorForm
-              filters={filters}
-              onChange={onFiltersChange}
-              onGenerate={handleGenerateClick}
-              onGenerateAnother={handleGenerateAnother}
-              isLoading={loading}
-              hasRecipe={!!recipe}
-              canGoBack={historyNav.index > 0}
-              canGoForward={historyNav.index < historyNav.total - 1}
-              onBack={handleBack}
-              onForward={handleForward}
-              returningMode
-              hallName={hallLinked ? activeHall?.hall_name ?? detail?.hall.hall_name : null}
-              filtersExpanded={filtersExpanded}
-              onToggleFiltersExpanded={() => setFiltersExpanded((v) => !v)}
-              hallLinked={hallLinked}
-            />
-          </aside>
+        <div className={cn("flex flex-col", mealFocusMode ? "gap-3" : "gap-5")}>
+          <GeneratorFiltersPanel
+            filters={filters}
+            onChange={onFiltersChange}
+            expanded={filtersExpanded}
+            onExpandedChange={setFiltersExpanded}
+            hallName={hallLinked ? activeHall?.hall_name ?? detail?.hall.hall_name : null}
+            hallLinked={hallLinked}
+            hasRecipe={!!recipe}
+            isLoading={loading}
+            pendingChange={filterChange}
+            onApply={handleGenerateClick}
+          />
 
-          <div ref={recipeRef} className="scroll-section min-w-0 w-full">
+          <div ref={recipeRef} className="scroll-section scroll-mt-20 min-w-0 w-full">
             <ResultsPanel
               loading={loading}
               error={error}
@@ -1020,6 +1098,7 @@ export default function Generator() {
               onGenerate={handleGenerateClick}
               onPickAgain={handleGenerateAnother}
               onNotFeelingIt={handleNotFeelingIt}
+              onNotForUs={user ? handleNotForUs : undefined}
               adjustingSummary={adjustingSummary || undefined}
               onResetAdjustments={handleResetAdjustments}
               generateDisabled={generateDisabled}
@@ -1028,6 +1107,10 @@ export default function Generator() {
               voteOptionCount={voteRecipes.length}
               hideInitialEmpty={false}
               relaxationNoteInHeader={mealFocusMode}
+              onBack={handleBack}
+              onForward={handleForward}
+              filterChange={filterChange}
+              onApplyFilters={handleGenerateClick}
             />
           </div>
         </div>
@@ -1041,10 +1124,8 @@ export default function Generator() {
             open={emailModalOpen}
             onOpenChange={setEmailModalOpen}
             recipe={recipe}
-            crewSize={crewSizeFromFilters(filters)}
+            crewSize={recipe.servings > 0 ? recipe.servings : crewSizeFromFilters(filters)}
             healthinessLevel={filters.healthiness}
-            variant={emailModalVariant}
-            captureTrigger={emailCaptureTrigger}
           />
           <ShoppingListModal
             open={shoppingListOpen}
