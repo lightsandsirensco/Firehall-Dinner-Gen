@@ -1398,7 +1398,7 @@ function buildSoup(def: GoldenRecipeDefinition, scale: number): { ingredients: I
       {
         stepNumber: 3,
         title: "Skim and serve",
-        instruction: `Skim fat if needed. ${def.title} tastes better after 20 minutes off heat — hold at 180°F for late shifts.`,
+        instruction: `Skim fat if needed. ${def.title} tastes better after resting 20 minutes — for late calls, keep it covered on low at 140°F or above.`,
         minutes: 10,
         heatLevel: "low",
       },

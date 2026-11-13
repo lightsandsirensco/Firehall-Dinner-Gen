@@ -254,7 +254,7 @@ setInterval(() => {
       sessionSpoonacularIdStore.delete(keys[i]);
     }
   }
-}, 600_000);
+}, 600_000).unref();
 
 const SESSION_MAX_SIGNATURES = 15;
 const sessionSignatureStore = new Map<string, string[]>();

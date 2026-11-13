@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { SCHEDULE_LIMITS } from "../schedule/engine.js";
+import { DEPARTMENTS } from "../shopping/types.js";
 
 const shiftKey = z.string().trim().min(1).max(64);
 const slotKey = z.string().trim().min(1).max(200);
@@ -94,6 +95,7 @@ export const shiftListOpSchema = z
         })
         .strict(),
       z.object({ type: z.literal("remove"), itemId }).strict(),
+      z.object({ type: z.literal("move"), itemId, department: z.enum(DEPARTMENTS) }).strict(),
       z.object({ type: z.literal("clear_checked") }).strict(),
       z.object({ type: z.literal("undo") }).strict(),
     ]),

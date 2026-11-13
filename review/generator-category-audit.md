@@ -1,6 +1,6 @@
 # Generator category audit
 
-Generated: 2026-11-13T01:08:24.728Z
+Generated: 2026-11-13T02:17:37.703Z
 
 | Category | Label | OK | Failures | Broadened |
 |----------|-------|-----|----------|-----------|
@@ -12,6 +12,6 @@ Generated: 2026-11-13T01:08:24.728Z
 | healthy_options | Healthy Options | 25/25 | 0 | 0 |
 | easy_cleanup | Easy Cleanup | 25/25 | 0 | 0 |
 | feed_a_crowd | Feed a Crowd | 25/25 | 0 | 0 |
-| game_day | Game Day | 0/25 | 25 | 0 |
+| game_day | Game Day | 25/25 | 0 | 25 |
 
-**FAIL** — 25 mismatches.
+**PASS** — 0 out-of-category results.

@@ -17,4 +17,5 @@ export * from "./shopping-service";
 export * from "./purchase";
 export * from "./persistence";
 export * from "./recipe-inputs";
+export * from "./export";
 export { generateId } from "./id";

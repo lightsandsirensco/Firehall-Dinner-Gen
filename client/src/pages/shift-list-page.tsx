@@ -1,15 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "wouter";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { ChevronDown, ChevronUp, PackageCheck, Plus, ShoppingCart, Trash2, Undo2, X } from "lucide-react";
+import { ChevronDown, ChevronUp, PackageCheck, ShoppingCart, Trash2, Undo2 } from "lucide-react";
+import { AisleShoppingList } from "@/components/shopping/aisle-shopping-list";
+import { ListExportActions } from "@/components/shopping/list-export-actions";
+import { shoppingItemsToAisleRows } from "@/lib/shopping/aisle-rows";
 import { AppTopBar } from "@/components/app-shell/app-top-bar";
 import { SiteFooter } from "@/components/site-footer";
 import { LIST, SHIFT } from "@/lib/app-nav";
 import { useNoIndex } from "@/lib/seo/use-noindex";
 import { LoadingState } from "@/components/loading-state";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
 import { useAuth } from "@/lib/auth/context";
 import { useToast } from "@/hooks/use-toast";
 import { trackShiftPlanEvent } from "@/lib/analytics";
@@ -23,11 +24,14 @@ import { fetchShiftPlan, shiftPlanQueryKey } from "@/lib/shift-plan-api";
 import { fetchShiftList, openShiftList, sendShiftListOp, shiftListQueryKey } from "@/lib/shift-list-api";
 import { getPantryProfile, savePantryProfile } from "@/lib/shopping/shopping-store";
 import {
+  aisleSectionsFromItems,
   formatShoppingItemQuantity,
-  groupByDepartment,
   setStockLevel,
   splitPantryItems,
+  type AisleExportDocument,
+  type Department,
   type ShoppingListItem,
+  type StockLevel,
 } from "@shared/shopping";
 import type { ShiftListOp } from "@shared/shift-plan/shopping";
 import type { ShiftShoppingListResponse, ShiftShoppingListView } from "@shared/shift-plan/types";
@@ -51,7 +55,6 @@ function ShiftListBody({ shiftKey, shiftStartLocal }: { shiftKey: string; shiftS
   const [measurementSystem] = useMeasurementSystem();
   const [opened, setOpened] = useState(false);
   const [openError, setOpenError] = useState<string | null>(null);
-  const [manualName, setManualName] = useState("");
   const [showPantry, setShowPantry] = useState(false);
   const [showOptional, setShowOptional] = useState(false);
   const pendingOps = useRef(0);
@@ -129,26 +132,39 @@ function ShiftListBody({ shiftKey, shiftStartLocal }: { shiftKey: string; shiftS
     });
   };
 
-  const addManual = (e: React.FormEvent) => {
-    e.preventDefault();
-    const name = manualName.trim();
-    if (!name) return;
-    setManualName("");
+  const addManual = (name: string) => {
     void runOp({ type: "add_manual", name }).then((ok) => {
       if (ok) trackShiftPlanEvent("shift_list_manual_item_added", { shift_key: shiftKey });
-      else setManualName(name);
     });
   };
 
-  const needThis = (item: ShoppingListItem) => {
-    savePantryProfile(setStockLevel(getPantryProfile(), item.canonicalKey, "never"));
+  const move = (itemId: string, department: Department) => {
+    void runOp({ type: "move", itemId, department }, (v) => ({
+      ...v,
+      list: {
+        ...v.list,
+        items: v.list.items.map((i) => (i.id === itemId ? { ...i, department, departmentOverride: true } : i)),
+      },
+    }));
+  };
+
+  const setPantry = (item: ShoppingListItem, level: StockLevel) => {
+    savePantryProfile(setStockLevel(getPantryProfile(), item.canonicalKey, level));
     void open(false);
   };
 
   const items = view?.list.items ?? [];
   const { active, skipped } = useMemo(() => splitPantryItems(items), [items]);
-  const grouped = useMemo(() => groupByDepartment(active), [active]);
+  const rows = useMemo(() => shoppingItemsToAisleRows(active, measurementSystem), [active, measurementSystem]);
   const checkedCount = active.filter((i) => i.checked).length;
+
+  const exportDocument = (): AisleExportDocument => ({
+    title: `Shift shopping list — ${formatLocalDay(shiftStartLocal)}`,
+    subtitle: view ? view.meals.map((m) => `${m.label}: ${m.recipeTitle} (serves ${m.crewSize})`).join(" · ") : undefined,
+    sections: aisleSectionsFromItems(active, measurementSystem),
+    extras: skipped.length > 0 ? [{ title: "Already in the pantry — quick check", lines: skipped.map((i) => i.displayName) }] : undefined,
+    footer: "Firehall Meals — firehallmeals.com",
+  });
   const optional = view?.list.excludedOptional ?? [];
   const multiDay = new Set(view?.meals.map((m) => m.dayIndex)).size > 1;
 
@@ -189,10 +205,18 @@ function ShiftListBody({ shiftKey, shiftStartLocal }: { shiftKey: string; shiftS
         ) : null}
       </header>
 
-      <div className="flex min-h-9 items-center justify-between gap-2">
-        <p className="text-xs text-muted-foreground tabular-nums" data-testid="shift-list-progress">
-          {active.length > 0 ? `${checkedCount} of ${active.length} in the cart` : "Nothing to buy"}
-        </p>
+      <div className="flex min-h-9 flex-wrap items-center justify-between gap-2">
+        {active.length > 0 ? (
+          <ListExportActions
+            getDocument={exportDocument}
+            onAction={(action) => trackShiftPlanEvent("shift_list_exported", { shift_key: shiftKey, action })}
+            testIdPrefix="shift-list-export"
+          />
+        ) : (
+          <p className="text-xs text-muted-foreground" data-testid="shift-list-progress">
+            Nothing to buy
+          </p>
+        )}
         {view.canUndo ? (
           <Button
             variant="ghost"
@@ -207,72 +231,27 @@ function ShiftListBody({ shiftKey, shiftStartLocal }: { shiftKey: string; shiftS
         ) : null}
       </div>
 
-      <form onSubmit={addManual} className="flex gap-2">
-        <Input
-          value={manualName}
-          onChange={(e) => setManualName(e.target.value)}
-          placeholder="Add an item (e.g. coffee filters)"
-          maxLength={80}
-          className="min-h-11"
-          aria-label="Add an item"
-          data-testid="input-shift-list-manual"
-        />
-        <Button type="submit" disabled={!manualName.trim()} className="min-h-11 gap-1.5" data-testid="button-shift-list-add">
-          <Plus className="h-4 w-4" aria-hidden />
-          Add
-        </Button>
-      </form>
+      <AisleShoppingList
+        listId={`shift:${shiftKey}`}
+        rows={rows}
+        onToggle={(row) => {
+          const item = active.find((i) => i.id === row.id);
+          if (item) toggle(item);
+        }}
+        onMove={(row, department) => move(row.id, department)}
+        onHave={(row) => {
+          const item = active.find((i) => i.id === row.id);
+          if (item) setPantry(item, "always");
+        }}
+        onRemove={(row) => void runOp({ type: "remove", itemId: row.id })}
+        canRemove={(row) => active.find((i) => i.id === row.id)?.isManual === true}
+        onAdd={addManual}
+        addPlaceholder="Add an item (e.g. coffee filters)"
+        testIdPrefix="shift-list"
+      />
 
-      {grouped.length > 0 ? (
+      {active.length > 0 ? (
         <div className="space-y-5">
-          {grouped.map(({ department, items: deptItems }) => (
-            <section key={department} className="space-y-1.5">
-              <h2 className="px-0.5 text-xs font-medium text-muted-foreground/80">{department}</h2>
-              <ul className="space-y-1">
-                {deptItems.map((item) => {
-                  const quantity = item.quantityLabel ? formatShoppingItemQuantity(item, measurementSystem) : "";
-                  return (
-                    <li
-                      key={item.id}
-                      className={cn(app.cardSurface, "flex items-center gap-3 px-3 py-2", item.checked && "opacity-50")}
-                      data-testid={`shift-list-item-${item.canonicalKey}`}
-                    >
-                      <label className="flex min-h-11 min-w-0 flex-1 cursor-pointer items-center gap-3 touch-manipulation">
-                        <Checkbox
-                          checked={item.checked}
-                          onCheckedChange={() => toggle(item)}
-                          aria-label={`${item.displayName}${quantity ? `, ${quantity}` : ""}`}
-                          data-testid={`checkbox-shift-list-${item.id}`}
-                        />
-                        <span className="min-w-0">
-                          <span className={cn("block text-sm font-medium", item.checked && "line-through")}>
-                            {item.displayName}
-                            {quantity ? <span className="font-normal text-muted-foreground"> — {quantity}</span> : null}
-                          </span>
-                          {item.contributions.length > 1 ? (
-                            <span className="block truncate text-[11px] text-muted-foreground">
-                              {[...new Set(item.contributions.map((c) => c.recipeTitle))].join(", ")}
-                            </span>
-                          ) : null}
-                        </span>
-                      </label>
-                      {item.isManual ? (
-                        <button
-                          type="button"
-                          onClick={() => void runOp({ type: "remove", itemId: item.id })}
-                          className="grid h-10 w-10 shrink-0 place-items-center rounded-full text-muted-foreground hover-elevate touch-manipulation"
-                          aria-label={`Remove ${item.displayName}`}
-                          data-testid={`button-shift-list-remove-${item.id}`}
-                        >
-                          <X className="h-4 w-4" aria-hidden />
-                        </button>
-                      ) : null}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-          ))}
           {checkedCount > 0 ? (
             <Button
               variant="outline"
@@ -322,7 +301,7 @@ function ShiftListBody({ shiftKey, shiftStartLocal }: { shiftKey: string; shiftS
                   </span>
                   <button
                     type="button"
-                    onClick={() => needThis(item)}
+                    onClick={() => setPantry(item, "never")}
                     className="min-h-10 shrink-0 rounded-md px-2 text-xs font-medium text-primary hover-elevate touch-manipulation"
                     data-testid={`button-shift-list-need-${item.id}`}
                   >

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "wouter";
 import {
   ShoppingCart,
@@ -13,14 +13,15 @@ import {
   X,
 } from "lucide-react";
 import { MeSubpageShell } from "@/components/app-shell/me-subpage-shell";
+import { AisleShoppingList } from "@/components/shopping/aisle-shopping-list";
+import { ListExportActions } from "@/components/shopping/list-export-actions";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { useMeasurementSystem } from "@/lib/measurement-preference";
+import { shoppingItemsToAisleRows } from "@/lib/shopping/aisle-rows";
 import { useShoppingSession } from "@/hooks/use-shopping-session";
-import { formatShoppingItemQuantity } from "@shared/shopping";
+import { aisleSectionsFromItems, formatShoppingItemQuantity, type AisleExportDocument } from "@shared/shopping";
 
 export default function MeShoppingListPage() {
   const [measurementSystem] = useMeasurementSystem();
@@ -28,33 +29,35 @@ export default function MeShoppingListPage() {
     session,
     activeItems,
     pantrySkippedItems,
-    groupedList,
     canUndo,
     removeRecipe,
     setRecipeCrewSize,
     addManualItem,
     removeItem,
     toggleItemChecked,
+    moveItem,
     clearCheckedItems,
     undo,
     startNewSession,
-    cyclePantryStockLevel,
     setPersonalStockLevel,
   } = useShoppingSession();
 
-  const [manualName, setManualName] = useState("");
   const [showSkipped, setShowSkipped] = useState(false);
 
   const totalItems = activeItems.length;
   const checkedCount = activeItems.filter((i) => i.checked).length;
   const hasContent = session.recipes.length > 0 || session.list.items.length > 0;
+  const rows = useMemo(() => shoppingItemsToAisleRows(activeItems, measurementSystem), [activeItems, measurementSystem]);
 
-  const handleAddManual = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!manualName.trim()) return;
-    addManualItem({ name: manualName });
-    setManualName("");
-  };
+  const exportDocument = (): AisleExportDocument => ({
+    title: "Shopping List",
+    subtitle: session.recipes.length > 0 ? `For ${session.recipes.map((r) => `${r.title} (serves ${r.crewSize})`).join(", ")}` : undefined,
+    sections: aisleSectionsFromItems(activeItems, measurementSystem),
+    extras: pantrySkippedItems.length > 0
+      ? [{ title: "Already in the pantry — quick check", lines: pantrySkippedItems.map((i) => i.displayName) }]
+      : undefined,
+    footer: "Firehall Meals — firehallmeals.com",
+  });
 
   const handleStartNew = () => {
     if (hasContent && !window.confirm("Start a new shopping list? This clears your current list from this device.")) {
@@ -71,7 +74,7 @@ export default function MeShoppingListPage() {
     >
       <div className="flex items-center justify-between gap-2 px-0.5">
         <p className="text-xs text-muted-foreground">
-          {totalItems > 0 ? `${checkedCount} of ${totalItems} in the cart` : "Nothing to buy yet"}
+          {totalItems > 0 ? `${totalItems} item${totalItems === 1 ? "" : "s"} to buy` : "Nothing to buy yet"}
         </p>
         <div className="flex gap-2">
           {canUndo && (
@@ -150,95 +153,32 @@ export default function MeShoppingListPage() {
         </section>
       )}
 
-      <form onSubmit={handleAddManual} className="flex gap-2 px-0.5">
-        <Input
-          value={manualName}
-          onChange={(e) => setManualName(e.target.value)}
-          placeholder="Add an item (e.g. paper towels)"
-          className="min-h-11"
-          data-testid="input-shopping-manual-item"
-        />
-        <Button type="submit" disabled={!manualName.trim()} className="min-h-11 gap-1.5" data-testid="button-shopping-add-manual">
-          <Plus className="w-4 h-4" />
-          Add
-        </Button>
-      </form>
+      {activeItems.length > 0 ? (
+        <ListExportActions getDocument={exportDocument} testIdPrefix="shopping-export" />
+      ) : null}
 
-      {groupedList.length > 0 ? (
-        <div className="space-y-5">
-          {groupedList.map(({ department, items }) => (
-            <section key={department} aria-labelledby={`dept-${department}`} className="space-y-1.5">
-              <h3
-                id={`dept-${department}`}
-                className="px-0.5 text-xs font-medium text-muted-foreground/80"
-              >
-                {department}
-              </h3>
-              <ul className={cn("space-y-1", app.stagger)}>
-                {items.map((item) => (
-                  <li
-                    key={item.id}
-                    className={cn(
-                      app.cardSurface,
-                      "flex items-center gap-3 px-3 py-2.5 transition-opacity duration-200",
-                      item.checked && "opacity-50",
-                    )}
-                    data-testid={`shopping-item-${item.id}`}
-                  >
-                    <Checkbox
-                      checked={item.checked}
-                      onCheckedChange={() => toggleItemChecked(item.id)}
-                      aria-label={`Mark ${item.displayName} ${item.checked ? "not bought" : "bought"}`}
-                      data-testid={`checkbox-shopping-item-${item.id}`}
-                    />
-                    <div className="min-w-0 flex-1">
-                      <p className={cn("text-sm font-medium text-foreground transition-all duration-200", item.checked && "line-through")}>
-                        {item.displayName}
-                        {item.quantityLabel && (
-                          <span className="ml-1.5 font-normal text-muted-foreground">
-                            — {formatShoppingItemQuantity(item, measurementSystem)}
-                          </span>
-                        )}
-                      </p>
-                      {!item.isManual && item.contributions.length > 1 && (
-                        <p className="text-[11px] text-muted-foreground">
-                          From {item.contributions.map((c) => c.recipeTitle).join(", ")}
-                        </p>
-                      )}
-                    </div>
-                    <div className="flex items-center gap-1 flex-shrink-0">
-                      <button
-                        type="button"
-                        onClick={() => cyclePantryStockLevel(item.canonicalKey)}
-                        className="grid h-10 w-10 place-items-center rounded-full text-muted-foreground hover-elevate active-elevate-2 tap-scale hover:text-foreground touch-manipulation"
-                        aria-label="I always have this"
-                        title="I always have this"
-                        data-testid={`button-shopping-pantry-${item.id}`}
-                      >
-                        <PackageCheck className="w-3.5 h-3.5" />
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => removeItem(item.id)}
-                        className="grid h-10 w-10 place-items-center rounded-full text-muted-foreground hover-elevate active-elevate-2 tap-scale hover:text-destructive touch-manipulation"
-                        aria-label={`Remove ${item.displayName}`}
-                        data-testid={`button-shopping-remove-item-${item.id}`}
-                      >
-                        <Trash2 className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
-          {checkedCount > 0 && (
-            <Button variant="outline" onClick={clearCheckedItems} className="w-full gap-1.5" data-testid="button-shopping-clear-checked">
-              <Trash2 className="w-4 h-4" />
-              Clear {checkedCount} checked item{checkedCount === 1 ? "" : "s"}
-            </Button>
-          )}
-        </div>
+      <AisleShoppingList
+        listId={`me:${session.id}`}
+        rows={rows}
+        onToggle={(row) => toggleItemChecked(row.id)}
+        onMove={(row, department) => moveItem(row.id, department)}
+        onHave={(row) => {
+          const item = activeItems.find((i) => i.id === row.id);
+          if (item) setPersonalStockLevel(item.canonicalKey, "always");
+        }}
+        onRemove={(row) => removeItem(row.id)}
+        onAdd={(name) => addManualItem({ name })}
+        addPlaceholder="Add an item (e.g. paper towels)"
+        testIdPrefix="shopping"
+      />
+
+      {activeItems.length > 0 ? (
+        checkedCount > 0 && (
+          <Button variant="outline" onClick={clearCheckedItems} className="w-full gap-1.5" data-testid="button-shopping-clear-checked">
+            <Trash2 className="w-4 h-4" />
+            Clear {checkedCount} checked item{checkedCount === 1 ? "" : "s"}
+          </Button>
+        )
       ) : (
         <div
           className={cn(app.panel, "fade-up text-center py-12 px-6 space-y-4")}

@@ -1,6 +1,6 @@
 # Nutrition Integrity Audit — Firehall Meals
 
-Generated: 2026-11-13T01:14:45.786Z
+Generated: 2026-11-13T02:35:47.871Z
 Mode: **audit**
 
 ## Executive summary

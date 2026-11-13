@@ -6,7 +6,7 @@
  */
 import { initCacheStore } from "../server/cache-store.js";
 import { initCuratedRecipeStore } from "../server/curated-recipe-store.js";
-import { pickGolden100ForGenerate } from "../server/generation/pick-local-recipes.js";
+import { getDefaultGeneratorPoolSlugs, pickGolden100ForGenerate } from "../server/generation/pick-local-recipes.js";
 import { nutritionGoalFactsForSlug } from "../server/generation/nutrition-goals-gate.js";
 import { buildGenerateRequestInput } from "../shared/generate-request-defaults.js";
 import {
@@ -57,7 +57,22 @@ for (const goal of PROFILE_NUTRITION_GOALS) {
     goalRate >= 0.8 && goalRate > baseRate,
     `${Math.round(goalRate * 100)}% with goal vs ${Math.round(baseRate * 100)}% without`,
   );
-  check(`${goal}: still varied`, distinct >= 15, `${distinct} distinct meals in ${RUNS} runs`);
+  // Variety is bounded by how many reachable meals have verified numbers that meet the goal.
+  const reachableMeeting = [...getDefaultGeneratorPoolSlugs().slugs].filter(
+    (slug) =>
+      meets(slug) &&
+      pickGolden100ForGenerate(request, {
+        varietySeed: `goal-reach:${slug}`,
+        nutritionGoal: goal,
+        restrictToSlugs: new Set([slug]),
+      }) != null,
+  ).length;
+  const wantDistinct = Math.min(15, Math.ceil(reachableMeeting * 0.8));
+  check(
+    `${goal}: still varied`,
+    distinct >= wantDistinct,
+    `${distinct} distinct meals in ${RUNS} runs (${reachableMeeting} reachable meals meet the goal; need ${wantDistinct})`,
+  );
   const wrongClaims = withGoal.filter((p) => {
     const claims = p.personalization?.reasons.some((r) => r.includes(" goal: ")) ?? false;
     return claims !== meets(p.slug);

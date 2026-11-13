@@ -8,6 +8,7 @@ import {
   clearCheckedItems as clearCheckedItemsService,
   cycleStockLevel,
   groupByDepartment,
+  moveItemToDepartment,
   popUndoSnapshot,
   pushUndoSnapshot,
   removeItem as removeItemService,
@@ -20,6 +21,7 @@ import {
   startNewSessionFromHistory,
   toggleItemChecked as toggleItemCheckedService,
   type AddManualItemInput,
+  type Department,
   type PantryContext,
   type ShoppingHistoryEntry,
   type ShoppingRecipeInput,
@@ -130,6 +132,13 @@ export function useShoppingSession() {
     [commit],
   );
 
+  const moveItem = useCallback(
+    (itemId: string, department: Department) => {
+      commit(moveItemToDepartment(getShoppingSession(), itemId, department));
+    },
+    [commit],
+  );
+
   const clearCheckedItems = useCallback(() => {
     const current = getShoppingSession();
     commit(clearCheckedItemsService(current));
@@ -224,6 +233,7 @@ export function useShoppingSession() {
     addManualItem,
     removeItem,
     toggleItemChecked,
+    moveItem,
     clearCheckedItems,
     undo,
     startNewSession,

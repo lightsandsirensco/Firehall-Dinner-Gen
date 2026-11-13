@@ -12,6 +12,7 @@ import { B5_MECHANICAL_01, B5_MECHANICAL_02, B5_MECHANICAL_03 } from "./b5-mecha
 import { B6_NUTRITION_CLAIMS } from "./b6-nutrition-claims.js";
 import { B7_DONENESS } from "./b7-doneness.js";
 import { B8_BROTH_NUTRITION, B8_BROTH_NUTRITION_02 } from "./b8-broth-nutrition.js";
+import { B9_INSTRUCTIONS } from "./b9-instructions.js";
 import { B2_FOOD_SAFETY_01, B2_FOOD_SAFETY_02, B2_FOOD_SAFETY_03, B2_FOOD_SAFETY_04, B2_FOOD_SAFETY_05, B2_FOOD_SAFETY_06 } from "./b2-food-safety.js";
 
 export const ALL_CORRECTIONS: RecipeCorrection[] = [
@@ -36,4 +37,5 @@ export const ALL_CORRECTIONS: RecipeCorrection[] = [
   ...B7_DONENESS,
   ...B8_BROTH_NUTRITION,
   ...B8_BROTH_NUTRITION_02,
+  ...B9_INSTRUCTIONS,
 ];

@@ -1,14 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import { AisleShoppingList, type AisleRow } from "@/components/shopping/aisle-shopping-list";
+import { ListExportActions } from "@/components/shopping/list-export-actions";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Copy, Printer, Mail, CheckCircle, Loader2, ShoppingCart, Leaf, Lightbulb, Package, Check, Users } from "lucide-react";
-import type { ShoppingListResult } from "@/lib/shopping-list";
-import { shoppingListToText } from "@/lib/shopping-list";
-import { escapeHtml } from "@/lib/escape-html";
+import { Mail, CheckCircle, Loader2, ShoppingCart, Lightbulb, Package, Check, Users } from "lucide-react";
+import {
+  REQUIRED_SECTION,
+  VEG_OPTION_SECTION,
+  shoppingLineKey,
+  shoppingListToExportDocument,
+  type ShoppingListResult,
+} from "@/lib/shopping-list";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
 import { trackShoppingListAction, trackShoppingListOpen } from "@/lib/analytics";
 import { useHallMembership } from "@/lib/hall-membership/context";
@@ -19,6 +25,36 @@ import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { MarketingConsentCheckbox } from "@/components/marketing-consent-checkbox";
 
+const RECIPE_CHECKS_KEY = "firehall_recipe_shopping_checks_v1";
+const MAX_SAVED_RECIPES = 30;
+
+function readAllChecks(): Record<string, string[]> {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(RECIPE_CHECKS_KEY) ?? "{}");
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function loadRecipeChecks(listKey: string): Set<string> {
+  const saved = readAllChecks()[listKey];
+  return new Set(Array.isArray(saved) ? saved : []);
+}
+
+function saveRecipeChecks(listKey: string, checked: Set<string>): void {
+  try {
+    const all = readAllChecks();
+    delete all[listKey];
+    if (checked.size > 0) all[listKey] = [...checked];
+    const keys = Object.keys(all);
+    for (const old of keys.slice(0, Math.max(0, keys.length - MAX_SAVED_RECIPES))) delete all[old];
+    localStorage.setItem(RECIPE_CHECKS_KEY, JSON.stringify(all));
+  } catch {
+    /* storage unavailable (private mode) — checks stay in memory */
+  }
+}
+
 interface ShoppingListModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -26,97 +62,6 @@ interface ShoppingListModalProps {
   recipeTitle: string;
   recipeSlug?: string;
   generatorType: "meal" | "pizza";
-}
-
-function buildPrintHtml(shoppingList: ShoppingListResult, recipeTitle: string): string {
-  const e = escapeHtml;
-  let fridgeHtml = "";
-  if (shoppingList.fridge_used && shoppingList.fridge_used.length > 0) {
-    fridgeHtml = `<div class="fridge-section">
-      <h2>Using What's in the Fridge</h2>
-      <ul>${shoppingList.fridge_used.map(item => `<li class="fridge-item">${e(item)}</li>`).join("")}</ul>
-    </div>`;
-    if (shoppingList.need_to_grab && shoppingList.need_to_grab.length > 0) {
-      fridgeHtml += `<div class="grab-section">
-        <h3>You May Need to Grab</h3>
-        <ul>${shoppingList.need_to_grab.map(item => `<li>${e(item)}</li>`).join("")}</ul>
-      </div>`;
-    }
-  }
-
-  const sectionsHtml = shoppingList.sections.map(section => `
-    <div class="section">
-      <h2>${e(section.title)}</h2>
-      <table><tbody>
-        ${section.items.map(item => `<tr>
-          <td class="checkbox">&#9744;</td>
-          <td class="item-name">${e(item.name)}</td>
-          <td class="item-amount">${item.amount ? `— ${e(item.amount)}` : ""}</td>
-          <td class="item-notes">${e(item.notes)}</td>
-        </tr>`).join("")}
-      </tbody></table>
-    </div>`).join("");
-
-  let vegHtml = "";
-  if (shoppingList.veg_option && shoppingList.veg_option.items.length > 0) {
-    vegHtml = `<div class="section veg-section">
-      <h2 style="color:#16a34a">Veg Option (1 Serving)</h2>
-      <table><tbody>
-        ${shoppingList.veg_option.items.map(item => `<tr>
-          <td class="checkbox">&#9744;</td>
-          <td class="item-name">${e(item.name)}</td>
-          <td class="item-amount">${item.amount ? `— ${e(item.amount)}` : ""}</td>
-          <td class="item-notes">${e(item.notes)}</td>
-        </tr>`).join("")}
-      </tbody></table>
-    </div>`;
-  }
-
-  let budgetHtml = "";
-  if (shoppingList.budget_swaps && shoppingList.budget_swaps.length > 0) {
-    budgetHtml = `<div class="section">
-      <h2>Budget Swaps</h2>
-      <ul>${shoppingList.budget_swaps.map(swap => `<li>${e(swap)}</li>`).join("")}</ul>
-    </div>`;
-  }
-
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<title>Shopping List — ${e(recipeTitle)}</title>
-<style>
-  @page { margin: 0.75in; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #111; background: #fff; line-height: 1.5; font-size: 14px; }
-  h1 { font-size: 24px; font-weight: 800; margin-bottom: 2px; }
-  .subtitle { color: #666; font-size: 13px; margin-bottom: 20px; }
-  h2 { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 20px 0 8px; border-bottom: 2px solid #222; padding-bottom: 4px; }
-  h3 { font-size: 14px; font-weight: 600; margin: 12px 0 6px; color: #555; }
-  table { width: 100%; border-collapse: collapse; }
-  td { padding: 4px 8px 4px 0; vertical-align: top; border-bottom: 1px solid #eee; }
-  .checkbox { width: 24px; font-size: 16px; }
-  .item-name { font-weight: 600; }
-  .item-amount { color: #333; white-space: nowrap; }
-  .item-notes { color: #666; font-size: 13px; }
-  .fridge-section { margin-bottom: 16px; }
-  .fridge-section ul, .grab-section ul { padding-left: 20px; }
-  .fridge-item { color: #16a34a; }
-  .footer { text-align: center; color: #666; font-size: 12px; margin-top: 32px; padding-top: 12px; border-top: 1px solid #ddd; }
-  @media print { body { padding: 0; } }
-</style>
-</head>
-<body>
-  <h1>Shopping List</h1>
-  <p class="subtitle">Based on: ${e(recipeTitle)}</p>
-  ${fridgeHtml}
-  ${sectionsHtml}
-  ${vegHtml}
-  ${budgetHtml}
-  <div class="footer">Firefighter-owned — built for the fire service.</div>
-  <script>window.onload = function() { window.print(); }</script>
-</body>
-</html>`;
 }
 
 export function ShoppingListModal({
@@ -139,15 +84,29 @@ export function ShoppingListModal({
   const [marketingConsent, setMarketingConsent] = useState(false);
   const [hallAddBusy, setHallAddBusy] = useState(false);
   const [hallAddDone, setHallAddDone] = useState(false);
-  const [checkedItems, setCheckedItems] = useState<Set<string>>(new Set());
+  const listKey = recipeSlug || recipeTitle;
+  const [checkedItems, setCheckedItems] = useState<Set<string>>(() => loadRecipeChecks(listKey));
 
   const canAddToHallList = authenticated && Boolean(activeHallId) && canUseSharedList;
+
+  const rows = useMemo<AisleRow[]>(() => {
+    const toRows = (title: string, items: ShoppingListResult["sections"][number]["items"]) =>
+      items.map((item) => {
+        const id = shoppingLineKey(title, item.name);
+        return { id, name: item.name, amount: item.amount, notes: item.notes, section: title, checked: checkedItems.has(id) };
+      });
+    return [
+      ...shoppingList.sections.flatMap((s) => toRows(s.title, s.items)),
+      ...(shoppingList.veg_option ? toRows(VEG_OPTION_SECTION, shoppingList.veg_option.items) : []),
+    ];
+  }, [shoppingList, checkedItems]);
 
   const toggleChecked = (key: string) => {
     setCheckedItems((prev) => {
       const next = new Set(prev);
       if (next.has(key)) next.delete(key);
       else next.add(key);
+      saveRecipeChecks(listKey, next);
       return next;
     });
   };
@@ -156,8 +115,10 @@ export function ShoppingListModal({
     if (!open) return;
     trackShoppingListOpen({ recipeTitle, generatorType });
     setHallAddDone(false);
-    setCheckedItems(new Set());
-  }, [open, recipeTitle, generatorType]);
+    setCheckedItems(loadRecipeChecks(listKey));
+  }, [open, recipeTitle, generatorType, listKey]);
+
+  const exportDocument = () => shoppingListToExportDocument(shoppingList, recipeTitle, checkedItems);
 
   const handleAddToHallList = async () => {
     if (!activeHallId || hallAddBusy) return;
@@ -182,34 +143,8 @@ export function ShoppingListModal({
     }
   };
 
-  const handleCopy = async () => {
-    const text = shoppingListToText(shoppingList, recipeTitle);
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      trackShoppingListAction({ recipeTitle, generatorType, action: "copy", status: "success" });
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      const textarea = document.createElement("textarea");
-      textarea.value = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      setCopied(true);
-      trackShoppingListAction({ recipeTitle, generatorType, action: "copy", status: "success" });
-      setTimeout(() => setCopied(false), 2000);
-    }
-  };
-
-  const handlePrint = () => {
-    trackShoppingListAction({ recipeTitle, generatorType, action: "print" });
-    const html = buildPrintHtml(shoppingList, recipeTitle);
-    const printWindow = window.open("", "_blank");
-    if (printWindow) {
-      printWindow.document.write(html);
-      printWindow.document.close();
-    }
+  const handleExportAction = (action: "copy" | "print" | "share") => {
+    trackShoppingListAction({ recipeTitle, generatorType, action, ...(action === "print" ? {} : { status: "success" as const }) });
   };
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
@@ -274,9 +209,6 @@ export function ShoppingListModal({
       setMarketingConsent(false);
     }, 300);
   };
-
-  const totalItems = shoppingList.sections.reduce((sum, s) => sum + s.items.length, 0)
-    + (shoppingList.veg_option?.items.length || 0);
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
@@ -366,15 +298,8 @@ export function ShoppingListModal({
                   {hallAddDone ? "On firehouse list" : "Add to firehouse list"}
                 </Button>
               ) : null}
-              <Button variant="outline" onClick={handleCopy} data-testid="button-shopping-copy">
-                {copied ? <Check className="w-4 h-4 mr-2 success-pop" /> : <Copy className="w-4 h-4 mr-2" />}
-                {copied ? "Copied" : "Copy List"}
-              </Button>
-              <Button variant="outline" onClick={handlePrint} data-testid="button-shopping-print">
-                <Printer className="w-4 h-4 mr-2" />
-                Print List
-              </Button>
-              <Button variant="outline" onClick={() => setEmailView(true)} data-testid="button-shopping-email">
+              <ListExportActions getDocument={exportDocument} onAction={handleExportAction} testIdPrefix="button-shopping" />
+              <Button variant="outline" size="sm" className="min-h-10" onClick={() => setEmailView(true)} data-testid="button-shopping-email">
                 <Mail className="w-4 h-4 mr-2" />
                 Email List
               </Button>
@@ -383,8 +308,6 @@ export function ShoppingListModal({
             <Separator />
 
             <div className="overflow-y-auto flex-1 space-y-4 pr-1" data-testid="shopping-list-content">
-              <p className="text-xs text-muted-foreground">{totalItems} items total</p>
-
               {shoppingList.fridge_used && shoppingList.fridge_used.length > 0 && (
                 <div data-testid="shopping-fridge-used">
                   <div className="flex items-center gap-2 mb-2">
@@ -417,74 +340,13 @@ export function ShoppingListModal({
                 </div>
               )}
 
-              {shoppingList.sections.map((section, si) => (
-                <div key={si} data-testid={`shopping-section-${si}`}>
-                  <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2">{section.title}</h3>
-                  <div className="space-y-0.5">
-                    {section.items.map((item, ii) => {
-                      const itemKey = `${si}-${ii}`;
-                      const checked = checkedItems.has(itemKey);
-                      return (
-                        <button
-                          key={ii}
-                          type="button"
-                          onClick={() => toggleChecked(itemKey)}
-                          className="flex w-full items-baseline gap-2 rounded-md px-1.5 py-1 -mx-1.5 text-left text-sm hover-elevate touch-manipulation"
-                          data-testid={`shopping-item-${si}-${ii}`}
-                          aria-pressed={checked}
-                        >
-                          {checked ? (
-                            <Check className="w-3.5 h-3.5 text-primary flex-shrink-0 translate-y-px success-pop" />
-                          ) : (
-                            <span className="text-muted-foreground/50 text-xs flex-shrink-0">&#9744;</span>
-                          )}
-                          <span className={cn("font-medium text-foreground transition-opacity", checked && "opacity-50 line-through")}>
-                            {item.name}
-                          </span>
-                          {item.amount && <span className={cn("text-muted-foreground", checked && "opacity-50")}>— {item.amount}</span>}
-                          {item.notes && <span className={cn("text-xs text-muted-foreground/70", checked && "opacity-50")}>({item.notes})</span>}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
-
-              {shoppingList.veg_option && shoppingList.veg_option.items.length > 0 && (
-                <div data-testid="shopping-veg-option">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Leaf className="w-3.5 h-3.5 text-green-500" />
-                    <h3 className="text-xs uppercase tracking-wider text-green-600 dark:text-green-400 font-medium">Veg Option (1 Serving)</h3>
-                  </div>
-                  <div className="space-y-0.5">
-                    {shoppingList.veg_option.items.map((item, i) => {
-                      const itemKey = `veg-${i}`;
-                      const checked = checkedItems.has(itemKey);
-                      return (
-                        <button
-                          key={i}
-                          type="button"
-                          onClick={() => toggleChecked(itemKey)}
-                          className="flex w-full items-baseline gap-2 rounded-md px-1.5 py-1 -mx-1.5 text-left text-sm hover-elevate touch-manipulation"
-                          data-testid={`shopping-veg-item-${i}`}
-                          aria-pressed={checked}
-                        >
-                          {checked ? (
-                            <Check className="w-3.5 h-3.5 text-green-500 flex-shrink-0 translate-y-px success-pop" />
-                          ) : (
-                            <span className="text-green-500/50 text-xs flex-shrink-0">&#9744;</span>
-                          )}
-                          <span className={cn("font-medium text-foreground transition-opacity", checked && "opacity-50 line-through")}>
-                            {item.name}
-                          </span>
-                          {item.amount && <span className={cn("text-muted-foreground", checked && "opacity-50")}>— {item.amount}</span>}
-                          {item.notes && <span className={cn("text-xs text-muted-foreground/70", checked && "opacity-50")}>({item.notes})</span>}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
+              <AisleShoppingList
+                listId={`recipe:${listKey}`}
+                rows={rows}
+                leadingSections={[REQUIRED_SECTION]}
+                onToggle={(row) => toggleChecked(row.id)}
+                testIdPrefix="shopping"
+              />
 
               {shoppingList.budget_swaps && shoppingList.budget_swaps.length > 0 && (
                 <div data-testid="shopping-budget-swaps">

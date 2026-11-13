@@ -42,9 +42,31 @@ export interface NormalizedIngredient {
   notes?: string;
 }
 
-/** Prep/qualifier words stripped from the canonical key so variants merge. */
+/**
+ * Prep/size words stripped from the canonical key so variants merge. Purchase
+ * forms stay in the key — frozen spinach, canned tomatoes and fresh
+ * mozzarella are different products from their plain namesakes.
+ */
 const QUALIFIER_WORDS =
-  /\b(boneless|skinless|bone-in|skin-on|fresh|frozen|canned|cooked|raw|large|medium|small|extra|lean|organic|diced|sliced|chopped|minced|shredded|grated|crushed|whole|to taste|for garnish|optional)\b/gi;
+  /\b(boneless|skinless|bone-in|skin-on|fresh(?! mozzarella)|cooked|raw|large|medium|small|extra|lean|organic|diced|sliced|chopped|minced|shredded|grated|crushed|whole|ripe|peeled|melted|softened|packed|crumbled|steamed|to taste|for garnish|optional)\b/gi;
+
+/**
+ * Words naming a piece or pack of the product rather than a different product
+ * ("garlic cloves" is garlic, "basil leaves" is basil). Applied after
+ * singularization, only alongside the products they describe.
+ */
+const PART_WORDS: Array<[RegExp, RegExp]> = [
+  [/\bclove\b/g, /\bgarlic\b/],
+  [/\b(?:stalk|stick|rib)\b/g, /\b(?:celery|lemongrass)\b/],
+  [/\b(?:sprig|leaf|leave)\b/g, /\b(?:basil|mint|sage|thyme|rosemary|oregano|cilantro|parsley|tarragon|dill|shiso|epazote)\b/],
+  [/\b(?:floret|crown)\b/g, /\b(?:broccoli|cauliflower)\b/],
+  [/\bwedge\b/g, /\b(?:lemon|lime)\b/],
+  [/\bfrond\b/g, /\bdill\b/],
+  [/\blink\b/g, /\b(?:sausage|kielbasa|andouille|chorizo)\b/],
+  [/\b(?:loaf|loave)\b/g, /\b(?:bread|baguette|scrapple)\b/],
+  [/\bslice\b/g, /\b(?:pepperoni|cheese|provolone|swis|american|salami|ham|turkey|bacon)\b/],
+  [/\b(?:bunch|head)\b/g, /./],
+];
 
 /**
  * Plurals the generic 4+-letter "-s" rule misses or mangles. Word-level and
@@ -63,11 +85,13 @@ export const IRREGULAR_PLURALS: Record<string, string> = {
   figs: "fig",
   yams: "yam",
   nuts: "nut",
+  chilies: "chili",
+  chillies: "chili",
 };
 
 /** Canonicalize a display name into a merge key ("Chicken Thighs, boneless" -> "chicken thigh"). */
 export function canonicalizeIngredientName(name: string): string {
-  let key = name.toLowerCase();
+  let key = name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   key = key.replace(/\([^)]*\)/g, " "); // drop parenthetical asides
   // Keep the first comma segment that names something: "Onion, diced" -> "onion",
   // "Boneless, Skinless Chicken Thighs" -> "chicken thighs".
@@ -79,7 +103,27 @@ export function canonicalizeIngredientName(name: string): string {
   key = key.replace(/\b[a-z]+\b/g, (w) => IRREGULAR_PLURALS[w] ?? w);
   // Light singularization so "onions" and "onion" merge.
   key = key.replace(/\b(\w{4,})s\b/g, "$1");
+  for (const [part, product] of PART_WORDS) {
+    if (!product.test(key)) continue;
+    const stripped = key.replace(part, " ").replace(/^\s*of\s+/, "").replace(/\s+of\s*$/, "").replace(/\s+/g, " ").trim();
+    if (stripped) key = stripped;
+  }
+  key = dropDefaultForm(key, "canned", "Pantry & Canned Goods");
+  key = dropDefaultForm(key, "frozen", "Frozen Foods");
+  key = dropDefaultForm(key, "dried", "Spices & Seasonings");
   return key || name.toLowerCase().trim();
+}
+
+/**
+ * "canned chickpeas" and "chickpeas" are the same can; "canned tomatoes" and
+ * "tomatoes" are not. Drop the form word only when the plain item is normally
+ * bought in that form anyway.
+ */
+function dropDefaultForm(key: string, form: string, aisle: Department): string {
+  if (!new RegExp(`\\b${form}\\b`).test(key)) return key;
+  const plain = key.replace(new RegExp(`\\b${form}\\b`), " ").replace(/\s+/g, " ").trim();
+  if (!plain) return key;
+  return classifyDepartment(plain) === aisle || classifyDepartment(`${plain}s`) === aisle ? plain : key;
 }
 
 const OPTIONAL_MARKER = /\(\s*optional\b[^)]*\)/i;
@@ -135,12 +179,53 @@ export function formatQuantityLabel(value: number, unit: string, min?: number): 
   return label ? `${amount} ${label}` : amount;
 }
 
+/** The aisle a bare canonical key implies, tolerating the singularized key ("chickpea"). */
+function keyDepartment(key: string): Department {
+  const direct = classifyDepartment(key);
+  return direct !== "Other" ? direct : classifyDepartment(`${key}s`);
+}
+
+const FORM_PREFIX: Partial<Record<Department, string>> = {
+  "Pantry & Canned Goods": "canned",
+  "Frozen Foods": "frozen",
+  "Spices & Seasonings": "dried",
+  "Condiments, Sauces & Oils": "jarred",
+  Produce: "fresh",
+};
+
+/**
+ * Two lines merge only when they're the same product from the same aisle.
+ * When a line's aisle differs from what its bare key implies ("diced
+ * tomatoes", 2 cans -> Pantry, but "tomato" is Produce), the key gains the
+ * purchase form so canned and fresh tomatoes stay separate lines.
+ */
+export function withPurchaseForm(key: string, department: Department): string {
+  const prefix = FORM_PREFIX[department];
+  if (!prefix || new RegExp(`\\b${prefix}\\b`).test(key)) return key;
+  const implied = keyDepartment(key);
+  return implied === department || implied === "Other" ? key : `${prefix} ${key}`;
+}
+
+/** On the canned aisle these name different products (crushed vs diced tomatoes), not prep. */
+const CANNED_STYLE = /\b(petite diced|crushed|diced|whole|stewed|fire[- ]roasted)\b/i;
+
+function withCannedStyle(key: string, displayName: string, department: Department): string {
+  if (department !== "Pantry & Canned Goods") return key;
+  const style = displayName.split(",")[0]!.toLowerCase().match(CANNED_STYLE)?.[1]?.replace("-", " ");
+  if (!style || key.includes(style)) return key;
+  return key.startsWith("canned ") ? `canned ${style} ${key.slice(7)}` : `${style} ${key}`;
+}
+
 /** Normalize a single raw recipe ingredient into a canonical, classified shape. */
 export function normalizeIngredient(raw: RawRecipeIngredient): NormalizedIngredient {
   const displayName = raw.name.trim();
-  const canonicalKey = canonicalizeIngredientName(displayName);
   // Aisle depends on what the item is, not its role in this recipe ("lime, for garnish" is still produce).
-  const department = classifyDepartment(displayName);
+  const department = classifyDepartment(displayName, raw.notes ?? "", { unit: raw.unit });
+  const canonicalKey = withCannedStyle(
+    withPurchaseForm(canonicalizeIngredientName(displayName), department),
+    displayName,
+    department,
+  );
   const parsed = parseShoppingQuantity(raw.quantity, raw.unit);
 
   return {

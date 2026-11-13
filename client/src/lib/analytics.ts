@@ -420,6 +420,7 @@ type ShiftPlanEvent =
   | "shift_list_opened"
   | "shift_list_item_checked"
   | "shift_list_manual_item_added"
+  | "shift_list_exported"
   /** Plan Ahead — a shift beyond the free current/next shift. */
   | "future_shift_viewed"
   | "plan_ahead_paywall_viewed"
@@ -683,7 +684,7 @@ export function trackShoppingListOpen(input: { recipeTitle: string; generatorTyp
 export function trackShoppingListAction(input: {
   recipeTitle: string;
   generatorType: string;
-  action: "copy" | "print" | "email";
+  action: "copy" | "print" | "email" | "share";
   status?: "success" | "error";
 }): void {
   trackProductEvent("shopping_list_action", {

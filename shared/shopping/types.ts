@@ -15,15 +15,18 @@ export const SHOPPING_SCHEMA_VERSION = 1 as const;
 /** Separate from SHOPPING_SCHEMA_VERSION so a pantry shape change doesn't reset sessions/history. */
 export const PANTRY_SCHEMA_VERSION = 2 as const;
 
-/** Canonical grocery departments a shopping list can be grouped by. */
+/** Grocery aisles, in the order a shopper walks a typical store. */
 export const DEPARTMENTS = [
-  "Proteins",
   "Produce",
-  "Dairy / Dairy Alternatives",
-  "Pantry & Spices",
-  "Bakery / Dough",
-  "Frozen",
-  "Condiments & Sauces",
+  "Meat & Seafood",
+  "Dairy & Eggs",
+  "Bakery & Bread",
+  "Frozen Foods",
+  "Pantry & Canned Goods",
+  "Pasta, Rice & Grains",
+  "Condiments, Sauces & Oils",
+  "Spices & Seasonings",
+  "Beverages",
   "Other",
 ] as const;
 
@@ -70,6 +73,8 @@ export interface ShoppingItemContribution {
   unit: string;
   /** The quantity exactly as the (scaled) recipe wrote it, e.g. "1–2 Tbsp" or "to taste". */
   rawQuantity: string;
+  /** This recipe's prep for the ingredient ("diced", "thinly sliced") — kept per recipe so merged lines don't lose it. */
+  prep?: string;
 }
 
 /**
@@ -114,6 +119,8 @@ export interface ShoppingListItem {
   /** Human-friendly display name. */
   displayName: string;
   department: Department;
+  /** The shopper moved this item to `department`; rebuilds and reclassification keep their choice. */
+  departmentOverride?: boolean;
   /** Formatted, human-readable quantity (e.g. "2 lb" or "3 cups + 1 can"). */
   quantityLabel: string;
   /** Per-recipe breakdown that produced quantityLabel — empty for manual items. */

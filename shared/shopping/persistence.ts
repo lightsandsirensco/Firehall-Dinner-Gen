@@ -7,14 +7,12 @@
  * refreshed with the current engine so lists saved by older parsers heal.
  */
 
-import { classifyDepartment } from "./departments";
+import { classifyDepartment, isDepartment, resolveStoredDepartment } from "./departments";
 import { migratePantryProfileKeys } from "./pantry-profile";
 import { refreshDerivedQuantities } from "./shopping-service";
 import {
-  DEPARTMENTS,
   PANTRY_SCHEMA_VERSION,
   SHOPPING_SCHEMA_VERSION,
-  type Department,
   type PantryProfile,
   type RawRecipeIngredient,
   type ShoppingHistory,
@@ -103,6 +101,8 @@ function restoreContribution(v: unknown): ShoppingItemContribution | null {
   };
   const min = num(v.min);
   if (min !== undefined) c.min = min;
+  const prep = str(v.prep)?.trim();
+  if (prep) c.prep = prep;
   return c;
 }
 
@@ -113,14 +113,13 @@ function restoreItem(v: unknown): ShoppingListItem | null {
   const displayName = str(v.displayName);
   if (!id || !canonicalKey || !displayName) return null;
   const notes = str(v.notes);
-  const department = DEPARTMENTS.includes(v.department as Department)
-    ? (v.department as Department)
-    : classifyDepartment(displayName, notes ?? "");
+  const department = resolveStoredDepartment(v.department, displayName, notes ?? "") ?? classifyDepartment(displayName, notes ?? "");
   const item: ShoppingListItem = {
     id,
     canonicalKey,
     displayName,
     department,
+    ...(v.departmentOverride === true && isDepartment(v.department) ? { departmentOverride: true } : {}),
     quantityLabel: str(v.quantityLabel) ?? "",
     contributions: Array.isArray(v.contributions)
       ? v.contributions.map(restoreContribution).filter((c): c is ShoppingItemContribution => c !== null)

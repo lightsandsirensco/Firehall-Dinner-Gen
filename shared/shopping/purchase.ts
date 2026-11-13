@@ -178,7 +178,7 @@ const RULES: Rule[] = [
   // Spices, salt, small amounts of oil/sauces, flour/sugar under a cup → usually on hand.
   (item, t) => {
     const key = item.canonicalKey;
-    if (item.department === "Produce" || item.department === "Proteins" || /protein powder/.test(key)) return null;
+    if (item.department === "Produce" || item.department === "Meat & Seafood" || /protein powder/.test(key)) return null;
     const smallVolume = t.g === 0 && t.count === 0 && t.ml <= ML_PER_CUP / 2;
     if (SPICE.test(key) && !FRESH_HERB.test(key) && smallVolume) {
       return { label: "Check pantry", pantryCheck: true };
@@ -191,7 +191,7 @@ const RULES: Rule[] = [
   },
   // Meat/seafood by weight → round up to the nearest ¼ lb (whole ounces under a pound).
   (item, t) => {
-    if (item.department !== "Proteins" || t.g <= 0 || t.ml > 0 || t.count > 0) return null;
+    if (item.department !== "Meat & Seafood" || t.g <= 0 || t.ml > 0 || t.count > 0) return null;
     const lb = t.g / G_PER_LB;
     if (lb < 1) {
       const oz = ceil(t.g / G_PER_OZ);

@@ -70,10 +70,10 @@ assert.equal(
 );
 assert.equal(canonicalizeIngredientName("Onions"), canonicalizeIngredientName("Onion"), "basic pluralization merges");
 
-assert.equal(classifyDepartment("Ground Beef"), "Proteins");
-assert.equal(classifyDepartment("Flour Tortillas"), "Bakery / Dough");
-assert.equal(classifyDepartment("Salt"), "Pantry & Spices");
-assert.equal(classifyDepartment("Cheddar Cheese"), "Dairy / Dairy Alternatives");
+assert.equal(classifyDepartment("Ground Beef"), "Meat & Seafood");
+assert.equal(classifyDepartment("Flour Tortillas"), "Bakery & Bread");
+assert.equal(classifyDepartment("Salt"), "Spices & Seasonings");
+assert.equal(classifyDepartment("Cheddar Cheese"), "Dairy & Eggs");
 
 // --- Single recipe -> grouped, normalized list ----------------------------
 
@@ -83,8 +83,8 @@ assert.equal(session.recipes.length, 1, "one recipe attached");
 assert.equal(session.list.items.length, 4, "four normalized ingredient lines");
 
 const grouped = groupByDepartment(session.list.items);
-assert.ok(grouped.some((g) => g.department === "Proteins"), "proteins department present");
-assert.ok(grouped.some((g) => g.department === "Bakery / Dough"), "bakery department present");
+assert.ok(grouped.some((g) => g.department === "Meat & Seafood"), "meat department present");
+assert.ok(grouped.some((g) => g.department === "Bakery & Bread"), "bakery department present");
 
 // --- Crew-size scaling recalculates instantly -----------------------------
 

@@ -16,7 +16,9 @@ import {
   addRecipeToSession,
   createShoppingSession,
   DEPARTMENT_ORDER,
+  formatAisleListText,
   formatShoppingItemQuantity,
+  type AisleExportDocument,
   type RawRecipeIngredient,
 } from "@shared/shopping";
 
@@ -304,62 +306,44 @@ export function buildShoppingListFromPizza(
   return result;
 }
 
+export const VEG_OPTION_SECTION = "Veg Option (1 Serving)";
+export { REQUIRED_SECTION };
+
+/** Stable per-line key for checkbox persistence (survives re-renders and re-scaling). */
+export function shoppingLineKey(sectionTitle: string, itemName: string): string {
+  return `${sectionTitle}|${normalizeItemName(itemName)}`;
+}
+
+/** The dialog's list in the shared aisle export shape (copy, print, share, email). */
+export function shoppingListToExportDocument(
+  result: ShoppingListResult,
+  recipeTitle: string,
+  checked: ReadonlySet<string> = new Set(),
+): AisleExportDocument {
+  const toSection = (title: string, items: ShoppingItem[]) => ({
+    title,
+    lines: items.map((i) => ({
+      name: i.name,
+      amount: i.amount || undefined,
+      notes: i.notes || undefined,
+      checked: checked.has(shoppingLineKey(title, i.name)),
+    })),
+  });
+  const sections = result.sections.map((s) => toSection(s.title, s.items));
+  if (result.veg_option?.items.length) sections.push(toSection(VEG_OPTION_SECTION, result.veg_option.items));
+  const extras: { title: string; lines: string[] }[] = [];
+  if (result.fridge_used?.length) extras.push({ title: "Using what's in the fridge", lines: result.fridge_used });
+  if (result.need_to_grab?.length) extras.push({ title: "You may need to grab", lines: result.need_to_grab });
+  if (result.budget_swaps?.length) extras.push({ title: "Budget swaps", lines: result.budget_swaps });
+  return {
+    title: "Shopping List",
+    subtitle: `Based on: ${recipeTitle}`,
+    sections,
+    extras,
+    footer: "Firefighter-owned — built for the fire service.",
+  };
+}
+
 export function shoppingListToText(result: ShoppingListResult, recipeTitle: string): string {
-  const lines: string[] = [];
-  lines.push(`Shopping List — ${recipeTitle}`);
-  lines.push("═".repeat(40));
-
-  if (result.fridge_used && result.fridge_used.length > 0) {
-    lines.push("");
-    lines.push("USING WHAT'S IN THE FRIDGE:");
-    for (const item of result.fridge_used) {
-      lines.push(`  ✓ ${item}`);
-    }
-  }
-
-  if (result.need_to_grab && result.need_to_grab.length > 0) {
-    lines.push("");
-    lines.push("YOU MAY NEED TO GRAB:");
-    for (const item of result.need_to_grab) {
-      lines.push(`  • ${item}`);
-    }
-  }
-
-  for (const section of result.sections) {
-    lines.push("");
-    lines.push(`${section.title.toUpperCase()}`);
-    lines.push("─".repeat(30));
-    for (const item of section.items) {
-      let line = `  □ ${item.name}`;
-      if (item.amount) line += ` — ${item.amount}`;
-      if (item.notes) line += ` (${item.notes})`;
-      lines.push(line);
-    }
-  }
-
-  if (result.veg_option && result.veg_option.items.length > 0) {
-    lines.push("");
-    lines.push("VEG OPTION (1 SERVING)");
-    lines.push("─".repeat(30));
-    for (const item of result.veg_option.items) {
-      let line = `  □ ${item.name}`;
-      if (item.amount) line += ` — ${item.amount}`;
-      if (item.notes) line += ` (${item.notes})`;
-      lines.push(line);
-    }
-  }
-
-  if (result.budget_swaps && result.budget_swaps.length > 0) {
-    lines.push("");
-    lines.push("BUDGET SWAPS");
-    lines.push("─".repeat(30));
-    for (const swap of result.budget_swaps) {
-      lines.push(`  💡 ${swap}`);
-    }
-  }
-
-  lines.push("");
-  lines.push("Firefighter-owned — built for the fire service.");
-
-  return lines.join("\n");
+  return formatAisleListText(shoppingListToExportDocument(result, recipeTitle));
 }

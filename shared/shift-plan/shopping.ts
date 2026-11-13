@@ -12,10 +12,12 @@ import {
   addRecipeToSession,
   applyPantryContext,
   clearCheckedItems,
+  moveItemToDepartment,
   removeItem,
   removeRecipeFromSession,
   setRecipeCrewSize,
   toggleItemChecked,
+  type Department,
   type PantryContext,
   type ShoppingList,
   type ShoppingRecipeInput,
@@ -108,6 +110,7 @@ export type ShiftListOp =
   | { type: "check"; itemId: string; checked: boolean }
   | { type: "add_manual"; name: string; quantity?: string }
   | { type: "remove"; itemId: string }
+  | { type: "move"; itemId: string; department: Department }
   | { type: "clear_checked" }
   | { type: "undo" };
 
@@ -147,6 +150,8 @@ export function applyShiftListOp(state: ShiftListState, op: ShiftListOp, pantry?
       if (!session.list.items.some((i) => i.id === op.itemId)) return { ...state, changed: false };
       return withUndo(state, removeItem(session, op.itemId));
     }
+    case "move":
+      return withUndo(state, moveItemToDepartment(session, op.itemId, op.department));
     case "clear_checked": {
       if (!session.list.items.some((i) => i.checked)) return { ...state, changed: false };
       return withUndo(state, clearCheckedItems(session));

@@ -19,6 +19,7 @@ import {
   matchesTimeWindow,
 } from "./tonight-selection.js";
 import { TONIGHT_MEAL_STYLE_LABELS, TONIGHT_TIME_WINDOW_LABELS } from "../../shared/tonight-filters.js";
+import { FIREHALL_CATEGORY_LABEL } from "../../shared/firehall-categories.js";
 import { sampleSizeBucket, type HistorySignals } from "./history-personalization.js";
 import type { ProfileNutritionGoalKey } from "../../shared/nutrition/profile-goals.js";
 import { log } from "../logger.js";
@@ -100,6 +101,9 @@ function hitFromCurated(
   setCachedRecipe(cacheKey, 0, pick.recipe);
 
   const layer: GenerateFallbackLayer = "golden_100";
+  const requestedCategory = ctx.request.firehall_category;
+  const matchedCategory = pick.matchedCategory ?? requestedCategory;
+  const categoryBroadened = Boolean(requestedCategory && matchedCategory && matchedCategory !== requestedCategory);
   const highlights = buildTonightHighlights(
     pick.slug,
     pick.recipe.timing,
@@ -121,6 +125,9 @@ function hitFromCurated(
       _healthiness_relaxed: healthinessRelaxed,
       _relaxation_note: relaxationNote ?? undefined,
       _requested_healthiness: ctx.request.healthiness_preference,
+      _requested_firehall_category: requestedCategory,
+      _matched_firehall_category: matchedCategory,
+      _category_broadened: categoryBroadened,
       _tonight_badge: highlights.badge,
       _tonight_why: highlights.why,
       _personalization_used: Boolean(ctx.historySignals),
@@ -180,6 +187,14 @@ function tonightFilterMissNote(
   return `Nothing else fits ${windowLabel} with these filters, so here's the closest match.`;
 }
 
+/** Game Day widens into BBQ / comfort / crew favorites when its own pool can't fill the request — say so. */
+function categoryMissNote(pick: LocalRecipePick, request: GenerateRequest): string | null {
+  const requested = request.firehall_category;
+  const matched = pick.matchedCategory;
+  if (!requested || !matched || matched === requested) return null;
+  return `No ${FIREHALL_CATEGORY_LABEL[requested]} meals fit these filters, so here's a ${FIREHALL_CATEGORY_LABEL[matched]} pick instead.`;
+}
+
 /**
  * Resolve a meal through the curated-only chain.
  * Never relaxes protein, allergies, or appliances.
@@ -223,6 +238,7 @@ export async function runLocalFirstGeneratePipeline(
     const full = getCuratedRecipeBySlug(pick.slug);
     const relaxationNote =
       tonightFilterMissNote(pick, ctx.request, timeRelaxed) ??
+      categoryMissNote(pick, ctx.request) ??
       (healthinessRelaxed && full ? buildRelaxationNote(ctx.request, full) : null);
 
     return hitFromCurated(pick, { ...ctx, request: req }, i, healthinessRelaxed, relaxationNote);

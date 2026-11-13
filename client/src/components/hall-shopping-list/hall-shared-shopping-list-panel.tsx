@@ -24,6 +24,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import type { HallMemberRecord } from "@shared/hall-membership/types";
 import type { HallShoppingListPayload } from "@shared/hall-shopping-list/types";
+import { aisleForStoredSection, departmentSortIndex } from "@shared/shopping";
 import {
   addHallShoppingListItem,
   completeHallShoppingList,
@@ -85,12 +86,12 @@ export function HallSharedShoppingListPanel({
     if (!data) return [];
     const map = new Map<string, typeof data.items>();
     for (const item of data.items) {
-      const key = item.section || "Other";
+      const key = aisleForStoredSection(item.section, item.name);
       const batch = map.get(key) ?? [];
       batch.push(item);
       map.set(key, batch);
     }
-    return [...map.entries()];
+    return [...map.entries()].sort(([a], [b]) => departmentSortIndex(a) - departmentSortIndex(b));
   }, [data]);
 
   const pendingCount = data?.items.filter((i) => !i.purchased).length ?? 0;

@@ -1,13 +1,12 @@
 name: Sync to GitHub
 
+# Manual only. A plain (non-force) push fails instead of overwriting history
+# if lightsandsirensco/firehall-meal-generator has diverged from this repo.
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   sync:
@@ -25,4 +24,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote add target https://x-access-token:${SYNC_PAT}@github.com/lightsandsirensco/firehall-meal-generator.git
-          git push target HEAD:main --force
+          git push target HEAD:main

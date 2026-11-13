@@ -19,6 +19,7 @@ import {
   isOptionalIngredient,
   mergeContributionQuantities,
   normalizeIngredient,
+  withPurchaseForm,
 } from "./ingredient-normalizer";
 import { getStockLevel } from "./pantry-profile";
 import { purchaseSuggestion, type PurchaseSuggestion } from "./purchase";
@@ -74,7 +75,6 @@ function sortItems(items: ShoppingListItem[]): ShoppingListItem[] {
 interface AggregatedIngredient {
   displayName: string;
   department: Department;
-  notes?: string;
   contributions: ShoppingItemContribution[];
 }
 
@@ -177,6 +177,8 @@ function aggregateRecipes(recipes: ShoppingSessionRecipe[]): AggregationResult {
         rawQuantity: normalized.rawQuantity,
       };
       if (normalized.parsed?.min !== undefined) contribution.min = normalized.parsed.min;
+      const prep = normalized.notes?.trim();
+      if (prep) contribution.prep = prep;
 
       const existing = aggregate.get(key);
       if (existing) {
@@ -185,7 +187,6 @@ function aggregateRecipes(recipes: ShoppingSessionRecipe[]): AggregationResult {
         aggregate.set(key, {
           displayName: normalized.displayName,
           department: normalized.department,
-          notes: normalized.notes,
           contributions: [contribution],
         });
       }
@@ -193,6 +194,28 @@ function aggregateRecipes(recipes: ShoppingSessionRecipe[]): AggregationResult {
   }
 
   return { aggregate, excludedOptional };
+}
+
+/**
+ * Prep notes for a merged line. One prep (or the same prep everywhere) reads
+ * as-is; different preps are listed per recipe so "diced" for the chili and
+ * "sliced" for the fajitas both survive the merge.
+ */
+export function mergePrepNotes(contributions: ShoppingItemContribution[]): string | undefined {
+  const withPrep = contributions.filter((c) => c.prep);
+  const distinct = [...new Set(withPrep.map((c) => c.prep!.toLowerCase()))];
+  if (distinct.length === 0) return undefined;
+  if (distinct.length === 1) return withPrep[0]!.prep;
+  const recipes = new Set(withPrep.map((c) => c.recipeSlug));
+  const seen = new Set<string>();
+  const parts: string[] = [];
+  for (const c of withPrep) {
+    const label = recipes.size > 1 && c.recipeTitle ? `${c.prep} (${c.recipeTitle})` : c.prep!;
+    if (seen.has(label.toLowerCase())) continue;
+    seen.add(label.toLowerCase());
+    parts.push(label);
+  }
+  return parts.join("; ");
 }
 
 /** quantityLabel + structured quantities, always in the units the recipes used. */
@@ -220,14 +243,16 @@ function rebuildList(
   const derivedItems: ShoppingListItem[] = [...aggregate.entries()].map(([key, agg]) => {
     const prior = previousDerivedByKey.get(key);
     const { level, source } = resolvePantryStatus(pantry, key);
+    const notes = mergePrepNotes(agg.contributions);
     return {
       id: prior?.id ?? generateId("item"),
       canonicalKey: key,
       displayName: agg.displayName,
-      department: agg.department,
+      department: prior?.departmentOverride ? prior.department : agg.department,
+      ...(prior?.departmentOverride ? { departmentOverride: true } : {}),
       ...deriveQuantityFields(agg.contributions),
       contributions: agg.contributions,
-      notes: agg.notes,
+      ...(notes ? { notes } : {}),
       isManual: false,
       checked: prior?.checked ?? false,
       inPantry: pantry ? stockLevelHidesItem(level) : (prior?.inPantry ?? false),
@@ -245,21 +270,54 @@ function rebuildList(
   return list;
 }
 
+/** The current key for an item saved under older merge rules. */
+function currentKey(item: ShoppingListItem, aggregate: Map<string, AggregatedIngredient>): string {
+  if (aggregate.has(item.canonicalKey)) return item.canonicalKey;
+  for (const [key, agg] of aggregate) {
+    if (agg.displayName === item.displayName) return key;
+  }
+  return withPurchaseForm(canonicalizeIngredientName(item.displayName), classifyDepartment(item.displayName, item.notes ?? ""));
+}
+
 /**
- * Recompute quantities for the recipe-derived items already on the list,
- * using the current parser/merger — without re-adding items the user cleared
- * and without touching checked/pantry state or manual items. Used when
- * restoring a persisted session written by an older engine.
+ * Bring the items already on a saved list up to the current engine: merge
+ * keys, aisles, quantities and prep notes — without re-adding items the user
+ * cleared, and keeping checked/pantry state and any section the user chose.
+ * Lines that now merge collapse into one (checked only if all were checked).
  */
 export function refreshDerivedQuantities(session: ShoppingSession): ShoppingSession {
   const { aggregate, excludedOptional } = aggregateRecipes(session.recipes);
-  const items = session.list.items.map((item) => {
-    if (item.isManual) return item;
-    const agg = aggregate.get(item.canonicalKey);
-    if (!agg) return item;
-    return { ...item, ...deriveQuantityFields(agg.contributions), contributions: agg.contributions };
-  });
-  const list: ShoppingList = { ...session.list, items };
+  const items: ShoppingListItem[] = [];
+  const byKey = new Map<string, number>();
+  for (const item of session.list.items) {
+    if (item.isManual) {
+      items.push(item.departmentOverride ? item : { ...item, department: classifyDepartment(item.displayName, item.notes ?? "") });
+      continue;
+    }
+    const key = currentKey(item, aggregate);
+    const agg = aggregate.get(key);
+    if (!agg) {
+      items.push(item);
+      continue;
+    }
+    const existing = byKey.get(key);
+    if (existing !== undefined) {
+      if (!item.checked) items[existing] = { ...items[existing]!, checked: false };
+      continue;
+    }
+    byKey.set(key, items.length);
+    const { notes: _oldNotes, ...rest } = item;
+    const notes = mergePrepNotes(agg.contributions);
+    items.push({
+      ...rest,
+      canonicalKey: key,
+      department: item.departmentOverride ? item.department : agg.department,
+      ...deriveQuantityFields(agg.contributions),
+      contributions: agg.contributions,
+      ...(notes ? { notes } : {}),
+    });
+  }
+  const list: ShoppingList = { ...session.list, items: sortItems(items) };
   if (excludedOptional.length > 0) list.excludedOptional = excludedOptional;
   else delete list.excludedOptional;
   return { ...session, list };
@@ -397,6 +455,7 @@ export function addManualItem(
     canonicalKey,
     displayName: name,
     department: input.department ?? classifyDepartment(name, input.notes || ""),
+    ...(input.department ? { departmentOverride: true } : {}),
     quantityLabel: input.quantityLabel?.trim() ?? "",
     contributions: [],
     notes: input.notes,
@@ -414,6 +473,22 @@ export function addManualItem(
       ...session.list,
       items: sortItems([...session.list.items, item]),
       generatedAt: new Date().toISOString(),
+    },
+    updatedAt: new Date().toISOString(),
+  };
+}
+
+/** File an item under a different aisle. The choice sticks through crew changes and plan updates. */
+export function moveItemToDepartment(session: ShoppingSession, itemId: string, department: Department): ShoppingSession {
+  const item = session.list.items.find((i) => i.id === itemId);
+  if (!item || (item.department === department && item.departmentOverride)) return session;
+  return {
+    ...session,
+    list: {
+      ...session.list,
+      items: sortItems(
+        session.list.items.map((i) => (i.id === itemId ? { ...i, department, departmentOverride: true } : i)),
+      ),
     },
     updatedAt: new Date().toISOString(),
   };

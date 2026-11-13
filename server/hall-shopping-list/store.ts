@@ -9,6 +9,7 @@ import type {
   HallMemberRecord,
 } from "../../shared/hall-membership/types.js";
 import { normalizeHallRole } from "../../shared/hall-membership/types.js";
+import { aisleForStoredSection } from "../../shared/shopping/index.js";
 import type {
   HallShoppingList,
   HallShoppingListItem,
@@ -181,7 +182,7 @@ export function addManualItem(
     list.list_id,
     input.name.trim(),
     (input.quantity ?? "").trim(),
-    (input.section ?? "Other").trim(),
+    aisleForStoredSection(input.section, input.name),
     userId,
     Number(maxOrder.m) + 1,
     now,
@@ -193,7 +194,7 @@ export function addManualItem(
 }
 
 function mergeKey(name: string, section: string): string {
-  return `${section.toLowerCase()}::${name.toLowerCase().trim()}`;
+  return `${aisleForStoredSection(section, name).toLowerCase()}::${name.toLowerCase().trim()}`;
 }
 
 export function addRecipeIngredients(
@@ -237,7 +238,7 @@ export function addRecipeIngredients(
     for (const item of section.items) {
       const name = item.name.trim();
       if (!name) continue;
-      const sec = section.title.trim() || "Other";
+      const sec = aisleForStoredSection(section.title, name, item.notes);
       const qty = [item.amount?.trim(), item.notes?.trim()].filter(Boolean).join(" · ");
       const key = mergeKey(name, sec);
       const found = byKey.get(key);

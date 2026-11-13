@@ -171,6 +171,7 @@ export const ANALYTICS_EVENT_TYPES = [
   "shift_list_opened",
   "shift_list_item_checked",
   "shift_list_manual_item_added",
+  "shift_list_exported",
   "future_shift_viewed",
   "plan_ahead_paywall_viewed",
   "future_shift_plan_created",

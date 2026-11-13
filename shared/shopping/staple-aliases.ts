@@ -46,8 +46,13 @@ export const STAPLE_ALIASES: Record<string, string> = Object.fromEntries(
 
 /** Keys to check in a pantry for this item, most specific first. */
 export function pantryLookupKeys(canonicalKey: string): string[] {
+  const keys = [canonicalKey];
   const alias = STAPLE_ALIASES[canonicalKey];
-  return alias ? [canonicalKey, alias] : [canonicalKey];
+  if (alias) keys.push(alias);
+  // The seeded spice staples ("basil", "oregano") mean the dried jar.
+  const undried = canonicalKey.replace(/^dried /, "");
+  if (undried !== canonicalKey && !keys.includes(undried)) keys.push(undried);
+  return keys;
 }
 
 /** "kosher salt and black pepper" -> ["kosher salt", "black pepper"]; null for single ingredients. */

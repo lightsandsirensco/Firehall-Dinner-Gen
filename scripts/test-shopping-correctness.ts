@@ -216,7 +216,7 @@ test("incompatible units stay separate lines within the item", () => {
     recipe("a", [{ name: "Crushed Tomatoes", quantity: "2", unit: "cans (15 oz)" }]),
     recipe("b", [{ name: "Crushed Tomatoes", quantity: "1", unit: "cans (28 oz)" }]),
   ]);
-  assert.equal(item(cans, "tomato").quantityLabel, "2 cans (15 oz) + 1 can (28 oz)", "different can sizes never merge");
+  assert.equal(item(cans, "canned crushed tomato").quantityLabel, "2 cans (15 oz) + 1 can (28 oz)", "different can sizes never merge");
 });
 
 test("metric/imperial display is a view over the same contributions", () => {
@@ -552,7 +552,7 @@ test("catalog: merged burgers + beef dip combine shared condiments", () => {
 
 test("catalog: clove vs count garlic stays honest rather than guessed", () => {
   const s = build([pageInput(loadPage("beef-dip")), pageInput(loadPage("chicken-tortilla-soup-for-the-hall"))]);
-  assert.equal(item(s, "garlic clove").quantityLabel, "6 cloves + 6");
+  assert.equal(item(s, "garlic").quantityLabel, "6 cloves + 6");
   assert.equal(s.list.items.some((i) => i.canonicalKey === "shredded monterey jack"), false, "'optional at the line'");
 });
 
@@ -585,7 +585,7 @@ test("catalog sweep: every recipe at base and crew 16 keeps units and yields san
       }
       for (const ing of page.ingredients) {
         if (isOptionalIngredient(ing) || isNotPurchased(ing.name)) continue;
-        const key = canonicalizeIngredientName(ing.name);
+        const key = normalizeIngredient(ing).canonicalKey;
         const listed = s.list.items.find((i) => i.canonicalKey === key);
         assert.ok(listed, `${page.slug}@${crew}: required ingredient "${ing.name}" missing`);
         if (ing.unit?.trim() && parseShoppingQuantity(ing.quantity)) {
