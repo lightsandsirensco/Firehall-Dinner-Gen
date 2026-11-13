@@ -26,11 +26,12 @@ import {
   buildHomeSeo,
   buildHowWeTestRecipesSeo,
   buildPizzaNightSeo,
+  PIZZA_NIGHT_HEADING,
+  PIZZA_NIGHT_INTRO,
   buildPrivacySeo,
   buildProductSeoPageSeo,
   buildSeoLandingPageSeo,
   buildTermsSeo,
-  buildTopRatedRecipesSeo,
   buildWheelSeo,
   defaultOgImage,
 } from "../../shared/seo/metadata.js";
@@ -201,12 +202,11 @@ function moreResourcesLinkSections(): IndexSnapshotSection[] {
     {
       heading: "More",
       links: [
-        { label: "Top Rated Recipes", path: "/top-rated-recipes" },
         { label: "Hall of Fame", path: "/hall-of-fame" },
         { label: "Generator", path: "/generator" },
         { label: "FAQ", path: "/faq" },
         { label: "About", path: "/about" },
-        { label: "How We Test Recipes", path: "/how-we-test-recipes" },
+        { label: "How We Write and Review Recipes", path: "/how-we-test-recipes" },
         { label: "Firefighter Red Lead Recipe", path: "/firefighter-red-lead-recipe" },
       ],
     },
@@ -336,20 +336,6 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
     };
   }
 
-  if (path === "/top-rated-recipes") {
-    return {
-      seo: buildTopRatedRecipesSeo(),
-      jsonLd: [
-        buildWebSiteSchema(origin),
-        buildBreadcrumbListSchema(origin, [
-          { name: "Home", path: "/" },
-          { name: "Explore", path: "/explore" },
-          { name: "Top Rated Recipes", path: "/top-rated-recipes" },
-        ]),
-      ],
-    };
-  }
-
   if (path === "/hall-of-fame") {
     return {
       seo: buildHallOfFameSeo(),
@@ -405,7 +391,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         buildWebSiteSchema(origin),
         buildBreadcrumbListSchema(origin, [
           { name: "Home", path: "/" },
-          { name: "How We Test Recipes", path: "/how-we-test-recipes" },
+          { name: "How We Write and Review Recipes", path: "/how-we-test-recipes" },
         ]),
       ],
     };
@@ -542,8 +528,8 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         ]),
       ],
       bodyHtml: renderIndexSnapshotHtml({
-        h1: h1FromSeoTitle(seo.title),
-        intro: seo.description,
+        h1: PIZZA_NIGHT_HEADING,
+        intro: PIZZA_NIGHT_INTRO,
         sections: [
           {
             heading: "Pizza recipes",

@@ -10,7 +10,7 @@ import { PIZZA_NIGHT_COUNT } from "@shared/pizza-night/manifest";
 import { usePageSeo } from "@/lib/seo/use-page-seo";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema } from "@shared/seo/schema";
-import { buildPizzaNightSeo } from "@shared/seo/metadata";
+import { buildPizzaNightSeo, PIZZA_NIGHT_HEADING, PIZZA_NIGHT_INTRO } from "@shared/seo/metadata";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { useMemo } from "react";
@@ -49,8 +49,8 @@ export default function PizzaNight() {
 
       <AppPageHeader
         variant="feed"
-        title="Pizza Night"
-        subtitle={`${PIZZA_NIGHT_COUNT} firehouse pies — fastest cooks first. Tap one and start cooking.`}
+        title={PIZZA_NIGHT_HEADING}
+        subtitle={PIZZA_NIGHT_INTRO}
       />
 
       <main className={cn(app.mainFeed, "pb-10 pt-2 sm:pb-14")}>

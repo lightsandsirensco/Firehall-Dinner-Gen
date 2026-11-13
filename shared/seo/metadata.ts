@@ -107,11 +107,16 @@ export function buildExploreSeo(recipeCount = APPROVED_CATALOG_TOTAL): PageSeoCo
   };
 }
 
+/** Visible /pizza header — shared so the server-rendered snapshot matches the page. */
+export const PIZZA_NIGHT_HEADING = "Saturday Nights Are for Pizza";
+export const PIZZA_NIGHT_INTRO =
+  "Some traditions never change. Saturday night at the firehouse means pizza. Find your next favourite and feed the crew.";
+
 export function buildPizzaNightSeo(pizzaCount: number): PageSeoConfig {
   return {
-    title: `Pizza Night | ${SEO_SITE_NAME}`,
+    title: `Firehouse Pizza Night Recipes | ${SEO_SITE_NAME}`,
     description: clipDescription(
-      `Browse ${pizzaCount} firehouse-tested pizza recipes — crew-sized pies with oven temps, topping order, and step-by-step instructions.`,
+      `Saturday night at the firehouse means pizza. ${pizzaCount} crew-sized pizza recipes with oven temps, topping order, and step-by-step instructions.`,
     ),
     canonicalPath: "/pizza",
     ogType: "website",
@@ -128,18 +133,6 @@ export function buildRecipesIndexSeo(recipeCount = APPROVED_CATALOG_TOTAL): Page
     canonicalPath: "/explore",
     ogType: "website",
     keywords: [...SEO_TARGET_KEYWORDS, "firefighter recipe index", "firehouse meal ideas"],
-  };
-}
-
-export function buildTopRatedRecipesSeo(): PageSeoConfig {
-  return {
-    title: "Top Rated Firefighter Recipes | Firehall Meals",
-    description: clipDescription(
-      "Firehouse-tested meals ranked by crew approval — see which firefighter recipes crews would cook again.",
-    ),
-    canonicalPath: "/top-rated-recipes",
-    ogType: "website",
-    keywords: [...SEO_TARGET_KEYWORDS, "top rated firefighter recipes", "crew approved meals"],
   };
 }
 
@@ -168,14 +161,14 @@ export function buildFirehallCategorySeo(categoryId: FirehallCategoryId, recipeC
     categoryId === "quick_meals"
       ? "Firehouse quick meals for busy nights — realistic timing, minimal fuss, crew-sized portions."
       : categoryId === "comfort_food"
-        ? "Firefighter comfort food for tough shifts — warm, hearty, firehouse-tested dinners."
+        ? "Firefighter comfort food for tough shifts — warm, hearty, firehouse-ready dinners."
         : categoryId === "healthy_options"
           ? "Healthy firefighter meals that still taste good — practical station dinners, not diet culture."
           : categoryId === "bbq_smoker"
             ? "BBQ firehall meals for grill and smoker nights — crew-scale proteins and sides."
             : categoryId === "feed_a_crowd"
               ? "Meals for large crews — batch, tray, and line dinners built to feed the crew."
-              : "Firehouse-tested meals organized by practical station nights.";
+              : "Firehouse-ready meals organized by practical station nights.";
 
   const titlePrefix =
     categoryId === "healthy_options"
@@ -201,7 +194,7 @@ export function buildWheelSeo(): PageSeoConfig {
   return {
     title: `Classics Wheel — Spin for Tonight's Firehall Dinner | ${SEO_SITE_NAME}`,
     description: clipDescription(
-      "Spin the Classics Wheel to pick tonight's firehall dinner from ten firehouse-tested crew favorites — no more what's-for-dinner debate.",
+      "Spin the Classics Wheel to pick tonight's firehall dinner from ten firehouse-ready crew favorites — no more what's-for-dinner debate.",
     ),
     canonicalPath: "/wheel",
     ogType: "website",
@@ -225,7 +218,7 @@ export function buildAboutSeo(): PageSeoConfig {
   return {
     title: `About Firehall Meals | ${SEO_SITE_NAME}`,
     description: clipDescription(
-      "Firehall Meals is built by firefighters for station kitchens — crew-sized recipes, shift-tested dinners, and tools that end the what's-for-dinner debate.",
+      "Firehall Meals is built by firefighters for station kitchens — crew-sized recipes, shift-ready dinners, and tools that end the what's-for-dinner debate.",
     ),
     canonicalPath: "/about",
     ogType: "website",
@@ -257,13 +250,13 @@ export function buildTermsSeo(): PageSeoConfig {
 
 export function buildHowWeTestRecipesSeo(): PageSeoConfig {
   return {
-    title: `How We Test Recipes | ${SEO_SITE_NAME}`,
+    title: `How We Write and Review Recipes | ${SEO_SITE_NAME}`,
     description: clipDescription(
-      "How Firehall Meals tests firefighter recipes for real firehouses — crew sizing for 2–20, beginner-friendly steps, and shift cooking that holds between calls.",
+      "How Firehall Meals checks firefighter recipes — USDA safe cooking temperatures, ingredient and serving checks, nutrition calculated from ingredients, and human culinary review.",
     ),
     canonicalPath: "/how-we-test-recipes",
     ogType: "website",
-    keywords: [...SEO_TARGET_KEYWORDS, "how we test recipes", "firehouse recipe standards"],
+    keywords: [...SEO_TARGET_KEYWORDS, "recipe standards", "firehouse recipe standards"],
   };
 }
 
@@ -355,7 +348,7 @@ export function buildGuidesClusterSeo(clusterId: GuidesClusterId, articleCount =
 
   const descBase =
     clusterId === "firefighter-meals"
-      ? "Firefighter meals built for station kitchens — crew-sized, shift-friendly, and firehouse-tested."
+      ? "Firefighter meals built for station kitchens — crew-sized and shift-friendly."
       : clusterId === "firehall-dinners"
         ? "Fire station dinner ideas crews actually run: comfort, BBQ, big feeds, and quick shift plates."
         : clusterId === "firefighter-nutrition"
