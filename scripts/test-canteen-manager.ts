@@ -2,6 +2,7 @@
 /**
  * Validates Canteen Manager V2 — reports, weekly orders, claims, delivery receive.
  */
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -57,10 +58,10 @@ async function main(): Promise<void> {
   bindBillingDb(db);
   bindHallCanteenDb(db);
 
-  const captain = upsertEmailUser("captain@canteen-mgr.test").user;
-  const manager = upsertEmailUser("manager@canteen-mgr.test").user;
-  const memberA = upsertEmailUser("member-a@canteen-mgr.test").user;
-  const memberB = upsertEmailUser("member-b@canteen-mgr.test").user;
+  const captain = (await upsertEmailUser("captain@canteen-mgr.test")).user;
+  const manager = (await upsertEmailUser("manager@canteen-mgr.test")).user;
+  const memberA = (await upsertEmailUser("member-a@canteen-mgr.test")).user;
+  const memberB = (await upsertEmailUser("member-b@canteen-mgr.test")).user;
 
   const detail = createHall(captain.user_id, {
     hall_name: "Firehall Meals Test Hall",

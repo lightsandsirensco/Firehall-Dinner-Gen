@@ -2,6 +2,7 @@
 /**
  * Validates Hall Identity V1 — structured shifts, location fields, member shift assignment.
  */
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -58,8 +59,8 @@ async function main(): Promise<void> {
   bindHallMembershipDb(db);
   bindBillingDb(db);
 
-  const captain = upsertEmailUser("captain@identity.test").user;
-  const member = upsertEmailUser("member@identity.test").user;
+  const captain = (await upsertEmailUser("captain@identity.test")).user;
+  const member = (await upsertEmailUser("member@identity.test")).user;
 
   assert.equal(formatStationLabel("312"), "Station 312");
   assert.equal(formatStationLabel(""), null);

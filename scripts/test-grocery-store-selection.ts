@@ -2,6 +2,7 @@
 /**
  * Local grocery store selection — discovery, preferences, demo deals scoped to hall.
  */
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -61,7 +62,7 @@ async function main(): Promise<void> {
   bindBillingDb(db);
   bindGroceryDealsDb(db);
 
-  const captain = upsertEmailUser("captain@firehall.test").user;
+  const captain = (await upsertEmailUser("captain@firehall.test")).user;
   const detail = createHall(captain.user_id, {
     hall_name: "Station 141",
     appliances: ["stove"],

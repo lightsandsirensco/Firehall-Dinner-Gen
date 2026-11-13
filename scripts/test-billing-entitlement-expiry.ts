@@ -45,8 +45,16 @@ check(
   entitled(sub({ status: "trialing", current_period_end: FUTURE })),
 );
 check(
-  "past_due (dunning grace) stays entitled",
-  entitled(sub({ status: "past_due", current_period_end: FUTURE })),
+  "past_due within the 7-day renewal grace stays entitled",
+  entitled(sub({ status: "past_due", current_period_end: FUTURE, past_due_since: "2026-10-05T00:00:00.000Z" })),
+);
+check(
+  "past_due beyond the 7-day renewal grace loses access",
+  !entitled(sub({ status: "past_due", current_period_end: FUTURE, past_due_since: "2026-09-29T00:00:00.000Z" })),
+);
+check(
+  "past_due with no recorded failure time fails closed",
+  !entitled(sub({ status: "past_due", current_period_end: FUTURE })),
 );
 check(
   "stale expires_at from an earlier admin grant does not expire a live Stripe subscription",

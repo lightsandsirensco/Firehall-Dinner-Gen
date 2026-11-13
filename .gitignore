@@ -1,5 +1,8 @@
 node_modules
 temp/
+tmp/
+prod.env
+*.env
 dist
 .DS_Store
 server/public

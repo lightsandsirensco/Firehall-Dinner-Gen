@@ -36,7 +36,7 @@ function main(): void {
 
   assert.equal(onboardingPathForStep(1), "/hall/join");
   assert.equal(onboardingPathForStep(2), "/hall/welcome");
-  assert.equal(onboardingPathForStep(3), "/tonight");
+  assert.equal(onboardingPathForStep(3), "/hall");
 
   console.log("[test-hall-onboarding] OK");
 }

@@ -16,6 +16,14 @@ import {
 
   AdminGrantBlockedError,
 
+  AdminPremiumGrantError,
+
+  adminGrantTemporaryPremium,
+
+  adminRevokeTemporaryPremium,
+
+  listAdminPremiumGrantLog,
+
   adminSetGlobalFlag,
 
   adminSetHallPlan,
@@ -57,24 +65,24 @@ import {
   resolveUserBilling,
 
   selectUserPlan,
+  hasManagedPaidSubscription,
+  HALL_PRO_SELF_SERVICE_ENABLED,
 
   startHallProTrial,
 
   upsertStripeSubscription,
-
-  userHasHadPaidSubscription,
 
 } from "./store.js";
 
 import {
   buildProCheckoutSessionParams,
   getStripeClient,
-  getVerifiedFoundingCouponId,
   getVerifiedPriceIdForPeriod,
   getWebhookSecret,
+  latestInvoiceStatus,
+  resolveSubscriptionOwner,
   stripeSubscriptionToRecord,
 } from "./stripe-client.js";
-import { foundingOfferApplies } from "../../shared/billing/pricing.js";
 
 import { userAlreadyHasProAccess } from "./checkout-guard.js";
 
@@ -87,6 +95,10 @@ import {
   adminSetGlobalFlagSchema,
 
   adminSetUserPlanSchema,
+
+  adminPremiumGrantSchema,
+
+  adminPremiumRevokeSchema,
 
   adminToggleFeatureSchema,
 
@@ -285,6 +297,11 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
+      if (await hasManagedPaidSubscription(req._authUserId!)) {
+        return res.status(409).json({
+          message: "You have an active Pro subscription. To switch to Free, cancel it from Manage subscription on your profile.",
+        });
+      }
       const billing = await selectUserPlan(req._authUserId!, parsed.data.plan_id);
 
       if (!billing) {
@@ -389,6 +406,11 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
+        // Hall Pro has no payment path and the hall program is private beta, so no
+        // member may start, enable or convert it; admins use /api/admin/users/:id/hall-pro-trial.
+        if (!HALL_PRO_SELF_SERVICE_ENABLED) {
+          return res.status(403).json({ message: "Hall Pro isn't available yet." });
+        }
         const parsed = hallBillingActionSchema.safeParse(req.body);
 
         if (!parsed.success) {
@@ -608,20 +630,9 @@ export function registerBillingRoutes(app: Express): void {
       const priceId = await getVerifiedPriceIdForPeriod(parsed.data.billing_period);
       const origin = resolvePublicSiteOrigin(req.get("host"), req.protocol);
 
-      const founding = foundingOfferApplies({
-        billingPeriod: parsed.data.billing_period,
-        offerEnabled: config.founding_offer_enabled,
-        hadPaidSubscription: await userHasHadPaidSubscription(userId),
-      });
-      let foundingCouponId: string | null = null;
-      if (founding) {
-        try {
-          foundingCouponId = await getVerifiedFoundingCouponId();
-        } catch (err) {
-          logError("billing", "founding coupon unavailable", err);
-          return res.status(503).json({ message: "Founding pricing is temporarily unavailable. Please try again shortly." });
-        }
-      }
+      // Launch pricing has no founding coupon: annual is $39.99 from the first
+      // payment, regardless of the founding_offer_enabled flag.
+      const foundingCouponId: string | null = null;
 
       // Only one open Checkout per customer: a second tab's session would
       // otherwise let the same person complete two subscriptions.
@@ -730,19 +741,36 @@ export function registerBillingRoutes(app: Express): void {
             break;
           }
 
-          const userId =
+          const sessionUserId =
             session.client_reference_id ?? (session.metadata?.user_id as string | undefined);
           const stripeSubscriptionId =
             typeof session.subscription === "string" ? session.subscription : session.subscription?.id;
           const stripeCustomerId =
             typeof session.customer === "string" ? session.customer : session.customer?.id;
-          if (userId && stripeSubscriptionId && stripeCustomerId) {
-            const subscription = await stripe.subscriptions.retrieve(stripeSubscriptionId);
+          if (sessionUserId && stripeSubscriptionId && stripeCustomerId) {
+            const subscription = await stripe.subscriptions.retrieve(stripeSubscriptionId, { expand: ["latest_invoice"] });
+            const record = stripeSubscriptionToRecord(subscription);
+            const owner = resolveSubscriptionOwner({
+              linkedUserId: await getUserIdByStripeCustomerId(stripeCustomerId),
+              metadataUserId: sessionUserId,
+              knownUserId: await getUserIdByStripeSubscriptionId(stripeSubscriptionId),
+              priceId: record.stripePriceId,
+              status: subscription.status,
+              latestInvoiceStatus: latestInvoiceStatus(subscription),
+            });
+            if (session.payment_status === "unpaid" || !owner.ok) {
+              logError(
+                "billing",
+                "stripe checkout.session.completed rejected",
+                new Error(`session ${session.id}: ${owner.ok ? "session unpaid" : owner.reason}`),
+              );
+              break;
+            }
             await upsertStripeSubscription({
-              userId,
+              userId: owner.userId,
               stripeCustomerId,
               stripeSubscriptionId,
-              ...stripeSubscriptionToRecord(subscription),
+              ...record,
             });
             trackBillingEvent(req, "stripe_checkout_completed", { plan_id: "firefighter_plus" });
           } else {
@@ -754,23 +782,35 @@ export function registerBillingRoutes(app: Express): void {
           }
           break;
         }
+        case "customer.subscription.created":
         case "customer.subscription.updated": {
-          const subscription = event.data.object as import("stripe").Stripe.Subscription;
+          // Stripe does not guarantee delivery order — re-fetch so a stale,
+          // late-delivered event can never overwrite a newer status. `created`
+          // also covers subscriptions made outside Checkout (Dashboard, API).
+          const eventSubscription = event.data.object as import("stripe").Stripe.Subscription;
+          const subscription = await stripe.subscriptions.retrieve(eventSubscription.id, { expand: ["latest_invoice"] });
           const stripeCustomerId =
             typeof subscription.customer === "string" ? subscription.customer : subscription.customer.id;
-          const userId =
-            (subscription.metadata?.user_id as string | undefined) ??
-            (await getUserIdByStripeCustomerId(stripeCustomerId)) ??
-            (await getUserIdByStripeSubscriptionId(subscription.id));
-          if (userId) {
-            await upsertStripeSubscription({
-              userId,
-              stripeCustomerId,
-              stripeSubscriptionId: subscription.id,
-              ...stripeSubscriptionToRecord(subscription),
-            });
-            trackBillingEvent(req, "stripe_subscription_updated", { status: subscription.status });
+          const record = stripeSubscriptionToRecord(subscription);
+          const owner = resolveSubscriptionOwner({
+            linkedUserId: await getUserIdByStripeCustomerId(stripeCustomerId),
+            metadataUserId: (subscription.metadata?.user_id as string | undefined) ?? null,
+            knownUserId: await getUserIdByStripeSubscriptionId(subscription.id),
+            priceId: record.stripePriceId,
+            status: subscription.status,
+            latestInvoiceStatus: latestInvoiceStatus(subscription),
+          });
+          if (!owner.ok) {
+            logError("billing", `stripe ${event.type} ignored`, new Error(`${subscription.id}: ${owner.reason}`));
+            break;
           }
+          await upsertStripeSubscription({
+            userId: owner.userId,
+            stripeCustomerId,
+            stripeSubscriptionId: subscription.id,
+            ...record,
+          });
+          trackBillingEvent(req, "stripe_subscription_updated", { status: subscription.status });
           break;
         }
         case "customer.subscription.deleted": {
@@ -987,6 +1027,60 @@ export function registerBillingRoutes(app: Express): void {
 
     }
 
+  });
+
+  app.post("/api/admin/billing/users/:userId/premium-grant", requireAdmin, async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const parsed = adminPremiumGrantSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ message: "Required: expires_at (ISO date), reason, granted_by" });
+      }
+      const billing = await adminGrantTemporaryPremium({
+        userId: String(req.params.userId ?? ""),
+        expiresAt: new Date(parsed.data.expires_at),
+        reason: parsed.data.reason,
+        actor: parsed.data.granted_by,
+        actorIp: req.ip ?? null,
+      });
+      return res.json({ billing });
+    } catch (err) {
+      if (err instanceof AdminPremiumGrantError) return res.status(err.status).json({ message: err.message });
+      logError("billing", "admin premium grant failed", err);
+      return res.status(500).json({ message: "Failed to grant Premium" });
+    }
+  });
+
+  app.post("/api/admin/billing/users/:userId/premium-revoke", requireAdmin, async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const parsed = adminPremiumRevokeSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ message: "Required: reason, revoked_by" });
+      }
+      const billing = await adminRevokeTemporaryPremium({
+        userId: String(req.params.userId ?? ""),
+        reason: parsed.data.reason,
+        actor: parsed.data.revoked_by,
+        actorIp: req.ip ?? null,
+      });
+      return res.json({ billing });
+    } catch (err) {
+      if (err instanceof AdminPremiumGrantError) return res.status(err.status).json({ message: err.message });
+      logError("billing", "admin premium revoke failed", err);
+      return res.status(500).json({ message: "Failed to revoke Premium" });
+    }
+  });
+
+  app.get("/api/admin/billing/premium-grants", requireAdmin, async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const userId = typeof req.query.user_id === "string" && req.query.user_id ? req.query.user_id : undefined;
+      return res.json({ entries: await listAdminPremiumGrantLog(userId) });
+    } catch (err) {
+      logError("billing", "admin premium grant log failed", err);
+      return res.status(500).json({ message: "Failed to load Premium grant log" });
+    }
   });
 
   app.patch("/api/admin/billing/users/:userId", requireAdmin, async (req: Request, res: Response) => {

@@ -1,4 +1,5 @@
 import { log, logError } from "../logger.js";
+import { SUPPORT_EMAIL } from "../../shared/support-contact.js";
 import type { ShiftReminderAction } from "../../shared/shift-reminder/types.js";
 import {
   SHIFT_REMINDER_ACTION_LABELS,
@@ -109,6 +110,7 @@ export async function sendShiftReminderEmail(input: {
 
     await transport.sendMail({
       from,
+      replyTo: SUPPORT_EMAIL,
       to: input.email,
       subject,
       text,

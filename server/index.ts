@@ -10,6 +10,7 @@ import { configureTrustProxy } from "./client-ip.js";
 import { enforceCanonicalHostRedirect } from "./canonical-host-redirect.js";
 import { requestIdMiddleware, recordServerError } from "./monitoring/error-monitor.js";
 import { startDailyBackupScheduler } from "./db-backup.js";
+import { flushServerRequestCounts, serverRequestCounter, startServerRequestFlush } from "./analytics/server-requests.js";
 
 export {
   log,
@@ -28,6 +29,8 @@ const app = express();
 const httpServer = createServer(app);
 
 configureTrustProxy(app);
+app.use(serverRequestCounter);
+startServerRequestFlush();
 enforceCanonicalHostRedirect(app);
 
 declare module "http" {
@@ -180,6 +183,7 @@ app.use((req, res, next) => {
 
     const shutdown = (signal: string) => {
       log(`${signal} received. Shutting down gracefully...`, "system");
+      void flushServerRequestCounts();
       httpServer.close(() => {
         log("HTTP server closed.", "system");
         process.exit(0);

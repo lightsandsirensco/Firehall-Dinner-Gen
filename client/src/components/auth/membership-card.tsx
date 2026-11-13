@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useBilling, useOpenBillingPortal } from "@/lib/billing/hooks";
 import { PLAN_DISPLAY } from "@shared/billing/types";
 import { proTrialStatusLabel } from "@shared/billing/pro-trial";
+import { SUPPORT_EMAIL, supportMailto } from "@shared/support-contact";
 import { trackPremiumTrialUpgradeClicked } from "@/lib/analytics";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
@@ -100,6 +101,14 @@ export function MembershipCard() {
           ) : null}
         </div>
       </div>
+      {isPro || onTrial ? (
+        <p className="mt-3 text-xs text-muted-foreground">
+          Billing questions?{" "}
+          <a href={supportMailto("Firehall Meals Pro billing")} className="text-primary hover:underline">
+            {SUPPORT_EMAIL}
+          </a>
+        </p>
+      ) : null}
     </section>
   );
 }

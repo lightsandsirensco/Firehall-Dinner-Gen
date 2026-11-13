@@ -1,9 +1,18 @@
 import crypto from "crypto";
-import { log, clip, maskEmail, isProductionEnv } from "./logger";
+import { log, logError, clip, maskEmail, isProductionEnv } from "./logger";
+import { isPgConfigured } from "./db/pg-client.js";
+import {
+  cancelKlaviyoSubscription,
+  claimDueKlaviyoSubscriptions,
+  enqueueKlaviyoSubscription,
+  hasActiveMarketingConsent,
+  markKlaviyoSubscriptionSent,
+  recordKlaviyoRetryFailure,
+} from "./marketing-consent/klaviyo-queue.js";
 
-const KLAVIYO_BASE = "https://a.klaviyo.com/api";
+export const KLAVIYO_BASE = "https://a.klaviyo.com/api";
 const REVISION = "2025-01-15";
-const LIST_NAME = "Firehall Dinner Generator Leads";
+export const LIST_NAME = "Firehall Dinner Generator Leads";
 
 let cachedListId: string | null = null;
 
@@ -80,6 +89,13 @@ async function klaviyoFetch(
   }
 }
 
+/** Read-only GET against the Klaviyo API; throws on a non-2xx response. */
+export async function klaviyoGetJson(url: string, label: string): Promise<any> {
+  const res = await klaviyoFetch("GET", url, undefined, label);
+  if (!res.ok) throw new Error(`Klaviyo GET ${label} failed (${res.status})`);
+  return res.data;
+}
+
 async function getOrCreateList(): Promise<string> {
   if (cachedListId) return cachedListId;
 
@@ -153,51 +169,119 @@ export async function getKlaviyoListMemberCount(): Promise<number | null> {
   return value;
 }
 
-export async function subscribeToList(email: string): Promise<void> {
-  const listId = await getOrCreateList();
+class KlaviyoSubscribeError extends Error {
+  constructor(message: string, readonly permanent: boolean) {
+    super(message);
+  }
+}
 
-  const profileRes = await klaviyoFetch(
+/**
+ * Grants email marketing consent (SUBSCRIBED) and adds the profile to the
+ * leads list in one call. List membership alone (relationships/profiles)
+ * leaves consent at NEVER_SUBSCRIBED, so Klaviyo will not email the person.
+ * Klaviyo processes the job asynchronously and answers 202.
+ */
+async function sendMarketingSubscription(email: string): Promise<void> {
+  const listId = await getOrCreateList();
+  const res = await klaviyoFetch(
     "POST",
-    `${KLAVIYO_BASE}/profile-import/`,
+    `${KLAVIYO_BASE}/profile-subscription-bulk-create-jobs/`,
     {
       data: {
-        type: "profile",
-        attributes: { email },
+        type: "profile-subscription-bulk-create-job",
+        attributes: {
+          custom_source: "Firehall Meals website",
+          profiles: {
+            data: [
+              {
+                type: "profile",
+                attributes: { email, subscriptions: { email: { marketing: { consent: "SUBSCRIBED" } } } },
+              },
+            ],
+          },
+        },
+        relationships: { list: { data: { type: "list", id: listId } } },
       },
     },
-    `importProfile(${email})`,
+    `subscribe(${maskEmail(email)})`,
   );
-
-  if (!profileRes.ok) {
-    const detail = profileRes.data?.errors?.[0]?.detail || profileRes.raw.substring(0, 200);
-    throw new Error(`Profile import failed (${profileRes.status}): ${detail}`);
+  if (!res.ok) {
+    const detail = res.data?.errors?.[0]?.detail || res.raw.substring(0, 200);
+    // 401/403 (key or scope) and 429/5xx can succeed later; other 4xx are bad input.
+    const permanent = res.status >= 400 && res.status < 500 && ![401, 403, 408, 429].includes(res.status);
+    throw new KlaviyoSubscribeError(`Subscribe failed (${res.status}): ${detail}`, permanent);
   }
+}
 
-  const profileId = profileRes.data?.data?.id;
-  if (!profileId) {
-    throw new Error("Profile import succeeded but no profile ID returned");
+const INLINE_ATTEMPTS = 3;
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+const isPermanent = (err: unknown) => err instanceof KlaviyoSubscribeError && err.permanent;
+const errorText = (err: unknown) => (err instanceof Error ? err.message : String(err));
+
+/**
+ * Subscribes an opted-in email to marketing. Retries transient failures
+ * inline; if all fail, the email goes to the Postgres retry queue (picked up
+ * by startKlaviyoRetryWorker) and the error is still thrown to the caller.
+ */
+export async function subscribeToList(email: string): Promise<void> {
+  let lastErr: unknown;
+  for (let attempt = 1; attempt <= INLINE_ATTEMPTS; attempt++) {
+    try {
+      await sendMarketingSubscription(email);
+      log(`[klaviyo] subscribed (marketing consent) email=${maskEmail(email)}`, "klaviyo");
+      await markKlaviyoSubscriptionSent(email).catch((err) => {
+        if ((err as { code?: string })?.code !== "42P01") logError("klaviyo", "queue update failed", err);
+      });
+      return;
+    } catch (err) {
+      lastErr = err;
+      if (isPermanent(err) || attempt === INLINE_ATTEMPTS) break;
+      await sleep(400 * 2 ** (attempt - 1));
+    }
   }
-
-  const addRes = await klaviyoFetch(
-    "POST",
-    `${KLAVIYO_BASE}/lists/${listId}/relationships/profiles/`,
-    {
-      data: [
-        {
-          type: "profile",
-          id: profileId,
-        },
-      ],
-    },
-    `addToList(${email})`,
+  logError("klaviyo", `marketing subscribe failed email=${maskEmail(email)}; queued for retry`, lastErr);
+  await enqueueKlaviyoSubscription(email, errorText(lastErr), isPermanent(lastErr)).catch((err) =>
+    logError("klaviyo", `could not queue subscribe retry email=${maskEmail(email)}`, err),
   );
+  throw lastErr;
+}
 
-  if (!addRes.ok) {
-    const detail = addRes.data?.errors?.[0]?.detail || addRes.raw.substring(0, 200);
-    throw new Error(`Add to list failed (${addRes.status}): ${detail}`);
+/** Processes due queue rows once; exported for tests. */
+export async function processKlaviyoRetryQueue(): Promise<{ sent: number; failed: number; cancelled: number }> {
+  const out = { sent: 0, failed: 0, cancelled: 0 };
+  if (!validateKlaviyoConfig().ok || !isPgConfigured()) return out;
+  for (const row of await claimDueKlaviyoSubscriptions()) {
+    if (!(await hasActiveMarketingConsent(row.email))) {
+      await cancelKlaviyoSubscription(row.email, "no active marketing consent in Postgres");
+      out.cancelled += 1;
+      continue;
+    }
+    try {
+      await sendMarketingSubscription(row.email);
+      await markKlaviyoSubscriptionSent(row.email);
+      log(`[klaviyo] retry subscribed email=${maskEmail(row.email)} attempt=${row.attempts + 1}`, "klaviyo");
+      out.sent += 1;
+    } catch (err) {
+      await recordKlaviyoRetryFailure(row, errorText(err), isPermanent(err));
+      logError("klaviyo", `retry subscribe failed email=${maskEmail(row.email)} attempt=${row.attempts + 1}`, err);
+      out.failed += 1;
+    }
   }
+  return out;
+}
 
-  log(`[klaviyo] subscribed email=${maskEmail(email)} listId=${listId}`, "klaviyo");
+let retryTimer: NodeJS.Timeout | null = null;
+
+export function startKlaviyoRetryWorker(intervalMs = 5 * 60 * 1000): void {
+  if (retryTimer || !isPgConfigured()) return;
+  const tick = () =>
+    void processKlaviyoRetryQueue().catch((err) => {
+      if ((err as { code?: string })?.code === "42P01") return; // migration 0020 not applied yet
+      logError("klaviyo", "retry worker failed", err);
+    });
+  retryTimer = setInterval(tick, intervalMs);
+  retryTimer.unref();
+  setTimeout(tick, 30_000).unref();
 }
 
 export async function trackRecipeEvent(

@@ -92,6 +92,49 @@ export function getPriceIdForPeriod(period: BillingPeriod): string {
   return priceId;
 }
 
+export function latestInvoiceStatus(subscription: {
+  latest_invoice?: string | { status?: string | null } | null;
+}): string | null {
+  const invoice = subscription.latest_invoice;
+  return invoice && typeof invoice === "object" ? (invoice.status ?? null) : null;
+}
+
+export function isProPriceId(priceId: string | null | undefined): boolean {
+  if (!priceId) return false;
+  return [process.env.STRIPE_PRICE_ID_MONTHLY, process.env.STRIPE_PRICE_ID_ANNUAL].some((id) => id?.trim() === priceId);
+}
+
+/**
+ * Gate for every webhook write of Stripe subscription state. Subscription
+ * metadata is writable by anyone creating a subscription in the Dashboard or
+ * API, so ownership comes only from the Stripe customer our server linked to
+ * the account (linkStripeCustomer at checkout). A subscription we have never
+ * recorded must also be active on a paid invoice; later status changes on a
+ * known subscription (past_due, cancelled) always flow through.
+ */
+export function resolveSubscriptionOwner(input: {
+  linkedUserId: string | null;
+  metadataUserId: string | null;
+  knownUserId: string | null;
+  priceId: string | null;
+  status: Stripe.Subscription.Status;
+  latestInvoiceStatus: string | null;
+}): { ok: true; userId: string } | { ok: false; reason: string } {
+  const { linkedUserId, metadataUserId, knownUserId } = input;
+  if (!linkedUserId) return { ok: false, reason: "customer is not linked to a Firehall Meals account" };
+  if (metadataUserId && metadataUserId !== linkedUserId) {
+    return { ok: false, reason: "metadata user_id does not match the linked customer" };
+  }
+  if (knownUserId && knownUserId !== linkedUserId) {
+    return { ok: false, reason: "subscription is already recorded for a different account" };
+  }
+  if (!isProPriceId(input.priceId)) return { ok: false, reason: "price is not a configured Firehall Meals Pro price" };
+  if (!knownUserId && !(input.status === "active" && input.latestInvoiceStatus === "paid")) {
+    return { ok: false, reason: `new subscription is ${input.status} without a paid invoice` };
+  }
+  return { ok: true, userId: linkedUserId };
+}
+
 /**
  * The product contract Firehall Meals Pro is marketed at (see
  * client/src/lib/plans-display.ts) — the ONLY source of truth for what each
@@ -241,8 +284,20 @@ export async function getVerifiedFoundingCouponId(): Promise<string> {
  * subscription_data.trial_period_days: the only trial is the no-card
  * personal reverse trial (server/billing/pro-trial.ts), and paid Pro bills
  * immediately. Stripe rejects `discounts` together with
- * `allow_promotion_codes`, so a founding checkout omits the promo field.
+ * `allow_promotion_codes`, so a founding checkout omits the promo field. The
+ * promo field is otherwise hidden unless STRIPE_PROMO_CODES_ENABLED=true (a
+ * campaign is running) — an always-visible "Add code" sends buyers coupon-hunting.
+ * Managed Payments rejects `custom_text`, so renewal/cancel copy lives on the paywall.
  */
+const CHECKOUT_BRANDING: Stripe.Checkout.SessionCreateParams.BrandingSettings = {
+  display_name: "Firehall Meals",
+  icon: { type: "url", url: "https://www.firehallmeals.com/pwa/icon-512.png" },
+  font_family: "inter",
+  border_style: "rounded",
+  background_color: "#111111",
+  button_color: "#CA2121",
+};
+
 export function buildProCheckoutSessionParams(params: {
   customerId: string;
   userId: string;
@@ -253,12 +308,20 @@ export function buildProCheckoutSessionParams(params: {
   feature?: string;
 }): Stripe.Checkout.SessionCreateParams {
   const founding = Boolean(params.foundingCouponId);
+  const promoCodesEnabled = process.env.STRIPE_PROMO_CODES_ENABLED?.trim() === "true";
+  // Requires Stripe Tax to be active on the account; set PRO_STRIPE_TAX_ENABLED=false to opt out.
+  const taxEnabled = process.env.PRO_STRIPE_TAX_ENABLED?.trim().toLowerCase() !== "false";
   return {
     mode: "subscription",
     customer: params.customerId,
     client_reference_id: params.userId,
     line_items: [{ price: params.priceId, quantity: 1 }],
+    branding_settings: CHECKOUT_BRANDING,
+    ...(taxEnabled
+      ? { automatic_tax: { enabled: true }, customer_update: { address: "auto" as const, name: "auto" as const } }
+      : {}),
     subscription_data: {
+      description: `Firehall Meals Pro (${params.billingPeriod})`,
       metadata: { user_id: params.userId, ...(founding ? { founding_offer: "true" } : {}) },
     },
     metadata: {
@@ -269,7 +332,11 @@ export function buildProCheckoutSessionParams(params: {
     },
     success_url: `${params.origin}/plans?checkout=success`,
     cancel_url: `${params.origin}/plans?checkout=cancelled`,
-    ...(founding ? { discounts: [{ coupon: params.foundingCouponId! }] } : { allow_promotion_codes: true }),
+    ...(founding
+      ? { discounts: [{ coupon: params.foundingCouponId! }] }
+      : promoCodesEnabled
+        ? { allow_promotion_codes: true }
+        : {}),
   };
 }
 
@@ -292,6 +359,10 @@ export function buildProCheckoutSessionParams(params: {
  * subsequent event ever arriving to revoke it, so it is intentionally
  * treated as `cancelled` here instead (same bucket as a fully lapsed
  * subscription) — see scripts/test-stripe-billing.ts.
+ *
+ * `incomplete` means the FIRST invoice has never been paid (declined card,
+ * abandoned 3-D Secure), so it must not grant access either. If the payment
+ * later succeeds Stripe sends customer.subscription.updated → `active`.
  */
 export function mapStripeStatus(stripeStatus: Stripe.Subscription.Status): SubscriptionStatus {
   switch (stripeStatus) {
@@ -300,8 +371,8 @@ export function mapStripeStatus(stripeStatus: Stripe.Subscription.Status): Subsc
     case "active":
       return "active";
     case "past_due":
-    case "incomplete":
       return "past_due";
+    case "incomplete":
     case "unpaid":
     case "canceled":
     case "incomplete_expired":

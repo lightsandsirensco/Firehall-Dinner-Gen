@@ -16,6 +16,8 @@ import {
   TrendingUp,
   Activity,
   Info,
+  Repeat,
+  Server,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -254,11 +256,17 @@ export default function AdminAnalyticsPage() {
 
         {data && a && g && e && r && (
           <>
-            <p className="text-xs text-muted-foreground">
+            <p
+              className={`text-xs ${data.tracking.reliable ? "text-muted-foreground" : "text-destructive"}`}
+              data-testid="tracking-baseline"
+            >
               All dates are UTC.{" "}
-              {data.tracking_since
-                ? `Event tracking data available since ${new Date(data.tracking_since).toLocaleDateString()}.`
-                : "No analytics events recorded yet."}
+              {data.tracking.reliable
+                ? data.tracking.reliable_since
+                  ? `Reliable tracking since ${new Date(data.tracking.reliable_since).toLocaleDateString(undefined, { timeZone: "UTC" })}. `
+                  : "Reliable tracking is on; no events recorded yet. "
+                : ""}
+              {data.tracking.note}
             </p>
 
             {/* Audience */}
@@ -283,6 +291,44 @@ export default function AdminAnalyticsPage() {
                   value={fmt(e.pizza_night_views)}
                   sub="Page views under /pizza"
                   icon={Eye}
+                />
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <SummaryCard
+                  label="Returning signed-in users"
+                  value={fmt(a.returning_signed_in_users)}
+                  sub={`of ${fmt(a.signed_in_visitors)} signed-in people (each account counted once)`}
+                  icon={Repeat}
+                />
+                <SummaryCard
+                  label="Returning anonymous visitors"
+                  value={fmt(a.returning_anonymous_visitors)}
+                  sub={`of ${fmt(a.anonymous_visitors)} anonymous browsers`}
+                  icon={Repeat}
+                />
+                <SummaryCard
+                  label="Retention (7 / 30 day)"
+                  value={
+                    a.retention
+                      ? `${a.retention.d7.all.rate ?? "—"}% / ${a.retention.d30.all.rate ?? "—"}%`
+                      : "—"
+                  }
+                  sub={
+                    a.retention
+                      ? `Came back within 7 / 30 days of first visit · cohorts ${fmt(a.retention.d7.all.cohort)} / ${fmt(a.retention.d30.all.cohort)} · signed-in ${a.retention.d7.signed_in.rate ?? "—"}% / ${a.retention.d30.signed_in.rate ?? "—"}%`
+                      : "Needs durable Postgres events"
+                  }
+                  icon={TrendingUp}
+                />
+                <SummaryCard
+                  label="Server requests"
+                  value={a.server_requests ? fmt(a.server_requests.total) : "—"}
+                  sub={
+                    a.server_requests
+                      ? `Not visitors: ${fmt(a.server_requests.page_human)} page loads · ${fmt(a.server_requests.page_bot)} bot/crawler · ${fmt(a.server_requests.asset)} files · ${fmt(a.server_requests.api)} API · ${fmt(a.server_requests.health)} health checks${a.server_requests.counting_since ? ` · counted since ${a.server_requests.counting_since}` : ""}`
+                      : "Server request counting not active yet"
+                  }
+                  icon={Server}
                 />
               </div>
               <DailyTraffic points={a.daily} />

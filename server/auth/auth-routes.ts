@@ -28,7 +28,8 @@ import { verifyAppleIdToken, verifyGoogleIdToken } from "./oauth-verify.js";
 import { attachAuthUser, requireAuth, type AuthedRequest } from "./auth-middleware.js";
 import { requireCsrf } from "../csrf.js";
 import { checkEmailRateLimit, recordEmailRateLimit } from "../email-rate-limit.js";
-import { logError } from "../logger.js";
+import { log, logError } from "../logger.js";
+import { GOOGLE_NONCE_COOKIE, GOOGLE_NONCE_COOKIE_PATH } from "../../shared/auth/google-nonce.js";
 import {
   magicLinkRequestSchema,
   oauthTokenSchema,
@@ -36,6 +37,7 @@ import {
   savedRecipesSyncSchema,
 } from "../../shared/auth/schema.js";
 import { insertAnalyticsEvents } from "../analytics/analytics-store.js";
+import { invalidateHistorySignalsCache } from "../generation/history-personalization.js";
 import { appendSignedInQuery, sanitizeReturnToPath } from "../../shared/auth/return-to.js";
 
 let storeReady = false;
@@ -257,8 +259,12 @@ export function registerAuthRoutes(app: Express): void {
     req: Request,
     res: Response,
     idToken: string,
+    expectedNonce?: string,
   ): Promise<{ kind: "signed_in"; isNew: boolean; userId: string } | { kind: "email_collision" }> {
     const identity = await verifyGoogleIdToken(idToken);
+    if (expectedNonce !== undefined && identity.nonce !== expectedNonce) {
+      throw new Error("Google token nonce mismatch");
+    }
     const result = await resolveOAuthSignIn({
       provider: "google",
       subject: identity.subject,
@@ -322,8 +328,11 @@ export function registerAuthRoutes(app: Express): void {
   // so the app's own X-CSRF-Token header check cannot apply. Google's
   // double-submit token replaces it: GIS sets a `g_csrf_token` cookie
   // (SameSite=None; Secure) on our origin before redirecting, and the posted
-  // value must match it. Always answers with a 303 back into the app so the
-  // browser never stalls on this endpoint.
+  // value must match it. If that cookie did not survive the cross-site POST,
+  // the per-attempt nonce is the fallback: the client stores it in
+  // GOOGLE_NONCE_COOKIE (SameSite=None; Secure) and passes it to GIS, so it
+  // comes back inside the Google-signed ID token and must equal the cookie.
+  // Always answers with a 303 back into the app so the browser never stalls.
   app.post("/api/auth/google/callback", async (req: Request, res: Response) => {
     const fail = (error: string) => res.redirect(303, `/?error=${error}`);
     try {
@@ -337,10 +346,14 @@ export function registerAuthRoutes(app: Express): void {
       const bodyCsrf = typeof body.g_csrf_token === "string" ? body.g_csrf_token : "";
       const cookieCsrf = typeof req.cookies?.g_csrf_token === "string" ? req.cookies.g_csrf_token : "";
 
-      if (!bodyCsrf || !cookieCsrf || bodyCsrf !== cookieCsrf) {
+      const nonceCookie = typeof req.cookies?.[GOOGLE_NONCE_COOKIE] === "string" ? req.cookies[GOOGLE_NONCE_COOKIE] : "";
+      res.clearCookie(GOOGLE_NONCE_COOKIE, { path: GOOGLE_NONCE_COOKIE_PATH, secure: true, sameSite: "none" });
+      const csrfOk = Boolean(bodyCsrf && cookieCsrf && bodyCsrf === cookieCsrf);
+
+      if (!csrfOk && nonceCookie.length < 16) {
         logError(
           "auth",
-          "google redirect callback rejected: g_csrf_token mismatch",
+          "google redirect callback rejected: g_csrf_token mismatch and no nonce cookie",
           `body_token=${bodyCsrf ? "present" : "missing"} cookie_token=${cookieCsrf ? "present" : "missing"}`,
         );
         return fail("sign_in_failed");
@@ -348,8 +361,11 @@ export function registerAuthRoutes(app: Express): void {
       if (!credential) {
         return fail("sign_in_failed");
       }
+      if (!csrfOk) {
+        log(`[auth] google callback: g_csrf_token cookie ${cookieCsrf ? "mismatched" : "missing"}, verifying nonce instead`, "auth");
+      }
 
-      const result = await signInWithGoogleCredential(req, res, credential);
+      const result = await signInWithGoogleCredential(req, res, credential, csrfOk ? undefined : nonceCookie);
       if (result.kind === "email_collision") {
         return fail("google_email_collision");
       }
@@ -579,6 +595,7 @@ export function registerAuthRoutes(app: Express): void {
         })),
         { replace: parsed.data.replace },
       );
+      invalidateHistorySignalsCache(req._authUserId!);
       const recipes = await listSavedRecipes(req._authUserId!);
       return res.json({ ok: true, upserted, recipes });
     } catch (err) {

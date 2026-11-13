@@ -11,6 +11,7 @@ import { useAuth } from "@/lib/auth/context";
 import { useToast } from "@/hooks/use-toast";
 import { trackMagicLinkRequested } from "@/lib/analytics";
 import { inboxUrlForEmail, maskEmailAddress } from "@shared/auth/return-to";
+import { GOOGLE_NONCE_COOKIE, GOOGLE_NONCE_COOKIE_PATH } from "@shared/auth/google-nonce";
 import { cn } from "@/lib/utils";
 
 const RESEND_COOLDOWN_SEC = 45;
@@ -210,10 +211,13 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
         // mode cannot complete on iOS browsers (ITP); login_uri must be
         // absolute and listed under the OAuth client's Authorized redirect
         // URIs for every origin (www.firehallmeals.com, localhost).
+        const nonce = crypto.randomUUID();
+        document.cookie = `${GOOGLE_NONCE_COOKIE}=${nonce}; Path=${GOOGLE_NONCE_COOKIE_PATH}; Max-Age=1800; Secure; SameSite=None`;
         window.google.accounts.id.initialize({
           client_id: googleClientId,
           ux_mode: "redirect",
           login_uri: `${window.location.origin}/api/auth/google/callback`,
+          nonce,
         });
 
         googleButtonRef.current.innerHTML = "";

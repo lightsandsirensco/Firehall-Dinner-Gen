@@ -5,7 +5,7 @@
  * database, never flips payments_enabled.
  *
  *   npx tsx scripts/stripe-test-mode-e2e.ts --setup
- *     Creates the test-mode product, $5.99/month + $39.99/year prices and the
+ *     Creates the test-mode product, $4.99/month + $39.99/year prices and the
  *     founding coupon ($10 off, duration once), and prints the env vars to set.
  *
  *   npx tsx scripts/stripe-test-mode-e2e.ts
@@ -109,7 +109,7 @@ async function verify(): Promise<void> {
   const monthlyPrice = await getVerifiedPriceIdForPeriod("monthly");
   const annualPrice = await getVerifiedPriceIdForPeriod("annual");
   const couponId = await getVerifiedFoundingCouponId();
-  ok(`monthly ${monthlyPrice} = $5.99/month, annual ${annualPrice} = $39.99/year, coupon ${couponId} = $10 off once`);
+  ok(`monthly ${monthlyPrice} = $4.99/month, annual ${annualPrice} = $39.99/year, coupon ${couponId} = $10 off once`);
 
   console.log("Real Checkout Sessions with our exact params");
   const probe = await stripe.customers.create({ email: `${RUN}@example.com`, metadata: { purpose: RUN } });
@@ -128,11 +128,11 @@ async function verify(): Promise<void> {
     assert.equal(foundingSession.amount_total, FOUNDING_FIRST_YEAR_PRICE_CENTS, "founding checkout total must be $29.99");
     assert.equal(foundingSession.total_details?.amount_discount, FOUNDING_COUPON_SPEC.amountOffCents);
     const monthlySession = await stripe.checkout.sessions.create(params("monthly", false));
-    assert.equal(monthlySession.amount_total, PRO_MONTHLY_PRICE_CENTS, "monthly checkout total must be $5.99");
+    assert.equal(monthlySession.amount_total, PRO_MONTHLY_PRICE_CENTS, "monthly checkout total must be $4.99");
     const standardSession = await stripe.checkout.sessions.create(params("annual", false));
     assert.equal(standardSession.amount_total, PRO_ANNUAL_PRICE_CENTS, "standard annual checkout total must be $39.99");
     for (const s of [foundingSession, monthlySession, standardSession]) await stripe.checkout.sessions.expire(s.id);
-    ok("Stripe accepted all three sessions: founding annual $29.99, monthly $5.99, standard annual $39.99, no trial");
+    ok("Stripe accepted all three sessions: founding annual $29.99, monthly $4.99, standard annual $39.99, no trial");
   } finally {
     await stripe.customers.del(probe.id);
   }
@@ -152,7 +152,7 @@ async function verify(): Promise<void> {
     });
     assert.equal((monthlySub.latest_invoice as Stripe.Invoice).total, PRO_MONTHLY_PRICE_CENTS);
     await stripe.subscriptions.cancel(monthlySub.id);
-    ok("monthly first invoice: $5.99");
+    ok("monthly first invoice: $4.99");
 
     let sub = await stripe.subscriptions.create({
       customer: customer.id,

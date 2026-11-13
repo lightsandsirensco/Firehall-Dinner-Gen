@@ -51,11 +51,17 @@ function restoreQueue(): void {
   }
 }
 
-if (typeof window !== "undefined") {
+// Mobile browsers (iOS Safari especially) often skip beforeunload when a tab
+// is backgrounded, switched away from or killed; pagehide and
+// visibilitychange→hidden are the events that reliably fire last.
+if (typeof window !== "undefined" && typeof window.addEventListener === "function") {
   restoreQueue();
-  window.addEventListener("beforeunload", () => {
-    void flushProductAnalytics(true);
-  });
+  window.addEventListener("pagehide", () => sendQueuedOnPageHide());
+  if (typeof document !== "undefined" && typeof document.addEventListener === "function") {
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") sendQueuedOnPageHide();
+    });
+  }
 }
 
 export function resolveTrafficSource(): string {
@@ -139,31 +145,56 @@ function readCsrfTokenSync(): string {
   }
 }
 
-export async function flushProductAnalytics(onUnload = false): Promise<void> {
-  if (flushing || memoryQueue.length === 0) return;
-  flushing = true;
-  const batch = memoryQueue.splice(0, 25);
-  persistQueue();
-  try {
+const INGEST_URL = "/api/analytics/events";
+const BATCH_SIZE = 25;
+
+/**
+ * Hands every queued event to the browser before the page goes away.
+ * sendBeacon is queued by the browser itself and survives the page being
+ * frozen or closed; text/plain keeps it a simple request in every browser.
+ * Falls back to fetch keepalive where sendBeacon is missing or refuses.
+ */
+function sendQueuedOnPageHide(): void {
+  if (flushTimer) {
+    clearTimeout(flushTimer);
+    flushTimer = null;
+  }
+  while (memoryQueue.length > 0) {
+    const batch = memoryQueue.splice(0, BATCH_SIZE);
     const body = JSON.stringify({ events: batch });
-    if (onUnload) {
+    let queued = false;
+    try {
+      queued = typeof navigator.sendBeacon === "function" && navigator.sendBeacon(INGEST_URL, new Blob([body], { type: "text/plain;charset=UTF-8" }));
+    } catch {
+      queued = false;
+    }
+    if (!queued) {
       const csrf = readCsrfTokenSync();
       const headers: Record<string, string> = { "Content-Type": "application/json" };
       if (csrf) headers["X-CSRF-Token"] = csrf;
-      fetch("/api/analytics/events", {
-        method: "POST",
-        headers,
-        body,
-        credentials: "include",
-        keepalive: true,
-      });
-    } else {
-      await fetchWithCsrf("/api/analytics/events", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body,
-      });
+      try {
+        void fetch(INGEST_URL, { method: "POST", headers, body, credentials: "include", keepalive: true }).catch(() => {});
+      } catch {
+        memoryQueue = [...batch, ...memoryQueue];
+        break;
+      }
     }
+  }
+  persistQueue();
+}
+
+export async function flushProductAnalytics(): Promise<void> {
+  if (flushing || memoryQueue.length === 0) return;
+  flushing = true;
+  const batch = memoryQueue.splice(0, BATCH_SIZE);
+  persistQueue();
+  try {
+    const res = await fetchWithCsrf(INGEST_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ events: batch }),
+    });
+    if (res.status === 429 || res.status >= 500) throw new Error(`analytics ingest ${res.status}`);
   } catch {
     memoryQueue = [...batch, ...memoryQueue].slice(-100);
     persistQueue();

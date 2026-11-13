@@ -7,11 +7,13 @@ import { adminSetUserPlan, startHallProTrial } from "../billing/store.js";
 import type { PlanId } from "../../shared/billing/types.js";
 import type {
   AdminLeadFilter,
-  AdminSignupFilter,
-  AdminUserFilter,
+  AdminUserDetail,
+  EmailDirectoryFilter,
+  ExternalContactFilter,
   FounderLeadFilters,
   FounderLeadSortKey,
   FounderLeadStatus,
+  RegisteredUserFilter,
 } from "../../shared/admin-users/types.js";
 import {
   backfillLeadsFromAnalytics,
@@ -22,7 +24,7 @@ import {
   normalizeLeadSource,
   recordEmailLead,
 } from "./leads-store.js";
-import { recordConsentOptIn } from "../marketing-consent/store.js";
+import { hasMarketingConsent, recordConsentOptIn } from "../marketing-consent/store.js";
 import {
   bindFounderLeadsDb,
   deleteTestAccount,
@@ -37,15 +39,22 @@ import {
 import {
   adminCreateHallInvite,
   exportLeadsCsv,
-  exportSignupsCsv,
-  exportUsersCsv,
   getAdminUserDetail,
   getPrimaryHallIdForUser,
   initAdminUsersStore,
-  listAdminSignups,
-  listAdminUsers,
   updateAdminUserMeta,
 } from "./store.js";
+import {
+  emailDirectoryCsv,
+  getLeadCapturesForEmail,
+  getRegisteredUser,
+  queryEmailDirectory,
+  queryRegisteredUsers,
+  recordEmailLeadCapture,
+  registeredUsersCsv,
+} from "./email-directory.js";
+import { externalContactsCsv, queryExternalContacts } from "./klaviyo-contacts.js";
+import { pgOne } from "../db/pg-sql.js";
 import { createAuthSession, getAuthCookieName } from "../auth/auth-store.js";
 import { getSharedLocalDb } from "../sqlite.js";
 
@@ -61,19 +70,6 @@ async function ensureStore(): Promise<void> {
   }
 }
 
-const USER_FILTERS = new Set<AdminUserFilter>([
-  "all",
-  "new_users",
-  "active_users",
-  "hall_members",
-  "hall_admins",
-  "personal_plan",
-  "hall_pro",
-  "no_hall",
-  "email_leads_only",
-  "pilot_leads",
-]);
-
 const LEAD_FILTERS = new Set<AdminLeadFilter>([
   "all",
   "homepage",
@@ -87,19 +83,6 @@ const LEAD_FILTERS = new Set<AdminLeadFilter>([
   "converted",
   "not_converted",
   "hall_created",
-]);
-
-const SIGNUP_FILTERS = new Set<AdminSignupFilter>([
-  "all",
-  "registered_users",
-  "email_leads_only",
-  "joined_hall",
-  "no_hall_yet",
-  "hall_admins",
-  "canteen_managers",
-  "hall_pro_trial",
-  "active_last_7_days",
-  "inactive",
 ]);
 
 const SORT_KEYS = new Set<FounderLeadSortKey>([
@@ -118,19 +101,113 @@ const SORT_KEYS = new Set<FounderLeadSortKey>([
   "status",
 ]);
 
-function parseUserFilter(raw: unknown): AdminUserFilter {
-  const key = String(raw ?? "all");
-  return USER_FILTERS.has(key as AdminUserFilter) ? (key as AdminUserFilter) : "all";
-}
-
 function parseLeadFilter(raw: unknown): AdminLeadFilter {
   const key = String(raw ?? "all");
   return LEAD_FILTERS.has(key as AdminLeadFilter) ? (key as AdminLeadFilter) : "all";
 }
 
-function parseSignupFilter(raw: unknown): AdminSignupFilter {
+const REGISTERED_USER_FILTERS = new Set<RegisteredUserFilter>([
+  "all",
+  "new_7d",
+  "active_30d",
+  "pro",
+  "free",
+  "subscribed",
+  "not_subscribed",
+]);
+
+const DIRECTORY_FILTERS = new Set<EmailDirectoryFilter>([
+  "all",
+  "registered_users",
+  "marketing_subscribers",
+  "other_emails",
+  "unsubscribed",
+]);
+
+function parseRegisteredUserFilter(raw: unknown): RegisteredUserFilter {
   const key = String(raw ?? "all");
-  return SIGNUP_FILTERS.has(key as AdminSignupFilter) ? (key as AdminSignupFilter) : "all";
+  return REGISTERED_USER_FILTERS.has(key as RegisteredUserFilter) ? (key as RegisteredUserFilter) : "all";
+}
+
+function parseDirectoryFilter(raw: unknown): EmailDirectoryFilter {
+  const key = String(raw ?? "all");
+  return DIRECTORY_FILTERS.has(key as EmailDirectoryFilter) ? (key as EmailDirectoryFilter) : "all";
+}
+
+const EXTERNAL_FILTERS = new Set<ExternalContactFilter>(["all", "klaviyo_subscribed", "not_klaviyo_subscribed", "also_lights_sirens"]);
+
+function parseExternalFilter(raw: unknown): ExternalContactFilter {
+  const key = String(raw ?? "all");
+  return EXTERNAL_FILTERS.has(key as ExternalContactFilter) ? (key as ExternalContactFilter) : "all";
+}
+
+function queryString(raw: unknown): string | undefined {
+  return typeof raw === "string" && raw.trim() ? raw.trim().slice(0, 200) : undefined;
+}
+
+/**
+ * Identity, plan and consent come from Postgres. Hall memberships, activity and
+ * internal notes still live in the local SQLite cache and are merged in when present.
+ */
+async function buildAdminUserDetail(userId: string): Promise<AdminUserDetail | null> {
+  const user = await getRegisteredUser(userId);
+  if (!user) return null;
+  const local = getAdminUserDetail(userId);
+  const profile = await pgOne<Record<string, unknown>>(
+    `SELECT first_name, last_name, display_name, department, hall_name, shift_label, crew_size
+     FROM user_profiles WHERE user_id = $1`,
+    [userId],
+  );
+  const leads = user.email ? await getLeadCapturesForEmail(user.email) : [];
+  const str = (v: unknown) => (typeof v === "string" && v ? v : null);
+
+  return {
+    user: {
+      user_id: user.user_id,
+      name: user.name ?? user.email ?? user.user_id,
+      email: user.email,
+      signup_date: user.signup_date,
+      last_active: user.last_login,
+      plan: user.plan === "pro" ? "firefighter_plus" : "personal",
+      hall_pro: local?.user.hall_pro ?? false,
+      hall_name: local?.user.hall_name ?? null,
+      shift: local?.user.shift ?? null,
+      hall_role: local?.user.hall_role ?? null,
+      meals_generated: user.meals_cooked,
+      votes_created: local?.user.votes_created ?? 0,
+      saved_recipes: user.recipes_saved,
+      email_capture_source: leads[0]?.source ?? null,
+      is_pilot_lead: local?.is_pilot_lead ?? false,
+      auth_provider: user.auth_provider,
+      is_guest: false,
+    },
+    profile: profile
+      ? {
+          first_name: str(profile.first_name),
+          last_name: str(profile.last_name),
+          display_name: str(profile.display_name),
+          department: str(profile.department),
+          profile_hall_name: str(profile.hall_name),
+          shift_label: str(profile.shift_label),
+          crew_size: profile.crew_size == null ? null : Number(profile.crew_size),
+        }
+      : null,
+    memberships: local?.memberships ?? [],
+    billing: {
+      personal_plan: user.plan === "pro" ? "firefighter_plus" : "personal",
+      personal_status: user.plan_detail,
+      hall_pro_halls: local?.billing.hall_pro_halls ?? [],
+    },
+    saved_recipes: local?.saved_recipes ?? [],
+    activity: local?.activity ?? [],
+    klaviyo: {
+      on_list: user.klaviyo_sync === "sent",
+      lead_sources: leads.map((l) => l.source),
+      last_lead_at: leads[0]?.last_submitted_at ?? null,
+    },
+    internal_notes: local?.internal_notes ?? "",
+    is_pilot_lead: local?.is_pilot_lead ?? false,
+  };
 }
 
 function parseFounderFilters(query: Request["query"]): FounderLeadFilters {
@@ -209,21 +286,23 @@ function authCookieOptions() {
 export function registerAdminUsersRoutes(app: Express): void {
   app.get("/api/admin/signups", async (req: Request, res: Response) => {
     try {
-      await ensureStore();
-      const filter = parseSignupFilter(req.query.filter);
-      const limit = Math.min(Number(req.query.limit) || 500, 2000);
-      const q = typeof req.query.q === "string" ? req.query.q : undefined;
-      const source = typeof req.query.source === "string" ? req.query.source : undefined;
-      const data = listAdminSignups(filter, { limit, q, source });
-      trackAdminEvent(req, "admin_signups_viewed", {
+      const filter = parseDirectoryFilter(req.query.filter);
+      const q = queryString(req.query.q);
+      const data = await queryEmailDirectory({
         filter,
-        total: data.total,
-        query: q ?? "",
+        q,
+        source: queryString(req.query.source),
+        page: Number(req.query.page) || 1,
+        page_size: Number(req.query.page_size) || 50,
       });
-      return res.json({
-        ...data,
-        magic_link_funnel: getMagicLinkFunnelStats("30d"),
-      });
+      trackAdminEvent(req, "admin_signups_viewed", { filter, total: data.total, query: q ?? "" });
+      let funnel;
+      try {
+        funnel = getMagicLinkFunnelStats("30d");
+      } catch {
+        funnel = undefined;
+      }
+      return res.json({ ...data, magic_link_funnel: funnel });
     } catch (err) {
       logError("admin-users", "list signups failed", err);
       return res.status(500).json({ message: "Failed to load signups" });
@@ -232,18 +311,49 @@ export function registerAdminUsersRoutes(app: Express): void {
 
   app.get("/api/admin/signups/export", async (req: Request, res: Response) => {
     try {
-      await ensureStore();
-      const filter = parseSignupFilter(req.query.filter);
-      const q = typeof req.query.q === "string" ? req.query.q : undefined;
-      const source = typeof req.query.source === "string" ? req.query.source : undefined;
-      const csv = exportSignupsCsv(filter, { q, source });
-      trackAdminEvent(req, "admin_signups_exported", { filter, query: q ?? "" });
+      const filter = parseDirectoryFilter(req.query.filter);
+      const q = queryString(req.query.q);
+      const data = await queryEmailDirectory({ filter, q, source: queryString(req.query.source), all: true });
+      const csv = emailDirectoryCsv(data.emails);
+      trackAdminEvent(req, "admin_signups_exported", { filter, query: q ?? "", total: data.total });
       res.setHeader("Content-Type", "text/csv; charset=utf-8");
       res.setHeader("Content-Disposition", `attachment; filename="signups-${filter}.csv"`);
       return res.send(csv);
     } catch (err) {
       logError("admin-users", "export signups failed", err);
       return res.status(500).json({ message: "Failed to export signups" });
+    }
+  });
+
+  app.get("/api/admin/signups/external", async (req: Request, res: Response) => {
+    try {
+      const filter = parseExternalFilter(req.query.filter);
+      const data = await queryExternalContacts({
+        filter,
+        q: queryString(req.query.q),
+        page: Number(req.query.page) || 1,
+        page_size: Number(req.query.page_size) || 50,
+        refresh: req.query.refresh === "1",
+      });
+      return res.json(data);
+    } catch (err) {
+      logError("admin-users", "list external contacts failed", err);
+      return res.status(500).json({ message: "Failed to load external contacts" });
+    }
+  });
+
+  app.get("/api/admin/signups/external/export", async (req: Request, res: Response) => {
+    try {
+      const filter = parseExternalFilter(req.query.filter);
+      const data = await queryExternalContacts({ filter, q: queryString(req.query.q), all: true });
+      if (!data.available) return res.status(503).json({ message: data.unavailable_reason ?? "Klaviyo unavailable" });
+      trackAdminEvent(req, "admin_signups_exported", { filter: `external_${filter}`, total: data.total });
+      res.setHeader("Content-Type", "text/csv; charset=utf-8");
+      res.setHeader("Content-Disposition", `attachment; filename="external-klaviyo-contacts-${filter}.csv"`);
+      return res.send(externalContactsCsv(data.contacts));
+    } catch (err) {
+      logError("admin-users", "export external contacts failed", err);
+      return res.status(500).json({ message: "Failed to export external contacts" });
     }
   });
 
@@ -271,10 +381,13 @@ export function registerAdminUsersRoutes(app: Express): void {
 
   app.get("/api/admin/users", async (req: Request, res: Response) => {
     try {
-      await ensureStore();
-      const filter = parseUserFilter(req.query.filter);
-      const limit = Math.min(Number(req.query.limit) || 500, 2000);
-      const data = listAdminUsers(filter, limit);
+      const filter = parseRegisteredUserFilter(req.query.filter);
+      const data = await queryRegisteredUsers({
+        filter,
+        q: queryString(req.query.q),
+        page: Number(req.query.page) || 1,
+        page_size: Number(req.query.page_size) || 50,
+      });
       trackAdminEvent(req, "admin_users_viewed", { filter, total: data.total });
       return res.json(data);
     } catch (err) {
@@ -285,9 +398,9 @@ export function registerAdminUsersRoutes(app: Express): void {
 
   app.get("/api/admin/users/export", async (req: Request, res: Response) => {
     try {
-      await ensureStore();
-      const filter = parseUserFilter(req.query.filter);
-      const csv = exportUsersCsv(filter);
+      const filter = parseRegisteredUserFilter(req.query.filter);
+      const data = await queryRegisteredUsers({ filter, q: queryString(req.query.q), all: true });
+      const csv = registeredUsersCsv(data.users);
       res.setHeader("Content-Type", "text/csv; charset=utf-8");
       res.setHeader("Content-Disposition", `attachment; filename="users-${filter}.csv"`);
       return res.send(csv);
@@ -301,7 +414,7 @@ export function registerAdminUsersRoutes(app: Express): void {
     try {
       await ensureStore();
       const userId = String(req.params.userId ?? "");
-      const detail = getAdminUserDetail(userId);
+      const detail = await buildAdminUserDetail(userId);
       if (!detail) return res.status(404).json({ message: "User not found" });
       trackAdminEvent(req, "admin_user_opened", { user_id: userId });
       return res.json(detail);
@@ -318,7 +431,7 @@ export function registerAdminUsersRoutes(app: Express): void {
       const hallId = getPrimaryHallIdForUser(userId);
       if (!hallId) return res.status(400).json({ message: "User has no hall membership" });
       const subscription = startHallProTrial(hallId, userId);
-      const detail = getAdminUserDetail(userId);
+      const detail = await buildAdminUserDetail(userId);
       if (!detail) return res.status(404).json({ message: "User not found" });
       return res.json({ ok: true, subscription, detail });
     } catch (err) {
@@ -335,17 +448,26 @@ export function registerAdminUsersRoutes(app: Express): void {
       if (!parsed.success) return res.status(400).json({ message: "Invalid payload" });
 
       if (parsed.data.internal_notes !== undefined || parsed.data.is_pilot_lead !== undefined) {
-        updateAdminUserMeta(userId, {
-          internal_notes: parsed.data.internal_notes,
-          is_pilot_lead: parsed.data.is_pilot_lead,
-        });
+        try {
+          updateAdminUserMeta(userId, {
+            internal_notes: parsed.data.internal_notes,
+            is_pilot_lead: parsed.data.is_pilot_lead,
+          });
+        } catch (err) {
+          if (err instanceof Error && err.message === "User not found") {
+            return res.status(409).json({
+              message: "Notes and pilot flags are not available for accounts created after the Postgres migration yet.",
+            });
+          }
+          throw err;
+        }
       }
 
       if (parsed.data.plan_id) {
         await adminSetUserPlan(userId, parsed.data.plan_id as PlanId, "active");
       }
 
-      const detail = getAdminUserDetail(userId);
+      const detail = await buildAdminUserDetail(userId);
       if (!detail) return res.status(404).json({ message: "User not found" });
       return res.json(detail);
     } catch (err) {
@@ -358,8 +480,11 @@ export function registerAdminUsersRoutes(app: Express): void {
     try {
       await ensureStore();
       const userId = String(req.params.userId ?? "");
-      const detail = getAdminUserDetail(userId);
+      const detail = await buildAdminUserDetail(userId);
       if (!detail?.user.email) return res.status(400).json({ message: "User has no email" });
+      if (!(await hasMarketingConsent(detail.user.email))) {
+        return res.status(409).json({ message: "This user has not opted in to marketing email." });
+      }
 
       await subscribeToList(detail.user.email);
       markLeadKlaviyoSynced(detail.user.email);
@@ -390,7 +515,7 @@ export function registerAdminUsersRoutes(app: Express): void {
     try {
       await ensureStore();
       const userId = String(req.params.userId ?? "");
-      const detail = getAdminUserDetail(userId);
+      const detail = await buildAdminUserDetail(userId);
       if (!detail) return res.status(404).json({ message: "User not found" });
       const session = await createAuthSession(userId, false);
       res.cookie(getAuthCookieName(), session.token, authCookieOptions());
@@ -530,6 +655,15 @@ export async function captureEmailLead(input: {
     } catch (err) {
       logError("admin-users", "record marketing consent failed", err);
     }
+  }
+  try {
+    await recordEmailLeadCapture({
+      email: input.email,
+      source: normalizeLeadSource(input.source),
+      signup_form: input.signup_form,
+    });
+  } catch (err) {
+    logError("admin-users", "record email lead capture failed", err);
   }
   try {
     await ensureStore();

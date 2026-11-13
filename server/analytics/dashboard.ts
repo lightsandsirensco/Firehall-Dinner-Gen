@@ -17,9 +17,11 @@ import type {
   AnalyticsGrowthSection,
   AnalyticsPeriod,
   AnalyticsRankedRow,
+  AnalyticsRetention,
   AnalyticsRevenueSection,
   MetricValue,
 } from "../../shared/analytics/events.js";
+import { loadServerRequestTotals } from "./server-requests.js";
 import { isPgConfigured } from "../db/pg-client.js";
 import { pgAll, pgOne } from "../db/pg-sql.js";
 import { getStripeClient } from "../billing/stripe-client.js";
@@ -57,11 +59,33 @@ const TEST_EMAIL_SQL = (col: string) =>
 export interface DashboardEventRow {
   event_type: string;
   visitor_id: string | null;
+  /** Server-resolved signed-in account (Postgres only; null when anonymous). */
+  user_id?: string | null;
   session_id: string | null;
   route: string | null;
   metadata: Record<string, unknown>;
   at: number;
 }
+
+export interface ActivityRow {
+  visitor_id: string | null;
+  user_id: string | null;
+  day: string; // YYYY-MM-DD (UTC)
+}
+
+/** Earliest page view for one (browser, account) pair; user_id null = anonymous. */
+export interface FirstSeenRow {
+  visitor_id: string | null;
+  user_id: string | null;
+  at: number;
+}
+
+/** SQL twin of isTestEventRow + the /admin exclusion in aggregateEvents. */
+const PG_REAL_TRAFFIC = `(route IS NULL OR route NOT LIKE '/admin%')
+  AND COALESCE(metadata->>'is_test', '') NOT IN ('true', '1')
+  AND COALESCE(metadata->>'source', '') <> 'test'
+  AND COALESCE(visitor_id, '') NOT LIKE 'test-%'
+  AND COALESCE(session_id, '') <> 'test-session'`;
 
 export function periodStartMs(period: AnalyticsPeriod, now = Date.now()): number | null {
   switch (period) {
@@ -98,7 +122,15 @@ interface EventSource {
   label: string;
   note?: string;
   loadRows(startMs: number | null): Promise<DashboardEventRow[]>;
-  firstSeenByVisitor(): Promise<Map<string, number>>;
+  firstSeen(): Promise<FirstSeenRow[]>;
+  /**
+   * visitor_id → user_id for browsers only ever signed in to one account.
+   * Shared browsers (e.g. a station computer) are left unlinked so one
+   * member never inherits everyone's anonymous history.
+   */
+  visitorLinks(): Promise<Map<string, string>>;
+  /** Distinct (visitor, user, UTC day) page-view activity for retention; null = unsupported. */
+  recentActivity(sinceMs: number): Promise<ActivityRow[] | null>;
   trackingSince(): Promise<number | null>;
   viewedRecipeSlugs(): Promise<Set<string>>;
 }
@@ -148,14 +180,20 @@ function sqliteSource(note: string): EventSource {
         at: parseSqliteTime(r.occurred_at),
       }));
     },
-    async firstSeenByVisitor() {
+    async firstSeen() {
       const rows = db
         .prepare(
           `SELECT visitor_id, MIN(occurred_at) AS first_seen FROM analytics_events
            WHERE event_type = 'page_view' AND visitor_id IS NOT NULL GROUP BY visitor_id`,
         )
         .all();
-      return new Map(rows.map((r) => [String(r.visitor_id), parseSqliteTime(r.first_seen)]));
+      return rows.map((r) => ({ visitor_id: String(r.visitor_id), user_id: null, at: parseSqliteTime(r.first_seen) }));
+    },
+    async visitorLinks() {
+      return new Map();
+    },
+    async recentActivity() {
+      return null;
     },
     async trackingSince() {
       const row = db.prepare(`SELECT MIN(occurred_at) AS t FROM analytics_events`).get();
@@ -173,13 +211,14 @@ function sqliteSource(note: string): EventSource {
   };
 }
 
-function postgresSource(): EventSource {
+function postgresSource(hasUserId: boolean): EventSource {
+  const userCol = hasUserId ? "user_id" : "NULL::text AS user_id";
   return {
     kind: "postgres",
     label: "Postgres analytics_events (durable, all instances)",
     async loadRows(startMs) {
       const rows = await pgAll<Record<string, unknown>>(
-        `SELECT event_type, visitor_id, session_id, route, metadata, occurred_at
+        `SELECT event_type, visitor_id, ${userCol}, session_id, route, metadata, occurred_at
          FROM analytics_events
          WHERE event_type = ANY($1::text[]) AND ($2::timestamptz IS NULL OR occurred_at >= $2::timestamptz)`,
         [DASHBOARD_EVENT_TYPES as unknown as string[], startMs != null ? new Date(startMs).toISOString() : null],
@@ -187,18 +226,41 @@ function postgresSource(): EventSource {
       return rows.map((r) => ({
         event_type: String(r.event_type),
         visitor_id: r.visitor_id ? String(r.visitor_id) : null,
+        user_id: r.user_id ? String(r.user_id) : null,
         session_id: r.session_id ? String(r.session_id) : null,
         route: r.route ? String(r.route) : null,
         metadata: parseJson(r.metadata),
         at: new Date(r.occurred_at as string).getTime(),
       }));
     },
-    async firstSeenByVisitor() {
-      const rows = await pgAll<{ visitor_id: string; first_seen: string }>(
-        `SELECT visitor_id, MIN(occurred_at) AS first_seen FROM analytics_events
-         WHERE event_type = 'page_view' AND visitor_id IS NOT NULL GROUP BY visitor_id`,
+    async firstSeen() {
+      const rows = await pgAll<{ visitor_id: string | null; user_id: string | null; first_seen: string }>(
+        `SELECT visitor_id, ${userCol}, MIN(occurred_at) AS first_seen FROM analytics_events
+         WHERE event_type = 'page_view' AND (visitor_id IS NOT NULL ${hasUserId ? "OR user_id IS NOT NULL" : ""})
+           AND ${PG_REAL_TRAFFIC}
+         GROUP BY 1, 2`,
       );
-      return new Map(rows.map((r) => [r.visitor_id, new Date(r.first_seen).getTime()]));
+      return rows.map((r) => ({ visitor_id: r.visitor_id, user_id: r.user_id, at: new Date(r.first_seen).getTime() }));
+    },
+    async visitorLinks() {
+      if (!hasUserId) return new Map();
+      const rows = await pgAll<{ visitor_id: string; user_id: string }>(
+        `SELECT visitor_id, MIN(user_id) AS user_id FROM analytics_events
+         WHERE user_id IS NOT NULL AND visitor_id IS NOT NULL AND ${PG_REAL_TRAFFIC}
+         GROUP BY visitor_id
+         HAVING COUNT(DISTINCT user_id) = 1`,
+      );
+      return new Map(rows.map((r) => [r.visitor_id, r.user_id]));
+    },
+    async recentActivity(sinceMs) {
+      const rows = await pgAll<{ visitor_id: string | null; user_id: string | null; day: string }>(
+        `SELECT visitor_id, ${userCol}, to_char(occurred_at AT TIME ZONE 'UTC', 'YYYY-MM-DD') AS day
+         FROM analytics_events
+         WHERE event_type = 'page_view' AND occurred_at >= $1::timestamptz AND ${PG_REAL_TRAFFIC}
+         GROUP BY 1, 2, 3`,
+        [new Date(sinceMs).toISOString()],
+      );
+      return rows.map((r) => ({ visitor_id: r.visitor_id, user_id: r.user_id, day: r.day }));
     },
     async trackingSince() {
       const row = await pgOne<{ t: string | null }>(`SELECT MIN(occurred_at) AS t FROM analytics_events`);
@@ -223,9 +285,21 @@ async function pgAnalyticsTableExists(): Promise<boolean> {
   }
 }
 
+async function pgAnalyticsHasUserId(): Promise<boolean> {
+  try {
+    const row = await pgOne<{ ok: boolean }>(
+      `SELECT EXISTS (SELECT 1 FROM information_schema.columns
+        WHERE table_schema = 'public' AND table_name = 'analytics_events' AND column_name = 'user_id') AS ok`,
+    );
+    return Boolean(row?.ok);
+  } catch {
+    return false;
+  }
+}
+
 async function resolveEventSource(): Promise<EventSource> {
   if (analyticsPgEnabled()) {
-    if (await pgAnalyticsTableExists()) return postgresSource();
+    if (await pgAnalyticsTableExists()) return postgresSource(await pgAnalyticsHasUserId());
     return sqliteSource(
       "Postgres analytics table is not migrated yet (run `npm run db:pg:migrate`). Showing this instance's local file, which Replit Autoscale wipes on redeploy and does not share between instances.",
     );
@@ -272,28 +346,101 @@ function sourceLabel(raw: unknown): string {
 }
 
 export interface AggregatedEvents {
-  audience: Omit<AnalyticsAudienceSection, "status">;
+  audience: Omit<AnalyticsAudienceSection, "status" | "retention" | "server_requests">;
   engagement: Omit<
     AnalyticsEngagementSection,
     "status" | "recipes_saved_to_accounts" | "never_viewed_recipes_sample"
   >;
 }
 
+/**
+ * One key per person: the account when this row — or any row from the same
+ * browser — was signed in, otherwise the browser's visitor id.
+ */
+export function personKey(
+  row: Pick<DashboardEventRow, "visitor_id" | "user_id" | "session_id">,
+  links: Map<string, string>,
+): string | null {
+  const user = row.user_id || (row.visitor_id ? links.get(row.visitor_id) : undefined);
+  if (user) return `user:${user}`;
+  if (row.visitor_id) return `visitor:${row.visitor_id}`;
+  return row.session_id ? `session:${row.session_id}` : null;
+}
+
+/** Earliest page view per person (a person's browsers are merged). */
+export function firstSeenByPerson(firstSeen: FirstSeenRow[], links: Map<string, string>): Map<string, number> {
+  const out = new Map<string, number>();
+  for (const row of firstSeen) {
+    const key = personKey({ ...row, session_id: null }, links);
+    if (!key) continue;
+    const prev = out.get(key);
+    if (prev === undefined || row.at < prev) out.set(key, row.at);
+  }
+  return out;
+}
+
+export type RetentionSegment = { cohort: number; retained: number; rate: MetricValue };
+export const RETENTION_LOOKBACK_DAYS = 90;
+
+/**
+ * N-day retention: of people first seen between 90 and N days ago, the share
+ * with a page view on a later UTC day no more than N days after the first.
+ */
+export function computeRetention(
+  activity: ActivityRow[],
+  firstSeenRows: FirstSeenRow[],
+  links: Map<string, string>,
+  nowMs = Date.now(),
+): AnalyticsRetention {
+  const firstSeen = firstSeenByPerson(firstSeenRows, links);
+  const dayNum = (iso: string) => Math.floor(Date.parse(`${iso}T00:00:00Z`) / DAY_MS);
+  const activeDays = new Map<string, Set<number>>();
+  for (const a of activity) {
+    const key = personKey({ ...a, session_id: null }, links);
+    if (!key) continue;
+    const set = activeDays.get(key) ?? new Set<number>();
+    set.add(dayNum(a.day));
+    activeDays.set(key, set);
+  }
+  const todayNum = Math.floor(nowMs / DAY_MS);
+  const segment = (n: number, include: (key: string) => boolean): RetentionSegment => {
+    let cohort = 0;
+    let retained = 0;
+    for (const [key, firstMs] of firstSeen) {
+      if (!include(key)) continue;
+      const first = Math.floor(firstMs / DAY_MS);
+      if (first < todayNum - RETENTION_LOOKBACK_DAYS || first > todayNum - n) continue;
+      cohort += 1;
+      const days = activeDays.get(key);
+      if (days && [...days].some((d) => d > first && d <= first + n)) retained += 1;
+    }
+    return { cohort, retained, rate: pct(retained, cohort) };
+  };
+  const build = (n: number) => ({
+    all: segment(n, () => true),
+    signed_in: segment(n, (k) => k.startsWith("user:")),
+    anonymous: segment(n, (k) => !k.startsWith("user:")),
+  });
+  return { d7: build(7), d30: build(30) };
+}
+
 export function aggregateEvents(
   allRows: DashboardEventRow[],
-  firstSeen: Map<string, number>,
+  firstSeen: FirstSeenRow[],
   startMs: number | null,
   nowMs = Date.now(),
+  links: Map<string, string> = new Map(),
 ): AggregatedEvents {
   const rows = allRows.filter(
     (r) => !isTestEventRow(r) && !(r.event_type === "page_view" && (r.route ?? "").startsWith("/admin")),
   );
   const pageViews = rows.filter((r) => r.event_type === "page_view").sort((a, b) => a.at - b.at);
+  const personFirstSeen = firstSeenByPerson(firstSeen, links);
 
-  // Sessions: per visitor, a new session starts after 30 idle minutes.
+  // Sessions: per person, a new session starts after 30 idle minutes.
   const byVisitor = new Map<string, DashboardEventRow[]>();
   for (const pv of pageViews) {
-    const key = pv.visitor_id ?? (pv.session_id ? `session:${pv.session_id}` : null);
+    const key = personKey(pv, links);
     if (!key) continue;
     const list = byVisitor.get(key) ?? [];
     list.push(pv);
@@ -302,7 +449,11 @@ export function aggregateEvents(
   const sources = new Map<string, { label: string; count: number }>();
   let sessions = 0;
   let returning = 0;
+  let returningSignedIn = 0;
+  let signedIn = 0;
   for (const [visitor, list] of byVisitor) {
+    const isUser = visitor.startsWith("user:");
+    if (isUser) signedIn += 1;
     let visitorSessions = 0;
     let last = -Infinity;
     for (const pv of list) {
@@ -313,9 +464,12 @@ export function aggregateEvents(
       last = pv.at;
     }
     sessions += visitorSessions;
-    const first = firstSeen.get(visitor);
+    const first = personFirstSeen.get(visitor);
     const seenBefore = startMs != null && first != null && first < startMs;
-    if (seenBefore || visitorSessions >= 2) returning += 1;
+    if (seenBefore || visitorSessions >= 2) {
+      returning += 1;
+      if (isUser) returningSignedIn += 1;
+    }
   }
   const uniqueVisitors = byVisitor.size;
 
@@ -328,7 +482,8 @@ export function aggregateEvents(
     const day = utcDay(pv.at);
     const bucket = dailyViews.get(day) ?? { views: 0, visitors: new Set<string>() };
     bucket.views += 1;
-    if (pv.visitor_id) bucket.visitors.add(pv.visitor_id);
+    const person = personKey(pv, links);
+    if (person) bucket.visitors.add(person);
     dailyViews.set(day, bucket);
   }
   const daily: AnalyticsDailyPoint[] = [];
@@ -359,7 +514,7 @@ export function aggregateEvents(
   ];
   const featureUsage = features
     .map((f) => {
-      const visitors = new Set(rows.filter(f.match).map((r) => r.visitor_id ?? r.session_id ?? "?"));
+      const visitors = new Set(rows.filter(f.match).map((r) => personKey(r, links) ?? "?"));
       return { key: f.key, label: f.label, count: visitors.size };
     })
     .filter((f) => f.count > 0)
@@ -376,6 +531,10 @@ export function aggregateEvents(
       unique_visitors: uniqueVisitors,
       new_visitors: uniqueVisitors - returning,
       returning_visitors: returning,
+      signed_in_visitors: signedIn,
+      anonymous_visitors: uniqueVisitors - signedIn,
+      returning_signed_in_users: returningSignedIn,
+      returning_anonymous_visitors: returning - returningSignedIn,
       sessions,
       page_views: pageViews.length,
       pages_per_session: sessions > 0 ? Math.round((pageViews.length / sessions) * 10) / 10 : 0,
@@ -635,17 +794,21 @@ export async function getAnalyticsDashboard(period: AnalyticsPeriod): Promise<An
   const source = await resolveEventSource();
 
   let aggregated: AggregatedEvents | null = null;
+  let retention: AnalyticsRetention | null = null;
   let trackingSince: number | null = null;
   let neverViewed: AnalyticsRankedRow[] = [];
   let eventError: string | undefined;
   try {
-    const [rows, firstSeen, since, viewed] = await Promise.all([
+    const [rows, firstSeen, links, activity, since, viewed] = await Promise.all([
       source.loadRows(startMs),
-      source.firstSeenByVisitor(),
+      source.firstSeen(),
+      source.visitorLinks(),
+      source.recentActivity(now - (RETENTION_LOOKBACK_DAYS + 31) * DAY_MS),
       source.trackingSince(),
       source.viewedRecipeSlugs(),
     ]);
-    aggregated = aggregateEvents(rows, firstSeen, startMs, now);
+    aggregated = aggregateEvents(rows, firstSeen, startMs, now, links);
+    retention = activity ? computeRetention(activity, firstSeen, links, now) : null;
     trackingSince = since;
     neverViewed = GOLDEN_100_RECIPES.filter((r) => !viewed.has(r.slug))
       .slice(0, 12)
@@ -660,21 +823,31 @@ export async function getAnalyticsDashboard(period: AnalyticsPeriod): Promise<An
     source: source.label,
     note: [eventError, source.note].filter(Boolean).join(" ") || undefined,
   };
-  const emptyAgg = aggregateEvents([], new Map(), startMs, now);
+  const emptyAgg = aggregateEvents([], [], startMs, now);
   const agg = aggregated ?? emptyAgg;
 
-  const [growth, accountSaves, revenue] = await Promise.all([
+  const [growth, accountSaves, revenue, serverRequests] = await Promise.all([
     loadGrowth(startMs, aggregated ? agg.audience.unique_visitors : null),
     loadAccountSaves(startMs),
     loadRevenue(period, startMs),
+    loadServerRequestTotals(startMs),
   ]);
 
+  const reliable = source.kind === "postgres";
+  const sinceIso = trackingSince != null ? new Date(trackingSince).toISOString() : null;
   return {
     period,
     generated_at: new Date(now).toISOString(),
     timezone: "UTC",
-    tracking_since: trackingSince != null ? new Date(trackingSince).toISOString() : null,
-    audience: { status: eventStatus, ...agg.audience },
+    tracking_since: sinceIso,
+    tracking: {
+      reliable,
+      reliable_since: reliable ? sinceIso : null,
+      note: reliable
+        ? "Production traffic only, stored durably in Postgres. Nothing recorded before this date (including local development data) is included."
+        : "Not reliable: events are only in this server instance's local file, which may include development data and is wiped on redeploy.",
+    },
+    audience: { status: eventStatus, ...agg.audience, retention, server_requests: serverRequests },
     growth,
     engagement: {
       status: eventStatus,

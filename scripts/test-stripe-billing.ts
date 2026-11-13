@@ -185,7 +185,7 @@ function runPureLogicTests(): void {
   assert.equal(mapStripeStatus("trialing"), "trialing");
   assert.equal(mapStripeStatus("active"), "active");
   assert.equal(mapStripeStatus("past_due"), "past_due");
-  assert.equal(mapStripeStatus("incomplete"), "past_due");
+  assert.equal(mapStripeStatus("incomplete"), "cancelled");
   assert.equal(mapStripeStatus("unpaid"), "cancelled", "unpaid must NOT grant indefinite access");
   assert.equal(mapStripeStatus("canceled"), "cancelled");
   assert.equal(mapStripeStatus("incomplete_expired"), "cancelled");
@@ -194,7 +194,7 @@ function runPureLogicTests(): void {
 
   assert.equal(
     priceMatchesExpectedSpec(
-      { unit_amount: 599, currency: "usd", recurring: { interval: "month", interval_count: 1 } },
+      { unit_amount: 499, currency: "usd", recurring: { interval: "month", interval_count: 1 } },
       "monthly",
     ).ok,
     true,
@@ -223,7 +223,7 @@ function runPureLogicTests(): void {
     "the old $4.99 monthly price must fail",
   );
   assert.equal(
-    priceMatchesExpectedSpec({ unit_amount: 599, currency: "usd", recurring: null }, "monthly").ok,
+    priceMatchesExpectedSpec({ unit_amount: 499, currency: "usd", recurring: null }, "monthly").ok,
     false,
     "a one-time (non-recurring) price must fail — Pro is subscription-only",
   );
@@ -600,7 +600,7 @@ async function runLiveStripeTests(): Promise<void> {
     // --- [A] Free user starts Pro checkout — valid hosted Checkout URL ---
     const verifiedPriceId = await getVerifiedPriceIdForPeriod("monthly");
     assert.equal(verifiedPriceId, monthlyPriceId, "verified price id must match the configured monthly price");
-    ok("[A] STRIPE_PRICE_ID_MONTHLY matches the expected $5.99/mo product contract (live Stripe cross-check)");
+    ok("[A] STRIPE_PRICE_ID_MONTHLY matches the expected $4.99/mo product contract (live Stripe cross-check)");
 
     const session = await stripe.checkout.sessions.create(
       buildProCheckoutSessionParams({

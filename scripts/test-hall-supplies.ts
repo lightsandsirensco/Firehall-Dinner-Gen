@@ -6,6 +6,7 @@
 
  */
 
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 
 import fs from "node:fs";
@@ -172,9 +173,9 @@ async function main(): Promise<void> {
 
 
 
-  const captain = upsertEmailUser("captain@firehall.test").user;
+  const captain = (await upsertEmailUser("captain@firehall.test")).user;
 
-  const member = upsertEmailUser("member@firehall.test").user;
+  const member = (await upsertEmailUser("member@firehall.test")).user;
 
 
 

@@ -197,7 +197,7 @@ export function PlanCard({
             <p className="mt-4 text-xs text-muted-foreground/90">
               {showFounding
                 ? `Billed today. Renews automatically at ${FOUNDING_OFFER_DISPLAY.standardPrice}/year after your first year. Cancel anytime from Manage Billing.`
-                : "Billed immediately, renews automatically. Cancel anytime from Manage Billing."}
+                : "Plus applicable sales tax. Billed immediately, renews automatically. Cancel anytime from Manage Billing."}
             </p>
           ) : presentation.comingSoonNote ? (
             <p className="mt-4 text-xs text-muted-foreground/90">{presentation.comingSoonNote}</p>

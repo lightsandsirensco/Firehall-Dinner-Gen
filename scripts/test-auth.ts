@@ -1,244 +1,81 @@
 #!/usr/bin/env tsx
-
 /**
-
- * Validates user auth store — schema, sessions, profile, saves.
-
+ * Validates user auth store — magic links, sessions, profile, saves — against
+ * the real Postgres migrations (PGlite) plus SQLite Firehouse membership.
  */
-
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
-
-import fs from "node:fs";
-
-import os from "node:os";
-
-import path from "node:path";
-
-import { openSqliteDatabase, releaseSqliteTimersForTests } from "../server/sqlite.js";
-
+import { releaseSqliteTimersForTests } from "../server/sqlite.js";
 import {
-
   consumeMagicLink,
-
   createAuthSession,
-
   createMagicLink,
-
   getAuthMe,
-
-  bindAuthDb,
-
+  getUserIdFromSessionToken,
   listSavedRecipes,
-
   syncSavedRecipes,
-
   updateUserProfile,
-
   upsertEmailUser,
-
 } from "../server/auth/auth-store.js";
-
-import { bindHallMembershipDb, createHall, joinHall } from "../server/hall-membership/store.js";
-import { bindBillingDb } from "../server/billing/store.js";
-
-
-
-const MIGRATION_014 = fs.readFileSync(
-
-  path.join(process.cwd(), "server", "db", "migrations", "014_user_accounts.sql"),
-
-  "utf8",
-
-);
-
-const MIGRATION_015 = fs.readFileSync(
-
-  path.join(process.cwd(), "server", "db", "migrations", "015_hall_membership.sql"),
-
-  "utf8",
-
-);
-
-const MIGRATION_016 = fs.readFileSync(
-
-  path.join(process.cwd(), "server", "db", "migrations", "016_billing.sql"),
-
-  "utf8",
-
-);
-
-const MIGRATION_022 = fs.readFileSync(
-
-  path.join(process.cwd(), "server", "db", "migrations", "022_hall_identity.sql"),
-
-  "utf8",
-
-);
-
-
-
-const MIGRATION_038 = fs.readFileSync(
-  path.join(process.cwd(), "server", "db", "migrations", "038_magic_link_return_to.sql"),
-  "utf8",
-);
-
-// GOOGLE SIGN-IN SAFETY — upsertEmailUser() now also links an auth_identities
-// row, so this table must exist even for this suite's email-only coverage.
-const MIGRATION_048 = fs.readFileSync(
-  path.join(process.cwd(), "server", "db", "migrations", "048_auth_identities.sql"),
-  "utf8",
-);
-
-const tmpDb = path.join(os.tmpdir(), `fh-auth-validate-${Date.now()}.db`);
-
-
-
-async function bindTestDb(): Promise<void> {
-
-  const db = await openSqliteDatabase(tmpDb);
-
-  db.exec(MIGRATION_014);
-
-  db.exec(MIGRATION_015);
-
-  db.exec(MIGRATION_016);
-
-  db.exec(MIGRATION_022);
-  db.exec(MIGRATION_038);
-  db.exec(MIGRATION_048);
-
-  bindAuthDb(db);
-
-  bindHallMembershipDb(db);
-
-  bindBillingDb(db);
-
-}
-
-
+import { createHall, initHallMembershipStore, joinHall } from "../server/hall-membership/store.js";
 
 async function main(): Promise<void> {
+  await initHallMembershipStore();
 
-  await bindTestDb();
-
-
-
-  const { rawToken } = createMagicLink("crew@firehall.test");
-
-  const consumed = consumeMagicLink(rawToken);
-
+  const { rawToken } = await createMagicLink("crew@firehall.test");
+  const consumed = await consumeMagicLink(rawToken);
   assert.equal(consumed.ok, true);
-  if (consumed.ok) {
-    assert.equal(consumed.email, "crew@firehall.test");
-  }
+  if (consumed.ok) assert.equal(consumed.email, "crew@firehall.test");
+  const reused = await consumeMagicLink(rawToken);
+  assert.equal(reused.ok, false, "a magic link works only once");
 
-
-
-  const { user, isNew } = upsertEmailUser("crew@firehall.test");
-
+  const { user, isNew } = await upsertEmailUser("crew@firehall.test");
   assert.ok(isNew);
-
   assert.equal(user.email, "crew@firehall.test");
+  const again = await upsertEmailUser("CREW@firehall.test");
+  assert.equal(again.isNew, false, "email matching is case-insensitive");
+  assert.equal(again.user.user_id, user.user_id);
 
-
-
-  const session = createAuthSession(user.user_id, isNew);
-
+  const session = await createAuthSession(user.user_id, isNew);
   assert.ok(session.token.length > 20);
+  assert.equal(await getUserIdFromSessionToken(session.token), user.user_id);
+  assert.equal(await getUserIdFromSessionToken("not-a-real-token"), null);
 
-
-
-  const me = getAuthMe(user.user_id);
-
+  const me = await getAuthMe(user.user_id);
   assert.equal(me.authenticated, true);
-
   assert.ok(me.profile);
+  const anon = await getAuthMe(null);
+  assert.equal(anon.authenticated, false);
 
-
-
-  updateUserProfile(user.user_id, {
-
+  await updateUserProfile(user.user_id, {
     first_name: "Mike",
-
     display_name: "Engine 12",
-
     preferred_proteins: ["chicken", "beef"],
-
     shift_reminders_enabled: true,
-
   });
-
-
-
-  const updated = getAuthMe(user.user_id);
-
+  const updated = await getAuthMe(user.user_id);
   assert.equal(updated.profile?.first_name, "Mike");
-
   assert.deepEqual(updated.preferences?.preferred_proteins, ["chicken", "beef"]);
-
   assert.equal(updated.preferences?.shift_reminders_enabled, true);
 
-
-
-  syncSavedRecipes(user.user_id, [
-
-    {
-
-      recipe_key: "test:meal",
-
-      recipe_json: { title: "Test Meal" },
-
-      saved_at: new Date().toISOString(),
-
-    },
-
+  await syncSavedRecipes(user.user_id, [
+    { recipe_key: "test:meal", recipe_json: { title: "Test Meal" }, saved_at: new Date().toISOString() },
   ]);
-
-  const saves = listSavedRecipes(user.user_id);
-
+  const saves = await listSavedRecipes(user.user_id);
   assert.equal(saves.length, 1);
-
   assert.equal(saves[0].recipe_key, "test:meal");
 
-
-
   const hall = createHall(user.user_id, { hall_name: "Station 12" });
-
   assert.ok(hall.hall.hall_id);
-
   const joined = joinHall(user.user_id, { hall_id: hall.hall.hall_id });
-
   assert.equal(joined.ok, true);
 
-
-
-  try {
-
-    fs.unlinkSync(tmpDb);
-
-  } catch {
-
-    /* ignore */
-
-  }
-
-
-
   releaseSqliteTimersForTests();
-
   console.log("[test-auth] OK");
-
 }
 
-
-
 main().catch((err) => {
-
   console.error("[test-auth] FAILED", err);
-
   releaseSqliteTimersForTests();
-
   process.exit(1);
-
 });
-

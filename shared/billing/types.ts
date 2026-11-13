@@ -23,21 +23,33 @@ export function subscriptionGrantsAccess(status: SubscriptionStatus): boolean {
 /**
  * Whether a stored personal subscription row entitles the user right now.
  *
- * Stripe-sourced rows are governed by their webhook-driven `status` alone:
+ * Stripe-sourced rows are governed by their webhook-driven `status`:
  * Stripe advances `current_period_end` on renewal and moves a lapsed
  * subscription to cancelled, while `expires_at` is never written for them
  * (a stale value can survive from an earlier admin grant on the same row).
+ * A failed RENEWAL (`past_due`) keeps access for RENEWAL_GRACE_DAYS from the
+ * first time it was seen overdue (`past_due_since`), then ends even if Stripe
+ * is still retrying. A first payment that never succeeded is `incomplete` →
+ * `cancelled` (see mapStripeStatus) and never reaches this grace window.
  *
  * Every other source (admin grants, self-select) has no webhook to revoke it,
  * so a past `expires_at` ends access. A null `expires_at` means no end date;
  * an unparseable one fails closed.
  */
+export const RENEWAL_GRACE_DAYS = 7;
+
 export function subscriptionIsEntitled(
-  subscription: Pick<UserSubscription, "status"> & Partial<Pick<UserSubscription, "source" | "expires_at">>,
+  subscription: Pick<UserSubscription, "status"> &
+    Partial<Pick<UserSubscription, "source" | "expires_at" | "past_due_since">>,
   now: Date = new Date(),
 ): boolean {
   if (!subscriptionGrantsAccess(subscription.status)) return false;
-  if (subscription.source === "stripe") return true;
+  if (subscription.source === "stripe") {
+    if (subscription.status !== "past_due") return true;
+    const sinceMs = subscription.past_due_since ? Date.parse(subscription.past_due_since) : NaN;
+    if (Number.isNaN(sinceMs)) return false;
+    return now.getTime() < sinceMs + RENEWAL_GRACE_DAYS * 24 * 60 * 60 * 1000;
+  }
   if (!subscription.expires_at) return true;
   const expiresAtMs = Date.parse(subscription.expires_at);
   if (Number.isNaN(expiresAtMs)) return false;
@@ -185,6 +197,8 @@ export interface UserSubscription {
   cancel_at_period_end?: boolean;
   /** Set only when source === "stripe". ISO timestamp of current billing period end. */
   current_period_end?: string | null;
+  /** Set only when source === "stripe" and status is past_due: when the renewal first failed. */
+  past_due_since?: string | null;
 }
 
 export interface HallSubscription {

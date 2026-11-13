@@ -24,6 +24,7 @@ import {
   FOUNDING_OFFER_DISPLAY,
   PLAN_PRESENTATIONS,
   proPriceSummary,
+  SALES_TAX_NOTE,
   resolveBillingOption,
   type PlanBillingPeriod,
 } from "@/lib/plans-display";
@@ -235,7 +236,7 @@ function ProPaywallSheet({ request, onClose }: { request: PaywallRequest | null;
         : mode === "subscribe"
           ? foundingActive
             ? `${FOUNDING_OFFER_DISPLAY.renewalNote} Billed today, renews automatically — cancel anytime.`
-            : `${activeOption?.price ?? ""}${activeOption?.period ?? ""}, billed today. Renews automatically — cancel anytime.`
+            : `${activeOption?.price ?? ""}${activeOption?.period ?? ""} ${SALES_TAX_NOTE}, billed today. Renews automatically — cancel anytime.`
           : `Pro subscriptions aren't open yet. Join early access and we'll let you know — nothing is charged. Pro will be ${proPriceSummary(founding)}.`;
 
   return (

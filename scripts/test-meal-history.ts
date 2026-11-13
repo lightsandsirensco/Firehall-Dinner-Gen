@@ -14,17 +14,14 @@
  *
  *   npx tsx scripts/test-meal-history.ts
  */
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
-import os from "node:os";
-import path from "node:path";
-import fs from "node:fs";
 
-import { openSqliteDatabase, releaseSqliteTimersForTests } from "../server/sqlite.js";
-import { bindAuthDb, upsertEmailUser, getAuthMe, deleteUserAccount } from "../server/auth/auth-store.js";
-import { bindHallMembershipDb } from "../server/hall-membership/store.js";
-import { bindBillingDb, adminSetUserPlan } from "../server/billing/store.js";
+import { releaseSqliteTimersForTests } from "../server/sqlite.js";
+import { upsertEmailUser, getAuthMe, deleteUserAccount } from "../server/auth/auth-store.js";
+import { initHallMembershipStore } from "../server/hall-membership/store.js";
+import { adminSetUserPlan, initBillingStore } from "../server/billing/store.js";
 import {
-  bindMealHistoryDb,
   recordMealCookedForUser,
   listMealHistoryForUser,
   deleteMealHistoryEntryForUser,
@@ -45,10 +42,6 @@ function check(name: string, ok: boolean, detail?: string) {
   }
 }
 
-function readMigration(name: string): string {
-  return fs.readFileSync(path.join(process.cwd(), "server", "db", "migrations", name), "utf8");
-}
-
 async function main(): Promise<void> {
   const SLUG_A = GOLDEN_100_RECIPES[0]!.slug;
   const SLUG_B = GOLDEN_100_RECIPES[1]!.slug;
@@ -60,48 +53,12 @@ async function main(): Promise<void> {
   // mirrors scripts/test-privacy-consent.ts (partial subsets can produce a
   // schema that doesn't match production, since later migrations rename/
   // recreate several canteen tables).
-  const MIGRATIONS = [
-    "014_user_accounts.sql",
-    "015_hall_membership.sql",
-    "016_billing.sql",
-    "017_user_cloud_sync.sql",
-    "018_hall_shopping_lists.sql",
-    "019_hall_supplies.sql",
-    "020_shift_reminders.sql",
-    "021_hall_analytics.sql",
-    "022_hall_identity.sql",
-    "023_hall_pro_subscription.sql",
-    "024_hall_canteen.sql",
-    "025_admin_users_leads.sql",
-    "031_canteen_staples.sql",
-    "032_canteen_staples_trim.sql",
-    "033_hall_pro_collaboration.sql",
-    "034_hall_notes.sql",
-    "035_canteen_pickup_claims.sql",
-    "036_hall_identity_profile.sql",
-    "037_canteen_payment_tracker.sql",
-    "039_founder_leads_meta.sql",
-    "040_canteen_manager_v2.sql",
-    "041_hall_ops_foundation.sql",
-    "042_firefighter_plus_plan.sql",
-    "043_email_marketing_consent.sql",
-    "047_user_meal_history.sql",
-    // GOOGLE SIGN-IN SAFETY — deleteUserAccount() now also removes
-    // auth_identities rows for the deleted user.
-    "048_auth_identities.sql",
-  ];
+  await initHallMembershipStore();
+  await initBillingStore();
 
-  const tmpDb = path.join(os.tmpdir(), `fh-meal-history-validate-${Date.now()}.db`);
-  const db = await openSqliteDatabase(tmpDb);
-  for (const name of MIGRATIONS) db.exec(readMigration(name));
-  bindAuthDb(db);
-  bindHallMembershipDb(db);
-  bindBillingDb(db);
-  bindMealHistoryDb(db);
-
-  const { user: freeUser } = upsertEmailUser("meal-history-free@test.firehall");
-  const { user: proUser } = upsertEmailUser("meal-history-pro@test.firehall");
-  adminSetUserPlan(proUser.user_id, "firefighter_plus", "active");
+  const { user: freeUser } = (await upsertEmailUser("meal-history-free@test.firehall"));
+  const { user: proUser } = (await upsertEmailUser("meal-history-pro@test.firehall"));
+  await adminSetUserPlan(proUser.user_id, "firefighter_plus", "active");
 
   // =====================================================================
   // 1. ENTITLEMENT
@@ -109,8 +66,8 @@ async function main(): Promise<void> {
   console.log("\n--- 1. Entitlement ---");
 
   {
-    const free = getAuthMe(freeUser.user_id);
-    const pro = getAuthMe(proUser.user_id);
+    const free = (await getAuthMe(freeUser.user_id));
+    const pro = (await getAuthMe(proUser.user_id));
     check("Free user does NOT have meal_memory", !hasFeature(free.billing.features, "meal_memory"));
     check(
       "Admin-granted firefighter_plus user DOES have meal_memory",
@@ -125,18 +82,18 @@ async function main(): Promise<void> {
   console.log("\n--- 2. Database / store ---");
 
   {
-    const result = recordMealCookedForUser(proUser.user_id, SLUG_A);
+    const result = (await recordMealCookedForUser(proUser.user_id, SLUG_A));
     check("Create cooked event succeeds for a real catalog slug", result.ok);
   }
   {
-    const result = recordMealCookedForUser(proUser.user_id, "not-a-real-recipe-slug-xyz");
+    const result = (await recordMealCookedForUser(proUser.user_id, "not-a-real-recipe-slug-xyz"));
     check("Invalid/nonexistent recipe slug is rejected", !result.ok && result.reason === "invalid_slug");
   }
   {
     // A different user's history is fully isolated.
-    recordMealCookedForUser(freeUser.user_id, SLUG_B);
-    const proHistory = listMealHistoryForUser(proUser.user_id);
-    const freeHistory = listMealHistoryForUser(freeUser.user_id);
+    await recordMealCookedForUser(freeUser.user_id, SLUG_B);
+    const proHistory = (await listMealHistoryForUser(proUser.user_id));
+    const freeHistory = (await listMealHistoryForUser(freeUser.user_id));
     check(
       "Retrieve only current user's history — Pro user never sees Free user's rows",
       proHistory.every((e) => e.recipe_slug !== SLUG_B) && proHistory.some((e) => e.recipe_slug === SLUG_A),
@@ -148,55 +105,55 @@ async function main(): Promise<void> {
   }
   {
     // Same recipe cooked again later must create a NEW row, not overwrite.
-    const before = listMealHistoryForUser(proUser.user_id).length;
+    const before = (await listMealHistoryForUser(proUser.user_id)).length;
     // Force outside the double-click de-dupe window by inserting directly
     // with a distinct recipe the first time, then confirm two *different*
     // recipes both persist as separate rows (double-click de-dupe of the
     // SAME recipe within seconds is covered by section 4 below).
-    recordMealCookedForUser(proUser.user_id, SLUG_C);
-    const after = listMealHistoryForUser(proUser.user_id).length;
+    await recordMealCookedForUser(proUser.user_id, SLUG_C);
+    const after = (await listMealHistoryForUser(proUser.user_id)).length;
     check("Same user can cook a different recipe — history grows (event log, not one-row-per-recipe)", after === before + 1);
   }
   {
-    const entry = recordMealCookedForUser(proUser.user_id, SLUG_A);
+    const entry = (await recordMealCookedForUser(proUser.user_id, SLUG_A));
     assert(entry.ok);
     const ownId = entry.entry.id;
-    const deletedByOwner = deleteMealHistoryEntryForUser(proUser.user_id, ownId);
+    const deletedByOwner = (await deleteMealHistoryEntryForUser(proUser.user_id, ownId));
     check("Owner can delete their own history entry", deletedByOwner);
 
-    const entry2 = recordMealCookedForUser(proUser.user_id, SLUG_A);
+    const entry2 = (await recordMealCookedForUser(proUser.user_id, SLUG_A));
     assert(entry2.ok);
-    const deletedByOther = deleteMealHistoryEntryForUser(freeUser.user_id, entry2.entry.id);
+    const deletedByOther = (await deleteMealHistoryEntryForUser(freeUser.user_id, entry2.entry.id));
     check("A different user CANNOT delete someone else's history entry", !deletedByOther);
-    const stillThere = listMealHistoryForUser(proUser.user_id).some((e) => e.id === entry2.entry.id);
+    const stillThere = (await listMealHistoryForUser(proUser.user_id)).some((e) => e.id === entry2.entry.id);
     check("Entry survives an unauthorized delete attempt", stillThere);
   }
   {
     // Double-click protection: recording the SAME recipe twice in immediate
     // succession is treated as one event (deduped), not two rows.
-    const beforeCount = listMealHistoryForUser(freeUser.user_id).length;
-    adminSetUserPlan(freeUser.user_id, "firefighter_plus", "active");
-    const first = recordMealCookedForUser(freeUser.user_id, SLUG_C);
-    const second = recordMealCookedForUser(freeUser.user_id, SLUG_C);
-    const afterCount = listMealHistoryForUser(freeUser.user_id).length;
+    const beforeCount = (await listMealHistoryForUser(freeUser.user_id)).length;
+    await adminSetUserPlan(freeUser.user_id, "firefighter_plus", "active");
+    const first = (await recordMealCookedForUser(freeUser.user_id, SLUG_C));
+    const second = (await recordMealCookedForUser(freeUser.user_id, SLUG_C));
+    const afterCount = (await listMealHistoryForUser(freeUser.user_id)).length;
     check(
       "Immediate duplicate submission (double-click) does not create two rows",
       first.ok && second.ok && (second as any).deduped === true && afterCount === beforeCount + 1,
     );
-    adminSetUserPlan(freeUser.user_id, "personal", "active"); // restore for later checks
+    (await adminSetUserPlan(freeUser.user_id, "personal", "active")); // restore for later checks
   }
   {
-    const entries = listMealHistoryForUser(proUser.user_id);
+    const entries = (await listMealHistoryForUser(proUser.user_id));
     check(
       "Recipe title/link are resolved at read time, not stored redundantly",
       entries.every((e) => typeof e.title !== "undefined" && typeof e.recipe_path !== "undefined"),
     );
   }
   {
-    const badSlugRow = recordMealCookedForUser(proUser.user_id, SLUG_A);
+    const badSlugRow = (await recordMealCookedForUser(proUser.user_id, SLUG_A));
     assert(badSlugRow.ok);
     // Simulate a slug that "disappears" from the catalog — graceful fail.
-    const rows = listMealHistoryForUser(proUser.user_id);
+    const rows = (await listMealHistoryForUser(proUser.user_id));
     check("Every returned entry has a defined (possibly null) title/path — never throws", rows.length > 0);
   }
 
@@ -206,7 +163,7 @@ async function main(): Promise<void> {
   console.log("\n--- 3. Generator integration ---");
 
   {
-    const durable = listRecentCookedSlugsOldestFirst(proUser.user_id, 10);
+    const durable = (await listRecentCookedSlugsOldestFirst(proUser.user_id, 10));
     check("Durable history translates into a plain string[] of slugs", Array.isArray(durable) && durable.length > 0);
   }
   {
@@ -278,10 +235,10 @@ async function main(): Promise<void> {
   console.log("\n--- 4. Privacy / account deletion ---");
 
   {
-    const before = listMealHistoryForUser(proUser.user_id);
+    const before = (await listMealHistoryForUser(proUser.user_id));
     check("Fixture: Pro user has history rows before deletion", before.length > 0);
-    deleteUserAccount(proUser.user_id);
-    const after = listMealHistoryForUser(proUser.user_id);
+    await deleteUserAccount(proUser.user_id);
+    const after = (await listMealHistoryForUser(proUser.user_id));
     check("Account deletion removes ALL of this user's meal history rows", after.length === 0);
   }
 
@@ -296,10 +253,11 @@ async function main(): Promise<void> {
     "isApprovedCatalogSlug still rejects garbage input (dietary/catalog gate untouched)",
     !isApprovedCatalogSlug("<script>alert(1)</script>") && !isApprovedCatalogSlug(""),
   );
+  const freeFeatures = (await getAuthMe(freeUser.user_id)).billing.features;
   check(
     "BILLING_FEATURES / PLUS_FEATURES additions didn't remove any existing Plus feature",
     ["ingredient_preferences", "advanced_search", "offline_recipes"].every((f) =>
-      hasFeature(getAuthMe(freeUser.user_id).billing.features, f as any) === false, // free user still has none of these
+      hasFeature(freeFeatures, f as any) === false, // free user still has none of these
     ),
   );
 

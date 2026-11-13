@@ -62,12 +62,16 @@ export async function geocodePostalCode(
   if (cached) return cached;
 
   const formatted = normalizePostal(postalCode, country);
-  const countryName = country === "US" ? "United States" : "Canada";
-  const query = `${formatted}, ${countryName}`;
+  const countryCode = country === "US" ? "us" : "ca";
+  const query = formatted;
 
   try {
+    // Structured + country-restricted: a free-text "K1A 0B1, Canada" query
+    // matched places named "Cañada"/"Canada" in Kentucky and Spain. No match
+    // falls through to the province fallback instead of a wrong continent.
     const url = new URL("https://nominatim.openstreetmap.org/search");
-    url.searchParams.set("q", query);
+    url.searchParams.set("postalcode", formatted);
+    url.searchParams.set("countrycodes", countryCode);
     url.searchParams.set("format", "json");
     url.searchParams.set("limit", "1");
     url.searchParams.set("addressdetails", "1");
@@ -90,6 +94,9 @@ export async function geocodePostalCode(
     if (!hit?.lat || !hit.lon) return fallbackLocation(postalCode, country);
 
     const addr = hit.address ?? {};
+    if (addr.country_code && addr.country_code.toLowerCase() !== countryCode) {
+      return fallbackLocation(postalCode, country);
+    }
     const loc: GeocodedLocation = {
       lat: Number(hit.lat),
       lng: Number(hit.lon),

@@ -18,6 +18,17 @@ export const adminSetUserPlanSchema = z.object({
   status: z.enum(["active", "trialing", "cancelled"]).optional(),
 });
 
+export const adminPremiumGrantSchema = z.object({
+  expires_at: z.string().datetime({ offset: true }),
+  reason: z.string().trim().min(3).max(500),
+  granted_by: z.string().trim().min(2).max(120),
+});
+
+export const adminPremiumRevokeSchema = z.object({
+  reason: z.string().trim().min(3).max(500),
+  revoked_by: z.string().trim().min(2).max(120),
+});
+
 export const adminUserLookupSchema = z.object({
   email: z.string().trim().min(1).max(320),
 });

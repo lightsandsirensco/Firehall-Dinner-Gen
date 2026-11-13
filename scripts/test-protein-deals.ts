@@ -1,4 +1,5 @@
 #!/usr/bin/env tsx
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -53,7 +54,7 @@ async function main(): Promise<void> {
   const norm = normalizeFlyerItem("Boneless chicken thighs");
   assert.equal(norm?.protein_type, "chicken");
 
-  const captain = upsertEmailUser("captain@firehall.test").user;
+  const captain = (await upsertEmailUser("captain@firehall.test")).user;
   const detail = createHall(captain.user_id, { hall_name: "Station 9", appliances: ["stove"] });
   const hallId = detail.hall.hall_id;
   updateHall(hallId, captain.user_id, { postal_code: "K1A0B1" });
@@ -81,9 +82,9 @@ async function main(): Promise<void> {
 
   await refreshProteinDealsFromProvider(hallId);
 
-  assert.equal(userHasFeature(captain.user_id, "hall_grocery_planning", { hall_id: hallId }), false);
+  assert.equal((await userHasFeature(captain.user_id, "hall_grocery_planning", { hall_id: hallId })), false);
   enableHallPro(hallId, captain.user_id);
-  assert.equal(userHasFeature(captain.user_id, "hall_grocery_planning", { hall_id: hallId }), true);
+  assert.equal((await userHasFeature(captain.user_id, "hall_grocery_planning", { hall_id: hallId })), true);
 
   const response = await getProteinDealsResponse(hallId, true);
   assert.equal(response.setup_complete, true);

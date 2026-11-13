@@ -69,7 +69,7 @@ export const PLANS_PAGE = {
 // shared/billing/pricing.ts (the same values Stripe prices/coupon are
 // verified against at checkout), never hand-typed, so the UI can't drift
 // from what Stripe actually charges.
-// $5.99 x 12 = $71.88; ($71.88 - $39.99) / $71.88 = 44%; founding $29.99 → 58%.
+// $4.99 x 12 = $59.88; ($59.88 - $39.99) / $59.88 = 33%; founding $29.99 → 50%.
 const MONTHLY_PRICE_LABEL = formatUsdCents(PRO_MONTHLY_PRICE_CENTS);
 const ANNUAL_PRICE_LABEL = formatUsdCents(PRO_ANNUAL_PRICE_CENTS);
 const ANNUAL_EQUIVALENT_LABEL = `${formatUsdCents(Math.round(PRO_ANNUAL_PRICE_CENTS / 12))}/month billed annually`;
@@ -90,11 +90,14 @@ export const FOUNDING_OFFER_DISPLAY = {
   savingsLabel: `Save ${savingsVersusMonthlyPercent(FOUNDING_FIRST_YEAR_PRICE_CENTS)}% first year`,
 } as const;
 
-/** One-line price summary for paywall/trial copy, e.g. "$5.99/month or $39.99/year". */
+/** Stripe prices are tax-exclusive; tax is added at checkout. */
+export const SALES_TAX_NOTE = "plus applicable sales tax";
+
+/** One-line price summary for paywall/trial copy, e.g. "$4.99/month or $39.99/year, plus applicable sales tax". */
 export function proPriceSummary(foundingEligible: boolean): string {
   return foundingEligible
     ? `${MONTHLY_PRICE_LABEL}/month, or ${FOUNDING_PRICE_LABEL} for your first year (then ${ANNUAL_PRICE_LABEL}/year)`
-    : `${MONTHLY_PRICE_LABEL}/month or ${ANNUAL_PRICE_LABEL}/year`;
+    : `${MONTHLY_PRICE_LABEL}/month or ${ANNUAL_PRICE_LABEL}/year, ${SALES_TAX_NOTE}`;
 }
 
 /** The option as it should render for this account (founding variant on Annual when eligible). */

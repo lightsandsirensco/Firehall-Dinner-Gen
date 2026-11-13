@@ -1,108 +1,87 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "wouter";
-import {
-  ClipboardCopy,
-  Download,
-  Loader2,
-  Mail,
-  Search,
-  Shield,
-  UserPlus,
-} from "lucide-react";
+import { ClipboardCopy, Download, Loader2, Search, Shield, UserPlus, Users } from "lucide-react";
 import { AdminPageShell } from "@/components/admin/admin-page-shell";
-import { SignupDetailDrawer } from "@/components/admin/signup-detail-drawer";
+import { ConsentBadge, KlaviyoSyncLabel, Pager, formatAdminDate } from "@/components/admin/email-status";
+import { ExternalContactsPanel } from "@/components/admin/external-contacts-panel";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { adminFetch } from "@/lib/admin-api";
-import type { AdminSignupFilter, AdminSignupListResponse, AdminSignupRow } from "@shared/admin-users/types";
+import type {
+  EmailCategory,
+  EmailDirectoryFilter,
+  EmailDirectoryListResponse,
+} from "@shared/admin-users/types";
 
-const FILTERS: { id: AdminSignupFilter; label: string }[] = [
-  { id: "all", label: "All" },
+const FILTERS: { id: EmailDirectoryFilter; label: string }[] = [
+  { id: "all", label: "All emails" },
   { id: "registered_users", label: "Registered users" },
-  { id: "email_leads_only", label: "Email leads only" },
-  { id: "joined_hall", label: "Joined hall" },
-  { id: "no_hall_yet", label: "No hall yet" },
-  { id: "hall_admins", label: "Hall admins" },
-  { id: "canteen_managers", label: "Canteen managers" },
-  { id: "hall_pro_trial", label: "Hall Pro trial" },
-  { id: "active_last_7_days", label: "Active last 7 days" },
-  { id: "inactive", label: "Inactive" },
+  { id: "marketing_subscribers", label: "Marketing subscribers" },
+  { id: "other_emails", label: "Other collected emails" },
+  { id: "unsubscribed", label: "Unsubscribed" },
 ];
 
-const SOURCE_FILTERS = [
-  { id: "", label: "Any source" },
-  { id: "homepage", label: "Homepage" },
-  { id: "generator", label: "Generator" },
-  { id: "red_lead", label: "Red Lead PDF" },
-  { id: "shopping_list", label: "Shopping list" },
-  { id: "magic_link", label: "Magic link" },
-  { id: "google", label: "Google" },
-  { id: "apple", label: "Apple" },
-];
+const CATEGORY_LABEL: Record<EmailCategory, string> = {
+  registered_user: "Registered user",
+  marketing_subscriber: "Subscriber (no account)",
+  other: "Collected email",
+};
 
-function formatDate(iso: string | null): string {
-  if (!iso) return "—";
-  try {
-    return new Date(iso).toLocaleDateString(undefined, {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  } catch {
-    return iso;
-  }
-}
+const PAGE_SIZE = 50;
 
 function formatSource(source: string): string {
-  return source.replace(/_/g, " ");
+  return source.replace(/^account_/, "account: ").replace(/^opt_in_/, "opt-in: ").replace(/_/g, " ");
 }
 
 export default function AdminSignupsPage() {
-  const [filter, setFilter] = useState<AdminSignupFilter>("all");
+  const [filter, setFilter] = useState<EmailDirectoryFilter>("all");
   const [sourceFilter, setSourceFilter] = useState("");
   const [query, setQuery] = useState("");
   const [searchInput, setSearchInput] = useState("");
-  const [data, setData] = useState<AdminSignupListResponse | null>(null);
+  const [page, setPage] = useState(1);
+  const [data, setData] = useState<EmailDirectoryListResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [selected, setSelected] = useState<AdminSignupRow | null>(null);
   const [copyMsg, setCopyMsg] = useState<string | null>(null);
+
+  const params = useCallback(() => {
+    const p = new URLSearchParams({ filter });
+    if (query) p.set("q", query);
+    if (sourceFilter) p.set("source", sourceFilter);
+    return p;
+  }, [filter, query, sourceFilter]);
 
   const load = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const params = new URLSearchParams({ filter });
-      if (query) params.set("q", query);
-      if (sourceFilter) params.set("source", sourceFilter);
-      const res = await adminFetch(`/api/admin/signups?${params.toString()}`);
+      const p = params();
+      p.set("page", String(page));
+      p.set("page_size", String(PAGE_SIZE));
+      const res = await adminFetch(`/api/admin/signups?${p.toString()}`);
       if (res.status === 401) throw new Error("Unauthorized — enter ADMIN_SECRET when prompted");
       if (res.status === 503) throw new Error("Admin API disabled — set ADMIN_SECRET on the server");
-      if (!res.ok) throw new Error("Failed to load signups");
+      if (!res.ok) throw new Error("Failed to load emails");
       setData(await res.json());
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : "Failed to load");
     } finally {
       setLoading(false);
     }
-  }, [filter, query, sourceFilter]);
+  }, [params, page]);
 
   useEffect(() => {
     void load();
   }, [load]);
 
   const exportCsv = async () => {
-    const params = new URLSearchParams({ filter });
-    if (query) params.set("q", query);
-    if (sourceFilter) params.set("source", sourceFilter);
-    const res = await adminFetch(`/api/admin/signups/export?${params.toString()}`);
+    const res = await adminFetch(`/api/admin/signups/export?${params().toString()}`);
     if (!res.ok) return;
-    const blob = await res.blob();
-    const url = URL.createObjectURL(blob);
+    const url = URL.createObjectURL(await res.blob());
     const a = document.createElement("a");
     a.href = url;
-    a.download = `signups-${filter}.csv`;
+    a.download = `emails-${filter}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -117,14 +96,17 @@ export default function AdminSignupsPage() {
     }
   };
 
+  const summary = data?.summary;
+
   return (
-    <AdminPageShell title="Signup Dashboard">
+    <AdminPageShell title="Collected Emails">
       <div className="flex flex-wrap items-center gap-3">
         <UserPlus className="h-6 w-6 text-primary" />
         <div>
-          <h1 className="font-heading text-2xl tracking-wide sm:text-3xl">Signup Dashboard</h1>
+          <h1 className="font-heading text-2xl tracking-wide sm:text-3xl">Collected emails</h1>
           <p className="text-sm text-muted-foreground">
-            Founder-only view of accounts, leads, and hall members.
+            Every unique email from accounts, sign-in requests, opt-ins and capture forms (Postgres). Marketing
+            consent comes only from recorded opt-ins — Klaviyo sync status is shown separately and is not consent.
           </p>
         </div>
         <Button variant="outline" size="sm" className="ml-auto" onClick={() => void load()} disabled={loading}>
@@ -139,10 +121,10 @@ export default function AdminSignupsPage() {
             Admin home
           </Button>
         </Link>
-        <Link href="/admin/leads">
+        <Link href="/admin/users">
           <Button variant="outline" size="sm">
-            <Mail className="mr-1.5 h-4 w-4" />
-            Email leads
+            <Users className="mr-1.5 h-4 w-4" />
+            Registered users
           </Button>
         </Link>
         <Button variant="outline" size="sm" onClick={() => void exportCsv()}>
@@ -151,10 +133,31 @@ export default function AdminSignupsPage() {
         </Button>
       </div>
 
+      {summary ? (
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          {(
+            [
+              ["Unique emails", summary.total_unique_emails],
+              ["Registered users", summary.registered_users],
+              ["Marketing subscribers", summary.marketing_subscribers],
+              ["…of which registered", summary.registered_and_subscribed],
+              ["Other collected", summary.other_emails],
+              ["Unsubscribed", summary.unsubscribed],
+            ] as const
+          ).map(([label, value]) => (
+            <div key={label} className="rounded-lg border border-border/30 bg-muted/20 px-3 py-2">
+              <p className="text-[10px] uppercase tracking-wide text-muted-foreground">{label}</p>
+              <p className="text-lg font-semibold tabular-nums">{value}</p>
+            </div>
+          ))}
+        </div>
+      ) : null}
+
       <form
         className="flex flex-col gap-3 sm:flex-row"
         onSubmit={(e) => {
           e.preventDefault();
+          setPage(1);
           setQuery(searchInput.trim());
         }}
       >
@@ -163,7 +166,7 @@ export default function AdminSignupsPage() {
           <Input
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
-            placeholder="Search email, name, or hall…"
+            placeholder="Search email or name…"
             className="pl-9"
           />
         </div>
@@ -178,43 +181,42 @@ export default function AdminSignupsPage() {
             key={f.id}
             variant={filter === f.id ? "default" : "outline"}
             size="sm"
-            onClick={() => setFilter(f.id)}
+            onClick={() => {
+              setPage(1);
+              setFilter(f.id);
+            }}
           >
             {f.label}
           </Button>
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-          Signup source
-        </span>
-        {SOURCE_FILTERS.map((s) => (
-          <Button
-            key={s.id || "any"}
-            variant={sourceFilter === s.id ? "default" : "outline"}
-            size="sm"
-            onClick={() => setSourceFilter(s.id)}
-          >
-            {s.label}
-          </Button>
-        ))}
-      </div>
+      {data && data.sources_available.length > 0 ? (
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Source</span>
+          {["", ...data.sources_available].map((s) => (
+            <Button
+              key={s || "any"}
+              variant={sourceFilter === s ? "default" : "outline"}
+              size="sm"
+              onClick={() => {
+                setPage(1);
+                setSourceFilter(s);
+              }}
+            >
+              {s ? formatSource(s) : "Any source"}
+            </Button>
+          ))}
+        </div>
+      ) : null}
 
       {copyMsg ? <p className="text-sm text-muted-foreground">{copyMsg}</p> : null}
       {error ? <p className="text-sm text-destructive">{error}</p> : null}
 
-      {data ? (
-        <p className="text-sm text-muted-foreground">
-          Showing {data.signups.length} signups
-          {data.query ? ` matching “${data.query}”` : ""}
-        </p>
-      ) : null}
-
       {data?.magic_link_funnel ? (
         <div className="rounded-xl border border-border/40 bg-muted/20 p-4">
           <h2 className="font-heading text-lg tracking-wide">Magic link funnel (30 days)</h2>
-          <p className="text-xs text-muted-foreground mt-1 mb-4">
+          <p className="mb-4 mt-1 text-xs text-muted-foreground">
             Requested → sent → opened → completed. Completion rate uses sent as the denominator.
           </p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
@@ -239,94 +241,73 @@ export default function AdminSignupsPage() {
       ) : null}
 
       <div className="overflow-x-auto rounded-xl border border-border/40">
-        <table className="w-full min-w-[72rem] text-sm">
+        <table className="w-full min-w-[64rem] text-sm">
           <thead>
             <tr className="border-b border-border/40 bg-muted/30">
               <th className="p-3 text-left font-medium">Email</th>
+              <th className="p-3 text-left font-medium">Type</th>
               <th className="p-3 text-left font-medium">Name</th>
-              <th className="p-3 text-left font-medium">Signup date</th>
-              <th className="p-3 text-left font-medium">Source</th>
-              <th className="p-3 text-left font-medium">Account</th>
-              <th className="p-3 text-left font-medium">Last active</th>
-              <th className="p-3 text-left font-medium">Hall</th>
-              <th className="p-3 text-left font-medium">Shift</th>
-              <th className="p-3 text-left font-medium">Role</th>
-              <th className="p-3 text-left font-medium">Plan</th>
-              <th className="p-3 text-right font-medium">Meals</th>
-              <th className="p-3 text-right font-medium">Votes</th>
-              <th className="p-3 text-right font-medium">Saved</th>
-              <th className="p-3 text-left font-medium">Klaviyo</th>
+              <th className="p-3 text-left font-medium">First seen</th>
+              <th className="p-3 text-left font-medium">Last seen</th>
+              <th className="p-3 text-left font-medium">Sources</th>
+              <th className="p-3 text-left font-medium">Marketing consent</th>
+              <th className="p-3 text-left font-medium">Klaviyo sync</th>
               <th className="p-3 text-right font-medium">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {data?.signups.map((row) => (
-              <tr key={row.row_id} className="border-b border-border/20 hover:bg-muted/20">
+            {data?.emails.map((row) => (
+              <tr key={row.email} className="border-b border-border/20 hover:bg-muted/20">
                 <td className="p-3">
-                  <button
-                    type="button"
-                    className="text-left text-primary hover:underline"
-                    onClick={() => setSelected(row)}
-                  >
-                    {row.email}
-                  </button>
+                  {row.user_id ? (
+                    <Link href={`/admin/users/${row.user_id}`} className="text-primary hover:underline">
+                      {row.email}
+                    </Link>
+                  ) : (
+                    row.email
+                  )}
                 </td>
                 <td className="p-3">
-                  {row.name}
-                  {row.is_pilot_lead ? (
-                    <Badge variant="secondary" className="ml-2 text-[10px]">
-                      Pilot
-                    </Badge>
-                  ) : null}
+                  <Badge variant={row.category === "registered_user" ? "default" : "secondary"}>
+                    {CATEGORY_LABEL[row.category]}
+                  </Badge>
                 </td>
-                <td className="p-3 text-muted-foreground">{formatDate(row.signup_date)}</td>
+                <td className="p-3 text-muted-foreground">{row.name ?? "—"}</td>
+                <td className="p-3 text-muted-foreground">{formatAdminDate(row.first_seen)}</td>
+                <td className="p-3 text-muted-foreground">{formatAdminDate(row.last_seen)}</td>
                 <td className="p-3">
-                  <Badge variant="outline">{formatSource(row.signup_source)}</Badge>
-                </td>
-                <td className="p-3">
-                  {row.account_type === "registered" ? "Registered" : "Lead only"}
-                </td>
-                <td className="p-3 text-muted-foreground">{formatDate(row.last_active)}</td>
-                <td className="p-3 text-muted-foreground">
-                  {row.hall_linked ? row.hall_name ?? "Yes" : "—"}
-                </td>
-                <td className="p-3 text-muted-foreground">{row.shift ?? "—"}</td>
-                <td className="p-3 text-muted-foreground">{row.role ?? "—"}</td>
-                <td className="p-3">
-                  <Badge variant="outline">{row.plan}</Badge>
-                  {row.hall_pro_trial ? (
-                    <Badge variant="secondary" className="ml-1 text-[10px]">
-                      Trial
-                    </Badge>
-                  ) : null}
-                </td>
-                <td className="p-3 text-right tabular-nums">{row.meals_generated}</td>
-                <td className="p-3 text-right tabular-nums">{row.votes_created}</td>
-                <td className="p-3 text-right tabular-nums">{row.recipes_saved}</td>
-                <td className="p-3">{row.klaviyo_synced ? "Synced" : "—"}</td>
-                <td className="p-3">
-                  <div className="flex justify-end gap-1">
-                    <Button
-                      type="button"
-                      size="icon"
-                      variant="ghost"
-                      className="h-8 w-8"
-                      aria-label="Copy email"
-                      onClick={() => void copyEmail(row.email)}
-                    >
-                      <ClipboardCopy className="h-4 w-4" />
-                    </Button>
-                    <Button type="button" size="sm" variant="outline" onClick={() => setSelected(row)}>
-                      Open
-                    </Button>
+                  <div className="flex flex-wrap gap-1">
+                    {row.sources.map((s) => (
+                      <Badge key={s} variant="outline" className="text-[10px]">
+                        {formatSource(s)}
+                      </Badge>
+                    ))}
                   </div>
+                </td>
+                <td className="p-3" title={row.consent_captured_at ? `Opted in ${formatAdminDate(row.consent_captured_at)}` : undefined}>
+                  <ConsentBadge consent={row.consent} />
+                </td>
+                <td className="p-3">
+                  <KlaviyoSyncLabel status={row.klaviyo_sync} />
+                </td>
+                <td className="p-3 text-right">
+                  <Button
+                    type="button"
+                    size="icon"
+                    variant="ghost"
+                    className="h-8 w-8"
+                    aria-label={`Copy ${row.email}`}
+                    onClick={() => void copyEmail(row.email)}
+                  >
+                    <ClipboardCopy className="h-4 w-4" />
+                  </Button>
                 </td>
               </tr>
             ))}
-            {data?.signups.length === 0 ? (
+            {data?.emails.length === 0 ? (
               <tr>
-                <td colSpan={15} className="p-8 text-center text-muted-foreground">
-                  No signups match this filter
+                <td colSpan={9} className="p-8 text-center text-muted-foreground">
+                  No emails match this filter
                 </td>
               </tr>
             ) : null}
@@ -334,11 +315,9 @@ export default function AdminSignupsPage() {
         </table>
       </div>
 
-      <SignupDetailDrawer
-        row={selected}
-        onClose={() => setSelected(null)}
-        onUpdated={() => void load()}
-      />
+      {data ? <Pager page={data.page} pageSize={data.page_size} total={data.total} onPage={setPage} /> : null}
+
+      <ExternalContactsPanel />
     </AdminPageShell>
   );
 }

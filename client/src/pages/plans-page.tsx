@@ -20,6 +20,7 @@ import {
   type PlanBillingPeriod,
 } from "@/lib/plans-display";
 import { PRO_TRIAL_DAYS, type PlanCatalogEntry, type PlanId } from "@shared/billing/types";
+import { SUPPORT_EMAIL, supportMailto } from "@shared/support-contact";
 import { Skeleton } from "@/components/ui/skeleton";
 
 // Customer-facing comparison is TWO choices: Free vs Firehall Meals Pro.
@@ -219,6 +220,15 @@ export default function PlansPage() {
         title: "You're set on the Free plan",
         description: result.body?.message ?? "No charge — free forever.",
       });
+    } catch (err) {
+      const raw = err instanceof Error ? err.message.replace(/^\d{3}:\s*/, "") : "";
+      let description = "Please try again.";
+      try {
+        description = (JSON.parse(raw) as { message?: string }).message ?? description;
+      } catch {
+        /* non-JSON error body */
+      }
+      toast({ title: "Could not switch plans", description, variant: "destructive" });
     } finally {
       setSelecting(null);
     }
@@ -290,6 +300,10 @@ export default function PlansPage() {
           <Link href="/terms" className="text-primary hover:underline">
             Terms of Service
           </Link>
+          . Billing questions? Email{" "}
+          <a href={supportMailto("Firehall Meals Pro billing")} className="text-primary hover:underline">
+            {SUPPORT_EMAIL}
+          </a>
           .
         </p>
       </div>

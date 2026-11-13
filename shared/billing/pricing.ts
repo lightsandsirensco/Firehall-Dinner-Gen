@@ -9,7 +9,7 @@
  * renews at the standard annual price with no app-side billing logic.
  */
 
-export const PRO_MONTHLY_PRICE_CENTS = 599;
+export const PRO_MONTHLY_PRICE_CENTS = 499;
 export const PRO_ANNUAL_PRICE_CENTS = 3999;
 export const FOUNDING_ANNUAL_DISCOUNT_CENTS = 1000;
 export const FOUNDING_FIRST_YEAR_PRICE_CENTS = PRO_ANNUAL_PRICE_CENTS - FOUNDING_ANNUAL_DISCOUNT_CENTS;

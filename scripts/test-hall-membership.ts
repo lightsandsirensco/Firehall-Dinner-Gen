@@ -2,6 +2,7 @@
 /**
  * Validates hall membership store — roles, invites, permissions, join flows.
  */
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -62,8 +63,8 @@ async function main(): Promise<void> {
   assert.equal(hallRoleHasPermission("canteen_manager", "manage_shopping_lists"), true);
   assert.equal(hallRoleHasPermission("canteen_manager", "manage_members"), false);
 
-  const captain = upsertEmailUser("captain@firehall.test").user;
-  const member = upsertEmailUser("member@firehall.test").user;
+  const captain = (await upsertEmailUser("captain@firehall.test")).user;
+  const member = (await upsertEmailUser("member@firehall.test")).user;
 
   const detail = createHall(captain.user_id, {
     hall_name: "Engine 12",
@@ -93,7 +94,7 @@ async function main(): Promise<void> {
   const codeInvite = createHallInvite(detail.hall.hall_id, captain.user_id, "code");
   assert.ok(codeInvite?.invite_code);
 
-  const recruit = upsertEmailUser("recruit@firehall.test").user;
+  const recruit = (await upsertEmailUser("recruit@firehall.test")).user;
   const joinInvite = joinHall(recruit.user_id, { invite_token: linkInvite!.invite_token! });
   assert.equal(joinInvite.ok, true);
 

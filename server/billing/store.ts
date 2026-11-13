@@ -1,6 +1,6 @@
 import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
 import { verifyPgConnection } from "../db/pg-client.js";
-import { pgAll, pgOne, pgRun } from "../db/pg-sql.js";
+import { pgAll, pgOne, pgRun, pgTx } from "../db/pg-sql.js";
 
 import { getStripeConfigStatus } from "./stripe-client.js";
 import { syncKlaviyoProfileForUser } from "../marketing-consent/klaviyo-sync.js";
@@ -162,6 +162,7 @@ function rowToUserSubscription(row: Record<string, unknown>, planIdOverride?: Pl
     expires_at: isoOrNull(row.expires_at),
     cancel_at_period_end: row.stripe_subscription_id ? Number(row.cancel_at_period_end) === 1 : undefined,
     current_period_end: row.stripe_subscription_id ? isoOrNull(row.current_period_end) : undefined,
+    past_due_since: row.stripe_subscription_id ? isoOrNull(row.past_due_since) : undefined,
   };
 }
 
@@ -283,12 +284,19 @@ export async function upsertStripeSubscription(params: {
     await pgRun(
       `INSERT INTO user_subscriptions (
          user_id, plan_id, status, source, stripe_customer_id, stripe_subscription_id,
-         stripe_price_id, cancel_at_period_end, current_period_end, selected_at, updated_at
+         stripe_price_id, cancel_at_period_end, current_period_end, past_due_since, selected_at, updated_at
        )
-       VALUES ($1, 'firefighter_plus', $2, 'stripe', $3, $4, $5, $6, $7, now(), now())
+       VALUES ($1, 'firefighter_plus', $2, 'stripe', $3, $4, $5, $6, $7,
+               CASE WHEN $2::text = 'past_due' THEN now() END, now(), now())
        ON CONFLICT (user_id) DO UPDATE SET
          plan_id = 'firefighter_plus',
          status = excluded.status,
+         past_due_since = CASE
+           WHEN excluded.status <> 'past_due' THEN NULL
+           WHEN user_subscriptions.status = 'past_due' AND user_subscriptions.source = 'stripe'
+             THEN COALESCE(user_subscriptions.past_due_since, now())
+           ELSE now()
+         END,
          source = 'stripe',
          stripe_customer_id = excluded.stripe_customer_id,
          stripe_subscription_id = excluded.stripe_subscription_id,
@@ -322,7 +330,7 @@ export async function markStripeSubscriptionCancelledBySubscriptionId(
   if (!userId) return null;
   await pgRun(
     `UPDATE user_subscriptions
-     SET status = 'cancelled', cancel_at_period_end = 0, updated_at = now()
+     SET status = 'cancelled', cancel_at_period_end = 0, past_due_since = NULL, updated_at = now()
      WHERE stripe_subscription_id = $1`,
     [stripeSubscriptionId],
   );
@@ -427,17 +435,12 @@ export async function resolveUserBilling(
       manage_billing_available: false,
       pro_trial: null,
       pro_trial_eligible: false,
-      founding_offer_eligible: await getGlobalFlag("founding_offer_enabled", false),
+      founding_offer_eligible: false,
     };
   }
 
   const now = new Date();
-  const [sub, trial, foundingEnabled, hadPaid] = await Promise.all([
-    getUserSubscription(userId),
-    pgProTrialRepo.get(userId),
-    getGlobalFlag("founding_offer_enabled", false),
-    userHasHadPaidSubscription(userId),
-  ]);
+  const [sub, trial] = await Promise.all([getUserSubscription(userId), pgProTrialRepo.get(userId)]);
   // A Stripe subscription in its `past_due` dunning grace period still grants
   // access — only a fully lapsed/cancelled subscription falls back to free.
   // Non-Stripe grants additionally end at `expires_at`. An active reverse
@@ -463,7 +466,8 @@ export async function resolveUserBilling(
     manage_billing_available: sub?.source === "stripe" && (await userHasStripeCustomer(userId)),
     pro_trial: proTrialState(trial, now),
     pro_trial_eligible: proTrialEligibility({ record: trial, subscription: sub, now }).eligible,
-    founding_offer_eligible: foundingEnabled && !hadPaid,
+    // No founding coupon at launch — checkout never applies one (billing/routes.ts).
+    founding_offer_eligible: false,
   };
 }
 
@@ -520,6 +524,27 @@ export function userHasHallProFeature(
   return listUserHallProHallIds(userId).includes(hallId);
 }
 
+/** Hall Pro has no checkout; member-initiated trials/enables stay off until it does. */
+export const HALL_PRO_SELF_SERVICE_ENABLED = false;
+
+/**
+ * A live Stripe or admin-granted subscription. Self-selecting Free must never
+ * overwrite it — Stripe would keep billing while the app showed Free.
+ * Cancelling goes through the Stripe portal (or an admin) instead.
+ */
+export async function hasManagedPaidSubscription(userId: string): Promise<boolean> {
+  const row = await pgOne<{ source: string; status: string; plan_id: string }>(
+    `SELECT source, status, plan_id FROM user_subscriptions WHERE user_id = $1`,
+    [userId],
+  );
+  return Boolean(
+    row &&
+      row.plan_id !== "personal" &&
+      (row.source === "stripe" || row.source === "admin_grant") &&
+      ["active", "trialing", "past_due"].includes(row.status),
+  );
+}
+
 export async function selectUserPlan(userId: string, planId: PlanId): Promise<UserBillingState | null> {
   // Self-select is limited to the free plan. firefighter_plus has no
   // self-service payment path here — granted only via Stripe webhook or
@@ -527,6 +552,7 @@ export async function selectUserPlan(userId: string, planId: PlanId): Promise<Us
   if (planId !== "personal") return null;
   if (!(await isPlanEnabled(planId))) return null;
   if (!(await getGlobalFlag("monetization_enabled", true))) return null;
+  if (await hasManagedPaidSubscription(userId)) return null;
 
   await pgRun(
     `INSERT INTO user_subscriptions (user_id, plan_id, status, source, selected_at, updated_at)
@@ -675,6 +701,149 @@ export async function adminSetUserPlan(
   await pgRun(`UPDATE users SET hall_pro_enabled = 0 WHERE user_id = $1`, [userId]);
 
   return resolveUserBilling(userId);
+}
+
+export const ADMIN_PREMIUM_GRANT_MAX_DAYS = 90;
+
+export class AdminPremiumGrantError extends Error {
+  constructor(
+    message: string,
+    readonly status: number,
+  ) {
+    super(message);
+    this.name = "AdminPremiumGrantError";
+  }
+}
+
+export interface AdminPremiumGrantLogEntry {
+  id: number;
+  user_id: string;
+  action: "grant" | "revoke";
+  plan_id: string;
+  expires_at: string | null;
+  reason: string | null;
+  actor: string;
+  actor_ip: string | null;
+  previous_json: string | null;
+  created_at: string;
+}
+
+interface AdminPremiumAuditInput {
+  userId: string;
+  reason: string;
+  actor: string;
+  actorIp: string | null;
+}
+
+/**
+ * Temporary firefighter_plus access for an existing account. Always time-boxed
+ * (expires_at enforced by subscriptionIsEntitled — no job needed to end it) and
+ * always audited, with the replaced user_subscriptions row kept in the log.
+ */
+export async function adminGrantTemporaryPremium(
+  input: AdminPremiumAuditInput & { expiresAt: Date },
+  now: Date = new Date(),
+): Promise<UserBillingState> {
+  const maxMs = now.getTime() + ADMIN_PREMIUM_GRANT_MAX_DAYS * 24 * 60 * 60 * 1000;
+  if (Number.isNaN(input.expiresAt.getTime()) || input.expiresAt.getTime() <= now.getTime()) {
+    throw new AdminPremiumGrantError("expires_at must be a future date", 400);
+  }
+  if (input.expiresAt.getTime() > maxMs) {
+    throw new AdminPremiumGrantError(`expires_at must be within ${ADMIN_PREMIUM_GRANT_MAX_DAYS} days`, 400);
+  }
+
+  await pgTx(async (tx) => {
+    const user = await tx.one(`SELECT user_id FROM users WHERE user_id = $1`, [input.userId]);
+    if (!user) throw new AdminPremiumGrantError("User not found", 404);
+
+    const previous = await tx.one<{ source: string; status: string }>(
+      `SELECT * FROM user_subscriptions WHERE user_id = $1 FOR UPDATE`,
+      [input.userId],
+    );
+    if (previous?.source === "stripe" && previous.status !== "cancelled") {
+      throw new AdminPremiumGrantError(
+        `This user has a live Stripe subscription (status: ${previous.status}) — they already have Premium. ` +
+          `A grant would hide their "Manage billing" link without cancelling the subscription.`,
+        409,
+      );
+    }
+
+    await tx.run(
+      `INSERT INTO user_subscriptions (user_id, plan_id, status, source, expires_at, updated_at)
+       VALUES ($1, 'firefighter_plus', 'active', 'admin_grant', $2, now())
+       ON CONFLICT (user_id) DO UPDATE SET
+         plan_id = 'firefighter_plus',
+         status = 'active',
+         source = 'admin_grant',
+         expires_at = excluded.expires_at,
+         updated_at = now()`,
+      [input.userId, input.expiresAt.toISOString()],
+    );
+    await tx.run(
+      `INSERT INTO admin_premium_grant_log (user_id, action, plan_id, expires_at, reason, actor, actor_ip, previous_json)
+       VALUES ($1, 'grant', 'firefighter_plus', $2, $3, $4, $5, $6)`,
+      [
+        input.userId,
+        input.expiresAt.toISOString(),
+        input.reason,
+        input.actor,
+        input.actorIp,
+        previous ? JSON.stringify(previous) : null,
+      ],
+    );
+  });
+
+  return resolveUserBilling(input.userId);
+}
+
+/** Ends an admin grant immediately (expires_at = now). Never touches Stripe-sourced rows. */
+export async function adminRevokeTemporaryPremium(input: AdminPremiumAuditInput): Promise<UserBillingState> {
+  await pgTx(async (tx) => {
+    const current = await tx.one<{ source: string; status: SubscriptionStatus; expires_at: unknown }>(
+      `SELECT * FROM user_subscriptions WHERE user_id = $1 FOR UPDATE`,
+      [input.userId],
+    );
+    if (
+      !current ||
+      current.source !== "admin_grant" ||
+      !subscriptionIsEntitled({ ...current, source: "admin_grant", expires_at: isoOrNull(current.expires_at) })
+    ) {
+      throw new AdminPremiumGrantError("This user has no active admin Premium grant to revoke", 404);
+    }
+    await tx.run(
+      `UPDATE user_subscriptions SET expires_at = now(), updated_at = now() WHERE user_id = $1`,
+      [input.userId],
+    );
+    await tx.run(
+      `INSERT INTO admin_premium_grant_log (user_id, action, plan_id, expires_at, reason, actor, actor_ip, previous_json)
+       VALUES ($1, 'revoke', 'firefighter_plus', now(), $2, $3, $4, $5)`,
+      [input.userId, input.reason, input.actor, input.actorIp, JSON.stringify(current)],
+    );
+  });
+
+  return resolveUserBilling(input.userId);
+}
+
+export async function listAdminPremiumGrantLog(userId?: string, limit = 200): Promise<AdminPremiumGrantLogEntry[]> {
+  const rows = await pgAll<Record<string, unknown>>(
+    `SELECT * FROM admin_premium_grant_log
+     WHERE ($1::text IS NULL OR user_id = $1)
+     ORDER BY created_at DESC, id DESC
+     LIMIT $2`,
+    [userId ?? null, limit],
+  );
+  return rows.map((row) => ({
+    id: Number(row.id),
+    user_id: String(row.user_id),
+    action: row.action as "grant" | "revoke",
+    plan_id: String(row.plan_id),
+    expires_at: isoOrNull(row.expires_at),
+    reason: (row.reason as string | null) ?? null,
+    actor: String(row.actor),
+    actor_ip: (row.actor_ip as string | null) ?? null,
+    previous_json: (row.previous_json as string | null) ?? null,
+    created_at: isoOrNull(row.created_at) ?? "",
+  }));
 }
 
 export async function adminTogglePlanFeature(

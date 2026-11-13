@@ -69,11 +69,18 @@ async function applyMigration(migration: MigrationFile): Promise<void> {
   }
 }
 
-/** Run pending Postgres migrations. Safe to call repeatedly (no-op once caught up). */
-export async function runPgMigrations(): Promise<{ applied: number; current: number }> {
+/**
+ * Run pending Postgres migrations. Safe to call repeatedly (no-op once caught up).
+ * `toVersion` stops after that version, leaving later files pending.
+ */
+export async function runPgMigrations(
+  options: { toVersion?: number } = {},
+): Promise<{ applied: number; current: number }> {
   await ensureMigrationsTable();
   const applied = await getAppliedVersions();
-  const pending = listMigrationFiles().filter((m) => !applied.has(m.version));
+  const pending = listMigrationFiles().filter(
+    (m) => !applied.has(m.version) && (options.toVersion === undefined || m.version <= options.toVersion),
+  );
 
   for (const migration of pending) {
     console.log(`[pg-migrate] Applying ${migration.version}_${migration.name}`);

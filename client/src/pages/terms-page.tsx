@@ -15,7 +15,7 @@ const SUPPORT_MAILTO = "mailto:support@firehallmeals.com?subject=Terms%20questio
 // Legal/business-notice contact — used only where a notice address would
 // otherwise go (no public business mailing address is published yet).
 // General product/billing/privacy support still goes to SUPPORT_MAILTO above.
-const LEGAL_NOTICE_MAILTO = "mailto:lightsandsirensco@gmail.com?subject=Firehall%20Meals%20legal%20notice";
+const LEGAL_NOTICE_MAILTO = "mailto:support@firehallmeals.com?subject=Firehall%20Meals%20legal%20notice";
 
 function Section({
   id,
@@ -96,7 +96,7 @@ export default function TermsPage() {
               the company behind the <LightsAndSirensLink variant="plain" /> brand. We haven't published a public
               business mailing address at this time; for legal or business notices, contact{" "}
               <a href={LEGAL_NOTICE_MAILTO} className="text-primary hover:underline">
-                lightsandsirensco@gmail.com
+                support@firehallmeals.com
               </a>
               .
             </p>
@@ -146,14 +146,13 @@ export default function TermsPage() {
           <Section id="pro-subscription" title="5. Firehall Meals Pro subscriptions">
             <p>Firehall Meals Pro is a paid, recurring subscription with two billing options:</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>$5.99 USD per month, billed monthly.</li>
-              <li>$39.99 USD per year, billed annually.</li>
+              <li>$4.99 USD per month, billed monthly, plus applicable sales tax.</li>
+              <li>$39.99 USD per year, billed annually, plus applicable sales tax.</li>
             </ul>
             <p>
-              Founding offer: while offered, an account's first annual subscription is $29.99 USD
-              for the first year only. It then renews at the standard $39.99 USD per year unless
-              cancelled. The founding offer is not available on monthly billing or to accounts
-              that have already had a paid subscription.
+              Prices do not include sales tax, VAT, or GST. Any applicable tax is calculated from
+              your location and shown at checkout before you pay, and is charged again on each
+              renewal.
             </p>
             <p>
               Each account may use one 14-day free trial of Firehall Meals Pro. No payment card is

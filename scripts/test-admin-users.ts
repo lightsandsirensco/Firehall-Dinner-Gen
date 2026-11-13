@@ -1,33 +1,20 @@
 #!/usr/bin/env tsx
 /**
- * Validates admin users + email leads CRM store.
+ * Legacy SQLite admin pieces still served by /api/admin/leads and the founder
+ * leads view. Accounts are Postgres-only now, so the SQLite users table is
+ * empty: notes/pilot flags must refuse (route returns 409) instead of writing
+ * orphan rows, and user detail falls back to Postgres. The Postgres-backed
+ * /admin/users and /admin/signups are covered by test-admin-email-directory.ts.
  */
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { openSqliteDatabase, releaseSqliteTimersForTests } from "../server/sqlite.js";
-import { bindAuthDb, upsertEmailUser } from "../server/auth/auth-store.js";
-import { bindHallMembershipDb, createHall } from "../server/hall-membership/store.js";
-import { bindBillingDb } from "../server/billing/store.js";
-import {
-  bindAdminUsersDb,
-  getAdminUserDetail,
-  listAdminSignups,
-  listAdminUsers,
-  updateAdminUserMeta,
-} from "../server/admin-users/store.js";
-import {
-  bindAdminLeadsDb,
-  listEmailLeads,
-  recordEmailLead,
-  syncAllLeadConversions,
-} from "../server/admin-users/leads-store.js";
-import {
-  bindFounderLeadsDb,
-  exportFounderLeadsCsv,
-  listFounderLeads,
-} from "../server/admin-users/founder-leads.js";
+import { bindHallMembershipDb } from "../server/hall-membership/store.js";
+import { bindAdminUsersDb, getAdminUserDetail, updateAdminUserMeta } from "../server/admin-users/store.js";
+import { bindAdminLeadsDb, listEmailLeads, recordEmailLead } from "../server/admin-users/leads-store.js";
+import { bindFounderLeadsDb, exportFounderLeadsCsv, listFounderLeads } from "../server/admin-users/founder-leads.js";
 
 const MIGRATIONS = [
   "014_user_accounts.sql",
@@ -40,78 +27,48 @@ const MIGRATIONS = [
   "025_admin_users_leads.sql",
   "039_founder_leads_meta.sql",
   "043_email_marketing_consent.sql",
-].map((name) =>
-  fs.readFileSync(path.join(process.cwd(), "server", "db", "migrations", name), "utf8"),
-);
+].map((name) => fs.readFileSync(path.join(process.cwd(), "server", "db", "migrations", name), "utf8"));
 
 const tmpDb = path.join(os.tmpdir(), `fh-admin-users-${Date.now()}.db`);
 
 async function main(): Promise<void> {
   const db = await openSqliteDatabase(tmpDb);
   for (const sql of MIGRATIONS) db.exec(sql);
-  bindAuthDb(db);
   bindHallMembershipDb(db);
-  bindBillingDb(db);
   bindAdminUsersDb(db);
   bindAdminLeadsDb(db);
   bindFounderLeadsDb(db);
 
   recordEmailLead({ email: "lead@firehall.test", source: "homepage", klaviyo_synced: true });
-  recordEmailLead({ email: "lead@firehall.test", source: "generator" });
-
-  const user = upsertEmailUser("lead@firehall.test").user;
-  syncAllLeadConversions();
+  recordEmailLead({ email: "LEAD@firehall.test", source: "generator" });
+  recordEmailLead({ email: "other@firehall.test", source: "shopping_list" });
 
   const leads = listEmailLeads("all", 50);
-  assert.ok(leads.length >= 2);
-  const converted = leads.find((l) => l.email === "lead@firehall.test" && l.source === "homepage");
-  assert.ok(converted?.converted_to_user);
-  assert.equal(converted?.converted_user_id, user.user_id);
+  assert.equal(leads.filter((l) => l.email === "lead@firehall.test").length, 2, "one lead row per source");
+  assert.ok(leads.every((l) => !l.converted_to_user), "no SQLite users, so nothing converts");
+  assert.equal(listEmailLeads("homepage", 50).length, 1);
 
   const founder = listFounderLeads({ q: "lead@firehall.test" });
-  assert.equal(founder.total, 1, "duplicate emails should merge into one founder lead");
-  assert.ok(founder.leads[0]?.account_created);
+  assert.equal(founder.total, 1, "duplicate emails merge into one founder lead");
   assert.ok(founder.leads[0]?.sources.includes("homepage"));
   assert.ok(founder.leads[0]?.sources.includes("generator"));
-  assert.ok(founder.analytics.total_emails >= 1);
-  assert.ok(exportFounderLeadsCsv().includes("lead@firehall.test"));
+  assert.equal(founder.leads[0]?.account_created, false);
+  assert.equal(listFounderLeads({}).total, 2);
+  const csv = exportFounderLeadsCsv();
+  assert.ok(csv.includes("lead@firehall.test") && csv.includes("other@firehall.test"));
 
-  const captain = upsertEmailUser("captain@firehall.test").user;
-  createHall(captain.user_id, {
-    hall_name: "Station 7",
-    station_number: "7",
-    department: "City",
-    crew_size: 6,
-    shift_names: ["A"],
-    appliances: ["stove"],
-  });
-
-  const allUsers = listAdminUsers("all", 100);
-  assert.ok(allUsers.users.some((u) => u.user_id === captain.user_id));
-  assert.ok(allUsers.users.some((u) => u.user_id === user.user_id));
-
-  updateAdminUserMeta(user.user_id, { internal_notes: "Pilot contact", is_pilot_lead: true });
-  const detail = getAdminUserDetail(user.user_id);
-  assert.ok(detail);
-  assert.equal(detail.internal_notes, "Pilot contact");
-  assert.equal(detail.is_pilot_lead, true);
-  assert.ok(detail.klaviyo.on_list);
-
-  const pilotUsers = listAdminUsers("pilot_leads", 100);
-  assert.ok(pilotUsers.users.some((u) => u.user_id === user.user_id));
-
-  const allSignups = listAdminSignups("all", { limit: 100 });
-  assert.ok(allSignups.signups.some((s) => s.email === "captain@firehall.test"));
-  assert.ok(allSignups.signups.some((s) => s.email === "lead@firehall.test"));
-
-  const registeredOnly = listAdminSignups("registered_users", { limit: 100 });
-  assert.ok(registeredOnly.signups.every((s) => s.account_type === "registered"));
-
-  const joinedHall = listAdminSignups("joined_hall", { limit: 100 });
-  assert.ok(joinedHall.signups.some((s) => s.email === "captain@firehall.test"));
-
-  const searchByHall = listAdminSignups("all", { q: "Station 7", limit: 100 });
-  assert.ok(searchByHall.signups.some((s) => s.hall_name === "Station 7"));
+  const postgresOnlyUser = "u_postgres_only";
+  assert.throws(
+    () => updateAdminUserMeta(postgresOnlyUser, { internal_notes: "note", is_pilot_lead: true }),
+    /User not found/,
+    "notes/pilot flags refuse accounts missing from SQLite",
+  );
+  assert.equal(
+    (db.prepare(`SELECT count(*) AS n FROM admin_user_meta`).get() as { n: number }).n,
+    0,
+    "no orphan admin_user_meta row is written",
+  );
+  assert.equal(getAdminUserDetail(postgresOnlyUser), null, "detail falls back to Postgres for such accounts");
 
   console.log("[test-admin-users] OK");
   releaseSqliteTimersForTests();

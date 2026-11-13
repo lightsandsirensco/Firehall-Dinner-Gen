@@ -24,6 +24,7 @@
  *
  *   npx tsx scripts/test-google-signin.ts
  */
+import { testPg } from "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -31,7 +32,6 @@ import path from "node:path";
 
 import { openSqliteDatabase, releaseSqliteTimersForTests, type SqliteDatabase } from "../server/sqlite.js";
 import {
-  bindAuthDb,
   createAuthSession,
   deleteUserAccount,
   findUserIdByIdentity,
@@ -50,15 +50,15 @@ import {
 import { verifyGoogleIdToken } from "../server/auth/oauth-verify.js";
 import { requireCsrf } from "../server/csrf.js";
 import { requireAuth, type AuthedRequest } from "../server/auth/auth-middleware.js";
-import { bindHallMembershipDb } from "../server/hall-membership/store.js";
+import { initHallMembershipStore } from "../server/hall-membership/store.js";
 import {
-  bindBillingDb,
+  initBillingStore,
   getUserSubscription,
   linkStripeCustomer,
   upsertStripeSubscription,
 } from "../server/billing/store.js";
 import { ensureStripeSubscriptionCancelledForDeletion } from "../server/billing/account-deletion-guard.js";
-import { bindMealHistoryDb, recordMealCookedForUser, listMealHistoryForUser } from "../server/meal-history/store.js";
+import { recordMealCookedForUser, listMealHistoryForUser } from "../server/meal-history/store.js";
 import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
 
 // Full 014-048 chain (matches scripts/test-privacy-consent.ts) so every
@@ -207,115 +207,106 @@ async function main(): Promise<void> {
   }
 
   // Fresh DB for all remaining sections — real production migration order.
-  const tmpDb2 = path.join(os.tmpdir(), `fh-google-signin-2-${Date.now()}.db`);
-  const db2 = await openSqliteDatabase(tmpDb2);
-  for (const sql of MIGRATIONS) db2.exec(sql);
-  db2.exec(`PRAGMA foreign_keys=OFF;`);
-  db2.exec(MIGRATION_048);
-  bindAuthDb(db2);
-  bindHallMembershipDb(db2);
-  bindBillingDb(db2);
-  bindMealHistoryDb(db2);
+  await initHallMembershipStore();
+  await initBillingStore();
+  const pgCount = async (text: string, params: unknown[] = []) =>
+    Number(((await testPg.query(text, params)).rows[0] as { c: number | string }).c);
 
   console.log("[test-google-signin] 2. NEW GOOGLE USER");
   let newGoogleUserId = "";
   {
-    const result = resolveOAuthSignIn({
+    const result = (await resolveOAuthSignIn({
       provider: "google",
       subject: "google-sub-new-1",
       email: "newgoogle@test.com",
       firstName: "Sam",
       lastName: "Firefighter",
-    });
+    }));
     check("new google user: signed in", result.kind === "signed_in");
     if (result.kind === "signed_in") {
       check("new google user: isNew = true", result.isNew === true);
       newGoogleUserId = result.user.user_id;
-      const userCount = (db2.prepare(`SELECT COUNT(*) AS c FROM users WHERE email = 'newgoogle@test.com'`).get() as { c: number }).c;
+      const userCount = (await pgCount(`SELECT COUNT(*) AS c FROM users WHERE email = 'newgoogle@test.com'`));
       check("new google user: exactly one user row created", userCount === 1);
       check(
         "new google user: identity row created and resolves to the same user_id",
-        findUserIdByIdentity("google", "google-sub-new-1") === newGoogleUserId,
+        (await findUserIdByIdentity("google", "google-sub-new-1")) === newGoogleUserId,
       );
-      const me = getAuthMe(newGoogleUserId);
+      const me = (await getAuthMe(newGoogleUserId));
       check("new google user: session-eligible profile created", me.authenticated === true && me.profile?.first_name === "Sam");
     }
   }
 
   console.log("[test-google-signin] 3. RETURNING GOOGLE USER");
   {
-    const result = resolveOAuthSignIn({
+    const result = (await resolveOAuthSignIn({
       provider: "google",
       subject: "google-sub-new-1",
       email: "newgoogle@test.com",
       firstName: "Sam",
       lastName: "Firefighter",
-    });
+    }));
     check("returning google user: signed in", result.kind === "signed_in");
     if (result.kind === "signed_in") {
       check("returning google user: isNew = false", result.isNew === false);
       check("returning google user: same user_id as before", result.user.user_id === newGoogleUserId);
-      const userCount = (db2.prepare(`SELECT COUNT(*) AS c FROM users WHERE email = 'newgoogle@test.com'`).get() as { c: number }).c;
+      const userCount = (await pgCount(`SELECT COUNT(*) AS c FROM users WHERE email = 'newgoogle@test.com'`));
       check("returning google user: still exactly one user row (no duplicate)", userCount === 1);
     }
   }
 
   console.log("[test-google-signin] 4. EXISTING EMAIL ACCOUNT COLLISION");
   {
-    const { user: emailUser } = upsertEmailUser("collide@test.com");
-    const result = resolveOAuthSignIn({
+    const { user: emailUser } = (await upsertEmailUser("collide@test.com"));
+    const result = (await resolveOAuthSignIn({
       provider: "google",
       subject: "google-sub-collide-1",
       email: "collide@test.com",
-    });
+    }));
     check("email collision: deliberate conflict returned, not a sign-in", result.kind === "email_collision");
     if (result.kind === "email_collision") {
       check("email collision: existingEmail surfaced", result.existingEmail === "collide@test.com");
     }
-    const userCount = (db2.prepare(`SELECT COUNT(*) AS c FROM users WHERE email = 'collide@test.com'`).get() as { c: number }).c;
+    const userCount = (await pgCount(`SELECT COUNT(*) AS c FROM users WHERE email = 'collide@test.com'`));
     check("email collision: no duplicate user created", userCount === 1);
     check(
       "email collision: the Google subject is NOT linked to anyone",
-      findUserIdByIdentity("google", "google-sub-collide-1") === null,
+      (await findUserIdByIdentity("google", "google-sub-collide-1")) === null,
     );
-    const stillEmailOwned = findUserIdByIdentity("email", "collide@test.com");
+    const stillEmailOwned = (await findUserIdByIdentity("email", "collide@test.com"));
     check("email collision: original account ownership unchanged", stillEmailOwned === emailUser.user_id);
   }
 
   console.log("[test-google-signin] 5. AUTHENTICATED LINK (Connect Google)");
   let linkUserId = "";
   {
-    const { user } = upsertEmailUser("linkme@test.com");
+    const { user } = (await upsertEmailUser("linkme@test.com"));
     linkUserId = user.user_id;
-    assert.doesNotThrow(() => linkIdentity(linkUserId, "google", "google-sub-link-1", "linkme@test.com"));
+    await assert.doesNotReject(() => linkIdentity(linkUserId, "google", "google-sub-link-1", "linkme@test.com"));
     check(
       "connect google: identity resolves to the SAME user_id, not a new one",
-      findUserIdByIdentity("google", "google-sub-link-1") === linkUserId,
+      (await findUserIdByIdentity("google", "google-sub-link-1")) === linkUserId,
     );
-    const providers = listLinkedIdentityProviders(linkUserId);
+    const providers = (await listLinkedIdentityProviders(linkUserId));
     check("connect google: account now shows both email and google linked", providers.includes("email") && providers.includes("google"));
 
     // Idempotent re-link (e.g. double-click, or signing in again with the same Google account).
-    assert.doesNotThrow(() => linkIdentity(linkUserId, "google", "google-sub-link-1", "linkme@test.com"));
-    const rowCount = (
-      db2
-        .prepare(`SELECT COUNT(*) AS c FROM auth_identities WHERE provider = 'google' AND provider_subject = 'google-sub-link-1'`)
-        .get() as { c: number }
-    ).c;
+    await assert.doesNotReject(() => linkIdentity(linkUserId, "google", "google-sub-link-1", "linkme@test.com"));
+    const rowCount = (await pgCount(`SELECT COUNT(*) AS c FROM auth_identities WHERE provider = 'google' AND provider_subject = 'google-sub-link-1'`));
     check("connect google: re-linking the same identity is idempotent (no duplicate row)", rowCount === 1);
 
     // Ownership conflict — a DIFFERENT user cannot claim an already-linked Google subject.
-    const { user: otherUser } = upsertEmailUser("otherlinker@test.com");
+    const { user: otherUser } = (await upsertEmailUser("otherlinker@test.com"));
     let threw = false;
     try {
-      linkIdentity(otherUser.user_id, "google", "google-sub-link-1", "otherlinker@test.com");
+      await linkIdentity(otherUser.user_id, "google", "google-sub-link-1", "otherlinker@test.com");
     } catch (err) {
       threw = err instanceof IdentityOwnershipConflictError;
     }
     check("connect google: linking an already-owned Google subject to a different user throws a conflict", threw);
     check(
       "connect google: ownership was NOT reassigned by the failed attempt",
-      findUserIdByIdentity("google", "google-sub-link-1") === linkUserId,
+      (await findUserIdByIdentity("google", "google-sub-link-1")) === linkUserId,
     );
   }
 
@@ -327,11 +318,9 @@ async function main(): Promise<void> {
       // an already-claimed (provider, subject) pair under a different
       // user_id. The PRIMARY KEY (provider, provider_subject) must reject
       // this at the database layer, independent of any application code.
-      db2
-        .prepare(
-          `INSERT INTO auth_identities (provider, provider_subject, user_id) VALUES ('google', 'google-sub-link-1', 'some-other-user-id')`,
-        )
-        .run();
+      await testPg.query(
+        `INSERT INTO auth_identities (provider, provider_subject, user_id) VALUES ('google', 'google-sub-link-1', 'some-other-user-id')`,
+      );
     } catch {
       threw = true;
     }
@@ -340,19 +329,19 @@ async function main(): Promise<void> {
 
   console.log("[test-google-signin] 7. DATA PRESERVATION on Connect Google");
   {
-    const { user } = upsertEmailUser("preserveme@test.com");
+    const { user } = (await upsertEmailUser("preserveme@test.com"));
     const userId = user.user_id;
-    updateUserProfile(userId, {
+    (await updateUserProfile(userId, {
       first_name: "Preserve",
       crew_size: 5,
       preferred_proteins: ["chicken"],
       excluded_ingredients: [],
-    });
-    syncSavedRecipes(userId, [{ recipe_key: "test:preserve", recipe_json: { title: "Keep Me" }, saved_at: new Date().toISOString() }]);
+    }));
+    await syncSavedRecipes(userId, [{ recipe_key: "test:preserve", recipe_json: { title: "Keep Me" }, saved_at: new Date().toISOString() }]);
     const slug = GOLDEN_100_RECIPES[0]!.slug;
-    recordMealCookedForUser(userId, slug);
-    linkStripeCustomer(userId, "cus_preserve_1");
-    upsertStripeSubscription({
+    await recordMealCookedForUser(userId, slug);
+    await linkStripeCustomer(userId, "cus_preserve_1");
+    (await upsertStripeSubscription({
       userId,
       stripeCustomerId: "cus_preserve_1",
       stripeSubscriptionId: "sub_preserve_1",
@@ -360,22 +349,22 @@ async function main(): Promise<void> {
       status: "active",
       cancelAtPeriodEnd: false,
       currentPeriodEnd: "2027-01-01T00:00:00.000Z",
-    });
+    }));
 
     const before = {
-      me: getAuthMe(userId),
-      saves: listSavedRecipes(userId),
-      history: listMealHistoryForUser(userId),
-      sub: getUserSubscription(userId),
+      me: (await getAuthMe(userId)),
+      saves: (await listSavedRecipes(userId)),
+      history: (await listMealHistoryForUser(userId)),
+      sub: (await getUserSubscription(userId)),
     };
 
-    linkIdentity(userId, "google", "google-sub-preserve-1", "preserveme@test.com");
+    await linkIdentity(userId, "google", "google-sub-preserve-1", "preserveme@test.com");
 
     const after = {
-      me: getAuthMe(userId),
-      saves: listSavedRecipes(userId),
-      history: listMealHistoryForUser(userId),
-      sub: getUserSubscription(userId),
+      me: (await getAuthMe(userId)),
+      saves: (await listSavedRecipes(userId)),
+      history: (await listMealHistoryForUser(userId)),
+      sub: (await getUserSubscription(userId)),
     };
 
     check("data preservation: user_id unchanged", before.me.user?.user_id === after.me.user?.user_id);
@@ -473,13 +462,13 @@ async function main(): Promise<void> {
     // --- Unauthenticated linking rejected ---
     {
       const { req, res, next, getStatus, wasNextCalled } = fakeReqRes({});
-      requireAuth(req, res, next);
+      await requireAuth(req, res, next);
       check("security: unauthenticated request to an auth-required route rejected (401)", getStatus() === 401 && !wasNextCalled());
     }
     {
-      const session = createAuthSession(linkUserId, false);
+      const session = (await createAuthSession(linkUserId, false));
       const { req, res, next, wasNextCalled } = fakeReqRes({ cookies: { fh_auth: session.token } });
-      requireAuth(req, res, next);
+      await requireAuth(req, res, next);
       check("security: valid session cookie passes requireAuth", wasNextCalled() && req._authUserId === linkUserId);
     }
 
@@ -507,29 +496,29 @@ async function main(): Promise<void> {
 
   console.log("[test-google-signin] 9. LOGOUT — provider-independent");
   {
-    const session = createAuthSession(newGoogleUserId, false);
-    check("logout: session resolves before logout", getUserIdFromSessionToken(session.token) === newGoogleUserId);
-    revokeAuthSession(session.token);
-    check("logout: session no longer resolves after logout, regardless of sign-in provider", getUserIdFromSessionToken(session.token) === null);
+    const session = (await createAuthSession(newGoogleUserId, false));
+    check("logout: session resolves before logout", (await getUserIdFromSessionToken(session.token)) === newGoogleUserId);
+    await revokeAuthSession(session.token);
+    check("logout: session no longer resolves after logout, regardless of sign-in provider", (await getUserIdFromSessionToken(session.token)) === null);
   }
 
   console.log("[test-google-signin] 10. DELETION");
   {
     const deletedGoogleSubject = "google-sub-to-delete-1";
-    const first = resolveOAuthSignIn({ provider: "google", subject: deletedGoogleSubject, email: "deleteme-google@test.com" });
+    const first = (await resolveOAuthSignIn({ provider: "google", subject: deletedGoogleSubject, email: "deleteme-google@test.com" }));
     assert.equal(first.kind, "signed_in");
     const firstUserId = first.kind === "signed_in" ? first.user.user_id : "";
-    linkIdentity(firstUserId, "email", "deleteme-google-alt@test.com", "deleteme-google-alt@test.com");
+    await linkIdentity(firstUserId, "email", "deleteme-google-alt@test.com", "deleteme-google-alt@test.com");
 
     check(
       "deletion: identities exist before deletion",
-      listLinkedIdentityProviders(firstUserId).length > 0,
+      (await listLinkedIdentityProviders(firstUserId)).length > 0,
     );
 
     // Stripe safety — an active Stripe subscription must still be cancelled
     // before deletion proceeds; auth_identities changes must not weaken this.
-    linkStripeCustomer(firstUserId, "cus_delete_google_1");
-    upsertStripeSubscription({
+    await linkStripeCustomer(firstUserId, "cus_delete_google_1");
+    (await upsertStripeSubscription({
       userId: firstUserId,
       stripeCustomerId: "cus_delete_google_1",
       stripeSubscriptionId: "sub_delete_google_1",
@@ -537,7 +526,7 @@ async function main(): Promise<void> {
       status: "active",
       cancelAtPeriodEnd: false,
       currentPeriodEnd: "2027-01-01T00:00:00.000Z",
-    });
+    }));
     const cancelCalls: string[] = [];
     const guardResult = await ensureStripeSubscriptionCancelledForDeletion(firstUserId, {
       cancel: async (subId) => {
@@ -546,19 +535,19 @@ async function main(): Promise<void> {
     });
     check("deletion: Stripe guard cancels the live subscription before deletion", guardResult.ok && cancelCalls.length === 1);
 
-    const deleted = deleteUserAccount(firstUserId);
+    const deleted = (await deleteUserAccount(firstUserId));
     check("deletion: account deletion succeeds", deleted.ok === true);
     check(
       "deletion: auth_identities rows for this user are gone",
-      (db2.prepare(`SELECT COUNT(*) AS c FROM auth_identities WHERE user_id = ?`).get(firstUserId) as { c: number }).c === 0,
+      (await pgCount(`SELECT COUNT(*) AS c FROM auth_identities WHERE user_id = $1`, [firstUserId])) === 0,
     );
     check(
       "deletion: findUserIdByIdentity no longer resolves the deleted user's Google subject",
-      findUserIdByIdentity("google", deletedGoogleSubject) === null,
+      (await findUserIdByIdentity("google", deletedGoogleSubject)) === null,
     );
 
     // A deleted Google user can create a genuinely NEW account later.
-    const second = resolveOAuthSignIn({ provider: "google", subject: deletedGoogleSubject, email: "deleteme-google@test.com" });
+    const second = (await resolveOAuthSignIn({ provider: "google", subject: deletedGoogleSubject, email: "deleteme-google@test.com" }));
     check("deletion: signing in again with the same Google subject creates a genuinely new account", second.kind === "signed_in");
     if (second.kind === "signed_in") {
       check("deletion: the new account has a DIFFERENT user_id than the deleted one", second.user.user_id !== firstUserId);
@@ -567,11 +556,6 @@ async function main(): Promise<void> {
   }
 
   releaseSqliteTimersForTests();
-  try {
-    fs.unlinkSync(tmpDb2);
-  } catch {
-    /* ignore */
-  }
 
   if (failed > 0) {
     console.error(`\n[test-google-signin] FAILED — ${failed} check(s) failed`);

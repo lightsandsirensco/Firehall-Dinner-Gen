@@ -2,6 +2,7 @@
 /**
  * Validates hall analytics aggregation and activity sync.
  */
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -132,8 +133,8 @@ async function main(): Promise<void> {
   bindBillingDb(db);
   bindHallAnalyticsDb(db);
 
-  const captain = upsertEmailUser("captain@firehall.test").user;
-  const member = upsertEmailUser("member@firehall.test").user;
+  const captain = (await upsertEmailUser("captain@firehall.test")).user;
+  const member = (await upsertEmailUser("member@firehall.test")).user;
   const detail = createHall(captain.user_id, {
     hall_name: "Engine 12",
     station_number: "12",
@@ -145,10 +146,10 @@ async function main(): Promise<void> {
   joinHall(member.user_id, { join_code: detail.hall.join_code });
   const hallId = detail.hall.hall_id;
 
-  assert.equal(userHasFeature(captain.user_id, "hall_analytics", { hall_id: hallId }), false);
+  assert.equal((await userHasFeature(captain.user_id, "hall_analytics", { hall_id: hallId })), false);
   enableHallPro(hallId, captain.user_id);
-  assert.equal(userHasFeature(captain.user_id, "hall_analytics", { hall_id: hallId }), false);
-  assert.equal(userHasFeature(captain.user_id, "shared_shopping_lists", { hall_id: hallId }), true);
+  assert.equal((await userHasFeature(captain.user_id, "hall_analytics", { hall_id: hallId })), false);
+  assert.equal((await userHasFeature(captain.user_id, "shared_shopping_lists", { hall_id: hallId })), true);
 
   syncHallActivity(hallId, captain.user_id, [
     {

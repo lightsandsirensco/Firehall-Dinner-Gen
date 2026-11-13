@@ -7,17 +7,15 @@
  *   preserves shared Hall content)
  * - nutrition + dietary/allergen disclaimer copy is present and consistent
  */
+import { testPg } from "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
-import fs from "node:fs";
-import os from "node:os";
-import path from "node:path";
-import { openSqliteDatabase, releaseSqliteTimersForTests, type SqliteDatabase } from "../server/sqlite.js";
-import { bindAuthDb, createAuthSession, deleteUserAccount, updateUserProfile, upsertEmailUser } from "../server/auth/auth-store.js";
-import { bindHallMembershipDb, createHall, joinHall } from "../server/hall-membership/store.js";
+import { getSharedLocalDb, releaseSqliteTimersForTests, type SqliteDatabase } from "../server/sqlite.js";
+import { createAuthSession, deleteUserAccount, updateUserProfile, upsertEmailUser } from "../server/auth/auth-store.js";
+import { createHall, initHallMembershipStore, joinHall } from "../server/hall-membership/store.js";
 import {
   adminSetUserPlan,
-  bindBillingDb,
   getUserSubscription,
+  initBillingStore,
   linkStripeCustomer,
   markStripeSubscriptionCancelledBySubscriptionId,
   upsertStripeSubscription,
@@ -27,51 +25,12 @@ import {
   ensureStripeSubscriptionCancelledForDeletion,
   isAlreadyCancelledStripeError,
 } from "../server/billing/account-deletion-guard.js";
-import { bindAdminLeadsDb, recordEmailLead } from "../server/admin-users/leads-store.js";
-import { bindAdminUsersDb } from "../server/admin-users/store.js";
+import { initAdminLeadsStore, recordEmailLead } from "../server/admin-users/leads-store.js";
 
-// Full 014-047 chain (in order) so every Hall/canteen table referenced by
-// deleteUserAccount's reference-integrity cleanup actually exists, matching
-// the real migration history (later migrations rename/recreate several
-// canteen tables, so partial subsets can produce a schema that doesn't match
-// production). Also includes 042/046 (Firehall Meals Pro + Stripe billing
-// columns) so the PRE-LAUNCH STRIPE ACCOUNT-DELETION BILLING GAP fix can be
-// exercised against a real user_subscriptions schema below.
-const MIGRATIONS = [
-  "014_user_accounts.sql",
-  "015_hall_membership.sql",
-  "016_billing.sql",
-  "042_firefighter_plus_plan.sql",
-  "017_user_cloud_sync.sql",
-  "018_hall_shopping_lists.sql",
-  "019_hall_supplies.sql",
-  "020_shift_reminders.sql",
-  "021_hall_analytics.sql",
-  "022_hall_identity.sql",
-  "023_hall_pro_subscription.sql",
-  "024_hall_canteen.sql",
-  "025_admin_users_leads.sql",
-  "031_canteen_staples.sql",
-  "032_canteen_staples_trim.sql",
-  "033_hall_pro_collaboration.sql",
-  "034_hall_notes.sql",
-  "035_canteen_pickup_claims.sql",
-  "036_hall_identity_profile.sql",
-  "037_canteen_payment_tracker.sql",
-  "039_founder_leads_meta.sql",
-  "040_canteen_manager_v2.sql",
-  "041_hall_ops_foundation.sql",
-  "043_email_marketing_consent.sql",
-  "046_stripe_billing.sql",
-  "047_user_meal_history.sql",
-  // GOOGLE SIGN-IN SAFETY — upsertEmailUser()/deleteUserAccount() now also
-  // read/write auth_identities; this table must exist for this schema chain
-  // to still match reality. No new assertions added to this file — see
-  // scripts/test-google-signin.ts for auth_identities-specific coverage.
-  "048_auth_identities.sql",
-].map((name) => fs.readFileSync(path.join(process.cwd(), "server", "db", "migrations", name), "utf8"));
-
-const tmpDb = path.join(os.tmpdir(), `fh-privacy-consent-${Date.now()}.db`);
+/** Accounts, sessions and subscriptions live in Postgres (PGlite here). */
+async function pgGet(text: string, params: unknown[] = []): Promise<unknown> {
+  return (await testPg.query(text, params)).rows[0];
+}
 
 function getLeadConsent(
   db: SqliteDatabase,
@@ -86,24 +45,10 @@ function getLeadConsent(
 }
 
 async function main(): Promise<void> {
-  const db = await openSqliteDatabase(tmpDb);
-  for (const sql of MIGRATIONS) db.exec(sql);
-  // Several migration files (006, 044, 046, ...) end with a raw
-  // `PRAGMA foreign_keys=ON;` statement used only to let them rebuild a
-  // table mid-migration (SQLite can't ALTER a CHECK constraint in place).
-  // db.exec() runs that literal SQL against the real engine (unlike the
-  // app's own no-op SqliteDatabase#pragma() wrapper), so it has a real,
-  // persistent side effect on this connection. Restored to OFF here to
-  // match this suite's long-standing behavior/scope — real FK-cascade
-  // interaction with shared Hall content (e.g. hall_notes.author_user_id
-  // ON DELETE CASCADE) is a separate, pre-existing concern outside this
-  // task and is intentionally not addressed here.
-  db.exec(`PRAGMA foreign_keys=OFF;`);
-  bindAuthDb(db);
-  bindHallMembershipDb(db);
-  bindBillingDb(db);
-  bindAdminUsersDb(db);
-  bindAdminLeadsDb(db);
+  const db = await getSharedLocalDb();
+  await initHallMembershipStore();
+  await initBillingStore();
+  await initAdminLeadsStore();
 
   // --- Marketing consent: defaults to false ---------------------------------
   recordEmailLead({ email: "norecipe@firehall.test", source: "generator" });
@@ -136,9 +81,9 @@ async function main(): Promise<void> {
   assert.equal(legacy!.marketing_consent, 0, "pre-existing/historical leads must not be treated as consented");
 
   // --- Account deletion: deletes private data, preserves shared Hall data ---
-  const { user } = upsertEmailUser("deleteme@firehall.test");
-  updateUserProfile(user.user_id, { first_name: "Test", crew_size: 4 });
-  const session = createAuthSession(user.user_id, false);
+  const { user } = await upsertEmailUser("deleteme@firehall.test");
+  await updateUserProfile(user.user_id, { first_name: "Test", crew_size: 4 });
+  const session = await createAuthSession(user.user_id, false);
   assert.ok(session.token);
 
   const hall = createHall(user.user_id, {
@@ -149,10 +94,22 @@ async function main(): Promise<void> {
     shift_names: ["A"],
     appliances: ["stove"],
   });
-  const { user: teammate } = upsertEmailUser("teammate@firehall.test");
+  const { user: teammate } = await upsertEmailUser("teammate@firehall.test");
   joinHall(teammate.user_id, { hall_id: hall.hall.hall_id });
 
   recordEmailLead({ email: "deleteme@firehall.test", source: "generator" });
+
+  // Internal analytics linked to the account, and a Postgres marketing-consent record.
+  await testPg.query(
+    `INSERT INTO analytics_events (event_type, visitor_id, route, user_id, metadata)
+     VALUES ('page_view', 'v-deleteme', '/', $1, '{}'::jsonb)`,
+    [user.user_id],
+  );
+  await testPg.query(
+    `INSERT INTO user_marketing_consent (id, email, user_id, marketing_consent, consent_source, consent_captured_at)
+     VALUES ('mc-deleteme', 'deleteme@firehall.test', $1, 1, 'signup', now())`,
+    [user.user_id],
+  );
 
   // --- Set up every kind of Hall/canteen user-reference that could dangle --
   const hallId = hall.hall.hall_id;
@@ -190,9 +147,9 @@ async function main(): Promise<void> {
   ).run(hallId, user.user_id, user.user_id);
 
   // Sanity: rows exist before deletion.
-  assert.ok(db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(user.user_id));
-  assert.ok(db.prepare(`SELECT 1 FROM user_profiles WHERE user_id = ?`).get(user.user_id));
-  assert.ok(db.prepare(`SELECT 1 FROM auth_sessions WHERE user_id = ?`).get(user.user_id));
+  assert.ok((await pgGet(`SELECT 1 FROM users WHERE user_id = $1`, [user.user_id])));
+  assert.ok((await pgGet(`SELECT 1 FROM user_profiles WHERE user_id = $1`, [user.user_id])));
+  assert.ok((await pgGet(`SELECT 1 FROM auth_sessions WHERE user_id = $1`, [user.user_id])));
   assert.ok(db.prepare(`SELECT 1 FROM hall_memberships WHERE user_id = ?`).get(user.user_id));
   assert.ok(db.prepare(`SELECT 1 FROM email_leads WHERE lower(email) = 'deleteme@firehall.test'`).get());
   assert.equal(
@@ -202,15 +159,27 @@ async function main(): Promise<void> {
     "sanity: canteen manager should be set before deletion",
   );
 
-  const result = deleteUserAccount(user.user_id);
+  const result = await deleteUserAccount(user.user_id);
   assert.equal(result.ok, true);
   assert.equal(result.email, "deleteme@firehall.test");
 
+  // Privacy policy §9: analytics stay only as anonymous history; consent record is kept.
+  assert.deepEqual(
+    (await testPg.query(`SELECT visitor_id, user_id FROM analytics_events WHERE visitor_id = 'v-deleteme'`)).rows,
+    [{ visitor_id: "v-deleteme", user_id: null }],
+    "analytics events must survive without the account link",
+  );
+  assert.deepEqual(
+    (await testPg.query(`SELECT user_id, marketing_consent FROM user_marketing_consent WHERE id = 'mc-deleteme'`)).rows,
+    [{ user_id: null, marketing_consent: 1 }],
+    "the marketing-consent record is retained (unlinked) so the opt-in/unsubscribe can be honoured",
+  );
+
   // Private data is gone.
-  assert.equal(db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(user.user_id), undefined, "user row must be deleted");
-  assert.equal(db.prepare(`SELECT 1 FROM user_profiles WHERE user_id = ?`).get(user.user_id), undefined, "profile must be deleted");
+  assert.equal((await pgGet(`SELECT 1 FROM users WHERE user_id = $1`, [user.user_id])), undefined, "user row must be deleted");
+  assert.equal((await pgGet(`SELECT 1 FROM user_profiles WHERE user_id = $1`, [user.user_id])), undefined, "profile must be deleted");
   assert.equal(
-    db.prepare(`SELECT 1 FROM auth_sessions WHERE user_id = ?`).get(user.user_id),
+    (await pgGet(`SELECT 1 FROM auth_sessions WHERE user_id = $1`, [user.user_id])),
     undefined,
     "sessions must be revoked (deleted)",
   );
@@ -298,7 +267,7 @@ async function main(): Promise<void> {
   );
 
   // Deleting again is a safe no-op (idempotent, no throw).
-  const secondDelete = deleteUserAccount(user.user_id);
+  const secondDelete = await deleteUserAccount(user.user_id);
   assert.equal(secondDelete.ok, true);
   assert.equal(secondDelete.email, null);
   assert.ok(
@@ -314,9 +283,9 @@ async function main(): Promise<void> {
 
   // 1) Active Stripe subscription — must be cancelled, deletion proceeds.
   {
-    const { user: proUser } = upsertEmailUser("stripe-active@firehall.test");
-    linkStripeCustomer(proUser.user_id, "cus_active_1");
-    upsertStripeSubscription({
+    const { user: proUser } = await upsertEmailUser("stripe-active@firehall.test");
+    await linkStripeCustomer(proUser.user_id, "cus_active_1");
+    await upsertStripeSubscription({
       userId: proUser.user_id,
       stripeCustomerId: "cus_active_1",
       stripeSubscriptionId: "sub_active_1",
@@ -336,11 +305,11 @@ async function main(): Promise<void> {
     assert.equal((guardResult as { action: string }).action, "cancelled");
     assert.deepEqual(cancelCalls, ["sub_active_1"], "an active Stripe subscription must be cancelled immediately");
 
-    const deleted = deleteUserAccount(proUser.user_id);
+    const deleted = await deleteUserAccount(proUser.user_id);
     assert.equal(deleted.ok, true);
-    assert.equal(db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(proUser.user_id), undefined);
+    assert.equal((await pgGet(`SELECT 1 FROM users WHERE user_id = $1`, [proUser.user_id])), undefined);
     assert.equal(
-      db.prepare(`SELECT 1 FROM user_subscriptions WHERE user_id = ?`).get(proUser.user_id),
+      (await pgGet(`SELECT 1 FROM user_subscriptions WHERE user_id = $1`, [proUser.user_id])),
       undefined,
       "user_subscriptions row must be gone after deletion",
     );
@@ -348,9 +317,9 @@ async function main(): Promise<void> {
 
   // 2) Past-due Stripe subscription — still considered live/billable, must be cancelled.
   {
-    const { user: pastDueUser } = upsertEmailUser("stripe-pastdue@firehall.test");
-    linkStripeCustomer(pastDueUser.user_id, "cus_pastdue_1");
-    upsertStripeSubscription({
+    const { user: pastDueUser } = await upsertEmailUser("stripe-pastdue@firehall.test");
+    await linkStripeCustomer(pastDueUser.user_id, "cus_pastdue_1");
+    await upsertStripeSubscription({
       userId: pastDueUser.user_id,
       stripeCustomerId: "cus_pastdue_1",
       stripeSubscriptionId: "sub_pastdue_1",
@@ -370,7 +339,7 @@ async function main(): Promise<void> {
     assert.equal((guardResult as { action: string }).action, "cancelled");
     assert.deepEqual(cancelCalls, ["sub_pastdue_1"], "past_due is still a live/billable Stripe subscription");
 
-    const deleted = deleteUserAccount(pastDueUser.user_id);
+    const deleted = await deleteUserAccount(pastDueUser.user_id);
     assert.equal(deleted.ok, true);
   }
 
@@ -379,9 +348,9 @@ async function main(): Promise<void> {
   // terminate it NOW rather than trusting the future scheduled cancellation
   // (nobody will be around after deletion to see that period end arrive).
   {
-    const { user: capeUser } = upsertEmailUser("stripe-cancel-at-period-end@firehall.test");
-    linkStripeCustomer(capeUser.user_id, "cus_cape_1");
-    upsertStripeSubscription({
+    const { user: capeUser } = await upsertEmailUser("stripe-cancel-at-period-end@firehall.test");
+    await linkStripeCustomer(capeUser.user_id, "cus_cape_1");
+    await upsertStripeSubscription({
       userId: capeUser.user_id,
       stripeCustomerId: "cus_cape_1",
       stripeSubscriptionId: "sub_cape_1",
@@ -390,7 +359,7 @@ async function main(): Promise<void> {
       cancelAtPeriodEnd: true, // customer already scheduled cancellation via Portal
       currentPeriodEnd: "2027-06-01T00:00:00.000Z",
     });
-    assert.equal(getUserSubscription(capeUser.user_id)?.cancel_at_period_end, true, "sanity: still scheduled, not yet lapsed");
+    assert.equal((await getUserSubscription(capeUser.user_id))?.cancel_at_period_end, true, "sanity: still scheduled, not yet lapsed");
 
     const cancelCalls: string[] = [];
     const guardResult = await ensureStripeSubscriptionCancelledForDeletion(capeUser.user_id, {
@@ -406,15 +375,15 @@ async function main(): Promise<void> {
       "cancel_at_period_end must not be treated as 'already handled' — it is still billable until the period actually ends",
     );
 
-    const deleted = deleteUserAccount(capeUser.user_id);
+    const deleted = await deleteUserAccount(capeUser.user_id);
     assert.equal(deleted.ok, true);
   }
 
   // 3) Already-cancelled Stripe subscription — no Stripe call needed, deletion proceeds.
   {
-    const { user: cancelledUser } = upsertEmailUser("stripe-cancelled@firehall.test");
-    linkStripeCustomer(cancelledUser.user_id, "cus_cancelled_1");
-    upsertStripeSubscription({
+    const { user: cancelledUser } = await upsertEmailUser("stripe-cancelled@firehall.test");
+    await linkStripeCustomer(cancelledUser.user_id, "cus_cancelled_1");
+    await upsertStripeSubscription({
       userId: cancelledUser.user_id,
       stripeCustomerId: "cus_cancelled_1",
       stripeSubscriptionId: "sub_cancelled_1",
@@ -423,7 +392,7 @@ async function main(): Promise<void> {
       cancelAtPeriodEnd: false,
       currentPeriodEnd: "2027-01-01T00:00:00.000Z",
     });
-    db.prepare(`UPDATE user_subscriptions SET status = 'cancelled' WHERE user_id = ?`).run(cancelledUser.user_id);
+    await testPg.query(`UPDATE user_subscriptions SET status = 'cancelled' WHERE user_id = $1`, [cancelledUser.user_id]);
 
     let cancelCalled = false;
     const guardResult = await ensureStripeSubscriptionCancelledForDeletion(cancelledUser.user_id, {
@@ -435,15 +404,15 @@ async function main(): Promise<void> {
     assert.equal((guardResult as { action: string }).action, "already_lapsed");
     assert.equal(cancelCalled, false, "an already-cancelled Stripe subscription must not trigger another cancel call");
 
-    const deleted = deleteUserAccount(cancelledUser.user_id);
+    const deleted = await deleteUserAccount(cancelledUser.user_id);
     assert.equal(deleted.ok, true);
   }
 
   // 4) Admin-granted Pro — never a Stripe subscription, must never call Stripe.
   {
-    const { user: grantedUser } = upsertEmailUser("stripe-admingrant@firehall.test");
-    adminSetUserPlan(grantedUser.user_id, "firefighter_plus");
-    assert.equal(getUserSubscription(grantedUser.user_id)?.source, "admin_grant");
+    const { user: grantedUser } = await upsertEmailUser("stripe-admingrant@firehall.test");
+    await adminSetUserPlan(grantedUser.user_id, "firefighter_plus");
+    assert.equal((await getUserSubscription(grantedUser.user_id))?.source, "admin_grant");
 
     let cancelCalled = false;
     const guardResult = await ensureStripeSubscriptionCancelledForDeletion(grantedUser.user_id, {
@@ -455,14 +424,14 @@ async function main(): Promise<void> {
     assert.equal((guardResult as { action: string }).action, "none");
     assert.equal(cancelCalled, false, "admin_grant subscriptions must never be sent to Stripe for cancellation");
 
-    const deleted = deleteUserAccount(grantedUser.user_id);
+    const deleted = await deleteUserAccount(grantedUser.user_id);
     assert.equal(deleted.ok, true);
   }
 
   // 5) Free user (no subscription row at all) — must never call Stripe.
   {
-    const { user: freeUser } = upsertEmailUser("stripe-free@firehall.test");
-    assert.equal(getUserSubscription(freeUser.user_id), null);
+    const { user: freeUser } = await upsertEmailUser("stripe-free@firehall.test");
+    assert.equal((await getUserSubscription(freeUser.user_id)), null);
 
     let cancelCalled = false;
     const guardResult = await ensureStripeSubscriptionCancelledForDeletion(freeUser.user_id, {
@@ -474,15 +443,15 @@ async function main(): Promise<void> {
     assert.equal((guardResult as { action: string }).action, "none");
     assert.equal(cancelCalled, false, "a free user with no subscription row must never call Stripe");
 
-    const deleted = deleteUserAccount(freeUser.user_id);
+    const deleted = await deleteUserAccount(freeUser.user_id);
     assert.equal(deleted.ok, true);
   }
 
   // 6) Stripe API cancellation failure — deletion must be BLOCKED, account preserved.
   {
-    const { user: failUser } = upsertEmailUser("stripe-failure@firehall.test");
-    linkStripeCustomer(failUser.user_id, "cus_failure_1");
-    upsertStripeSubscription({
+    const { user: failUser } = await upsertEmailUser("stripe-failure@firehall.test");
+    await linkStripeCustomer(failUser.user_id, "cus_failure_1");
+    await upsertStripeSubscription({
       userId: failUser.user_id,
       stripeCustomerId: "cus_failure_1",
       stripeSubscriptionId: "sub_failure_1",
@@ -501,9 +470,9 @@ async function main(): Promise<void> {
 
     // The route never calls deleteUserAccount() when the guard fails — assert
     // the account/subscription are both still fully intact afterward.
-    assert.ok(db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(failUser.user_id), "account must NOT be deleted when Stripe cancellation fails");
+    assert.ok((await pgGet(`SELECT 1 FROM users WHERE user_id = $1`, [failUser.user_id])), "account must NOT be deleted when Stripe cancellation fails");
     assert.ok(
-      db.prepare(`SELECT 1 FROM user_subscriptions WHERE user_id = ?`).get(failUser.user_id),
+      (await pgGet(`SELECT 1 FROM user_subscriptions WHERE user_id = $1`, [failUser.user_id])),
       "the Stripe-linked subscription row must still be present so a retry can find it",
     );
 
@@ -512,7 +481,7 @@ async function main(): Promise<void> {
       cancel: async () => undefined,
     });
     assert.equal(retryResult.ok, true, "retrying after a transient Stripe failure must succeed");
-    const deleted = deleteUserAccount(failUser.user_id);
+    const deleted = await deleteUserAccount(failUser.user_id);
     assert.equal(deleted.ok, true);
   }
 
@@ -523,9 +492,9 @@ async function main(): Promise<void> {
   // second real Stripe call would hit "already canceled", which is treated
   // as success, and deletion can then complete.
   {
-    const { user: partialUser } = upsertEmailUser("stripe-partial-failure@firehall.test");
-    linkStripeCustomer(partialUser.user_id, "cus_partial_1");
-    upsertStripeSubscription({
+    const { user: partialUser } = await upsertEmailUser("stripe-partial-failure@firehall.test");
+    await linkStripeCustomer(partialUser.user_id, "cus_partial_1");
+    await upsertStripeSubscription({
       userId: partialUser.user_id,
       stripeCustomerId: "cus_partial_1",
       stripeSubscriptionId: "sub_partial_1",
@@ -545,8 +514,8 @@ async function main(): Promise<void> {
     // ...but local deletion itself fails (simulated — e.g. a DB error mid-transaction).
     // The subscription row is untouched (guard doesn't rewrite local state),
     // so it still reads 'active' for a retry.
-    assert.equal(getUserSubscription(partialUser.user_id)?.status, "active", "local row is unchanged by a successful Stripe cancel alone");
-    assert.ok(db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(partialUser.user_id), "account still exists — the simulated local failure never ran deleteUserAccount");
+    assert.equal((await getUserSubscription(partialUser.user_id))?.status, "active", "local row is unchanged by a successful Stripe cancel alone");
+    assert.ok((await pgGet(`SELECT 1 FROM users WHERE user_id = $1`, [partialUser.user_id])), "account still exists — the simulated local failure never ran deleteUserAccount");
 
     // Attempt 2 (retry): Stripe now correctly reports the subscription is
     // already canceled — must be treated as success, not a hard failure,
@@ -559,7 +528,7 @@ async function main(): Promise<void> {
     assert.equal(retryAttempt.ok, true, "retry after Stripe already succeeded must not fail");
     assert.equal((retryAttempt as { action: string }).action, "already_cancelled_at_stripe");
 
-    const deleted = deleteUserAccount(partialUser.user_id);
+    const deleted = await deleteUserAccount(partialUser.user_id);
     assert.equal(deleted.ok, true, "retry must be able to complete local deletion");
   }
 
@@ -574,9 +543,9 @@ async function main(): Promise<void> {
     assert.equal(isAlreadyCancelledStripeError({ message: "Rate limit exceeded" }), false);
     assert.equal(isAlreadyCancelledStripeError(new Error("network timeout")), false);
 
-    const { user: raceUser } = upsertEmailUser("stripe-already-at-stripe@firehall.test");
-    linkStripeCustomer(raceUser.user_id, "cus_race_1");
-    upsertStripeSubscription({
+    const { user: raceUser } = await upsertEmailUser("stripe-already-at-stripe@firehall.test");
+    await linkStripeCustomer(raceUser.user_id, "cus_race_1");
+    await upsertStripeSubscription({
       userId: raceUser.user_id,
       stripeCustomerId: "cus_race_1",
       stripeSubscriptionId: "sub_race_1",
@@ -592,7 +561,7 @@ async function main(): Promise<void> {
     });
     assert.equal(guardResult.ok, true, "Stripe already having no such subscription must be treated as success");
     assert.equal((guardResult as { action: string }).action, "already_cancelled_at_stripe");
-    const deleted = deleteUserAccount(raceUser.user_id);
+    const deleted = await deleteUserAccount(raceUser.user_id);
     assert.equal(deleted.ok, true);
   }
 
@@ -626,11 +595,12 @@ async function main(): Promise<void> {
   // but no stripe_subscription_id on file) — deletion must be BLOCKED, since
   // there is no id to verify/cancel by and the subscription may still be live.
   {
-    const { user: corruptUser } = upsertEmailUser("stripe-corrupt-row@firehall.test");
-    db.prepare(
+    const { user: corruptUser } = await upsertEmailUser("stripe-corrupt-row@firehall.test");
+    await testPg.query(
       `INSERT INTO user_subscriptions (user_id, plan_id, status, source, selected_at, updated_at)
-       VALUES (?, 'firefighter_plus', 'active', 'stripe', datetime('now'), datetime('now'))`,
-    ).run(corruptUser.user_id);
+       VALUES ($1, 'firefighter_plus', 'active', 'stripe', now(), now())`,
+      [corruptUser.user_id],
+    );
 
     let cancelCalled = false;
     const guardResult = await ensureStripeSubscriptionCancelledForDeletion(corruptUser.user_id, {
@@ -641,7 +611,7 @@ async function main(): Promise<void> {
     assert.equal(guardResult.ok, false, "a source='stripe' row with no subscription id must fail closed");
     assert.equal(cancelCalled, false, "there is no subscription id to call Stripe with");
     assert.ok(
-      db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(corruptUser.user_id),
+      (await pgGet(`SELECT 1 FROM users WHERE user_id = $1`, [corruptUser.user_id])),
       "account must NOT be deleted when the Stripe subscription can't be identified/verified",
     );
   }
@@ -649,17 +619,17 @@ async function main(): Promise<void> {
   // --- Webhook race: customer.subscription.updated arriving AFTER account
   // deletion must not resurrect a user_subscriptions row for a deleted user --
   {
-    const { user: webhookRaceUser } = upsertEmailUser("stripe-webhook-race@firehall.test");
+    const { user: webhookRaceUser } = await upsertEmailUser("stripe-webhook-race@firehall.test");
     const deletedUserId = webhookRaceUser.user_id;
-    const deleted = deleteUserAccount(deletedUserId);
+    const deleted = await deleteUserAccount(deletedUserId);
     assert.equal(deleted.ok, true);
-    assert.equal(db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(deletedUserId), undefined);
+    assert.equal((await pgGet(`SELECT 1 FROM users WHERE user_id = $1`, [deletedUserId])), undefined);
 
     // Simulates the webhook handler resolving user_id straight from Stripe
     // subscription metadata (as it does for customer.subscription.updated /
     // checkout.session.completed) — bypassing any DB lookup — for a user_id
     // that no longer exists.
-    assert.doesNotThrow(() =>
+    await assert.doesNotReject(() =>
       upsertStripeSubscription({
         userId: deletedUserId,
         stripeCustomerId: "cus_late_webhook",
@@ -671,12 +641,12 @@ async function main(): Promise<void> {
       }),
     );
     assert.equal(
-      db.prepare(`SELECT 1 FROM user_subscriptions WHERE user_id = ?`).get(deletedUserId),
+      (await pgGet(`SELECT 1 FROM user_subscriptions WHERE user_id = $1`, [deletedUserId])),
       undefined,
       "a late webhook must NOT resurrect a user_subscriptions row for a deleted user",
     );
     assert.equal(
-      db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(deletedUserId),
+      (await pgGet(`SELECT 1 FROM users WHERE user_id = $1`, [deletedUserId])),
       undefined,
       "a late webhook must NOT resurrect the deleted users row either",
     );
@@ -688,9 +658,9 @@ async function main(): Promise<void> {
   // idempotent no-op behavior markStripeSubscriptionCancelledBySubscriptionId
   // already has for an unknown subscription id.
   {
-    const { user: postDeleteWebhookUser } = upsertEmailUser("stripe-webhook-after-delete@firehall.test");
-    linkStripeCustomer(postDeleteWebhookUser.user_id, "cus_postdelete_1");
-    upsertStripeSubscription({
+    const { user: postDeleteWebhookUser } = await upsertEmailUser("stripe-webhook-after-delete@firehall.test");
+    await linkStripeCustomer(postDeleteWebhookUser.user_id, "cus_postdelete_1");
+    await upsertStripeSubscription({
       userId: postDeleteWebhookUser.user_id,
       stripeCustomerId: "cus_postdelete_1",
       stripeSubscriptionId: "sub_postdelete_1",
@@ -706,37 +676,37 @@ async function main(): Promise<void> {
       cancel: async () => undefined,
     });
     assert.equal(guardResult.ok, true);
-    const deleted = deleteUserAccount(postDeleteWebhookUser.user_id);
+    const deleted = await deleteUserAccount(postDeleteWebhookUser.user_id);
     assert.equal(deleted.ok, true);
     assert.equal(
-      db.prepare(`SELECT 1 FROM user_subscriptions WHERE stripe_subscription_id = 'sub_postdelete_1'`).get(),
+      (await pgGet(`SELECT 1 FROM user_subscriptions WHERE stripe_subscription_id = 'sub_postdelete_1'`)),
       undefined,
     );
 
     // Stripe's real customer.subscription.deleted webhook (fired async after
     // our own cancel() call above) arrives once the account is already gone.
-    assert.doesNotThrow(() => {
-      const result = markStripeSubscriptionCancelledBySubscriptionId("sub_postdelete_1");
+    await assert.doesNotReject(async () => {
+      const result = await markStripeSubscriptionCancelledBySubscriptionId("sub_postdelete_1");
       assert.equal(result, null, "no user/subscription to update — must no-op, not throw or recreate anything");
     });
     assert.equal(
-      db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(postDeleteWebhookUser.user_id),
+      (await pgGet(`SELECT 1 FROM users WHERE user_id = $1`, [postDeleteWebhookUser.user_id])),
       undefined,
       "the late webhook must not resurrect the deleted user",
     );
 
     // Stripe redelivering the exact same event id a second time (duplicate
     // delivery) must also stay a safe no-op via the existing idempotency table.
-    assert.doesNotThrow(() => markStripeSubscriptionCancelledBySubscriptionId("sub_postdelete_1"));
+    await assert.doesNotReject(() => markStripeSubscriptionCancelledBySubscriptionId("sub_postdelete_1"));
   }
 
   // 10) Duplicate deletion request (e.g. a double-click, or a client retry
   // after the first request actually succeeded server-side) must be a safe,
   // idempotent no-op end-to-end — both the Stripe guard and deleteUserAccount.
   {
-    const { user: dupUser } = upsertEmailUser("stripe-duplicate-delete@firehall.test");
-    linkStripeCustomer(dupUser.user_id, "cus_dup_1");
-    upsertStripeSubscription({
+    const { user: dupUser } = await upsertEmailUser("stripe-duplicate-delete@firehall.test");
+    await linkStripeCustomer(dupUser.user_id, "cus_dup_1");
+    await upsertStripeSubscription({
       userId: dupUser.user_id,
       stripeCustomerId: "cus_dup_1",
       stripeSubscriptionId: "sub_dup_1",
@@ -753,7 +723,7 @@ async function main(): Promise<void> {
       },
     });
     assert.equal(firstGuard.ok, true);
-    const firstDelete = deleteUserAccount(dupUser.user_id);
+    const firstDelete = await deleteUserAccount(dupUser.user_id);
     assert.equal(firstDelete.ok, true);
 
     // Duplicate request for the same (now-deleted) user: the guard sees no
@@ -767,7 +737,7 @@ async function main(): Promise<void> {
     });
     assert.equal(secondGuard.ok, true);
     assert.equal((secondGuard as { action: string }).action, "none");
-    const secondDelete = deleteUserAccount(dupUser.user_id);
+    const secondDelete = await deleteUserAccount(dupUser.user_id);
     assert.equal(secondDelete.ok, true);
     assert.equal(secondDelete.email, null, "second deletion finds no user row — matches existing idempotent behavior");
     assert.deepEqual(cancelCalls, ["sub_dup_1"], "Stripe must be called exactly once across both requests, never twice");
@@ -775,11 +745,6 @@ async function main(): Promise<void> {
 
   console.log("[test-privacy-consent] OK");
   releaseSqliteTimersForTests();
-  try {
-    fs.unlinkSync(tmpDb);
-  } catch {
-    /* ignore */
-  }
 }
 
 main().catch((err) => {

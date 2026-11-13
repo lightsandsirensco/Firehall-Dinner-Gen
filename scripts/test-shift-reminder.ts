@@ -2,6 +2,7 @@
 /**
  * Validates shift reminder scheduling and send deduplication.
  */
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -65,20 +66,20 @@ async function main(): Promise<void> {
   bindBillingDb(db);
   bindShiftReminderDb(db);
 
-  const user = upsertEmailUser("shift@firehall.test").user;
-  updateUserProfile(user.user_id, {
+  const user = (await upsertEmailUser("shift@firehall.test")).user;
+  (await updateUserProfile(user.user_id, {
     display_name: "Mike",
     shift_reminders_enabled: true,
     shift_days: [1],
     shift_reminder_time: "18:00",
     shift_reminder_timezone: "America/New_York",
-  });
+  }));
 
-  const candidate = evaluateShiftReminderForUser(user.user_id, utcAt("2026-06-21T22:00:00.000Z"));
+  const candidate = (await evaluateShiftReminderForUser(user.user_id, utcAt("2026-06-21T22:00:00.000Z")));
   assert.ok(candidate);
   assert.equal(candidate!.email, "shift@firehall.test");
 
-  const due = listDueShiftReminders(utcAt("2026-06-21T22:00:00.000Z"));
+  const due = (await listDueShiftReminders(utcAt("2026-06-21T22:00:00.000Z")));
   assert.equal(due.length, 1);
 
   const sendId = createShiftReminderSend(user.user_id, candidate!.shift_date);
@@ -91,7 +92,7 @@ async function main(): Promise<void> {
   assert.ok(html.includes("Generate Meal"));
   assert.ok(html.includes("Start Vote"));
 
-  assert.equal(listDueShiftReminders(utcAt("2026-06-21T22:00:00.000Z")).length, 0);
+  assert.equal((await listDueShiftReminders(utcAt("2026-06-21T22:00:00.000Z"))).length, 0);
 
   assert.equal(markShiftReminderOpened(sendId), true);
   assert.equal(markShiftReminderOpened(sendId), false);

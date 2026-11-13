@@ -318,8 +318,8 @@ export default function AdminBillingPage() {
                 <div>
                   <p className="font-medium text-sm">Founding offer (founding_offer_enabled)</p>
                   <p className="text-xs text-muted-foreground">
-                    New annual subscribers pay $29.99 for the first year, then $39.99/year (once-only Stripe coupon).
-                    Turning it off stops new founding checkouts; existing founding subscribers are unaffected.
+                    Retired for launch: checkout never applies the founding coupon, whatever this switch says.
+                    Annual is $39.99/year from the first payment; existing subscriptions are unaffected.
                   </p>
                 </div>
                 <div className="flex items-center gap-2">

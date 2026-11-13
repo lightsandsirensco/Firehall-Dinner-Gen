@@ -2,6 +2,7 @@
 /**
  * Validates Canteen Payment Tracker — enrollment, status, mark paid, Hall Pro gate.
  */
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -60,9 +61,9 @@ async function main(): Promise<void> {
   bindBillingDb(db);
   bindHallCanteenPaymentsDb(db);
 
-  const captain = upsertEmailUser("captain@canteen.test").user;
-  const manager = upsertEmailUser("manager@canteen.test").user;
-  const member = upsertEmailUser("member@canteen.test").user;
+  const captain = (await upsertEmailUser("captain@canteen.test")).user;
+  const manager = (await upsertEmailUser("manager@canteen.test")).user;
+  const member = (await upsertEmailUser("member@canteen.test")).user;
 
   const detail = createHall(captain.user_id, {
     hall_name: "Engine 7",
@@ -77,10 +78,10 @@ async function main(): Promise<void> {
   joinHall(member.user_id, { join_code: detail.hall.join_code });
   updateMemberRole(hallId, captain.user_id, manager.user_id, "canteen_manager");
 
-  assert.equal(userHasFeature(captain.user_id, "canteen_payment_tracker", { hall_id: hallId }), false);
+  assert.equal((await userHasFeature(captain.user_id, "canteen_payment_tracker", { hall_id: hallId })), false);
 
   enableHallPro(hallId, captain.user_id);
-  assert.equal(userHasFeature(captain.user_id, "canteen_payment_tracker", { hall_id: hallId }), true);
+  assert.equal((await userHasFeature(captain.user_id, "canteen_payment_tracker", { hall_id: hallId })), true);
 
   const beforeEnroll = getCanteenPaymentsPayload(hallId, captain.user_id);
   assert.ok(beforeEnroll);

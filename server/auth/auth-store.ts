@@ -8,6 +8,7 @@ import {
 import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
 import { verifyPgConnection } from "../db/pg-client.js";
 import { pgAll, pgOne, pgRun, pgTx } from "../db/pg-sql.js";
+import { logError } from "../logger.js";
 import type {
   AuthMeResponse,
   AuthProvider,
@@ -833,6 +834,12 @@ export async function deleteUserAccount(userId: string): Promise<{ ok: true; ema
     await tx.run(`DELETE FROM user_data_snapshots WHERE user_id = $1`, [userId]);
     await tx.run(`DELETE FROM user_meal_history WHERE user_id = $1`, [userId]);
     await tx.run(`DELETE FROM users WHERE user_id = $1`, [userId]);
+  });
+
+  // Analytics stays as anonymous aggregate history; only the account link goes.
+  await pgRun(`UPDATE analytics_events SET user_id = NULL WHERE user_id = $1`, [userId]).catch((err) => {
+    const code = (err as { code?: string })?.code;
+    if (code !== "42P01" && code !== "42703") logError("auth", "unlink analytics events on account deletion failed", err);
   });
 
   // Phase 2 — SQLite (Hall Pro / shared content, untouched by this migration).

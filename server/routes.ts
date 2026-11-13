@@ -39,6 +39,7 @@ import {
   trackRecipeEvent,
   trackShoppingListEvent,
   validateKlaviyoConfig,
+  startKlaviyoRetryWorker,
 } from "./klaviyo";
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import {
@@ -53,7 +54,6 @@ import { registerHallFeedbackRoutes } from "./hall-feedback-routes.js";
 import { registerHealthRoutes } from "./routes/health-routes.js";
 import { registerVoteRoutes } from "./routes/vote-routes.js";
 import { registerCatalogRoutes } from "./routes/catalog-routes.js";
-import { registerRecipeRatingsRoutes } from "./routes/recipe-ratings-routes.js";
 import { routeParam } from "./routes/param.js";
 import { getTopCachedRecipes, getVotedRecipeNames } from "./cache-store";
 import { buildFallbackRecipe } from "./fallback-recipe";
@@ -194,6 +194,7 @@ import { registerSocialProofRoutes } from "./social-proof/social-proof-routes.js
 import { registerAuthRoutes } from "./auth/auth-routes.js";
 import { initAuthStore } from "./auth/auth-store.js";
 import type { AuthedRequest } from "./auth/auth-middleware.js";
+import { loadAccountSafetyRestrictions, mergeAccountSafetyIntoBody } from "./generation/account-dietary-safety.js";
 import { gateFoodsToAvoidByEntitlement } from "./generation/foods-to-avoid-gate.js";
 import { loadEntitledNutritionGoal } from "./generation/nutrition-goals-gate.js";
 import type { ProfileNutritionGoalKey } from "../shared/nutrition/profile-goals.js";
@@ -215,6 +216,7 @@ import { registerShopRoutes } from "./shop/routes.js";
 import { registerMarketingConsentWebhookRoutes } from "./marketing-consent/webhook-routes.js";
 import { initBillingStore, resolveUserBilling } from "./billing/store.js";
 import { registerMealHistoryRoutes } from "./meal-history/routes.js";
+import { loadDislikedSlugsForPicking, registerRecipeDislikeRoutes } from "./meal-memory/dislikes.js";
 import { registerScheduleRoutes } from "./schedule/routes.js";
 import { registerShiftPlanRoutes } from "./shift-plan/routes.js";
 import { registerGoalsRoutes } from "./goals/routes.js";
@@ -310,6 +312,7 @@ export async function registerRoutes(
   const klaviyoCheck = validateKlaviyoConfig();
   if (klaviyoCheck.ok) {
     log("Klaviyo API key configured", "klaviyo");
+    startKlaviyoRetryWorker();
   } else {
     log(`WARNING: ${klaviyoCheck.error} â€” email features will fail`, "klaviyo");
   }
@@ -382,6 +385,7 @@ export async function registerRoutes(
   registerShopRoutes(app);
   registerMarketingConsentWebhookRoutes(app);
   registerMealHistoryRoutes(app);
+  registerRecipeDislikeRoutes(app);
   registerScheduleRoutes(app);
   registerShiftPlanRoutes(app);
   registerGoalsRoutes(app);
@@ -391,7 +395,6 @@ export async function registerRoutes(
   registerMonitoringRoutes(app);
   registerHealthRoutes(app);
   registerVoteRoutes(app);
-  registerRecipeRatingsRoutes(app);
   registerCatalogRoutes(app);
 
   warmApprovedCatalogCache();
@@ -620,7 +623,7 @@ export async function registerRoutes(
         cooking_method: "stovetop",
         base_carb: "none",
         key_ingredients: originalRecipe.tags?.key_ingredients || [],
-        high_protein: originalRecipe.tags?.high_protein ?? true,
+        high_protein: false,
         high_fiber: originalRecipe.tags?.high_fiber ?? false,
         quick_cleanup: originalRecipe.tags?.quick_cleanup ?? true,
       },
@@ -879,6 +882,11 @@ export async function registerRoutes(
     if (extras._personalization_note) {
       base._personalization_note = extras._personalization_note;
     }
+    if (extras._personalization_reasons?.length) {
+      base._personalization_reasons = extras._personalization_reasons;
+    }
+    if (extras._picked_for_you) base._picked_for_you = true;
+    if (extras._favorite_returned) base._favorite_returned = true;
     if (extras._personalization_signal_types) {
       base._personalization_signal_types = extras._personalization_signal_types;
     }
@@ -1313,6 +1321,23 @@ export async function registerRoutes(
         );
       }
 
+      // Merged into req.body itself so the emergency-fallback re-parses below inherit it.
+      const safetyUserId = (req as AuthedRequest)._authUserId ?? null;
+      if (safetyUserId) {
+        try {
+          req.body = mergeAccountSafetyIntoBody(req.body, await loadAccountSafetyRestrictions(safetyUserId));
+        } catch (err) {
+          cancelRequest(sessionKey, requestId);
+          logError("generate", "could not load saved allergies — refusing to pick without them", err);
+          return res.status(503).json(
+            generationError("upstream_failure", "We couldn't load your saved allergies. Please try again in a moment.", {
+              retry_after_seconds: 5,
+              request_id: requestId,
+            }),
+          );
+        }
+      }
+
       const parsed = generateRequestSchema.safeParse(coerceGenerateRequestBody(req.body));
       if (!parsed.success) {
         cancelRequest(sessionKey, requestId);
@@ -1474,6 +1499,7 @@ export async function registerRoutes(
         historySignals,
         nutritionGoal,
         restrictToSlugs: tonightStandaloneMealSlugs(),
+        dislikedSlugs: await loadDislikedSlugsForPicking(authUserId),
       });
 
       auditCtx.chosenProtein = pipelineHit.protein;
@@ -2024,7 +2050,12 @@ export async function registerRoutes(
       void captureEmailLead({
         email,
         source: leadSource,
-        signup_form: leadSource === "hall_private_beta" ? "hall-private-beta-waitlist" : "homepage-subscribe",
+        signup_form:
+          leadSource === "hall_private_beta"
+            ? "hall-private-beta-waitlist"
+            : leadSource === "newsletter"
+              ? "footer-newsletter"
+              : "homepage-subscribe",
         klaviyo_synced: !subscribeFailed,
         marketing_consent: true,
       });
@@ -2501,6 +2532,11 @@ export async function registerRoutes(
     return res.redirect(301, "/explore");
   });
 
+  // Crew thumbs ratings were retired (they lived only in ephemeral SQLite).
+  app.get("/top-rated-recipes", (_req: Request, res: Response) => {
+    return res.redirect(301, "/explore");
+  });
+
   // Legacy "Performance Fuel" URLs were client-side-only redirects (see
   // performance-fuel-redirect.tsx). Without a server-side match, these paths
   // fell through the SEO injector entirely and served the raw index.html
@@ -2597,7 +2633,7 @@ export async function registerRoutes(
   // real 301 instead of a 200 + client-side swap, so crawlers/browsers never
   // see a dead URL. Only intercepts slugs that ARE consolidated; anything
   // else falls through to the real recipe/breakfast/smoothie page handling.
-  app.get("/recipes/:slug", (req: Request, res: Response, next: NextFunction) => {
+  app.get(["/recipes/:slug", "/breakfast/:slug", "/breakfast/performance/:slug"], (req: Request, res: Response, next: NextFunction) => {
     const slug = routeParam(req.params.slug).trim().toLowerCase();
     const redirectTarget = getCatalogSlugRedirect(slug);
     if (redirectTarget) return res.redirect(301, approvedCatalogRecipePath(redirectTarget));

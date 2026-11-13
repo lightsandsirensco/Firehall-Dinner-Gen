@@ -14,15 +14,25 @@
  * now?", not "do they already have a Stripe subscription specifically" —
  * either way, creating a brand-new paid Stripe subscription on top of
  * existing access would be an unwanted duplicate charge.
+ *
+ * A Stripe subscription that is still open in Stripe (including `past_due`
+ * after the renewal grace period has run out) also blocks checkout: the
+ * subscriber must fix payment in the Portal rather than start a second one.
  */
-import { subscriptionIsEntitled, type UserSubscription } from "../../shared/billing/types.js";
+import {
+  subscriptionGrantsAccess,
+  subscriptionIsEntitled,
+  type UserSubscription,
+} from "../../shared/billing/types.js";
 
 export function userAlreadyHasProAccess(
   subscription:
-    | (Pick<UserSubscription, "plan_id" | "status"> & Partial<Pick<UserSubscription, "source" | "expires_at">>)
+    | (Pick<UserSubscription, "plan_id" | "status"> &
+        Partial<Pick<UserSubscription, "source" | "expires_at" | "past_due_since">>)
     | null
     | undefined,
 ): boolean {
-  if (!subscription) return false;
-  return subscription.plan_id === "firefighter_plus" && subscriptionIsEntitled(subscription);
+  if (!subscription || subscription.plan_id !== "firefighter_plus") return false;
+  if (subscription.source === "stripe" && subscriptionGrantsAccess(subscription.status)) return true;
+  return subscriptionIsEntitled(subscription);
 }

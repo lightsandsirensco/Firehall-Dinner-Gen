@@ -46,6 +46,8 @@ process.env.STRIPE_PRICE_ID_MONTHLY = PRICE_MONTHLY;
 process.env.STRIPE_PRICE_ID_ANNUAL = PRICE_ANNUAL;
 process.env.STRIPE_COUPON_ID_FOUNDING = COUPON_FOUNDING;
 process.env.PUBLIC_SITE_URL = "https://e2e.firehallmeals.invalid";
+const ADMIN_KEY = "admin-e2e-secret";
+process.env.ADMIN_SECRET = ADMIN_KEY;
 // Plan changes sync to Klaviyo — never let harness users reach a real marketing account.
 delete process.env.KLAVIYO_API_KEY;
 delete process.env.KLAVIYO_WEBHOOK_SECRET;
@@ -88,10 +90,13 @@ const { releaseSqliteTimersForTests } = await import("../server/sqlite.js");
 const { createAuthSession, getAuthCookieName, upsertEmailUser } = await import("../server/auth/auth-store.js");
 const { attachAuthUser } = await import("../server/auth/auth-middleware.js");
 const { registerBillingRoutes } = await import("../server/billing/routes.js");
+const { registerGoalsRoutes } = await import("../server/goals/routes.js");
+const { registerInsightsRoutes } = await import("../server/insights/routes.js");
 const { adminSetGlobalFlag } = await import("../server/billing/store.js");
 const stripeClient = await import("../server/billing/stripe-client.js");
 const { foundingOfferApplies } = await import("../shared/billing/pricing.js");
 type UserBillingState = import("../shared/billing/types.js").UserBillingState;
+const { RENEWAL_GRACE_DAYS } = await import("../shared/billing/types.js");
 
 let passed = 0;
 function ok(name: string): void {
@@ -113,11 +118,12 @@ type FakeSubscription = {
   cancel_at: number | null;
   metadata: Record<string, string>;
   discounts: string[];
+  latest_invoice: { id: string; status: string } | null;
   items: { data: Array<{ price: { id: string }; current_period_end: number }> };
 };
 
 const PRICES: Record<string, { unit_amount: number; currency: string; recurring: { interval: string; interval_count: number } }> = {
-  [PRICE_MONTHLY]: { unit_amount: 599, currency: "usd", recurring: { interval: "month", interval_count: 1 } },
+  [PRICE_MONTHLY]: { unit_amount: 499, currency: "usd", recurring: { interval: "month", interval_count: 1 } },
   [PRICE_ANNUAL]: { unit_amount: 3999, currency: "usd", recurring: { interval: "year", interval_count: 1 } },
 };
 
@@ -220,6 +226,7 @@ function stripeCompletesCheckout(sessionId: string): Stripe.Event {
     cancel_at: null,
     metadata: { ...(params.subscription_data?.metadata as Record<string, string>) },
     discounts: (params.discounts ?? []).map((d) => d.coupon!).filter(Boolean),
+    latest_invoice: { id: fake.id("in"), status: "paid" },
     items: { data: [{ price: { id: priceId }, current_period_end: Math.floor(Date.now() / 1000) + yearOrMonth * 86400 }] },
   };
   fake.subscriptions.set(sub.id, sub);
@@ -227,6 +234,7 @@ function stripeCompletesCheckout(sessionId: string): Stripe.Event {
     id: sessionId,
     object: "checkout.session",
     mode: "subscription",
+    payment_status: "paid",
     client_reference_id: params.client_reference_id,
     customer: params.customer,
     subscription: sub.id,
@@ -249,6 +257,8 @@ app.use(express.json({ verify: (req, _res, buf) => ((req as unknown as { rawBody
 app.use(cookieParser());
 app.use(attachAuthUser);
 registerBillingRoutes(app);
+registerGoalsRoutes(app);
+registerInsightsRoutes(app);
 const server = app.listen(0);
 await new Promise<void>((resolve) => server.once("listening", () => resolve()));
 const base = `http://127.0.0.1:${(server.address() as AddressInfo).port}`;
@@ -291,9 +301,9 @@ const lastSession = () => [...fake.sessions.values()].at(-1)!;
 try {
   console.log("Pure contracts");
   {
-    assert.equal(stripeClient.EXPECTED_PRICE_SPECS.monthly.unitAmountCents, 599);
+    assert.equal(stripeClient.EXPECTED_PRICE_SPECS.monthly.unitAmountCents, 499);
     assert.equal(stripeClient.EXPECTED_PRICE_SPECS.annual.unitAmountCents, 3999);
-    ok("Stripe price contract is $5.99/month and $39.99/year");
+    ok("Stripe price contract is $4.99/month and $39.99/year");
 
     const good = { amount_off: 1000, percent_off: null, currency: "usd", duration: "once", valid: true };
     assert.equal(stripeClient.couponMatchesFoundingSpec(good).ok, true);
@@ -321,8 +331,25 @@ try {
     assert.deepEqual(withCoupon.discounts, [{ coupon: COUPON_FOUNDING }]);
     assert.equal(withCoupon.allow_promotion_codes, undefined);
     assert.equal(without.discounts, undefined);
-    assert.equal(without.allow_promotion_codes, true);
-    ok("checkout params: never a Stripe trial; founding uses discounts, otherwise promo codes allowed");
+    assert.equal(without.allow_promotion_codes, undefined, "promo field hidden unless a campaign is running");
+    process.env.STRIPE_PROMO_CODES_ENABLED = "true";
+    assert.equal(stripeClient.buildProCheckoutSessionParams({ ...base, foundingCouponId: null }).allow_promotion_codes, true);
+    assert.equal(stripeClient.buildProCheckoutSessionParams({ ...base, foundingCouponId: COUPON_FOUNDING }).allow_promotion_codes, undefined);
+    delete process.env.STRIPE_PROMO_CODES_ENABLED;
+    for (const p of [withCoupon, without]) {
+      assert.equal(p.branding_settings?.display_name, "Firehall Meals");
+      assert.equal(p.subscription_data?.description, "Firehall Meals Pro (annual)");
+    }
+    ok("checkout params: never a Stripe trial; branded; founding uses discounts; promo codes only when enabled");
+
+    assert.deepEqual(without.automatic_tax, { enabled: true }, "Stripe Tax on by default");
+    assert.equal(without.customer_update?.address, "auto", "Checkout address must be saved to the customer for tax");
+    process.env.PRO_STRIPE_TAX_ENABLED = "false";
+    const taxOff = stripeClient.buildProCheckoutSessionParams({ ...base, foundingCouponId: null });
+    assert.equal(taxOff.automatic_tax, undefined);
+    assert.equal(taxOff.customer_update, undefined);
+    delete process.env.PRO_STRIPE_TAX_ENABLED;
+    ok("checkout params: automatic tax on by default, PRO_STRIPE_TAX_ENABLED=false turns it off");
 
     const subBase = { status: "active" as const, cancel_at_period_end: false, cancel_at: null, items: { data: [{ price: { id: "p" }, current_period_end: 1_900_000_000 }] } };
     assert.equal(stripeClient.stripeSubscriptionToRecord(subBase).cancelAtPeriodEnd, false);
@@ -341,8 +368,12 @@ try {
   assert.equal(state.effective_plan_id, "personal");
   assert.equal(state.features.plan_ahead, false);
   assert.equal(state.pro_trial_eligible, true);
-  assert.equal(state.founding_offer_eligible, true, "migration 0017 turns the founding offer on");
-  ok("1. Free: no Pro features, trial and founding offer both available");
+  assert.equal(state.founding_offer_eligible, false, "launch default (migration 0020): no founding discount");
+  ok("1. Free: no Pro features, trial available, founding offer off at launch");
+  // Even if an admin switches the retired flag on, the launch flow offers no founding price.
+  await adminSetGlobalFlag("founding_offer_enabled", true);
+  state = await me(ff);
+  assert.equal(state.founding_offer_eligible, false, "founding offer is removed from the launch flow");
 
   // 2. Reverse trial (no card, no Stripe)
   const trialStart = await call<{ billing: UserBillingState }>(ff, "POST", "/api/billing/trial/start", { paywall_source: "e2e" });
@@ -372,11 +403,11 @@ try {
   assert.equal(state.pro_trial?.status, "expired");
   assert.equal(state.pro_trial_eligible, false);
   assert.equal(state.features.plan_ahead, false);
-  assert.equal(state.founding_offer_eligible, true, "an expired trial is not a paid subscription");
+  assert.equal(state.founding_offer_eligible, false);
   const secondTrial = await call<{ code: string }>(ff, "POST", "/api/billing/trial/start", { paywall_source: "e2e" });
   assert.equal(secondTrial.status, 409);
   assert.equal(secondTrial.body.code, "trial_used");
-  ok("3. Trial expiry: back to Free automatically, second trial refused, founding offer still available");
+  ok("3. Trial expiry: back to Free automatically, second trial refused");
 
   // 4. Checkout (admin turns payments on — in this in-process database only)
   await adminSetGlobalFlag("payments_enabled", true);
@@ -392,14 +423,14 @@ try {
   const p = session.params;
   assert.equal(p.mode, "subscription");
   assert.deepEqual(p.line_items, [{ price: PRICE_ANNUAL, quantity: 1 }]);
-  assert.deepEqual(p.discounts, [{ coupon: COUPON_FOUNDING }], "first annual subscription gets the founding coupon");
+  assert.equal(p.discounts, undefined, "first annual subscription pays $39.99 — no founding coupon at launch");
   assert.equal(p.allow_promotion_codes, undefined);
   assert.equal(p.client_reference_id, ff.userId);
   assert.equal(p.subscription_data?.metadata?.user_id, ff.userId);
-  assert.equal(p.subscription_data?.metadata?.founding_offer, "true");
+  assert.equal(p.subscription_data?.metadata?.founding_offer, undefined);
   assert.ok(!JSON.stringify(p).includes("trial"), "no Stripe trial in the session");
   assert.equal(p.success_url, "https://e2e.firehallmeals.invalid/plans?checkout=success");
-  ok("4. Checkout: $39.99/yr price + once-only $10 founding coupon, no Stripe trial, stale tab expired");
+  ok("4. Checkout: $39.99/yr price from the first payment, no coupon, no Stripe trial, stale tab expired");
 
   // Not Pro until the webhook lands (returning to success_url alone grants nothing).
   assert.equal((await me(ff)).effective_plan_id, "personal");
@@ -419,7 +450,7 @@ try {
   assert.ok(state.subscription?.current_period_end);
   assert.equal(state.manage_billing_available, true);
   assert.equal(state.features.plan_ahead, true);
-  assert.equal(state.founding_offer_eligible, false, "the founding price is a one-time first subscription offer");
+  assert.equal(state.founding_offer_eligible, false);
   const redelivered = await deliver(completed);
   assert.equal(redelivered.body.duplicate, true, "Stripe redelivery is idempotent");
   ok("5. Active Pro: signed webhook grants Pro + Manage Billing; bad signature and redelivery are safe");
@@ -436,7 +467,7 @@ try {
   // 6. Cancel at period end (customer cancels in the Portal)
   const subId = [...fake.subscriptions.keys()][0]!;
   const sub = fake.subscriptions.get(subId)!;
-  assert.deepEqual(sub.discounts, [COUPON_FOUNDING]);
+  assert.deepEqual(sub.discounts, []);
   sub.cancel_at_period_end = true;
   assert.equal((await deliver(event("customer.subscription.updated", structuredClone(sub)))).status, 200);
   state = await me(ff);
@@ -467,7 +498,7 @@ try {
   const resub = await call(ff, "POST", "/api/billing/checkout", { billing_period: "annual" });
   assert.equal(resub.status, 200);
   assert.equal(lastSession().params.discounts, undefined, "returning subscriber pays the standard $39.99");
-  assert.equal(lastSession().params.allow_promotion_codes, true);
+  assert.equal(lastSession().params.allow_promotion_codes, undefined);
   ok("   resubscribe after cancellation: allowed, standard annual price, no founding coupon");
 
   console.log("Checkout variants");
@@ -480,7 +511,7 @@ try {
     await deliver(done);
     const s = await me(monthly);
     assert.equal(s.effective_plan_id, "firefighter_plus");
-    ok("monthly checkout: $5.99/month price, no coupon, Pro after webhook");
+    ok("monthly checkout: $4.99/month price, no coupon, Pro after webhook");
 
     // subscription.updated resolved by customer id alone (no metadata), e.g. a Portal plan change.
     const mSub = [...fake.subscriptions.values()].at(-1)!;
@@ -489,6 +520,22 @@ try {
     await deliver(event("customer.subscription.updated", structuredClone(mSub)));
     assert.equal((await me(monthly)).subscription?.status, "past_due");
     assert.equal((await me(monthly)).effective_plan_id, "firefighter_plus", "past_due keeps access during retries");
+    ok("failed renewal (past_due): Pro kept inside the grace period");
+
+    // Grace runs from the FIRST failure; a redelivered past_due event must not restart it.
+    await pg.query(`UPDATE user_subscriptions SET past_due_since = now() - interval '8 days' WHERE user_id = $1`, [monthly.userId]);
+    await deliver(event("customer.subscription.updated", structuredClone(mSub)));
+    assert.equal((await me(monthly)).effective_plan_id, "personal", "past_due beyond the 7-day grace ends access");
+    const dupPastDue = await call<{ redirected_to_portal: boolean }>(monthly, "POST", "/api/billing/checkout", { billing_period: "monthly" });
+    assert.equal(dupPastDue.body.redirected_to_portal, true, "an open past_due subscription must fix payment, not start a second subscription");
+    mSub.status = "active";
+    await deliver(event("customer.subscription.updated", structuredClone(mSub)));
+    assert.equal((await me(monthly)).effective_plan_id, "firefighter_plus", "renewal paid → Pro again");
+    const [{ past_due_since }] = (await pg.query(`SELECT past_due_since FROM user_subscriptions WHERE user_id = $1`, [monthly.userId])).rows as Array<{ past_due_since: unknown }>;
+    assert.equal(past_due_since, null, "grace clock cleared once paid");
+    ok(`renewal grace: ends after ${RENEWAL_GRACE_DAYS} days, not restarted by redelivery, checkout → Portal, cleared on payment`);
+    mSub.status = "past_due";
+    await deliver(event("customer.subscription.updated", structuredClone(mSub)));
     mSub.status = "unpaid";
     await deliver(event("customer.subscription.updated", structuredClone(mSub)));
     assert.equal((await me(monthly)).effective_plan_id, "personal", "unpaid (retries exhausted) ends access");
@@ -504,12 +551,11 @@ try {
 
     const unlucky = await signIn("coupon-gone");
     fake.coupon.valid = false;
-    const before = fake.sessions.size;
     const gone = await call(unlucky, "POST", "/api/billing/checkout", { billing_period: "annual" });
-    assert.equal(gone.status, 503, "never charge $39.99 to someone shown $29.99");
-    assert.equal(fake.sessions.size, before);
+    assert.equal(gone.status, 200, "checkout never depends on the founding coupon");
+    assert.equal(lastSession().params.discounts, undefined);
     fake.coupon.valid = true;
-    ok("founding coupon no longer valid: fails closed (503), no Checkout Session");
+    ok("founding coupon invalid or missing: annual checkout unaffected at $39.99");
 
     stripeClient.resetVerifiedPriceIdsForTests();
     fake.annualPriceOverride = 2999;
@@ -523,8 +569,196 @@ try {
     const config = (await call<{ founding_offer_enabled: boolean; payments_enabled: boolean }>(ff, "GET", "/api/billing/config")).body;
     assert.equal(config.founding_offer_enabled, true);
     const plans = (await call<{ plans: Array<{ plan_id: string; price_label: string }> }>(ff, "GET", "/api/billing/plans")).body;
-    assert.equal(plans.plans.find((x) => x.plan_id === "firefighter_plus")?.price_label, "$5.99/mo · $39.99/yr");
-    ok("public config exposes founding_offer_enabled; catalog price label is $5.99/mo · $39.99/yr");
+    assert.equal(plans.plans.find((x) => x.plan_id === "firefighter_plus")?.price_label, "$4.99/mo · $39.99/yr");
+    ok("public config exposes founding_offer_enabled; catalog price label is $4.99/mo · $39.99/yr");
+  }
+
+  console.log("Payment failures and webhook ordering");
+  {
+    const declined = await signIn("declined-first-payment");
+    assert.equal((await call(declined, "POST", "/api/billing/checkout", { billing_period: "monthly" })).status, 200);
+    const done = stripeCompletesCheckout(lastSession().id);
+    const dSub = [...fake.subscriptions.values()].at(-1)!;
+    dSub.status = "incomplete";
+    dSub.latest_invoice = { id: dSub.latest_invoice!.id, status: "open" };
+    await deliver(done);
+    assert.notEqual((await me(declined)).effective_plan_id, "firefighter_plus", "an unpaid first invoice must not unlock Pro");
+    dSub.status = "active";
+    dSub.latest_invoice = { id: dSub.latest_invoice!.id, status: "paid" };
+    await deliver(event("customer.subscription.updated", structuredClone(dSub)));
+    assert.equal((await me(declined)).effective_plan_id, "firefighter_plus");
+    ok("declined first payment (incomplete): no Pro; Pro once the payment succeeds");
+
+    dSub.status = "canceled";
+    await deliver(event("customer.subscription.deleted", structuredClone(dSub)));
+    const stale = structuredClone(dSub);
+    stale.status = "active";
+    await deliver(event("customer.subscription.updated", stale));
+    assert.equal((await me(declined)).effective_plan_id, "personal", "a late 'active' event must not revive a cancelled subscription");
+    ok("out-of-order webhook: stale subscription.updated cannot undo a cancellation");
+  }
+
+  console.log("Subscriptions created outside Checkout (Dashboard / API)");
+  {
+    const outside = (customer: string, overrides: Partial<FakeSubscription> = {}): FakeSubscription => {
+      const sub: FakeSubscription = {
+        id: fake.id("sub"),
+        object: "subscription",
+        customer,
+        status: "active",
+        cancel_at_period_end: false,
+        cancel_at: null,
+        metadata: {},
+        discounts: [],
+        latest_invoice: { id: fake.id("in"), status: "paid" },
+        items: { data: [{ price: { id: PRICE_MONTHLY }, current_period_end: Math.floor(Date.now() / 1000) + 30 * 86400 }] },
+        ...overrides,
+      };
+      fake.subscriptions.set(sub.id, sub);
+      return sub;
+    };
+    const created = async (sub: FakeSubscription) =>
+      (await deliver(event("customer.subscription.created", structuredClone(sub)))).status;
+    const isPro = async (who: Awaited<ReturnType<typeof signIn>>) => (await me(who)).effective_plan_id === "firefighter_plus";
+
+    const victim = await signIn("outside-victim");
+    const other = await signIn("outside-other");
+    assert.equal(await created(outside("cus_unlinked_attacker", { metadata: { user_id: victim.userId } })), 200);
+    assert.equal(await isPro(victim), false, "metadata user_id on an unlinked customer must never grant Premium");
+    ok("unlinked customer naming a user in metadata: ignored, no Premium");
+
+    // Opening checkout is what links a Stripe customer to the account server-side.
+    assert.equal((await call(victim, "POST", "/api/billing/checkout", { billing_period: "monthly" })).status, 200);
+    const linked = lastSession().params.customer!;
+
+    await created(outside(linked, { metadata: { user_id: other.userId } }));
+    assert.equal(await isPro(other), false, "metadata cannot redirect a subscription to another account");
+    assert.equal(await isPro(victim), false, "a mismatched subscription is rejected outright");
+    ok("linked customer with mismatched metadata user_id: rejected for both accounts");
+
+    await created(outside(linked, { items: { data: [{ price: { id: "price_not_pro" }, current_period_end: Math.floor(Date.now() / 1000) + 30 * 86400 }] } }));
+    assert.equal(await isPro(victim), false, "only a configured Pro price can grant Premium");
+    await created(outside(linked, { latest_invoice: { id: fake.id("in"), status: "open" } }));
+    assert.equal(await isPro(victim), false, "an active subscription with an unpaid invoice must not grant Premium");
+    await created(outside(linked, { status: "trialing" }));
+    assert.equal(await isPro(victim), false, "a Stripe trial is not a paid subscription");
+    ok("non-Pro price, unpaid invoice, or Stripe trial: no Premium");
+
+    await created(outside(linked, { metadata: { user_id: victim.userId } }));
+    assert.equal(await isPro(victim), true);
+    ok("paid Pro subscription on the account's own linked customer: Premium granted");
+
+    const downgrade = await call<{ message: string }>(victim, "POST", "/api/billing/select-plan", { plan_id: "personal" });
+    assert.equal(downgrade.status, 409, "self-selecting Free must not overwrite a live Stripe subscription");
+    assert.match(downgrade.body.message, /Manage subscription/);
+    assert.equal(await isPro(victim), true, "the paid subscription is untouched");
+    ok("paying subscriber cannot self-select Free over a live Stripe subscription (409, still Pro)");
+
+    const { createHall, initHallMembershipStore } = await import("../server/hall-membership/store.js");
+    await initHallMembershipStore();
+    const hall = createHall(victim.userId, {
+      hall_name: "Engine 9",
+      station_number: "9",
+      department: "City Fire",
+      crew_size: 8,
+      shift_names: ["A Shift"],
+      appliances: ["stove"],
+    });
+    for (const action of ["start_trial", "enable", "convert"]) {
+      const res = await call<{ message: string }>(victim, "POST", `/api/halls/${hall.hall.hall_id}/billing`, { action });
+      assert.equal(res.status, 403, `captain must not ${action} Hall Pro without payment`);
+    }
+    assert.deepEqual((await me(victim)).hall_pro_hall_ids, [], "no Hall Pro granted");
+    ok("captain cannot start, enable or convert Hall Pro for free (403 for every action)");
+  }
+
+  console.log("Admin temporary Premium grants + server-side paywall");
+  {
+    const admin = async <T = Record<string, unknown>>(method: "GET" | "POST", route: string, body?: unknown, key: string | null = ADMIN_KEY) => {
+      const res = await fetch(`${base}${route}`, {
+        method,
+        headers: { "content-type": "application/json", ...(key ? { "x-admin-key": key } : {}) },
+        body: body === undefined ? undefined : JSON.stringify(body),
+      });
+      return { status: res.status, body: (await res.json()) as T };
+    };
+    const inDays = (d: number) => new Date(Date.now() + d * 86_400_000).toISOString();
+    const tester = await signIn("grant-target");
+    const grantUrl = `/api/admin/billing/users/${tester.userId}/premium-grant`;
+    const revokeUrl = `/api/admin/billing/users/${tester.userId}/premium-revoke`;
+    const grantBody = { expires_at: inDays(7), reason: "Pre-launch Premium QA", granted_by: "Mike" };
+
+    // Free user: Premium APIs stay locked when called directly.
+    assert.equal((await me(tester)).effective_plan_id, "personal");
+    assert.equal((await call<{ entitled: boolean }>(tester, "GET", "/api/goals")).body.entitled, false);
+    assert.equal((await call(tester, "POST", "/api/goals", { goal_type: "cook_new_meals", target: 3 })).status, 403);
+    const lockedInsights = (await call<{ entitled: boolean; insights: unknown[] }>(tester, "GET", "/api/insights")).body;
+    assert.equal(lockedInsights.entitled, false);
+    assert.deepEqual(lockedInsights.insights, []);
+    await call(tester, "POST", "/api/billing/select-plan", { plan_id: "firefighter_plus" });
+    assert.equal((await me(tester)).effective_plan_id, "personal", "self-selecting Pro must not grant it");
+    ok("free user: goals/insights APIs locked server-side; select-plan cannot self-grant Pro");
+
+    // Only an admin can grant, and every field is validated.
+    assert.equal((await admin("POST", grantUrl, grantBody, null)).status, 403);
+    assert.equal((await admin("POST", grantUrl, grantBody, "wrong-key")).status, 403);
+    const asUser = await fetch(`${base}${grantUrl}`, {
+      method: "POST",
+      headers: { cookie: tester.cookie, "x-csrf-token": CSRF, "content-type": "application/json" },
+      body: JSON.stringify(grantBody),
+    });
+    assert.equal(asUser.status, 403, "a signed-in user cannot grant themselves Premium");
+    assert.equal((await admin("POST", grantUrl, { ...grantBody, reason: "" })).status, 400);
+    assert.equal((await admin("POST", grantUrl, { ...grantBody, expires_at: inDays(-1) })).status, 400);
+    assert.equal((await admin("POST", grantUrl, { ...grantBody, expires_at: inDays(91) })).status, 400);
+    assert.equal((await admin("POST", "/api/admin/billing/users/no-such-user/premium-grant", grantBody)).status, 404);
+    assert.equal((await me(tester)).effective_plan_id, "personal");
+    ok("grant endpoint: admin key required; reason, future expiry (≤90 days) and existing account enforced");
+
+    const granted = await admin<{ billing: UserBillingState }>("POST", grantUrl, grantBody);
+    assert.equal(granted.status, 200);
+    const s = await me(tester);
+    assert.equal(s.effective_plan_id, "firefighter_plus");
+    assert.equal(s.subscription?.source, "admin_grant");
+    assert.equal(s.subscription?.expires_at, grantBody.expires_at);
+    assert.equal(s.manage_billing_available, false);
+    for (const f of ["meal_memory", "nutrition_goals", "ingredient_preferences", "plan_ahead", "run_it_back", "advanced_search"] as const) {
+      assert.equal(s.features[f], true, `${f} should be unlocked by the grant`);
+    }
+    assert.equal((await call<{ entitled: boolean }>(tester, "GET", "/api/goals")).body.entitled, true);
+    assert.equal((await call<{ entitled: boolean }>(tester, "GET", "/api/insights")).body.entitled, true);
+    ok("temporary grant: Pro features unlocked server-side, expiry recorded, no Stripe billing link");
+
+    // Time passes: the grant ends on its own.
+    await pg.query(`UPDATE user_subscriptions SET expires_at = now() - interval '1 minute' WHERE user_id = $1`, [tester.userId]);
+    assert.equal((await me(tester)).effective_plan_id, "personal");
+    assert.equal((await call<{ entitled: boolean }>(tester, "GET", "/api/goals")).body.entitled, false);
+    ok("grant expiry: back to Free automatically, Pro APIs locked again");
+
+    assert.equal((await admin("POST", grantUrl, { ...grantBody, reason: "Second QA pass" })).status, 200);
+    assert.equal((await me(tester)).effective_plan_id, "firefighter_plus");
+    assert.equal((await admin("POST", revokeUrl, { reason: "QA done", revoked_by: "Mike" })).status, 200);
+    assert.equal((await me(tester)).effective_plan_id, "personal");
+    assert.equal((await admin("POST", revokeUrl, { reason: "again", revoked_by: "Mike" })).status, 404);
+    ok("revoke: ends the grant immediately; revoking twice is refused");
+
+    const log = await admin<{ entries: Array<{ action: string; actor: string; reason: string; actor_ip: string | null; previous_json: string | null }> }>(
+      "GET",
+      `/api/admin/billing/premium-grants?user_id=${tester.userId}`,
+    );
+    assert.deepEqual(log.body.entries.map((e) => e.action), ["revoke", "grant", "grant"]);
+    assert.ok(log.body.entries.every((e) => e.actor === "Mike" && e.reason && e.actor_ip));
+    assert.ok(log.body.entries[2]!.previous_json?.includes('"self_select"') || log.body.entries[2]!.previous_json === null);
+    assert.equal((await admin("GET", "/api/admin/billing/premium-grants", undefined, null)).status, 403);
+    ok("audit log: every grant/revoke recorded with actor, reason, IP and the replaced subscription row");
+
+    const payer = await signIn("grant-vs-stripe");
+    assert.equal((await call(payer, "POST", "/api/billing/checkout", { billing_period: "annual" })).status, 200);
+    await deliver(stripeCompletesCheckout(lastSession().id));
+    const blocked = await admin("POST", `/api/admin/billing/users/${payer.userId}/premium-grant`, grantBody);
+    assert.equal(blocked.status, 409, "never overwrite a live Stripe subscription");
+    assert.equal((await me(payer)).subscription?.source, "stripe");
+    ok("grant refused (409) for an account with a live Stripe subscription");
   }
 
   await new Promise((resolve) => setTimeout(resolve, 200));

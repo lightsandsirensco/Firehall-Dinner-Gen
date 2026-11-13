@@ -287,3 +287,159 @@ export interface AdminLeadListResponse {
   total: number;
   filter: AdminLeadFilter;
 }
+
+/**
+ * Marketing consent as recorded in Postgres user_marketing_consent — the only
+ * consent source. Klaviyo list membership / sync status is never consent.
+ */
+export type MarketingConsentStatus = "subscribed" | "unsubscribed" | "not_consented";
+
+/** Klaviyo subscription-queue status for an opted-in email; null = never queued. */
+export type KlaviyoSyncStatus = "pending" | "sent" | "failed" | "cancelled" | null;
+
+export type RegisteredUserFilter =
+  | "all"
+  | "new_7d"
+  | "active_30d"
+  | "pro"
+  | "free"
+  | "subscribed"
+  | "not_subscribed";
+
+export interface RegisteredUserRow {
+  user_id: string;
+  email: string | null;
+  name: string | null;
+  auth_provider: string;
+  signup_date: string;
+  last_login: string | null;
+  plan: "pro" | "free";
+  plan_detail: string;
+  consent: MarketingConsentStatus;
+  klaviyo_sync: KlaviyoSyncStatus;
+  meals_cooked: number;
+  recipes_saved: number;
+}
+
+export interface RegisteredUserSummary {
+  total: number;
+  new_7d: number;
+  active_30d: number;
+  pro: number;
+  subscribed: number;
+}
+
+export interface RegisteredUserListResponse {
+  users: RegisteredUserRow[];
+  total: number;
+  page: number;
+  page_size: number;
+  filter: RegisteredUserFilter;
+  query: string | null;
+  summary: RegisteredUserSummary;
+}
+
+/**
+ * One row per unique (normalized) email collected anywhere, keyed in this order:
+ * registered user > marketing subscriber > other collected email.
+ */
+export type EmailCategory = "registered_user" | "marketing_subscriber" | "other";
+
+export type EmailDirectoryFilter =
+  | "all"
+  | "registered_users"
+  | "marketing_subscribers"
+  | "other_emails"
+  | "unsubscribed";
+
+export interface EmailDirectoryRow {
+  email: string;
+  category: EmailCategory;
+  user_id: string | null;
+  name: string | null;
+  first_seen: string;
+  last_seen: string;
+  sources: string[];
+  consent: MarketingConsentStatus;
+  consent_source: string | null;
+  consent_captured_at: string | null;
+  unsubscribed_at: string | null;
+  klaviyo_sync: KlaviyoSyncStatus;
+}
+
+export interface EmailDirectorySummary {
+  total_unique_emails: number;
+  registered_users: number;
+  marketing_subscribers: number;
+  registered_and_subscribed: number;
+  other_emails: number;
+  unsubscribed: number;
+}
+
+export interface EmailDirectoryListResponse {
+  emails: EmailDirectoryRow[];
+  total: number;
+  page: number;
+  page_size: number;
+  filter: EmailDirectoryFilter;
+  source_filter: string | null;
+  query: string | null;
+  summary: EmailDirectorySummary;
+  sources_available: string[];
+  magic_link_funnel?: MagicLinkFunnelStats;
+}
+
+/**
+ * External contacts: Klaviyo profiles with no matching email anywhere in Postgres.
+ * Read live from Klaviyo (GET only); never imported and never counted in the
+ * Postgres directory totals above.
+ */
+export type FirehallEvidence = "firehall_list" | "firehall_app_properties" | "firehall_events";
+
+/** Klaviyo's own email-marketing consent record. Independent of list membership. */
+export type KlaviyoEmailConsent = "SUBSCRIBED" | "UNSUBSCRIBED" | "NEVER_SUBSCRIBED" | null;
+
+export type ExternalContactFilter = "all" | "klaviyo_subscribed" | "not_klaviyo_subscribed" | "also_lights_sirens";
+
+export interface ExternalContactRow {
+  email: string;
+  klaviyo_profile_id: string;
+  name: string | null;
+  first_seen: string | null;
+  last_seen: string | null;
+  evidence: FirehallEvidence[];
+  also_lights_sirens: boolean;
+  klaviyo_email_consent: KlaviyoEmailConsent;
+  klaviyo_consent_method: string | null;
+  klaviyo_consented_at: string | null;
+  klaviyo_suppressed: boolean;
+}
+
+/** Every Klaviyo profile lands in exactly one bucket, so the buckets sum to klaviyo_profiles. */
+export interface ExternalContactSummary {
+  klaviyo_profiles: number;
+  already_in_postgres: number;
+  firehall_klaviyo_only: number;
+  firehall_klaviyo_only_subscribed: number;
+  excluded_lights_sirens: number;
+  excluded_unattributed: number;
+  no_email: number;
+  duplicate_profiles: number;
+}
+
+export interface ExternalContactListResponse {
+  available: boolean;
+  unavailable_reason: string | null;
+  fetched_at: string | null;
+  firehall_list_found: boolean;
+  /** False when the Klaviyo key cannot read metrics/events; unattributed may then hold Firehall event-only profiles. */
+  event_evidence_available: boolean;
+  contacts: ExternalContactRow[];
+  total: number;
+  page: number;
+  page_size: number;
+  filter: ExternalContactFilter;
+  query: string | null;
+  postgres_unique_emails: number;
+  summary: ExternalContactSummary | null;
+}

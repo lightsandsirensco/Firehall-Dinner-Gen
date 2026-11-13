@@ -164,6 +164,7 @@ export const ANALYTICS_EVENT_TYPES = [
   "shift_plan_started",
   "shift_plan_autofilled",
   "shift_meal_swapped",
+  "meal_not_for_us",
   "shift_meal_skipped",
   "shift_plan_completed",
   "shift_list_generated",
@@ -256,11 +257,45 @@ export interface AnalyticsDailyPoint {
   visitors: number;
 }
 
+export interface AnalyticsRetentionCohort {
+  /** People first seen 90..N days ago (everyone had the full N days to return). */
+  cohort: number;
+  /** Of those, people who came back on a later UTC day within N days. */
+  retained: number;
+  rate: MetricValue;
+}
+
+export interface AnalyticsRetention {
+  d7: { all: AnalyticsRetentionCohort; signed_in: AnalyticsRetentionCohort; anonymous: AnalyticsRetentionCohort };
+  d30: { all: AnalyticsRetentionCohort; signed_in: AnalyticsRetentionCohort; anonymous: AnalyticsRetentionCohort };
+}
+
+/** Requests the server answered (bots, assets, API calls) — not page views. */
+export interface AnalyticsServerRequests {
+  total: number;
+  page_human: number;
+  page_bot: number;
+  api: number;
+  asset: number;
+  health: number;
+  other: number;
+  counting_since: string | null;
+}
+
 export interface AnalyticsAudienceSection {
   status: AnalyticsSectionStatus;
+  /** People: a signed-in account counts once across all its browsers/devices. */
   unique_visitors: number;
   new_visitors: number;
   returning_visitors: number;
+  signed_in_visitors: number;
+  anonymous_visitors: number;
+  returning_signed_in_users: number;
+  returning_anonymous_visitors: number;
+  /** null when events are not in Postgres (retention needs full history). */
+  retention: AnalyticsRetention | null;
+  /** null until server request counting (migration 0020) is live. */
+  server_requests: AnalyticsServerRequests | null;
   sessions: number;
   page_views: number;
   pages_per_session: number;
@@ -337,6 +372,11 @@ export interface AnalyticsDashboardPayload {
   timezone: "UTC";
   /** First recorded event in the analytics store (null = no data). */
   tracking_since: string | null;
+  /**
+   * reliable = events come from durable Postgres (production traffic only).
+   * reliable_since = first durable event; nothing before it is mixed in.
+   */
+  tracking: { reliable: boolean; reliable_since: string | null; note: string };
   audience: AnalyticsAudienceSection;
   growth: AnalyticsGrowthSection;
   engagement: AnalyticsEngagementSection;

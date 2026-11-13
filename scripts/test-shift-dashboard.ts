@@ -40,13 +40,15 @@ function main(): void {
   assert.equal(SHIFT_DASHBOARD.backToHall, "Firehouse");
   assert.equal(SHIFT_DASHBOARD.stats.longestMealStreak, "Longest meal streak");
 
+  // "This month" stats compare against the real clock, so fixtures use the current month.
+  const THIS_MONTH = new Date().toISOString().slice(0, 7);
   const shiftName = "A Shift";
   const entries: HallHistoryEntry[] = [
     entry({
       id: "1",
       type: "meal_cooked",
       title: "Tacos",
-      at: "2026-06-20T18:00:00.000Z",
+      at: `${THIS_MONTH}-20T18:00:00.000Z`,
       shiftLabel: "A Shift",
       recipeSlug: "tacos",
     }),
@@ -54,7 +56,7 @@ function main(): void {
       id: "2",
       type: "meal_cooked",
       title: "Tacos",
-      at: "2026-06-21T18:00:00.000Z",
+      at: `${THIS_MONTH}-21T18:00:00.000Z`,
       shiftLabel: "A Shift",
       recipeSlug: "tacos",
     }),
@@ -62,14 +64,14 @@ function main(): void {
       id: "3",
       type: "hall_vote",
       title: "Vote",
-      at: "2026-06-21T19:00:00.000Z",
+      at: `${THIS_MONTH}-21T19:00:00.000Z`,
       shiftLabel: "A Shift",
     }),
     entry({
       id: "4",
       type: "meal_cooked",
       title: "Pasta",
-      at: "2026-06-15T18:00:00.000Z",
+      at: `${THIS_MONTH}-15T18:00:00.000Z`,
       shiftLabel: "B Shift",
     }),
   ];

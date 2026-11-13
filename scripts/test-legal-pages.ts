@@ -7,7 +7,7 @@
  *   trial, and the old 7-day trial copy is gone — this is a text/source-content
  *   regression guard, not a network test (no real Stripe keys are used
  *   anywhere in this repo's test suite).
- * - Firehall Meals Pro pricing is $5.99/mo · $39.99/yr, founding $29.99 first year
+ * - Firehall Meals Pro pricing is $4.99/mo · $39.99/yr, founding $29.99 first year
  * - plans-display.ts firefighter_plus features only list shipped
  *   capabilities (advanced_search, ingredient_preferences, meal_memory)
  * - footer/plans/account pages link Privacy + Terms
@@ -94,7 +94,7 @@ function main(): void {
     "Privacy page must name the confirmed legal operator",
   );
   assert.ok(
-    privacyPage.includes("lightsandsirensco@gmail.com"),
+    privacyPage.includes("support@firehallmeals.com"),
     "Privacy page must use the confirmed legal-notice contact (no address is published)",
   );
   assert.ok(
@@ -123,14 +123,15 @@ function main(): void {
 
   const termsPage = readSource("client/src/pages/terms-page.tsx");
   const flatTermsPage = flatten(termsPage);
-  assert.ok(termsPage.includes("$5.99 USD per month"), "Terms page must state monthly price");
-  assert.ok(!termsPage.includes("$4.99"), "Terms page must not keep the old $4.99 monthly price");
+  assert.ok(termsPage.includes("$4.99 USD per month"), "Terms page must state monthly price");
+  assert.ok(!termsPage.includes("$5.99"), "Terms page must not keep the old $5.99 monthly price");
   assert.ok(termsPage.includes("$39.99 USD per year"), "Terms page must state annual price");
   assert.ok(
-    /first annual subscription is \$29\.99 USD\s+for the first year only/.test(termsPage) &&
-      /renews at the standard \$39\.99 USD per year/.test(termsPage),
-    "Terms page must disclose the founding offer as first-year-only, renewing at the standard annual price",
+    /\$4\.99 USD per month, billed monthly, plus applicable sales tax/.test(termsPage) &&
+      /\$39\.99 USD per year, billed annually, plus applicable sales tax/.test(termsPage),
+    "Terms page must disclose that both prices exclude applicable sales tax",
   );
+  assert.ok(!/\$29\.99/.test(termsPage), "Terms page must not advertise the founding offer at launch");
   // Refund policy is now a resolved, owner-confirmed policy — no placeholder left.
   assert.ok(
     !/OWNER DECISION REQUIRED/i.test(termsPage),
@@ -161,7 +162,7 @@ function main(): void {
     "Terms page must name the confirmed legal operator",
   );
   assert.ok(
-    termsPage.includes("lightsandsirensco@gmail.com"),
+    termsPage.includes("support@firehallmeals.com"),
     "Terms page must use the confirmed legal-notice contact (no address is published)",
   );
   assert.ok(
@@ -233,7 +234,7 @@ function main(): void {
   const plansDisplaySrc = readSource("client/src/lib/plans-display.ts");
   assert.ok(!/free trial/i.test(plansDisplaySrc), "plans-display.ts must not mention a free trial");
 
-  // --- Pricing is $5.99/mo, $39.99/yr, founding $29.99 first year — and the
+  // --- Pricing is $4.99/mo, $39.99/yr, founding $29.99 first year — and the
   // annual math (monthly equivalent + savings badge) is independently
   // recomputed here with hand-typed dollars and compared against what
   // plans-display.ts actually renders — never trust a displayed percentage
@@ -241,19 +242,19 @@ function main(): void {
   const proBillingOptions = PLAN_PRESENTATIONS.firefighter_plus.billingOptions ?? [];
   const monthlyOption = proBillingOptions.find((o) => o.id === "monthly");
   const annualOption = proBillingOptions.find((o) => o.id === "annual");
-  assert.equal(monthlyOption?.price, "$5.99", "Pro monthly price must be $5.99");
+  assert.equal(monthlyOption?.price, "$4.99", "Pro monthly price must be $4.99");
   assert.equal(monthlyOption?.period, "/month");
   assert.equal(annualOption?.price, "$39.99", "Pro annual price must be $39.99");
   assert.equal(annualOption?.period, "/year");
 
-  const MONTHLY_USD = 5.99;
+  const MONTHLY_USD = 4.99;
   const ANNUAL_USD = 39.99;
   const FOUNDING_USD = 29.99;
   const expectedEquivalentLabel = `$${(ANNUAL_USD / 12).toFixed(2)}/month billed annually`;
   const expectedSavingsPercent = Math.round(
     ((MONTHLY_USD * 12 - ANNUAL_USD) / (MONTHLY_USD * 12)) * 100,
   );
-  assert.equal(expectedSavingsPercent, 44, "sanity: $5.99 x 12 = $71.88 vs $39.99 should be ~44% savings");
+  assert.equal(expectedSavingsPercent, 33, "sanity: $4.99 x 12 = $59.88 vs $39.99 should be ~33% savings");
   assert.equal(
     annualOption?.equivalentLabel,
     expectedEquivalentLabel,
@@ -263,14 +264,14 @@ function main(): void {
   assert.equal(
     annualOption?.savingsLabel,
     `Save ${expectedSavingsPercent}%`,
-    "annual savings badge must match the real math (Save 44%)",
+    "annual savings badge must match the real math (Save 33%)",
   );
   // Monthly must never show a savings badge — savings only ever apply to Annual.
   assert.equal(monthlyOption?.savingsLabel, undefined, "monthly option must not show a savings badge");
 
   // Founding offer: only the Annual option changes, and only when eligible.
   const foundingSavingsPercent = Math.round(((MONTHLY_USD * 12 - FOUNDING_USD) / (MONTHLY_USD * 12)) * 100);
-  assert.equal(foundingSavingsPercent, 58, "sanity: $29.99 vs $71.88 should be ~58% first-year savings");
+  assert.equal(foundingSavingsPercent, 50, "sanity: $29.99 vs $59.88 should be ~50% first-year savings");
   const foundingAnnual = resolveBillingOption(annualOption!, true);
   assert.equal(foundingAnnual.price, "$29.99");
   assert.equal(foundingAnnual.period, "/first year");
@@ -279,8 +280,8 @@ function main(): void {
   assert.equal(FOUNDING_OFFER_DISPLAY.renewalNote, "$29.99 for your first year, then $39.99/year.");
   assert.deepEqual(resolveBillingOption(annualOption!, false), annualOption, "no founding display when not eligible");
   assert.deepEqual(resolveBillingOption(monthlyOption!, true), monthlyOption, "founding never changes Monthly");
-  assert.equal(proPriceSummary(false), "$5.99/month or $39.99/year");
-  assert.equal(proPriceSummary(true), "$5.99/month, or $29.99 for your first year (then $39.99/year)");
+  assert.equal(proPriceSummary(false), "$4.99/month or $39.99/year, plus applicable sales tax");
+  assert.equal(proPriceSummary(true), "$4.99/month, or $29.99 for your first year (then $39.99/year)");
 
   // --- Plan architecture: exactly Free (guest + personal) vs Pro on /plans ---
   assert.equal(PLAN_PRESENTATIONS.guest.title, "Free");

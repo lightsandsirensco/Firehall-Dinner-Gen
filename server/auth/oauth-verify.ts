@@ -5,6 +5,8 @@ export interface OAuthIdentity {
   email?: string | null;
   firstName?: string | null;
   lastName?: string | null;
+  /** Google only: the `nonce` claim the client passed to GIS initialize(). */
+  nonce?: string | null;
 }
 
 /**
@@ -49,6 +51,7 @@ export async function verifyGoogleIdToken(idToken: string): Promise<OAuthIdentit
     exp?: string | number;
     given_name?: string;
     family_name?: string;
+    nonce?: string;
   };
 
   // Subject is the permanent identity key — never proceed without one.
@@ -85,6 +88,7 @@ export async function verifyGoogleIdToken(idToken: string): Promise<OAuthIdentit
     email,
     firstName: payload.given_name ?? null,
     lastName: payload.family_name ?? null,
+    nonce: typeof payload.nonce === "string" ? payload.nonce : null,
   };
 }
 

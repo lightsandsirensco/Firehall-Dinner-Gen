@@ -238,7 +238,7 @@ Built by Firefighters. Tested in the Firehall.
 
 [FirehallMeals.com](https://www.firehallmeals.com?utm_source=klaviyo&utm_medium=email&utm_campaign=red-lead-onboarding&utm_content=email-5-home) · [Unsubscribe]({{ unsubscribe_url }})
 
-**Klaviyo setup:** Set flow reply-to to a monitored inbox (e.g. `hello@firehallmeals.com`). Tag profiles who reply with `feedback_responded`.
+**Klaviyo setup:** Set flow reply-to to a monitored inbox (`support@firehallmeals.com`). Tag profiles who reply with `feedback_responded`.
 
 ---
 

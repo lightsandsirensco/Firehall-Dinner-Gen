@@ -2,6 +2,7 @@
 /**
  * Validates Hall Staples V2 — collaborative status for all members, list management for canteen manager.
  */
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -78,9 +79,9 @@ async function main(): Promise<void> {
   bindHallEventDb(db);
   bindHallNotesDb(db);
 
-  const captain = upsertEmailUser("captain@firehall.test").user;
-  const memberA = upsertEmailUser("member-a@firehall.test").user;
-  const memberB = upsertEmailUser("member-b@firehall.test").user;
+  const captain = (await upsertEmailUser("captain@firehall.test")).user;
+  const memberA = (await upsertEmailUser("member-a@firehall.test")).user;
+  const memberB = (await upsertEmailUser("member-b@firehall.test")).user;
 
   const detail = createHall(captain.user_id, {
     hall_name: "Engine 12",

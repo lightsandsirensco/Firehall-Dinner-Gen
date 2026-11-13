@@ -45,33 +45,39 @@ export function analyticsPgEnabled(): boolean {
 const PG_MIRROR_SKIP = new Set<string>(["sync_completed"]);
 const PG_MISSING_TABLE_BACKOFF_MS = 10 * 60 * 1000;
 let pgMirrorPausedUntil = 0;
+/** False until migration 0020 adds analytics_events.user_id. */
+let pgHasUserIdColumn = true;
 
-async function mirrorEventsToPg(events: AnalyticsEventInput[], sessionId?: string): Promise<void> {
+async function mirrorEventsToPg(events: AnalyticsEventInput[], sessionId?: string, userId?: string | null): Promise<void> {
   if (!analyticsPgEnabled() || Date.now() < pgMirrorPausedUntil) return;
   const rows = events.filter((e) => !PG_MIRROR_SKIP.has(e.event_type));
   if (!rows.length) return;
+  const withUser = pgHasUserIdColumn;
   const params: unknown[] = [];
   const values = rows.map((row) => {
-    params.push(
-      row.event_type,
-      sessionId ?? null,
-      row.visitor_id ?? null,
-      normalizeRoute(row.route),
-      sanitizeMetadata(row.metadata),
-    );
+    const cols = [row.event_type, sessionId ?? null, row.visitor_id ?? null, normalizeRoute(row.route)];
+    if (withUser) cols.push(userId ?? null);
+    params.push(...cols, sanitizeMetadata(row.metadata));
     const n = params.length;
-    return `($${n - 4}, $${n - 3}, $${n - 2}, $${n - 1}, $${n}::jsonb)`;
+    const placeholders = Array.from({ length: cols.length }, (_, i) => `$${n - cols.length + i}`);
+    return `(${placeholders.join(", ")}, $${n}::jsonb)`;
   });
+  const columns = withUser
+    ? "event_type, session_id, visitor_id, route, user_id, metadata"
+    : "event_type, session_id, visitor_id, route, metadata";
   try {
-    await pgRun(
-      `INSERT INTO analytics_events (event_type, session_id, visitor_id, route, metadata) VALUES ${values.join(", ")}`,
-      params,
-    );
+    await pgRun(`INSERT INTO analytics_events (${columns}) VALUES ${values.join(", ")}`, params);
   } catch (err) {
-    if ((err as { code?: string })?.code === "42P01") {
+    const code = (err as { code?: string })?.code;
+    if (code === "42P01") {
       pgMirrorPausedUntil = Date.now() + PG_MISSING_TABLE_BACKOFF_MS;
       logError("analytics", "Postgres analytics_events missing — run `npm run db:pg:migrate`", err);
       return;
+    }
+    if (code === "42703" && withUser) {
+      pgHasUserIdColumn = false;
+      logError("analytics", "analytics_events.user_id missing (migration 0020) — storing events without account link", err);
+      return mirrorEventsToPg(events, sessionId, userId);
     }
     logError("analytics", "Postgres analytics mirror failed", err);
   }
@@ -115,9 +121,10 @@ function sanitizeMetadata(
 export function insertAnalyticsEvents(
   events: AnalyticsEventInput[],
   sessionId?: string,
+  userId?: string | null,
 ): number {
   if (!events.length) return 0;
-  void mirrorEventsToPg(events, sessionId);
+  void mirrorEventsToPg(events, sessionId, userId);
   const stmt = db.prepare(`
     INSERT INTO analytics_events (event_type, session_id, visitor_id, route, metadata_json)
     VALUES (?, ?, ?, ?, ?)

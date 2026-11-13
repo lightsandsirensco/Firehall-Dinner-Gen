@@ -1,6 +1,7 @@
 import { resolvePublicSiteOrigin } from "../seo/sitemap.js";
 import { normalizePublicSiteOrigin } from "../../shared/seo/urls.js";
 import { log, logError } from "../logger.js";
+import { SUPPORT_EMAIL } from "../../shared/support-contact.js";
 
 export type MagicLinkMailResult =
   | { sent: true; provider: "resend" | "smtp" }
@@ -83,7 +84,7 @@ function buildMagicLinkContent(link: string): { subject: string; text: string; h
   const subject = "Your Firehall Meals sign-in link";
   const text = [
     "Firehall Meals",
-    "Built by Firefighters. Tested in the Firehouse.",
+    "Built by Firefighters. Made for the Firehouse.",
     "",
     `Tap to sign in (expires in ${mins} minutes, one-time use):`,
     link,
@@ -106,7 +107,7 @@ function buildMagicLinkContent(link: string): { subject: string; text: string; h
           <tr>
             <td style="padding:28px 28px 12px;text-align:center;background:linear-gradient(180deg,#1f1f1f 0%,#171717 100%);">
               <div style="font-family:Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif;font-size:28px;letter-spacing:0.08em;color:#f5f5f5;">FIREHALL MEALS</div>
-              <div style="margin-top:6px;font-size:12px;color:#a3a3a3;letter-spacing:0.04em;text-transform:uppercase;">Built by Firefighters · Tested in the Firehouse</div>
+              <div style="margin-top:6px;font-size:12px;color:#a3a3a3;letter-spacing:0.04em;text-transform:uppercase;">Built by Firefighters · Made for the Firehouse</div>
             </td>
           </tr>
           <tr>
@@ -284,7 +285,7 @@ export async function sendMagicLinkEmail(
   }
 
   const from = magicLinkFromEmail();
-  const replyTo = process.env.MAGIC_LINK_REPLY_TO?.trim() || undefined;
+  const replyTo = process.env.MAGIC_LINK_REPLY_TO?.trim() || SUPPORT_EMAIL;
   const payload = { from, to: email, subject, html, text, replyTo };
   const hasResend = Boolean(process.env.RESEND_API_KEY?.trim());
   const hasSmtp = Boolean(process.env.SMTP_HOST?.trim());

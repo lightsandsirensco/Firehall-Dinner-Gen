@@ -86,6 +86,12 @@ export async function runDbMigrations(): Promise<{ applied: number; current: num
     }
   }
 
+  // Migrations 006/044/046 end with PRAGMA foreign_keys=ON, which would
+  // persist on this long-lived connection only when they ran at startup.
+  // Users now live in Postgres, so SQLite FKs to `users` must stay unenforced
+  // (the default every already-migrated instance runs with).
+  db.exec("PRAGMA foreign_keys=OFF");
+
   migrated = true;
   const row = db
     .prepare("SELECT MAX(version) AS v FROM schema_migrations")

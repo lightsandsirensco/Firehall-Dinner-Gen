@@ -15,7 +15,7 @@ const SUPPORT_MAILTO = "mailto:support@firehallmeals.com?subject=Privacy%20quest
 // Legal/business-notice contact — used only where a notice address would
 // otherwise go (no public business mailing address is published yet).
 // General privacy support still goes to SUPPORT_MAILTO above.
-const LEGAL_NOTICE_MAILTO = "mailto:lightsandsirensco@gmail.com?subject=Firehall%20Meals%20legal%20notice";
+const LEGAL_NOTICE_MAILTO = "mailto:support@firehallmeals.com?subject=Firehall%20Meals%20legal%20notice";
 
 function Section({
   id,
@@ -97,7 +97,7 @@ export default function PrivacyPage() {
               business mailing address at this time; for privacy-related legal or business
               notices, contact{" "}
               <a href={LEGAL_NOTICE_MAILTO} className="text-primary hover:underline">
-                lightsandsirensco@gmail.com
+                support@firehallmeals.com
               </a>
               .
             </p>
@@ -180,9 +180,12 @@ export default function PrivacyPage() {
             </p>
             <p>
               We also record our own internal product-analytics events (page views, feature usage,
-              paywall views) keyed to a session/visitor identifier, not your account ID or email.
-              These events help us understand product usage in aggregate and are not exported as a
-              per-user profile.
+              paywall views) keyed to a random visitor identifier stored in a first-party cookie.
+              While you are signed in, those events are also linked to your account ID (never your
+              email) so that one person using several devices is counted once and we can measure
+              how many people return. Signed-out activity on a browser shared by several accounts
+              is not attributed to any of them. These events help us understand product usage in aggregate
+              and are not exported as a per-user profile.
             </p>
           </Section>
 
@@ -219,8 +222,13 @@ export default function PrivacyPage() {
 
           <Section id="cookies" title="7. Cookies and local storage">
             <p>
-              We use a session cookie to keep you signed in and a CSRF-protection cookie to
-              secure form submissions. We also use your browser's local storage to remember
+              We use a session cookie to keep you signed in, a CSRF-protection cookie to secure
+              form submissions, and a first-party analytics cookie holding a random visitor
+              identifier so we can tell new visitors from returning ones. That cookie is set to
+              expire no later than 400 days after your first visit, but your browser may remove
+              it sooner (for example in private browsing, when you clear cookies, or under its
+              own tracking-prevention rules), and you can delete it at any time through your
+              browser settings. We also use your browser's local storage to remember
               things like saved meals, recently viewed recipes, your measurement-unit preference,
               and onboarding progress on your device — this local data is not sent to us unless a
               feature (like syncing saved meals) explicitly uploads it to your account.
@@ -265,13 +273,15 @@ export default function PrivacyPage() {
                 not publicly identifiable to you outside that Firehouse.
               </li>
               <li>
-                Our internal analytics events are keyed to a session/visitor identifier, not your
-                account, so there is nothing account-linked to delete there.
+                Internal analytics events lose their link to your account; they remain only as
+                anonymous aggregate history keyed to a random visitor identifier.
               </li>
               <li>
                 If you subscribed to marketing email, your Klaviyo marketing profile is{" "}
                 <span className="font-medium text-foreground">not</span> automatically deleted as
-                part of account deletion today. Contact{" "}
+                part of account deletion today, and we keep our record of your marketing consent
+                (your email address, when and where you opted in, and any unsubscribe date) so we
+                can honour and demonstrate your choice. Contact{" "}
                 <a href={SUPPORT_MAILTO} className="text-primary hover:underline">
                   support@firehallmeals.com
                 </a>{" "}

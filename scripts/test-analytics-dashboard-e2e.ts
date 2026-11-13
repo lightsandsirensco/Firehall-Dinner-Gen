@@ -35,12 +35,16 @@ process.env.ADMIN_SECRET = ADMIN_KEY;
 process.env.NODE_ENV = "test";
 process.env.KLAVIYO_API_KEY = "pk_e2e_stub_never_sent";
 process.env.STRIPE_SECRET_KEY = "sk_test_e2e_stub_no_network";
+process.env.GOOGLE_CLIENT_ID = "e2e-client.apps.googleusercontent.com";
 delete process.env.OPENAI_API_KEY;
 
 const UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148 Safari/604.1";
 
 // --- Network: only 127.0.0.1 + a stand-in Klaviyo ---------------------------
 let klaviyoListMembers = 0;
+const klaviyoSubscribeBodies: any[] = [];
+let klaviyoRelationshipCalls = 0;
+let klaviyoFailNext = 0;
 const realFetch = globalThis.fetch;
 globalThis.fetch = (async (input: Parameters<typeof fetch>[0], init?: Parameters<typeof fetch>[1]) => {
   const url = new URL(typeof input === "string" ? input : input instanceof URL ? input.href : input.url);
@@ -54,11 +58,25 @@ globalThis.fetch = (async (input: Parameters<typeof fetch>[0], init?: Parameters
       return json({ data: { id: "LIST_E2E", attributes: { profile_count: klaviyoListMembers } } });
     if (url.pathname === "/api/profile-import/") return json({ data: { id: "PROFILE_E2E" } });
     if (url.pathname.endsWith("/relationships/profiles/")) {
-      klaviyoListMembers = 1;
+      klaviyoRelationshipCalls += 1;
       return new Response(null, { status: 204 });
+    }
+    if (url.pathname === "/api/profile-subscription-bulk-create-jobs/" && method === "POST") {
+      if (klaviyoFailNext > 0) {
+        klaviyoFailNext -= 1;
+        return json({ errors: [{ title: "Service Unavailable", detail: "stub outage" }] }, 503);
+      }
+      klaviyoSubscribeBodies.push(JSON.parse(String(init?.body)));
+      klaviyoListMembers = 1;
+      return new Response(null, { status: 202 });
     }
     if (url.pathname === "/api/events/") return new Response(null, { status: 202 });
     return json({ errors: [{ title: "stub", detail: url.pathname }] }, 404);
+  }
+  if (url.hostname === "oauth2.googleapis.com" && url.pathname === "/tokeninfo") {
+    // Stand-in tokeninfo: the "token" is base64 JSON claims.
+    const claims = JSON.parse(Buffer.from(url.searchParams.get("id_token") ?? "", "base64url").toString());
+    return new Response(JSON.stringify(claims), { status: 200, headers: { "Content-Type": "application/json" } });
   }
   throw new Error(`analytics e2e: outbound request to ${url.hostname} blocked`);
 }) as typeof fetch;
@@ -84,7 +102,7 @@ setPgPoolForTests(pglitePool as unknown as Pool);
 
 // --- Stand-in Stripe ---------------------------------------------------------
 const nowSec = Math.floor(Date.now() / 1000);
-const monthlyPrice = { unit_amount: 599, recurring: { interval: "month", interval_count: 1 } };
+const monthlyPrice = { unit_amount: 499, recurring: { interval: "month", interval_count: 1 } };
 const annualPrice = { unit_amount: 3999, recurring: { interval: "year", interval_count: 1 } };
 const fakeSubscriptions = [
   { status: "active", start_date: nowSec - 2 * 86400, canceled_at: null, currency: "usd", items: { data: [{ quantity: 1, price: monthlyPrice }] } },
@@ -93,7 +111,7 @@ const fakeSubscriptions = [
   { status: "canceled", start_date: nowSec - 60 * 86400, canceled_at: nowSec - 3 * 86400, currency: "usd", items: { data: [{ quantity: 1, price: monthlyPrice }] } },
 ];
 const fakeInvoices = [
-  { amount_paid: 599, currency: "usd", created: nowSec - 2 * 86400 },
+  { amount_paid: 499, currency: "usd", created: nowSec - 2 * 86400 },
   { amount_paid: 3999, currency: "usd", created: nowSec - 200 * 86400 },
 ];
 const stripeCalls: string[] = [];
@@ -286,6 +304,10 @@ try {
     { event_type: "page_view", route: "/recipes/chicken-parm?token=SECRET", visitor_id: visitorA, metadata: { traffic_source: "internal", device_type: "mobile" } },
     { event_type: "recipe_view", route: "/recipes/chicken-parm", visitor_id: visitorA, metadata: { recipe_slug: "chicken-parm", recipe_title: "Chicken Parm" } },
     { event_type: "recipe_save", route: "/recipes/chicken-parm", visitor_id: visitorA, metadata: { recipe_slug: "chicken-parm", recipe_title: "Chicken Parm" } },
+  ]);
+  assert.equal(jar.get("fh_vid"), visitorA, "server visitor cookie adopted the browser's id");
+  jar.delete("fh_vid"); // visitor B is a different browser
+  await sendEvents([
     { event_type: "page_view", route: "/pizza", visitor_id: visitorB, metadata: { traffic_source: "reddit", device_type: "desktop" } },
     { event_type: "shopping_list_open", route: "/pizza", visitor_id: visitorB, metadata: { recipe_title: "Pizza", generator_type: "pizza" } },
     { event_type: "wheel_spin", route: "/classics-wheel", visitor_id: visitorB, metadata: { recipe_slug: "jerk-chicken", recipe_title: "Jerk Chicken" } },
@@ -338,15 +360,168 @@ try {
   assert.equal(all.growth.registered_users_total, 1);
   ok("7-day / 90-day / all-time filters return consistent data");
 
+  // 9. Klaviyo: opt-in grants marketing consent through the subscription API.
+  const job = klaviyoSubscribeBodies.find((b) => b.data.attributes.profiles.data[0].attributes.email === email);
+  assert.ok(job, "subscription job sent for the homepage signup");
+  assert.equal(job.data.type, "profile-subscription-bulk-create-job");
+  assert.equal(job.data.attributes.profiles.data[0].attributes.subscriptions.email.marketing.consent, "SUBSCRIBED");
+  assert.equal(job.data.relationships.list.data.id, "LIST_E2E");
+  assert.equal(klaviyoRelationshipCalls, 0, "list-membership-only endpoint no longer used");
+  ok("Klaviyo opt-in uses profile-subscription-bulk-create-jobs with SUBSCRIBED consent + list");
+
+  // Outage: inline retries exhausted → queued in Postgres → worker delivers later.
+  const outageEmail = `e2e.outage.${Date.now()}@firehouse-crew.org`;
+  klaviyoFailNext = 3;
+  const sentBefore = klaviyoSubscribeBodies.length;
+  const outage = await browser("/api/homepage-subscribe", { method: "POST", body: JSON.stringify({ email: outageEmail }) });
+  assert.equal(outage.status, 207, "signup still accepted during a Klaviyo outage");
+  assert.equal(klaviyoFailNext, 0, "3 inline attempts made");
+  await flushMirror();
+  let q = await pgOne<{ status: string; attempts: number; last_error: string }>(
+    `SELECT status, attempts, last_error FROM klaviyo_subscription_queue WHERE email = $1`,
+    [outageEmail],
+  );
+  assert.equal(q?.status, "pending");
+  assert.match(q!.last_error, /503/);
+  await pgRun(`UPDATE klaviyo_subscription_queue SET next_attempt_at = now() WHERE email = $1`, [outageEmail]);
+  const { processKlaviyoRetryQueue } = await import("../server/klaviyo.js");
+  const retried = await processKlaviyoRetryQueue();
+  assert.equal(retried.sent, 1);
+  q = await pgOne<{ status: string; attempts: number; last_error: string }>(
+    `SELECT status, attempts, last_error FROM klaviyo_subscription_queue WHERE email = $1`,
+    [outageEmail],
+  );
+  assert.equal(q?.status, "sent");
+  assert.equal(klaviyoSubscribeBodies.length, sentBefore + 1);
+  // An unsubscribe recorded before the retry always wins.
+  const unsubEmail = `e2e.unsub.${Date.now()}@firehouse-crew.org`;
+  await pgRun(
+    `INSERT INTO user_marketing_consent (id, email, marketing_consent, consent_source, unsubscribed_at) VALUES ('c_unsub', $1, 0, 'homepage', now())`,
+    [unsubEmail],
+  );
+  await pgRun(`INSERT INTO klaviyo_subscription_queue (email, status, attempts) VALUES ($1, 'pending', 1)`, [unsubEmail]);
+  const cancelled = await processKlaviyoRetryQueue();
+  assert.equal(cancelled.cancelled, 1);
+  assert.equal(cancelled.sent, 0, "never re-subscribes an unsubscribed email");
+  const summary = await fetch(`${base}/api/admin/marketing/klaviyo-queue`, { headers: { "x-admin-key": ADMIN_KEY, "User-Agent": UA } });
+  assert.equal(summary.status, 200);
+  ok("Klaviyo outage: 3 inline retries, durable queue, worker delivery, unsubscribes never overridden");
+
+  // 10. Mobile delivery: sendBeacon-style request (text/plain, no CSRF header).
+  const beacon = (headers: Record<string, string>, visitor: string, cookies = "") =>
+    fetch(`${base}/api/analytics/events`, {
+      method: "POST",
+      headers: { "User-Agent": UA, "Content-Type": "text/plain;charset=UTF-8", ...(cookies ? { cookie: cookies } : {}), ...headers },
+      body: JSON.stringify({ events: [{ event_type: "page_view", route: "/beacon", visitor_id: visitor, metadata: { traffic_source: "direct" } }] }),
+    });
+  const visitorC = "33333333-cccc-4ccc-8ccc-333333333333";
+  const accepted = await beacon({ Origin: base, "Sec-Fetch-Site": "same-origin" }, visitorC);
+  assert.equal(accepted.status, 200, "same-origin beacon accepted without CSRF header");
+  const vidCookie = (accepted.headers.getSetCookie?.() ?? []).find((c) => c.startsWith("fh_vid="));
+  assert.ok(vidCookie && /HttpOnly/i.test(vidCookie) && /Max-Age=\d{7,}/i.test(vidCookie), "long-lived httpOnly visitor cookie");
+  assert.equal((await beacon({ Origin: "https://evil.example" }, visitorC)).status, 403, "foreign Origin refused");
+  assert.equal((await beacon({ "Sec-Fetch-Site": "cross-site", Origin: base }, visitorC)).status, 403, "cross-site fetch refused");
+  assert.equal((await beacon({}, visitorC)).status, 403, "no CSRF token and no origin proof refused");
+  // The server cookie wins over a different (e.g. ITP-wiped and regenerated) client id.
+  await beacon({ "Sec-Fetch-Site": "same-origin" }, "44444444-dddd-4ddd-8ddd-444444444444", `fh_vid=${visitorC}`);
+  await flushMirror();
+  const beaconRows = await pgAll<{ visitor_id: string }>(`SELECT visitor_id FROM analytics_events WHERE route = '/beacon'`);
+  assert.deepEqual([...new Set(beaconRows.map((r) => r.visitor_id))], [visitorC], "one visitor despite regenerated client id");
+  ok("beacon delivery accepted same-origin; cross-site/forged requests refused; server visitor cookie survives client resets");
+
+  // 11. Signed-in activity is linked to the account and counted once across devices.
+  const { createAuthSession, getAuthCookieName } = await import("../server/auth/auth-store.js");
+  const session1 = await createAuthSession("u_real", false);
+  const session2 = await createAuthSession("u_real", false);
+  const phone = "55555555-eeee-4eee-8eee-555555555555";
+  const laptop = "66666666-ffff-4fff-8fff-666666666666";
+  // Phone browses anonymously first, then signs in.
+  await beacon({ "Sec-Fetch-Site": "same-origin" }, phone, `fh_vid=${phone}`);
+  await beacon({ "Sec-Fetch-Site": "same-origin" }, phone, `fh_vid=${phone}; ${getAuthCookieName()}=${session1.token}`);
+  await beacon({ "Sec-Fetch-Site": "same-origin" }, laptop, `fh_vid=${laptop}; ${getAuthCookieName()}=${session2.token}`);
+  await flushMirror();
+  const linked = await pgAll<{ visitor_id: string; user_id: string | null }>(
+    `SELECT visitor_id, user_id FROM analytics_events WHERE visitor_id IN ($1, $2) ORDER BY id`,
+    [phone, laptop],
+  );
+  assert.deepEqual(linked.map((r) => r.user_id), [null, "u_real", "u_real"], "user_id set server-side only when signed in");
+  const idDash = await dashboard("7d");
+  assert.equal(idDash.audience.signed_in_visitors, 1, "two devices + earlier anonymous browsing = one signed-in person");
+  assert.equal(idDash.audience.unique_visitors, 4, "A, B, C anonymous + one signed-in person");
+  assert.equal(idDash.audience.anonymous_visitors, 3);
+  ok("signed-in activity linked to the account; one person across devices and pre-sign-in browsing");
+
+  // 12. Retention cohorts (synthetic history inserted directly).
+  const ago = (days: number) => `now() - interval '${days} days'`;
+  await pgRun(
+    `INSERT INTO analytics_events (event_type, visitor_id, user_id, route, occurred_at) VALUES
+       ('page_view', 'ret-r1', NULL, '/', ${ago(20)}), ('page_view', 'ret-r1', NULL, '/', ${ago(17)}),
+       ('page_view', 'ret-r2', 'u_ret', '/', ${ago(40)}), ('page_view', 'ret-r2', 'u_ret', '/', ${ago(25)}),
+       ('page_view', 'ret-r3', NULL, '/', ${ago(50)})`,
+  );
+  const ret = (await dashboard("30d")).audience.retention!;
+  assert.deepEqual([ret.d7.all.cohort, ret.d7.all.retained, ret.d7.all.rate], [3, 1, 33.3], "d7: r1 back in 3 days; r2 (15d) and r3 not");
+  assert.deepEqual([ret.d30.all.cohort, ret.d30.all.retained, ret.d30.all.rate], [2, 1, 50], "d30: r2 back in 15 days; r1 too recent");
+  assert.deepEqual([ret.d30.signed_in.cohort, ret.d30.signed_in.retained], [1, 1]);
+  assert.deepEqual([ret.d30.anonymous.cohort, ret.d30.anonymous.retained], [1, 0]);
+  const ret30 = await dashboard("30d");
+  assert.equal(ret30.audience.returning_signed_in_users, 1, "u_ret: seen before the period");
+  ok("7-day and 30-day retention computed per first-visit cohort, split signed-in / anonymous");
+
+  // 13. Server requests are counted separately from page views; tracking baseline labelled.
+  await fetch(`${base}/`, { headers: { "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1)" } });
+  await fetch(`${base}/api/health`, { headers: { "User-Agent": "kube-probe" } });
+  const { flushServerRequestCounts } = await import("../server/analytics/server-requests.js");
+  await flushServerRequestCounts();
+  const sr = (await dashboard("7d")).audience.server_requests!;
+  assert.ok(sr.total > sr.page_human, "server requests include API/asset/bot traffic");
+  assert.ok(sr.page_bot >= 1 && sr.health >= 1 && sr.api >= 1);
+  const final = await dashboard("7d");
+  assert.equal(final.tracking.reliable, true);
+  assert.ok(final.tracking.reliable_since, "reliable tracking start date labelled");
+  ok("server requests (bots, API, health, files) reported separately; reliable-tracking date labelled");
+
+  // 14. Google redirect sign-in: g_csrf_token double-submit, or the signed nonce fallback.
+  const idToken = (nonce?: string) =>
+    Buffer.from(
+      JSON.stringify({
+        sub: "google-sub-e2e", email: "g.user@firehouse-crew.org", email_verified: "true",
+        aud: process.env.GOOGLE_CLIENT_ID, iss: "https://accounts.google.com",
+        exp: Math.floor(Date.now() / 1000) + 600, ...(nonce ? { nonce } : {}),
+      }),
+    ).toString("base64url");
+  const googlePost = (form: Record<string, string>, cookies: string) =>
+    fetch(`${base}/api/auth/google/callback`, {
+      method: "POST",
+      redirect: "manual",
+      headers: { "User-Agent": UA, "Content-Type": "application/x-www-form-urlencoded", cookie: cookies, Origin: "https://accounts.google.com" },
+      body: new URLSearchParams(form).toString(),
+    });
+  const nonce = "n-0123456789abcdef0123";
+  const noProof = await googlePost({ credential: idToken(nonce) }, "");
+  assert.equal(noProof.headers.get("location"), "/?error=sign_in_failed", "no CSRF cookie and no nonce → refused");
+  const wrongNonce = await googlePost({ credential: idToken("n-attacker-0000000000") }, `fh_g_nonce=${nonce}`);
+  assert.equal(wrongNonce.headers.get("location"), "/?error=sign_in_failed", "token minted for another nonce → refused");
+  const noTokenNonce = await googlePost({ credential: idToken() }, `fh_g_nonce=${nonce}`);
+  assert.equal(noTokenNonce.headers.get("location"), "/?error=sign_in_failed", "token without nonce → refused on fallback path");
+  const viaNonce = await googlePost({ credential: idToken(nonce) }, `fh_g_nonce=${nonce}`);
+  assert.match(viaNonce.headers.get("location") ?? "", /signed_in=1/, "matching signed nonce accepted when g_csrf_token cookie is lost");
+  assert.ok((viaNonce.headers.getSetCookie?.() ?? []).some((c) => c.startsWith(`${getAuthCookieName()}=`)), "session cookie set");
+  const viaCsrf = await googlePost({ credential: idToken(), g_csrf_token: "abc123" }, "g_csrf_token=abc123");
+  assert.match(viaCsrf.headers.get("location") ?? "", /signed_in=1/, "classic g_csrf_token double-submit still accepted");
+  const googleUsers = await pgAll(`SELECT user_id FROM auth_identities WHERE provider = 'google' AND provider_subject = 'google-sub-e2e'`);
+  assert.equal(googleUsers.length, 1, "repeat Google sign-in reuses one account");
+  ok("Google redirect callback: CSRF cookie or matching signed nonce required; one account per Google identity");
+
   // 8. Revenue: Stripe records only.
   assert.equal(d.revenue.status.available, true);
   assert.equal(d.revenue.active_paid_subscribers, 2, "active Stripe subscriptions only (trial excluded)");
   assert.equal(d.revenue.trialing_subscribers, 1);
   assert.equal(d.revenue.new_paid_subscriptions, 1, "started within 7 days");
   assert.equal(d.revenue.cancellations, 1);
-  assert.equal(d.revenue.mrr_cents, 599 + Math.round(3999 / 12), "monthly + annual/12 at list price");
-  assert.equal(d.revenue.revenue_cents, 599, "paid invoices in the 7-day window");
-  assert.equal(all.revenue.revenue_cents, 599 + 3999);
+  assert.equal(d.revenue.mrr_cents, 499 + Math.round(3999 / 12), "monthly + annual/12 at list price");
+  assert.equal(d.revenue.revenue_cents, 499, "paid invoices in the 7-day window");
+  assert.equal(all.revenue.revenue_cents, 499 + 3999);
   assert.equal(d.revenue.complimentary_plans, 1, "admin-granted Pro shown separately, never as paid");
   assert.ok(stripeCalls.every((c) => c.startsWith("subscriptions.list") || c.startsWith("invoices.list")), "read-only Stripe calls");
   ok("revenue metrics come only from Stripe subscriptions/invoices (read-only); admin grants excluded");

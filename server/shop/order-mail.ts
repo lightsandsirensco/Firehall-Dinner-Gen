@@ -7,6 +7,7 @@
  */
 import { log, logError } from "../logger.js";
 import type { ShopOrderWithItems } from "../../shared/shop/types.js";
+import { SUPPORT_EMAIL } from "../../shared/support-contact.js";
 
 function fromEmail(): string {
   return process.env.SHOP_MAIL_FROM?.trim() || process.env.MAGIC_LINK_FROM?.trim() || "orders@firehallmeals.com";
@@ -31,6 +32,7 @@ async function sendViaResend(input: { to: string; subject: string; html: string;
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({
         from: fromEmail(),
+        reply_to: SUPPORT_EMAIL,
         to: [input.to],
         subject: input.subject,
         html: input.html,
@@ -59,7 +61,7 @@ async function sendViaSmtp(input: { to: string; subject: string; html: string; t
     connectionTimeout: 15_000,
     auth: process.env.SMTP_USER ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS ?? "" } : undefined,
   });
-  await transport.sendMail({ from: fromEmail(), to: input.to, subject: input.subject, text: input.text, html: input.html });
+  await transport.sendMail({ from: fromEmail(), replyTo: SUPPORT_EMAIL, to: input.to, subject: input.subject, text: input.text, html: input.html });
 }
 
 async function sendMail(input: { to: string; subject: string; html: string; text: string }): Promise<void> {

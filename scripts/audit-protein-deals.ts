@@ -2,6 +2,7 @@
 /**
  * Protein deals audit — normalization, demo mode, paywall, recipe relevance.
  */
+import "./lib/pglite-test-db.js";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -63,7 +64,7 @@ async function main(): Promise<void> {
   bindGroceryDealsDb(db);
   resetRecipeMatchCatalogCache();
 
-  const captain = upsertEmailUser("audit-protein@firehall.test").user;
+  const captain = (await upsertEmailUser("audit-protein@firehall.test")).user;
   const hall = createHall(captain.user_id, { hall_name: "Protein Station", appliances: ["stove"] });
   const hallId = hall.hall.hall_id;
   updateHall(hallId, captain.user_id, { postal_code: "K1A0B1" });
@@ -107,9 +108,9 @@ async function main(): Promise<void> {
 
   const free = await getProteinDealsResponse(hallId, false);
   if (!free.hall_pro_locked) fail("free should be locked");
-  assert.equal(userHasFeature(captain.user_id, "hall_grocery_planning", { hall_id: hallId }), false);
+  assert.equal((await userHasFeature(captain.user_id, "hall_grocery_planning", { hall_id: hallId })), false);
   enableHallPro(hallId, captain.user_id);
-  assert.equal(userHasFeature(captain.user_id, "hall_grocery_planning", { hall_id: hallId }), true);
+  assert.equal((await userHasFeature(captain.user_id, "hall_grocery_planning", { hall_id: hallId })), true);
 
   if (pro.top_deals.length > 3) fail("top_deals should be max 3 in response slice");
   if (!proteinDealLabel(pro.deals[0]!)) fail("label required");
