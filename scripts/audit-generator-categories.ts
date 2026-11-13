@@ -18,6 +18,7 @@ import { buildGenerateRequestInput } from "../shared/generate-request-defaults.j
 import { generateRequestSchema } from "../shared/schema.js";
 import { initCacheStore } from "../server/cache-store.js";
 import {
+  countPublishedCuratedRecipes,
   getCuratedRecipeBySlug,
   getCuratedRecipeCategoryKeysBySlug,
   initCuratedRecipeStore,
@@ -118,6 +119,16 @@ async function auditCategory(category: FirehallCategoryId): Promise<CategoryAudi
 async function main(): Promise<void> {
   await initCacheStore();
   await initCuratedRecipeStore();
+
+  // Category pools live in data/cache.db, which is not in git and can only be
+  // seeded with a Spoonacular key; a clean CI checkout has nothing to audit.
+  if (countPublishedCuratedRecipes() === 0) {
+    console.log(
+      "[audit:generator-categories] SKIPPED: curated recipe store is empty (no data/cache.db). Run locally against the real store.",
+    );
+    releaseSqliteTimersForTests();
+    return;
+  }
 
   const results: CategoryAuditResult[] = [];
   for (const category of FIREHALL_CATEGORY_IDS) {
