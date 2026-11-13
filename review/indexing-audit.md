@@ -1,6 +1,6 @@
 # SEO Indexing Audit
 
-Generated: 2026-09-25T23:32:22.391Z
+Generated: 2026-11-13T12:54:31.401Z
 
 Canonical origin: **https://www.firehallmeals.com**
 
@@ -15,18 +15,18 @@ Canonical origin: **https://www.firehallmeals.com**
 | Recipe unique title + meta + canonical | PASS |
 | Recipes in sitemap | PASS |
 | Internal discoverability | PASS |
-| **Overall** | **NEEDS WORK** |
+| **Overall** | **PASS** |
 
 ## URL counts
 
 | Metric | Count |
 |--------|------:|
 | **Total URLs in sitemap** | 513 |
-| **Total recipe URLs** (catalog indexes) | 365 |
-| Recipe URLs listed in sitemap | 365 |
-| **Total guide URLs** | 57 |
-| Guide URLs listed in sitemap | 61 |
-| Approved catalog (Explore / Recipes browse) | 392 |
+| **Total recipe URLs** (catalog indexes) | 397 |
+| Recipe URLs listed in sitemap | 397 |
+| **Total guide URLs** | 27 |
+| Guide URLs listed in sitemap | 31 |
+| Approved catalog (Explore / Recipes browse) | 424 |
 
 ## 1. Sitemap — required routes
 
@@ -40,7 +40,7 @@ Canonical origin: **https://www.firehallmeals.com**
 
 
 
-Hall guides index (`/guides`) plus **61** individual guide URLs. Explore catalog (`/explore`) plus **365** recipe/smoothie detail URLs.
+Hall guides index (`/guides`) plus **31** individual guide URLs. Explore catalog (`/explore`) plus **397** recipe/smoothie detail URLs.
 
 ## 2. robots.txt
 
@@ -57,6 +57,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -72,6 +75,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -87,6 +93,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -102,6 +111,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -117,6 +129,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -132,6 +147,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -147,6 +165,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -162,6 +183,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -177,6 +201,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -192,6 +219,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -207,6 +237,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -222,6 +255,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -237,6 +273,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -254,7 +293,7 @@ Sitemap: https://www.firehallmeals.com/sitemap.xml
 
 ## 3. Recipe page metadata
 
-Audited **365** indexable recipe URLs.
+Audited **397** indexable recipe URLs.
 
 | Issue | Count |
 |-------|------:|
@@ -274,10 +313,10 @@ Recipes should be reachable via **Explore / Recipes** (approved catalog) and/or 
 
 | Signal | Count |
 |--------|------:|
-| In approved catalog (Explore / Recipes grid) | 392 |
+| In approved catalog (Explore / Recipes grid) | 424 |
 | Hub-only (Pizza / Breakfast / Performance — not on Explore) | 18 |
-| Not linked from any hall guide | 282 |
-| Golden-family pages with &lt;2 outbound related links | 181 |
+| Not linked from any hall guide | 318 |
+| Golden-family pages with &lt;2 outbound related links | 203 |
 | **True orphan recipes** (no catalog hub, no guide link) | **0** |
 
 _No true orphans — every indexable recipe is reachable via Explore, a dedicated hub (/pizza, /breakfast), performance catalog, or a hall guide._
@@ -294,11 +333,10 @@ _No true orphans — every indexable recipe is reachable via Explore, a dedicate
 |-------|------:|
 | Indexable recipes missing from sitemap | 0 |
 | Published guides missing from sitemap | 0 |
-| Orphan sitemap URLs (no backing page) | 45 |
+| Orphan sitemap URLs (no backing page) | 0 |
 
 
 
-**Orphan sitemap paths:** /recipes/honey-chipotle-chicken-thighs, /recipes/smoked-chicken-quarters-white-sauce, /recipes/brisket-style-beef-sandwiches-au-jus, /recipes/hot-honey-grilled-sausage-peppers, /recipes/texas-central-brisket-crew, /recipes/firehall-burnt-ends-platter, /recipes/competition-bbq-chicken-thighs, /recipes/smoked-bbq-chicken-wings-tray, /recipes/hickory-smoked-chicken-breast, /recipes/santa-maria-tri-tip-roast, /recipes/reverse-seared-ribeye-crew, /recipes/smoked-picanha-steak-platter, /recipes/jalapeno-cheddar-smoked-sausages, /recipes/smoked-mac-and-cheese-crew, /recipes/smoked-baked-beans-crew, /recipes/smoked-potato-salad-tray, /recipes/lamb-merguez-skewers-crew, /recipes/pork-satay-skewers-crew, /recipes/gochujang-beef-skewers-crew, /recipes/caprese-steak-skewers-crew, /recipes/honey-sriracha-shrimp-skewers, /recipes/yakiniku-grill-platter-crew, /recipes/tandoori-lamb-chop-platter, /recipes/portuguese-linguica-grill-platter, /recipes/spiedie-chicken-platter-crew, /recipes/pollo-asado-citrus-platter, /recipes/mixed-lamb-chop-grill-board, /recipes/maple-bourbon-grilled-trout, /recipes/cajun-grilled-cod-crew, /recipes/grilled-cod-lemon-packets, /recipes/chili-lime-grilled-tilapia, /recipes/grilled-chicken-pesto-panini-crew, /recipes/pressed-cuban-sandwiches-crew, /recipes/grilled-reuben-sandwiches-crew, /recipes/andouille-po-boy-rolls-crew, /recipes/cast-iron-steak-fajita-sizzlers, /recipes/firehall-hibachi-mixed-grill-crew, /recipes/flat-top-philly-cheesesteaks-crew, /recipes/griddle-smash-sausage-peppers, /recipes/mongolian-beef-flat-top-crew, /recipes/firehall-street-elote-cups, /recipes/loaded-ranch-potato-salad-crew, /recipes/firehall-antipasto-pasta-salad, /recipes/grilled-peach-burrata-salad, /recipes/charred-broccolini-lemon-tray
 
 
 ## 6. Remediation log (browse unification)
@@ -323,12 +361,12 @@ Recipes excluded from Explore (duplicate hero imagery) are linked from hall guid
 | `spaghetti-aglio-e-olio-for-the-hall` | `/guides/easy-firehall-pasta-recipes` |
 | `crispy-chicken-cutlets` | `/guides/firehouse-comfort-meals` |
 | `four-step-chicken-piccata` | `/guides/rookie-firefighter-meal-guide` |
-| `french-onion-soup-for-the-hall` | `/guides/comfort-food-after-a-long-shift` |
-| `tomato-soup-grilled-cheese-croutons` | `/guides/comfort-food-after-a-long-shift` |
+| `french-onion-soup-for-the-hall` | `/guides/firehouse-comfort-meals` |
+| `tomato-soup-grilled-cheese-croutons` | `/guides/firehouse-comfort-meals` |
 | `sheet-pan-parmesan-dijon-chicken-thigh-dinner` | `/guides/fast-firehall-meals-under-30-minutes` |
-| `turkey-burgers` | `/guides/healthy-firefighter-meals-fill-you-up` |
+| `turkey-burgers` | `/guides/healthy-meals-that-still-taste-good` |
 | `classic-patty-melt-for-the-crew` | `/guides/10-classic-firehall-meals` |
-| `hall-blt-sandwich-feed` | `/guides/quick-meals-between-calls` |
+| `hall-blt-sandwich-feed` | `/guides/fast-firehall-meals-under-30-minutes` |
 
 ## Validation commands
 

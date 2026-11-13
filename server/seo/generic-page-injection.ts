@@ -106,6 +106,7 @@ import { pathShouldNoindex } from "./sitemap.js";
 import type { InjectionResult } from "./recipe-html-injection.js";
 import { GOLDEN_100_RECIPES } from "../../shared/golden-100/manifest.js";
 import { readBreakfastCatalogIndexFromDisk } from "../breakfast-catalog/page-store.js";
+import { listHallCatalogBreakfasts } from "../meal-catalog/load-index.js";
 
 const HOME_CATEGORY_CLUSTERS: FirehallCategoryId[] = [
   "crew_favorites",
@@ -591,6 +592,10 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
               label: r.title,
               path: `/breakfast/${r.slug}`,
             })),
+          },
+          {
+            heading: "More crew breakfasts",
+            links: listHallCatalogBreakfasts().map((r) => ({ label: r.title, path: recipePath(r.slug) })),
           },
           {
             heading: "Performance breakfasts",

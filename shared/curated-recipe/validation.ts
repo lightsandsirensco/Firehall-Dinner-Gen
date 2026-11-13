@@ -136,7 +136,7 @@ export const curatedRecipeInsertSchema = z.object({
 
   source: curatedSourceSchema,
 
-  generateResponse: z.record(z.unknown()).optional(),
+  generateResponse: z.record(z.string(), z.unknown()).optional(),
   legacyCatalogId: z.string().max(120).optional(),
 
   featured: z.boolean().optional(),
@@ -168,9 +168,9 @@ export const curatedRecipeInsertSchema = z.object({
       manualOverridePath: z.string().max(2000).nullable().optional(),
       regenerationCount: z.number().int().min(0).optional(),
       lqip: z.string().max(8000).optional(),
-      delivery: z.record(z.unknown()).optional(),
-      quality: z.record(z.unknown()).optional(),
-      social: z.record(z.unknown()).optional(),
+      delivery: z.record(z.string(), z.unknown()).optional(),
+      quality: z.record(z.string(), z.unknown()).optional(),
+      social: z.record(z.string(), z.unknown()).optional(),
     })
     .optional(),
 });

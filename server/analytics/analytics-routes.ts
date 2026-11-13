@@ -31,7 +31,7 @@ const eventSchema = z.object({
   event_type: z.enum(ANALYTICS_EVENT_TYPES),
   route: z.string().max(500).optional(),
   visitor_id: z.string().max(64).optional(),
-  metadata: z.record(z.union([z.string(), z.number(), z.boolean()])).optional(),
+  metadata: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])).optional(),
 });
 
 const batchSchema = z.object({

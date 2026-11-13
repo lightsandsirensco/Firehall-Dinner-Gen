@@ -20,7 +20,7 @@ export async function registerHallFeedbackRoutes(app: Express): Promise<void> {
     try {
       const parsed = hallFeedbackSubmitSchema.safeParse(req.body);
       if (!parsed.success) {
-        const first = parsed.error.errors[0]?.message || "Invalid feedback.";
+        const first = parsed.error.issues[0]?.message || "Invalid feedback.";
         return res.status(400).json({ ok: false, message: first });
       }
 

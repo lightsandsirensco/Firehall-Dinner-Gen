@@ -30,6 +30,7 @@ import type { EditorialArticle } from "../shared/editorial/content-schema.js";
 import type { BreakfastRecipePage } from "../shared/breakfast-schema.js";
 import type { FuelRecipePage } from "../shared/fuel-catalog/schema.js";
 import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
+import { listHallCatalogBreakfasts } from "../server/meal-catalog/load-index.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -238,7 +239,10 @@ function main(): void {
     catalogSlugs(path.join(PUBLIC, "catalog", "pizza-night")).map((r) => r.slug.toLowerCase()),
   );
   const breakfastSlugs = new Set(
-    catalogSlugs(path.join(PUBLIC, "catalog", "breakfast")).map((r) => r.slug.toLowerCase()),
+    [
+      ...catalogSlugs(path.join(PUBLIC, "catalog", "breakfast")),
+      ...listHallCatalogBreakfasts(),
+    ].map((r) => r.slug.toLowerCase()),
   );
   const performanceSlugs = new Set(
     catalogSlugs(path.join(PUBLIC, "catalog", "performance-meals")).map((r) => r.slug.toLowerCase()),
@@ -366,9 +370,13 @@ function main(): void {
   // 5 — Sitemap vs catalog
   const recipesMissingFromSitemap = [...recipeMap.keys()].filter((p) => !sitemapPaths.has(p));
   const guidesMissingFromSitemap = guidePaths.filter((p) => !sitemapPaths.has(p));
+  // BBQ pages are real but not in recipeMap (see collectIndexableRecipes).
+  const bbqRecipePaths = new Set(
+    catalogSlugs(path.join(PUBLIC, "catalog", "bbq")).map(({ slug }) => approvedCatalogRecipePath(slug)),
+  );
   const orphanSitemapUrls = [...sitemapPaths].filter((p) => {
     if (p.startsWith("/recipes/") || p.startsWith("/smoothies/")) {
-      return !recipeMap.has(p);
+      return !recipeMap.has(p) && !bbqRecipePaths.has(p);
     }
     if (GUIDE_TOPIC_HUB_PATHS.has(p)) return false;
     if (p.startsWith("/guides/") && p !== "/guides") {

@@ -9,6 +9,7 @@ import {
 } from "@shared/hall-expansion/recipe-page-paths";
 import { mergeHallCatalogIndexes } from "@shared/meal-catalog/unified-index";
 import { hallCatalogIndexPath } from "@shared/hall-catalog/paths";
+import { isBreakfastMeal } from "@shared/hall-catalog/isolation";
 import { pizzaNightCatalogIndexPath } from "@shared/pizza-night/recipe-page-paths";
 import { fetchApprovedCatalogTotal } from "@/lib/approved-catalog-api";
 import { fetchJsonResource } from "@/lib/fetch-json";
@@ -38,6 +39,17 @@ async function loadStaticCatalogIndex(): Promise<GoldenCatalogIndex> {
     return merged;
   }
   return golden;
+}
+
+/** Hall-catalog breakfasts (kept out of Explore); the /breakfast hub links them at /recipes/:slug. */
+export async function fetchHallCatalogBreakfasts(): Promise<GoldenCatalogIndex["recipes"]> {
+  const [golden, performance, expansion] = await Promise.all([
+    fetchJsonResource<GoldenCatalogIndex>(goldenCatalogIndexPath()),
+    fetchJsonResource<GoldenCatalogIndex>(performanceCatalogIndexPath()),
+    fetchJsonResource<GoldenCatalogIndex>(hallExpansionCatalogIndexPath()),
+  ]);
+  if (!golden) return [];
+  return mergeHallCatalogIndexes(golden, performance, expansion).recipes.filter((r) => isBreakfastMeal(r));
 }
 
 export async function fetchGoldenCatalogIndex(): Promise<GoldenCatalogIndex> {

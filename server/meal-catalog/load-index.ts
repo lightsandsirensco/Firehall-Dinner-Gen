@@ -69,14 +69,23 @@ function goldenIndexFromManifest(): GoldenCatalogIndex {
   };
 }
 
-export function loadMergedHallCatalogIndex(): GoldenCatalogIndex {
+function loadHallCatalogIndexesWithBreakfast(): GoldenCatalogIndex {
   const golden = readCatalogIndexFile(GOLDEN_CATALOG_PUBLIC_DIR) ?? goldenIndexFromManifest();
   const performance = readCatalogIndexFile(PERFORMANCE_CATALOG_PUBLIC_DIR);
   const expansion = readCatalogIndexFile(HALL_EXPANSION_CATALOG_PUBLIC_DIR);
-  const merged = mergeHallCatalogIndexes(golden, performance, expansion);
+  return mergeHallCatalogIndexes(golden, performance, expansion);
+}
+
+export function loadMergedHallCatalogIndex(): GoldenCatalogIndex {
+  const merged = loadHallCatalogIndexesWithBreakfast();
   // Breakfast meals must live in a separate file/catalog.
   const recipes = merged.recipes.filter((r) => !isBreakfastMeal(r));
   return { ...merged, recipeCount: recipes.length, recipes };
+}
+
+/** Hall-catalog breakfasts kept out of Explore above; the /breakfast hub links them at /recipes/:slug. */
+export function listHallCatalogBreakfasts(): GoldenCatalogIndex["recipes"] {
+  return loadHallCatalogIndexesWithBreakfast().recipes.filter((r) => isBreakfastMeal(r));
 }
 
 /**

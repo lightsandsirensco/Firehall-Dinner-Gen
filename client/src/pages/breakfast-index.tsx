@@ -10,6 +10,8 @@ import { buildBreakfastIndexSeo } from "@shared/seo/fuel-metadata";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema } from "@shared/seo/schema";
 import { fetchBreakfastCatalogIndex, fetchBreakfastPerformanceCatalogIndex } from "@/lib/breakfast-api";
+import { fetchHallCatalogBreakfasts } from "@/lib/golden-recipe-api";
+import { recipePath } from "@shared/seo/urls";
 import { FoodImage } from "@/components/mobile/food-image";
 import { cn } from "@/lib/utils";
 import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
@@ -30,7 +32,9 @@ const FILTERS = [
   { id: "healthy_breakfasts", label: "Healthier Firehouse" },
 ] as const;
 
-function RecipeCard({ r, href }: { r: BreakfastIndexEntry; href: string }) {
+type RecipeCardData = Pick<BreakfastIndexEntry, "title" | "subtitle" | "thumbImage" | "heroImage" | "totalTime">;
+
+function RecipeCard({ r, href }: { r: RecipeCardData; href: string }) {
   return (
     <Link
       href={href}
@@ -71,6 +75,12 @@ export default function BreakfastIndexPage() {
   const { data: performanceCatalog } = useQuery({
     queryKey: ["breakfast-performance-catalog-index"],
     queryFn: fetchBreakfastPerformanceCatalogIndex,
+    staleTime: 5 * 60 * 1000,
+  });
+
+  const { data: hallBreakfasts } = useQuery({
+    queryKey: ["hall-catalog-breakfasts"],
+    queryFn: fetchHallCatalogBreakfasts,
     staleTime: 5 * 60 * 1000,
   });
 
@@ -178,6 +188,19 @@ export default function BreakfastIndexPage() {
             <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {healthier.map((r) => (
                 <RecipeCard key={r.slug} r={r} href={breakfastRecipePath(r.slug)} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {(hallBreakfasts ?? []).length > 0 && (
+          <section className="mt-12" aria-labelledby="more-breakfasts-heading">
+            <h2 id="more-breakfasts-heading" className="font-heading text-xl">
+              More crew breakfasts
+            </h2>
+            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {hallBreakfasts!.map((r) => (
+                <RecipeCard key={r.slug} r={{ ...r, totalTime: r.cookTime }} href={recipePath(r.slug)} />
               ))}
             </div>
           </section>

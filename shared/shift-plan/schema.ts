@@ -44,7 +44,7 @@ export const shiftPlanFillSchema = z.object({
   shiftKey,
   mode: z.enum(["fill", "swap"]),
   slotKeys: z.array(slotKey).max(32).optional(),
-  base: z.record(z.unknown()),
+  base: z.record(z.string(), z.unknown()),
   /** Device-local recently cooked slugs (soft variety penalty, same as /api/generate). */
   recentSlugs: slugList(30).optional(),
   /** Slugs already shown for these slots this session — never re-served on swap. */
@@ -63,14 +63,14 @@ export const runItBackSchema = z
     shiftKey,
     sourceShiftKey: shiftKey.optional(),
     mode: z.enum(["copy", "refresh"]),
-    base: z.record(z.unknown()),
+    base: z.record(z.string(), z.unknown()),
     recentSlugs: slugList(30).optional(),
   })
   .strict();
 export type RunItBackInput = z.infer<typeof runItBackSchema>;
 
 /** Device pantry (Personal + Hall) — validated again by restorePantryProfile server-side. */
-const pantryProfile = z.object({ schemaVersion: z.number(), items: z.record(z.string()), updatedAt: z.string() }).passthrough();
+const pantryProfile = z.object({ schemaVersion: z.number(), items: z.record(z.string(), z.string()), updatedAt: z.string() }).passthrough();
 const pantryContext = z
   .object({ personal: pantryProfile.optional(), hall: pantryProfile.optional() })
   .refine((p) => JSON.stringify(p).length <= 32_000, "Pantry too large");

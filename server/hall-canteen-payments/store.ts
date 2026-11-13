@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import type { Database } from "better-sqlite3";
+import type { SqliteDatabase as Database } from "../sqlite.js";
 import { getHallMember, listHallMembers } from "../hall-membership/store.js";
 import {
   addFrequencyPeriod,

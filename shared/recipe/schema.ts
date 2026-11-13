@@ -175,7 +175,7 @@ export const recipeLegacyHintsSchema = z
     whyItFitsTonight: safeShort.optional(),
     cleanupTip: safeShort.optional(),
     proTips: z.array(z.string().trim().max(500)).max(8).optional(),
-    mealPlateJson: z.record(z.unknown()).optional(),
+    mealPlateJson: z.record(z.string(), z.unknown()).optional(),
   })
   .optional();
 
