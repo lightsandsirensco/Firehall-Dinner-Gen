@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 659,
-  "protein": 43,
+  "calories": 628,
+  "protein": 39,
   "carbs": 76,
-  "fats": 20,
+  "fats": 19,
   "tags": [
     "protein:turkey",
     "format:bowl",
@@ -194,12 +194,12 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 659,
-    "protein": 43,
+    "calories": 628,
+    "protein": 39,
     "carbs": 76,
-    "fats": 20,
-    "label": "~659 cal/serving · 43g protein (est.)",
-    "source": "estimated",
+    "fats": 19,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
@@ -212,7 +212,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg",

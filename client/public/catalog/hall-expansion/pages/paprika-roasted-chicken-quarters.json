@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 410,
-  "protein": 38,
+  "calories": 499,
+  "protein": 33,
   "carbs": 4,
-  "fats": 28,
+  "fats": 39,
   "tags": [
     "protein:chicken",
     "format:baked",
@@ -155,23 +155,23 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 410,
-    "protein": 38,
+    "calories": 499,
+    "protein": 33,
     "carbs": 4,
-    "fats": 28,
-    "label": "~410 cal/serving · 38g protein (est.)",
-    "source": "estimated",
+    "fats": 39,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }

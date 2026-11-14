@@ -104,11 +104,11 @@
     }
   ],
   "nutrition": {
-    "calories": 1013,
-    "protein": 60,
+    "calories": 900,
+    "protein": 38,
     "carbs": 35,
-    "fat": 70,
-    "label": "per serving (hall portion)",
+    "fat": 68,
+    "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {

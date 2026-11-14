@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 504,
-  "protein": 32,
-  "carbs": 2,
-  "fats": 40,
+  "calories": 312,
+  "protein": 20,
+  "carbs": 3,
+  "fats": 24,
   "tags": [
     "protein:seafood",
     "format:skillet",
@@ -128,19 +128,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 504,
-    "protein": 32,
-    "carbs": 2,
-    "fats": 40,
-    "label": "per serving (hall portion)",
+    "calories": 312,
+    "protein": 20,
+    "carbs": 3,
+    "fats": 24,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,

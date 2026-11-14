@@ -13,10 +13,10 @@
   "cookTime": 360,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 692,
+  "calories": 534,
   "protein": 60,
   "carbs": 32,
-  "fats": 34,
+  "fats": 17,
   "tags": [
     "protein:chicken",
     "format:slow_cooker",
@@ -197,25 +197,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 692,
+    "calories": 534,
     "protein": 60,
     "carbs": 32,
-    "fats": 34,
+    "fats": 17,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",

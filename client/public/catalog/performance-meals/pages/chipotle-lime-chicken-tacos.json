@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 712,
+  "calories": 585,
   "protein": 54,
   "carbs": 51,
-  "fats": 32,
+  "fats": 19,
   "tags": [
     "protein:chicken",
     "format:tacos",
@@ -154,17 +154,17 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 712,
+    "calories": 585,
     "protein": 54,
     "carbs": 51,
-    "fats": 32,
+    "fats": 19,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -172,7 +172,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/chipotle-lime-chicken-tacos.jpg",

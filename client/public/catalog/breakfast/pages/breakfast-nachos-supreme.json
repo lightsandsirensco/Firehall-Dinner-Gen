@@ -106,15 +106,15 @@
     }
   ],
   "nutrition": {
-    "calories": 611,
-    "protein": 37,
+    "calories": 554,
+    "protein": 26,
     "carbs": 12,
-    "fat": 46,
-    "label": "per serving (hall portion)",
+    "fat": 45,
+    "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
@@ -122,7 +122,7 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }

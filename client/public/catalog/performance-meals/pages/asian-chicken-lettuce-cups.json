@@ -13,10 +13,10 @@
   "cookTime": 15,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 435,
-  "protein": 41,
+  "calories": 386,
+  "protein": 35,
   "carbs": 9,
-  "fats": 26,
+  "fats": 24,
   "tags": [
     "protein:chicken",
     "format:handheld",
@@ -154,10 +154,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 435,
-    "protein": 41,
+    "calories": 386,
+    "protein": 35,
     "carbs": 9,
-    "fats": 26,
+    "fats": 24,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -172,7 +172,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/asian-chicken-lettuce-cups.jpg",

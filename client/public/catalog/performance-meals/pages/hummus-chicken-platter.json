@@ -13,10 +13,10 @@
   "cookTime": 22,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 716,
-  "protein": 85,
+  "calories": 614,
+  "protein": 65,
   "carbs": 32,
-  "fats": 27,
+  "fats": 25,
   "tags": [
     "protein:chicken",
     "format:plated",
@@ -155,16 +155,16 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 716,
-    "protein": 85,
+    "calories": 614,
+    "protein": 65,
     "carbs": 32,
-    "fats": 27,
+    "fats": 25,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
@@ -173,7 +173,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/hummus-chicken-platter.jpg",

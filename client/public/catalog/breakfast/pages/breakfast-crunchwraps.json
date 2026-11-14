@@ -108,7 +108,7 @@
     "protein": 32,
     "carbs": 32,
     "fat": 40,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {

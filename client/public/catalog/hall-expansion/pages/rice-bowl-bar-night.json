@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 490,
-  "protein": 32,
-  "carbs": 58,
-  "fats": 14,
+  "calories": 715,
+  "protein": 49,
+  "carbs": 67,
+  "fats": 28,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -158,25 +158,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 490,
-    "protein": 32,
-    "carbs": 58,
-    "fats": 14,
-    "label": "~490 cal/serving · 32g protein (est.)",
-    "source": "estimated",
+    "calories": 715,
+    "protein": 49,
+    "carbs": 67,
+    "fats": 28,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": true
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/rice-bowl-bar-night.jpg",

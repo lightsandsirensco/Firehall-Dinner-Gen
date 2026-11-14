@@ -14,9 +14,9 @@
   "prepTime": 30,
   "difficulty": "medium",
   "calories": 1400,
-  "protein": 72,
+  "protein": 58,
   "carbs": 109,
-  "fats": 77,
+  "fats": 82,
   "tags": [
     "protein:beef",
     "format:burger",
@@ -185,9 +185,9 @@
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 1400,
-    "protein": 72,
+    "protein": 58,
     "carbs": 109,
-    "fats": 77,
+    "fats": 82,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,

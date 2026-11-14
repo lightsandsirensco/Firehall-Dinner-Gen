@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 635,
+  "calories": 588,
   "protein": 38,
   "carbs": 45,
-  "fats": 33,
+  "fats": 28,
   "tags": [
     "protein:mixed",
     "format:one_pot",
@@ -119,17 +119,17 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 635,
+    "calories": 588,
     "protein": 38,
     "carbs": 45,
-    "fats": 33,
+    "fats": 28,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false

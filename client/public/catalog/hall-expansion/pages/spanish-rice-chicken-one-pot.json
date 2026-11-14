@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 650,
-  "protein": 42,
-  "carbs": 72,
-  "fats": 20,
+  "calories": 891,
+  "protein": 74,
+  "carbs": 112,
+  "fats": 14,
   "tags": [
     "protein:chicken",
     "format:one_pot",
@@ -166,16 +166,16 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 650,
-    "protein": 42,
-    "carbs": 72,
-    "fats": 20,
-    "label": "~650 cal/serving · 42g protein (est.)",
-    "source": "estimated",
+    "calories": 891,
+    "protein": 74,
+    "carbs": 112,
+    "fats": 14,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
@@ -184,7 +184,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",

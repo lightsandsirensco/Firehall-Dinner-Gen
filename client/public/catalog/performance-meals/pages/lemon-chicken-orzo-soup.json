@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 325,
-  "protein": 42,
+  "calories": 274,
+  "protein": 33,
   "carbs": 22,
-  "fats": 6,
+  "fats": 5,
   "tags": [
     "protein:chicken",
     "format:soup",
@@ -156,15 +156,15 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 325,
-    "protein": 42,
+    "calories": 274,
+    "protein": 33,
     "carbs": 22,
-    "fats": 6,
+    "fats": 5,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
@@ -172,7 +172,7 @@
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
     }

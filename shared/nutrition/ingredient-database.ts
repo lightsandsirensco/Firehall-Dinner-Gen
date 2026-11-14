@@ -13,28 +13,58 @@ export interface IngredientNutritionProfile {
   unitGrams?: Record<string, number>;
 }
 
-/** Sorted longest-keyword-first at lookup time. */
+/**
+ * Sorted longest-keyword-first at lookup time. Names are matched after
+ * punctuation becomes spaces, so "bone-in" must be written "bone in".
+ *
+ * Raw meat and seafood are priced and listed by RAW purchase weight, so their
+ * profiles are USDA SR28 raw values (NDB number noted). Bone-in cuts are per
+ * 100 g as purchased: the SR28 bone refuse is already taken out.
+ */
 export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
-  { keywords: ["ground beef", "beef chuck", "stew beef", "beef sirloin", "beef brisket", "beef short rib", "beef short ribs", "beef ribs", "plate style ribs", "brisket point", "packer brisket", "brisket", "chuck", "burnt ends", "beef shank", "beef eye round", "beef round"], calories: 250, protein: 26, carbs: 0, fat: 17, unitGrams: { lb: 454, oz: 28, count: 113 } },
-  { keywords: ["ground turkey", "turkey breast", "turkey thigh", "turkey sausage", "turkey leg", "turkey legs", "whole turkey"], calories: 170, protein: 22, carbs: 0, fat: 8, unitGrams: { lb: 454, oz: 28, leg: 454 } },
-  { keywords: ["ground chicken"], calories: 172, protein: 21, carbs: 0, fat: 9, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 23572 ground beef 80/20 raw (brisket 13803 and chuck 13809 are within 5%).
+  { keywords: ["ground beef", "beef chuck", "stew beef", "beef sirloin", "beef brisket", "beef short rib", "beef short ribs", "beef ribs", "plate style ribs", "brisket point", "packer brisket", "brisket", "chuck", "burnt ends", "beef shank", "beef eye round", "beef round"], calories: 254, protein: 17.2, carbs: 0, fat: 20, unitGrams: { lb: 454, oz: 28, count: 113 } },
+  // NDB 05305 ground turkey raw.
+  { keywords: ["ground turkey", "turkey breast", "turkey thigh", "turkey sausage", "turkey leg", "turkey legs", "whole turkey"], calories: 148, protein: 19.7, carbs: 0, fat: 7.7, unitGrams: { lb: 454, oz: 28, leg: 454 } },
+  // NDB 05332.
+  { keywords: ["ground chicken"], calories: 143, protein: 17.4, carbs: 0, fat: 8.1, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 05096 thigh meat only raw.
   {
-    keywords: ["boneless skinless chicken thighs", "boneless chicken thighs", "chicken thighs raw"],
-    calories: 177,
+    keywords: ["boneless skinless chicken thighs", "boneless chicken thighs", "chicken thighs raw", "chicken thigh", "chicken thighs"],
+    calories: 121,
     protein: 19.7,
     carbs: 0,
-    fat: 10,
+    fat: 4.1,
     unitGrams: { lb: 454, oz: 28, pieces: 113 },
   },
-  { keywords: ["chicken breast", "chicken breasts", "boneless skinless chicken breasts", "chicken thigh", "chicken thighs", "bone-in chicken thighs", "chicken drumstick", "chicken quarters", "chicken leg quarters", "split chicken", "rotisserie chicken", "shredded chicken", "cooked shredded chicken", "whole chicken", "bone-in thighs", "bone-in chicken"], calories: 165, protein: 31, carbs: 0, fat: 3.6, unitGrams: { lb: 454, oz: 28, pieces: 113 } },
+  // NDB 05062 breast meat only raw.
+  { keywords: ["chicken breast", "chicken breasts", "boneless skinless chicken breasts"], calories: 120, protein: 22.5, carbs: 0, fat: 2.6, unitGrams: { lb: 454, oz: 28, pieces: 113 } },
+  // NDB 05006 whole broiler meat and skin raw, less 32% bone. A bird is 920 g edible (SR28: half, bone removed = 460 g) ÷ 0.68.
+  { keywords: ["whole chicken", "whole chickens", "split chicken", "spatchcock chicken", "spatchcocked chicken"], calories: 146, protein: 12.6, carbs: 0, fat: 10.2, unitGrams: { lb: 454, oz: 28, count: 1350, whole: 1350 } },
+  // Already cooked.
+  { keywords: ["rotisserie chicken", "shredded chicken", "cooked shredded chicken"], calories: 165, protein: 31, carbs: 0, fat: 3.6, unitGrams: { lb: 454, oz: 28, pieces: 113 } },
   { keywords: ["breakfast sausage", "italian sausage", "pork sausage", "kielbasa", "smoked kielbasa", "sausage"], calories: 325, protein: 18, carbs: 2, fat: 27, unitGrams: { lb: 454, oz: 28, link: 68, patty: 45 } },
   { keywords: ["chorizo"], calories: 455, protein: 24, carbs: 4, fat: 38, unitGrams: { lb: 454, oz: 28, link: 60 } },
-  { keywords: ["ground pork"], calories: 297, protein: 26, carbs: 0, fat: 22, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 10219.
+  { keywords: ["ground pork"], calories: 263, protein: 16.9, carbs: 0, fat: 21.2, unitGrams: { lb: 454, oz: 28 } },
   { keywords: ["pork belly", "skinless pork belly"], calories: 518, protein: 9.3, carbs: 0, fat: 53, unitGrams: { lb: 454, oz: 28 } },
   { keywords: ["turkey bacon"], calories: 150, protein: 12, carbs: 1, fat: 11, unitGrams: { lb: 454, oz: 28, slice: 14 } },
-  { keywords: ["bacon"], calories: 541, protein: 37, carbs: 1.4, fat: 42, unitGrams: { lb: 454, oz: 28, slice: 8 } },
-  { keywords: ["pork shoulder", "pork butt", "pulled pork", "pork chop", "pork chops", "pork tenderloin", "pork loin"], calories: 242, protein: 27, carbs: 0, fat: 14, unitGrams: { lb: 454, oz: 28, slice: 8 } },
-  { keywords: ["salmon fillet", "salmon", "cod", "tilapia", "trout", "rainbow trout", "whole rainbow trout", "whole trout", "shrimp", "white fish"], calories: 206, protein: 22, carbs: 0, fat: 12, unitGrams: { lb: 454, oz: 28, pieces: 170, count: 170 } },
+  // NDB 10123 bacon unprepared; slice weight is raw.
+  { keywords: ["bacon"], calories: 417, protein: 12.6, carbs: 1.3, fat: 39.7, unitGrams: { lb: 454, oz: 28, slice: 28 } },
+  // NDB 10070 shoulder raw.
+  { keywords: ["pork shoulder", "pork butt"], calories: 236, protein: 17.2, carbs: 0, fat: 18, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 10020 loin raw.
+  { keywords: ["pork chop", "pork chops", "pork loin"], calories: 198, protein: 19.7, carbs: 0, fat: 12.6, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 10060.
+  { keywords: ["pork tenderloin"], calories: 109, protein: 21, carbs: 0, fat: 2.2, unitGrams: { lb: 454, oz: 28 } },
+  // Already cooked.
+  { keywords: ["pulled pork"], calories: 242, protein: 27, carbs: 0, fat: 14, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 15236 Atlantic salmon, farmed, raw.
+  { keywords: ["salmon fillet", "salmon"], calories: 208, protein: 20.4, carbs: 0, fat: 13.4, unitGrams: { lb: 454, oz: 28, pieces: 170, count: 170 } },
+  // NDB 15015 Atlantic cod raw.
+  { keywords: ["cod", "white fish"], calories: 82, protein: 17.8, carbs: 0, fat: 0.7, unitGrams: { lb: 454, oz: 28, pieces: 170, count: 170 } },
+  // NDB 15149 shrimp raw.
+  { keywords: ["shrimp"], calories: 71, protein: 13.6, carbs: 0.9, fat: 1, unitGrams: { lb: 454, oz: 28, count: 7 } },
   { keywords: ["egg white", "egg whites", "liquid egg whites"], calories: 52, protein: 11, carbs: 0.7, fat: 0.2, unitGrams: { count: 33, large: 33, egg: 33, eggs: 33, cup: 243, carton: 454 } },
   { keywords: ["egg", "eggs", "large eggs"], calories: 143, protein: 13, carbs: 0.7, fat: 10, unitGrams: { count: 50, large: 50, medium: 44, egg: 50, eggs: 50 } },
   { keywords: ["flour tortilla", "flour tortillas", "tortilla", "tortillas", "wrap"], calories: 312, protein: 8, carbs: 52, fat: 8, unitGrams: { count: 45, tortilla: 45 } },
@@ -106,9 +136,18 @@ export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
   { keywords: ["mayonnaise", "mayo", "aioli"], calories: 680, protein: 1, carbs: 0.6, fat: 75, unitGrams: { cup: 220, tbsp: 14 } },
   { keywords: ["mustard", "ketchup"], calories: 60, protein: 3, carbs: 5, fat: 3, unitGrams: { tbsp: 15, cup: 240 } },
   { keywords: ["prepared mac and cheese", "boxed mac and cheese", "mac and cheese cup"], calories: 350, protein: 12, carbs: 48, fat: 12, unitGrams: { cup: 200, lb: 454 } },
-  { keywords: ["steak", "ny strip", "ribeye", "sirloin", "flank steak", "skirt steak", "tri-tip", "tri tip", "tri tip roast"], calories: 271, protein: 26, carbs: 0, fat: 18, unitGrams: { lb: 454, oz: 28 } },
-  { keywords: ["trout", "rainbow trout", "grilled trout"], calories: 190, protein: 22, carbs: 0, fat: 10, unitGrams: { lb: 454, oz: 28 } },
-  { keywords: ["tilapia", "ancho-tilapia"], calories: 128, protein: 26, carbs: 0, fat: 3, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 13929 top sirloin raw.
+  { keywords: ["steak", "sirloin", "tri tip", "tri tip roast"], calories: 201, protein: 20.3, carbs: 0, fat: 12.7, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 13909 top loin raw.
+  { keywords: ["ny strip", "strip steak", "new york strip"], calories: 228, protein: 20.6, carbs: 0, fat: 15.5, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 13850 rib small end raw.
+  { keywords: ["ribeye", "rib eye"], calories: 254, protein: 19.3, carbs: 0, fat: 19.1, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 13065 flank raw.
+  { keywords: ["flank steak", "skirt steak"], calories: 165, protein: 21.2, carbs: 0, fat: 8.3, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 15240 rainbow trout, farmed, raw.
+  { keywords: ["trout", "rainbow trout", "whole rainbow trout", "whole trout", "grilled trout"], calories: 141, protein: 19.9, carbs: 0, fat: 6.2, unitGrams: { lb: 454, oz: 28, pieces: 170, count: 170 } },
+  // NDB 15261 tilapia raw.
+  { keywords: ["tilapia", "ancho tilapia"], calories: 96, protein: 20.1, carbs: 0, fat: 1.7, unitGrams: { lb: 454, oz: 28, pieces: 170, count: 170 } },
   { keywords: ["zucchini", "zucchini noodles", "zoodles"], calories: 17, protein: 1.2, carbs: 3.1, fat: 0.3, unitGrams: { cup: 120, lb: 454 } },
   { keywords: ["tabbouleh", "bulgur wheat", "bulgur"], calories: 342, protein: 12, carbs: 76, fat: 1.3, unitGrams: { cup: 140, lb: 454 } },
   { keywords: ["tempeh"], calories: 193, protein: 20, carbs: 8, fat: 11, unitGrams: { lb: 454, block: 227, oz: 28 } },
@@ -118,9 +157,12 @@ export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
   { keywords: ["cottage cheese"], calories: 98, protein: 11, carbs: 3.4, fat: 4.3, unitGrams: { cup: 225 } },
   { keywords: ["almond milk", "oat milk"], calories: 30, protein: 1, carbs: 3, fat: 2.5, unitGrams: { cup: 240 } },
   { keywords: ["pearl barley", "barley"], calories: 354, protein: 12.5, carbs: 73.5, fat: 2.3, unitGrams: { cup: 200, lb: 454 } },
-  { keywords: ["beef stew meat", "stew meat", "beef chuck", "chuck roast"], calories: 250, protein: 26, carbs: 0, fat: 17, unitGrams: { lb: 454, oz: 28 } },
-  { keywords: ["ground lamb"], calories: 243, protein: 25, carbs: 0, fat: 16, unitGrams: { lb: 454, oz: 28 } },
-  { keywords: ["spare ribs", "baby back ribs", "pork ribs", "st louis ribs", "rib racks", "pork spare ribs"], calories: 290, protein: 24, carbs: 0, fat: 21, unitGrams: { rack: 900, lb: 454, oz: 28 } },
+  // NDB 13809 chuck arm pot roast raw.
+  { keywords: ["beef stew meat", "stew meat", "chuck roast"], calories: 244, protein: 19.2, carbs: 0, fat: 18, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 17224.
+  { keywords: ["ground lamb"], calories: 282, protein: 16.6, carbs: 0, fat: 23.4, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 10088 spareribs raw, less 30% bone.
+  { keywords: ["spare ribs", "spareribs", "baby back ribs", "pork ribs", "st louis ribs", "st louis spare ribs", "rib racks", "pork spare ribs"], calories: 194, protein: 10.8, carbs: 0, fat: 16.4, unitGrams: { rack: 900, lb: 454, oz: 28 } },
   { keywords: ["baking powder"], calories: 53, protein: 0, carbs: 28, fat: 0, unitGrams: { tbsp: 14, tsp: 4 } },
   { keywords: ["feta cheese", "feta", "kalamata olives", "olives"], calories: 264, protein: 14, carbs: 4, fat: 21, unitGrams: { cup: 150, oz: 28 } },
   { keywords: ["cherry tomatoes", "grape tomatoes"], calories: 18, protein: 0.9, carbs: 3.9, fat: 0.2, unitGrams: { pint: 280, cup: 150 } },
@@ -157,7 +199,8 @@ export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
   { keywords: ["gochujang"], calories: 220, protein: 5, carbs: 44, fat: 2, unitGrams: { tbsp: 20, cup: 320 } },
   { keywords: ["farro"], calories: 340, protein: 13, carbs: 68, fat: 2.5, unitGrams: { cup: 175, lb: 454 } },
   { keywords: ["orzo", "whole wheat orzo"], calories: 371, protein: 13, carbs: 77, fat: 1.5, unitGrams: { cup: 180, lb: 454 } },
-  { keywords: ["chicken wing", "chicken wings"], calories: 203, protein: 30.5, carbs: 0, fat: 8.1, unitGrams: { lb: 454, oz: 28, count: 90 } },
+  // NDB 05100 wing meat and skin raw, less 38% bone.
+  { keywords: ["chicken wing", "chicken wings"], calories: 118, protein: 10.9, carbs: 0, fat: 8, unitGrams: { lb: 454, oz: 28, count: 90 } },
   { keywords: ["beef hot dog", "beef hot dogs", "hot dog", "hot dogs", "frankfurter"], calories: 290, protein: 10, carbs: 4, fat: 26, unitGrams: { count: 45, lb: 454, oz: 28 } },
   { keywords: ["ramen noodles"], calories: 188, protein: 5, carbs: 25, fat: 7, unitGrams: { cup: 170, oz: 28, lb: 454 } },
   { keywords: ["crushed roasted peanuts", "roasted peanuts", "peanuts"], calories: 567, protein: 25, carbs: 16, fat: 49, unitGrams: { tbsp: 9, cup: 146, oz: 28 } },
@@ -165,8 +208,10 @@ export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
   // --- Protein cuts missing from the base list (root-caused near-zero protein/calories) ---
   { keywords: ["linguica", "portuguese sausage"], calories: 307, protein: 16, carbs: 2, fat: 25, unitGrams: { lb: 454, oz: 28, link: 100 } },
   { keywords: ["picanha", "picanha roast", "sirloin cap", "rump cap"], calories: 271, protein: 25, carbs: 0, fat: 18, unitGrams: { lb: 454, oz: 28 } },
-  { keywords: ["lamb chop", "lamb chops", "lamb loin chop", "lamb loin chops", "lamb rib chop", "lamb rib chops", "lamb shoulder chop", "lamb shoulder chops", "rack of lamb", "lamb leg", "leg of lamb"], calories: 258, protein: 25, carbs: 0, fat: 17, unitGrams: { lb: 454, oz: 28, piece: 130, pieces: 130, count: 130 } },
-  { keywords: ["short rib", "short ribs", "boneless short rib", "boneless short ribs", "bone-in short rib", "bone-in short ribs"], calories: 295, protein: 22, carbs: 0, fat: 23, unitGrams: { lb: 454, oz: 28 } },
+  // NDB 17011 leg raw (boneless weight; chops are not bone-adjusted).
+  { keywords: ["lamb chop", "lamb chops", "lamb loin chop", "lamb loin chops", "lamb rib chop", "lamb rib chops", "lamb shoulder chop", "lamb shoulder chops", "rack of lamb", "lamb leg", "leg of lamb"], calories: 230, protein: 17.9, carbs: 0, fat: 17.1, unitGrams: { lb: 454, oz: 28, piece: 130, pieces: 130, count: 130 } },
+  // NDB 23128 boneless short ribs raw (bone-in weight is not adjusted).
+  { keywords: ["short rib", "short ribs", "boneless short rib", "boneless short ribs", "bone in short rib", "bone in short ribs"], calories: 235, protein: 17.5, carbs: 0, fat: 18.3, unitGrams: { lb: 454, oz: 28 } },
   { keywords: ["corned beef"], calories: 251, protein: 18, carbs: 0.4, fat: 19, unitGrams: { lb: 454, oz: 28, slice: 28 } },
   { keywords: ["bratwurst"], calories: 283, protein: 13, carbs: 2, fat: 25, unitGrams: { lb: 454, oz: 28, link: 85, links: 85 } },
   { keywords: ["scrapple"], calories: 218, protein: 9, carbs: 10, fat: 16, unitGrams: { lb: 454, oz: 28, slice: 28 } },
@@ -174,8 +219,14 @@ export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
   { keywords: ["roast beef", "deli roast beef", "sliced roast beef", "cooked roast beef", "pulled beef"], calories: 143, protein: 22, carbs: 0, fat: 6, unitGrams: { lb: 454, oz: 28, slice: 28 } },
   { keywords: ["canned tuna", "tuna packed in water", "tuna in water"], calories: 116, protein: 26, carbs: 0, fat: 1, unitGrams: { can: 142, cans: 142, oz: 28, lb: 454 } },
   { keywords: ["black pudding", "blood sausage"], calories: 297, protein: 14, carbs: 15, fat: 22, unitGrams: { lb: 454, oz: 28, slice: 28 } },
-  { keywords: ["chicken cutlet", "chicken cutlets", "chicken cutlets pounded thin", "thin-sliced chicken breast"], calories: 165, protein: 31, carbs: 0, fat: 3.6, unitGrams: { lb: 454, oz: 28, count: 140 } },
-  { keywords: ["chicken legs and thighs", "chicken legs", "chicken leg", "bone-in chicken legs"], calories: 172, protein: 24, carbs: 0, fat: 8, unitGrams: { lb: 454, oz: 28, count: 200 } },
+  // NDB 05062 breast meat only raw.
+  { keywords: ["chicken cutlet", "chicken cutlets", "chicken cutlets pounded thin", "thin sliced chicken breast"], calories: 120, protein: 22.5, carbs: 0, fat: 2.6, unitGrams: { lb: 454, oz: 28, count: 140 } },
+  // NDB 05075 leg meat and skin raw, less 27% bone. Piece weights are SR28 as-purchased:
+  // leg 344 g (thigh 185 g + drumstick 111 g + back 49 g).
+  { keywords: ["bone in chicken thighs", "bone in thighs", "bone in chicken", "bone in skin on chicken thighs", "bone in skin on thighs"], calories: 156, protein: 12, carbs: 0.1, fat: 11.6, unitGrams: { lb: 454, oz: 28, count: 185, piece: 185, pieces: 185 } },
+  { keywords: ["chicken drumstick", "chicken drumsticks", "drumsticks"], calories: 156, protein: 12, carbs: 0.1, fat: 11.6, unitGrams: { lb: 454, oz: 28, count: 111, piece: 111, pieces: 111 } },
+  { keywords: ["chicken legs and thighs", "chicken quarters", "chicken leg quarters", "leg quarters"], calories: 156, protein: 12, carbs: 0.1, fat: 11.6, unitGrams: { lb: 454, oz: 28, count: 344, piece: 344, pieces: 344 } },
+  { keywords: ["chicken legs", "chicken leg", "bone in chicken legs"], calories: 156, protein: 12, carbs: 0.1, fat: 11.6, unitGrams: { lb: 454, oz: 28, count: 200 } },
   { keywords: ["cooked chicken shredded", "shredded cooked chicken", "cooked chicken"], calories: 190, protein: 29, carbs: 0, fat: 7.4, unitGrams: { lb: 454, oz: 28, cup: 140 } },
   { keywords: ["pancetta"], calories: 458, protein: 27, carbs: 0.3, fat: 38, unitGrams: { lb: 454, oz: 28, slice: 10 } },
   { keywords: ["prosciutto"], calories: 271, protein: 27, carbs: 1, fat: 18, unitGrams: { lb: 454, oz: 28, slice: 15 } },

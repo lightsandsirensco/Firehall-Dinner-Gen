@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 420,
-  "protein": 18,
-  "carbs": 42,
-  "fats": 20,
+  "calories": 449,
+  "protein": 19,
+  "carbs": 14,
+  "fats": 35,
   "tags": [
     "protein:pork",
     "format:sheet_pan",
@@ -159,24 +159,24 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 420,
-    "protein": 18,
-    "carbs": 42,
-    "fats": 20,
-    "label": "~420 cal/serving · 18g protein (est.)",
-    "source": "estimated",
+    "calories": 449,
+    "protein": 19,
+    "carbs": 14,
+    "fats": 35,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": false,
+      "lowCarb": true,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },

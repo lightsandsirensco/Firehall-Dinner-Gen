@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 678,
+  "calories": 551,
   "protein": 50,
   "carbs": 28,
-  "fats": 39,
+  "fats": 26,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -158,17 +158,17 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 678,
+    "calories": 551,
     "protein": 50,
     "carbs": 28,
-    "fats": 39,
+    "fats": 26,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true

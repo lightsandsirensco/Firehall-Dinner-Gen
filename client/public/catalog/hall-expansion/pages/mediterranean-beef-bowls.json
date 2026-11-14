@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 640,
-  "protein": 40,
-  "carbs": 65,
-  "fats": 25,
+  "calories": 758,
+  "protein": 44,
+  "carbs": 27,
+  "fats": 53,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -215,25 +215,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 640,
-    "protein": 40,
-    "carbs": 65,
-    "fats": 25,
-    "label": "~640 cal/serving · 40g protein (est.)",
-    "source": "estimated",
+    "calories": 758,
+    "protein": 44,
+    "carbs": 27,
+    "fats": 53,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/mediterranean-beef-bowls.jpg",

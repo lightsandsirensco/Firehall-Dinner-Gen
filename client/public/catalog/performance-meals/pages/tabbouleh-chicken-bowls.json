@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 555,
-  "protein": 67,
+  "calories": 465,
+  "protein": 50,
   "carbs": 33,
-  "fats": 17,
+  "fats": 15,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -151,10 +151,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 555,
-    "protein": 67,
+    "calories": 465,
+    "protein": 50,
     "carbs": 33,
-    "fats": 17,
+    "fats": 15,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -168,7 +168,7 @@
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": true
     }
   },

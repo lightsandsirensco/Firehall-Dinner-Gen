@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 397,
-  "protein": 46,
+  "calories": 817,
+  "protein": 54,
   "carbs": 36,
-  "fats": 7,
+  "fats": 50,
   "tags": [
     "protein:chicken",
     "format:smokehouse_board",
@@ -176,25 +176,25 @@
   "mealPrepNotes": "Marinate 4–12 hours. Griddle medium 400°F skin-side down first, 35 minutes total. Hold covered at 170°F up to 40 minutes. Jicama chars last 6 minutes.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 397,
-    "protein": 46,
+    "calories": 817,
+    "protein": 54,
     "carbs": 36,
-    "fats": 7,
+    "fats": 50,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/smoker-catalog/pollo-asado-citrus-platter.jpg",

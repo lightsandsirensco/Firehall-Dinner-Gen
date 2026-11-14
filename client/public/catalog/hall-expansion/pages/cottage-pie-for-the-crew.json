@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 35,
   "difficulty": "easy",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 24,
+  "calories": 650,
+  "protein": 33,
+  "carbs": 40,
+  "fats": 39,
   "tags": [
     "protein:beef",
     "format:bake",
@@ -163,17 +163,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 24,
-    "label": "~520 cal/serving · 32g protein (est.)",
-    "source": "estimated",
+    "calories": 650,
+    "protein": 33,
+    "carbs": 40,
+    "fats": 39,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -181,7 +181,7 @@
     "badgeCandidates": {
       "highProtein": false,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/cottage-pie-for-the-crew.jpg",

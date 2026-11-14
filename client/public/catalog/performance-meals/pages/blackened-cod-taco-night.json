@@ -13,10 +13,10 @@
   "cookTime": 12,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 809,
-  "protein": 54,
+  "calories": 563,
+  "protein": 46,
   "carbs": 55,
-  "fats": 42,
+  "fats": 19,
   "tags": [
     "protein:fish",
     "format:tacos",
@@ -153,17 +153,17 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 809,
-    "protein": 54,
+    "calories": 563,
+    "protein": 46,
     "carbs": 55,
-    "fats": 42,
+    "fats": 19,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -171,7 +171,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/blackened-cod-taco-night.jpg",

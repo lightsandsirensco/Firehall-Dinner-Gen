@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 34,
+  "calories": 533,
+  "protein": 28,
   "carbs": 52,
-  "fats": 16,
+  "fats": 22,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -158,12 +158,12 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 34,
+    "calories": 533,
+    "protein": 28,
     "carbs": 52,
-    "fats": 16,
-    "label": "~480 cal/serving · 34g protein (est.)",
-    "source": "estimated",
+    "fats": 22,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
@@ -175,8 +175,8 @@
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": true
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",

@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 500,
-  "protein": 58,
+  "calories": 424,
+  "protein": 44,
   "carbs": 4,
-  "fats": 27,
+  "fats": 25,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -119,10 +119,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 500,
-    "protein": 58,
+    "calories": 424,
+    "protein": 44,
     "carbs": 4,
-    "fats": 27,
+    "fats": 25,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -137,7 +137,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/creamy-tuscan-chicken.jpg",

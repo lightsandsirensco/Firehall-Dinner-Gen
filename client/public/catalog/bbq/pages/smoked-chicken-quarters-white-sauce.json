@@ -13,10 +13,10 @@
   "cookTime": 120,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 574,
-  "protein": 40,
+  "calories": 924,
+  "protein": 47,
   "carbs": 44,
-  "fats": 25,
+  "fats": 61,
   "tags": [
     "protein:chicken",
     "format:bbq",
@@ -197,17 +197,17 @@
   ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 574,
-    "protein": 40,
+    "calories": 924,
+    "protein": 47,
     "carbs": 44,
-    "fats": 25,
+    "fats": 61,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -215,7 +215,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/smoker-catalog/smoked-chicken-quarters-white-sauce.jpg",

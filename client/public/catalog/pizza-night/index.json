@@ -68,10 +68,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 93,
-        "carbs": 143,
-        "fat": 47,
+        "calories": 1368,
+        "protein": 82,
+        "carbs": 147,
+        "fat": 46,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -193,15 +193,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 87,
-        "carbs": 101,
-        "fat": 68,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": [
         "blue_cheese"
@@ -964,10 +960,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1266,
-        "protein": 94,
+        "calories": 1189,
+        "protein": 80,
         "carbs": 110,
-        "fat": 45,
+        "fat": 44,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -1037,15 +1033,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 85,
-        "carbs": 105,
-        "fat": 69,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": [
         "onions",
@@ -1115,11 +1107,15 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 941,
+        "protein": 39,
+        "carbs": 67,
+        "fat": 57,
+        "numericFilterEligible": true
       },
       "avoidTags": []
     },

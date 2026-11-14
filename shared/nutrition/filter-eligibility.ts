@@ -57,6 +57,8 @@ export const NUMERIC_FILTER_DISQUALIFYING_CODES: ReadonlySet<string> = new Set([
   "protein_too_low_meat",
   /** A rice/pasta/potato/bread-based meal claiming under 5g carbs — implausible, not just unusually low. */
   "carbs_too_low_starch",
+  /** Calculated macros were scaled down to the engine's per-serving ceiling, so they are not the ingredient total. */
+  "engine_ceiling",
 ]);
 
 /**

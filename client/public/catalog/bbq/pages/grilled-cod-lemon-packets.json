@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 22,
   "difficulty": "medium",
-  "calories": 905,
-  "protein": 62,
+  "calories": 623,
+  "protein": 53,
   "carbs": 57,
-  "fats": 45,
+  "fats": 19,
   "tags": [
     "protein:seafood",
     "format:foil_fish",
@@ -222,17 +222,17 @@
   ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 905,
-    "protein": 62,
+    "calories": 623,
+    "protein": 53,
     "carbs": 57,
-    "fats": 45,
+    "fats": 19,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -240,7 +240,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/smoker-catalog/grilled-cod-lemon-packets.jpg",

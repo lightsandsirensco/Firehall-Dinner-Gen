@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 15,
   "difficulty": "medium",
-  "calories": 493,
-  "protein": 38,
-  "carbs": 3,
-  "fats": 35,
+  "calories": 263,
+  "protein": 24,
+  "carbs": 5,
+  "fats": 16,
   "tags": [
     "protein:shrimp",
     "format:pasta",
@@ -144,24 +144,24 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 493,
-    "protein": 38,
-    "carbs": 3,
-    "fats": 35,
+    "calories": 263,
+    "protein": 24,
+    "carbs": 5,
+    "fats": 16,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
+      "highProtein": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },

@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 675,
+  "calories": 579,
   "protein": 49,
   "carbs": 58,
-  "fats": 28,
+  "fats": 18,
   "tags": [
     "protein:chicken",
     "format:handheld",
@@ -186,10 +186,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 675,
+    "calories": 579,
     "protein": 49,
     "carbs": 58,
-    "fats": 28,
+    "fats": 18,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -204,7 +204,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/chicken-shawarma-pitas.jpg",

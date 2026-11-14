@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 788,
-  "protein": 50,
-  "carbs": 76,
-  "fats": 31,
+  "calories": 558,
+  "protein": 35,
+  "carbs": 78,
+  "fats": 12,
   "tags": [
     "protein:seafood",
     "format:bowl",
@@ -176,17 +176,17 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 788,
-    "protein": 50,
-    "carbs": 76,
-    "fats": 31,
-    "label": "~788 cal/serving · 50g protein (est.)",
-    "source": "estimated",
+    "calories": 558,
+    "protein": 35,
+    "carbs": 78,
+    "fats": 12,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -194,7 +194,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg",

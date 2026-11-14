@@ -138,15 +138,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1394,
-        "protein": 85,
-        "carbs": 106,
-        "fat": 71,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": [
         "onions"
@@ -349,10 +345,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 867,
+        "calories": 772,
         "protein": 41,
         "carbs": 89,
-        "fat": 37,
+        "fat": 27,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -499,10 +495,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 93,
-        "carbs": 143,
-        "fat": 47,
+        "calories": 1368,
+        "protein": 82,
+        "carbs": 147,
+        "fat": 46,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -581,10 +577,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 825,
+        "calories": 698,
         "protein": 47,
         "carbs": 53,
-        "fat": 45,
+        "fat": 32,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -652,10 +648,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 618,
-        "protein": 52,
+        "calories": 625,
+        "protein": 37,
         "carbs": 28,
-        "fat": 35,
+        "fat": 40,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -726,10 +722,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 850,
-        "protein": 53,
+        "calories": 669,
+        "protein": 45,
         "carbs": 71,
-        "fat": 39,
+        "fat": 22,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -883,10 +879,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1362,
-        "protein": 85,
+        "calories": 1371,
+        "protein": 65,
         "carbs": 104,
-        "fat": 70,
+        "fat": 77,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -1031,15 +1027,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 79,
-        "carbs": 102,
-        "fat": 78,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": [
         "onions",
@@ -1114,15 +1106,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 70,
-        "carbs": 103,
-        "fat": 78,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": [
         "onions",
@@ -1302,10 +1290,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 779,
-        "protein": 51,
-        "carbs": 63,
-        "fat": 35,
+        "calories": 783,
+        "protein": 46,
+        "carbs": 91,
+        "fat": 26,
         "numericFilterEligible": true
       },
       "avoidTags": []
@@ -1362,10 +1350,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1173,
-        "protein": 63,
+        "calories": 1033,
+        "protein": 62,
         "carbs": 103,
-        "fat": 56,
+        "fat": 42,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -1439,10 +1427,10 @@
         "lowCarb": true,
         "healthy": true,
         "estimateAvailable": true,
-        "calories": 384,
-        "protein": 39,
+        "calories": 388,
+        "protein": 36,
         "carbs": 8,
-        "fat": 21,
+        "fat": 23,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -1565,15 +1553,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 87,
-        "carbs": 79,
-        "fat": 80,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": []
     },
@@ -1710,15 +1694,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 103,
-        "carbs": 114,
-        "fat": 58,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": []
     },
@@ -1775,10 +1755,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 707,
+        "calories": 612,
         "protein": 43,
         "carbs": 38,
-        "fat": 41,
+        "fat": 31,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -1845,10 +1825,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1393,
+        "calories": 1266,
         "protein": 85,
         "carbs": 64,
-        "fat": 87,
+        "fat": 74,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -1911,11 +1891,15 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 714,
+        "protein": 60,
+        "carbs": 56,
+        "fat": 28,
+        "numericFilterEligible": true
       },
       "avoidTags": [
         "onions",
@@ -1974,10 +1958,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1162,
+        "calories": 1035,
         "protein": 65,
         "carbs": 104,
-        "fat": 54,
+        "fat": 40,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -2050,10 +2034,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1158,
+        "calories": 1031,
         "protein": 72,
         "carbs": 64,
-        "fat": 70,
+        "fat": 56,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -2125,10 +2109,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1368,
-        "protein": 82,
+        "calories": 1374,
+        "protein": 67,
         "carbs": 100,
-        "fat": 73,
+        "fat": 78,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -2260,12 +2244,12 @@
       "nutritionSummary": {
         "highProtein": true,
         "lowCarb": true,
-        "healthy": false,
+        "healthy": true,
         "estimateAvailable": true,
-        "calories": 500,
-        "protein": 58,
+        "calories": 424,
+        "protein": 44,
         "carbs": 4,
-        "fat": 27,
+        "fat": 25,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -2337,10 +2321,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 845,
-        "protein": 80,
+        "calories": 768,
+        "protein": 65,
         "carbs": 60,
-        "fat": 30,
+        "fat": 28,
         "numericFilterEligible": true
       },
       "avoidTags": []
@@ -2690,10 +2674,10 @@
         "lowCarb": true,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 745,
-        "protein": 59,
+        "calories": 504,
+        "protein": 48,
         "carbs": 2,
-        "fat": 55,
+        "fat": 33,
         "numericFilterEligible": true
       },
       "avoidTags": []
@@ -2910,11 +2894,7 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1158,
-        "protein": 30,
-        "carbs": 180,
-        "fat": 38,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": []
     },
@@ -2980,10 +2960,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1225,
-        "protein": 65,
+        "calories": 1232,
+        "protein": 50,
         "carbs": 105,
-        "fat": 63,
+        "fat": 68,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -3056,10 +3036,14 @@
       },
       "nutritionSummary": {
         "highProtein": false,
-        "lowCarb": false,
+        "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 312,
+        "protein": 20,
+        "carbs": 3,
+        "fat": 24,
+        "numericFilterEligible": true
       },
       "avoidTags": []
     },
@@ -3128,10 +3112,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 687,
-        "protein": 47,
+        "calories": 691,
+        "protein": 44,
         "carbs": 72,
-        "fat": 22,
+        "fat": 25,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -3195,12 +3179,12 @@
       "nutritionSummary": {
         "highProtein": true,
         "lowCarb": false,
-        "healthy": false,
+        "healthy": true,
         "estimateAvailable": true,
-        "calories": 702,
+        "calories": 607,
         "protein": 46,
         "carbs": 64,
-        "fat": 27,
+        "fat": 17,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -3342,11 +3326,15 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
+        "highProtein": true,
+        "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 467,
+        "protein": 45,
+        "carbs": 4,
+        "fat": 29,
+        "numericFilterEligible": true
       },
       "avoidTags": []
     },
@@ -3409,12 +3397,12 @@
       "nutritionSummary": {
         "highProtein": true,
         "lowCarb": false,
-        "healthy": false,
+        "healthy": true,
         "estimateAvailable": true,
-        "calories": 689,
-        "protein": 50,
+        "calories": 508,
+        "protein": 41,
         "carbs": 49,
-        "fat": 33,
+        "fat": 17,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -3539,11 +3527,15 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 463,
+        "protein": 53,
+        "carbs": 43,
+        "fat": 9,
+        "numericFilterEligible": true
       },
       "avoidTags": [
         "mustard"
@@ -3608,15 +3600,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 59,
-        "carbs": 129,
-        "fat": 70,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": []
     },
@@ -3683,10 +3671,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 635,
+        "calories": 588,
         "protein": 38,
         "carbs": 45,
-        "fat": 33,
+        "fat": 28,
         "numericFilterEligible": true
       },
       "avoidTags": []
@@ -3816,10 +3804,10 @@
         "lowCarb": true,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 493,
-        "protein": 38,
+        "calories": 496,
+        "protein": 35,
         "carbs": 6,
-        "fat": 34,
+        "fat": 37,
         "numericFilterEligible": true
       },
       "avoidTags": []
@@ -4293,10 +4281,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1376,
-        "protein": 89,
+        "calories": 1382,
+        "protein": 74,
         "carbs": 84,
-        "fat": 77,
+        "fat": 82,
         "numericFilterEligible": true
       },
       "avoidTags": []
@@ -4567,10 +4555,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 613,
-        "protein": 50,
+        "calories": 680,
+        "protein": 35,
         "carbs": 41,
-        "fat": 28,
+        "fat": 40,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -4707,10 +4695,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 747,
-        "protein": 80,
+        "calories": 727,
+        "protein": 37,
         "carbs": 71,
-        "fat": 14,
+        "fat": 32,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -4769,10 +4757,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 820,
+        "calories": 692,
         "protein": 59,
         "carbs": 46,
-        "fat": 44,
+        "fat": 31,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -4840,10 +4828,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1310,
-        "protein": 67,
+        "calories": 1169,
+        "protein": 39,
         "carbs": 125,
-        "fat": 61,
+        "fat": 58,
         "numericFilterEligible": true
       },
       "avoidTags": []
@@ -5058,15 +5046,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 67,
-        "carbs": 83,
-        "fat": 88,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": []
     },
@@ -5120,11 +5104,15 @@
         "adaptable": []
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 646,
+        "protein": 54,
+        "carbs": 94,
+        "fat": 6,
+        "numericFilterEligible": true
       },
       "avoidTags": [
         "beans",
@@ -5195,10 +5183,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1060,
-        "protein": 72,
+        "calories": 941,
+        "protein": 62,
         "carbs": 76,
-        "fat": 51,
+        "fat": 42,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -5271,10 +5259,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1122,
-        "protein": 84,
+        "calories": 1131,
+        "protein": 64,
         "carbs": 77,
-        "fat": 55,
+        "fat": 62,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -5341,10 +5329,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 639,
-        "protein": 51,
+        "calories": 629,
+        "protein": 35,
         "carbs": 49,
-        "fat": 27,
+        "fat": 33,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -5488,15 +5476,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1161,
-        "protein": 45,
-        "carbs": 180,
-        "fat": 29,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": [
         "onions",
@@ -5715,10 +5699,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 845,
+        "calories": 750,
         "protein": 46,
         "carbs": 82,
-        "fat": 36,
+        "fat": 26,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -5777,11 +5761,15 @@
         "adaptable": []
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 1036,
+        "protein": 66,
+        "carbs": 154,
+        "fat": 16,
+        "numericFilterEligible": true
       },
       "avoidTags": [
         "broccoli"
@@ -5850,14 +5838,14 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
-        "healthy": true,
+        "healthy": false,
         "estimateAvailable": true,
-        "calories": 637,
-        "protein": 56,
+        "calories": 692,
+        "protein": 34,
         "carbs": 52,
-        "fat": 22,
+        "fat": 39,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -5928,11 +5916,15 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 932,
+        "protein": 46,
+        "carbs": 31,
+        "fat": 70,
+        "numericFilterEligible": true
       },
       "avoidTags": [
         "onions",
@@ -6000,10 +5992,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 927,
-        "protein": 68,
-        "carbs": 63,
-        "fat": 45,
+        "calories": 1174,
+        "protein": 50,
+        "carbs": 70,
+        "fat": 76,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -6297,14 +6289,14 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": true,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 779,
-        "protein": 87,
+        "calories": 538,
+        "protein": 32,
         "carbs": 3,
-        "fat": 44,
+        "fat": 43,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -6377,8 +6369,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 942,
+        "protein": 28,
+        "carbs": 135,
+        "fat": 34,
+        "numericFilterEligible": true
       },
       "avoidTags": []
     },
@@ -6514,15 +6510,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 105,
-        "carbs": 54,
-        "fat": 84,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": [
         "mushrooms",
@@ -6658,10 +6650,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 776,
+        "calories": 681,
         "protein": 46,
         "carbs": 73,
-        "fat": 33,
+        "fat": 23,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -6728,10 +6720,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 752,
-        "protein": 59,
-        "carbs": 33,
-        "fat": 44,
+        "calories": 908,
+        "protein": 51,
+        "carbs": 56,
+        "fat": 52,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -6796,12 +6788,12 @@
       "nutritionSummary": {
         "highProtein": true,
         "lowCarb": false,
-        "healthy": false,
+        "healthy": true,
         "estimateAvailable": true,
-        "calories": 654,
+        "calories": 559,
         "protein": 43,
         "carbs": 74,
-        "fat": 19,
+        "fat": 9,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -6938,10 +6930,10 @@
         "lowCarb": true,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 859,
-        "protein": 89,
+        "calories": 873,
+        "protein": 59,
         "carbs": 1,
-        "fat": 58,
+        "fat": 68,
         "numericFilterEligible": true
       },
       "avoidTags": []
@@ -7011,10 +7003,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 846,
+        "calories": 719,
         "protein": 54,
         "carbs": 86,
-        "fat": 29,
+        "fat": 16,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -7160,8 +7152,8 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 730,
-        "protein": 57,
+        "calories": 693,
+        "protein": 53,
         "carbs": 48,
         "fat": 33,
         "numericFilterEligible": true
@@ -7231,10 +7223,10 @@
         "lowCarb": false,
         "healthy": true,
         "estimateAvailable": true,
-        "calories": 607,
-        "protein": 59,
+        "calories": 563,
+        "protein": 54,
         "carbs": 51,
-        "fat": 18,
+        "fat": 17,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -7303,11 +7295,15 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
+        "estimateAvailable": true,
+        "calories": 679,
+        "protein": 55,
+        "carbs": 60,
+        "fat": 28,
+        "numericFilterEligible": true
       },
       "avoidTags": []
     },
@@ -7365,15 +7361,11 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 1400,
-        "protein": 94,
-        "carbs": 115,
-        "fat": 59,
-        "numericFilterEligible": true
+        "numericFilterEligible": false
       },
       "avoidTags": [
         "spinach"

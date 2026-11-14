@@ -260,6 +260,18 @@ export function auditRecipeNutritionIntegrity(
   );
   findings.push(...ingredientCrossCheck(input.stored, batch, input.baseServings));
 
+  // Must mirror the per-serving ceilings in calculate.ts clampPerServing.
+  const ceilingCal = input.mealType === "smoothie" ? 900 : input.mealType === "breakfast" ? 1100 : 1400;
+  if (
+    input.stored.source === "calculated" &&
+    (input.stored.calories >= ceilingCal || input.stored.protein >= 120 || input.stored.carbs >= 180)
+  ) {
+    findings.push({
+      code: "engine_ceiling",
+      message: `Calculated values sit at the per-serving ceiling (${ceilingCal} cal / 120g protein / 180g carbs); the real ingredient total is higher`,
+    });
+  }
+
   const crewCheck =
     VERIFIED_SLUGS.has(input.slug) || input.stored.source === "curated"
       ? { coupled: false as const }

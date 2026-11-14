@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 22,
   "difficulty": "medium",
-  "calories": 628,
-  "protein": 81,
-  "carbs": 33,
-  "fats": 18,
+  "calories": 833,
+  "protein": 55,
+  "carbs": 34,
+  "fats": 53,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -154,17 +154,17 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 628,
-    "protein": 81,
-    "carbs": 33,
-    "fats": 18,
+    "calories": 833,
+    "protein": 55,
+    "carbs": 34,
+    "fats": 53,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -172,7 +172,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",

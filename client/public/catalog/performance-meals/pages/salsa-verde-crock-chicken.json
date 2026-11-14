@@ -13,10 +13,10 @@
   "cookTime": 360,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 560,
+  "calories": 401,
   "protein": 58,
   "carbs": 11,
-  "fats": 29,
+  "fats": 12,
   "tags": [
     "protein:chicken",
     "format:slow_cooker",
@@ -145,10 +145,10 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 560,
+    "calories": 401,
     "protein": 58,
     "carbs": 11,
-    "fats": 29,
+    "fats": 12,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -162,8 +162,8 @@
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/salsa-verde-crock-chicken.jpg",

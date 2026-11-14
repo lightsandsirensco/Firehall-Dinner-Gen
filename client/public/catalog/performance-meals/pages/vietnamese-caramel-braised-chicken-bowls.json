@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 756,
+  "calories": 629,
   "protein": 52,
   "carbs": 72,
-  "fats": 27,
+  "fats": 13,
   "tags": [
     "protein:chicken",
     "format:one_pot",
@@ -180,16 +180,16 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 756,
+    "calories": 629,
     "protein": 52,
     "carbs": 72,
-    "fats": 27,
+    "fats": 13,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
@@ -198,7 +198,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/vietnamese-caramel-braised-chicken-bowls.jpg",

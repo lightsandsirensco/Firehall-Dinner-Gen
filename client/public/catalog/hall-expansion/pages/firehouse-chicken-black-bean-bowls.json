@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 714,
-  "protein": 68,
+  "calories": 637,
+  "protein": 53,
   "carbs": 78,
-  "fats": 15,
+  "fats": 14,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -208,16 +208,16 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 714,
-    "protein": 68,
+    "calories": 637,
+    "protein": 53,
     "carbs": 78,
-    "fats": 15,
-    "label": "~714 cal/serving · 68g protein (est.)",
-    "source": "estimated",
+    "fats": 14,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
@@ -226,7 +226,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",

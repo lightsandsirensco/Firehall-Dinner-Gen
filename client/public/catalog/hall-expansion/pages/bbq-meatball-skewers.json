@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 380,
-  "protein": 28,
-  "carbs": 22,
-  "fats": 20,
+  "calories": 514,
+  "protein": 29,
+  "carbs": 33,
+  "fats": 30,
   "tags": [
     "protein:beef",
     "format:handheld",
@@ -154,24 +154,24 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 380,
-    "protein": 28,
-    "carbs": 22,
-    "fats": 20,
-    "label": "~380 cal/serving · 28g protein (est.)",
-    "source": "estimated",
+    "calories": 514,
+    "protein": 29,
+    "carbs": 33,
+    "fats": 30,
+    "label": "Estimated per serving",
+    "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
