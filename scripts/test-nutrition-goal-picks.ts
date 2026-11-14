@@ -73,6 +73,16 @@ for (const goal of PROFILE_NUTRITION_GOALS) {
     distinct >= wantDistinct,
     `${distinct} distinct meals in ${RUNS} runs (${reachableMeeting} reachable meals meet the goal; need ${wantDistinct})`,
   );
+  // A uniform draw would serve each reachable meal ~1/N of the time; allow 3x that (never below 20%).
+  const servedCounts = new Map<string, number>();
+  for (const p of withGoal) servedCounts.set(p.slug, (servedCounts.get(p.slug) ?? 0) + 1);
+  const [topSlug, topCount] = [...servedCounts.entries()].sort((a, b) => b[1] - a[1])[0] ?? ["", 0];
+  const maxShare = Math.max(0.2, 3 / Math.max(1, reachableMeeting));
+  check(
+    `${goal}: no single meal dominates`,
+    topCount / Math.max(1, withGoal.length) <= maxShare,
+    `${topSlug} served ${topCount}/${withGoal.length} (limit ${Math.floor(maxShare * withGoal.length)})`,
+  );
   const wrongClaims = withGoal.filter((p) => {
     const claims = p.personalization?.reasons.some((r) => r.includes(" goal: ")) ?? false;
     return claims !== meets(p.slug);
