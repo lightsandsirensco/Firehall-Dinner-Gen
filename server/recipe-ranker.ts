@@ -2,7 +2,7 @@
  * Rank and select catalog recipes for /api/generate (catalog-before-Spoonacular).
  */
 
-import { log } from "./index";
+import { log } from "./logger";
 import type { GenerateRequest, GenerateResponse } from "../shared/schema.js";
 import type { CanonicalRecipe, RecipeSourceAttribution } from "../shared/canonical-recipe.js";
 import { mealFormatToArchetype } from "../shared/canonical-recipe.js";

@@ -221,6 +221,8 @@ const INGREDIENT_CATEGORIES: [string, RegExp][] = [
 
 const SPICE_OVERRIDES = /\b(black pepper|white pepper|cracked pepper|ground pepper|pepper flake|red pepper|chili pepper|cayenne pepper|garlic powder|onion powder|dried thyme|dried oregano|dried basil|dried parsley|dried dill|dried rosemary|dried sage|dried mint|ground cumin|ground cinnamon|ground turmeric|ground coriander|ground ginger)\b/i;
 const SAUCE_OVERRIDES = /\b(olive oil|sesame oil|coconut oil|vegetable oil|canola oil|avocado oil|peanut oil)\b/i;
+const PANTRY_GRAIN = /\b(rice|pasta|noodles?|macaroni|spaghetti|penne|ziti|rigatoni|orzo|lasagna|quinoa|couscous|oats|flour|breadcrumbs|panko|cornmeal|grits|polenta|barley)\b/i;
+const PANTRY_SPICE = /\b(seasoning|spice|powder|paprika|cumin|chili|cinnamon|nutmeg|oregano|thyme|rosemary|basil|bay lea(f|ves)|salt|peppercorns?|dried)\b/i;
 const PANTRY_OVERRIDES = /\b(chicken broth|beef broth|vegetable broth|chicken stock|beef stock|vegetable stock|bone broth)\b/i;
 
 export function inferIngredientCategory(name: string): string {
@@ -230,6 +232,11 @@ export function inferIngredientCategory(name: string): string {
   if (PANTRY_OVERRIDES.test(lower)) return "pantry";
   if (isSeasoningOrGarnish(name)) return "spice";
   const aisle = inferShoppingCategory(name);
+  if (aisle === "Pantry & Spices") {
+    if (PANTRY_GRAIN.test(lower)) return "grain";
+    if (PANTRY_SPICE.test(lower)) return "spice";
+    return "pantry";
+  }
   const map: Record<string, string> = {
     Proteins: "protein",
     Produce: "produce",

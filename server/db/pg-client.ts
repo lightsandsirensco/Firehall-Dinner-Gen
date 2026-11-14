@@ -14,7 +14,15 @@ import { drizzle, type NodePgDatabase } from "drizzle-orm/node-postgres";
 let pool: Pool | null = null;
 let db: NodePgDatabase | null = null;
 
+/** FIREHALL_OFFLINE=1|true|yes blocks every Postgres connection; .env (loaded with override) never sets it. */
+export function isOfflineMode(): boolean {
+  return /^(1|true|yes)$/i.test(process.env.FIREHALL_OFFLINE?.trim() ?? "");
+}
+
 function requireDatabaseUrl(): string {
+  if (isOfflineMode()) {
+    throw new Error("FIREHALL_OFFLINE is set — Postgres connections are disabled in this process.");
+  }
   const url = process.env.DATABASE_URL?.trim();
   if (!url) {
     throw new Error(
@@ -67,6 +75,7 @@ export function getPgDb(): NodePgDatabase {
 
 /** Whether Postgres is configured at all — used by boot diagnostics only. */
 export function isPgConfigured(): boolean {
+  if (isOfflineMode()) return pool !== null;
   return Boolean(process.env.DATABASE_URL?.trim());
 }
 

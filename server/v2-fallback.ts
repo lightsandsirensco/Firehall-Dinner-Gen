@@ -10,7 +10,7 @@
  */
 
 import type { GenerateRequest, GenerateResponse, TemplateRow } from "@shared/schema";
-import { log } from "./index";
+import { log } from "./logger";
 import { type StructureType, pickStructure, STRUCTURE_DISPLAY } from "./structure-variety";
 import { buildFallbackRecipe } from "./fallback-recipe";
 import { buildSafeFallbackRecipe } from "./ai";

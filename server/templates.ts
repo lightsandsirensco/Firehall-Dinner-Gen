@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { parse } from "csv-parse/sync";
 import type { TemplateRow, GenerateRequest } from "@shared/schema";
-import { log } from "./index";
+import { log } from "./logger";
 
 let cachedTemplates: TemplateRow[] | null = null;
 let cacheTimestamp = 0;

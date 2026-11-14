@@ -1,5 +1,6 @@
 import type { GenerateResponse } from "@shared/schema";
-import { log } from "./index";
+import { log } from "./logger";
+import { parseAmountToQtyUnit } from "../shared/golden-100/recipe-quality/crew-scale.js";
 import {
   auditProteinOzPerFirefighter,
   classifyProtein,
@@ -42,23 +43,8 @@ const VOLUME_CUP_PATTERNS: { pattern: RegExp; toCups: (val: number) => number }[
 ];
 
 function parseQty(amount: string): { qty: number; unit: string } {
-  if (!amount || !amount.trim()) return { qty: 0, unit: "" };
-  const cleaned = amount.replace(/[¼]/g, "0.25").replace(/[½]/g, "0.5").replace(/[¾]/g, "0.75");
-  const m = cleaned.trim().match(/^([\d.\/\s]+)\s*(.*)$/);
-  if (!m) return { qty: 0, unit: amount.trim() };
-  let val: number;
-  const numStr = m[1].trim();
-  if (numStr.includes("/")) {
-    const parts = numStr.split("/");
-    val = parseFloat(parts[0]) / (parseFloat(parts[1]) || 1);
-  } else if (numStr.includes(" ")) {
-    const [whole, frac] = numStr.split(/\s+/);
-    val = parseFloat(whole) + (frac && frac.includes("/") ? parseFloat(frac.split("/")[0]) / parseFloat(frac.split("/")[1]) : 0);
-  } else {
-    val = parseFloat(numStr);
-  }
-  if (isNaN(val)) val = 0;
-  return { qty: Math.round(val * 100) / 100, unit: m[2].trim().toLowerCase() };
+  const { qty, unit } = parseAmountToQtyUnit(amount);
+  return { qty, unit: unit.toLowerCase() };
 }
 
 function toWeight(qty: number, unit: string): number {

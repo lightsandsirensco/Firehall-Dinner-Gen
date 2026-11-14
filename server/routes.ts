@@ -85,6 +85,7 @@ import { buildGoldenHeroPrompt } from "../shared/golden-100/imagery.js";
 import { readGoldenRecipePage, listGoldenPageSlugs } from "./golden-100/page-store.js";
 import { buildGoldenRecipePage } from "./golden-100/recipe-page-builder.js";
 import { getGoldenRecipeBySlug } from "../shared/golden-100/manifest.js";
+import { parseAmountToQtyUnit } from "../shared/golden-100/recipe-quality/crew-scale.js";
 import { checkGoldenPageAssets } from "./golden-100/page-assets.js";
 import { buildAdminCatalogManifest } from "./admin/catalog-manifest.js";
 import { validateGoldenRecipePage } from "./golden-100/recipe-page-validator.js";
@@ -413,32 +414,13 @@ export async function registerRoutes(
     next();
   });
 
-  function parseQtyUnit(amount: string): { qty: number; unit: string } {
-    if (!amount || !amount.trim()) return { qty: 0, unit: "" };
-    const m = amount.trim().match(/^([\d.\/\s]+)\s*(.*)$/);
-    if (!m) return { qty: 0, unit: amount.trim() };
-    let val: number;
-    const numStr = m[1].trim();
-    if (numStr.includes("/")) {
-      const parts = numStr.split("/");
-      val = parseFloat(parts[0]) / (parseFloat(parts[1]) || 1);
-    } else if (numStr.includes(" ")) {
-      const [whole, frac] = numStr.split(/\s+/);
-      val = parseFloat(whole) + (frac && frac.includes("/") ? parseFloat(frac.split("/")[0]) / parseFloat(frac.split("/")[1]) : 0);
-    } else {
-      val = parseFloat(numStr);
-    }
-    if (isNaN(val)) val = 0;
-    return { qty: Math.round(val * 100) / 100, unit: m[2].trim() };
-  }
-
   function categorizeIngredient(name: string): string {
     return inferIngredientCategory(name);
   }
 
   function normalizeToClientFormat(recipe: any, crewSize: number, mealFormat: string): ClientRecipeResponse {
     const ingredients: ClientIngredient[] = (recipe.ingredients || []).map((ing: any) => {
-      const { qty, unit } = parseQtyUnit(ing.amount || "");
+      const { qty, unit } = parseAmountToQtyUnit(ing.amount || "");
       return {
         name: ing.item || ing.name || "",
         qty,

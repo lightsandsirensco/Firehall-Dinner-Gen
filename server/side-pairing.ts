@@ -25,7 +25,7 @@ import {
   getSessionSideVeg,
   trackSessionComposedSides,
 } from "./cache-store.js";
-import { log } from "./index";
+import { log } from "./logger";
 
 export interface SidePairingContext {
   title: string;

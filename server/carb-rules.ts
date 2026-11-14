@@ -1,5 +1,5 @@
 import type { GenerateResponse } from "@shared/schema";
-import { log } from "./index";
+import { log } from "./logger";
 
 export interface CarbRule {
   forbiddenBase: RegExp | null;

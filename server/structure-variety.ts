@@ -1,4 +1,4 @@
-import { log } from "./index";
+import { log } from "./logger";
 
 export const STRUCTURE_TYPES = [
   "bowl",

@@ -3,7 +3,7 @@ import type { GenerateRequest, GenerateResponse } from "@shared/schema";
 import { loadTemplates, filterTemplates, pickTemplate, chooseProtein } from "./templates";
 import { generateRecipe } from "./ai";
 import { buildCacheKey, getCachedRecipe, setCachedRecipe } from "./cache-store";
-import { log } from "./index";
+import { log } from "./logger";
 
 interface PoolEntry {
   recipe: GenerateResponse;

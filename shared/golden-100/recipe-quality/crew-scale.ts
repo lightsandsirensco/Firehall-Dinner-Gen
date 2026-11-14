@@ -3,7 +3,11 @@
  */
 
 import type { GoldenRecipePageIngredient } from "../recipe-page-schema.js";
-import { clampGoldenIngredientsForCrew, type PortionFix } from "../../recipe/crew-portion-limits.js";
+import {
+  clampGoldenIngredientsForCrew,
+  formatKitchenQuantity,
+  type PortionFix,
+} from "../../recipe/crew-portion-limits.js";
 import {
   CANONICAL_BASE_SERVINGS,
   CREW_SIZE_OPTIONS,
@@ -20,7 +24,34 @@ const SUBLINEAR_UNITS =
 const GARNISH_UNITS = /^(count|slice|slices|wedge|wedges|leaf|leaves|sprig|sprigs)$/i;
 
 const COUNT_UNITS =
-  /^(count|whole|large|medium|small|head|heads|bun|buns|loaf|loaves|can|cans|package|packages|bag|bags|egg|eggs|onion|onions|clove|cloves|stalk|stalks|bunch|bunches|fillet|fillets|breast|breasts|thigh|thighs|drumstick|drumsticks|link|links|patty|patties|wedge|wedges|slice|slices|sprig|sprigs|stick|sticks|leaf|leaves|jar|jars|bottle|bottles|roll|rolls|tortilla|tortillas)$/i;
+  /^(count|each|whole|large|medium|small|head|heads|bun|buns|loaf|loaves|can|cans|package|packages|bag|bags|egg|eggs|onion|onions|clove|cloves|stalk|stalks|bunch|bunches|fillet|fillets|breast|breasts|thigh|thighs|drumstick|drumsticks|link|links|patty|patties|wedge|wedges|slice|slices|sprig|sprigs|stick|sticks|leaf|leaves|jar|jars|bottle|bottles|roll|rolls|round|rounds|tortilla|tortillas)$/i;
+
+/** Bought and served whole — "3/4 bottle" of hot sauce is not a measurement. */
+const WHOLE_PURCHASE_UNITS = /^(bottle|bottles|jar|jars|loaf|loaves)$/i;
+
+const TBSP_UNIT = /^(tbsp|tablespoons?)$/i;
+const TSP_UNIT = /^(tsp|teaspoons?)$/i;
+const CUP_UNIT = /^cups?$/i;
+
+/** Measuring sets can't measure "5/8 tbsp" or "7/8 cup": snap to spoon and cup sizes crews own. */
+function snapToMeasuringSize(qty: number, unit: string): { qty: number; unit: string } {
+  if (TBSP_UNIT.test(unit)) {
+    if (qty < 0.9) return snapToMeasuringSize(qty * 3, /^tbsp$/i.test(unit) ? "tsp" : "teaspoons");
+    return { qty: Math.round(qty * 2) / 2, unit };
+  }
+  if (TSP_UNIT.test(unit)) {
+    if (qty < 0.19) return { qty: 0.125, unit };
+    return { qty: Math.round(qty * 4) / 4, unit };
+  }
+  if (CUP_UNIT.test(unit)) {
+    const thirds = Math.round(qty * 3);
+    if (thirds > 0 && thirds % 3 !== 0 && Math.abs(qty * 3 - thirds) < 0.04) return { qty: thirds / 3, unit };
+    const quarters = Math.round(qty * 4) / 4;
+    if (qty < 0.5 && Math.abs(qty - quarters) > 0.04) return { qty: Math.max(1, Math.round(qty * 16)), unit: "tbsp" };
+    return { qty: Math.max(0.25, Math.round(qty * 4) / 4), unit };
+  }
+  return { qty, unit };
+}
 
 const COUNT_NAME_HINT =
   /\b(onions?|eggs?|limes?|lemons?|garlic|cloves?|potatoes?|tomatoes?|peppers?|avocados?|apples?|bananas?|tortillas?|buns?|rolls?|links?|patties?|sausages?|breasts?|thighs?|drumsticks?|heads?|bunches?|stalks?|wedges?|slices?|cans?|jars?|bottles?|packages?|bags?)\b/i;
@@ -88,25 +119,25 @@ export function parseQuantityAndUnit(qty: string | undefined): ParsedQuantity {
   return { amount: 0, unitText: "" };
 }
 
+/**
+ * Splits a combined amount string ("1 1/2 lb", "3/4 bottle", "8–10 oz", "to taste") into the
+ * numeric qty + unit sent to clients. Ranges use the upper bound so shopping never runs short.
+ */
+export function parseAmountToQtyUnit(amount: string | undefined): { qty: number; unit: string } {
+  const text = amount?.trim() ?? "";
+  if (!text) return { qty: 0, unit: "" };
+  const parsed = parseQuantityAndUnit(text);
+  if (parsed.amount <= 0) return { qty: 0, unit: text };
+  const qty = Math.max(parsed.amount, parsed.rangeEnd ?? 0);
+  return { qty: Math.round(qty * 100) / 100, unit: parsed.unitText };
+}
+
 function parseQuantity(qty: string | undefined): number {
   return parseQuantityAndUnit(qty).amount;
 }
 
 export function formatScaledQuantity(n: number): string {
-  if (n <= 0) return "";
-  if (Math.abs(n - Math.round(n)) < 0.05) return String(Math.round(n));
-  const eighths = Math.round(n * 8) / 8;
-  if (eighths === 0.25) return "1/4";
-  if (eighths === 0.5) return "1/2";
-  if (eighths === 0.75) return "3/4";
-  if (eighths === 1.25) return "1 1/4";
-  if (eighths === 1.5) return "1 1/2";
-  if (eighths === 1.75) return "1 3/4";
-  if (eighths === 0.125) return "1/8";
-  if (eighths === 0.375) return "3/8";
-  if (eighths === 0.625) return "5/8";
-  if (eighths === 0.875) return "7/8";
-  return String(Math.round(n * 10) / 10);
+  return formatKitchenQuantity(n);
 }
 
 function scaleFactor(baseServings: number, targetCrew: number, unit?: string): number {
@@ -140,9 +171,7 @@ export function scaleGoldenIngredients(
   baseServings: number,
   targetCrew: number,
 ): GoldenRecipePageIngredient[] {
-  if (targetCrew === baseServings) {
-    return clampGoldenIngredientsForCrew(ingredients, targetCrew).ingredients;
-  }
+  const sameCrew = targetCrew === baseServings;
 
   const scaled = ingredients.map((ing) => {
     const parsed = parseQuantityAndUnit(ing.quantity);
@@ -153,25 +182,41 @@ export function scaleGoldenIngredients(
     // if it came from the quantity text it must be reattached after scaling or it's lost.
     const explicitUnit = ing.unit?.trim() ?? "";
     const effectiveUnit = explicitUnit || parsed.unitText;
+    if (sameCrew && explicitUnit && parsed.unitText) return { ...ing };
 
-    const factor = scaleFactor(baseServings, targetCrew, effectiveUnit);
+    const factor = sameCrew ? 1 : scaleFactor(baseServings, targetCrew, effectiveUnit);
     let scaledQty = parsed.amount * factor;
     let scaledRangeEnd = parsed.rangeEnd != null ? parsed.rangeEnd * factor : undefined;
 
-    if (isCountBased(ing, effectiveUnit)) {
+    if (WHOLE_PURCHASE_UNITS.test(effectiveUnit)) {
+      scaledQty = Math.max(1, Math.ceil(scaledQty - 0.05));
+      if (scaledRangeEnd != null) scaledRangeEnd = Math.max(1, Math.ceil(scaledRangeEnd - 0.05));
+    } else if (isCountBased(ing, effectiveUnit)) {
       scaledQty = roundCountQuantity(scaledQty);
       if (scaledRangeEnd != null) scaledRangeEnd = roundCountQuantity(scaledRangeEnd);
+    }
+
+    let unit = effectiveUnit;
+    if (!sameCrew) {
+      const snapped = snapToMeasuringSize(scaledQty, effectiveUnit);
+      if (scaledRangeEnd != null) {
+        const ratio = snapped.unit === effectiveUnit ? 1 : CUP_UNIT.test(effectiveUnit) ? 16 : 3;
+        scaledRangeEnd = snapToMeasuringSize(scaledRangeEnd * ratio, snapped.unit).qty;
+      }
+      scaledQty = snapped.qty;
+      unit = snapped.unit;
     }
 
     const formatted = formatScaledQuantity(scaledQty);
     if (!formatted) return { ...ing };
 
-    let nextQuantity = !explicitUnit && parsed.unitText ? `${formatted} ${parsed.unitText}` : formatted;
+    const unitInText = !explicitUnit && parsed.unitText;
+    let nextQuantity = unitInText ? `${formatted} ${unit}` : formatted;
     if (scaledRangeEnd != null) {
       const formattedEnd = formatScaledQuantity(Math.max(scaledRangeEnd, scaledQty));
       if (formattedEnd) {
-        nextQuantity = !explicitUnit && parsed.unitText
-          ? `${formatted}\u2013${formattedEnd} ${parsed.unitText}`
+        nextQuantity = unitInText
+          ? `${formatted}\u2013${formattedEnd} ${unit}`
           : `${formatted}\u2013${formattedEnd}`;
       }
     }
@@ -179,6 +224,7 @@ export function scaleGoldenIngredients(
     return {
       ...ing,
       quantity: nextQuantity,
+      ...(explicitUnit && unit !== explicitUnit ? { unit } : {}),
     };
   });
 

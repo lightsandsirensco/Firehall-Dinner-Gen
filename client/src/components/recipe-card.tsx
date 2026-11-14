@@ -395,9 +395,11 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   const costEstimate = useRecipeCostEstimate(recipe.ingredients, recipe.servings || crewSize, costLocation);
 
   const mealPlate = useMemo(() => resolveMealPlate(recipe), [recipe]);
+  // Catalog recipes are complete authored dishes; the inferred plate summary hid or misfiled their ingredients.
+  const plateSummary = recipe.hall_curated ? null : mealPlate;
   const trustLine = useMemo(() => buildRecipeTrustLine(recipe, crewSize), [recipe, crewSize]);
-  const starchSides = mealPlate?.sides.filter((s) => s.role === "starch") || [];
-  const vegSides = mealPlate?.sides.filter((s) => s.role === "veg") || [];
+  const starchSides = plateSummary?.sides.filter((s) => s.role === "starch") || [];
+  const vegSides = plateSummary?.sides.filter((s) => s.role === "veg") || [];
 
   const isDebugMode = useMemo(() => {
     if (typeof window === "undefined") return false;
@@ -639,15 +641,15 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         )}
       </div>
 
-      {mealPlate && (mealPlate.main.length > 0 || mealPlate.sides.length > 0) && (
+      {plateSummary && (plateSummary.main.length > 0 || plateSummary.sides.length > 0) && (
         <MealSection title="Tonight's table" data-testid="section-meal-plate">
-          <PlateSection label="Main" items={mealPlate.main} testId="plate-main" />
+          <PlateSection label="Main" items={plateSummary.main} testId="plate-main" />
           <PlateSection
             label="Sides"
             items={[...starchSides, ...vegSides]}
             testId="plate-sides"
           />
-          <PlateSection label="Optional" items={mealPlate.optional} testId="plate-optional" />
+          <PlateSection label="Optional" items={plateSummary.optional} testId="plate-optional" />
         </MealSection>
       )}
 
@@ -726,7 +728,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         </MealSection>
       )}
 
-      <MealSection title={mealPlate ? "Full ingredient list" : "Ingredients"}>
+      <MealSection title={plateSummary ? "Full ingredient list" : "Ingredients"}>
         <ul className="divide-y divide-border/25" data-testid="section-ingredients">
           {recipe.ingredients.map((ing, i) => (
             <li

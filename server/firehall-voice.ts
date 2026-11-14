@@ -9,13 +9,14 @@ import {
   formatKitchenQuantity,
   PROTEIN_OZ_PER_FIREFIGHTER,
 } from "../shared/recipe/crew-portion-limits.js";
+import { parseQuantityAndUnit } from "../shared/golden-100/recipe-quality/crew-scale.js";
 
 const PROTEIN_LB_FLOOR_PER_SEAT = 0.375; // ~6 oz raw per firefighter minimum
 
 const PROTEIN_ITEM_PATTERN =
   /\b(chicken|beef|pork|turkey|sausage|ground beef|steak|thigh|breast|drumstick|pork chop|ribs|ham|bacon|shrimp|salmon|fish|cod|tuna)\b/i;
 
-const LB_PATTERN = /^([\d.]+)\s*(lb|lbs|pound|pounds)\b/i;
+const LB_PATTERN = /^(\d+\s+\d+\/\d+|\d+\/\d+|[\d.]+)\s*(lb|lbs|pound|pounds)\b/i;
 
 const WHY_OPENERS = [
   "The kind of spread that ends the \"what's for dinner?\" argument fast.",
@@ -106,7 +107,7 @@ export function applyCrewPortionFloors(
 
     const lb = ing.amount.match(LB_PATTERN);
     if (lb) {
-      const current = parseFloat(lb[1]);
+      const current = parseQuantityAndUnit(lb[1]).amount;
       let nextLbs = current;
       if (current < proteinFloorLbs) {
         nextLbs = proteinFloorLbs;

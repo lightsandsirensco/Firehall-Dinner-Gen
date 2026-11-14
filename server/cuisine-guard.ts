@@ -22,7 +22,7 @@
  * Scores 6–7 are logged as warnings but pass; 8–10 are clean passes.
  */
 
-import { log } from "./index";
+import { log } from "./logger";
 
 // ─── Per-cuisine ingredient blocklists ────────────────────────────────────────
 //

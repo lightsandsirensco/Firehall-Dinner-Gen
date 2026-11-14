@@ -12,7 +12,7 @@ import {
   isValidPlateSide,
   type MealIdentity,
 } from "@shared/meal-semantics";
-import { log } from "./index";
+import { log } from "./logger";
 import { scaleAmountForCrew } from "./firehall-voice";
 import { finalizeMealPlate } from "./meal-plate";
 import { normalizeFormatKeyForCarb } from "./carb-rules";

@@ -4,7 +4,7 @@
  */
 
 import type { GenerateResponse, IngredientItem, RecipeStep } from "@shared/schema";
-import { log } from "./index";
+import { log } from "./logger";
 import { applyHallInstructionPolish, dedupePlateIngredients, syncStationSidesToSteps } from "./meal-sanity";
 import { normalizeFormatKeyForCarb, pickCarbForFormat } from "./carb-rules";
 import { scaleAmountForCrew } from "./firehall-voice";

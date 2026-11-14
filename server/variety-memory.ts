@@ -1,5 +1,5 @@
 import type { GenerateResponse, RecipeTags } from "@shared/schema";
-import { log } from "./index";
+import { log } from "./logger";
 
 const MEMORY_SIZE = 15;
 

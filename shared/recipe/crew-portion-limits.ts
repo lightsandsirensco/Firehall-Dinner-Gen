@@ -62,25 +62,33 @@ export function parseQuantity(qty: string | number | undefined): number {
     .replace(/[½]/g, "0.5")
     .replace(/[¾]/g, "0.75")
     .trim();
-  if (cleaned.includes("/")) {
-    const [a, b] = cleaned.split("/").map((x) => parseFloat(x.trim()));
-    if (a && b) return a / b;
-  }
+  const mixed = cleaned.match(/^(\d+)\s+(\d+)\/(\d+)/);
+  if (mixed && Number(mixed[3])) return Number(mixed[1]) + Number(mixed[2]) / Number(mixed[3]);
+  const frac = cleaned.match(/^(\d+)\/(\d+)/);
+  if (frac && Number(frac[2])) return Number(frac[1]) / Number(frac[2]);
   const n = parseFloat(cleaned);
   return Number.isFinite(n) ? n : 0;
 }
 
+const EIGHTHS_LABEL = ["", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
+
+/** Kitchen fractions: thirds when exact, else eighths below 2 and quarters from 2 up (e.g. "2 1/4", never "2.3"). */
 export function formatKitchenQuantity(n: number): string {
   if (n <= 0) return "";
   if (Math.abs(n - Math.round(n)) < 0.05) return String(Math.round(n));
-  const eighths = Math.round(n * 8) / 8;
-  if (eighths === 0.25) return "1/4";
-  if (eighths === 0.5) return "1/2";
-  if (eighths === 0.75) return "3/4";
-  if (eighths === 1.25) return "1 1/4";
-  if (eighths === 1.5) return "1 1/2";
-  if (eighths === 1.75) return "1 3/4";
-  return String(Math.round(n * 10) / 10);
+  const thirds = Math.round(n * 3);
+  if (thirds % 3 !== 0 && Math.abs(n * 3 - thirds) < 0.04) {
+    const whole = Math.floor(thirds / 3);
+    const frac = thirds % 3 === 1 ? "1/3" : "2/3";
+    return whole ? `${whole} ${frac}` : frac;
+  }
+  const step = n < 2 ? 8 : 4;
+  const snapped = Math.round(n * step) / step;
+  if (snapped === 0) return String(Math.round(n * 100) / 100);
+  const whole = Math.floor(snapped);
+  const frac = EIGHTHS_LABEL[Math.round((snapped - whole) * 8)];
+  if (!frac) return String(whole);
+  return whole ? `${whole} ${frac}` : frac;
 }
 
 export function classifyProtein(name: string): ProteinPortionClass {

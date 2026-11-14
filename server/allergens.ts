@@ -1,4 +1,4 @@
-import { log } from "./index";
+import { log } from "./logger";
 
 export const ALLERGEN_KEYWORDS: Record<string, RegExp> = {
   dairy: /\b(milk|butter|cheese|cream|whey|casein|yogurt|yoghurt|ghee|cheddar|mozzarella|parmesan|feta|ricotta|halloumi|brie|gouda|gruyere|provolone|monterey|colby|swiss cheese|cream cheese|sour cream|half.and.half|whipped cream|ice cream|custard|paneer|buttermilk|condensed milk|evaporated milk|heavy cream|light cream|mascarpone|queso|crema)\b/i,

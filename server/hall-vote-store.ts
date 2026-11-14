@@ -1,6 +1,6 @@
 import crypto from "crypto";
 import { nanoid } from "nanoid";
-import { log } from "./index";
+import { log } from "./logger";
 import type {
   GenerateResponse,
   HallVoteOption,

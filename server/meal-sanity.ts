@@ -6,7 +6,7 @@ import type { GenerateResponse, RecipeStep } from "../shared/schema";
 import { isSeasoningOrGarnish } from "../shared/meal-semantics";
 import { validateMealSemantics } from "./meal-validation";
 import type { MealValidationContext } from "./meal-validation";
-import { log } from "./index";
+import { log } from "./logger";
 import {
   buildStationSideStep,
   polishFirehallSteps,
