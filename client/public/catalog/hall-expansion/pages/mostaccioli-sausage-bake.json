@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 572,
-  "protein": 28,
-  "carbs": 57,
-  "fats": 26,
+  "calories": 1049,
+  "protein": 53,
+  "carbs": 81,
+  "fats": 57,
   "tags": [
     "protein:pork",
     "format:pasta",
@@ -155,23 +155,23 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 572,
-    "protein": 28,
-    "carbs": 57,
-    "fats": 26,
+    "calories": 1049,
+    "protein": 53,
+    "carbs": 81,
+    "fats": 57,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }

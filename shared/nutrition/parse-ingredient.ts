@@ -40,7 +40,8 @@ export function parseCatalogIngredientAmount(ing: CatalogIngredientLine): Parsed
         quantity = Number(qtyRaw);
       }
     } else {
-      quantity = Number(qtyRaw) || 1;
+      const parsed = parseQuantityAmount(qtyRaw);
+      quantity = parsed.quantity != null && !parsed.unit ? parsed.quantity : Number(qtyRaw) || 1;
     }
     return { quantity, unit: unitRaw.toLowerCase(), raw: `${qtyRaw} ${unitRaw}` };
   }
