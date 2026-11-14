@@ -1183,7 +1183,7 @@ export const BATCH_30_BBQ_GRILL_RECIPES = [
       { title: "Build lime crema", instruction: "Whisk mayo, crema, and lime juice until smooth. Chill until service.", minutes: 5 },
       { title: "Prep corn", instruction: "Peel husks back and tie for handles, or shuck completely. Brush with melted butter and salt.", minutes: 10 },
       { title: "Heat grill", instruction: "Preheat grill to medium-high, 425°F.", minutes: 8, heatLevel: "high" },
-      { title: "Char corn", instruction: "Grill corn turning often until charred in spots and tender, 12–15 minutes.", minutes: 15, heatLevel: "high" },
+      { title: "Char corn", instruction: "Brush the corn all over with the avocado oil, then grill, turning often, until charred in spots and tender, 12–15 minutes.", minutes: 15, heatLevel: "high" },
       { title: "Cut kernels", instruction: "Stand cobs upright and cut kernels off into a baking dish. Hold warm at 170°F covered.", minutes: 10 },
       { title: "Portion cups", instruction: "Fill disposable cups with warm charred corn—about 1 cup per cup.", minutes: 8 },
       { title: "Top at service", instruction: "Drizzle lime crema, sprinkle cotija, chili powder, and cilantro at the line—not before hold.", minutes: 5 },

@@ -487,7 +487,7 @@ export const batch04: PerformanceAdaptedRecipe[] = [
       {
         title: "Crisp chorizo and brown chicken",
         instruction:
-          "Cook chorizo in Dutch oven until fat renders and edges crisp. Remove. Brown chicken thighs in chorizo fat 4 minutes per side until golden.",
+          "Heat the olive oil in a Dutch oven, then cook chorizo until fat renders and edges crisp. Remove. Brown chicken thighs in chorizo fat 4 minutes per side until golden.",
         minutes: 15,
         heatLevel: "medium-high",
       },

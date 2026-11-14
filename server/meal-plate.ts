@@ -5,6 +5,7 @@
 import type { GenerateResponse, IngredientItem } from "@shared/schema";
 import {
   classifyComponentRole,
+  isCookingEssential,
   isSeasoningOrGarnish,
   isValidPlateSide,
   STARCH_SIDE_PATTERN,
@@ -18,7 +19,7 @@ import {
   mainHasBuiltinStarch,
   normalizeSidePairingTitle,
 } from "../shared/curated-image-governance/title-side-pairing-governance.js";
-import { log } from "./index";
+import { log } from "./logger";
 
 export type PlateRole = "main" | "starch" | "veg" | "optional";
 
@@ -88,6 +89,7 @@ const METHOD_ADJ: Record<string, string> = {
 function parsePlateRole(ing: IngredientItem, mealTitle = ""): PlateRole {
   const notes = (ing.notes || "").toLowerCase();
   if (isSeasoningOrGarnish(ing.item, ing.notes)) return "optional";
+  if (isCookingEssential(ing.item)) return "optional";
 
   if (/station extra|hall extra|plate_role:\s*optional/i.test(notes)) return "optional";
   if (/plate_role:\s*bread|required — bread|bread_base/i.test(notes)) return "starch";
@@ -206,7 +208,11 @@ export function buildMealPlate(
   },
 ): MealPlate {
   const lines: PlateLine[] = (recipe.ingredients || [])
-    .filter((ing) => !isSeasoningOrGarnish(ing.item, ing.notes))
+    .filter(
+      (ing) =>
+        !isSeasoningOrGarnish(ing.item, ing.notes) &&
+        classifyComponentRole(ing.item, ing.notes) !== "cooking_essential",
+    )
     .map((ing) => ({
       name: shortLabel(ing.item),
       amount: ing.amount || "",
@@ -254,7 +260,9 @@ export function buildMealPlate(
   return {
     display_title,
     main: [{ name: mains[0]?.name || mainLabel, amount: mains[0]?.amount || "", role: "main" }],
-    sides: [...starches, ...vegs].filter((s) => isValidPlateSide(s.name) || s.role === "starch").slice(0, 5),
+    sides: [...starches, ...vegs]
+      .filter((s) => !isCookingEssential(s.name) && (isValidPlateSide(s.name) || s.role === "starch"))
+      .slice(0, 5),
     optional: optional.slice(0, 4),
     cuisine_label,
   };

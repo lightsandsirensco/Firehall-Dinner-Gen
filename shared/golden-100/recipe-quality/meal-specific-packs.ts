@@ -660,7 +660,7 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
     ],
     steps: [
       step(1, "Heat the flat-top", "Preheat cast iron or flat-top to medium-high. This is a shift-night shortcut — speed over perfection.", 5, "medium-high"),
-      step(2, "Sear beef and peppers", "Sear shaved beef with frozen pepper-onion mix 6–8 minutes until beef edges crisp and vegetables soften. Season with salt and pepper.", 8, "high"),
+      step(2, "Sear beef and peppers", "Add the vegetable oil to the hot pan, then sear shaved beef with frozen pepper-onion mix 6–8 minutes until beef edges crisp and vegetables soften. Season with salt and pepper.", 8, "high"),
       step(3, "Melt provolone", "Lay provolone slices over the hot beef and pepper mixture; cover the skillet 1 minute until cheese melts into the meat and starts to lace the pan edges.", 2, "medium"),
       step(4, "Load hoagies", "Pile into toasted rolls. Fast Philly Skillet feeds the hall in under twenty minutes.", 5, "low"),
     ],

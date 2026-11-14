@@ -12,6 +12,8 @@ export type ComponentRole =
   | "seasoning"
   | "garnish"
   | "optional_extra"
+  /** Oil, butter, spray, fresh garlic/ginger used in the cooking process. */
+  | "cooking_essential"
   | "unknown";
 
 export type MealIdentity =
@@ -56,6 +58,35 @@ export const SAUCE_PATTERN =
 export const GARNISH_PATTERN =
   /\b(lime wedge|lemon wedge|cilantro garnish|parsley garnish|sesame seeds|green onion garnish|chopped parsley for garnish)\b/i;
 
+/**
+ * Matched against the ingredient's head noun (name before any comma or
+ * parenthesis), never its notes — "olive oil, for the potatoes" is still oil,
+ * while "garlic bread", "butter beans" and "peanut butter" are foods.
+ */
+const COOKING_FAT_HEAD =
+  /(?:^|\s)(?:oil|oils|cooking spray|nonstick spray|nonstick cooking spray|oil spray|shortening|lard|ghee|butter|margarine)$/;
+const NOT_COOKING_FAT_HEAD = /\b(?:peanut|almond|cashew|sunflower seed|apple|cookie|nut) butter$/;
+const AROMATIC_HEAD = /^(?:(?:fresh|minced|crushed|chopped|grated|peeled)\s+)*(?:garlic|ginger)(?:\s+(?:cloves?|root|paste))?$/;
+/** Notes that mean the fat is served, not cooked with — it becomes a sauce/topping, still never a side. */
+const FINISHING_USE =
+  /\b(?:drizzl\w*|for serving|to serve|at the table|for dipping|dipping|dressing|vinaigrette|finishing|to finish)\b/i;
+
+function ingredientHead(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, " ")
+    .split(/[,;]/)[0]!
+    .replace(/[^a-z\s-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export function isCookingEssential(name: string): boolean {
+  const head = ingredientHead(name);
+  if (!head || NOT_COOKING_FAT_HEAD.test(head)) return false;
+  return COOKING_FAT_HEAD.test(head) || AROMATIC_HEAD.test(head);
+}
+
 export function isSeasoningOrGarnish(name: string, notes = ""): boolean {
   const text = `${name} ${notes}`.toLowerCase().trim();
   if (GARNISH_PATTERN.test(text)) return true;
@@ -68,6 +99,7 @@ export function isSeasoningOrGarnish(name: string, notes = ""): boolean {
 }
 
 export function isValidPlateSide(name: string, notes = ""): boolean {
+  if (isCookingEssential(name)) return false;
   if (isSeasoningOrGarnish(name, notes)) return false;
   const text = `${name} ${notes}`;
   if (BREAD_BASE_PATTERN.test(text) && !PROTEIN_PATTERN.test(text)) return true;
@@ -79,6 +111,8 @@ export function isValidPlateSide(name: string, notes = ""): boolean {
 export function classifyComponentRole(item: string, notes = "", mealTitle = ""): ComponentRole {
   const text = `${item} ${notes}`.toLowerCase();
   const title = (mealTitle || "").toLowerCase();
+
+  if (isCookingEssential(item)) return FINISHING_USE.test(notes) ? "sauce" : "cooking_essential";
 
   if (/plate_role:\s*(\w+)/i.test(notes)) {
     const m = notes.match(/plate_role:\s*(\w+)/i);
@@ -178,6 +212,11 @@ export function ingredientsMatchPattern(
 
 /** Client shopping aisle — maps semantic role to store section. */
 export function inferShoppingCategory(name: string, notes = ""): string {
+  if (isCookingEssential(name)) {
+    if (/\b(butter|ghee|margarine)\b/i.test(name)) return "Dairy / Dairy Alternatives";
+    if (/\b(garlic|ginger)\b/i.test(name)) return "Produce";
+    return "Condiments & Sauces";
+  }
   const role = classifyComponentRole(name, notes);
   if (role === "seasoning") return "Pantry & Spices";
   if (role === "main_protein") return "Proteins";

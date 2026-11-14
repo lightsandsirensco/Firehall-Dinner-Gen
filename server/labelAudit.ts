@@ -1,6 +1,6 @@
 import type { GenerateResponse } from "@shared/schema";
 import { inferShoppingCategory, isSeasoningOrGarnish } from "@shared/meal-semantics";
-import { log } from "./index";
+import { log } from "./logger";
 import { containsAllergen } from "./allergens";
 
 export interface LabelAuditContext {

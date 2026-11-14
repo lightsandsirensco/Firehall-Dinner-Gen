@@ -299,7 +299,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
     steps: [
       step(1, "Cut and soak fries", "Cut potatoes into thick fries, soak in cold water 30 minutes, then drain and dry completely on towels.", { minutes: 35 }),
       step(2, "First fry", "Blanch fries in 325°F oil 4–5 minutes until soft but not browned. Drain, cool on racks at least 20 minutes.", { minutes: 25, tempF: 325 }),
-      step(3, "Build beef gravy", "Melt drippings, whisk in flour, cook 2 minutes, then whisk in broth, Worcestershire, and garlic powder. Simmer until thick enough to coat a spoon.", { minutes: 12 }),
+      step(3, "Build beef gravy", "Melt the drippings or butter, whisk in flour, cook 2 minutes, then whisk in broth, Worcestershire, and garlic powder. Simmer until thick enough to coat a spoon.", { minutes: 12 }),
       step(4, "Second fry", "Fry blanched potatoes at 375°F until deep golden and crisp, 3–4 minutes. Drain, salt immediately.", { minutes: 15, tempF: 375 }),
       step(5, "Assemble and serve", "Pile hot fries on platters, scatter curds, ladle hot gravy over top, and serve at once with pepper mills on the table.", { minutes: 5 }),
     ],

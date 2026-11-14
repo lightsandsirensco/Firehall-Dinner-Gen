@@ -1,6 +1,7 @@
 import type { ClientRecipeResponse, MealPlate, MealPlateLine } from "@shared/schema";
 import {
   classifyComponentRole,
+  isCookingEssential,
   isSeasoningOrGarnish,
   isValidPlateSide,
 } from "@shared/meal-semantics";
@@ -36,7 +37,7 @@ export function resolveMealPlate(recipe: ClientRecipeResponse): MealPlate | null
 
   const title = recipe.title || "";
   for (const ing of recipe.ingredients || []) {
-    if (isSeasoningOrGarnish(ing.name)) continue;
+    if (isSeasoningOrGarnish(ing.name) || isCookingEssential(ing.name)) continue;
     const line: MealPlateLine = {
       name: ing.name,
       amount: ing.qty > 0 || ing.unit ? `${ing.qty ? ing.qty : ""} ${ing.unit}`.trim() : "",

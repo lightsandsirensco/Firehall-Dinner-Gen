@@ -694,7 +694,7 @@ export const BATCH_WAVE1_EXPANSION_RECIPES: ExpansionRecipeDef[] = [
     steps: [
       step(1, "Heat smoker", "Preheat smoker to 275°F and make sure its water pan and fuel are ready for a long cook."),
       step(2, "Dice burnt ends", "Cut burnt ends into spoon-size pieces, trimming only hard fat that will not melt."),
-      step(3, "Sauté aromatics", "Sauté onion and peppers in a Dutch oven until softened, scraping up any browned bits."),
+      step(3, "Sauté aromatics", "Heat the vegetable oil in a Dutch oven over medium-high and sauté onion and peppers until softened, scraping up any browned bits."),
       step(4, "Bloom spices", "Stir chili powder and cumin for 30 seconds so the spices smell fragrant but do not burn."),
       step(5, "Build chili", "Add tomatoes, beans, broth, and burnt ends, stirring until the pot is evenly mixed."),
       step(6, "Smoke uncovered", "Place the Dutch oven in the smoker uncovered for 45 minutes to pick up smoke."),

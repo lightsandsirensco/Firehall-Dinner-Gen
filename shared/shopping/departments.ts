@@ -177,7 +177,7 @@ const RULES: Rule[] = [
     ),
     "Other",
   ],
-  [w("vinegar|vinaigrette|salad dressing|cooking spray|oil spray|nonstick spray|olive oil spray"), "Condiments, Sauces & Oils"],
+  [w("vinegar|vinaigrette|salad dressing|cooking spray|oil spray|nonstick spray|olive oil spray|shortening|lard"), "Condiments, Sauces & Oils"],
   [w("baking soda|baking powder|cocoa powder|cacao powder|protein powder|custard powder|milk powder|powdered milk"), "Pantry & Canned Goods"],
   [w("soda bread|pretzel dough"), "Bakery & Bread"],
   [COOKING_WINES, "Condiments, Sauces & Oils"],
