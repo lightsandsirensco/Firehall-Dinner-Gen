@@ -91,13 +91,13 @@ export const FOUNDING_OFFER_DISPLAY = {
 } as const;
 
 /** Stripe prices are tax-exclusive; tax is added at checkout. */
-export const SALES_TAX_NOTE = "plus applicable sales tax";
+export const SALES_TAX_NOTE = "USD, plus applicable sales tax";
 
-/** One-line price summary for paywall/trial copy, e.g. "$4.99/month or $39.99/year, plus applicable sales tax". */
+/** One-line price summary for paywall/trial copy, e.g. "$4.99/month or $39.99/year USD, plus applicable sales tax". */
 export function proPriceSummary(foundingEligible: boolean): string {
   return foundingEligible
     ? `${MONTHLY_PRICE_LABEL}/month, or ${FOUNDING_PRICE_LABEL} for your first year (then ${ANNUAL_PRICE_LABEL}/year)`
-    : `${MONTHLY_PRICE_LABEL}/month or ${ANNUAL_PRICE_LABEL}/year, ${SALES_TAX_NOTE}`;
+    : `${MONTHLY_PRICE_LABEL}/month or ${ANNUAL_PRICE_LABEL}/year ${SALES_TAX_NOTE}`;
 }
 
 /** The option as it should render for this account (founding variant on Annual when eligible). */

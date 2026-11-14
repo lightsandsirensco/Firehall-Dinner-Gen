@@ -151,11 +151,11 @@ export default function PlansPage() {
     });
   };
 
-  const handleSelect = async (planId: PlanId, billingPeriod?: PlanBillingPeriod) => {
+  const handleSelect = async (planId: PlanId, billingPeriod?: PlanBillingPeriod, skipTrial = false) => {
     if (planId === "hall_pro") return;
 
     if (planId === "firefighter_plus") {
-      if (billing.pro_trial_eligible) {
+      if (billing.pro_trial_eligible && !skipTrial) {
         setSelecting(planId);
         try {
           const result = await startTrial(sourceFeature ? `plans_page_${sourceFeature}` : "plans_page");
@@ -277,6 +277,7 @@ export default function PlansPage() {
                   plan={plan}
                   currentPlanId={billing.effective_plan_id}
                   onSelect={(id, billingPeriod) => void handleSelect(id, billingPeriod)}
+                  onSubscribeNow={(billingPeriod) => void handleSelect(PRO_PLAN_ID, billingPeriod, true)}
                   onBillingPeriodChange={handleBillingPeriodChange}
                   selecting={selecting}
                   paymentsEnabled={paymentsEnabled}
@@ -290,7 +291,7 @@ export default function PlansPage() {
         <p className="text-center text-xs text-muted-foreground/80 leading-relaxed max-w-lg mx-auto">
           Each account can try Firehall Meals Pro free for {PRO_TRIAL_DAYS} days, once — no card needed,
           and you go back to Free automatically when it ends. A paid Pro subscription bills immediately at
-          checkout and renews automatically; cancel anytime from Account → Manage Billing and you keep Pro
+          checkout in US dollars (USD) plus applicable sales tax, and renews automatically; cancel anytime from Account → Manage Billing and you keep Pro
           through the end of the period you already paid for.
           {billing.founding_offer_eligible ? ` Founding offer on your first annual subscription: ${FOUNDING_OFFER_DISPLAY.renewalNote}` : ""}{" "}
           See our{" "}

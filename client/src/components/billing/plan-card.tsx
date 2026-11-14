@@ -39,6 +39,8 @@ interface PlanCardProps {
   onProTrial?: boolean;
   /** This account's annual checkout would get the founding first-year price. */
   foundingOfferEligible?: boolean;
+  /** Paid checkout for a trial-eligible account that wants to skip the trial. */
+  onSubscribeNow?: (billingPeriod: PlanBillingPeriod) => void;
 }
 
 export function PlanCard({
@@ -52,6 +54,7 @@ export function PlanCard({
   proTrialEligible,
   onProTrial,
   foundingOfferEligible,
+  onSubscribeNow,
 }: PlanCardProps) {
   const presentation = PLAN_PRESENTATIONS[plan.plan_id as keyof typeof PLAN_PRESENTATIONS];
   // Visually recommend Annual (best value) without ever recording a
@@ -197,7 +200,7 @@ export function PlanCard({
             <p className="mt-4 text-xs text-muted-foreground/90">
               {showFounding
                 ? `Billed today. Renews automatically at ${FOUNDING_OFFER_DISPLAY.standardPrice}/year after your first year. Cancel anytime from Manage Billing.`
-                : "Plus applicable sales tax. Billed immediately, renews automatically. Cancel anytime from Manage Billing."}
+                : "Prices in USD, plus applicable sales tax. Billed immediately, renews automatically. Cancel anytime from Manage Billing."}
             </p>
           ) : presentation.comingSoonNote ? (
             <p className="mt-4 text-xs text-muted-foreground/90">{presentation.comingSoonNote}</p>
@@ -261,6 +264,19 @@ export function PlanCard({
             )}
           </Button>
         )}
+        {offersTrial && isLive && onSubscribeNow && activeOption ? (
+          <Button
+            type="button"
+            variant="ghost"
+            className="mt-2 min-h-11 w-full whitespace-normal text-sm text-muted-foreground underline-offset-4 hover:underline"
+            disabled={disabled || selecting != null}
+            onClick={() => onSubscribeNow(billingPeriod)}
+            data-testid="plan-subscribe-now"
+          >
+            Or subscribe now — {activeOption.price}
+            {activeOption.period} USD, plus applicable sales tax
+          </Button>
+        ) : null}
       </div>
     </article>
   );

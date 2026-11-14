@@ -280,7 +280,7 @@ function main(): void {
   assert.equal(FOUNDING_OFFER_DISPLAY.renewalNote, "$29.99 for your first year, then $39.99/year.");
   assert.deepEqual(resolveBillingOption(annualOption!, false), annualOption, "no founding display when not eligible");
   assert.deepEqual(resolveBillingOption(monthlyOption!, true), monthlyOption, "founding never changes Monthly");
-  assert.equal(proPriceSummary(false), "$4.99/month or $39.99/year, plus applicable sales tax");
+  assert.equal(proPriceSummary(false), "$4.99/month or $39.99/year USD, plus applicable sales tax");
   assert.equal(proPriceSummary(true), "$4.99/month, or $29.99 for your first year (then $39.99/year)");
 
   // --- Plan architecture: exactly Free (guest + personal) vs Pro on /plans ---

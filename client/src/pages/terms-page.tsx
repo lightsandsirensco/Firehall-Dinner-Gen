@@ -159,8 +159,12 @@ export default function TermsPage() {
               required, and the trial never turns into a paid subscription: when it ends, your
               account returns to the free plan automatically, nothing is charged, and none of your
               data is deleted. A paid subscription bills immediately upon successful checkout.
-              Payment is processed by Stripe; by subscribing you also agree to Stripe's terms
-              governing the payment method you provide.
+              Firehall Meals Pro is sold through Link, Stripe's Managed Payments service, which
+              acts as the merchant of record for your purchase: it processes your payment,
+              calculates and collects any applicable sales tax, sends your receipts, and handles
+              payment disputes. Your card statement and receipts may show Link. By subscribing you
+              also agree to Link's and Stripe's terms governing the purchase and the payment method
+              you provide.
             </p>
             <p>
               Subscriptions automatically renew at the end of each billing period until
@@ -194,7 +198,8 @@ export default function TermsPage() {
             </p>
             <p>
               Where required by applicable consumer-protection law, or where we determine it's
-              appropriate, we may provide a refund at our discretion. Nothing in this policy limits
+              appropriate, we may provide a refund at our discretion. As merchant of record, Link
+              may also issue refunds under its own policies. Nothing in this policy limits
               any refund, cancellation, or other consumer right that applicable law does not allow
               us to waive or restrict.
             </p>
