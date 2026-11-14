@@ -16,6 +16,7 @@ loadProjectEnv();
 export const TEST_TMP_DIR = fs.mkdtempSync(path.join(os.tmpdir(), "fh-pglite-test-"));
 process.env.LOCAL_SQLITE_DB_PATH = path.join(TEST_TMP_DIR, "cache.db");
 process.env.DATABASE_URL = "postgres://pglite.invalid/never-connect";
+process.env.FIREHALL_OFFLINE = "1";
 // Tests must never reach real marketing or payment accounts.
 delete process.env.KLAVIYO_API_KEY;
 delete process.env.KLAVIYO_WEBHOOK_SECRET;
