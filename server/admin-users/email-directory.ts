@@ -12,6 +12,7 @@
 import { nanoid } from "nanoid";
 import { pgAll, pgRun } from "../db/pg-sql.js";
 import { hasSubscribedPro, isProTrialActive } from "../../shared/billing/pro-trial.js";
+import { loadProWaitlist } from "../pro-waitlist/store.js";
 import type { UserSubscription } from "../../shared/billing/types.js";
 import type {
   EmailCategory,
@@ -288,7 +289,7 @@ interface DirectoryAccumulator {
 }
 
 export async function loadEmailDirectory(): Promise<EmailDirectoryRow[]> {
-  const [users, leads, links, consent, queue] = await Promise.all([
+  const [users, leads, links, consent, queue, waitlist] = await Promise.all([
     pgAll<Record<string, unknown>>(
       `SELECT u.user_id, u.email, u.auth_provider, u.created_at, u.last_login_at,
               p.display_name, p.first_name, p.last_name
@@ -304,6 +305,7 @@ export async function loadEmailDirectory(): Promise<EmailDirectoryRow[]> {
     ),
     loadConsent(),
     loadKlaviyoQueue(),
+    loadProWaitlist(),
   ]);
 
   const byEmail = new Map<string, DirectoryAccumulator>();
@@ -341,6 +343,13 @@ export async function loadEmailDirectory(): Promise<EmailDirectoryRow[]> {
     acc.lasts.push(iso(m.last_at));
     acc.sources.add("sign_in_request");
   }
+  for (const [email, w] of waitlist) {
+    const acc = entry(email);
+    if (!acc) continue;
+    acc.firsts.push(w.joined_at);
+    acc.lasts.push(w.joined_at);
+    acc.sources.add("pro_waitlist");
+  }
   // Consent rows only add an email when it was actually opted in through
   // Firehall Meals. Suppression-only rows written by Klaviyo webhooks (which
   // can belong to other brands' contacts in the shared Klaviyo account) do not.
@@ -376,6 +385,7 @@ export async function loadEmailDirectory(): Promise<EmailDirectoryRow[]> {
       consent_captured_at: c?.consent_captured_at ?? null,
       unsubscribed_at: c?.unsubscribed_at ?? null,
       klaviyo_sync: queue.get(acc.email) ?? null,
+      pro_waitlist: waitlist.has(acc.email),
     });
   }
   return rows;
@@ -391,6 +401,8 @@ function directoryMatchesFilter(r: EmailDirectoryRow, filter: EmailDirectoryFilt
       return r.category === "other";
     case "unsubscribed":
       return r.consent === "unsubscribed";
+    case "pro_waitlist":
+      return r.pro_waitlist;
     default:
       return true;
   }
@@ -404,6 +416,7 @@ export function summarizeDirectory(rows: EmailDirectoryRow[]): EmailDirectorySum
     registered_and_subscribed: rows.filter((r) => r.category === "registered_user" && r.consent === "subscribed").length,
     other_emails: rows.filter((r) => r.category === "other").length,
     unsubscribed: rows.filter((r) => r.consent === "unsubscribed").length,
+    pro_waitlist: rows.filter((r) => r.pro_waitlist).length,
   };
 }
 
@@ -464,7 +477,7 @@ export function registeredUsersCsv(users: RegisteredUserRow[]): string {
 
 export function emailDirectoryCsv(rows: EmailDirectoryRow[]): string {
   return toCsv(
-    ["email", "category", "user_id", "name", "first_seen", "last_seen", "sources", "marketing_consent", "consent_source", "consent_captured_at", "unsubscribed_at", "klaviyo_sync"],
-    rows.map((r) => [r.email, r.category, r.user_id, r.name, r.first_seen, r.last_seen, r.sources.join(" | "), r.consent, r.consent_source, r.consent_captured_at, r.unsubscribed_at, r.klaviyo_sync ?? ""]),
+    ["email", "category", "user_id", "name", "first_seen", "last_seen", "sources", "marketing_consent", "consent_source", "consent_captured_at", "unsubscribed_at", "klaviyo_sync", "pro_waitlist"],
+    rows.map((r) => [r.email, r.category, r.user_id, r.name, r.first_seen, r.last_seen, r.sources.join(" | "), r.consent, r.consent_source, r.consent_captured_at, r.unsubscribed_at, r.klaviyo_sync ?? "", r.pro_waitlist ? "yes" : ""]),
   );
 }

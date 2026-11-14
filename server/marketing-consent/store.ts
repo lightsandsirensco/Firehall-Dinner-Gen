@@ -15,8 +15,9 @@
  * before creating an account keeps that consent, and a lead who never
  * consented is never silently upgraded to "subscribed" just by signing up.
  */
+import crypto from "node:crypto";
 import { nanoid } from "nanoid";
-import { pgOne, pgRun } from "../db/pg-sql.js";
+import { pgAll, pgOne, pgRun } from "../db/pg-sql.js";
 
 export function normalizeEmail(email: string): string {
   return email.trim().toLowerCase();
@@ -136,6 +137,85 @@ export async function recordUnsubscribe(email: string, source: string): Promise<
        updated_at = now()`,
     [nanoid(16), normalized, source],
   );
+  await recordConsentEvent({ email: normalized, status: "withdrawn", source });
+}
+
+/** Append-only evidence row; never updated or deleted. */
+export async function recordConsentEvent(input: {
+  email: string;
+  userId?: string | null;
+  status: "granted" | "withdrawn";
+  source: string;
+  disclosureVersion?: string;
+  disclosureText?: string;
+  context?: Record<string, unknown>;
+}): Promise<void> {
+  await pgRun(
+    `INSERT INTO marketing_consent_events
+       (id, email, user_id, status, source, disclosure_version, disclosure_text, context_json, captured_at)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, now())`,
+    [
+      nanoid(16),
+      normalizeEmail(input.email),
+      input.userId ?? null,
+      input.status,
+      input.source,
+      input.disclosureVersion ?? null,
+      input.disclosureText ?? null,
+      input.context ? JSON.stringify(input.context) : null,
+    ],
+  );
+}
+
+/** Stable per-email unsubscribe token for site-sent marketing email (row must already exist). */
+export async function ensureUnsubscribeToken(email: string): Promise<string> {
+  const row = await pgOne<{ unsubscribe_token: string }>(
+    `UPDATE user_marketing_consent
+     SET unsubscribe_token = COALESCE(unsubscribe_token, $2), updated_at = now()
+     WHERE email = $1
+     RETURNING unsubscribe_token`,
+    [normalizeEmail(email), crypto.randomBytes(24).toString("base64url")],
+  );
+  if (!row?.unsubscribe_token) throw new Error("no consent row to attach an unsubscribe token to");
+  return row.unsubscribe_token;
+}
+
+/**
+ * Unsubscribe from an emailed link. Only marketing consent changes — the
+ * account, sign-in and saved recipes live in other tables and are untouched.
+ * Returns the email, or null for an unknown token.
+ */
+export async function unsubscribeByToken(token: string, source: string): Promise<string | null> {
+  if (!token || token.length > 100) return null;
+  const row = await pgOne<{ email: string; was_active: boolean }>(
+    `UPDATE user_marketing_consent c
+     SET marketing_consent = 0,
+         unsubscribed_at = COALESCE(c.unsubscribed_at, now()),
+         klaviyo_unsubscribe_pending = 1,
+         updated_at = now()
+     FROM (SELECT email, (marketing_consent = 1 AND unsubscribed_at IS NULL) AS was_active
+           FROM user_marketing_consent WHERE unsubscribe_token = $1) prev
+     WHERE c.email = prev.email
+     RETURNING c.email, prev.was_active`,
+    [token],
+  );
+  if (!row) return null;
+  if (row.was_active) await recordConsentEvent({ email: row.email, status: "withdrawn", source });
+  return row.email;
+}
+
+export async function listPendingKlaviyoUnsubscribes(limit = 20): Promise<string[]> {
+  const rows = await pgAll<{ email: string }>(
+    `SELECT email FROM user_marketing_consent WHERE klaviyo_unsubscribe_pending = 1 ORDER BY updated_at LIMIT $1`,
+    [limit],
+  );
+  return rows.map((r) => r.email);
+}
+
+export async function markKlaviyoUnsubscribeSynced(email: string): Promise<void> {
+  await pgRun(`UPDATE user_marketing_consent SET klaviyo_unsubscribe_pending = 0 WHERE email = $1`, [
+    normalizeEmail(email),
+  ]);
 }
 
 export interface KlaviyoSafeProfileProperties {

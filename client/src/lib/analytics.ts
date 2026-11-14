@@ -1121,6 +1121,30 @@ export function trackProUpgradeInterest(input: {
   trackProductEvent("pro_upgrade_interest", params);
 }
 
+/** Server-confirmed Pro waitlist signup. Never includes the email address. */
+export function trackProWaitlistJoined(input: {
+  source: string;
+  logged_in: boolean;
+  newsletter_opt_in: boolean;
+  already_joined: boolean;
+}): void {
+  const params = {
+    source: input.source,
+    logged_in: String(input.logged_in),
+    newsletter_opt_in: String(input.newsletter_opt_in),
+    already_joined: String(input.already_joined),
+  };
+  trackEvent("pro_waitlist_joined", params);
+  trackProductEvent("pro_waitlist_joined", params);
+  if (input.newsletter_opt_in) trackNewsletterSignup("pro_waitlist");
+}
+
+/** Server-confirmed newsletter signup from any form. Never includes the email address. */
+export function trackNewsletterSignup(form: string): void {
+  trackEvent("newsletter_signup", { form });
+  trackProductEvent("newsletter_signup", { form });
+}
+
 export function trackHallProEnabled(hallId: string): void {
   trackEvent("hall_pro_enabled", { hall_id: hallId });
   trackProductEvent("hall_pro_enabled", { hall_id: hallId });

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
 import { cn } from "@/lib/utils";
-import { setAnalyticsUserId, trackEvent } from "@/lib/analytics";
+import { setAnalyticsUserId, trackEvent, trackNewsletterSignup } from "@/lib/analytics";
 
 /**
  * Passive footer signup. Submitting is the explicit marketing opt-in (the button says
@@ -34,6 +34,7 @@ export function FooterNewsletter({ className }: { className?: string }) {
       }
       setStatus("success");
       trackEvent("footer_newsletter_subscribed");
+      trackNewsletterSignup("footer");
       setAnalyticsUserId(email.trim());
     } catch {
       setStatus("error");

@@ -44,6 +44,7 @@ const SOURCE_MAP: Record<string, EmailLeadSource> = {
   email_modal: "email_modal",
   "email-modal": "email_modal",
   waitlist: "waitlist",
+  pro_waitlist: "pro_waitlist",
   hall_create: "hall_create",
   "hall-create": "hall_create",
   hall_invite: "hall_invite",

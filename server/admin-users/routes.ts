@@ -122,6 +122,7 @@ const DIRECTORY_FILTERS = new Set<EmailDirectoryFilter>([
   "marketing_subscribers",
   "other_emails",
   "unsubscribed",
+  "pro_waitlist",
 ]);
 
 function parseRegisteredUserFilter(raw: unknown): RegisteredUserFilter {
@@ -639,20 +640,26 @@ export function registerAdminUsersRoutes(app: Express): void {
   });
 }
 
-/** Record a lead from public email capture endpoints (non-fatal). */
+/**
+ * Record a lead from public email capture endpoints. Never throws; resolves
+ * false when a Postgres write (consent or capture) failed, so callers whose
+ * only job is the signup can refuse to report success.
+ */
 export async function captureEmailLead(input: {
   email: string;
   source: string;
   signup_form?: string;
   klaviyo_synced?: boolean;
   marketing_consent?: boolean;
-}): Promise<void> {
+}): Promise<boolean> {
   // Postgres is the durable consent record; it must not depend on the local
   // SQLite CRM succeeding, and a failure must never become an unhandled rejection.
+  let saved = true;
   if (input.marketing_consent) {
     try {
       await recordConsentOptIn({ email: input.email, source: normalizeLeadSource(input.source) });
     } catch (err) {
+      saved = false;
       logError("admin-users", "record marketing consent failed", err);
     }
   }
@@ -663,6 +670,7 @@ export async function captureEmailLead(input: {
       signup_form: input.signup_form,
     });
   } catch (err) {
+    saved = false;
     logError("admin-users", "record email lead capture failed", err);
   }
   try {
@@ -671,4 +679,5 @@ export async function captureEmailLead(input: {
   } catch (err) {
     logError("admin-users", "capture lead failed", err);
   }
+  return saved;
 }

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { MeSubpageShell } from "@/components/app-shell/me-subpage-shell";
 import { PlanCard } from "@/components/billing/plan-card";
+import { ProEarlyAccessDialog } from "@/components/billing/pro-early-access-dialog";
 import { useAuth } from "@/lib/auth/context";
 import { useBilling, useSelectPlan, useStartProCheckout, useStartProTrial } from "@/lib/billing/hooks";
 import { proTrialStatusLabel } from "@shared/billing/pro-trial";
@@ -45,6 +46,10 @@ export default function PlansPage() {
   // flips billing_global_flags.payments_enabled — read from the server so
   // this page never hardcodes "payments are live."
   const [paymentsEnabled, setPaymentsEnabled] = useState(false);
+  // ?early_access=1 (e.g. from the Pro waitlist email link) opens the signup form directly.
+  const [earlyAccessOpen, setEarlyAccessOpen] = useState(
+    () => typeof window !== "undefined" && new URLSearchParams(window.location.search).get("early_access") === "1",
+  );
 
   // Source attribution — e.g. arriving from the Explore "High Protein" Pro chip
   // via /plans?feature=high_protein. Read once and carried through this page's
@@ -179,18 +184,14 @@ export default function PlansPage() {
       }
       if (!paymentsEnabled) {
         // Real Stripe checkout isn't live yet — "Join Pro Early Access" must
-        // not grant the plan or charge anyone. Record upgrade interest only.
+        // not grant the plan or charge anyone. It opens the waitlist form.
         trackProUpgradeInterest({
           plan: billingPeriod ?? "annual",
           page: "/plans",
           logged_in: authenticated,
           feature: sourceFeature,
         });
-        toast({
-          title: "You're on the early-access list",
-          description:
-            "You're on the Firehall Meals Pro early-access list. We'll let you know when Pro is available.",
-        });
+        setEarlyAccessOpen(true);
         return;
       }
 
@@ -307,6 +308,11 @@ export default function PlansPage() {
           .
         </p>
       </div>
+      <ProEarlyAccessDialog
+        open={earlyAccessOpen}
+        onOpenChange={setEarlyAccessOpen}
+        source={sourceFeature ? `plans_page:${sourceFeature}` : "plans_page"}
+      />
     </MeSubpageShell>
   );
 }

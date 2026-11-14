@@ -2,6 +2,7 @@ import { resolvePublicSiteOrigin } from "../seo/sitemap.js";
 import { normalizePublicSiteOrigin } from "../../shared/seo/urls.js";
 import { log, logError } from "../logger.js";
 import { SUPPORT_EMAIL } from "../../shared/support-contact.js";
+import { sendViaResend, sendViaSmtp } from "../email/mailer.js";
 
 export type MagicLinkMailResult =
   | { sent: true; provider: "resend" | "smtp" }
@@ -176,87 +177,6 @@ function classifyProviderError(err: unknown): { message: string; hint: string } 
   };
 }
 
-async function sendViaResend(input: {
-  from: string;
-  to: string;
-  subject: string;
-  html: string;
-  text: string;
-  replyTo?: string;
-}): Promise<void> {
-  const apiKey = process.env.RESEND_API_KEY?.trim();
-  if (!apiKey) throw new Error("RESEND_API_KEY is not set");
-
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 15_000);
-
-  try {
-    const body: Record<string, unknown> = {
-      from: input.from,
-      to: [input.to],
-      subject: input.subject,
-      html: input.html,
-      text: input.text,
-      tags: [{ name: "category", value: "magic_link" }],
-    };
-    if (input.replyTo) body.reply_to = input.replyTo;
-
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-      signal: controller.signal,
-    });
-
-    if (!res.ok) {
-      const detail = await res.text().catch(() => res.statusText);
-      throw new Error(`Resend API ${res.status}: ${detail}`);
-    }
-  } finally {
-    clearTimeout(timeout);
-  }
-}
-
-async function sendViaSmtp(input: {
-  from: string;
-  to: string;
-  subject: string;
-  html: string;
-  text: string;
-  replyTo?: string;
-}): Promise<void> {
-  const host = process.env.SMTP_HOST?.trim();
-  if (!host) throw new Error("SMTP_HOST is not set");
-
-  const nodemailer = await import("nodemailer");
-  const transport = nodemailer.createTransport({
-    host,
-    port: Number(process.env.SMTP_PORT ?? 587),
-    secure: process.env.SMTP_SECURE === "true",
-    connectionTimeout: 15_000,
-    greetingTimeout: 15_000,
-    socketTimeout: 20_000,
-    auth: process.env.SMTP_USER
-      ? {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS ?? "",
-        }
-      : undefined,
-  });
-
-  await transport.sendMail({
-    from: input.from,
-    to: input.to,
-    subject: input.subject,
-    text: input.text,
-    html: input.html,
-    replyTo: input.replyTo,
-  });
-}
-
 function emailDomain(email: string): string {
   return email.split("@")[1]?.toLowerCase() ?? "unknown";
 }
@@ -286,7 +206,7 @@ export async function sendMagicLinkEmail(
 
   const from = magicLinkFromEmail();
   const replyTo = process.env.MAGIC_LINK_REPLY_TO?.trim() || SUPPORT_EMAIL;
-  const payload = { from, to: email, subject, html, text, replyTo };
+  const payload = { from, to: email, subject, html, text, replyTo, category: "magic_link" };
   const hasResend = Boolean(process.env.RESEND_API_KEY?.trim());
   const hasSmtp = Boolean(process.env.SMTP_HOST?.trim());
 

@@ -122,6 +122,8 @@ export const ANALYTICS_EVENT_TYPES = [
   "pro_feature_clicked",
   "pro_plan_selected",
   "pro_upgrade_interest",
+  "pro_waitlist_joined",
+  "newsletter_signup",
   "stripe_checkout_started",
   "stripe_checkout_completed",
   "stripe_subscription_updated",

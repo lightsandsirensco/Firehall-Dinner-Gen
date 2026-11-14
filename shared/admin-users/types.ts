@@ -89,6 +89,7 @@ export type EmailLeadSource =
   | "magic_link"
   | "email_modal"
   | "waitlist"
+  | "pro_waitlist"
   | "hall_create"
   | "hall_invite"
   | "newsletter"
@@ -350,7 +351,8 @@ export type EmailDirectoryFilter =
   | "registered_users"
   | "marketing_subscribers"
   | "other_emails"
-  | "unsubscribed";
+  | "unsubscribed"
+  | "pro_waitlist";
 
 export interface EmailDirectoryRow {
   email: string;
@@ -365,6 +367,8 @@ export interface EmailDirectoryRow {
   consent_captured_at: string | null;
   unsubscribed_at: string | null;
   klaviyo_sync: KlaviyoSyncStatus;
+  /** On the Pro early-access list (launch notifications only — not newsletter consent). */
+  pro_waitlist: boolean;
 }
 
 export interface EmailDirectorySummary {
@@ -374,6 +378,7 @@ export interface EmailDirectorySummary {
   registered_and_subscribed: number;
   other_emails: number;
   unsubscribed: number;
+  pro_waitlist: number;
 }
 
 export interface EmailDirectoryListResponse {

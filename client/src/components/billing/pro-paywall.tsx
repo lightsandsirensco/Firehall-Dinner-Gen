@@ -4,6 +4,7 @@ import { Check, Loader2, Sparkles } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { ProEarlyAccessDialog } from "@/components/billing/pro-early-access-dialog";
 import { useAuth } from "@/lib/auth/context";
 import {
   useBilling,
@@ -63,6 +64,7 @@ export function useProPaywall(): ProPaywallContextValue {
 export function ProPaywallProvider({ children }: { children: React.ReactNode }) {
   const { authenticated } = useAuth();
   const [request, setRequest] = useState<PaywallRequest | null>(null);
+  const [earlyAccessSource, setEarlyAccessSource] = useState<string | null>(null);
 
   const openProPaywall = useCallback(
     (trigger: ProPaywallTrigger, source: string) => {
@@ -82,7 +84,12 @@ export function ProPaywallProvider({ children }: { children: React.ReactNode }) 
   return (
     <ProPaywallContext.Provider value={value}>
       {children}
-      <ProPaywallSheet request={request} onClose={() => setRequest(null)} />
+      <ProPaywallSheet request={request} onClose={() => setRequest(null)} onEarlyAccess={setEarlyAccessSource} />
+      <ProEarlyAccessDialog
+        open={earlyAccessSource != null}
+        onOpenChange={(next) => !next && setEarlyAccessSource(null)}
+        source={earlyAccessSource ?? "paywall"}
+      />
     </ProPaywallContext.Provider>
   );
 }
@@ -103,7 +110,15 @@ function useBillingConfig() {
   });
 }
 
-function ProPaywallSheet({ request, onClose }: { request: PaywallRequest | null; onClose: () => void }) {
+function ProPaywallSheet({
+  request,
+  onClose,
+  onEarlyAccess,
+}: {
+  request: PaywallRequest | null;
+  onClose: () => void;
+  onEarlyAccess: (source: string) => void;
+}) {
   const open = request != null;
   // Keep the last request while the close animation runs so copy doesn't blank out.
   const lastRequest = useRef<PaywallRequest | null>(null);
@@ -199,11 +214,8 @@ function ProPaywallSheet({ request, onClose }: { request: PaywallRequest | null;
         logged_in: true,
         feature: copy.feature,
       });
-      toast({
-        title: "You're on the Pro early-access list",
-        description: "We'll let you know as soon as Pro subscriptions open.",
-      });
       onClose();
+      onEarlyAccess(`paywall:${copy.feature}`);
       return;
     }
     trackProPlanSelected({ plan: period, page: shown.source, logged_in: true, feature: copy.feature });

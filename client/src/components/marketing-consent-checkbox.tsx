@@ -16,10 +16,11 @@ const DEFAULT_LABEL =
   "Send me new recipes, firefighter meal ideas, and Firehall Meals updates by email.";
 
 /**
- * Shared, unchecked-by-default marketing opt-in for transactional email flows
- * (email-a-recipe, email-shopping-list, lead-magnet PDF) and account
- * signup. Requesting the transactional action / creating an account must
- * never require checking this box.
+ * Shared, unchecked-by-default marketing opt-in for email flows
+ * (email-shopping-list, lead-magnet PDF), account signup, and Email Recipe.
+ * Email Recipe is offered only as part of subscribing, so there the box gates
+ * the email; the recipe itself always stays usable on the page. Everywhere
+ * else the action must never require checking this box.
  */
 export function MarketingConsentCheckbox({
   id,

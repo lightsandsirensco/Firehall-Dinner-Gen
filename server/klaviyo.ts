@@ -9,6 +9,7 @@ import {
   markKlaviyoSubscriptionSent,
   recordKlaviyoRetryFailure,
 } from "./marketing-consent/klaviyo-queue.js";
+import { listPendingKlaviyoUnsubscribes, markKlaviyoUnsubscribeSynced } from "./marketing-consent/store.js";
 
 export const KLAVIYO_BASE = "https://a.klaviyo.com/api";
 const REVISION = "2025-01-15";
@@ -267,7 +268,144 @@ export async function processKlaviyoRetryQueue(): Promise<{ sent: number; failed
       out.failed += 1;
     }
   }
+  for (const email of await listPendingKlaviyoUnsubscribes()) {
+    try {
+      await unsubscribeFromMarketing(email);
+      await markKlaviyoUnsubscribeSynced(email);
+      out.sent += 1;
+    } catch (err) {
+      logError("klaviyo", `retry unsubscribe failed email=${maskEmail(email)}`, err);
+      out.failed += 1;
+    }
+  }
   return out;
+}
+
+/**
+ * Pro early-access audience. Separate from the newsletter list so the welcome
+ * flow and weekly campaigns (which target LIST_NAME) never reach people who
+ * only asked to hear about the Pro launch. Created once in Klaviyo, never here.
+ */
+export const PRO_WAITLIST_LIST_NAME = "Firehall Meals — Pro Early Access";
+let cachedWaitlistListId: string | null = null;
+
+async function findWaitlistListId(): Promise<string> {
+  if (cachedWaitlistListId) return cachedWaitlistListId;
+  const url = new URL(`${KLAVIYO_BASE}/lists/`);
+  url.searchParams.set("filter", `equals(name,"${PRO_WAITLIST_LIST_NAME}")`);
+  const res = await klaviyoFetch("GET", url.toString(), undefined, "getWaitlistList");
+  const id = res.ok ? res.data?.data?.[0]?.id : null;
+  if (!id) throw new KlaviyoSubscribeError(`Klaviyo list "${PRO_WAITLIST_LIST_NAME}" not found (${res.status})`, false);
+  cachedWaitlistListId = String(id);
+  return cachedWaitlistListId;
+}
+
+/** Email-marketing state of an existing Klaviyo profile; null when Klaviyo has no profile for the email. */
+async function getProfileEmailMarketing(email: string): Promise<{ consent: string; suppressed: boolean } | null> {
+  const url = new URL(`${KLAVIYO_BASE}/profiles/`);
+  url.searchParams.set("filter", `equals(email,"${email}")`);
+  url.searchParams.set("additional-fields[profile]", "subscriptions");
+  const res = await klaviyoFetch("GET", url.toString(), undefined, `getProfileConsent(${maskEmail(email)})`);
+  if (!res.ok) throw new KlaviyoSubscribeError(`Profile lookup failed (${res.status})`, false);
+  const profile = res.data?.data?.[0];
+  if (!profile) return null;
+  const marketing = profile.attributes?.subscriptions?.email?.marketing ?? {};
+  const suppression = Array.isArray(marketing.suppression) ? marketing.suppression : [];
+  return { consent: String(marketing.consent ?? "NEVER_SUBSCRIBED"), suppressed: suppression.length > 0 };
+}
+
+/**
+ * "blocked" = Klaviyo has the profile as unsubscribed or suppressed (bounce,
+ * spam complaint, manual suppression); "subscribed" = already receiving marketing.
+ * Throws when Klaviyo can't be reached so callers fail closed.
+ */
+export async function getEmailMarketingStatus(email: string): Promise<"none" | "subscribed" | "blocked"> {
+  const profile = await getProfileEmailMarketing(email);
+  if (!profile) return "none";
+  if (profile.consent === "UNSUBSCRIBED" || profile.suppressed) return "blocked";
+  return profile.consent === "SUBSCRIBED" ? "subscribed" : "none";
+}
+
+/** Global email-marketing unsubscribe (no list = every marketing list). */
+export async function unsubscribeFromMarketing(email: string): Promise<void> {
+  const res = await klaviyoFetch(
+    "POST",
+    `${KLAVIYO_BASE}/profile-subscription-bulk-delete-jobs/`,
+    {
+      data: {
+        type: "profile-subscription-bulk-delete-job",
+        attributes: {
+          profiles: {
+            data: [{ type: "profile", attributes: { email, subscriptions: { email: { marketing: { consent: "UNSUBSCRIBED" } } } } }],
+          },
+        },
+      },
+    },
+    `unsubscribe(${maskEmail(email)})`,
+  );
+  if (!res.ok) throw new Error(`Unsubscribe failed (${res.status})`);
+}
+
+export type ProWaitlistSyncResult = "synced" | "skipped_suppressed";
+
+/**
+ * Adds a Pro waitlist signup to the Pro Early Access list. A profile Klaviyo
+ * already has as unsubscribed or suppressed is left untouched — a waitlist
+ * request must never resubscribe someone to email marketing.
+ */
+export async function syncProWaitlistSignup(
+  email: string,
+  info: { source: string; joined_at: string },
+): Promise<ProWaitlistSyncResult> {
+  const existing = await getProfileEmailMarketing(email);
+  if (existing && (existing.consent === "UNSUBSCRIBED" || existing.suppressed)) return "skipped_suppressed";
+
+  const listId = await findWaitlistListId();
+  const props = await klaviyoFetch(
+    "POST",
+    `${KLAVIYO_BASE}/profile-import/`,
+    {
+      data: {
+        type: "profile",
+        attributes: {
+          email,
+          properties: { pro_waitlist: true, pro_waitlist_joined_at: info.joined_at, pro_waitlist_source: info.source },
+        },
+      },
+    },
+    `waitlistProfile(${maskEmail(email)})`,
+  );
+  if (!props.ok) {
+    const permanent = props.status >= 400 && props.status < 500 && ![401, 403, 408, 429].includes(props.status);
+    throw new KlaviyoSubscribeError(`Waitlist profile update failed (${props.status})`, permanent);
+  }
+
+  const res = await klaviyoFetch(
+    "POST",
+    `${KLAVIYO_BASE}/profile-subscription-bulk-create-jobs/`,
+    {
+      data: {
+        type: "profile-subscription-bulk-create-job",
+        attributes: {
+          custom_source: "Firehall Meals Pro early access",
+          profiles: {
+            data: [{ type: "profile", attributes: { email, subscriptions: { email: { marketing: { consent: "SUBSCRIBED" } } } } }],
+          },
+        },
+        relationships: { list: { data: { type: "list", id: listId } } },
+      },
+    },
+    `waitlistSubscribe(${maskEmail(email)})`,
+  );
+  if (!res.ok) {
+    const permanent = res.status >= 400 && res.status < 500 && ![401, 403, 408, 429].includes(res.status);
+    throw new KlaviyoSubscribeError(`Waitlist subscribe failed (${res.status})`, permanent);
+  }
+  return "synced";
+}
+
+export function isPermanentKlaviyoError(err: unknown): boolean {
+  return isPermanent(err);
 }
 
 let retryTimer: NodeJS.Timeout | null = null;
@@ -276,7 +414,8 @@ export function startKlaviyoRetryWorker(intervalMs = 5 * 60 * 1000): void {
   if (retryTimer || !isPgConfigured()) return;
   const tick = () =>
     void processKlaviyoRetryQueue().catch((err) => {
-      if ((err as { code?: string })?.code === "42P01") return; // migration 0020 not applied yet
+      const code = (err as { code?: string })?.code;
+      if (code === "42P01" || code === "42703") return; // migrations 0020/0024 not applied yet
       logError("klaviyo", "retry worker failed", err);
     });
   retryTimer = setInterval(tick, intervalMs);

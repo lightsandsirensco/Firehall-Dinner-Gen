@@ -179,11 +179,23 @@ export const emailRecipeSchema = z.object({
   macros: emailMacrosSchema,
   timestamp: z.string().trim().max(40).optional(),
   capture_source: z.string().trim().max(40).optional(),
-  /** Explicit, unchecked-by-default marketing opt-in — distinct from the transactional recipe email. */
+  /** The recipe email is offered only with a subscription: this must be an explicit `true` from the unchecked-by-default box. */
   marketing_consent: z.boolean().optional().default(false),
+  /** Version of the disclosure wording the person saw (shared/marketing/recipe-email-consent.ts). */
+  consent_version: z.string().trim().max(60).optional().default(""),
+  recipe_slug: z.string().trim().max(120).optional(),
+  /** Same-site path of the page the recipe was on, for the "view on Firehall Meals" link. */
+  page_path: z.string().trim().max(300).regex(/^\/(?!\/)[\w\-./?=&%]*$/).optional(),
 });
 
 export type EmailRecipePayload = z.infer<typeof emailRecipeSchema>;
+
+export interface EmailRecipeResponse {
+  status: "sent";
+  /** "existing" = already subscribed, so no new welcome series is started. */
+  subscription: "new" | "existing";
+  message: string;
+}
 
 const shoppingListItemSchema = z.object({
   name: z.string().trim().min(1).max(200),
@@ -226,6 +238,29 @@ export const homepageSubscribeSchema = z.object({
 });
 
 export type HomepageSubscribePayload = z.infer<typeof homepageSubscribeSchema>;
+
+/** Signed-in users join with their account email; `email` is only read when signed out. */
+export const proWaitlistJoinSchema = z.object({
+  email: emailAddressSchema.optional(),
+  source: z.string().trim().min(1).max(80).regex(/^[a-z0-9_:\-]+$/i),
+  newsletter_opt_in: z.boolean().optional(),
+});
+
+export type ProWaitlistJoinPayload = z.infer<typeof proWaitlistJoinSchema>;
+
+export interface ProWaitlistStatusResponse {
+  signed_in: boolean;
+  account_email: string | null;
+  joined: boolean;
+  joined_at: string | null;
+}
+
+export interface ProWaitlistJoinResponse {
+  status: "joined" | "already_joined";
+  email: string;
+  joined_at: string;
+  newsletter: "subscribed" | "not_requested";
+}
 
 export interface IngredientItem {
   item: string;

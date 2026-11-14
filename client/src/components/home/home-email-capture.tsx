@@ -11,6 +11,7 @@ import {
   setAnalyticsUserId,
   trackHomepageCaptureSubmit,
   trackHomepageCaptureView,
+  trackNewsletterSignup,
 } from "@/lib/analytics";
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
 import { WithLightsAndSirensLinks } from "@/components/brand/lights-and-sirens-link";
@@ -69,6 +70,7 @@ export function HomeEmailCapture() {
 
       setStatus("success");
       trackHomepageCaptureSubmit();
+      trackNewsletterSignup("homepage");
       setAnalyticsUserId(email.trim());
     } catch {
       setStatus("error");

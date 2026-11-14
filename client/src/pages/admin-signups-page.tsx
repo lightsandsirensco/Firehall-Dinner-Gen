@@ -20,6 +20,7 @@ const FILTERS: { id: EmailDirectoryFilter; label: string }[] = [
   { id: "marketing_subscribers", label: "Marketing subscribers" },
   { id: "other_emails", label: "Other collected emails" },
   { id: "unsubscribed", label: "Unsubscribed" },
+  { id: "pro_waitlist", label: "Pro waitlist" },
 ];
 
 const CATEGORY_LABEL: Record<EmailCategory, string> = {
@@ -134,7 +135,7 @@ export default function AdminSignupsPage() {
       </div>
 
       {summary ? (
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
           {(
             [
               ["Unique emails", summary.total_unique_emails],
@@ -142,6 +143,7 @@ export default function AdminSignupsPage() {
               ["Marketing subscribers", summary.marketing_subscribers],
               ["…of which registered", summary.registered_and_subscribed],
               ["Other collected", summary.other_emails],
+              ["Pro waitlist", summary.pro_waitlist],
               ["Unsubscribed", summary.unsubscribed],
             ] as const
           ).map(([label, value]) => (
