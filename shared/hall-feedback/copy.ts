@@ -9,7 +9,6 @@ export const HALL_FEEDBACK_COPY = {
   emailPlaceholder: "you@station.com",
   submit: "Submit",
   cancel: "Cancel",
-  footerBeta: "Firehall Meals Beta",
   footerTagline: "Built by firefighters. Improved every shift.",
   footerLink: "Hall Feedback",
   generatorSmoked:

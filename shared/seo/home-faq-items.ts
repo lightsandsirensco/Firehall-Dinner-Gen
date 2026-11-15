@@ -24,7 +24,7 @@ export const HOME_FAQ_ITEMS: FaqItem[] = [
   {
     question: "Do I need to join a firehouse to use Firehall Meals?",
     answer:
-      "No. You can browse recipes, run the Generator, spin the Classics Wheel, and save favorites without linking a firehouse. Shared dinner votes, group grocery lists, and crew meal history are part of Firehouse Operations, which is still in private beta — join the waitlist for early access when it opens to your station.",
+      "No. You can browse recipes, run the Generator, spin the Classics Wheel, and save favorites without linking a firehouse. Shared dinner votes, group grocery lists, and crew meal history are part of Firehouse Operations, which is not yet available.",
   },
   {
     question: "What are some good meals for firefighters?",
@@ -83,6 +83,6 @@ export const HOME_FAQ_ITEMS: FaqItem[] = [
   {
     question: "How is Firehall Meals different from a regular recipe site?",
     answer:
-      "Regular recipe sites assume a quiet kitchen and one plate. Firehall Meals is built around crew portions, honest cook times, and Cook Mode steps that survive getting pulled away mid-prep. Use it solo today — shared firehouse planning is rolling out through the Firehouse Operations private beta. Built by firefighters for real shifts.",
+      "Regular recipe sites assume a quiet kitchen and one plate. Firehall Meals is built around crew portions, honest cook times, and Cook Mode steps that survive getting pulled away mid-prep. Use it solo today — shared firehouse planning is not yet available. Built by firefighters for real shifts.",
   },
 ];
