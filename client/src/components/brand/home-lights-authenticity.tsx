@@ -1,6 +1,5 @@
 import { Flame } from "lucide-react";
-import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
-import { LightsAndSirensLink } from "./lights-and-sirens-link";
+import { AUTHENTICITY_BODY } from "@/lib/brand-copy";
 
 export function HomeLightsAuthenticity() {
   return (
@@ -21,10 +20,10 @@ export function HomeLightsAuthenticity() {
             id="lights-authenticity-heading"
             className="mt-4 font-heading text-2xl sm:text-3xl md:text-4xl leading-[1.08] tracking-tight text-foreground"
           >
-            Built by <LightsAndSirensLink variant="inline">Lights & Sirens Co.</LightsAndSirensLink>
+            Built by firefighters, for firefighters.
           </h2>
           <p className="mt-5 text-[15px] sm:text-base text-muted-foreground leading-[1.75] max-w-prose">
-            {LIGHTS_COPY.authenticityBody}
+            {AUTHENTICITY_BODY}
           </p>
         </div>
       </div>

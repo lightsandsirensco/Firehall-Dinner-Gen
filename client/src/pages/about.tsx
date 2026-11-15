@@ -34,9 +34,7 @@ import { InternalLinkHub } from "@/components/seo/internal-link-hub";
 
 import { HOME_FAQ_ITEMS } from "@/lib/seo/home-faq";
 
-import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
-
-import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
+import { AUTHENTICITY_BODY } from "@/lib/brand-copy";
 
 import { SiteFooter } from "@/components/site-footer";
 
@@ -146,12 +144,8 @@ export default function AboutPage() {
 
 
 
-        <LightsAndSirensCredit variant="block" className="mt-6" showFirefighterOwned />
-
-
-
         <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl">
-          {LIGHTS_COPY.authenticityBody}
+          {AUTHENTICITY_BODY}
         </p>
 
 

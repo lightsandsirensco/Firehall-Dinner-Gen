@@ -15,8 +15,6 @@ import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { hapticLight } from "@/lib/haptics";
 import { BRAND_NAME, CTA, NAV } from "@/lib/brand-copy";
-import { LightsAndSirensMobilePanel } from "@/components/brand/lights-and-sirens-mobile-panel";
-import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
 import { BrandLogo } from "@/components/brand/brand-logo";
 import { getSavedCount, SAVED_MEALS_CHANGED_EVENT } from "@/lib/saved-meals";
 import { useAuth } from "@/lib/auth/context";
@@ -172,12 +170,6 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
           >
             {brand}
           </Link>
-
-          <div className="hidden lg:flex items-center gap-2 shrink-0 mr-2">
-            <LightsAndSirensLink variant="badge" className="hidden xl:inline-flex">
-              L&amp;S Co.
-            </LightsAndSirensLink>
-          </div>
 
           <div className="hidden xl:flex items-center gap-0.5 flex-1 justify-center min-w-0">
             {navItems.map((item) => {
@@ -406,7 +398,6 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
                       {CTA.findDinner}
                     </Button>
                   )}
-                  <LightsAndSirensMobilePanel />
                 </nav>
               </SheetContent>
             </Sheet>

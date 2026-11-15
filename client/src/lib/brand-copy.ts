@@ -15,6 +15,16 @@ export const COPYRIGHT_NOTICE = `© ${new Date().getFullYear()} ${BRAND_NAME}. A
 
 export const FOOTER_TAGLINE = "The Original Firefighter Meal-Planning App";
 
+/** Home/About authenticity section body. */
+export const AUTHENTICITY_BODY =
+  "No more standing around the firehouse throwing out the same five ideas every shift. Just real meals crews actually want to make — from quick busy-night dinners to firehouse classics that always hit on shift.";
+
+export const RECIPE_STRIP_LINE = "Another firehouse-ready meal from Firehall Meals.";
+
+export const WHEEL_LINE = "The classic kitchen-table gamble, firehouse style.";
+
+export const EMAIL_SIGNUP_NOTE = "From the Firehall Meals crew — meals that work on shift.";
+
 export const FOOTER_SUBLINE = "Firefighter-Owned & Operated. Built for the Firehouse.";
 
 export const BRAND_MISSION =

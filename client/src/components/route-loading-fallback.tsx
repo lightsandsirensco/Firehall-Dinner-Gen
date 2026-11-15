@@ -1,6 +1,4 @@
 import { BrandLogo } from "@/components/brand/brand-logo";
-import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
-
 /** Route chunk placeholder — matches loading-state tone */
 export function RouteLoadingFallback() {
   return (
@@ -16,7 +14,6 @@ export function RouteLoadingFallback() {
       <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground/70 font-medium">
         Loading…
       </p>
-      <LightsAndSirensCredit variant="compact" className="text-center text-xs" />
     </div>
   );
 }

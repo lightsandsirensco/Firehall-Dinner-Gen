@@ -1,4 +1,3 @@
-import { ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import {
@@ -10,12 +9,6 @@ import {
   FOOTER_TAGLINE,
   RECIPE_IMAGE_DISCLOSURE,
 } from "@/lib/brand-copy";
-import {
-  LIGHTS_AND_SIRENS,
-  LIGHTS_COPY,
-  LIGHTS_FOOTER_LINKS,
-} from "@/lib/lights-and-sirens";
-import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
 import { BrandLogo } from "@/components/brand/brand-logo";
 import { HALL_FEEDBACK_COPY } from "@shared/hall-feedback/copy";
 import { HallFeedbackFooterLink } from "@/components/hall-feedback/hall-feedback-footer-link";
@@ -88,24 +81,6 @@ export function SiteLegalLine({ className, align = "center" }: { className?: str
   );
 }
 
-/** Understated parent-brand credit — only the brand name is a link. */
-function ParentBrandCredit({ className }: { className?: string }) {
-  return (
-    <p className={cn("text-xs text-muted-foreground/60", className)} data-testid="footer-parent-brand-credit">
-      Created by{" "}
-      <a
-        href={LIGHTS_AND_SIRENS.website}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-muted-foreground/80 hover:text-primary transition-colors underline-offset-4 hover:underline"
-      >
-        {LIGHTS_AND_SIRENS.name}
-      </a>{" "}
-      — a firefighter-owned brand.
-    </p>
-  );
-}
-
 export function SiteFooter({ variant = "full", className, pbSafe = false, newsletter = variant === "full" }: SiteFooterProps) {
   if (variant === "compact") {
     return (
@@ -121,16 +96,10 @@ export function SiteFooter({ variant = "full", className, pbSafe = false, newsle
           {newsletter && <FooterNewsletter className="mx-auto pb-4 mb-2 border-b border-border/15" />}
           <p className="text-xs text-muted-foreground/80">{HALL_FEEDBACK_COPY.footerTagline}</p>
           <HallFeedbackFooterLink className="text-xs text-primary/85 hover:text-primary transition-colors underline-offset-4 hover:underline" />
-          <p className="text-xs font-medium text-foreground/80 pt-1">{LIGHTS_COPY.footerTagline}</p>
-          <p className="text-xs text-muted-foreground">
-            {LIGHTS_COPY.footerSub}{" "}
-            <LightsAndSirensLink variant="footer">Lights & Sirens Co.</LightsAndSirensLink>
-          </p>
           <SiteLegalLine className="pt-2" />
           <p className="text-[11px] text-muted-foreground/60" data-testid="footer-image-disclosure">
             {RECIPE_IMAGE_DISCLOSURE}
           </p>
-          <ParentBrandCredit />
         </div>
       </footer>
     );
@@ -156,20 +125,12 @@ export function SiteFooter({ variant = "full", className, pbSafe = false, newsle
             <p className="mt-2 text-[10px] uppercase tracking-[0.28em] text-muted-foreground/70">
               {BRAND_TAGLINE}
             </p>
-            <p className="mt-4 text-sm font-medium text-foreground/90">{LIGHTS_COPY.footerTagline}</p>
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-md">
-              {LIGHTS_COPY.footerSub}{" "}
-              <LightsAndSirensLink variant="inline">Lights & Sirens Co.</LightsAndSirensLink>
-              {" — "}
-              {LIGHTS_COPY.footerBlurb}
-            </p>
-            <p className="mt-3 text-xs text-primary/80 font-semibold uppercase tracking-wider">
-              {LIGHTS_AND_SIRENS.firefighterOwned}
-            </p>
+            <p className="mt-4 text-sm font-medium text-foreground/90">Built by firefighters, for firefighters.</p>
+            <p className="mt-3 text-xs text-primary/80 font-semibold uppercase tracking-wider">Firefighter-owned</p>
             {newsletter && <FooterNewsletter className="mt-6" />}
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2">
             <div>
               <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                 Firehall Meals
@@ -229,32 +190,6 @@ export function SiteFooter({ variant = "full", className, pbSafe = false, newsle
                 </li>
               </ul>
             </div>
-            <div>
-              <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                <LightsAndSirensLink variant="plain" />
-              </h3>
-              <ul className="mt-3 space-y-2.5">
-                {LIGHTS_FOOTER_LINKS.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group inline-flex items-start gap-1.5 text-sm text-foreground/85 hover:text-primary transition-colors"
-                    >
-                      <span>{link.label}</span>
-                      <ExternalLink
-                        className="w-3 h-3 mt-0.5 opacity-40 group-hover:opacity-70 shrink-0"
-                        aria-hidden
-                      />
-                    </a>
-                    {link.description && (
-                      <p className="text-[11px] text-muted-foreground/80 mt-0.5 pl-0">{link.description}</p>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
 
@@ -271,9 +206,8 @@ export function SiteFooter({ variant = "full", className, pbSafe = false, newsle
           </p>
         </div>
 
-        <div className="mt-6 pt-6 border-t border-border/15 flex flex-col items-center gap-3 text-center lg:flex-row lg:items-end lg:justify-between lg:text-left">
+        <div className="mt-6 pt-6 border-t border-border/15">
           <SiteLegalLine align="start" />
-          <ParentBrandCredit />
         </div>
       </div>
     </footer>

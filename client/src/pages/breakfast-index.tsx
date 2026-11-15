@@ -14,7 +14,6 @@ import { fetchHallCatalogBreakfasts } from "@/lib/golden-recipe-api";
 import { recipePath } from "@shared/seo/urls";
 import { FoodImage } from "@/components/mobile/food-image";
 import { cn } from "@/lib/utils";
-import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
 import { SiteFooter } from "@/components/site-footer";
 import {
   breakfastPerformanceIndexPath,
@@ -124,8 +123,6 @@ export default function BreakfastIndexPage() {
         <h1 className="mt-3 font-heading tracking-tight text-3xl sm:text-4xl">
           Firehouse breakfast
         </h1>
-        <LightsAndSirensCredit variant="block" className="mt-4 max-w-lg" showFirefighterOwned />
-
         <p className="mt-4 text-muted-foreground leading-relaxed max-w-3xl">
           Built for station mornings: burritos, skillets, casseroles, and sandwiches crews actually vote
           for — not fitness-blog oatmeal. Breakfast lives here on purpose; it does not appear in the

@@ -12,7 +12,7 @@ type LightsAndSirensLinkProps = {
   variant?: "hero" | "inline" | "badge" | "footer" | "plain";
 };
 
-/** Parent-brand mention — links to lightsandsirensco.com in a new tab, styled to blend in. */
+/** Operator-brand mention for legal pages — links to lightsandsirensco.com in a new tab, styled to blend in. */
 export function LightsAndSirensLink({
   className,
   children,
@@ -39,20 +39,5 @@ export function LightsAndSirensLink({
     >
       {label}
     </a>
-  );
-}
-
-/** Renders a copy string with every "Lights & Sirens Co." linked, keeping the surrounding styling. */
-export function WithLightsAndSirensLinks({ text }: { text: string }) {
-  const parts = text.split(LIGHTS_AND_SIRENS.name);
-  return (
-    <>
-      {parts.map((part, i) => (
-        <span key={i}>
-          {part}
-          {i < parts.length - 1 && <LightsAndSirensLink variant="plain" />}
-        </span>
-      ))}
-    </>
   );
 }

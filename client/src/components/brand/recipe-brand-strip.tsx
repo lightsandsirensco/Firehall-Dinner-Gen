@@ -1,5 +1,4 @@
-import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
-import { LightsAndSirensLink } from "./lights-and-sirens-link";
+import { RECIPE_STRIP_LINE } from "@/lib/brand-copy";
 import { cn } from "@/lib/utils";
 
 type RecipeBrandStripProps = {
@@ -7,9 +6,7 @@ type RecipeBrandStripProps = {
   line?: string;
 };
 
-export function RecipeBrandStrip({ className, line = LIGHTS_COPY.recipeStrip }: RecipeBrandStripProps) {
-  const [before, after] = line.split("Lights & Sirens Co.");
-
+export function RecipeBrandStrip({ className, line = RECIPE_STRIP_LINE }: RecipeBrandStripProps) {
   return (
     <div
       className={cn(
@@ -19,9 +16,7 @@ export function RecipeBrandStrip({ className, line = LIGHTS_COPY.recipeStrip }: 
       )}
       data-testid="recipe-brand-strip"
     >
-      {before}
-      <LightsAndSirensLink variant="inline">Lights & Sirens Co.</LightsAndSirensLink>
-      {after ?? ""}
+      {line}
     </div>
   );
 }

@@ -3,7 +3,6 @@ import { CheckCircle, Loader2, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
@@ -13,9 +12,7 @@ import {
   trackHomepageCaptureView,
   trackNewsletterSignup,
 } from "@/lib/analytics";
-import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
-import { WithLightsAndSirensLinks } from "@/components/brand/lights-and-sirens-link";
-import { HOME } from "@/lib/brand-copy";
+import { EMAIL_SIGNUP_NOTE, HOME } from "@/lib/brand-copy";
 
 type CaptureStatus = "idle" | "loading" | "success" | "error";
 
@@ -153,10 +150,7 @@ export function HomeEmailCapture() {
 
           {status !== "success" && (
             <div className="mt-5 text-center">
-              <p className="text-[11px] text-muted-foreground leading-relaxed"><WithLightsAndSirensLinks text={LIGHTS_COPY.emailNote} /></p>
-              <div className="mt-2 flex justify-center">
-                <LightsAndSirensCredit variant="compact" className="text-[11px]" />
-              </div>
+              <p className="text-[11px] text-muted-foreground leading-relaxed">{EMAIL_SIGNUP_NOTE}</p>
             </div>
           )}
         </div>

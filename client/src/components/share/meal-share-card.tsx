@@ -3,7 +3,6 @@
  */
 
 import { BRAND_NAME } from "@/lib/brand-copy";
-import { LIGHTS_AND_SIRENS } from "@/lib/lights-and-sirens";
 import { MealHeroImage } from "@/components/meal-hero-image";
 import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
 import type { MealTrustInput } from "@shared/meal-trust/badges";
@@ -70,8 +69,8 @@ export function MealShareCard({
         </div>
 
         <p className="text-[10px] text-white/55 text-center">
-          Built by{" "}
-          <span className="text-white/80 font-medium">{LIGHTS_AND_SIRENS.name}</span>
+          Built by firefighters ·{" "}
+          <span className="text-white/80 font-medium">{BRAND_NAME}</span>
         </p>
       </div>
     </div>
