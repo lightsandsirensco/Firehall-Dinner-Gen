@@ -15,6 +15,7 @@ import {
   Utensils,
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
+import { SiteLegalLine } from "@/components/site-footer";
 import { useLocation, useRoute, Link, Redirect } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -743,12 +744,10 @@ function RecipeDetailView({
 function ExploreDetailFooter({ className = "" }: { className?: string }) {
   return (
     <footer className={`text-center py-6 mt-8 border-t border-border/20 ${className}`}>
-      <p className="text-xs text-muted-foreground/50" data-testid="link-attribution">
-        Firefighter-owned
-      </p>
-      <p className="mt-1 text-[11px] text-muted-foreground/50" data-testid="recipe-image-disclosure">
+      <p className="text-[11px] text-muted-foreground/50" data-testid="recipe-image-disclosure">
         {RECIPE_IMAGE_DISCLOSURE}
       </p>
+      <SiteLegalLine className="mt-4 px-page" />
     </footer>
   );
 }

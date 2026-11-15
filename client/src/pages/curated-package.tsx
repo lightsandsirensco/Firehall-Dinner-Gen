@@ -3,6 +3,7 @@ import { useRoute, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { ChevronLeft, Flame, ExternalLink, Loader2 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
+import { SiteLegalLine } from "@/components/site-footer";
 import { RecipeCard } from "@/components/recipe-card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -198,7 +199,7 @@ export default function CuratedPackagePage() {
       )}
 
       <footer className="text-center py-6 mt-8 border-t border-border/20">
-        <p className="text-xs text-muted-foreground/50">Firefighter-owned</p>
+        <SiteLegalLine className="px-page" />
       </footer>
     </div>
   );

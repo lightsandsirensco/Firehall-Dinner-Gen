@@ -11,6 +11,12 @@ export const BRAND_TAGLINE = "Built by Firefighters. Made for the Firehouse.";
 
 export const RECIPE_IMAGE_DISCLOSURE = "Recipe images are illustrative. Your results may vary.";
 
+export const COPYRIGHT_NOTICE = `© ${new Date().getFullYear()} ${BRAND_NAME}. All rights reserved.`;
+
+export const FOOTER_TAGLINE = "The Original Firefighter Meal-Planning App";
+
+export const FOOTER_SUBLINE = "Firefighter-Owned & Operated. Built for the Firehouse.";
+
 export const BRAND_MISSION =
   "Get rid of the \"What's for Dinner?\" debate every shift.";
 

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { BrandLogo } from "@/components/brand/brand-logo";
 import { SiteHeader } from "@/components/site-header";
+import { SiteLegalLine } from "@/components/site-footer";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { useFaqSeo } from "@/lib/seo/use-faq-seo";
@@ -57,13 +58,16 @@ export default function FaqPage() {
       </main>
 
       <footer className="border-t border-border/20 mt-10">
-        <div className="max-w-[1400px] mx-auto px-page py-6 flex items-center justify-center gap-2">
-          <BrandLogo className="h-4 w-4" />
-          <p className="text-xs text-muted-foreground/50">
-            <Link href="/" className="hover:text-muted-foreground transition-colors">
-              {BRAND_NAME}
-            </Link>
-          </p>
+        <div className="max-w-[1400px] mx-auto px-page py-6 space-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <BrandLogo className="h-4 w-4" />
+            <p className="text-xs text-muted-foreground/50">
+              <Link href="/" className="hover:text-muted-foreground transition-colors">
+                {BRAND_NAME}
+              </Link>
+            </p>
+          </div>
+          <SiteLegalLine />
         </div>
       </footer>
     </div>

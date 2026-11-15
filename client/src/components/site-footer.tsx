@@ -1,7 +1,15 @@
 import { ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
-import { BRAND_NAME, BRAND_TAGLINE, CTA, RECIPE_IMAGE_DISCLOSURE } from "@/lib/brand-copy";
+import {
+  BRAND_NAME,
+  BRAND_TAGLINE,
+  COPYRIGHT_NOTICE,
+  CTA,
+  FOOTER_SUBLINE,
+  FOOTER_TAGLINE,
+  RECIPE_IMAGE_DISCLOSURE,
+} from "@/lib/brand-copy";
 import {
   LIGHTS_AND_SIRENS,
   LIGHTS_COPY,
@@ -24,23 +32,59 @@ type SiteFooterProps = {
 
 const SUPPORT_MAILTO = "mailto:support@firehallmeals.com?subject=Firehall%20Meals%20support";
 
-/** Privacy / Terms / Support — kept tiny and identical across both footer variants. */
-function LegalLinksRow({ className }: { className?: string }) {
+const LEGAL_LINK_CLASS = "text-muted-foreground/80 hover:text-primary transition-colors underline-offset-4 hover:underline";
+
+const LEGAL_DOT = (
+  <span aria-hidden className="text-muted-foreground/40">
+    ·
+  </span>
+);
+
+/**
+ * Brand sign-off, then copyright + Terms / Privacy / Support in one understated
+ * row on desktop (stacked on mobile). Shared by both footer variants and the
+ * minimal page footers. Aligns center by default; pass `align="start"` for left.
+ */
+export function SiteLegalLine({ className, align = "center" }: { className?: string; align?: "center" | "start" }) {
+  const start = align === "start";
   return (
-    <nav aria-label="Legal" className={cn("flex items-center justify-center gap-4 text-xs", className)}>
-      <Link href="/privacy" className="text-muted-foreground/80 hover:text-primary transition-colors underline-offset-4 hover:underline">
-        Privacy
-      </Link>
-      <Link href="/terms" className="text-muted-foreground/80 hover:text-primary transition-colors underline-offset-4 hover:underline">
-        Terms
-      </Link>
-      <a
-        href={SUPPORT_MAILTO}
-        className="text-muted-foreground/80 hover:text-primary transition-colors underline-offset-4 hover:underline"
+    <div
+      className={cn("flex flex-col items-center gap-2 text-center", start && "lg:items-start lg:text-left", className)}
+      data-testid="footer-legal-line"
+    >
+      <div className="space-y-0.5">
+        <p className="text-xs font-medium tracking-wide text-foreground/80" data-testid="footer-brand-tagline">
+          {FOOTER_TAGLINE}
+        </p>
+        <p className="text-[11px] text-muted-foreground/70">{FOOTER_SUBLINE}</p>
+      </div>
+      <div
+        className={cn(
+          "flex flex-col items-center gap-1.5 text-xs sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-3 sm:gap-y-1",
+          start && "lg:justify-start",
+        )}
       >
-        Support
-      </a>
-    </nav>
+        <p className="text-muted-foreground/60" data-testid="footer-copyright">
+          {COPYRIGHT_NOTICE}
+        </p>
+        <span aria-hidden className="hidden text-muted-foreground/40 sm:inline">
+          ·
+        </span>
+        <nav aria-label="Legal" className="flex items-center justify-center gap-2">
+          <Link href="/terms" className={LEGAL_LINK_CLASS}>
+            Terms of Service
+          </Link>
+          {LEGAL_DOT}
+          <Link href="/privacy" className={LEGAL_LINK_CLASS}>
+            Privacy Policy
+          </Link>
+          {LEGAL_DOT}
+          <a href={SUPPORT_MAILTO} className={LEGAL_LINK_CLASS}>
+            Support
+          </a>
+        </nav>
+      </div>
+    </div>
   );
 }
 
@@ -75,9 +119,6 @@ export function SiteFooter({ variant = "full", className, pbSafe = false, newsle
       >
         <div className="max-w-[1400px] mx-auto px-page py-6 text-center space-y-2">
           {newsletter && <FooterNewsletter className="mx-auto pb-4 mb-2 border-b border-border/15" />}
-          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground/70">
-            {HALL_FEEDBACK_COPY.footerBeta}
-          </p>
           <p className="text-xs text-muted-foreground/80">{HALL_FEEDBACK_COPY.footerTagline}</p>
           <HallFeedbackFooterLink className="text-xs text-primary/85 hover:text-primary transition-colors underline-offset-4 hover:underline" />
           <p className="text-xs font-medium text-foreground/80 pt-1">{LIGHTS_COPY.footerTagline}</p>
@@ -85,7 +126,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false, newsle
             {LIGHTS_COPY.footerSub}{" "}
             <LightsAndSirensLink variant="footer">Lights & Sirens Co.</LightsAndSirensLink>
           </p>
-          <LegalLinksRow className="pt-2" />
+          <SiteLegalLine className="pt-2" />
           <p className="text-[11px] text-muted-foreground/60" data-testid="footer-image-disclosure">
             {RECIPE_IMAGE_DISCLOSURE}
           </p>
@@ -219,25 +260,19 @@ export function SiteFooter({ variant = "full", className, pbSafe = false, newsle
 
         <div className="mt-10 pt-6 border-t border-border/15 text-center sm:text-left space-y-3">
           <div className="space-y-1">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/65">
-              {HALL_FEEDBACK_COPY.footerBeta}
-            </p>
             <p className="text-xs text-muted-foreground/75">{HALL_FEEDBACK_COPY.footerTagline}</p>
             <HallFeedbackFooterLink className="text-xs text-primary/80 hover:text-primary transition-colors underline-offset-4 hover:underline" />
           </div>
         </div>
 
-        <div className="mt-6 pt-6 border-t border-border/15 flex flex-col items-center gap-3 text-center">
-          <LegalLinksRow />
+        <div className="mt-6 pt-6 border-t border-border/15 text-center">
           <p className="text-[11px] text-muted-foreground/60" data-testid="footer-image-disclosure">
             {RECIPE_IMAGE_DISCLOSURE}
           </p>
         </div>
 
-        <div className="mt-6 pt-6 border-t border-border/15 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 text-center sm:text-left">
-          <p className="text-xs text-muted-foreground/60">
-            © {new Date().getFullYear()} {BRAND_NAME}
-          </p>
+        <div className="mt-6 pt-6 border-t border-border/15 flex flex-col items-center gap-3 text-center lg:flex-row lg:items-end lg:justify-between lg:text-left">
+          <SiteLegalLine align="start" />
           <ParentBrandCredit />
         </div>
       </div>

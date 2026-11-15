@@ -232,11 +232,30 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section id="ip" title="10. Intellectual property">
+          <Section id="ip" title="10. Intellectual Property Rights">
             <p>
-              Firehall Meals' branding, site design, and original recipe content are owned by us
-              or our licensors. You may use the service for personal, non-commercial meal
-              planning and cooking. You may not copy, resell, or redistribute the catalog in bulk.
+              Firehall Meals and its original website content, software, source code, graphics,
+              illustrations, written materials, and other proprietary elements are protected by
+              applicable copyright, trademark, and intellectual property laws.
+            </p>
+            <p>
+              Except as expressly permitted by law or authorized in writing by the relevant rights
+              holder, users may not reproduce, distribute, republish, or create derivative works
+              from protected Firehall Meals materials.
+            </p>
+            <p>
+              Unauthorized use of Firehall Meals branding in a manner likely to cause confusion
+              regarding the source, affiliation, or endorsement of another product or service is
+              prohibited.
+            </p>
+            <p>
+              Nothing in these Terms restricts uses permitted by applicable law or grants Firehall
+              Meals exclusive rights over general concepts, functionality, or public-domain
+              materials.
+            </p>
+            <p>
+              You may use the service for personal, non-commercial meal planning and cooking. You
+              may not copy, resell, or redistribute the catalog in bulk.
             </p>
           </Section>
 
